@@ -1,0 +1,12 @@
+|project| is a semantic launcher for keyboard ninjas on Windows.
+
+It is a very generic tool hand-crafted with love by a nerd for nerds that allows
+to execute any kind of task using your keyboard only, by typing a small fraction
+of its name. |br| May it be to start an application, to open a file, or more
+exotic tasks like evaluating a mathematical expression in-line, or launching a
+*PuTTY*/*FileZilla*/*WinSCP* session directly, ...
+
+It has been designed to allow lightning fast searches, to have a small memory
+footprint and a file-driven configuration scheme. It is also battery friendly.
+
+Finally, it is extensible by writing :term:`plugin` scripts in Python3_.

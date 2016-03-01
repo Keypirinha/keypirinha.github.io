@@ -1,0 +1,150 @@
+========
+Packages
+========
+
+.. include:: common/packages-intro.rst
+
+
+Packages Hives
+==============
+
+There are four :term:`hives` (locations) of packages. In order of priority:
+
+* :ref:`pack-live`: individual directories with loose files
+
+* :ref:`pack-installed`: Zip archives with the :file:`.keypirinha-package`
+  extension, downloaded and/or installed manually by the user.
+
+* :ref:`pack-official`: Zip archives with the :file:`.keypirinha-package`
+  extension. Packages officially supported and shipped with the application.
+
+* :ref:`pack-internal`
+  Hard-coded in the application.
+
+Except for the :ref:`pack-internal` type, the only difference between those
+Hives is the way they are stored and their location.
+
+A Package content can span over multiple Hives. This is convenient if you wish
+to modify an Installed or Official package like its configuration or its source
+code for example, without having to alter the original files.
+
+For that reason, there is an order of precedence when loading a Package and if
+two files with the same name belong to the same Package, the file located in
+the Hive with the highest priority will override the others.
+
+
+.. _pack-live:
+
+Live Packages (Loose)
+---------------------
+
+Live packages, or Loose packages, are individual directories containing loose
+files. They are located under the :file:`Packages` directory in user's folder.
+
+This is the place to start if you wish to create your own package or to modify
+an existing one.
+
+.. note::
+    Package naming is pretty strict and |project| will **silently** ignore a
+    Package if its name does not comply to the rules described in the
+    :ref:`pack-naming` section below.
+
+This Hive is named *Live* because it is the only one that allows file change at
+runtime. May it be to configuration files, to its source code or any other
+resource, the Package will be reloaded soon after a file has been modified,
+renamed or delete. However, note that if **only** an :file:`.ini` file is
+modified, the application will broadcast the ``CONFIG_CHANGED`` message (see
+:py:meth:`keypirinha.Plugin.on_config_changed`) to the plugins of the concerned
+package instead of fully reloading it.
+
+
+.. _pack-installed:
+
+Installed Packages (Downloaded)
+-------------------------------
+
+Packages are meant to be easily redistributable and installable. A dedicated
+directory called :file:`InstalledPackages` under user's directory is available
+for this purpose.
+
+Package files are Zip archives with the :file:`.keypirinha-package` extension.
+
+
+.. _pack-official:
+
+Official Packages (Shipped)
+---------------------------
+
+The Official packages are shipped with every |project|'s distribution. They are
+individually packed in a Zip archive with the :file:`.keypirinha-package`
+extension and are stored in the :file:`default/Packages` directory directly
+located under |project|'s installation directory.
+
+
+.. _pack-internal:
+
+Internal Package
+----------------
+
+``Internal`` is actually both a type of package and the name of the package
+itself.
+
+The ``Internal`` package is implemented in the application itself and its
+behavior is unalterable. For now it only embeds the ``Internal.About`` plugin
+that exposes some core features to the :term:`catalog` like ``About``, ``Exit``,
+``Configure Application``, etc...
+
+Any other type of :term:`package` is said to be *external*.
+
+
+.. _pack-naming:
+
+Package Naming
+==============
+
+Rules for package naming:
+
+* Name can contain alpha-numeric characters (case insensitive) and space
+  characters (``0x20``), as well as the following characters: ``-``, ``+``,
+  ``=``, ``_``, ``#``, ``@``, ``(``, ``)``, ``[``, ``]``, ``{``, ``}``
+
+* Name must be at least 3 characters long
+
+* Name must not begin or end with a space character
+
+* Sequences of multiple space characters are not accepted
+
+* The following names are reserved:
+
+  .. hlist::
+    :columns: 3
+
+    - |project|
+    - ``app``
+    - ``application``
+    - ``builtin``
+    - ``builtins``
+    - ``cache``
+    - ``data``
+    - ``default``
+    - ``extern``
+    - ``external``
+    - ``intern``
+    - ``internal``
+    - ``icon``
+    - ``image``
+    - ``local``
+    - ``locale``
+    - ``main``
+    - ``official``
+    - ``package``
+    - ``python``
+    - ``res``
+    - ``resource``
+    - ``temp``
+    - ``tmp``
+    - ``user``
+
+If the name of a Package does not comply to those rules, the Package will be
+silently ignored by the application and never be loaded until renamed
+accordingly. Renaming can be done at runtime in this case.

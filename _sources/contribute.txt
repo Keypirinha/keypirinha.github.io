@@ -1,0 +1,65 @@
+==========
+Contribute
+==========
+
+
+.. _contribute-issue:
+
+How to Report an Issue
+======================
+
+An |bugtracker_link| accepts any issue report or suggestion related to the
+application or an official :term:`package`.
+
+Here are some guidelines to report an issue. Please follow them! To accurately
+report an issue strongly increases the chances of your issue to be fixed
+quickly.
+
+* First search if your issue has already been reported
+
+* Provide the exact and complete version number of the application. You can get
+  it by displaying the *Console* dialog (scroll up to the top lines)
+
+* One bug per report
+
+* Describe the issue clearly, with simple language, in English (bullet points
+  are good)
+
+* Provide step-by-step instructions so we can reproduce the issue (we can't fix
+  what we can't reproduce).
+
+  - What steps will reproduce the problem?
+  - What is the expected output/behavior?
+  - What do you see instead?
+
+* Eventually attach screenshots so we can "see" the issue
+
+* Eventually attach the complete log of the session during which the bug
+  occurred (the log indicates critical information including the complete
+  version number)
+
+* Workarounds or other related tips on how to avoid the issue are welcome
+
+
+.. _contribute-packages:
+
+Get involved in the development of the Official Packages
+========================================================
+
+The Official Packages repository is not open yet, but do not hesitate to submit
+suggestions on the |bugtracker_link| or head over to the |webirc_en|, ou pour
+les francophones : |webirc_fr|.
+
+.. An |packrepo| is online and accepts any report issues related to the application
+.. or an official package.
+..
+.. If you are interested in improving the existing official packages, or if you
+.. wish to share new packages you have created and that you would like to see
+.. integrated into the official distribution, the |packrepo| is open to patch
+.. requests.
+
+
+Help with the Documentation
+===========================
+
+.. todo:: Soon...

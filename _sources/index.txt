@@ -1,0 +1,75 @@
+=========
+|project|
+=========
+
+Welcome to the Official |project|'s site. |br|
+|project| is a semantic launcher for keyboard ninjas on Windows.
+
+.. image:: images/wndrun-search2.png
+    :align: center
+
+
+Steps
+=====
+
+* Download the latest release: |latest_link| |br|
+  Requires Windows **64-bit** (Vista, 7, 8, 8.1 or 10)
+* Follow |twitter_link| on *Twitter*
+* Join the |webirc_en|, no registration required |br|
+  Pour les francophones : |webirc_fr|, pas d'inscription requise
+* :ref:`contribute-issue`
+* :ref:`contribute-packages`
+
+
+What is |project|
+=================
+
+.. include:: common/what.rst
+
+
+Beta Stage
+==========
+
+|project| is young and needs to be improved, it’s in *beta* stage. File a bug
+ticket if you stumble upon something that doesn't work right. Read the
+:ref:`contribute-issue` section for more info.
+
+
+About this Documentation
+========================
+
+This documentation is a work in progress. Comments and contributions are
+appreciated. It is written in reST_ and generated using the Sphinx_ tools suite.
+
+.. TODO: Move documentation to its own public repository.
+.. This documentation is a work in progress. Comments and contributions are
+.. appreciated and can be done from this dedicated |docsrepo_link|. It is written
+.. in reST_ and generated using the Sphinx_ tools suite.
+
+
+Contents
+========
+
+.. toctree::
+    :maxdepth: 2
+    :numbered:
+
+    install
+    first
+    overview
+    configuration
+    packages
+    shippacks
+    api
+    contribute
+    glossary
+    faq
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+
+.. * :ref:`search`

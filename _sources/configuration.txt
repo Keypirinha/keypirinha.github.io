@@ -1,0 +1,257 @@
+=============
+Configuration
+=============
+
+
+Introduction
+============
+
+|project| is file-driven. Its configuration data resides in files, which are
+mostly human readable and modifiable.
+
+By design, |project| does not offer any graphical interface to modify its
+settings. But it does offers a convenient way to open its configuration files at
+runtime.
+
+Search for the "|project|: Configure ..." items from the :term:`LaunchBox`.
+
+.. image:: images/wndrun-config-search.png
+    :alt: The 'Configure' items
+    :align: center
+
+Or use the main popup menu by clicking the right mouse button anywhere on the
+:term:`LaunchBox` except the text field.
+
+.. image:: images/wndrun-config-menu.png
+    :alt: The 'Configure' menu
+    :align: center
+
+.. important::
+    Any change to the configuration files will be detected automatically at
+    runtime and new/modified settings will immediately be applied.
+
+
+First Modification
+==================
+
+If you have selected the ``Configure Application`` item for the first time, you
+should now see two text files opened side by side on your screen.
+
+The one on the **left** is the original configuration file, bundled with the
+application. It shows the exhaustive list of the available settings. This file
+is **not** meant to be modified. Let's call it ``Default``.
+
+The one on the **right** side should be blank on a fresh install, which means
+all the default configuration values defined in the ``Default`` file are used.
+Let's call this file ``User``.
+
+Configuration files in |project| are ``INI`` files. This format has been chosen
+because it is easy to read and to edit. But there are some things to keep in
+mind when editing a configuration file...
+
+Say you want to modify the ``max_results`` value for example. In
+|project|'s ``INI`` files, every value belongs to a given **section**. So if
+you just add a single line like ``max_results = 100`` to the ``User`` file,
+it **will not** have the desired effect. The ``max_results`` setting is
+part of the ``gui`` section so you must prepend the ``[gui]`` line.
+
+The default value of ``max_results`` is ``100``, let's change it to ``90``. The
+``User`` file should now look like this:
+
+.. code-block:: ini
+
+    [gui]
+    max_results = 90
+
+Save the ``User`` configuration file by pressing :kbd:`Ctrl+S` or by clicking
+the :menuselection:`File --> Save` menu of the editor. Modifications are now
+applied, you can close both editor windows.
+
+
+Modification at Runtime
+=======================
+
+When you save a new version of one or several of your configuration files,
+|project| automatically detects any modification you have made and apply it at
+runtime. The same mechanism goes to packages' configuration.
+
+
+The INI Format
+==============
+
+The ``INI`` file format is not precisely defined and there are plenty of
+variants out there. The format used by |project| is readable by
+:py:mod:`configparser` (``ExtendedInterpolation`` is used), a Python_ standard
+module for those who are familiar with it.
+
+
+.. _ini-example:
+
+Example
+-------
+
+.. code-block:: ini
+
+    # This is a comment line so I can write whatever I want
+
+    [config]
+    # Values defined below belong to the 'config' section
+    boolean_value = yes
+    editor = ${var:my_editor}
+    say_hello = ${var:hello} World
+    multiline_setting =
+        ${say_hello}
+        This is a multiple line value.
+        You can add as much lines as desired.
+        As long as they are indented deeper than the first line of the value.
+
+    [var]
+    # Reusable values are grouped into the 'var' section
+    my_editor = D:/Apps/MyEditor/ShinyEditor.exe
+    hello = Hello
+
+
+Comments
+--------
+
+It is possible to add comments to an ``INI`` file. Comments are not interpreted
+by the application and they are skipped at parsing-time.
+
+To add a comment to your configuration file, start a line with a ``#``
+character.
+
+
+Multiple Line Values
+--------------------
+
+|project| or its packages may accept multiple line values for some of their
+settings (it is always specified). When you write mutiple line values, you must
+take care of **indenting** each line correctly to ensure the configuration file
+will be interpreted properly by the application.
+
+See the :ref:`ini-example` section above for an exampe.
+
+
+Reusable Values
+---------------
+
+|project| allows you to declare values that can be used elsewhere in **any**
+configuration file (application and plugins).
+
+If you wish your reusable value to be usable in any configuration file, you must
+declare it in the ``var`` dedicated section in the main application's
+configuration file :file:`Keypirinha.ini`. |project| will take care of
+replicating the ``var`` section in every subsequently loaded configuration file.
+
+.. tip::
+    While it is possible to have a ``var`` section in any configuration file, it
+    is usually preferable to have your reusable values all grouped in the same
+    file (i.e.: :file:`Keypirinha.ini`) to avoid mistakes and unexpected
+    behavior.
+
+.. note::
+    The ``var`` section does not have to be defined at the beginning of the
+    file.
+
+See the :ref:`ini-example` section above for an exampe.
+
+
+Pre-defined variables
+---------------------
+
+|project| also silently populates the ``var`` section with some predefined
+values that may come handy.
+
+* ``APP_DIR`` |br|
+  The path to the root/install directory of the application. |br|
+  Examples:
+
+  - ``C:\Program Files\Keypirinha`` (installed mode)
+
+  - ``U:\USBApps\Keypirinha`` (portable mode)
+
+* ``APP_EXE`` |br|
+  The path to application's executable |br|
+  Examples:
+
+  - ``C:\Program Files\Keypirinha\Keypirinha.exe`` (installed mode)
+
+  - ``U:\USBApps\Keypirinha\Keypirinha.exe`` (portable mode)
+
+* ``PROFILE_DIR`` |br|
+  The *Profile* directory, parent of the *User*, *InstalledPackages* and
+  *Packages* directories. |br|
+  Examples:
+
+  - ``C:\Users\Bob\AppData\Roaming\Keypirinha`` (installed mode)
+
+  - ``U:\USBApps\Keypirinha\portable\Profile`` (portable mode)
+
+* ``PROFILE_DIR_USER`` |br|
+  The *User* directory, where user's configuration files are stored. |br|
+  Examples:
+
+  - ``C:\Users\Bob\AppData\Roaming\Keypirinha\User`` (installed mode)
+
+  - ``U:\USBApps\Keypirinha\portable\Profile\User`` (portable mode)
+
+* ``PROFILE_DIR_INSTALLED_PACKS`` |br|
+  The *InstalledPackages* directory, home of the downloaded packages. |br|
+  Examples:
+
+  - ``C:\Users\Bob\AppData\Roaming\Keypirinha\InstalledPackages`` in installed
+    mode
+
+  - ``U:\USBApps\Keypirinha\portable\Profile\InstalledPackages`` in portable
+    mode
+
+* ``PROFILE_DIR_LOOSE_PACKS`` |br|
+  The *Packages* directory, where the loose packages (modifiable at runtime) are
+  stored. |br|
+  Examples:
+
+  - ``C:\Users\Bob\AppData\Roaming\Keypirinha\Packages`` (installed mode)
+
+  - ``U:\USBApps\Keypirinha\portable\Profile\Packages`` (portable mode)
+
+
+Environment Values
+------------------
+
+For convenience, |project| automatically defines a section named ``env``,
+populated with all the environment variables that could be found at the moment
+the configuration file is read.
+
+The ``env`` section is defined (overwritten) in **every** loaded configuration
+file.
+
+
+Machine and User Specific Settings
+==================================
+
+It is possible to have settings that will be applied only when |project| runs on
+a specific **machine** and/or under a specific **user** session.
+
+To do that, the configuration file must be named according a pre-defined
+pattern.
+
+For example, :file:`Keypirinha.ini` which is application's main configuration
+file. ``Keypirinha`` being the *name* part of the file. |project| will
+automatically scan for these files each time it has to load its configuration
+files, **in order** of precedence, which means a value re-defined in a file
+**overrides** the previous one(s):
+
+* :file:`Keypirinha.ini`: the main file
+* :file:`Keypirinha.@MACHINE.ini`: machine-specific configuration (any user).
+  Notice the ``@`` prefix.
+* :file:`Keypirinha.USER.ini`: user-specific configuration (any machine)
+* :file:`Keypirinha.USER@MACHINE.ini`: configuration specific to a user on a
+  specific machine
+
+Where ``MACHINE`` is the *NetBIOS* name of your computer (enter the
+``echo %COMPUTERNAME%`` command in a console to get it) and ``USER`` is the name
+of the currently logged user (``echo %USERNAME%``).
+
+.. tip::
+    This also works with the packages configuration files located in your *User*
+    directory.

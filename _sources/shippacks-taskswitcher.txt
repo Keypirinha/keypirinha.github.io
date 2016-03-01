@@ -1,0 +1,16 @@
+====================
+TaskSwitcher Package
+====================
+
+An Alt+Tab alternative for |project|.
+
+This plugin lists the currently opened applications and allows to quickly switch
+to one of them.
+
+
+Catalog Items
+=============
+
+This package populates the Catalog with the following items:
+
+* The ``Switch To...`` item

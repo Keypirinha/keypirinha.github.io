@@ -1,0 +1,49 @@
+===================
+CatalogAction class
+===================
+
+.. py:class:: keypirinha.CatalogAction
+
+    A ``CatalogAction`` object **must** always be created with
+    :py:meth:`Plugin.create_action`.
+
+
+    .. py:method:: valid()
+
+        Returns a boolean that indicates if the properties of this object are
+        considered to be *valid* by the application.
+
+
+    .. py:method:: plugin_id()
+
+        Get the *id* (int) of the parent plugin of this object.
+
+        .. seealso::
+            :py:meth:`app_owned` to check if the object belongs to the
+            application instead of a plugin.
+
+
+    .. py:method:: app_owned()
+
+        Returns a boolean that indicates if this object has been created by the
+        application itself instead of a plugin.
+
+
+    .. py:method:: name()
+
+        Get the *name* of this action.
+
+
+    .. py:method:: label()
+
+        Get the *label* of this action.
+
+
+    .. py:method:: short_desc()
+
+        Get the *short description* of this action.
+
+
+    .. py:method:: data_bag()
+
+        Get the *data bag* (string) of this action.

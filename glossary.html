@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. Glossary &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="next" title="10. Frequently Asked Questions (FAQ)" href="faq.html"/>
+        <link rel="prev" title="8. Contribute" href="contribute.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>9. Glossary</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="glossary">
+<h1>9. Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+<dt id="term-catalog">Catalog</dt>
+<dd>The Catalog is the name of the internal database of <em>Keypirinha</em> where all
+the <a class="reference internal" href="#term-items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</dd>
+<dt id="term-catalogitem">CatalogItem</dt>
+<dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>.</dd>
+<dt id="term-hive"><span id="term-hives"></span>Hive<br />Hives</dt>
+<dd>A Hive is a directory dedicated to the storage of <a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It
+also defines the way Packages are stored (i.e.: loose files or packed in
+a single archive).</dd>
+<dt id="term-instanceid">InstanceID</dt>
+<dd><p class="first">The InstanceID number is an unsigned integer internally used by the
+application and assigned at runtime to every loaded <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>. It
+is used to ensure Plugins are not messing up the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">catalog</span></a>.</p>
+<p class="last">Read <a class="reference internal" href="api-overview.html"><em>Overview</em></a> for more information.</p>
+</dd>
+<dt id="term-item"><span id="term-items"></span>Item<br />Items</dt>
+<dd>An item is a simple data structure created by the <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and
+that holds some properties like a display name (label), a category
+(File, URL, Command Line, ...), a reference to the parent
+<a class="reference internal" href="#term-plugin"><span class="xref std std-term">plugin</span></a>, etc...</dd>
+<dt id="term-launchbox">LaunchBox</dt>
+<dd><p class="first">The L(a)unchBox is <em>Keypirinha</em>&#8216;s main dialog window, from which you can
+make a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
+pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (by default).</p>
+<img alt="|project|'s main dialog" class="last align-center" src="_images/wndrun.png" />
+</dd>
+<dt id="term-package"><span id="term-packages"></span>Package<br />Packages</dt>
+<dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> designed for
+the same purpose. It contains the Plugins code as well as their
+dependencies if needed and optionally includes their configuration files,
+resources and documentation.</p>
+<p>Its content can be stored in a directory or packed in an archive (e.g.:
+Zip) to ease redistribution.</p>
+<p class="last">Read <a class="reference internal" href="packages.html"><em>Packages</em></a> for more information.</p>
+</dd>
+<dt id="term-plugin"><span id="term-plugins"></span>Plugin<br />Plugins</dt>
+<dd>In the context of <em>Keypirinha</em>, a Plugin is a software component written in
+<a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. It is always
+encapsulated in a <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</dd>
+</dl>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="10. Frequently Asked Questions (FAQ)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contribute.html" class="btn btn-neutral" title="8. Contribute" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

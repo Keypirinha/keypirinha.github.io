@@ -1,0 +1,10 @@
+To make :term:`plugins` easier to distribute, |project| has been introduced the
+concept of :term:`Packages`.
+
+In |project|, a package is a container (e.g.: a directory; or a Zip archive with
+the :file:`.keypirinha-package` extension) that groups one or several plugins
+designed to work together. It also contains the configuration files and
+dependencies, if any.
+
+.. note::
+    |project| cannot load a plugin if it is not encapsulated in a Package.

@@ -1,0 +1,11 @@
+==============
+Settings class
+==============
+
+.. py:currentmodule:: keypirinha
+
+.. autoclass:: keypirinha.Settings
+    :members:
+    :undoc-members:
+    :no-private-members:
+    :no-special-members:

@@ -1,0 +1,96 @@
+===========
+First steps
+===========
+
+The first thing to know about |project| is that you can use almost every of its
+features by using your keyboard only. Keep that in mind!
+
+
+Start |project|
+===============
+
+By default, |project| does not require any special configuration before being
+launched for the first time. It is a *resident* application, which means it
+directly goes to the background when it is started. You can ensure |project| is
+running by checking for its icon in the system tray's notification area. It is
+normally located next to the system clock on your desktop, in the lower-right
+corner of your main screen.
+
+.. image:: images/systray.png
+    :alt: |project|'s icon in the system's tray
+    :align: center
+
+
+Open the LaunchBox
+==================
+
+Once |project| is running, press :kbd:`Ctrl+Win+K` (by default) to display the
+:term:`LaunchBox`...
+
+.. image:: images/wndrun.png
+    :alt: |project|'s main dialog
+    :align: center
+
+
+First Search
+============
+
+You can now search for the task you wish to execute. Say you want to launch an
+application, *Firefox* for example. Start typing its name and it will soon show
+up in the results list as long as *Firefox* is installed on your machine.
+
+.. image:: images/wndrun-search1.png
+    :alt: First search
+    :align: center
+
+Once the desired item is selected (you can use the :kbd:`Down`, :kbd:`Up`,
+:kbd:`PgDown` and :kbd:`PgUp` keys for that), press :kbd:`Enter` to launch it.
+|project| will then automatically go back to background...
+
+
+Second Search
+=============
+
+|project| remembers the tasks you execute the most so if you want to launch an
+already executed task, chances are high that you will only need to type the very
+first couple of letters of its name to get the task at the top of the results
+list.
+
+Notice how the score of the *Firefox* item is much higher now.
+
+.. image:: images/wndrun-search2.png
+    :alt: Second search for an already executed item
+    :align: center
+
+.. note::
+    The score numbers you observe on your machine might differ from the one
+    displayed on that screenshot.
+
+
+Leave a Search
+==============
+
+May you wish to stop what you were doing on the :term:`LaunchBox`, press the
+:kbd:`Esc` key. **Once**, to reset your search. **Twice**, to close the dialog.
+One time might be enough if you didn't type anything.
+
+.. tip::
+    Standard Windows shortcuts are also implemented so the :kbd:`Alt+F4`
+    combination will close the dialog as expected.
+
+
+Configuration
+=============
+
+See the :doc:`configuration` section for more info.
+
+
+Extending |project|
+===================
+
+Despite its apparent simplicity, |project| is a generic tool that is able to
+welcome a very wide range of features not offered yet by the official bundled
+plugins. An API allows to extend |project|'s features to make them fit your
+needs.
+
+See the :doc:`api` section for more info.

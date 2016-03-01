@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.2.2. Plugin class &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="up" title="7.2. API Reference" href="api-reference.html"/>
+        <link rel="next" title="7.2.3. CatalogItem class" href="api-class-catalogitem.html"/>
+        <link rel="prev" title="7.2.1. keypirinha module" href="api-module.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api-overview.html">7.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api-reference.html">7.2. API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="api-module.html">7.2.1. keypirinha module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">7.2.2. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-catalogitem.html">7.2.3. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-catalogaction.html">7.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-settings.html">7.2.5. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-iconhandle.html">7.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-module-util.html">7.2.7. keypirinha_util module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-python.html">7.3. Embedded Python Interpreter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="api.html">7. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+      
+          <li><a href="api-reference.html">7.2. API Reference</a> &raquo;</li>
+      
+    <li>7.2.2. Plugin class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugin-class">
+<h1>7.2.2. Plugin class<a class="headerlink" href="#plugin-class" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keypirinha.Plugin">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Plugin</code><a class="headerlink" href="#keypirinha.Plugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for third-party plugins.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Methods prefixed with <code class="docutils literal"><span class="pre">on_</span></code> are the only ones called by the
+application.</p>
+</div>
+<dl class="attribute">
+<dt id="keypirinha.Plugin._debug">
+<code class="descname">_debug</code><em class="property"> = False</em><a class="headerlink" href="#keypirinha.Plugin._debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to enable/disable output of <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Redistributed plugins must always have this flag disabled.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plugin&#8217;s default constructor. When implementing a new plugin, it is good
+practice to call it:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_catalog">
+<code class="descname">on_catalog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_catalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the first callback method called by the application after a
+plugin has been instanciated.</p>
+<p><em>Heavy</em> initialization must be performed here instead of inside
+<code class="docutils literal"><span class="pre">__init__</span></code>.</p>
+<p>The plugin is also expected to setup its catalog by calling either
+<a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal"><span class="pre">set_catalog()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal"><span class="pre">merge_catalog()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See the <a class="reference internal" href="api-overview.html#api-overview-loading"><span>Loading</span></a> section for more information
+about the <em>plugin loading</em> process. And <a class="reference internal" href="api-overview.html#api-overview-msgflow"><span>Messages Workflow</span></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_suggest">
+<code class="descname">on_suggest</code><span class="sig-paren">(</span><em>user_input</em>, <em>catalog_item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the user is typing her search terms <em>or</em> item&#8217;s arguments.</p>
+<p>If <em>catalog_item</em> is <code class="docutils literal"><span class="pre">None</span></code>, no item has been selected yet and this
+<code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been broadcasted to every loaded plugin. In that
+case <em>user_input</em> is a string containing the search terms.</p>
+<p>Otherwise, <em>catalog_item</em> is a <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object that
+belongs to this plugin and <em>user_input</em> is a string containing the
+arguments typed by the user. Note that it might be empty.</p>
+<p>If the plugin implements this method, it is expected to setup its
+<strong>suggestions</strong> catalog by using <a class="reference internal" href="#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">set_suggestions()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See the <a class="reference internal" href="api-overview.html#api-overview-msgflow"><span>Messages Workflow</span></a> section.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_execute">
+<code class="descname">on_execute</code><span class="sig-paren">(</span><em>catalog_item</em>, <em>catalog_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called once the user has selected an item and wants to launch it,
+optionally using the passed action.</p>
+<p><em>catalog_item</em> is the selected <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object to
+execute, belonging to this plugin.</p>
+<p><em>catalog_action</em> is either <code class="docutils literal"><span class="pre">None</span></code> or a <a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a>
+object; it might not have been created by this plugin though, in which
+case <a class="reference internal" href="api-module-util.html#keypirinha_util.execute_default_action" title="keypirinha_util.execute_default_action"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.execute_default_action()</span></code></a> may be of
+interest.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">See the <a class="reference internal" href="api-overview.html#api-overview-msgflow"><span>Messages Workflow</span></a> section.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_activated">
+<code class="descname">on_activated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_activated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> has been activated, either by typing
+the dedicated global hotkey, or by using the contextual menu of the
+application icon located in the system tray.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">ACTIVATED</span></code> message automatically discards any pending
+<code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message in the queue. As a result, an <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
+message is not always followed by a <code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message. For
+example, if your plugin takes more time to process the <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
+message than the end-user to perform her search <strong>and</strong> deactivate
+the window <strong>and</strong> then re-activate it, the plugin will receive a
+new <code class="docutils literal"><span class="pre">ACTIVATED</span></code> message without being notified about the
+<code class="docutils literal"><span class="pre">DEACTIVATED</span></code> event that occurred in between.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_deactivated" title="keypirinha.Plugin.on_deactivated"><code class="xref py py-meth docutils literal"><span class="pre">on_deactivated()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_deactivated">
+<code class="descname">on_deactivated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_deactivated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> has been deactivated.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A <code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message is not always preceded by an <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
+message. See the note in <a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal"><span class="pre">on_activated()</span></code></a> documentation for
+more information.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal"><span class="pre">on_activated()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_config_changed">
+<code class="descname">on_config_changed</code><span class="sig-paren">(</span><em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_config_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when one or several configuration file(s) of the application
+or/and plugins has been edited and saved.</p>
+<p><em>flags</em> is one or several flags from <a class="reference internal" href="api-module.html#keypirinha.ConfChangedFlags" title="keypirinha.ConfChangedFlags"><code class="xref py py-class docutils literal"><span class="pre">ConfChangedFlags</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.on_env_changed">
+<code class="descname">on_env_changed</code><span class="sig-paren">(</span><em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_env_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when system environment has changed.</p>
+<p>For example when one or several environment variables have been
+modified, or when a removable media has been inserted or ejected, or
+when a storage device has been plugged-in or unplugged.</p>
+<p><em>flags</em> is one or several flags from <a class="reference internal" href="api-module.html#keypirinha.EnvChangedFlags" title="keypirinha.EnvChangedFlags"><code class="xref py py-class docutils literal"><span class="pre">EnvChangedFlags</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.set_catalog">
+<code class="descname">set_catalog</code><span class="sig-paren">(</span><em>catalog_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_catalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace current plugin&#8217;s catalog by <em>catalog_items</em>, which must be a
+list of <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects, created by <em>this</em> plugin. Note
+that the list may be empty if you wish to clear plugin&#8217;s catalog.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.merge_catalog">
+<code class="descname">merge_catalog</code><span class="sig-paren">(</span><em>catalog_items</em>, <em>erase_untouched_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.merge_catalog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge current plugin&#8217;s catalog with <em>catalog_items</em>, which must be a
+list of <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects, created by <em>this</em> plugin.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.set_suggestions">
+<code class="descname">set_suggestions</code><span class="sig-paren">(</span><em>suggested_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_suggestions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Offer some suggestions to the user according to her current search. This
+method is usually called from <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a>.</p>
+<p><em>suggested_items</em> must be a list of <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.clear_actions">
+<code class="descname">clear_actions</code><span class="sig-paren">(</span><em>category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.clear_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the list of actions associated to a given
+<a class="reference internal" href="api-module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal"><span class="pre">ItemCategory</span></code></a>, or clear <em>all</em> actions associated to this
+plugin if <em>category</em> is <code class="docutils literal"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.create_action">
+<code class="descname">create_action</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>short_desc=''</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a <a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the action, normally lowercased, no space.
+Words can be separated by an underscore (<code class="docutils literal"><span class="pre">_</span></code>).</li>
+<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The display name of the action. This is the value the
+user will see.</li>
+<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
+will be displayed right under the label on the GUI.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created action, associated to this plugin.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction">CatalogAction</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects must always be created using this
+method.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.create_item">
+<code class="descname">create_item</code><span class="sig-paren">(</span><em>category</em>, <em>label</em>, <em>short_desc</em>, <em>target</em>, <em>args_hint</em>, <em>hit_hint</em>, <em>loop_on_suggest=False</em>, <em>icon_handle=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object.</p>
+<p><a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> is the angular stone of <em>Keypirinha</em>. It is the
+only data unit a plugin can use to be referenced in the central Catalog.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>category</strong> (<a class="reference internal" href="api-module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><em>ItemCategory</em></a>) &#8211; The category of the <strong>target</strong> of this
+item. Indeed, the <em>target</em> might be a
+<a class="reference internal" href="api-module.html#keypirinha.ItemCategory.KEYWORD" title="keypirinha.ItemCategory.KEYWORD"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.KEYWORD</span></code></a> whereas its argument might
+represent a mathematical <a class="reference internal" href="api-module.html#keypirinha.ItemCategory.EXPRESSION" title="keypirinha.ItemCategory.EXPRESSION"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.EXPRESSION</span></code></a> for
+example. In that case, this argument should be <code class="docutils literal"><span class="pre">KEYWORD</span></code> to
+reflect the content of the <em>target</em> property.</li>
+<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The display name of the item. This is the value the
+user will see.</li>
+<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
+will be displayed right under the label on the GUI.</li>
+<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; This is the main property of <a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>,
+the plugin can put whatever it needs to differentiate this item
+among others.</li>
+<li><strong>args_hint</strong> (<a class="reference internal" href="api-module.html#keypirinha.ItemArgsHint" title="keypirinha.ItemArgsHint"><em>ItemArgsHint</em></a>) &#8211; Indicates how the GUI should behave with
+this item when it comes to specifying its arguments. For
+example, if <em>target</em> is the path to an executabe file (in which
+case <em>category</em> should be <a class="reference internal" href="api-module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.FILE</span></code></a>), user
+might expect to be able to add extra arguments before executing
+this item: <a class="reference internal" href="api-module.html#keypirinha.ItemArgsHint.ACCEPTED" title="keypirinha.ItemArgsHint.ACCEPTED"><code class="xref py py-const docutils literal"><span class="pre">ItemArgsHint.ACCEPTED</span></code></a> is the logical
+choice here.</li>
+<li><strong>hit_hint</strong> (<a class="reference internal" href="api-module.html#keypirinha.ItemHitHint" title="keypirinha.ItemHitHint"><em>ItemHitHint</em></a>) &#8211; Indicates how the application should deal
+with this item once it has been executed by the user, regarding
+the History.</li>
+<li><strong>loop_on_suggest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Indicates the GUI should call
+<a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> as long as this flag is raised. This
+argument should be left <code class="docutils literal"><span class="pre">False</span></code> unless you know what you are
+doing.</li>
+<li><strong>icon_handle</strong> (<a class="reference internal" href="api-class-iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><em>IconHandle</em></a>) &#8211; An optional icon handle to associate with
+this item. <em>Keypirinha</em> always tries to find the icon to an item
+that fits the best. For example, if item is a
+<a class="reference internal" href="api-module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.FILE</span></code></a>, the system icon normally
+associated with it will be displayed to the user so
+<em>icon_handle</em> should be left <code class="docutils literal"><span class="pre">None</span></code>. Otherwise, the
+application will try to fall back to plugin&#8217;s default icon, if
+any. Eventually, if no icon could be associated to this item,
+the default application icon will displayed.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The newly created item, associated to this plugin.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem">CatalogItem</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><a class="reference internal" href="api-class-catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects must always be created using this
+method.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li><code class="samp docutils literal"><span class="pre">str(item_object)</span></code> is equivalent to
+<code class="samp docutils literal"><span class="pre">item_object.label()</span></code>.</li>
+<li>May you wish to compare two item objects, the <code class="docutils literal"><span class="pre">__eq__</span></code>,
+<code class="docutils literal"><span class="pre">__ne__</span></code>, <code class="docutils literal"><span class="pre">__lt__</span></code>, <code class="docutils literal"><span class="pre">__le__</span></code>, <code class="docutils literal"><span class="pre">__gt__</span></code> and <code class="docutils literal"><span class="pre">__ge__</span></code>
+operators are implemented. The <code class="docutils literal"><span class="pre">__eq__</span></code> and <code class="docutils literal"><span class="pre">__ne__</span></code> operators
+are fast and cheap. The others are slower. They can be used to
+sort a list alphabetically (by label, short description and
+target).</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.dbg">
+<code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log an debug message.</p>
+<p><em>objects</em> and <em>sep</em> arguments are handled the same way than
+<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default, this method will produce no output unless the
+<a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal"><span class="pre">keypirinha.Plugin._debug</span></code></a> flag is <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Use this method only temporarily, in order to debug your plugin. May
+you wish to redistribute it. The <a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal"><span class="pre">keypirinha.Plugin._debug</span></code></a>
+flag must be left untouched and no call to this method should be
+present in plugin&#8217;s source code.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.err">
+<code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log an error message.</p>
+<p><em>objects</em> and <em>sep</em> arguments are handled the same way than
+<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.find_resources">
+<code class="descname">find_resources</code><span class="sig-paren">(</span><em>name_pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.find_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of resources in this package that match a given pattern.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The pattern to match the <strong>name</strong> part of the
+resource(s). Accepted wildcards are <code class="docutils literal"><span class="pre">*</span></code> (i.e.: matches zero or
+several characters), and <code class="docutils literal"><span class="pre">?</span></code> (matches a single character).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of the relative paths to the matched resources. May
+be empty.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.get_package_cache_path">
+<code class="descname">get_package_cache_path</code><span class="sig-paren">(</span><em>create=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.get_package_cache_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute path to package&#8217;s cache directory.</p>
+<p>It is the responsibility of the caller to create it if it doesn&#8217;t exist
+(either manually or by setting the &#8216;create&#8217; argument to True).
+However, it&#8217;s parent directory is guaranteed to exist.
+The <em>create</em> flag allows to ask this method to create the directory for
+you.</p>
+<p>The cache directory (or <em>temp</em> directory) of a Package is common to
+every plugin of a same package and provides a physical storage area
+that can be used by plugins to store temporary data that may be manually
+deleted by the end-user between two runtime sessions without creating a
+mess in plugin&#8217;s logic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211;
+Failed to get package&#8217;s cache directory</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
+Failed to create the directory (in case <em>create</em> argument
+is <code class="docutils literal"><span class="pre">True</span></code>).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.has_resource">
+<code class="descname">has_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.has_resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if plugin&#8217;s parent package embeds a specific resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relative_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The relative path to the desired resource file
+located in the package. Examples: <code class="docutils literal"><span class="pre">resource.png</span></code>,
+<code class="docutils literal"><span class="pre">subdir/resource.png</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log an informational message.</p>
+<p><em>objects</em> and <em>sep</em> arguments are handled the same way than
+<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.load_binary_resource">
+<code class="descname">load_binary_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_binary_resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
+specified resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211;
+The resource could not be found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211;
+Error while opening or reading the resource.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211;
+Unexpected/Unknown error.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For performance reason, the MemoryError exception will be raised if
+the specified file size is bigger than 16MB (16777216 bytes).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.load_icon">
+<code class="descname">load_icon</code><span class="sig-paren">(</span><em>sources</em>, <em>force_reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads or gets an <a class="reference internal" href="api-class-iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a>.
+See <a class="reference internal" href="api-module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal"><span class="pre">load_icon()</span></code></a> for more details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.load_settings">
+<code class="descname">load_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <a class="reference internal" href="api-class-settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object associated with the
+parent Package.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The configuration files will be loaded only the first time this
+method is called. Any subsequent call will return a new
+<a class="reference internal" href="api-class-settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object pointing to the same data
+block.</li>
+<li>When the application detects that one or several configuration
+files have been modified in a Package, it will automatically
+re-read the files (only if they were previously loaded), then will
+notify every related plugin via a call to
+<a class="reference internal" href="#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-func docutils literal"><span class="pre">Plugin.on_config_changed()</span></code></a>.</li>
+<li>In case <a class="reference internal" href="#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-func docutils literal"><span class="pre">Plugin.on_config_changed()</span></code></a> is called, plugins
+will not have to call <a class="reference internal" href="#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> again if
+they already hold a <a class="reference internal" href="api-class-settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object.</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.load_text_resource">
+<code class="descname">load_text_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_text_resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string object holding the content of the specified resource.</p>
+<p>May raise the same exceptions than the load_binary_resource() method,
+plus the <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> exception if resource&#8217;s content could not
+be Unicode decoded.</p>
+<p>See <code class="xref py py-func docutils literal"><span class="pre">keypirinha.slurp_text_file()</span></code> for more information about
+the underlying Unicode detection mechanism.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.log">
+<code class="descname">log</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em>, <em>level=1</em>, <em>lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs a message.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This method is not meant to be used directly, prefer to call the
+<a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a>
+methods instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.set_actions">
+<code class="descname">set_actions</code><span class="sig-paren">(</span><em>category</em>, <em>actions_list</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Associate a given list of <a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> to an
+<a class="reference internal" href="api-module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal"><span class="pre">ItemCategory</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>category</strong> (<a class="reference internal" href="api-module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><em>ItemCategory</em></a>) &#8211; The category of item to associate the
+actions with. If needed, you can assign the same list of actions
+with several categories by calling this method several times.</li>
+<li><strong>actions_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; A list of <a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects
+that have been created with <a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal"><span class="pre">create_action()</span></code></a>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The actual number of actions taken into account. Actions are
+filtered out when they don&#8217;t belong to this plugin for example,
+or if <a class="reference internal" href="api-class-catalogaction.html#keypirinha.CatalogAction.valid" title="keypirinha.CatalogAction.valid"><code class="xref py py-meth docutils literal"><span class="pre">CatalogAction.valid()</span></code></a> returns <code class="docutils literal"><span class="pre">False</span></code>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.set_default_icon">
+<code class="descname">set_default_icon</code><span class="sig-paren">(</span><em>icon_handle</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_default_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the default icon of the catalog items created by this plugin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>icon_handle</strong> (<a class="reference internal" href="api-class-iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><em>IconHandle</em></a>) &#8211; the default icon handle to be used</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.should_terminate">
+<code class="descname">should_terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.should_terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a boolean to indicate whether the current task should return as
+soon as possible, without finishing its job.</p>
+<p>Plugins should call this method frequently. Especially at I/O operations
+boundaries (storage accesses and network communications).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>When calling code is from a <a class="reference internal" href="#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal"><span class="pre">Plugin</span></code></a>, it is preferred to
+call this method instead of the
+<a class="reference internal" href="api-module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a> function.</li>
+<li>Check the documentation of <a class="reference internal" href="api-module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a>
+to know more about the meaning of the returned value.</li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="api-module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.warn">
+<code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log an warning message.</p>
+<p><em>objects</em> and <em>sep</em> arguments are handled the same way than
+<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-class-catalogitem.html" class="btn btn-neutral float-right" title="7.2.3. CatalogItem class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api-module.html" class="btn btn-neutral" title="7.2.1. keypirinha module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

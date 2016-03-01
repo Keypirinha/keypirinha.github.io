@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.2.3. CatalogItem class &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="up" title="7.2. API Reference" href="api-reference.html"/>
+        <link rel="next" title="7.2.4. CatalogAction class" href="api-class-catalogaction.html"/>
+        <link rel="prev" title="7.2.2. Plugin class" href="api-class-plugin.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api-overview.html">7.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api-reference.html">7.2. API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="api-module.html">7.2.1. keypirinha module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-plugin.html">7.2.2. Plugin class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">7.2.3. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-catalogaction.html">7.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-settings.html">7.2.5. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-iconhandle.html">7.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-module-util.html">7.2.7. keypirinha_util module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-python.html">7.3. Embedded Python Interpreter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="api.html">7. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+      
+          <li><a href="api-reference.html">7.2. API Reference</a> &raquo;</li>
+      
+    <li>7.2.3. CatalogItem class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="catalogitem-class">
+<h1>7.2.3. CatalogItem class<a class="headerlink" href="#catalogitem-class" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keypirinha.CatalogItem">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">CatalogItem</code><a class="headerlink" href="#keypirinha.CatalogItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal"><span class="pre">CatalogItem</span></code> object <strong>must</strong> always be created with
+<code class="xref py py-meth docutils literal"><span class="pre">Plugin.create_item()</span></code>.</p>
+<dl class="method">
+<dt id="keypirinha.CatalogItem.id">
+<code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <em>id</em> (int) of the parent plugin of this object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.category">
+<code class="descname">category</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <code class="xref py py-class docutils literal"><span class="pre">ItemCategory</span></code> of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.label">
+<code class="descname">label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <em>label</em> of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.set_label">
+<code class="descname">set_label</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.set_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the <em>label</em> (string) of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.short_desc">
+<code class="descname">short_desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.short_desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <em>short description</em> of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.set_short_desc">
+<code class="descname">set_short_desc</code><span class="sig-paren">(</span><em>short_desc</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.set_short_desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the <em>short description</em> (string) of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.target">
+<code class="descname">target</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <em>target</em> (string) of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.hit_hint">
+<code class="descname">hit_hint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.hit_hint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <code class="xref py py-class docutils literal"><span class="pre">ItemHitHint</span></code> of this item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.args_hint">
+<code class="descname">args_hint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.args_hint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <code class="xref py py-class docutils literal"><span class="pre">ItemArgsHint</span></code> of this item.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.CatalogItem.accepts_args" title="keypirinha.CatalogItem.accepts_args"><code class="xref py py-meth docutils literal"><span class="pre">accepts_args()</span></code></a> and <a class="reference internal" href="#keypirinha.CatalogItem.requires_args" title="keypirinha.CatalogItem.requires_args"><code class="xref py py-meth docutils literal"><span class="pre">requires_args()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.accepts_args">
+<code class="descname">accepts_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.accepts_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">self.args_hint()</span> <span class="pre">!=</span> <span class="pre">keypirinha.ItemArgsHint.FORBIDDEN</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the result is <code class="docutils literal"><span class="pre">True</span></code>, this object might also
+<a class="reference internal" href="#keypirinha.CatalogItem.requires_args" title="keypirinha.CatalogItem.requires_args"><code class="xref py py-meth docutils literal"><span class="pre">requires_args()</span></code></a>.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.CatalogItem.args_hint" title="keypirinha.CatalogItem.args_hint"><code class="xref py py-meth docutils literal"><span class="pre">args_hint()</span></code></a> and <a class="reference internal" href="#keypirinha.CatalogItem.requires_args" title="keypirinha.CatalogItem.requires_args"><code class="xref py py-meth docutils literal"><span class="pre">requires_args()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.requires_args">
+<code class="descname">requires_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.requires_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">self.args_hint()</span> <span class="pre">!=</span> <span class="pre">keypirinha.ItemArgsHint.REQUIRED</span></code></p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.CatalogItem.accepts_args" title="keypirinha.CatalogItem.accepts_args"><code class="xref py py-meth docutils literal"><span class="pre">accepts_args()</span></code></a> and <a class="reference internal" href="#keypirinha.CatalogItem.args_hint" title="keypirinha.CatalogItem.args_hint"><code class="xref py py-meth docutils literal"><span class="pre">args_hint()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.loop_on_suggest">
+<code class="descname">loop_on_suggest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.loop_on_suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <em>loop_on_suggest</em> flag value.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Explain the <em>loop_on_suggest</em> concept.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.set_loop_on_suggest">
+<code class="descname">set_loop_on_suggest</code><span class="sig-paren">(</span><em>loop_on_suggest</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.set_loop_on_suggest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the value of the <em>loop_on_suggest</em> flag (bool).</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Explain the <em>loop_on_suggest</em> concept.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.raw_args">
+<code class="descname">raw_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.raw_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <em>raw</em> arguments (string).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.displayed_args">
+<code class="descname">displayed_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.displayed_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <em>displayed</em> arguments. Might be the same than the <em>raw</em>
+arguments. The returned value is never empty if the result of
+<a class="reference internal" href="#keypirinha.CatalogItem.raw_args" title="keypirinha.CatalogItem.raw_args"><code class="xref py py-meth docutils literal"><span class="pre">raw_args()</span></code></a> is not empty.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.set_args">
+<code class="descname">set_args</code><span class="sig-paren">(</span><em>raw_args</em>, <em>displayed_args=''</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.set_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the arguments of this item.</p>
+<p>The <em>raw_args</em> are the actual arguments of this item.</p>
+<p>Sometimes a plugin needs to store arguments that are not human friendly
+to read. For that purpose, it is possible to apply a <em>display name</em> on
+these arguments (<em>displayed_args</em>) so the end-user can still
+differentiate two items with the same <em>target</em>.</p>
+<p>If the <em>displayed_args</em> argument is left empty,
+<a class="reference internal" href="#keypirinha.CatalogItem.displayed_args" title="keypirinha.CatalogItem.displayed_args"><code class="xref py py-meth docutils literal"><span class="pre">displayed_args()</span></code></a> will always have the same result than
+<a class="reference internal" href="#keypirinha.CatalogItem.raw_args" title="keypirinha.CatalogItem.raw_args"><code class="xref py py-meth docutils literal"><span class="pre">raw_args()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.CatalogItem.raw_args" title="keypirinha.CatalogItem.raw_args"><code class="xref py py-meth docutils literal"><span class="pre">raw_args()</span></code></a> and <a class="reference internal" href="#keypirinha.CatalogItem.displayed_args" title="keypirinha.CatalogItem.displayed_args"><code class="xref py py-meth docutils literal"><span class="pre">displayed_args()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.CatalogItem.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogItem.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a newly-created clone of this object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-class-catalogaction.html" class="btn btn-neutral float-right" title="7.2.4. CatalogAction class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api-class-plugin.html" class="btn btn-neutral" title="7.2.2. Plugin class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

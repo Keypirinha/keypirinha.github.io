@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Configuration &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="next" title="5. Packages" href="packages.html"/>
+        <link rel="prev" title="3. Overview" href="overview.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">4.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-modification">4.2. First Modification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modification-at-runtime">4.3. Modification at Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-ini-format">4.4. The INI Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">4.4.1. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">4.4.2. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-line-values">4.4.3. Multiple Line Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reusable-values">4.4.4. Reusable Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-defined-variables">4.4.5. Pre-defined variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment-values">4.4.6. Environment Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#machine-and-user-specific-settings">4.5. Machine and User Specific Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>4. Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration">
+<h1>4. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>4.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><em>Keypirinha</em> is file-driven. Its configuration data resides in files, which are
+mostly human readable and modifiable.</p>
+<p>By design, <em>Keypirinha</em> does not offer any graphical interface to modify its
+settings. But it does offers a convenient way to open its configuration files at
+runtime.</p>
+<p>Search for the &#8220;<em>Keypirinha</em>: Configure ...&#8221; items from the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
+<img alt="The 'Configure' items" class="align-center" src="_images/wndrun-config-search.png" />
+<p>Or use the main popup menu by clicking the right mouse button anywhere on the
+<a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> except the text field.</p>
+<img alt="The 'Configure' menu" class="align-center" src="_images/wndrun-config-menu.png" />
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Any change to the configuration files will be detected automatically at
+runtime and new/modified settings will immediately be applied.</p>
+</div>
+</div>
+<div class="section" id="first-modification">
+<h2>4.2. First Modification<a class="headerlink" href="#first-modification" title="Permalink to this headline">¶</a></h2>
+<p>If you have selected the <code class="docutils literal"><span class="pre">Configure</span> <span class="pre">Application</span></code> item for the first time, you
+should now see two text files opened side by side on your screen.</p>
+<p>The one on the <strong>left</strong> is the original configuration file, bundled with the
+application. It shows the exhaustive list of the available settings. This file
+is <strong>not</strong> meant to be modified. Let&#8217;s call it <code class="docutils literal"><span class="pre">Default</span></code>.</p>
+<p>The one on the <strong>right</strong> side should be blank on a fresh install, which means
+all the default configuration values defined in the <code class="docutils literal"><span class="pre">Default</span></code> file are used.
+Let&#8217;s call this file <code class="docutils literal"><span class="pre">User</span></code>.</p>
+<p>Configuration files in <em>Keypirinha</em> are <code class="docutils literal"><span class="pre">INI</span></code> files. This format has been chosen
+because it is easy to read and to edit. But there are some things to keep in
+mind when editing a configuration file...</p>
+<p>Say you want to modify the <code class="docutils literal"><span class="pre">max_results</span></code> value for example. In
+<em>Keypirinha</em>&#8216;s <code class="docutils literal"><span class="pre">INI</span></code> files, every value belongs to a given <strong>section</strong>. So if
+you just add a single line like <code class="docutils literal"><span class="pre">max_results</span> <span class="pre">=</span> <span class="pre">100</span></code> to the <code class="docutils literal"><span class="pre">User</span></code> file,
+it <strong>will not</strong> have the desired effect. The <code class="docutils literal"><span class="pre">max_results</span></code> setting is
+part of the <code class="docutils literal"><span class="pre">gui</span></code> section so you must prepend the <code class="docutils literal"><span class="pre">[gui]</span></code> line.</p>
+<p>The default value of <code class="docutils literal"><span class="pre">max_results</span></code> is <code class="docutils literal"><span class="pre">100</span></code>, let&#8217;s change it to <code class="docutils literal"><span class="pre">90</span></code>. The
+<code class="docutils literal"><span class="pre">User</span></code> file should now look like this:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[gui]</span>
+<span class="na">max_results</span> <span class="o">=</span> <span class="s">90</span>
+</pre></div>
+</div>
+<p>Save the <code class="docutils literal"><span class="pre">User</span></code> configuration file by pressing <code class="kbd docutils literal"><span class="pre">Ctrl+S</span></code> or by clicking
+the <span class="menuselection">File ‣ Save</span> menu of the editor. Modifications are now
+applied, you can close both editor windows.</p>
+</div>
+<div class="section" id="modification-at-runtime">
+<h2>4.3. Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
+<p>When you save a new version of one or several of your configuration files,
+<em>Keypirinha</em> automatically detects any modification you have made and apply it at
+runtime. The same mechanism goes to packages&#8217; configuration.</p>
+</div>
+<div class="section" id="the-ini-format">
+<h2>4.4. The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">INI</span></code> file format is not precisely defined and there are plenty of
+variants out there. The format used by <em>Keypirinha</em> is readable by
+<a class="reference external" href="https://docs.python.org/3.5/library/configparser.html#module-configparser" title="(in Python v3.5)"><code class="xref py py-mod docutils literal"><span class="pre">configparser</span></code></a> (<code class="docutils literal"><span class="pre">ExtendedInterpolation</span></code> is used), a <a class="reference external" href="https://python.org">Python</a> standard
+module for those who are familiar with it.</p>
+<div class="section" id="example">
+<span id="ini-example"></span><h3>4.4.1. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ini"><div class="highlight"><pre><span class="c1"># This is a comment line so I can write whatever I want</span>
+
+<span class="k">[config]</span>
+<span class="c1"># Values defined below belong to the &#39;config&#39; section</span>
+<span class="na">boolean_value</span> <span class="o">=</span> <span class="s">yes</span>
+<span class="na">editor</span> <span class="o">=</span> <span class="s">${var:my_editor}</span>
+<span class="na">say_hello</span> <span class="o">=</span> <span class="s">${var:hello} World</span>
+<span class="na">multiline_setting</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    ${say_hello}</span>
+<span class="s">    This is a multiple line value.</span>
+<span class="s">    You can add as much lines as desired.</span>
+<span class="s">    As long as they are indented deeper than the first line of the value.</span>
+
+<span class="k">[var]</span>
+<span class="c1"># Reusable values are grouped into the &#39;var&#39; section</span>
+<span class="na">my_editor</span> <span class="o">=</span> <span class="s">D:/Apps/MyEditor/ShinyEditor.exe</span>
+<span class="na">hello</span> <span class="o">=</span> <span class="s">Hello</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comments">
+<h3>4.4.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to add comments to an <code class="docutils literal"><span class="pre">INI</span></code> file. Comments are not interpreted
+by the application and they are skipped at parsing-time.</p>
+<p>To add a comment to your configuration file, start a line with a <code class="docutils literal"><span class="pre">#</span></code>
+character.</p>
+</div>
+<div class="section" id="multiple-line-values">
+<h3>4.4.3. Multiple Line Values<a class="headerlink" href="#multiple-line-values" title="Permalink to this headline">¶</a></h3>
+<p><em>Keypirinha</em> or its packages may accept multiple line values for some of their
+settings (it is always specified). When you write mutiple line values, you must
+take care of <strong>indenting</strong> each line correctly to ensure the configuration file
+will be interpreted properly by the application.</p>
+<p>See the <a class="reference internal" href="#ini-example"><span>Example</span></a> section above for an exampe.</p>
+</div>
+<div class="section" id="reusable-values">
+<h3>4.4.4. Reusable Values<a class="headerlink" href="#reusable-values" title="Permalink to this headline">¶</a></h3>
+<p><em>Keypirinha</em> allows you to declare values that can be used elsewhere in <strong>any</strong>
+configuration file (application and plugins).</p>
+<p>If you wish your reusable value to be usable in any configuration file, you must
+declare it in the <code class="docutils literal"><span class="pre">var</span></code> dedicated section in the main application&#8217;s
+configuration file <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code>. <em>Keypirinha</em> will take care of
+replicating the <code class="docutils literal"><span class="pre">var</span></code> section in every subsequently loaded configuration file.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">While it is possible to have a <code class="docutils literal"><span class="pre">var</span></code> section in any configuration file, it
+is usually preferable to have your reusable values all grouped in the same
+file (i.e.: <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code>) to avoid mistakes and unexpected
+behavior.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">var</span></code> section does not have to be defined at the beginning of the
+file.</p>
+</div>
+<p>See the <a class="reference internal" href="#ini-example"><span>Example</span></a> section above for an exampe.</p>
+</div>
+<div class="section" id="pre-defined-variables">
+<h3>4.4.5. Pre-defined variables<a class="headerlink" href="#pre-defined-variables" title="Permalink to this headline">¶</a></h3>
+<p><em>Keypirinha</em> also silently populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
+values that may come handy.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">APP_DIR</span></code> <br />
+The path to the root/install directory of the application. <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha</span></code> (installed mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha</span></code> (portable mode)</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">APP_EXE</span></code> <br />
+The path to application&#8217;s executable <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha\Keypirinha.exe</span></code> (installed mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\Keypirinha.exe</span></code> (portable mode)</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">PROFILE_DIR</span></code> <br />
+The <em>Profile</em> directory, parent of the <em>User</em>, <em>InstalledPackages</em> and
+<em>Packages</em> directories. <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha</span></code> (installed mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile</span></code> (portable mode)</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">PROFILE_DIR_USER</span></code> <br />
+The <em>User</em> directory, where user&#8217;s configuration files are stored. <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\User</span></code> (installed mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\User</span></code> (portable mode)</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">PROFILE_DIR_INSTALLED_PACKS</span></code> <br />
+The <em>InstalledPackages</em> directory, home of the downloaded packages. <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\InstalledPackages</span></code> in installed
+mode</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\InstalledPackages</span></code> in portable
+mode</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">PROFILE_DIR_LOOSE_PACKS</span></code> <br />
+The <em>Packages</em> directory, where the loose packages (modifiable at runtime) are
+stored. <br />
+Examples:<ul>
+<li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\Packages</span></code> (installed mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\Packages</span></code> (portable mode)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="environment-values">
+<h3>4.4.6. Environment Values<a class="headerlink" href="#environment-values" title="Permalink to this headline">¶</a></h3>
+<p>For convenience, <em>Keypirinha</em> automatically defines a section named <code class="docutils literal"><span class="pre">env</span></code>,
+populated with all the environment variables that could be found at the moment
+the configuration file is read.</p>
+<p>The <code class="docutils literal"><span class="pre">env</span></code> section is defined (overwritten) in <strong>every</strong> loaded configuration
+file.</p>
+</div>
+</div>
+<div class="section" id="machine-and-user-specific-settings">
+<h2>4.5. Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to have settings that will be applied only when <em>Keypirinha</em> runs on
+a specific <strong>machine</strong> and/or under a specific <strong>user</strong> session.</p>
+<p>To do that, the configuration file must be named according a pre-defined
+pattern.</p>
+<p>For example, <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code> which is application&#8217;s main configuration
+file. <code class="docutils literal"><span class="pre">Keypirinha</span></code> being the <em>name</em> part of the file. <em>Keypirinha</em> will
+automatically scan for these files each time it has to load its configuration
+files, <strong>in order</strong> of precedence, which means a value re-defined in a file
+<strong>overrides</strong> the previous one(s):</p>
+<ul class="simple">
+<li><code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code>: the main file</li>
+<li><code class="file docutils literal"><span class="pre">Keypirinha.&#64;MACHINE.ini</span></code>: machine-specific configuration (any user).
+Notice the <code class="docutils literal"><span class="pre">&#64;</span></code> prefix.</li>
+<li><code class="file docutils literal"><span class="pre">Keypirinha.USER.ini</span></code>: user-specific configuration (any machine)</li>
+<li><code class="file docutils literal"><span class="pre">Keypirinha.USER&#64;MACHINE.ini</span></code>: configuration specific to a user on a
+specific machine</li>
+</ul>
+<p>Where <code class="docutils literal"><span class="pre">MACHINE</span></code> is the <em>NetBIOS</em> name of your computer (enter the
+<code class="docutils literal"><span class="pre">echo</span> <span class="pre">%COMPUTERNAME%</span></code> command in a console to get it) and <code class="docutils literal"><span class="pre">USER</span></code> is the name
+of the currently logged user (<code class="docutils literal"><span class="pre">echo</span> <span class="pre">%USERNAME%</span></code>).</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This also works with the packages configuration files located in your <em>User</em>
+directory.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="packages.html" class="btn btn-neutral float-right" title="5. Packages" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="3. Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

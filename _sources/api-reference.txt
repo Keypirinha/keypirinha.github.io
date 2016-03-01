@@ -1,0 +1,14 @@
+=============
+API Reference
+=============
+
+.. toctree::
+    :maxdepth: 2
+
+    api-module
+    api-class-plugin
+    api-class-catalogitem
+    api-class-catalogaction
+    api-class-settings
+    api-class-iconhandle
+    api-module-util

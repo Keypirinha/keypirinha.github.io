@@ -1,0 +1,81 @@
+============
+Installation
+============
+
+
+Requirements
+============
+
+|project| works on Windows 64bits (Vista, 7, 8, 8.1) and does not require
+additional dependencies. It hasn't been tested on Windows 10 but should work
+just fine.
+
+There is no plan in a near future to support 32bits platforms.
+
+
+Installation
+============
+
+|project| currently comes in a simple archive that can be uncompressed about
+anywhere you want. There is no installer.
+
+**Out of the box**, it is configured to run in :ref:`install-portable`, which
+means all the configuration and runtime files are stored in a single folder,
+located under |project|'s directory.
+
+
+Installed vs. Portable mode
+===========================
+
+|project| can run in two different flavors: :ref:`install-installed` or
+:ref:`install-portable`.
+
+Each time |project| is being launched, it checks if a :file:`portable` folder
+exists under |project|'s directory. In that case, the application will run in
+:ref:`install-portable`, otherwise the :ref:`install-installed` is selected.
+
+.. note::
+    There is currently no automated tool to ease switching between the two modes
+    so you will have to copy the directories manually if you wish to switch to
+    the :ref:`install-installed`. **Just ensure first the application is not
+    running.**
+
+
+.. _install-installed:
+
+Installed Mode
+--------------
+
+The Installed Mode complies to the Windows' conventional way of storing
+applications' data under user's dedicated folder. Usually something like:
+:file:`C:\\Users\\%USERNAME%`.
+
+The configuration files and downloaded extra packages will be stored in the
+:file:`%APPDATA%\\Keypirinha` folder.
+That might be translated to something like that on your machine:
+:file:`C:\\Users\\%USERNAME%\\AppData\\Roaming\\Keypirinha`.
+
+Runtime files and any other kind of temporary files will be stored in the
+:file:`%LOCALAPPDATA%\\Keypirinha` folder.
+That might be translated to something like that on your machine:
+:file:`C:\\Users\\%USERNAME%\\AppData\\Local\\Keypirinha`.
+
+.. warning::
+    In order to be able to run under this mode, the :file:`portable` directory
+    must **not** exist. So be sure you have deleted it after copying your files
+    to their new locations.
+
+
+.. _install-portable:
+
+Portable Mode
+-------------
+
+The Portable Mode keeps all the files needed by |project| in a single folder,
+making it easy to be moved around on a USB stick for example.
+
+The configuration files and downloaded extra packages will be stored in the
+:file:`portable\\Profile` folder, directly located in |project|'s directory.
+
+Runtime files and any other kind of temporary files will be stored in the
+:file:`portable\\Local` folder, directly located in |project|'s directory.

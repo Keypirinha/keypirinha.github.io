@@ -1,0 +1,6 @@
+============
+Test Package
+============
+
+The *Test* package is only useful to the plugin developer. You can see it as a
+skeleton to start developing a new plugin.

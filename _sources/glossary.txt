@@ -1,0 +1,59 @@
+========
+Glossary
+========
+
+.. glossary::
+
+    Catalog
+        The Catalog is the name of the internal database of |project| where all
+        the :term:`items` are indexed to allow a quick search.
+
+    CatalogItem
+        The class name of an :term:`item`.
+
+    Hive
+    Hives
+        A Hive is a directory dedicated to the storage of :term:`packages`. It
+        also defines the way Packages are stored (i.e.: loose files or packed in
+        a single archive).
+
+    InstanceID
+        The InstanceID number is an unsigned integer internally used by the
+        application and assigned at runtime to every loaded :term:`package`. It
+        is used to ensure Plugins are not messing up the :term:`catalog`.
+
+        Read :doc:`api-overview` for more information.
+
+    Item
+    Items
+        An item is a simple data structure created by the :term:`plugins` and
+        that holds some properties like a display name (label), a category
+        (File, URL, Command Line, ...), a reference to the parent
+        :term:`plugin`, etc...
+
+    LaunchBox
+        The L(a)unchBox is |project|'s main dialog window, from which you can
+        make a search and launch the selected :term:`item`. It can be opened by
+        pressing the :kbd:`Ctrl+Win+K` combination (by default).
+
+        .. image:: images/wndrun.png
+            :alt: |project|'s main dialog
+            :align: center
+
+    Package
+    Packages
+        A Package is a container of one or several :term:`plugins` designed for
+        the same purpose. It contains the Plugins code as well as their
+        dependencies if needed and optionally includes their configuration files,
+        resources and documentation.
+
+        Its content can be stored in a directory or packed in an archive (e.g.:
+        Zip) to ease redistribution.
+
+        Read :doc:`packages` for more information.
+
+    Plugin
+    Plugins
+        In the context of |project|, a Plugin is a software component written in
+        Python3_ that extends the base features of the application. It is always
+        encapsulated in a :term:`package`.

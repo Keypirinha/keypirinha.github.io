@@ -1,0 +1,104 @@
+=================
+WebSearch Package
+=================
+
+Launch a search on any configured website using system's default web browser.
+
+Some search sites are already configured by default. Currently: ``Bing``,
+``DuckDuckGo``, ``Google``, ``Twitter``, ``Yahoo``, ``WolframAlpha``, ``IMDB``,
+``Wikipedia``, ``YouTube``, ``C++``, ``CPAN``, ``Git``, ``PHP``, ``Python3`` and
+``RubyGems`` (this list may vary).
+
+
+Catalog Items
+=============
+
+This package populates the Catalog with the following items:
+
+* Items prefixed with ``WebSearch`` (one per configured site)
+
+
+Configuring Search Sites
+========================
+
+*WebSearch* allows flexible and fine-grained configuration. Use the
+``Configure Package: WebSearch`` item to edit it.
+
+For example, if you wish to be able to request the *DuckDuckGo* search engine
+from |project| (which is already configured by default), add the following into
+your configuration file:
+
+.. code-block:: ini
+
+    [site/DuckDuckGo]
+    url = https://duckduckgo.com/?q=%s
+    new_window = yes
+    incognito = no
+    history_keep = all
+
+The first line start a new configuration section, the ``site/`` prefix is
+required so *WebSearch* knows it is a new search site. The remaining part is the
+name that will be used to create a new Catalog Item. The
+``WebSearch DuckDuckGo`` item will be created in this example.
+
+The ``url`` setting (**required**) can hold one *or* several URLs (one per
+line). The URL must contain the search terms placeholder ``%s`` to indicate
+*WebSearch* where to insert the search terms and how to url-encode them.
+
+The ``new_window`` setting (optional) accepts a boolean value to indicate if a
+search on this website should be launched in a new window.
+
+The ``incognito`` setting (optional) accepts a boolean value to indicate if a
+search on this website should be launched in *Private Mode* (also called
+*Incognito* on *Chrome*).
+
+The ``history_keep`` setting (optional) indicates if and how a search request on
+this website should be kept in |project|'s History. It accepts the following
+values:
+
+    * ``all`` indicates that the targeted web site as well as the terms entered
+      by the user for this particular search will be kept in history.
+
+    * ``site`` indicates that only the targeted site will be kept in history,
+      without the actual user's search terms.
+
+    * ``none`` indicates that the search must not be kept in history at all.
+
+.. note::
+    Note that the ``new_window`` and ``incognito`` values are only hints. When
+    you launch a search, |project| tries to detect system's default browser and
+    insert the appropriate command line options according to the type of web
+    browser (*Chrome*, *Firefox*, *Internet Explorer* and *Opera* are currently
+    recognized). In the end, it is up to the browser to accepts these options
+    or not.
+
+An extra setting (``args_quoting``) is available to force *WebSearch* to
+url-encode the search terms in a specific way before inserting them into the
+final URL. By default, *WebSearch* detects in which part of the URL the
+placeholder is located. Then encodes the search terms according to this
+location. But some websites do not always follow the standard rules of encoding
+and might behave unexpectedly. This setting accepts the following values:
+
+    * ``auto`` (**default**) Choose the appropriate quoting scheme according to
+      the position of the ``%s`` placeholder in the URL.
+
+    * ``quote`` Replace special characters using the '%xx' escape. Letters,
+      digits, and the characters ``_.-`` are never quoted.
+
+    * ``quote_plus`` Like ``quote``, but also replace spaces by plus signs.
+
+
+Multi-URL Search Site
+---------------------
+
+Example of multi-URL search site:
+
+.. code-block:: ini
+
+    [site/Multi]
+    url =
+        https://duckduckgo.com/?q=%s
+        https://encrypted.google.com/search?q=%s
+
+.. caution::
+    Notice the indentation of the ``url`` value!

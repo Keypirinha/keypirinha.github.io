@@ -1,0 +1,125 @@
+=================
+CatalogItem class
+=================
+
+.. py:class:: keypirinha.CatalogItem
+
+    A ``CatalogItem`` object **must** always be created with
+    :py:meth:`Plugin.create_item`.
+
+    .. py:method:: id()
+
+        Get the *id* (int) of the parent plugin of this object.
+
+
+    .. py:method:: category()
+
+        Get the :py:class:`ItemCategory` of this item.
+
+
+    .. py:method:: label()
+
+        Get the *label* of this item.
+
+
+    .. py:method:: set_label(label)
+
+        Change the *label* (string) of this item.
+
+
+    .. py:method:: short_desc()
+
+        Get the *short description* of this item.
+
+
+    .. py:method:: set_short_desc(short_desc)
+
+        Change the *short description* (string) of this item.
+
+
+    .. py:method:: target()
+
+        Get the *target* (string) of this item.
+
+
+    .. py:method:: hit_hint()
+
+        Get the :py:class:`ItemHitHint` of this item.
+
+
+    .. py:method:: args_hint()
+
+        Get the :py:class:`ItemArgsHint` of this item.
+
+        .. seealso::
+            :py:meth:`accepts_args` and :py:meth:`requires_args`
+
+
+    .. py:method:: accepts_args()
+
+        Returns ``self.args_hint() != keypirinha.ItemArgsHint.FORBIDDEN``.
+
+        .. note::
+            If the result is ``True``, this object might also
+            :py:meth:`requires_args`.
+
+        .. seealso::
+            :py:meth:`args_hint` and :py:meth:`requires_args`
+
+
+    .. py:method:: requires_args()
+
+        Returns ``self.args_hint() != keypirinha.ItemArgsHint.REQUIRED``
+
+        .. seealso::
+            :py:meth:`accepts_args` and :py:meth:`args_hint`
+
+
+    .. py:method:: loop_on_suggest()
+
+        Returns the *loop_on_suggest* flag value.
+
+        .. todo:: Explain the *loop_on_suggest* concept.
+
+
+    .. py:method:: set_loop_on_suggest(loop_on_suggest)
+
+        Change the value of the *loop_on_suggest* flag (bool).
+
+        .. todo:: Explain the *loop_on_suggest* concept.
+
+
+    .. py:method:: raw_args()
+
+        Returns the *raw* arguments (string).
+
+
+    .. py:method:: displayed_args()
+
+        Returns the *displayed* arguments. Might be the same than the *raw*
+        arguments. The returned value is never empty if the result of
+        :py:meth:`raw_args` is not empty.
+
+
+    .. py:method:: set_args(raw_args, displayed_args='')
+
+        Change the arguments of this item.
+
+        The *raw_args* are the actual arguments of this item.
+
+        Sometimes a plugin needs to store arguments that are not human friendly
+        to read. For that purpose, it is possible to apply a *display name* on
+        these arguments (*displayed_args*) so the end-user can still
+        differentiate two items with the same *target*.
+
+        If the *displayed_args* argument is left empty,
+        :py:meth:`displayed_args` will always have the same result than
+        :py:meth:`raw_args`.
+
+        .. seealso::
+            :py:meth:`raw_args` and :py:meth:`displayed_args`
+
+
+    .. py:method:: clone()
+
+        Returns a newly-created clone of this object.

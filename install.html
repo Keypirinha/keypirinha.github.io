@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Installation &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="next" title="2. First steps" href="first.html"/>
+        <link rel="prev" title="Keypirinha" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">1.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.2. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installed-vs-portable-mode">1.3. Installed vs. Portable mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installed-mode">1.3.1. Installed Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#portable-mode">1.3.2. Portable Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>1. Installation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>1.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p><em>Keypirinha</em> works on Windows 64bits (Vista, 7, 8, 8.1) and does not require
+additional dependencies. It hasn&#8217;t been tested on Windows 10 but should work
+just fine.</p>
+<p>There is no plan in a near future to support 32bits platforms.</p>
+</div>
+<div class="section" id="id1">
+<h2>1.2. Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><em>Keypirinha</em> currently comes in a simple archive that can be uncompressed about
+anywhere you want. There is no installer.</p>
+<p><strong>Out of the box</strong>, it is configured to run in <a class="reference internal" href="#install-portable"><span>Portable Mode</span></a>, which
+means all the configuration and runtime files are stored in a single folder,
+located under <em>Keypirinha</em>&#8216;s directory.</p>
+</div>
+<div class="section" id="installed-vs-portable-mode">
+<h2>1.3. Installed vs. Portable mode<a class="headerlink" href="#installed-vs-portable-mode" title="Permalink to this headline">¶</a></h2>
+<p><em>Keypirinha</em> can run in two different flavors: <a class="reference internal" href="#install-installed"><span>Installed Mode</span></a> or
+<a class="reference internal" href="#install-portable"><span>Portable Mode</span></a>.</p>
+<p>Each time <em>Keypirinha</em> is being launched, it checks if a <code class="file docutils literal"><span class="pre">portable</span></code> folder
+exists under <em>Keypirinha</em>&#8216;s directory. In that case, the application will run in
+<a class="reference internal" href="#install-portable"><span>Portable Mode</span></a>, otherwise the <a class="reference internal" href="#install-installed"><span>Installed Mode</span></a> is selected.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is currently no automated tool to ease switching between the two modes
+so you will have to copy the directories manually if you wish to switch to
+the <a class="reference internal" href="#install-installed"><span>Installed Mode</span></a>. <strong>Just ensure first the application is not
+running.</strong></p>
+</div>
+<div class="section" id="installed-mode">
+<span id="install-installed"></span><h3>1.3.1. Installed Mode<a class="headerlink" href="#installed-mode" title="Permalink to this headline">¶</a></h3>
+<p>The Installed Mode complies to the Windows&#8217; conventional way of storing
+applications&#8217; data under user&#8217;s dedicated folder. Usually something like:
+<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%</span></code>.</p>
+<p>The configuration files and downloaded extra packages will be stored in the
+<code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code> folder.
+That might be translated to something like that on your machine:
+<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Roaming\Keypirinha</span></code>.</p>
+<p>Runtime files and any other kind of temporary files will be stored in the
+<code class="file docutils literal"><span class="pre">%LOCALAPPDATA%\Keypirinha</span></code> folder.
+That might be translated to something like that on your machine:
+<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Local\Keypirinha</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In order to be able to run under this mode, the <code class="file docutils literal"><span class="pre">portable</span></code> directory
+must <strong>not</strong> exist. So be sure you have deleted it after copying your files
+to their new locations.</p>
+</div>
+</div>
+<div class="section" id="portable-mode">
+<span id="install-portable"></span><h3>1.3.2. Portable Mode<a class="headerlink" href="#portable-mode" title="Permalink to this headline">¶</a></h3>
+<p>The Portable Mode keeps all the files needed by <em>Keypirinha</em> in a single folder,
+making it easy to be moved around on a USB stick for example.</p>
+<p>The configuration files and downloaded extra packages will be stored in the
+<code class="file docutils literal"><span class="pre">portable\Profile</span></code> folder, directly located in <em>Keypirinha</em>&#8216;s directory.</p>
+<p>Runtime files and any other kind of temporary files will be stored in the
+<code class="file docutils literal"><span class="pre">portable\Local</span></code> folder, directly located in <em>Keypirinha</em>&#8216;s directory.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="first.html" class="btn btn-neutral float-right" title="2. First steps" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Keypirinha" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

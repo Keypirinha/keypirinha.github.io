@@ -1,0 +1,11 @@
+================
+IconHandle class
+================
+
+.. py:currentmodule:: keypirinha
+
+.. autoclass:: keypirinha.IconHandle
+    :members:
+    :undoc-members:
+    :no-private-members:
+    :no-special-members:

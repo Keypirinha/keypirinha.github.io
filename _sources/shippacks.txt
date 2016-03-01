@@ -1,0 +1,29 @@
+================
+Shipped Packages
+================
+
+For convenience, |project| is shipped with some :term:`packages`, also called
+*Official Packages* that are enabled by default.
+
+|project| is a very generic tool and these *Shipped Packages* might not fit your
+needs entirely so they have been open-sourced to allow a maximum degree of
+flexibility. Feel free to modify them and to extend their features.
+
+Note that it is also possible to contribute to their development so everyone can
+take advantage of the improvements you applied. Read the
+:ref:`contribute-packages` section if you want to get involved.
+
+
+.. toctree::
+    :maxdepth: 2
+
+    shippacks-apps
+    shippacks-calc
+    shippacks-controlpanel
+    shippacks-filezilla
+    shippacks-putty
+    shippacks-taskswitcher
+    shippacks-test
+    shippacks-websearch
+    shippacks-winamp
+    shippacks-winscp

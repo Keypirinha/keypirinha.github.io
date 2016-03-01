@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.2.5. Settings class &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="up" title="7.2. API Reference" href="api-reference.html"/>
+        <link rel="next" title="7.2.6. IconHandle class" href="api-class-iconhandle.html"/>
+        <link rel="prev" title="7.2.4. CatalogAction class" href="api-class-catalogaction.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api-overview.html">7.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api-reference.html">7.2. API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="api-module.html">7.2.1. keypirinha module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-plugin.html">7.2.2. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-catalogitem.html">7.2.3. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-catalogaction.html">7.2.4. CatalogAction class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">7.2.5. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-class-iconhandle.html">7.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api-module-util.html">7.2.7. keypirinha_util module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api-python.html">7.3. Embedded Python Interpreter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="api.html">7. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+      
+          <li><a href="api-reference.html">7.2. API Reference</a> &raquo;</li>
+      
+    <li>7.2.5. Settings class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="settings-class">
+<h1>7.2.5. Settings class<a class="headerlink" href="#settings-class" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keypirinha.Settings">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Settings</code><span class="sig-paren">(</span><em>settings_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class to access the Settings of a Package/Plugin.</p>
+<p>It is not meant to be instantiated manually. You should rather use
+<a class="reference internal" href="api-class-plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> or <a class="reference internal" href="api-module.html#keypirinha.load_settings" title="keypirinha.load_settings"><code class="xref py py-func docutils literal"><span class="pre">load_settings()</span></code></a>.</p>
+<dl class="method">
+<dt id="keypirinha.Settings.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the string value of the specified <em>key</em> in <em>section</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the setting to find</li>
+<li><strong>section</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; You can optionally specify a section name.
+Otherwise the key will be searched in the default section.</li>
+<li><strong>fallback</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#any" title="(in Python v3.5)"><em>any</em></a>) &#8211; A fallback value in case <em>key</em> does not exist in the
+specified <em>section</em>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The found value, or <em>fallback</em> in case <em>key</em> was not found in
+<em>section</em>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_bool">
+<code class="descname">get_bool</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read boolean values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_enum">
+<code class="descname">get_enum</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>enum=[]</em>, <em>case_sensitive=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read enum values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_float">
+<code class="descname">get_float</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>min=None</em>, <em>max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read float values.</p>
+<p>If the read value is successfully casted/converted to a float, it is
+matched against optional boundaries <em>min</em> and/or <em>max</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_int">
+<code class="descname">get_int</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>min=None</em>, <em>max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read integer values.</p>
+<p>If the read value is successfully converted to an integer, it is matched
+against optional boundaries <em>min</em> and/or <em>max</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">int(value,</span> <span class="pre">base=0)</span></code> expression is used to convert the read
+string value. So decimal representations are accepted as well as the
+hexadecimal and binary ones.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_mapped">
+<code class="descname">get_mapped</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>map={}</em>, <em>case_sensitive=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_mapped" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read mapped values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_multiline">
+<code class="descname">get_multiline</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=[]</em>, <em>keep_empty_lines=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_multiline" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read multiline values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.get_stripped">
+<code class="descname">get_stripped</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_stripped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> but <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str.strip" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">str.strip()</span></code></a> the value and returns
+<em>fallback</em> if the value is empty or not found.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.has">
+<code class="descname">has</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the existence of a <em>key</em> in a <em>section</em> and returns a boolean.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.has_section">
+<code class="descname">has_section</code><span class="sig-paren">(</span><em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the existence of <em>section</em> and returns a boolean.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the keys found in <em>section</em>, or an empty list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Settings.sections">
+<code class="descname">sections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the loaded sections, or an empty list.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api-class-iconhandle.html" class="btn btn-neutral float-right" title="7.2.6. IconHandle class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api-class-catalogaction.html" class="btn btn-neutral" title="7.2.4. CatalogAction class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

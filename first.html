@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. First steps &mdash; Keypirinha 2.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
+        <link rel="next" title="3. Overview" href="overview.html"/>
+        <link rel="prev" title="1. Installation" href="install.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#start-project">2.1. Start <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-the-launchbox">2.2. Open the LaunchBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-search">2.3. First Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#second-search">2.4. Second Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leave-a-search">2.5. Leave a Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">2.6. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-project">2.7. Extending <em>Keypirinha</em></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>2. First steps</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="first-steps">
+<h1>2. First steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">¶</a></h1>
+<p>The first thing to know about <em>Keypirinha</em> is that you can use almost every of its
+features by using your keyboard only. Keep that in mind!</p>
+<div class="section" id="start-project">
+<h2>2.1. Start <em>Keypirinha</em><a class="headerlink" href="#start-project" title="Permalink to this headline">¶</a></h2>
+<p>By default, <em>Keypirinha</em> does not require any special configuration before being
+launched for the first time. It is a <em>resident</em> application, which means it
+directly goes to the background when it is started. You can ensure <em>Keypirinha</em> is
+running by checking for its icon in the system tray&#8217;s notification area. It is
+normally located next to the system clock on your desktop, in the lower-right
+corner of your main screen.</p>
+<img alt="|project|'s icon in the system's tray" class="align-center" src="_images/systray.png" />
+</div>
+<div class="section" id="open-the-launchbox">
+<h2>2.2. Open the LaunchBox<a class="headerlink" href="#open-the-launchbox" title="Permalink to this headline">¶</a></h2>
+<p>Once <em>Keypirinha</em> is running, press <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> (by default) to display the
+<a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>...</p>
+<img alt="|project|'s main dialog" class="align-center" src="_images/wndrun.png" />
+</div>
+<div class="section" id="first-search">
+<h2>2.3. First Search<a class="headerlink" href="#first-search" title="Permalink to this headline">¶</a></h2>
+<p>You can now search for the task you wish to execute. Say you want to launch an
+application, <em>Firefox</em> for example. Start typing its name and it will soon show
+up in the results list as long as <em>Firefox</em> is installed on your machine.</p>
+<img alt="First search" class="align-center" src="_images/wndrun-search1.png" />
+<p>Once the desired item is selected (you can use the <code class="kbd docutils literal"><span class="pre">Down</span></code>, <code class="kbd docutils literal"><span class="pre">Up</span></code>,
+<code class="kbd docutils literal"><span class="pre">PgDown</span></code> and <code class="kbd docutils literal"><span class="pre">PgUp</span></code> keys for that), press <code class="kbd docutils literal"><span class="pre">Enter</span></code> to launch it.
+<em>Keypirinha</em> will then automatically go back to background...</p>
+</div>
+<div class="section" id="second-search">
+<h2>2.4. Second Search<a class="headerlink" href="#second-search" title="Permalink to this headline">¶</a></h2>
+<p><em>Keypirinha</em> remembers the tasks you execute the most so if you want to launch an
+already executed task, chances are high that you will only need to type the very
+first couple of letters of its name to get the task at the top of the results
+list.</p>
+<p>Notice how the score of the <em>Firefox</em> item is much higher now.</p>
+<img alt="Second search for an already executed item" class="align-center" src="_images/wndrun-search2.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The score numbers you observe on your machine might differ from the one
+displayed on that screenshot.</p>
+</div>
+</div>
+<div class="section" id="leave-a-search">
+<h2>2.5. Leave a Search<a class="headerlink" href="#leave-a-search" title="Permalink to this headline">¶</a></h2>
+<p>May you wish to stop what you were doing on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>, press the
+<code class="kbd docutils literal"><span class="pre">Esc</span></code> key. <strong>Once</strong>, to reset your search. <strong>Twice</strong>, to close the dialog.
+One time might be enough if you didn&#8217;t type anything.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Standard Windows shortcuts are also implemented so the <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code>
+combination will close the dialog as expected.</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>2.6. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference internal" href="configuration.html"><em>Configuration</em></a> section for more info.</p>
+</div>
+<div class="section" id="extending-project">
+<h2>2.7. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
+<p>Despite its apparent simplicity, <em>Keypirinha</em> is a generic tool that is able to
+welcome a very wide range of features not offered yet by the official bundled
+plugins. An API allows to extend <em>Keypirinha</em>&#8216;s features to make them fit your
+needs.</p>
+<p>See the <a class="reference internal" href="api.html"><em>Extending Keypirinha (API)</em></a> section for more info.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="overview.html" class="btn btn-neutral float-right" title="3. Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral" title="1. Installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

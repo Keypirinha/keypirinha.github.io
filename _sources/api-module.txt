@@ -1,0 +1,14 @@
+=================
+keypirinha module
+=================
+
+The :py:mod:`keypirinha` module is the main module of the API. It implements and
+exposes the functions and classes necessary to develop a new plugin for
+|project|.
+
+
+.. automodule:: keypirinha
+    :members:
+    :no-private-members:
+    :show-inheritance:
+    :exclude-members: IconHandle, Plugin, Settings

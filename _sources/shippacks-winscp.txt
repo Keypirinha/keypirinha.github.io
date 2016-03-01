@@ -1,0 +1,22 @@
+==============
+WinSCP Package
+==============
+
+Allows to launch *WinSCP* sessions directly.
+
+This plugin automatically detects the installed version of the official *WinSCP*
+distribution and lists its configured sessions so they can be launched directly
+from |project|.
+
+The portable version of *WinSCP* can also be registered in package's dedicated
+configuration file. Edit the configuration file for more info (search for the
+``Configure Package: WinSCP`` item to do that).
+
+
+Catalog Items
+=============
+
+This package populates the Catalog with the following items:
+
+* Search for the items prefixed with ``WinSCP`` (by default). Their appear
+  only if *WinSCP* is detected.
