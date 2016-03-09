@@ -12,6 +12,8 @@ The portable version of *WinSCP* can also be registered in package's dedicated
 configuration file. Edit the configuration file for more info (search for the
 ``Configure Package: WinSCP`` item to do that).
 
+Available since version 2.0.
+
 
 Catalog Items
 =============
@@ -20,3 +22,13 @@ This package populates the Catalog with the following items:
 
 * Search for the items prefixed with ``WinSCP`` (by default). Their appear
   only if *WinSCP* is detected.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`configuration` chapter

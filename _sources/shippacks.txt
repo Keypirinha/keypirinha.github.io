@@ -18,6 +18,7 @@ take advantage of the improvements you applied. Read the
     :maxdepth: 2
 
     shippacks-apps
+    shippacks-bookmarks
     shippacks-calc
     shippacks-controlpanel
     shippacks-filezilla

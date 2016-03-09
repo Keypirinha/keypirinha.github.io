@@ -36,7 +36,7 @@ CatalogAction class
 
     .. py:method:: label()
 
-        Get the *label* of this action.
+        Get the *display name* of this action.
 
 
     .. py:method:: short_desc()

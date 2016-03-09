@@ -7,6 +7,11 @@ CatalogItem class
     A ``CatalogItem`` object **must** always be created with
     :py:meth:`Plugin.create_item`.
 
+    .. py:method:: valid()
+
+        Roughly validates item's properties. Returns a boolean.
+
+
     .. py:method:: id()
 
         Get the *id* (int) of the parent plugin of this object.
@@ -110,10 +115,10 @@ CatalogItem class
         Sometimes a plugin needs to store arguments that are not human friendly
         to read. For that purpose, it is possible to apply a *display name* on
         these arguments (*displayed_args*) so the end-user can still
-        differentiate two items with the same *target*.
+        differentiate two items with the same *target* in the results list.
 
         If the *displayed_args* argument is left empty,
-        :py:meth:`displayed_args` will always have the same result than
+        :py:meth:`displayed_args` will always return the same value than
         :py:meth:`raw_args`.
 
         .. seealso::

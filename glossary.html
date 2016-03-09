@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9. Glossary &mdash; Keypirinha 2.0.0 documentation</title>
+  <title>10. Glossary &mdash; Keypirinha</title>
   
 
   
@@ -32,18 +32,9 @@
   
 
   
-    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
-        <link rel="next" title="10. Frequently Asked Questions (FAQ)" href="faq.html"/>
-        <link rel="prev" title="8. Contribute" href="contribute.html"/>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-74522446-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-
+    <link rel="top" title="Keypirinha" href="index.html"/>
+        <link rel="next" title="11. Frequently Asked Questions (FAQ)" href="faq.html"/>
+        <link rel="prev" title="9. Contribute" href="contribute.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -74,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0
+                2.1
               </div>
             
           
@@ -97,15 +88,20 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">5. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">6. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">10. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">11. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">12. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
 </ul>
 
             
@@ -136,7 +132,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>9. Glossary</li>
+    <li>10. Glossary</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -149,17 +145,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="glossary">
-<h1>9. Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<h1>10. Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <dl class="glossary docutils">
 <dt id="term-catalog">Catalog</dt>
 <dd>The Catalog is the name of the internal database of <em>Keypirinha</em> where all
 the <a class="reference internal" href="#term-items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</dd>
 <dt id="term-catalogitem">CatalogItem</dt>
 <dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>.</dd>
-<dt id="term-hive"><span id="term-hives"></span>Hive<br />Hives</dt>
-<dd>A Hive is a directory dedicated to the storage of <a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It
-also defines the way Packages are stored (i.e.: loose files or packed in
-a single archive).</dd>
 <dt id="term-instanceid">InstanceID</dt>
 <dd><p class="first">The InstanceID number is an unsigned integer internally used by the
 application and assigned at runtime to every loaded <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>. It
@@ -190,6 +182,10 @@ Zip) to ease redistribution.</p>
 <dd>In the context of <em>Keypirinha</em>, a Plugin is a software component written in
 <a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. It is always
 encapsulated in a <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</dd>
+<dt id="term-repository"><span id="term-repositories"></span>Repository<br />Repositories</dt>
+<dd>A Repository is a directory dedicated to the storage of
+<a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It also defines the way Packages are stored (i.e.:
+loose files or packed in a single archive).</dd>
 </dl>
 </div>
 
@@ -200,10 +196,10 @@ encapsulated in a <a class="reference internal" href="#term-package"><span class
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="10. Frequently Asked Questions (FAQ)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="11. Frequently Asked Questions (FAQ)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="contribute.html" class="btn btn-neutral" title="8. Contribute" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="contribute.html" class="btn btn-neutral" title="9. Contribute" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -233,7 +229,7 @@ encapsulated in a <a class="reference internal" href="#term-package"><span class
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.0.0',
+            VERSION:'2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -257,7 +253,16 @@ encapsulated in a <a class="reference internal" href="#term-package"><span class
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-   
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
 
 </body>
 </html>

@@ -8,6 +8,8 @@ This plugin allows to search for and open system's *Control Panels*. A *Control
 Panel* is a graphical interface component of Windows that allows the
 configuration of the operating system and its core components.
 
+Available since version 2.0.
+
 
 Catalog Items
 =============

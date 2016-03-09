@@ -8,13 +8,15 @@ This section provides some insights about |project|'s design and philosophy.
 Architecture
 ============
 
-You can see |project| as a small search engine that indexes a selection of items
-found in your computer and makes them a breathe to find and
-execute/open/...
+|project| by itself is just a database (the :term:`Catalog`) sweetened with a
+small semantic search engine and a straightforward graphical interface. Thus,
+**the task of feeding the Catalog is entirely left to its** :term:`Plugins`.
 
-The whole architecture of |project| depends on its :term:`plugins`. They are
-responsible of finding items on your computer, like an application or a document
-for example.
+From that point of view, we can say that the whole architecture of |project|
+depends on its :term:`plugins`. They are responsible of finding items on your
+computer, like a applications and documents for example, but not only (i.e.: the
+official :doc:`shippacks-calc` is the one that evaluates mathematical
+expressions).
 
 Those :term:`items` are created by the plugins, sent to the application, and are
 then sorted and stored in an internal database called the :term:`catalog`,
@@ -34,7 +36,7 @@ Configuration
 
 By design, to configure |project| and its packages requires to edit
 configuration files manually. There is no graphical interface to do that.
-|project| uses the ``ini`` file format to read, and **only read** its
+|project| uses the ``ini`` file format to read, and it **only reads** its
 configuration.
 
 Read more about :doc:`configuration`.

@@ -3,6 +3,11 @@ Installation
 ============
 
 
+.. warning::
+    If |project| is already installed and you just want to update, go to the
+    :doc:`update` chapter.
+
+
 Requirements
 ============
 

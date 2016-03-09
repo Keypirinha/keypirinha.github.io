@@ -117,6 +117,12 @@ Plugin class
 
         *flags* is one or several flags from :py:class:`EnvChangedFlags`.
 
+    .. py:method:: id()
+
+        Get the *id* number (int) of this plugin.
+
+        This *id* uniquely identifies this plugin during the current session
+        **only**.
 
     .. py:method:: set_catalog(catalog_items)
 

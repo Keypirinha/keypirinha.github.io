@@ -63,14 +63,14 @@ Notice how the score of the *Firefox* item is much higher now.
     :align: center
 
 .. note::
-    The score numbers you observe on your machine might differ from the one
+    The score numbers you observe on your machine might differ from the ones
     displayed on that screenshot.
 
 
 Leave a Search
 ==============
 
-May you wish to stop what you were doing on the :term:`LaunchBox`, press the
+May you wish to abort what you were doing on the :term:`LaunchBox`, press the
 :kbd:`Esc` key. **Once**, to reset your search. **Twice**, to close the dialog.
 One time might be enough if you didn't type anything.
 

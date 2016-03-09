@@ -1,0 +1,30 @@
+=================
+Bookmarks Package
+=================
+
+Launch Chrome, Firefox and Internet Explorer bookmarks.
+
+This plugin allows to search for and open bookmarks kept by the Chrome, Chrome
+Canary, Chromium, Firefox and Internet Explorer web browsers.
+
+Available since version 2.1.
+
+
+Catalog Items
+=============
+
+This package populates the Catalog with the following items:
+
+* Items prefixed with ``Bookmark:``. |br|
+  Note that this default prefix might be modified by your package's
+  configuration.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`configuration` chapter

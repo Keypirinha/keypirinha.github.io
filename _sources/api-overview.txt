@@ -12,8 +12,8 @@ should keep in mind that application **and** plugin state may change while her
 code is running.
 
 
-Plugin Lifecycle overview
-=========================
+Plugin Lifecycle
+================
 
 .. _api-overview-loading:
 
@@ -126,6 +126,9 @@ Plugin development should be done in the :ref:`pack-live` directory.
 The best way to get your hands in the dirt is to use the ``Test`` package as a
 new package skeleton, then take a look at the source code of the official
 plugins.
+
+Official packages are all located in the
+:file:`default\\Packages\\*.keypirinha-package`.
 
 In particular:
 

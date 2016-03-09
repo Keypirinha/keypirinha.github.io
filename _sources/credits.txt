@@ -1,0 +1,48 @@
+=======
+Credits
+=======
+
+
+Several **great** open-source projects are part of |project|'s binary form, or
+redistributed with it, or have been involved during the development of this
+project.
+
+Their respective license file can be found in the :file:`licenses` folder
+located into |project|'s directory.
+
+* *Boost.Python*, part of the *Boost* library |br|
+  A C++ wrapper over Python's C API |br|
+  http://boost.org
+
+* *cppformat* |br|
+  Small, safe and fast formatting library for C++ |br|
+  http://cppformat.github.io
+
+* *JsonCpp* |br|
+  A C++ library to read/write JSON streams |br|
+  https://github.com/open-source-parsers/jsoncpp
+
+* *Notepad2-mod* |br|
+  A modified version of the *Notepad2* text editor |br|
+  https://github.com/XhmikosR/notepad2-mod
+
+* *Python* |br|
+  The famous programming language. |project| embeds the official *CPython*
+  interpreter |br|
+  http://python.org
+
+* *Sphinx* |br|
+  Python static documentation generator |br|
+  http://www.sphinx-doc.org
+
+* *utf8-cpp* |br|
+  A C++ library to deal with UTF-8 strings |br|
+  http://utfcpp.sourceforge.net
+
+* *xxHash* |br|
+  Extremely fast hash algorithm |br|
+  https://github.com/Cyan4973/xxHash
+
+* *zlib* |br|
+  The famous compression/decompression C library |br|
+  http://zlib.net

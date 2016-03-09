@@ -32,11 +32,13 @@ quickly.
   - What is the expected output/behavior?
   - What do you see instead?
 
-* Eventually attach screenshots so we can "see" the issue
+* Optionally attach screenshots so we can "see" the issue
 
-* Eventually attach the complete log of the session during which the bug
+* Optionally attach the complete log of the session during which the bug
   occurred (the log indicates critical information including the complete
-  version number)
+  version number). |br|
+  Note that you may want to strip the log file first since it may contain
+  several sessions.
 
 * Workarounds or other related tips on how to avoid the issue are welcome
 

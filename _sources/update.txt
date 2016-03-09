@@ -1,0 +1,83 @@
+================
+Update Procedure
+================
+
+
+If |project| is not installed on your machine yet. You should head over the
+:doc:`install` chapter instead.
+
+|project| does not come with an installer yet so the update procedure must be
+done manually. Fortunately it is not a nightmare to get through it.
+
+.. warning::
+    You must first ensure |project| is not running before doing anything else!
+    This is because it keeps open some of its files at runtime so you would not
+    be able to modify/delete them...
+
+    To exit |project|, you have two options:
+
+    * Fire up the :term:`LaunchBox` and search-then-execute the
+      ``Keypirinha: Exit`` item.
+    * Or, use the ``Exit`` item of the main contextual menu. To get the
+      contextual menu, right-click of |project|'s icon in the system tray, or
+      right-click directly on the :term:`LaunchBox`.
+
+Once you're sure |project| is not running anymore, the procedure depends on
+whether you chose the :ref:`install-installed` or the :ref:`install-portable`.
+
+.. tip::
+    To check in which mode |project| is, open its install directory and check
+    for a :file:`portable` directory. If it is there, you are in
+    :ref:`install-portable`.
+
+
+Update in Installed Mode
+========================
+
+* Open |project|'s install directory. |br|
+  Say it's :file:`U:\\Keypirinha` for example. |br|
+  Ensure there is **no** :file:`U:\\Keypirinha\\portable` directory!
+
+* Delete it. |br|
+  Don't worry. In this mode, your configuration files are stored in your Home
+  folder (i.e. under :file:`%APPDATA%\\Keypirinha`).
+
+* Open |project|'s distribution archive (its name should be something like
+  :file:`Keypirinha-X.Y.Z-x64-portable.zip`).
+
+* Extract its content to :file:`U:\\`. |br|
+  You should now have a :file:`U:\\Keypirinha` directory.
+
+* Delete the :file:`U:\\Keypirinha\\portable` directory. |br|
+  That instructs |project| to run in Installed Mode.
+
+* You're done! |br|
+  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file. |br|
+  It might be named :file:`keypirinha` in your *Windows Explorer* view, so to
+  recognize it, it is the one with the squared-K icon.
+
+
+Update in Portable Mode
+=======================
+
+* Open |project|'s install directory. |br|
+  Say it's :file:`U:\\Keypirinha` for example. |br|
+  Ensure there **is** a :file:`U:\\Keypirinha\\portable` directory!
+
+* Delete everything in :file:`U:\\Keypirinha` **except**
+  :file:`U:\\Keypirinha\\portable`. |br|
+  Don't mess up with this one, this is where your configuration files are
+  located!
+
+* Open |project|'s distribution archive (its name should be something like
+  :file:`Keypirinha-X.Y.Z-x64-portable.zip`).
+
+* Extract its content to :file:`U:\\`. |br|
+  It is safe to anwser yes to the ``Overwrite?`` question concerning the
+  :file:`portable` directory since it is just about replacing a dummy file (i.e.
+  :file:`KEEPME`).
+
+* You're done! |br|
+  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file. |br|
+  It might be named :file:`keypirinha` in your *Windows Explorer* view, so to
+  recognize it, it is the one with the squared-K icon.

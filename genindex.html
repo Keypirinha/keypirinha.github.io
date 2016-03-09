@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Keypirinha 2.0.0 documentation</title>
+  <title>Index &mdash; Keypirinha</title>
   
 
   
@@ -33,16 +33,7 @@
   
 
   
-    <link rel="top" title="Keypirinha 2.0.0 documentation" href="index.html"/>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-74522446-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-
+    <link rel="top" title="Keypirinha" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -73,7 +64,7 @@
             
             
               <div class="version">
-                2.0.0
+                2.1
               </div>
             
           
@@ -96,15 +87,20 @@
             
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="first.html">2. First steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">3. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">4. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">5. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">6. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">7. Extending <em>Keypirinha</em> (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">8. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">10. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">5. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">6. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">10. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">11. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">12. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
 </ul>
 
             
@@ -341,14 +337,18 @@
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.EXE">EXE (keypirinha_util.FileAttr attribute)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.EXE_CONSOLE">EXE_CONSOLE (keypirinha_util.FileAttr attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.EXE_GUI">EXE_GUI (keypirinha_util.FileAttr attribute)</a>
+  </dt>
+
+      
+  <dt><a href="api-module.html#keypirinha.exe_path">exe_path() (in module keypirinha)</a>
   </dt>
 
       
@@ -471,6 +471,8 @@
   <dt><a href="api-class-settings.html#keypirinha.Settings.has_section">has_section() (keypirinha.Settings method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.HIDDEN">HIDDEN (keypirinha_util.FileAttr attribute)</a>
   </dt>
@@ -481,18 +483,8 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-class-catalogitem.html#keypirinha.CatalogItem.hit_hint">hit_hint() (keypirinha.CatalogItem method)</a>
-  </dt>
-
-      
-  <dt><a href="glossary.html#term-hive"><strong>Hive</strong></a>
-  </dt>
-
-      
-  <dt><a href="glossary.html#term-hives"><strong>Hives</strong></a>
   </dt>
 
   </dl></td>
@@ -509,6 +501,12 @@
   <dt><a href="api-class-catalogitem.html#keypirinha.CatalogItem.id">id() (keypirinha.CatalogItem method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="api-class-plugin.html#keypirinha.Plugin.id">(keypirinha.Plugin method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="api-module.html#keypirinha.ItemHitHint.IGNORE">IGNORE (keypirinha.ItemHitHint attribute)</a>
   </dt>
@@ -518,7 +516,7 @@
   </dt>
 
       
-  <dt><a href="api-module.html#keypirinha.installed_packages_path">installed_packages_path() (in module keypirinha)</a>
+  <dt><a href="api-module.html#keypirinha.installed_package_dir">installed_package_dir() (in module keypirinha)</a>
   </dt>
 
       
@@ -624,9 +622,15 @@
   </dt>
 
       
+  <dt><a href="api-module.html#keypirinha.live_package_dir">live_package_dir() (in module keypirinha)</a>
+  </dt>
+
+      
   <dt><a href="api-class-plugin.html#keypirinha.Plugin.load_binary_resource">load_binary_resource() (keypirinha.Plugin method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module.html#keypirinha.load_icon">load_icon() (in module keypirinha)</a>
   </dt>
@@ -637,8 +641,6 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module.html#keypirinha.load_settings">load_settings() (in module keypirinha)</a>
   </dt>
@@ -744,6 +746,10 @@
   </dt>
 
       
+  <dt><a href="api-module.html#keypirinha.package_cache_dir">package_cache_dir() (in module keypirinha)</a>
+  </dt>
+
+      
   <dt><a href="api-module.html#keypirinha.package_path">package_path() (in module keypirinha)</a>
   </dt>
 
@@ -805,14 +811,22 @@
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.READONLY">READONLY (keypirinha_util.FileAttr attribute)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module.html#keypirinha.ItemCategory.REFERENCE">REFERENCE (keypirinha.ItemCategory attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api-module-util.html#keypirinha_util.FileAttr.REMOVABLE">REMOVABLE (keypirinha_util.FileAttr attribute)</a>
+  </dt>
+
+      
+  <dt><a href="glossary.html#term-repositories"><strong>Repositories</strong></a>
+  </dt>
+
+      
+  <dt><a href="glossary.html#term-repository"><strong>Repository</strong></a>
   </dt>
 
       
@@ -962,6 +976,10 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="api-module.html#keypirinha.user_config_dir">user_config_dir() (in module keypirinha)</a>
+  </dt>
+
+      
   <dt><a href="api-module.html#keypirinha.ItemCategory.USER_MAX">USER_MAX (keypirinha.ItemCategory attribute)</a>
   </dt>
 
@@ -979,6 +997,12 @@
   <dt><a href="api-class-catalogaction.html#keypirinha.CatalogAction.valid">valid() (keypirinha.CatalogAction method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="api-class-catalogitem.html#keypirinha.CatalogItem.valid">(keypirinha.CatalogItem method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="api-module.html#keypirinha.EnvChangedFlags.VARS">VARS (keypirinha.EnvChangedFlags attribute)</a>
   </dt>
@@ -1044,7 +1068,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.0.0',
+            VERSION:'2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -1068,7 +1092,16 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-   
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
 
 </body>
 </html>

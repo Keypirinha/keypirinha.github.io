@@ -11,12 +11,6 @@ Glossary
     CatalogItem
         The class name of an :term:`item`.
 
-    Hive
-    Hives
-        A Hive is a directory dedicated to the storage of :term:`packages`. It
-        also defines the way Packages are stored (i.e.: loose files or packed in
-        a single archive).
-
     InstanceID
         The InstanceID number is an unsigned integer internally used by the
         application and assigned at runtime to every loaded :term:`package`. It
@@ -57,3 +51,9 @@ Glossary
         In the context of |project|, a Plugin is a software component written in
         Python3_ that extends the base features of the application. It is always
         encapsulated in a :term:`package`.
+
+    Repository
+    Repositories
+        A Repository is a directory dedicated to the storage of
+        :term:`packages`. It also defines the way Packages are stored (i.e.:
+        loose files or packed in a single archive).

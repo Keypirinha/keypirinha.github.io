@@ -7,11 +7,17 @@ Introduction
 ============
 
 |project| is file-driven. Its configuration data resides in files, which are
-mostly human readable and modifiable.
+human readable and modifiable.
 
 By design, |project| does not offer any graphical interface to modify its
-settings. But it does offers a convenient way to open its configuration files at
-runtime.
+settings. While, at first glance, it might seem like backward design choice for
+a desktop application, it perfectly makes sense when you realize how powerful
+and flexible it can be (variables assignment, inplace replacement of environment
+variables anywhere, machine-specific configuration, ...).
+
+Nevertheless, |project| offers a convenient way to open and edit its
+configuration files at runtime. And even that feature is configurable by
+offering you the ability to choose your favorite text editor!
 
 Search for the "|project|: Configure ..." items from the :term:`LaunchBox`.
 
@@ -205,8 +211,8 @@ values that may come handy.
   - ``U:\USBApps\Keypirinha\portable\Profile\InstalledPackages`` in portable
     mode
 
-* ``PROFILE_DIR_LOOSE_PACKS`` |br|
-  The *Packages* directory, where the loose packages (modifiable at runtime) are
+* ``PROFILE_DIR_LIVE_PACKS`` |br|
+  The *Packages* directory, where the live packages (modifiable at runtime) are
   stored. |br|
   Examples:
 

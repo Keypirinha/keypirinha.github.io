@@ -9,6 +9,8 @@ Some search sites are already configured by default. Currently: ``Bing``,
 ``Wikipedia``, ``YouTube``, ``C++``, ``CPAN``, ``Git``, ``PHP``, ``Python3`` and
 ``RubyGems`` (this list may vary).
 
+Available since version 2.0.
+
 
 Catalog Items
 =============
@@ -22,7 +24,9 @@ Configuring Search Sites
 ========================
 
 *WebSearch* allows flexible and fine-grained configuration. Use the
-``Configure Package: WebSearch`` item to edit it.
+``Configure Package: WebSearch`` item to edit it (check out the
+:doc:`configuration` chapter for an overview about how to edit |project|'s
+configuration files).
 
 For example, if you wish to be able to request the *DuckDuckGo* search engine
 from |project| (which is already configured by default), add the following into
@@ -101,4 +105,4 @@ Example of multi-URL search site:
         https://encrypted.google.com/search?q=%s
 
 .. caution::
-    Notice the indentation of the ``url`` value!
+    Notice the indentation of the URLs!

@@ -6,6 +6,8 @@ This plugin offers simple playback control of Winamp (i.e.: Play, Pause, Stop,
 Previous, Next) and a ``Jump To Track`` feature to search and play tracks in the
 current playing list.
 
+Available since version 2.0.
+
 
 Catalog Items
 =============

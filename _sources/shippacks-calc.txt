@@ -5,6 +5,8 @@ Calc Package
 The *Calc* package allows to quickly evaluate a mathematical expression directly
 from |project| and eventually copy its result to the clipboard.
 
+Available since version 2.0.
+
 
 Catalog Items
 =============
