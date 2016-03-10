@@ -11,9 +11,8 @@ Installation
 Requirements
 ============
 
-|project| works on Windows 64bits (Vista, 7, 8, 8.1) and does not require
-additional dependencies. It hasn't been tested on Windows 10 but should work
-just fine.
+|project| works on Windows 64bits (7, 8, 8.1) and does not require additional
+dependencies. It hasn't been tested on Windows 10 but should work just fine.
 
 There is no plan in a near future to support 32bits platforms.
 

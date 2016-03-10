@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.1
+                2.2
               </div>
             
           
@@ -101,8 +101,13 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Change Log</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v2-1-2016-03-09">v2.1 - 2016-03-09</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-2-2013-03-10">v2.2 - 2013-03-10</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#added">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v2-1-2016-03-09">v2.1 - 2016-03-09</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Added</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#changed">Changed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-added">API: Added</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-fixed">API: Fixed</a></li>
@@ -158,10 +163,29 @@
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
 <p>Change log of the <a class="reference external" href="http://keypirinha.com">Keypirinha</a> project.</p>
-<div class="section" id="v2-1-2016-03-09">
-<h2>v2.1 - 2016-03-09<a class="headerlink" href="#v2-1-2016-03-09" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="v2-2-2013-03-10">
+<h2>v2.2 - 2013-03-10<a class="headerlink" href="#v2-2-2013-03-10" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="added">
 <h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Bookmarks package: support for the Vivaldi web browser</li>
+</ul>
+</div>
+<div class="section" id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Restored compatibility with Windows 7 (Vista support dropped) <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/13">#13</a></li>
+<li>Detection of system&#8217;s default web browser was incorrect on Windows 10
+(impacted packages: Bookmarks and WebSearch) <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/11">#11</a></li>
+<li>Bookmarks package: Firefox provider was making the plugin to fail in case user
+profile was not found.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v2-1-2016-03-09">
+<h2>v2.1 - 2016-03-09<a class="headerlink" href="#v2-1-2016-03-09" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>New official package</strong>: Bookmarks (supports Chrome, Firefox and Internet
 Explorer)</li>
@@ -267,7 +291,7 @@ confusion</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.1',
+            VERSION:'2.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
