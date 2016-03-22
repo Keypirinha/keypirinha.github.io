@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="7. Shipped Packages" href="shippacks.html"/>
+        <link rel="next" title="7. Shipped Packages" href="shipped-packages.html"/>
         <link rel="prev" title="5. Configuration" href="configuration.html"/> 
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.2
+                2.3
               </div>
             
           
@@ -103,7 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#package-naming">6.2. Package Naming</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">7. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">10. Glossary</a></li>
@@ -156,8 +156,8 @@
             
   <div class="section" id="packages">
 <h1>6. Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
-<p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a> easier to distribute, <em>Keypirinha</em> has been introduced the
-concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
+<p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a> easier to redistribute, <em>Keypirinha</em> has been introduced
+the concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
 <p>In <em>Keypirinha</em>, a package is a container (e.g.: a directory; or a Zip archive with
 the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension) that groups one or several plugins
 designed to work together. It also contains the configuration files and
@@ -206,7 +206,7 @@ change at runtime. May it be to configuration files, to its source code or any
 other resource, the Package will be reloaded soon after a file has been
 modified, renamed or delete. However, note that if <strong>only</strong> an <code class="file docutils literal"><span class="pre">.ini</span></code> file
 is modified, the application will broadcast the <code class="docutils literal"><span class="pre">CONFIG_CHANGED</span></code> message (see
-<a class="reference internal" href="api-class-plugin.html#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_config_changed()</span></code></a>) to the plugins of the concerned
+<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_config_changed()</span></code></a>) to the plugins of the concerned
 package instead of fully reloading it.</p>
 </div>
 <div class="section" id="installed-packages-downloaded">
@@ -296,7 +296,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="shippacks.html" class="btn btn-neutral float-right" title="7. Shipped Packages" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="shipped-packages.html" class="btn btn-neutral float-right" title="7. Shipped Packages" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="configuration.html" class="btn btn-neutral" title="5. Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -329,7 +329,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2',
+            VERSION:'2.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

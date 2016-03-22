@@ -1,0 +1,21 @@
+==============
+Winamp Package
+==============
+
+This plugin offers simple playback control of Winamp (i.e.: Play, Pause, Stop,
+Previous, Next) and a ``Jump To Track`` feature to search and play tracks in the
+current playing list.
+
+Available since version 2.0.
+
+
+Catalog Items
+=============
+
+This package populates the :term:`Catalog` with the following items:
+
+* Playback control items are prefixed with ``Winamp:``, like ``Winamp: Play``,
+  ``Winamp: Next Track``, ... used to control playback.
+
+* The ``Winamp: Jump To Track`` item takes an argument: the playlist track to
+  play.

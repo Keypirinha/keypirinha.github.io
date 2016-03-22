@@ -1,0 +1,150 @@
+============
+Plugin class
+============
+
+.. py:currentmodule:: keypirinha
+
+.. autoclass:: Plugin
+    :members:
+    :undoc-members:
+    :no-private-members:
+    :no-special-members:
+
+    .. autoattribute:: Plugin._debug
+
+    .. automethod:: Plugin.__init__
+
+    .. py:method:: on_catalog()
+
+        This is the first callback method called by the application after a
+        plugin has been instanciated.
+
+        *Heavy* initialization must be performed here instead of inside
+        ``__init__``.
+
+        The plugin is also expected to setup its catalog by calling either
+        :py:meth:`set_catalog` or :py:meth:`merge_catalog`.
+
+        .. seealso::
+            See the :ref:`api-overview-loading` section for more information
+            about the *plugin loading* process. And :ref:`api-overview-msgflow`.
+
+
+    .. py:method:: on_suggest(user_input, initial_item=None, current_item=None)
+
+        Called when the user is typing her search terms *or* item's arguments.
+
+        If *initial_catalog_item* is ``None``, no item has been selected yet and
+        this ``SUGGEST`` message has been broadcasted to every loaded plugin. In
+        that case *user_input* is a string containing the search terms.
+
+        Otherwise, *initial_catalog_item* is a :py:class:`CatalogItem` object
+        that belongs to this plugin and *user_input* is a string containing the
+        arguments typed by the user. Note that it might be empty.
+
+        If *initial_catalog_item* is not ``None``, *current_catalog_item* is
+        either *initial_catalog_item* or a new item the user has selected as an
+        argument to *initial_catalog_item*.
+
+        If the plugin implements this method, it is expected to setup its
+        **suggestions** catalog by using :py:meth:`set_suggestions`. The list of
+        suggestions may be empty.
+
+        .. seealso::
+            See the :ref:`api-overview-msgflow` section.
+
+
+    .. py:method:: on_execute(catalog_item, catalog_action=None)
+
+        Called once the user has selected an item and wants to launch it,
+        optionally using the passed action.
+
+        *catalog_item* is the selected :py:class:`CatalogItem` object to
+        execute, belonging to this plugin.
+
+        *catalog_action* is either ``None`` or a :py:class:`CatalogAction`
+        object; it might not have been created by this plugin though, in which
+        case :py:func:`keypirinha_util.execute_default_action` may be of
+        interest.
+
+        .. seealso::
+            See the :ref:`api-overview-msgflow` section.
+
+
+    .. py:method:: on_activated()
+
+        Called when the :term:`LaunchBox` has been activated, either by typing
+        the dedicated global hotkey, or by using the contextual menu of the
+        application icon located in the system tray.
+
+        .. note::
+            The ``ACTIVATED`` message automatically discards any pending
+            ``DEACTIVATED`` message in the queue. As a result, an ``ACTIVATED``
+            message is not always followed by a ``DEACTIVATED`` message. For
+            example, if your plugin takes more time to process the ``ACTIVATED``
+            message than the end-user to perform her search **and** deactivate
+            the window **and** then re-activate it, the plugin will receive a
+            new ``ACTIVATED`` message without being notified about the
+            ``DEACTIVATED`` event that occurred in between.
+
+        .. seealso::
+            :py:meth:`on_deactivated`
+
+
+    .. py:method:: on_deactivated()
+
+        Called when the :term:`LaunchBox` has been deactivated.
+
+        .. note::
+            A ``DEACTIVATED`` message is not always preceded by an ``ACTIVATED``
+            message. See the note in :py:meth:`on_activated` documentation for
+            more information.
+
+        .. seealso::
+            :py:meth:`on_activated`
+
+
+    .. py:method:: on_config_changed(flags)
+
+        Called when one or several configuration file(s) of the application
+        or/and plugins has been edited and saved.
+
+        *flags* is one or several flags from :py:class:`ConfChangedFlags`.
+
+
+    .. py:method:: on_env_changed(flags)
+
+        Called when system environment has changed.
+
+        For example when one or several environment variables have been
+        modified, or when a removable media has been inserted or ejected, or
+        when a storage device has been plugged-in or unplugged.
+
+        *flags* is one or several flags from :py:class:`EnvChangedFlags`.
+
+    .. py:method:: id()
+
+        Get the *id* number (int) of this plugin.
+
+        This *id* uniquely identifies this plugin during the current session
+        **only**.
+
+    .. py:method:: set_catalog(catalog_items)
+
+        Replace current plugin's catalog by *catalog_items*, which must be a
+        list of :py:class:`CatalogItem` objects, created by *this* plugin. Note
+        that the list may be empty if you wish to clear plugin's catalog.
+
+
+    .. py:method:: merge_catalog(catalog_items, erase_untouched_items)
+
+        Merge current plugin's catalog with *catalog_items*, which must be a
+        list of :py:class:`CatalogItem` objects, created by *this* plugin.
+
+
+    .. py:method:: set_suggestions(suggested_items)
+
+        Offer some suggestions to the user according to her current search. This
+        method is usually called from :py:meth:`on_suggest`.
+
+        *suggested_items* must be a list of :py:class:`CatalogItem` objects.

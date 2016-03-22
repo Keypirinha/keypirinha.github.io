@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2.5. IconHandle class &mdash; Keypirinha</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha" href="../index.html"/>
+        <link rel="up" title="8.2. API Reference" href="reference.html"/>
+        <link rel="next" title="8.2.6. Plugin class" href="plugin.html"/>
+        <link rel="prev" title="8.2.4. CatalogItem class" href="catalogitem.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="../_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">5. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">6. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shipped-packages.html">7. Shipped Packages</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">8. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">8.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html">8.2. API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module.html">8.2.1. keypirinha module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module-util.html">8.2.2. keypirinha_util module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">8.2.3. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">8.2.4. CatalogItem class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">8.2.5. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin.html">8.2.6. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">8.2.7. Settings class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">8.3. Embedded Python Interpreter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">9. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">10. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">11. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">12. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../api.html">8. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+      
+          <li><a href="reference.html">8.2. API Reference</a> &raquo;</li>
+      
+    <li>8.2.5. IconHandle class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="iconhandle-class">
+<h1>8.2.5. IconHandle class<a class="headerlink" href="#iconhandle-class" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="keypirinha.IconHandle">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">IconHandle</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_icon()</span></code></a> and
+by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal"><span class="pre">load_icon()</span></code></a>.</p>
+<dl class="method">
+<dt id="keypirinha.IconHandle.free">
+<code class="descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.free" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frees the icon associated with this handle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean value to indicate whether resources have actually
+been freed or not. This method may return <code class="docutils literal"><span class="pre">False</span></code> if it has
+been called already for this handle, or by an other
+<a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a> object pointing to the same icon
+resource. You usually do not need to check the return value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This method must be called <strong>explicitly</strong>. It will <strong>not</strong> be called
+by the destructor of this object.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.IconHandle.is_init">
+<code class="descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a boolean to indicate whether this handle has been
+<a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">free()</span></code></a> or not.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugin.html" class="btn btn-neutral float-right" title="8.2.6. Plugin class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="catalogitem.html" class="btn btn-neutral" title="8.2.4. CatalogItem class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</body>
+</html>

@@ -11,12 +11,21 @@ Glossary
     CatalogItem
         The class name of an :term:`item`.
 
+    Console
+        The Console window's purpose is two-fold. It gives you an overview of
+        what happens under |project|'s hood. It also allows to check if a plugin
+        emitted a informational/warning/error message.
+
+        .. image:: images/console.png
+            :alt: |project|'s Console
+            :align: center
+
     InstanceID
         The InstanceID number is an unsigned integer internally used by the
         application and assigned at runtime to every loaded :term:`package`. It
         is used to ensure Plugins are not messing up the :term:`catalog`.
 
-        Read :doc:`api-overview` for more information.
+        Read :doc:`api/overview` for more information.
 
     Item
     Items
@@ -25,24 +34,29 @@ Glossary
         (File, URL, Command Line, ...), a reference to the parent
         :term:`plugin`, etc...
 
+        The Item is also the smallest data unit of |project|'s internal
+        database (the :term:`Catalog`).
+
     LaunchBox
         The L(a)unchBox is |project|'s main dialog window, from which you can
         make a search and launch the selected :term:`item`. It can be opened by
         pressing the :kbd:`Ctrl+Win+K` combination (by default).
 
         .. image:: images/wndrun.png
-            :alt: |project|'s main dialog
+            :alt: |project|'s LaunchBox
             :align: center
 
     Package
     Packages
-        A Package is a container of one or several :term:`plugins` designed for
-        the same purpose. It contains the Plugins code as well as their
-        dependencies if needed and optionally includes their configuration files,
-        resources and documentation.
+        A Package is a container of one or several :term:`plugins` and that
+        represents a unique feature visible to the user.
 
-        Its content can be stored in a directory or packed in an archive (e.g.:
-        Zip) to ease redistribution.
+        This container holds the source code of its plugins, their dependencies,
+        a default configuration file, if any, and optionally some documentation.
+
+        Its content can be stored in a directory or packed in an archive to ease
+        its redistribution (i.e. a :file:`*.keypirinha-package` file, which is
+        actually a regular zip archive).
 
         Read :doc:`packages` for more information.
 

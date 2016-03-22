@@ -1,0 +1,71 @@
+===========================
+Embedded Python Interpreter
+===========================
+
+
+Version
+=======
+
+The embedded Python3_ interpreter is a vanilla version of *CPython*, the
+official distribution. The Python environment you get in |project| is pretty
+similar to the original one except that some modules have been removed from the
+standard library: ``distutils``, ``ensurepip``, ``idlelib``, ``lib2to3`` and
+``tkinter``.
+
+The exact version number of the application and the interpreter can be read at
+the beginning of the log in the :term:`Console`. Or by typing the following
+commands in the Console window::
+
+    >>> import sys
+    >>> sys.version
+    '3.5.0 (default, Oct 18 2015, 16:49:14) [MSC v.1800 64 bit (AMD64)]'
+
+
+Modifications
+=============
+
+There are some modifications made by |project| that impact the default behavior
+of Python. All of these modifications are documented in this section.
+
+
+exit() and quit()
+-----------------
+
+In its *vanilla* version, Python offers numerous ways to exit a program.
+|project| on the other hand is not meant to be shutdown by its plugins and would
+crash in that case so traps have been installed to avoid that.
+
+As a result, if a plugin calls one of the ``exit`` or ``quit`` standard
+functions like :py:func:`sys.exit` or :py:func:`_thread.exit`, directly or
+indirectly, a :py:class:`NotImplementedError` exception is raised instead of the
+program being shutdown.
+
+As a side note, may the plugin developer absolutely wishes to crash the
+application anyway, Python and |project| both offer numerous ways to do that
+too.
+
+
+os.environ
+----------
+
+**In short:** |project| automatically updates the content of the
+:py:data:`os.environ` map every time an environment variable has been modified.
+
+**Context:** |project| has been designed to dynamically adapt as much as
+possible to any modification made to its running context. That includes the
+environment variables.
+
+**Problem:** In the CPython implementation, the :py:data:`os.environ` map is
+created at import time and never updated. The :py:func:`os.getenv` function does
+not help here because it is just a wrapper around ``os.environ.get()``. As a
+consequence, a plugin that receives the ``ENV_CHANGED`` message (see
+:py:meth:`keypirinha.Plugin.on_env_changed`) and wants to get the up-to-date
+value of an environment variable would not be able to do so easily with the
+default implementation.
+
+**Solution:** When |project| catches a system notification indicating a
+modification to the environment, it updates the environment block associated to
+the current process, then finally refreshes the :py:data:`os.environ` map. This
+mechanism is totally transparent to the plugins and updated environment values
+can be just read the standard way: either by accessing the :py:data:`os.environ`
+map or by calling :py:func:`os.getenv`.

@@ -1,0 +1,51 @@
+==================
+Everything Package
+==================
+
+Query Everything_ from |project| to find and open any file or folder.
+
+Available since version 2.3.
+
+
+Requirements
+============
+
+Everything_ v1.3 or more recent must be running to do a search.
+
+.. note::
+    This package retries to find Everything instance each time you want to do a
+    search so you can freely (re)start Everything whenever you need to.
+
+
+Catalog Items
+=============
+
+This package populates the :term:`Catalog` with the following items:
+
+* Search for the items prefixed with ``Everything:`` (by default). They are
+  added to the Catalog even if Everything is not running at init time.
+
+.. note::
+    The ``Rebuild DB`` item requires Everything v1.4.
+
+
+Introduction
+============
+
+To query Everything from |project| allows you to take advantage of both
+Everything's speed and |project|'s matching algorithm. Once you have
+searched-found-executed a file/folder using this package, it is kept in
+|project|'s history so you do not have to query Everything a second time to open
+it.
+
+.. tip::
+    You can reduce even more the number of keystrokes to reach the same item by
+    using the :ref:`first-associate-keyword` feature.
+
+
+Troubleshooting
+===============
+
+If no item appear after a search query, ensure Everything is running and no
+error message has been emitted by the plugin (check |project|'s
+:term:`Console`).

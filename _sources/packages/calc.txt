@@ -1,0 +1,168 @@
+============
+Calc Package
+============
+
+The *Calc* package allows to quickly evaluate a mathematical expression directly
+from |project| and eventually copy its result to the clipboard.
+
+Available since version 2.0.
+
+.. image:: ../images/pack-calc.png
+    :align: center
+
+
+Catalog Items
+=============
+
+This package populates the :term:`Catalog` with the following items:
+
+* The ``=`` item, which argument is expected to be the mathematical expression
+  to evaluate.
+
+.. tip::
+
+    You do not need to use the ``=`` item to start typing your mathematical
+    expression. This plugin allows to you to enter it directly and it will be
+    evaluated as long as its syntax is valid.
+
+
+Mathematical Expression
+=======================
+
+To some extent, *Calc* tries to support any mathematical expression supported by
+the Python language. Some functions also have been added.
+
+
+Quick Examples
+--------------
+
+* ``1 + 2``
+
+* ``-1 + 2`` (prefix sign)
+
+* ``sin(2)`` (function)
+
+* ``sin(2.345) + 1.09`` (floating point)
+
+* ``pi`` (some constants are pre-defined)
+
+* ``(3+4)*2`` (parentheses are supported)
+
+* ``3**3`` (power of)
+
+* ``0xa`` (hexadecimal numbers will be converted to decimal)
+
+* ``0b100`` (binary numbers will be converted to decimal)
+
+* ``0b100 * 0x2`` (hexadecimal and binary numbers can be used in operations as
+  well)
+
+
+Predefined Constants
+--------------------
+
+* ``pi = 3.141592653589793``
+
+* ``e = 2.718281828459045``
+
+* ``inf`` (infinity)
+
+* ``nan`` (Not A Number)
+
+
+Core Functions
+--------------
+
+* ``abs`` (see standard Python function :py:func:`abs`)
+
+* ``bool`` (see standard Python function :py:func:`bool`)
+
+* ``chr`` (see standard Python function :py:func:`chr`)
+
+* ``divmod`` (see standard Python function :py:func:`divmod`)
+
+* ``float`` (see standard Python function :py:func:`float`)
+
+* ``hex`` (see standard Python function :py:func:`hex`)
+
+* ``int`` (see standard Python function :py:func:`int`)
+
+* ``len`` (see standard Python function :py:func:`len`)
+
+* ``min`` (see standard Python function :py:func:`min`)
+
+* ``max`` (see standard Python function :py:func:`max`)
+
+* ``oct`` (see standard Python function :py:func:`oct`)
+
+* ``ord`` (see standard Python function :py:func:`ord`)
+
+* ``pow`` (see standard Python function :py:func:`pow`)
+
+* ``round`` (see standard Python function :py:func:`round`)
+
+* ``str`` (see standard Python function :py:func:`str`)
+
+
+Math Functions
+--------------
+
+* ``acos`` (see standard Python function :py:func:`math.acos`)
+
+* ``acosh`` (see standard Python function :py:func:`math.acosh`)
+
+* ``asin`` (see standard Python function :py:func:`math.asin`)
+
+* ``asinh`` (see standard Python function :py:func:`math.asinh`)
+
+* ``atan`` (see standard Python function :py:func:`math.atan`)
+
+* ``atan2`` (see standard Python function :py:func:`math.atan2`)
+
+* ``atanh`` (see standard Python function :py:func:`math.atanh`)
+
+* ``ceil`` (see standard Python function :py:func:`math.ceil`)
+
+* ``cos`` (see standard Python function :py:func:`math.cos`)
+
+* ``cosh`` (see standard Python function :py:func:`math.cosh`)
+
+* ``deg`` (see standard Python function :py:func:`math.degrees`)
+
+* ``exp`` (see standard Python function :py:func:`math.exp`)
+
+* ``factor`` (see standard Python function :py:func:`math.factorial`)
+
+* ``floor`` (see standard Python function :py:func:`math.floor`)
+
+* ``gcd`` (see standard Python function :py:func:`math.gcd`)
+
+* ``hypot`` (see standard Python function :py:func:`math.hypot`)
+
+* ``log`` (see standard Python function :py:func:`math.log`)
+
+* ``rad`` (see standard Python function :py:func:`math.radians`)
+
+* ``sin`` (see standard Python function :py:func:`math.sin`)
+
+* ``sinh`` (see standard Python function :py:func:`math.sinh`)
+
+* ``sqrt`` (see standard Python function :py:func:`math.sqrt`)
+
+* ``tan`` (see standard Python function :py:func:`math.tan`)
+
+* ``tanh`` (see standard Python function :py:func:`math.tanh`)
+
+
+Random Functions
+----------------
+
+* ``rand`` |br|
+  Usage: ``rand(top)`` |br|
+  Returns an integer below *top*.
+
+* ``rand1`` (see standard Python function :py:func:`random.random`)
+
+* ``randf`` (see standard Python function :py:func:`random.uniform`)
+
+* ``randi`` (see standard Python function :py:func:`random.randint`)

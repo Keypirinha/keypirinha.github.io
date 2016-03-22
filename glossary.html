@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.2
+                2.3
               </div>
             
           
@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">5. Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">6. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">7. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">10. Glossary</a></li>
@@ -152,30 +152,40 @@
 the <a class="reference internal" href="#term-items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</dd>
 <dt id="term-catalogitem">CatalogItem</dt>
 <dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>.</dd>
+<dt id="term-console">Console</dt>
+<dd><p class="first">The Console window&#8217;s purpose is two-fold. It gives you an overview of
+what happens under <em>Keypirinha</em>&#8216;s hood. It also allows to check if a plugin
+emitted a informational/warning/error message.</p>
+<img alt="|project|'s Console" class="last align-center" src="_images/console.png" />
+</dd>
 <dt id="term-instanceid">InstanceID</dt>
 <dd><p class="first">The InstanceID number is an unsigned integer internally used by the
 application and assigned at runtime to every loaded <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>. It
 is used to ensure Plugins are not messing up the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">catalog</span></a>.</p>
-<p class="last">Read <a class="reference internal" href="api-overview.html"><em>Overview</em></a> for more information.</p>
+<p class="last">Read <a class="reference internal" href="api/overview.html"><em>Overview</em></a> for more information.</p>
 </dd>
 <dt id="term-item"><span id="term-items"></span>Item<br />Items</dt>
-<dd>An item is a simple data structure created by the <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and
+<dd><p class="first">An item is a simple data structure created by the <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and
 that holds some properties like a display name (label), a category
 (File, URL, Command Line, ...), a reference to the parent
-<a class="reference internal" href="#term-plugin"><span class="xref std std-term">plugin</span></a>, etc...</dd>
+<a class="reference internal" href="#term-plugin"><span class="xref std std-term">plugin</span></a>, etc...</p>
+<p class="last">The Item is also the smallest data unit of <em>Keypirinha</em>&#8216;s internal
+database (the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a>).</p>
+</dd>
 <dt id="term-launchbox">LaunchBox</dt>
 <dd><p class="first">The L(a)unchBox is <em>Keypirinha</em>&#8216;s main dialog window, from which you can
 make a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
 pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (by default).</p>
-<img alt="|project|'s main dialog" class="last align-center" src="_images/wndrun.png" />
+<img alt="|project|'s LaunchBox" class="last align-center" src="_images/wndrun.png" />
 </dd>
 <dt id="term-package"><span id="term-packages"></span>Package<br />Packages</dt>
-<dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> designed for
-the same purpose. It contains the Plugins code as well as their
-dependencies if needed and optionally includes their configuration files,
-resources and documentation.</p>
-<p>Its content can be stored in a directory or packed in an archive (e.g.:
-Zip) to ease redistribution.</p>
+<dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and that
+represents a unique feature visible to the user.</p>
+<p>This container holds the source code of its plugins, their dependencies,
+a default configuration file, if any, and optionally some documentation.</p>
+<p>Its content can be stored in a directory or packed in an archive to ease
+its redistribution (i.e. a <code class="file docutils literal"><span class="pre">*.keypirinha-package</span></code> file, which is
+actually a regular zip archive).</p>
 <p class="last">Read <a class="reference internal" href="packages.html"><em>Packages</em></a> for more information.</p>
 </dd>
 <dt id="term-plugin"><span id="term-plugins"></span>Plugin<br />Plugins</dt>
@@ -229,7 +239,7 @@ loose files or packed in a single archive).</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2',
+            VERSION:'2.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

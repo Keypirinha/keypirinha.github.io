@@ -47,16 +47,26 @@ Once the desired item is selected (you can use the :kbd:`Down`, :kbd:`Up`,
 :kbd:`PgDown` and :kbd:`PgUp` keys for that), press :kbd:`Enter` to launch it.
 |project| will then automatically go back to background...
 
+.. note::
+    Search is case-insensitive in |project|, thus the ``FFOX`` search term is
+    equivalent to ``ffox`` and ``FfoX``.
+
 
 Second Search
 =============
 
-|project| remembers the tasks you execute the most so if you want to launch an
-already executed task, chances are high that you will only need to type the very
-first couple of letters of its name to get the task at the top of the results
-list.
+|project| remembers the tasks you execute, so if you want to launch an already
+executed task, chances are high that you will only need to type the very first
+couple of letters of its name to get the task at the top of the results list.
+
+To keep going with our example, we will **just** type the ``F`` letter since it
+is the one that naturally comes to our mind when thinking about the name
+``Firefox``.
 
 Notice how the score of the *Firefox* item is much higher now.
+
+To keep going with our example, execute this item **again**. You will see why in
+the next section below.
 
 .. image:: images/wndrun-search2.png
     :alt: Second search for an already executed item
@@ -67,12 +77,75 @@ Notice how the score of the *Firefox* item is much higher now.
     displayed on that screenshot.
 
 
+.. _first-associate-keyword:
+
+Associate a Keyword to an Item
+==============================
+
+This is one of the coolest search feature of |project|.
+
+Still with our example, if you happen to launch your *Firefox* browser a lot,
+you will realize that you will often, if not always, type the same search term
+over and over to find its item in the catalog.
+
+|project| offers the ability to **implicitely associate a keyword with a
+particular item**.
+
+In the last section, we typed the search term ``F`` (or ``f``, search is
+case-insensitive), before **executing** *Firefox*. |project| recorded that
+information so every time your search term will be ``f``, the *Firefox* will be
+pushed up to the top of the results list.
+
+.. note::
+    You may want to *associate* ``f`` with an other item later. In that case,
+    just type ``f`` and select this other item before **executing** it.
+    |project| will change the association implicitely.
+
+
+Specify arguments
+=================
+
+In |project|, some items accept arguments. They even sometimes require some.
+
+One you typed your search term and **selected** the desired item, hit the
+:kbd:`Tab` key (the :kbd:`Space` key also works in this case).
+
+To keep going with our example, *Firefox* currently accepts the ``-preferences``
+command line option so let's try typing this one and execute our item.
+
+.. image:: images/wndrun-args.png
+    :align: center
+
+
+Actions
+=======
+
+Items may have several actions associated to them, or their type.
+
+Search and select the *Firefox* item again.
+
+.. image:: images/wndrun-actions-available.png
+    :align: center
+
+At the bottom of the LaunchBox, |project| indicates that ``8 actions`` are
+available for this item. Hit the :kbd:`Ctrl+Enter` to visualize these actions
+(or the :kbd:`Tab` key until you reach the actions list).
+
+Because this particular *Firefox* item is a file, even a :file:`*.lnk` file in
+our example, the following actions are made available:
+
+.. image:: images/wndrun-actions.png
+    :align: center
+
+Select the one you want and press :kbd:`Enter` to execute.
+
+
 Leave a Search
 ==============
 
 May you wish to abort what you were doing on the :term:`LaunchBox`, press the
-:kbd:`Esc` key. **Once**, to reset your search. **Twice**, to close the dialog.
-One time might be enough if you didn't type anything.
+:kbd:`Esc` key. Press it **once**, to clear your search, **twice** to close the
+dialog. Note that one time is enough if you didn't type anything.
 
 .. tip::
     Standard Windows shortcuts are also implemented so the :kbd:`Alt+F4`

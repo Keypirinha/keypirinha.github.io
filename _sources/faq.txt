@@ -17,16 +17,16 @@ lot of them before deciding to develop |project|. Including the inspiring
 *Synapse*, which unfortunately supports Linux only.
 
 They are either not keyboard-only oriented, not flexible enough, not always
-extensible, too bloated, too slow or just outdated (implying a broken support of
-recent platforms).
+extensible, too bloated, too slow or just outdated (implying a broken support
+for recent platforms).
 
 |project| has been started as a personal project and is not meant to be better
 than all of them. It offers a recent alternative that is fast, flexible, memory
-efficient, battery friendly and smarter about the search results it provides.
+efficient, battery friendly and smart about the search results it provides.
 
 By *battery friendly*, we mean that with the default configuration and plugins,
-|project| consumes zero CPU cycle once it has been initialized and not used
-(i.e.: most of its lifetime).
+|project| consumes zero CPU cycle once it has been initialized and when not used
+(i.e. most of its lifetime).
 
 That being said, by design, its graphical user interface (GUI) is (very)
 minimalistic and supports functional tweaking only. Also, its learning curve can

@@ -1,0 +1,34 @@
+=================
+FileZilla Package
+=================
+
+Allows to launch *FileZilla Client* sessions directly.
+
+This plugin automatically detects the installed version of the official
+*FileZilla Client* distribution and lists its configured sessions so they can be
+launched directly from |project|.
+
+The portable version of *FileZilla Client* can also be registered in package's
+dedicated configuration file. Edit the configuration file for more info (search
+for the ``Configure Package: FileZilla`` item to do that).
+
+Available since version 2.0.
+
+
+Catalog Items
+=============
+
+This package populates the :term:`Catalog` with the following items:
+
+* Search for the items prefixed with ``FileZilla`` (by default). Their appear
+  only if *FileZilla Client* is detected.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`../configuration` chapter

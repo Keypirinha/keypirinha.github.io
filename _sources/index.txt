@@ -2,8 +2,7 @@
 |project|
 =========
 
-Welcome to the Official |project|'s site. |br|
-|project| is a semantic launcher for keyboard ninjas on Windows.
+A semantic launcher for keyboard ninjas on Windows.
 
 .. image:: images/wndrun-search2.png
     :align: center
@@ -17,8 +16,7 @@ Steps
 * Take a look at the :doc:`install` procedure or the :doc:`update`
 * Check out the :doc:`changelog` to see what's new
 * Follow |twitter_link| on *Twitter*
-* Join the |webirc_en|, no registration required |br|
-  Pour les francophones : |webirc_fr|, pas d'inscription requise
+* Join the |chat_room|
 * :ref:`contribute-issue`
 * :ref:`contribute-packages`
 
@@ -62,7 +60,7 @@ Contents
     overview
     configuration
     packages
-    shippacks
+    shipped-packages
     api
     contribute
     glossary

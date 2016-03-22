@@ -1,0 +1,35 @@
+============
+Apps Package
+============
+
+The *Apps* package finds the main applications and executable files installed on
+your computer and makes them available from |project|'s :term:`Catalog`.
+
+Available since version 2.0.
+
+.. image:: ../images/wndrun-search2.png
+    :align: center
+
+
+Catalog Items
+=============
+
+This package populates the Catalog with the following items:
+
+* Items from the Windows' Start Menu
+
+* Executable files pointed by the ``PATH`` environment variable. The ``PATHEXT``
+  environment variable is used to get the list of valid executable files.
+
+* All the executable files referenced by the ``extra_paths`` setting in
+  package's dedicated configuration file.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`../configuration` chapter

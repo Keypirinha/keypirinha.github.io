@@ -18,7 +18,7 @@ quickly.
 * First search if your issue has already been reported
 
 * Provide the exact and complete version number of the application. You can get
-  it by displaying the *Console* dialog (scroll up to the top lines)
+  it by displaying the :term:`Console` (scroll up to the top lines)
 
 * One bug per report
 
@@ -49,8 +49,7 @@ Get involved in the development of the Official Packages
 ========================================================
 
 The Official Packages repository is not open yet, but do not hesitate to submit
-suggestions on the |bugtracker_link| or head over to the |webirc_en|, ou pour
-les francophones : |webirc_fr|.
+suggestions on the |bugtracker_link| or head over to the |chat_room|.
 
 .. An |packrepo| is online and accepts any report issues related to the application
 .. or an official package.

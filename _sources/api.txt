@@ -2,9 +2,9 @@
 Extending |project| (API)
 =========================
 
-|project| offers a flexible way to be extended by embedding a Python3_
-interpreter and exposing some of its core features via an API and two Python
-modules named :py:mod:`keypirinha` and :py:mod:`keypirinha_util`.
+|project| offers a flexible way to be extended thanks to its embedded Python3_
+interpreter and its exposed Python API through two Python modules:
+:py:mod:`keypirinha` and :py:mod:`keypirinha_util`.
 
 Before reading further, you may want to get familiar with the :doc:`packages`
 section to picture how |project| loads and interprets its packages and their
@@ -13,6 +13,6 @@ plugins, as well as the subtleties between the different types of packages.
 .. toctree::
     :maxdepth: 2
 
-    api-overview
-    api-reference
-    api-python
+    api/overview
+    api/reference
+    api/python

@@ -15,7 +15,7 @@ small semantic search engine and a straightforward graphical interface. Thus,
 From that point of view, we can say that the whole architecture of |project|
 depends on its :term:`plugins`. They are responsible of finding items on your
 computer, like a applications and documents for example, but not only (i.e.: the
-official :doc:`shippacks-calc` is the one that evaluates mathematical
+official :doc:`packages/calc` is the one that evaluates mathematical
 expressions).
 
 Those :term:`items` are created by the plugins, sent to the application, and are

@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.2
+                2.3
               </div>
             
           
@@ -92,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">5. Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">6. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">7. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">10. Glossary</a></li>
@@ -145,19 +145,17 @@
             
   <div class="section" id="project">
 <h1><em>Keypirinha</em><a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the Official <em>Keypirinha</em>&#8216;s site. <br />
-<em>Keypirinha</em> is a semantic launcher for keyboard ninjas on Windows.</p>
+<p>A semantic launcher for keyboard ninjas on Windows.</p>
 <img alt="_images/wndrun-search2.png" class="align-center" src="_images/wndrun-search2.png" />
 <div class="section" id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Download the latest release: <a class="reference external" href="releases/keypirinha-2.2-x64-portable.zip">v2.2-x64</a> <br />
+<li>Download the latest release: <a class="reference external" href="releases/keypirinha-2.3-x64-portable.zip">v2.3-x64</a> <br />
 Requires Windows <strong>64-bit</strong> (7, 8, 8.1 or 10)</li>
 <li>Take a look at the <a class="reference internal" href="install.html"><em>Installation</em></a> procedure or the <a class="reference internal" href="update.html"><em>Update Procedure</em></a></li>
 <li>Check out the <a class="reference internal" href="changelog.html"><em>Change Log</em></a> to see what&#8217;s new</li>
 <li>Follow <a class="reference external" href="https://twitter.com/keylauncher">&#64;keylauncher</a> on <em>Twitter</em></li>
-<li>Join the <a class="reference external" href="https://webchat.freenode.net/?channels=keypirinha">Support Chat Room (IRC)</a>, no registration required <br />
-Pour les francophones : <a class="reference external" href="https://webchat.freenode.net/?channels=keypirinha-fr">Canal de discussion (IRC)</a>, pas d&#8217;inscription requise</li>
+<li>Join the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a></li>
 <li><a class="reference internal" href="contribute.html#contribute-issue"><span>How to Report an Issue</span></a></li>
 <li><a class="reference internal" href="contribute.html#contribute-packages"><span>Get involved in the development of the Official Packages</span></a></li>
 </ul>
@@ -205,9 +203,12 @@ appreciated. It is written in <a class="reference external" href="http://docutil
 <li class="toctree-l2"><a class="reference internal" href="first.html#open-the-launchbox">3.2. Open the LaunchBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first.html#first-search">3.3. First Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first.html#second-search">3.4. Second Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#leave-a-search">3.5. Leave a Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#configuration">3.6. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#extending-project">3.7. Extending <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#associate-a-keyword-to-an-item">3.5. Associate a Keyword to an Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#specify-arguments">3.6. Specify arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#actions">3.7. Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#leave-a-search">3.8. Leave a Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#configuration">3.9. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#extending-project">3.10. Extending <em>Keypirinha</em></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a><ul>
@@ -229,24 +230,25 @@ appreciated. It is written in <a class="reference external" href="http://docutil
 <li class="toctree-l2"><a class="reference internal" href="packages.html#package-naming">6.2. Package Naming</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="shippacks.html">7. Shipped Packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-apps.html">7.1. Apps Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-bookmarks.html">7.2. Bookmarks Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-calc.html">7.3. Calc Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-controlpanel.html">7.4. ControlPanel Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-filezilla.html">7.5. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-putty.html">7.6. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-taskswitcher.html">7.7. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-test.html">7.8. Test Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-websearch.html">7.9. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-winamp.html">7.10. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shippacks-winscp.html">7.11. WinSCP Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">7. Shipped Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages/apps.html">7.1. Apps Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/bookmarks.html">7.2. Bookmarks Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/calc.html">7.3. Calc Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/controlpanel.html">7.4. ControlPanel Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/everything.html">7.5. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/filezilla.html">7.6. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/putty.html">7.7. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/taskswitcher.html">7.8. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/test.html">7.9. Test Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/websearch.html">7.10. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winamp.html">7.11. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winscp.html">7.12. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-overview.html">8.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-reference.html">8.2. API Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-python.html">8.3. Embedded Python Interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/overview.html">8.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/reference.html">8.2. API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/python.html">8.3. Embedded Python Interpreter</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a><ul>
@@ -315,7 +317,7 @@ appreciated. It is written in <a class="reference external" href="http://docutil
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2',
+            VERSION:'2.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

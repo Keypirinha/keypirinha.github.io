@@ -238,7 +238,7 @@ Machine and User Specific Settings
 It is possible to have settings that will be applied only when |project| runs on
 a specific **machine** and/or under a specific **user** session.
 
-To do that, the configuration file must be named according a pre-defined
+To do that, the configuration file must be named according to a pre-defined
 pattern.
 
 For example, :file:`Keypirinha.ini` which is application's main configuration
@@ -254,8 +254,8 @@ files, **in order** of precedence, which means a value re-defined in a file
 * :file:`Keypirinha.USER@MACHINE.ini`: configuration specific to a user on a
   specific machine
 
-Where ``MACHINE`` is the *NetBIOS* name of your computer (enter the
-``echo %COMPUTERNAME%`` command in a console to get it) and ``USER`` is the name
+Where ``MACHINE`` is the *NetBIOS* name of your computer (enter the ``echo
+%COMPUTERNAME%`` command in a system console to get it) and ``USER`` is the name
 of the currently logged user (``echo %USERNAME%``).
 
 .. tip::
