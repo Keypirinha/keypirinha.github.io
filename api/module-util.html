@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.3
+                2.4
               </div>
             
           
@@ -268,6 +268,12 @@ This flag might be combined with other flags except <a class="reference internal
 <em class="property">class </em><code class="descclassname">keypirinha_util.</code><code class="descname">ScanFlags</code><a class="headerlink" href="#keypirinha_util.ScanFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <em>flags</em> to pass to <a class="reference internal" href="#keypirinha_util.scan_directory" title="keypirinha_util.scan_directory"><code class="xref py py-func docutils literal"><span class="pre">scan_directory()</span></code></a>.</p>
+<dl class="attribute">
+<dt id="keypirinha_util.ScanFlags.ABORT_ON_ERROR">
+<code class="descname">ABORT_ON_ERROR</code><em class="property"> = &lt;ScanFlags.ABORT_ON_ERROR: 16&gt;</em><a class="headerlink" href="#keypirinha_util.ScanFlags.ABORT_ON_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort if any error occurs while scanning a sub-folder</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.CASE_SENSITIVE">
 <code class="descname">CASE_SENSITIVE</code><em class="property"> = &lt;ScanFlags.CASE_SENSITIVE: 8&gt;</em><a class="headerlink" href="#keypirinha_util.ScanFlags.CASE_SENSITIVE" title="Permalink to this definition">¶</a></dt>
@@ -475,7 +481,7 @@ The type of a passed value is invalid.</li>
 
 <dl class="function">
 <dt id="keypirinha_util.raise_winerror">
-<code class="descclassname">keypirinha_util.</code><code class="descname">raise_winerror</code><span class="sig-paren">(</span><em>winerr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha_util.</code><code class="descname">raise_winerror</code><span class="sig-paren">(</span><em>winerr=None</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raises <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> (formerly <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#WindowsError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">WindowsError</span></code></a>) using the given
 Windows Error number. If the error number is not given,
 <a class="reference external" href="https://docs.python.org/3.5/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">ctypes.GetLastError()</span></code></a> is called which returns the last error code
@@ -555,7 +561,7 @@ that way:</p>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211;
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
 something went wrong while trying to open the specified
 <em>base_dir</em> or during the scan.</p>
 </td>
@@ -848,7 +854,7 @@ The given <em>url</em> argument is invalid.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.3',
+            VERSION:'2.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -2,6 +2,8 @@
 Frequently Asked Questions (FAQ)
 ================================
 
+.. contents::
+
 
 What is |project|
 =================
@@ -32,6 +34,39 @@ That being said, by design, its graphical user interface (GUI) is (very)
 minimalistic and supports functional tweaking only. Also, its learning curve can
 be more steep, depending on how you want to use it and extend it. That makes
 |project| quite a *niche* project, mostly addressed to advanced users.
+
+
+So... A replacement to the Start Menu?
+======================================
+
+Many people who have not tried |project| (or sometimes any other keystroke
+launcher), tend to think that it's just about being a replacement to the Start
+Menu, the system's Search feature, or even just organized shortcuts and batch
+scripts.
+
+It would be a mistake to think of |project| as an application launcher only.
+|project| itself is very **generic**. It is just a database of *items* sweetened
+with a small search engine. In other words, it can launch any kind of task
+provided by its plugins. May it be a document, a URL, creating an alarm at a
+given time, launching a web search, directly launching a FileZilla session,
+switching to a running application using its name, evaluate a mathematical
+expression inline, ...
+
+Its whole architecture is about being generic, configurable and scriptable
+(Python3_). And its search engine also tries to be smarter and to give better
+score to tasks that you most likely want to launch given the current search
+terms and context.
+
+Generally speaking, a launcher like |project| may deeply impact your everyday
+work-flow.
+
+
+Where does this weird name come from?!
+======================================
+
+"Keypirinha" is a mix of "Key" as in "Keyboard" and "Caipirinha", the brazilian
+cocktail, which the author really encourages you to try if you haven't yet.
+It's great!
 
 
 Any translation?

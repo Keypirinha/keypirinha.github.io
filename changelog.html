@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.3
+                2.4
               </div>
             
           
@@ -101,21 +101,29 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Change Log</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v2-3-2016-03-22">v2.3 - 2016-03-22</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-4-2016-03-24">v2.4 - 2016-03-24</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caution"><strong>CAUTION</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#added">Added</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#changed">Changed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-changed">API: Changed</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#v2-2-2016-03-10">v2.2 - 2016-03-10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-3-2016-03-22">v2.3 - 2016-03-22</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Added</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">API: Changed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v2-2-2016-03-10">v2.2 - 2016-03-10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-1-2016-03-09">v2.1 - 2016-03-09</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Added</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Changed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-added">API: Added</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-fixed">API: Fixed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-deprecated">API: Deprecated</a></li>
@@ -170,6 +178,70 @@
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
 <p>Change log of <a class="reference external" href="http://keypirinha.com">Keypirinha</a></p>
+<div class="section" id="v2-4-2016-03-24">
+<h2>v2.4 - 2016-03-24<a class="headerlink" href="#v2-4-2016-03-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="caution">
+<h3><strong>CAUTION</strong><a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The default value of the <code class="docutils literal"><span class="pre">launch_at_startup</span></code> setting has been changed from
+<code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to be less invasive. You may need to update your
+configuration if you want Keypirinha to keep being launched at startup.</li>
+<li>WebSearch package: the default value of the <code class="docutils literal"><span class="pre">new_window</span></code> setting in the
+<code class="docutils literal"><span class="pre">[defaults]</span></code> section has been changed from <code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to comply to
+default system preferences.</li>
+</ul>
+</div>
+<div class="section" id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The <em>Reload Configuration</em> command and menu to reload all configuration files
+(application and plugins), and to clear the runtime icons cache</li>
+<li>Non-existent files referenced by items in the history are now filtered out
+from search results, but <strong>kept</strong> in history (as it was the case already).
+Related setting: <code class="docutils literal"><span class="pre">exclude_nonexistent_remote_files</span></code>.</li>
+<li>Docs: some questions in the <a class="reference internal" href="faq.html"><em>Frequently Asked Questions (FAQ)</em></a> chapter</li>
+</ul>
+</div>
+<div class="section" id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The <em>new_window</em> and <em>inognito/private_mode</em> settings (global and
+plugin-specific) where not working when Firefox was the system&#8217;s default web
+browser <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/25">#25</a></li>
+<li>LaunchBox: web icons (Bookmarks, WebSearch, ... items) are now refreshed
+properly when the <code class="docutils literal"><span class="pre">web_browser</span></code> setting is changed <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/26">#26</a></li>
+<li>Apps package: made <code class="docutils literal"><span class="pre">extra_paths</span></code>, env <code class="docutils literal"><span class="pre">PATH</span></code> and <em>Start Menu</em> scans more
+bullet-proof in case an unreadable file/folder gets on its way (<a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/19">#19</a>,
+<a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/29">#29</a>)</li>
+<li>Bookmarks: Firefox bookmarks provider could not read Firefox&#8217;s
+<code class="docutils literal"><span class="pre">profiles.ini</span></code> file when its nomenclature format was not exactly the
+expected one <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/30">#30</a></li>
+</ul>
+</div>
+<div class="section" id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>LaunchBox: last executed action is now pre-selected in the ACTIONS list. If
+user skips the ACTIONS list, item will be executed with the default action</li>
+<li>The default value of the <code class="docutils literal"><span class="pre">launch_at_startup</span></code> setting has been changed from
+<code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to be less invasive</li>
+<li>WebSearch package: the default value of the <code class="docutils literal"><span class="pre">new_window</span></code> setting in the
+<code class="docutils literal"><span class="pre">[defaults]</span></code> section has been changed from <code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to comply to
+default system preferences.</li>
+<li>Minor corrections and improvements</li>
+</ul>
+</div>
+<div class="section" id="api-changed">
+<h3>API: Changed<a class="headerlink" href="#api-changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="api/module-util.html#keypirinha_util.raise_winerror" title="keypirinha_util.raise_winerror"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.raise_winerror()</span></code></a> accepts a new optional <code class="docutils literal"><span class="pre">msg</span></code>
+argument to override system&#8217;s default message</li>
+<li><a class="reference internal" href="api/module-util.html#keypirinha_util.scan_directory" title="keypirinha_util.scan_directory"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.scan_directory()</span></code></a> raises <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> instead
+of <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> to comply to Python 3.3 changes</li>
+<li><a class="reference internal" href="api/module-util.html#keypirinha_util.scan_directory" title="keypirinha_util.scan_directory"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.scan_directory()</span></code></a> accepts new flag <code class="docutils literal"><span class="pre">ABORT_ON_ERROR</span></code></li>
+</ul>
+</div>
+</div>
 <div class="section" id="v2-3-2016-03-22">
 <h2>v2.3 - 2016-03-22<a class="headerlink" href="#v2-3-2016-03-22" title="Permalink to this headline">¶</a></h2>
 <p><strong>WARNING:</strong> This version breaks compatibility of the
@@ -177,8 +249,8 @@
 plugin developer or if you have modified the shipped packages, please ensure to
 update your code before starting the application. Otherwise, just follow the
 Install/Update instructions from the documentation.</p>
-<div class="section" id="added">
-<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>New official package</strong>: Everything (query <a class="reference external" href="http://www.voidtools.com">Everything</a> to search files and
 folders from Keypirinha).</li>
@@ -196,8 +268,8 @@ and <code class="docutils literal"><span class="pre">favorites_dirs</span></code
 selected item</li>
 </ul>
 </div>
-<div class="section" id="fixed">
-<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Fixed<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Application was failing to launch if the value of an environment variable had
 a single dollar sign in it <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/14">#14</a></li>
@@ -207,8 +279,8 @@ buttons not to be in order.</li>
 screen when there were 3 or more configuration files to edit.</li>
 </ul>
 </div>
-<div class="section" id="changed">
-<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Changed<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Drastically improved the speed of the internal logger in case of flooding</li>
 <li>Minor corrections, optimizations and improvements</li>
@@ -217,8 +289,8 @@ screen when there were 3 or more configuration files to edit.</li>
 <li>Support chat room has moved</li>
 </ul>
 </div>
-<div class="section" id="api-changed">
-<h3>API: Changed<a class="headerlink" href="#api-changed" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>API: Changed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference internal" href="api/plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_suggest()</span></code></a> (<strong>compatibility break</strong>)</li>
 </ul>
@@ -226,14 +298,14 @@ screen when there were 3 or more configuration files to edit.</li>
 </div>
 <div class="section" id="v2-2-2016-03-10">
 <h2>v2.2 - 2016-03-10<a class="headerlink" href="#v2-2-2016-03-10" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Bookmarks package: support for the Vivaldi web browser</li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h3>Fixed<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>Fixed<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Restored compatibility with Windows 7 (Vista support dropped) <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/13">#13</a></li>
 <li>Detection of system&#8217;s default web browser was incorrect on Windows 10
@@ -245,8 +317,8 @@ profile was not found.</li>
 </div>
 <div class="section" id="v2-1-2016-03-09">
 <h2>v2.1 - 2016-03-09<a class="headerlink" href="#v2-1-2016-03-09" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>Added<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>New official package</strong>: Bookmarks (supports Chrome, Firefox and Internet
 Explorer)</li>
@@ -263,8 +335,8 @@ Explorer)</li>
 <li>Docs: <em>Credits</em> section</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>Changed<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>Changed<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>GUI: Improved readability by brightening default text colors <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/6">#6</a></li>
 <li>Calc package: the <code class="docutils literal"><span class="pre">=</span></code> item is not kept in History anymore</li>
@@ -352,7 +424,7 @@ confusion</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.3',
+            VERSION:'2.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
