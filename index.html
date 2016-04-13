@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -150,7 +150,7 @@
 <div class="section" id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Download the latest release: <a class="reference external" href="releases/keypirinha-2.4-x64-portable.zip">v2.4-x64</a> <br />
+<li>Download the latest release: <a class="reference external" href="releases/keypirinha-x64-portable.zip">v2.5-x64</a> <br />
 Requires Windows <strong>64-bit</strong> (7, 8, 8.1 or 10)</li>
 <li>Take a look at the <a class="reference internal" href="install.html"><em>Installation</em></a> procedure or the <a class="reference internal" href="update.html"><em>Update Procedure</em></a></li>
 <li>Check out the <a class="reference internal" href="changelog.html"><em>Change Log</em></a> to see what&#8217;s new</li>
@@ -180,8 +180,9 @@ ticket if you stumble upon something that doesn&#8217;t work right. Read the
 </div>
 <div class="section" id="about-this-documentation">
 <h2>About this Documentation<a class="headerlink" href="#about-this-documentation" title="Permalink to this headline">¶</a></h2>
-<p>This documentation is a work in progress. Comments and contributions are
-appreciated. It is written in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reST</a> and generated using the <a class="reference external" href="http://sphinx-doc.org">Sphinx</a> tools suite.</p>
+<p>This documentation is a work in progress and the effort of a non-native english
+speaker. Comments and contributions are appreciated. It is written in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reST</a> and
+generated using the <a class="reference external" href="http://sphinx-doc.org">Sphinx</a> tools suite.</p>
 </div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
@@ -196,6 +197,7 @@ appreciated. It is written in <a class="reference external" href="http://docutil
 <li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="update.html#update-in-installed-mode">2.1. Update in Installed Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="update.html#update-in-portable-mode">2.2. Update in Portable Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html#overridden-shipped-packages">2.3. Overridden Shipped Packages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a><ul>
@@ -206,9 +208,10 @@ appreciated. It is written in <a class="reference external" href="http://docutil
 <li class="toctree-l2"><a class="reference internal" href="first.html#associate-a-keyword-to-an-item">3.5. Associate a Keyword to an Item</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first.html#specify-arguments">3.6. Specify arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="first.html#actions">3.7. Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#leave-a-search">3.8. Leave a Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#configuration">3.9. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first.html#extending-project">3.10. Extending <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#maximize-the-launchbox">3.8. Maximize the LaunchBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#leave-a-search">3.9. Leave a Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#configuration">3.10. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first.html#extending-project">3.11. Extending <em>Keypirinha</em></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a><ul>
@@ -240,9 +243,10 @@ appreciated. It is written in <a class="reference external" href="http://docutil
 <li class="toctree-l2"><a class="reference internal" href="packages/putty.html">7.7. PuTTY Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packages/taskswitcher.html">7.8. TaskSwitcher Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packages/test.html">7.9. Test Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/websearch.html">7.10. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/winamp.html">7.11. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/winscp.html">7.12. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/url.html">7.10. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/websearch.html">7.11. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winamp.html">7.12. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winscp.html">7.13. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a><ul>
@@ -319,7 +323,7 @@ appreciated. It is written in <a class="reference external" href="http://docutil
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

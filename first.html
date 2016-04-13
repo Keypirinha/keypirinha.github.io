@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -97,9 +97,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#associate-a-keyword-to-an-item">3.5. Associate a Keyword to an Item</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#specify-arguments">3.6. Specify arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#actions">3.7. Actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#leave-a-search">3.8. Leave a Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">3.9. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.10. Extending <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maximize-the-launchbox">3.8. Maximize the LaunchBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leave-a-search">3.9. Leave a Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">3.10. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.11. Extending <em>Keypirinha</em></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
@@ -250,23 +251,40 @@ our example, the following actions are made available:</p>
 <img alt="_images/wndrun-actions.png" class="align-center" src="_images/wndrun-actions.png" />
 <p>Select the one you want and press <code class="kbd docutils literal"><span class="pre">Enter</span></code> to execute.</p>
 </div>
+<div class="section" id="maximize-the-launchbox">
+<span id="first-maximize"></span><h2>3.8. Maximize the LaunchBox<a class="headerlink" href="#maximize-the-launchbox" title="Permalink to this headline">¶</a></h2>
+<p><code class="kbd docutils literal"><span class="pre">Alt+X</span></code> (or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
+state.</p>
+<p>You may need to <strong>temporarily extend the size</strong> of the LaunchBox sometimes in
+order to see the full value of some results in the list. While it is possible to
+do it using the conventional Windows way by dragging the right-bottom corner of
+the window with the mouse, <em>Keypirinha</em> offers a more convenient and instantaneous
+way of maximizing the window by pressing <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This feature does not impact the geometry you manually setup in case your
+<code class="docutils literal"><span class="pre">geometry</span></code> setting is <code class="docutils literal"><span class="pre">persistent</span></code>. Hit <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> again and your
+previous position and size will be restored. <strong>CAUTION:</strong> If you are in
+<code class="docutils literal"><span class="pre">persistent</span></code> geometry, do not reposition/resize the window <strong>while being
+in maximized mode</strong> or you will loose your previous geometry.</p>
+</div>
+</div>
 <div class="section" id="leave-a-search">
-<h2>3.8. Leave a Search<a class="headerlink" href="#leave-a-search" title="Permalink to this headline">¶</a></h2>
+<h2>3.9. Leave a Search<a class="headerlink" href="#leave-a-search" title="Permalink to this headline">¶</a></h2>
 <p>May you wish to abort what you were doing on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>, press the
 <code class="kbd docutils literal"><span class="pre">Esc</span></code> key. Press it <strong>once</strong>, to clear your search, <strong>twice</strong> to close the
 dialog. Note that one time is enough if you didn&#8217;t type anything.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Standard Windows shortcuts are also implemented so the <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code>
-combination will close the dialog as expected.</p>
+<p class="last">The <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code> standard Windows shortcut closes the dialog as expected.</p>
 </div>
 </div>
 <div class="section" id="configuration">
-<h2>3.9. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.10. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>See the <a class="reference internal" href="configuration.html"><em>Configuration</em></a> section for more info.</p>
 </div>
 <div class="section" id="extending-project">
-<h2>3.10. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
+<h2>3.11. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
 <p>Despite its apparent simplicity, <em>Keypirinha</em> is a generic tool that is able to
 welcome a very wide range of features not offered yet by the official bundled
 plugins. An API allows to extend <em>Keypirinha</em>&#8216;s features to make them fit your
@@ -315,7 +333,7 @@ needs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

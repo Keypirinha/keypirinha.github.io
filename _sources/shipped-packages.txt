@@ -26,6 +26,7 @@ take advantage of the improvements you applied. Read the
     packages/putty
     packages/taskswitcher
     packages/test
+    packages/url
     packages/websearch
     packages/winamp
     packages/winscp

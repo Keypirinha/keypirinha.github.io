@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -110,9 +110,10 @@
 <li class="toctree-l2"><a class="reference internal" href="putty.html">7.7. PuTTY Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">7.8. TaskSwitcher Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="test.html">7.9. Test Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">7.10. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">7.11. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">7.12. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">7.10. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">7.11. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">7.12. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">7.13. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
@@ -186,11 +187,12 @@ search so you can freely (re)start Everything whenever you need to.</p>
 <ul class="simple">
 <li>Search for the items prefixed with <code class="docutils literal"><span class="pre">Everything:</span></code> (by default). They are
 added to the Catalog even if Everything is not running at init time.</li>
+<li>The <code class="docutils literal"><span class="pre">Search</span></code> item allows to query Everything using its normal search syntax</li>
+<li>The <code class="docutils literal"><span class="pre">Regex</span> <span class="pre">Search</span></code> item allows to query Everything using its regular
+expression syntax</li>
+<li>The <code class="docutils literal"><span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request Everything to rebuild its database (<strong>requires
+Everything v1.4</strong>).</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">Rebuild</span> <span class="pre">DB</span></code> item requires Everything v1.4.</p>
-</div>
 </div>
 <div class="section" id="introduction">
 <h2>7.5.3. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
@@ -201,7 +203,7 @@ searched-found-executed a file/folder using this package, it is kept in
 it.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">You can reduce even more the number of keystrokes to reach the same item by
+<p class="last">You can reduce the number of keystrokes even more to reach the same item by
 using the <a class="reference internal" href="../first.html#first-associate-keyword"><span>Associate a Keyword to an Item</span></a> feature.</p>
 </div>
 </div>
@@ -253,7 +255,7 @@ error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

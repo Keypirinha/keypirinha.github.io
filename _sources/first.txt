@@ -140,6 +140,27 @@ our example, the following actions are made available:
 Select the one you want and press :kbd:`Enter` to execute.
 
 
+.. _first-maximize:
+
+Maximize the LaunchBox
+======================
+
+:kbd:`Alt+X` (or :kbd:`Win+Up`) **toggles** between *normal* and *maximized*
+state.
+
+You may need to **temporarily extend the size** of the LaunchBox sometimes in
+order to see the full value of some results in the list. While it is possible to
+do it using the conventional Windows way by dragging the right-bottom corner of
+the window with the mouse, |project| offers a more convenient and instantaneous
+way of maximizing the window by pressing :kbd:`Alt+X` or :kbd:`Win+Up`.
+
+.. note::
+    This feature does not impact the geometry you manually setup in case your
+    ``geometry`` setting is ``persistent``. Hit :kbd:`Alt+X` again and your
+    previous position and size will be restored. **CAUTION:** If you are in
+    ``persistent`` geometry, do not reposition/resize the window **while being
+    in maximized mode** or you will loose your previous geometry.
+
 Leave a Search
 ==============
 
@@ -148,8 +169,7 @@ May you wish to abort what you were doing on the :term:`LaunchBox`, press the
 dialog. Note that one time is enough if you didn't type anything.
 
 .. tip::
-    Standard Windows shortcuts are also implemented so the :kbd:`Alt+F4`
-    combination will close the dialog as expected.
+    The :kbd:`Alt+F4` standard Windows shortcut closes the dialog as expected.
 
 
 Configuration

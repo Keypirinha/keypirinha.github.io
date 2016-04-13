@@ -1,0 +1,41 @@
+===========
+URL Package
+===========
+
+Launch URLs directly from |project|
+
+The ``URL`` plugin allows you to launch any URL that has its scheme (a.k.a.
+protocol) associated with an application by the operating system.
+
+Examples of recognized URLs:
+
+  * ``keypirinha.com`` (``http`` is assumed)
+  * ``https://duckduckgo.com``
+  * ``ftp://ftp.debian.org``
+  * ``mailto:john@doe.com?subject=Hi Mate`` (depends on your machine's configuration)
+  * ``skype:buddy`` (depends on your machine's configuration)
+  * ``tel:+123456789`` (depends on your machine's configuration)
+
+IPv4 and IPv6 addresses are also recognized:
+
+  * ``192.168.0.1`` (``http`` is assumed)
+  * ``192.168.0.1:8080`` (``http`` is assumed)
+  * ``ftp://10.0.0.8:8080``
+  * ``2001:db8:85a3:8d3:1319:8a2e:370:7348`` (``http`` is assumed)
+  * ``https://[2001:db8:85a3:8d3:1319:8a2e:370:7348]:443/``
+
+Note that the ``http``, ``https`` and ``ftp`` schemes are always associated with
+your web browser by |project| so application settings like ``web_browser``,
+``web_browser_new_window`` and ``web_browser_private_mode`` can be applied.
+
+Available since version 2.5.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`../configuration` chapter

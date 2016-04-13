@@ -14,15 +14,22 @@ Plugin class
 
     .. automethod:: Plugin.__init__
 
+    .. py:method:: on_start()
+
+        This is always the first callback method called by the application after
+        a plugin has been instanciated.
+
+        *Heavy* initialization, if any, must be performed here **instead** of
+        inside ``__init__``.
+
+        .. seealso::
+            See the :ref:`api-overview-loading` section for more information
+            about the *plugin loading* process. And :ref:`api-overview-msgflow`.
+
+
     .. py:method:: on_catalog()
 
-        This is the first callback method called by the application after a
-        plugin has been instanciated.
-
-        *Heavy* initialization must be performed here instead of inside
-        ``__init__``.
-
-        The plugin is also expected to setup its catalog by calling either
+        Plugin is requested to setup its catalog by calling either
         :py:meth:`set_catalog` or :py:meth:`merge_catalog`.
 
         .. seealso::
@@ -122,6 +129,7 @@ Plugin class
 
         *flags* is one or several flags from :py:class:`EnvChangedFlags`.
 
+
     .. py:method:: id()
 
         Get the *id* number (int) of this plugin.
@@ -129,22 +137,34 @@ Plugin class
         This *id* uniquely identifies this plugin during the current session
         **only**.
 
+
+    .. py:method:: package_name()
+
+        Get the name of plugin's package.
+
+
     .. py:method:: set_catalog(catalog_items)
 
         Replace current plugin's catalog by *catalog_items*, which must be a
         list of :py:class:`CatalogItem` objects, created by *this* plugin. Note
         that the list may be empty if you wish to clear plugin's catalog.
 
+        Internally calls ``self.merge_catalog(catalog_items, True)``
+
+        .. seealso::
+            :py:meth:`merge_catalog`
 
     .. py:method:: merge_catalog(catalog_items, erase_untouched_items)
 
         Merge current plugin's catalog with *catalog_items*, which must be a
-        list of :py:class:`CatalogItem` objects, created by *this* plugin.
+        list of :py:class:`CatalogItem` objects that have been created by *this*
+        plugin.
 
+        *erase_untouched_items* is a boolean flag to indicate if items related
+        to this plugin, that were already present in the catalog and that were
+        not present in the given *catalog_items* list, should be erased from the
+        catalog after other items have been merged.
 
-    .. py:method:: set_suggestions(suggested_items)
+        .. seealso::
+            :py:meth:`set_catalog`
 
-        Offer some suggestions to the user according to her current search. This
-        method is usually called from :py:meth:`on_suggest`.
-
-        *suggested_items* must be a list of :py:class:`CatalogItem` objects.

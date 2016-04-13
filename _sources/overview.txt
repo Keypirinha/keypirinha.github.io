@@ -9,7 +9,7 @@ Architecture
 ============
 
 |project| by itself is just a database (the :term:`Catalog`) sweetened with a
-small semantic search engine and a straightforward graphical interface. Thus,
+small adaptive search engine and a straightforward graphical interface. Thus,
 **the task of feeding the Catalog is entirely left to its** :term:`Plugins`.
 
 From that point of view, we can say that the whole architecture of |project|

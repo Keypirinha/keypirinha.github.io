@@ -26,6 +26,16 @@ This package populates the :term:`Catalog` with the following items:
     evaluated as long as its syntax is valid.
 
 
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`../configuration` chapter
+
+
 Mathematical Expression
 =======================
 

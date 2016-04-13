@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -91,6 +91,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. Update Procedure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#update-in-installed-mode">2.1. Update in Installed Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-in-portable-mode">2.2. Update in Portable Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overridden-shipped-packages">2.3. Overridden Shipped Packages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
@@ -186,7 +187,7 @@ Ensure there is <strong>no</strong> <code class="file docutils literal"><span cl
 Don&#8217;t worry. In this mode, your configuration files are stored in your Home
 folder (i.e. under <code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code>).</li>
 <li>Open <em>Keypirinha</em>&#8216;s distribution archive (its name should be something like
-<code class="file docutils literal"><span class="pre">Keypirinha-X.Y.Z-x64-portable.zip</span></code>).</li>
+<code class="file docutils literal"><span class="pre">keypirinha-x64-portable.zip</span></code>).</li>
 <li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code>. <br />
 You should now have a <code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> directory.</li>
 <li>Delete the <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory. <br />
@@ -196,6 +197,10 @@ You may now execute the <code class="file docutils literal"><span class="pre">U:
 It might be named <code class="file docutils literal"><span class="pre">keypirinha</span></code> in your <em>Windows Explorer</em> view, so to
 recognize it, it is the one with the squared-K icon.</li>
 </ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span>Overridden Shipped Packages</span></a>.</p>
+</div>
 </div>
 <div class="section" id="update-in-portable-mode">
 <h2>2.2. Update in Portable Mode<a class="headerlink" href="#update-in-portable-mode" title="Permalink to this headline">¶</a></h2>
@@ -208,7 +213,7 @@ Ensure there <strong>is</strong> a <code class="file docutils literal"><span cla
 Don&#8217;t mess up with this one, this is where your configuration files are
 located!</li>
 <li>Open <em>Keypirinha</em>&#8216;s distribution archive (its name should be something like
-<code class="file docutils literal"><span class="pre">Keypirinha-X.Y.Z-x64-portable.zip</span></code>).</li>
+<code class="file docutils literal"><span class="pre">keypirinha-x64-portable.zip</span></code>).</li>
 <li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code>. <br />
 It is safe to anwser yes to the <code class="docutils literal"><span class="pre">Overwrite?</span></code> question concerning the
 <code class="file docutils literal"><span class="pre">portable</span></code> directory since it is just about replacing a dummy file (i.e.
@@ -218,6 +223,18 @@ You may now execute the <code class="file docutils literal"><span class="pre">U:
 It might be named <code class="file docutils literal"><span class="pre">keypirinha</span></code> in your <em>Windows Explorer</em> view, so to
 recognize it, it is the one with the squared-K icon.</li>
 </ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span>Overridden Shipped Packages</span></a>.</p>
+</div>
+</div>
+<div class="section" id="overridden-shipped-packages">
+<span id="update-overpacks"></span><h2>2.3. Overridden Shipped Packages<a class="headerlink" href="#overridden-shipped-packages" title="Permalink to this headline">¶</a></h2>
+<p>If you have modified some official package, you may want to ensure their code,
+their resources <strong>and</strong> the nomenclature of their default configuration files
+hasn&#8217;t changed much!</p>
+<p>If you run into trouble with an official package, try first to move away its
+loose folder to check if your issue is reproducible.</p>
 </div>
 </div>
 
@@ -261,7 +278,7 @@ recognize it, it is the one with the squared-K icon.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

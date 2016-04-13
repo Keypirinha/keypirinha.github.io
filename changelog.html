@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -101,6 +101,14 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-5-2016-04-13">v2.5 - 2016-04-13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#application">Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calc-package">Calc package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#everything-package">Everything package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#websearch-package">WebSearch package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-4-2016-03-24">v2.4 - 2016-03-24</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#caution"><strong>CAUTION</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#added">Added</a></li>
@@ -178,6 +186,93 @@
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
 <p>Change log of <a class="reference external" href="http://keypirinha.com">Keypirinha</a></p>
+<div class="section" id="v2-5-2016-04-13">
+<h2>v2.5 - 2016-04-13<a class="headerlink" href="#v2-5-2016-04-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="application">
+<h3>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>New package:</strong> <a class="reference internal" href="packages/url.html"><em>URL Package</em></a></li>
+<li>Fixed: the LaunchBox and Console windows now give back the focus to the
+previous application/window when closed <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/37">#37</a></li>
+<li>The LaunchBox can now be maximized by hitting <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or standard
+<code class="kbd docutils literal"><span class="pre">Alt+Up</span></code> combination (<strong>toggle</strong>). Double-click also works.
+See the <a class="reference internal" href="first.html#first-maximize"><span>Maximize the LaunchBox</span></a> documentation section.</li>
+<li>Added the <code class="docutils literal"><span class="pre">hide_on_focus_lost</span></code> setting <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/34">#34</a></li>
+<li>Added the <code class="docutils literal"><span class="pre">retain_last_search</span></code> setting <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/35">#35</a></li>
+<li>ERROR items have been implemented.
+Keypirinha can now display error messages from the plugins directly to the
+results list so the user can have a direct feedback on what&#8217;s going on in some
+cases. Note that the Console remains the best source of information to track
+down issues.
+Best example for now is the <code class="docutils literal"><span class="pre">=</span></code> item of the <code class="docutils literal"><span class="pre">Calc</span></code> package (try typing an
+invalid expression like <code class="docutils literal"><span class="pre">2+</span></code>).</li>
+<li>The LaunchBox now supports drag-and-drop operations:<ul>
+<li>A file can be dropped to the edit box so its full path is inserted</li>
+<li>FILE items can be dragged out of the results list and be copied/linked to
+the Windows Explorer or any other application that accepts drops of Shell
+items</li>
+<li>URL, CMDLINE, EXPRESSION and ERROR items can also be dragged out and their
+content (i.e. the <em>target</em> property) will be copied to the drop destination.
+For example, you could drop a URL item to your web browser.</li>
+</ul>
+</li>
+<li>In the LaunchBox, the <code class="kbd docutils literal"><span class="pre">Ctrl+Enter</span></code> combination allows to show up the
+properties of the currently selected item.</li>
+<li>User can now press <code class="kbd docutils literal"><span class="pre">Ctrl+Space</span></code>, <code class="kbd docutils literal"><span class="pre">Shift+Space</span></code> or <code class="kbd docutils literal"><span class="pre">Alt+Space</span></code>
+during the <strong>initial</strong> search to force include a space character instead of
+switching to the next step.</li>
+<li>Improved speed when merging a large list of suggestions from plugins</li>
+</ul>
+</div>
+<div class="section" id="calc-package">
+<h3>Calc package<a class="headerlink" href="#calc-package" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added support for the left-shift and right-shift operators (<code class="docutils literal"><span class="pre">&lt;&lt;</span></code> and
+<code class="docutils literal"><span class="pre">&gt;&gt;</span></code>).</li>
+<li>Added the <code class="docutils literal"><span class="pre">always_evaluate</span></code> setting <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/38">#38</a></li>
+</ul>
+</div>
+<div class="section" id="everything-package">
+<h3>Everything package<a class="headerlink" href="#everything-package" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Full support of Everything&#8217;s search syntax <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/27">#27</a></li>
+<li>Added the <code class="docutils literal"><span class="pre">Regex</span> <span class="pre">Search</span></code> item to allow a search based on regular expression</li>
+<li>Fixed: the list of returned results was not always complete in case Everything
+was not fast enough <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/36">#36</a></li>
+<li>Fixed: extra arguments could not be added to items that had been executed
+already (Everything items only)</li>
+</ul>
+</div>
+<div class="section" id="websearch-package">
+<h3>WebSearch package<a class="headerlink" href="#websearch-package" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added <code class="docutils literal"><span class="pre">Bing</span> <span class="pre">Maps</span></code>, <code class="docutils literal"><span class="pre">Google</span> <span class="pre">Maps</span></code> and <code class="docutils literal"><span class="pre">OpenStreetMaps</span></code> search sites in
+the default configuration file.</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added optional argument <code class="docutils literal"><span class="pre">wait_seconds</span></code> to
+<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a> and
+<a class="reference internal" href="api/module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a></li>
+<li>Added <a class="reference internal" href="api/module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">keypirinha.ItemCategory.ERROR</span></code></a>.
+<code class="docutils literal"><span class="pre">ERROR</span></code> items are highlighted in the results list and cannot be executed.</li>
+<li>Added <a class="reference internal" href="api/plugin.html#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.create_error_item()</span></code></a></li>
+<li>Added the optional parameters <code class="docutils literal"><span class="pre">match_method</span></code> and <code class="docutils literal"><span class="pre">sort_method</span></code> to
+<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a></li>
+<li>Added the <code class="docutils literal"><span class="pre">data_bag</span></code> property to <a class="reference internal" href="api/catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.CatalogItem</span></code></a> to allow
+plugins to associate arbitrary data to a specific item.
+<strong>Modified</strong> <a class="reference internal" href="api/plugin.html#keypirinha.Plugin.create_item" title="keypirinha.Plugin.create_item"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.create_item()</span></code></a> and
+<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.create_error_item()</span></code></a> accordingly.
+<strong>Added</strong> the <a class="reference internal" href="api/catalogitem.html#keypirinha.CatalogItem.data_bag" title="keypirinha.CatalogItem.data_bag"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.CatalogItem.data_bag()</span></code></a> and
+<a class="reference internal" href="api/catalogitem.html#keypirinha.CatalogItem.set_data_bag" title="keypirinha.CatalogItem.set_data_bag"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.CatalogItem.set_data_bag()</span></code></a> methods.</li>
+<li>Added the <a class="reference internal" href="api/module-util.html#keypirinha_util.shell_url_scheme_to_command" title="keypirinha_util.shell_url_scheme_to_command"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.shell_url_scheme_to_command()</span></code></a> function to
+find the application associated with a given URL scheme by the system; and the
+location of its default icon.</li>
+</ul>
+</div>
+</div>
 <div class="section" id="v2-4-2016-03-24">
 <h2>v2.4 - 2016-03-24<a class="headerlink" href="#v2-4-2016-03-24" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="caution">
@@ -221,10 +316,10 @@ expected one <a class="reference external" href="https://github.com/Keypirinha/K
 <div class="section" id="changed">
 <h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>LaunchBox: last executed action is now pre-selected in the ACTIONS list. If
-user skips the ACTIONS list, item will be executed with the default action</li>
+<li>LaunchBox: last executed action is now <strong>pre-selected</strong> in the ACTIONS list.
+If user skips the ACTIONS list, item will be executed with the default action.</li>
 <li>The default value of the <code class="docutils literal"><span class="pre">launch_at_startup</span></code> setting has been changed from
-<code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to be less invasive</li>
+<code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to be less invasive.</li>
 <li>WebSearch package: the default value of the <code class="docutils literal"><span class="pre">new_window</span></code> setting in the
 <code class="docutils literal"><span class="pre">[defaults]</span></code> section has been changed from <code class="docutils literal"><span class="pre">yes</span></code> to <code class="docutils literal"><span class="pre">no</span></code> to comply to
 default system preferences.</li>
@@ -252,8 +347,8 @@ Install/Update instructions from the documentation.</p>
 <div class="section" id="id1">
 <h3>Added<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>New official package</strong>: Everything (query <a class="reference external" href="http://www.voidtools.com">Everything</a> to search files and
-folders from Keypirinha).</li>
+<li><strong>New package:</strong> Everything (query <a class="reference external" href="http://www.voidtools.com">Everything</a> to search files and folders
+from Keypirinha).</li>
 <li>Docs: the <a class="reference internal" href="first.html"><em>First steps</em></a> chapter has been stuffed with features that were
 undocumented so far.</li>
 <li><code class="docutils literal"><span class="pre">geometry</span></code> settings in the <code class="docutils literal"><span class="pre">[gui]</span></code> and <code class="docutils literal"><span class="pre">[console]</span></code> sections. Note that
@@ -320,8 +415,7 @@ profile was not found.</li>
 <div class="section" id="id7">
 <h3>Added<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>New official package</strong>: Bookmarks (supports Chrome, Firefox and Internet
-Explorer)</li>
+<li><strong>New package:</strong> Bookmarks (supports Chrome, Firefox and Internet Explorer)</li>
 <li>Position and size of the LaunchBox and the Console window are now persistent
 <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/2">#2</a></li>
 <li><code class="docutils literal"><span class="pre">always_on_top</span></code> setting <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/1">#1</a></li>
@@ -424,7 +518,7 @@ confusion</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

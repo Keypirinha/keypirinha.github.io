@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -521,9 +521,9 @@ The file could not be read or is not a link.</td>
 <dt id="keypirinha_util.scan_directory">
 <code class="descclassname">keypirinha_util.</code><code class="descname">scan_directory</code><span class="sig-paren">(</span><em>base_dir</em>, <em>name_patterns='*'</em>, <em>flags=&lt;ScanFlags.DEFAULT: 3&gt;</em>, <em>max_level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.scan_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Walks a directory and builds a list of relative paths.</p>
-<p>This function offers an alternative to <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.walk" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.walk()</span></code></a> with the ability
-to filter the elements to find by name and/or by type, and how deep the scan
-has to be done.</p>
+<p>This function offers an alternative to <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.walk" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.walk()</span></code></a> or the more recent
+<a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.scandir" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.scandir()</span></code></a>, that has the ability to filter the elements to find
+by name and/or by type, and to define how deep the scan has to be done.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -647,15 +647,15 @@ and behaves incorrectly in some cases.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>A successful call, does not necessarily mean the item has effectively been
-launched/executed as expected, or that the launched process ended
+<li>A successful call, does not necessarily mean the item has effectively
+been launched/executed as expected, or that the launched process ended
 successfully.</li>
 </ul>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#keypirinha_util.web_browser_command" title="keypirinha_util.web_browser_command"><code class="xref py py-func docutils literal"><span class="pre">web_browser_command()</span></code></a>, which is the preferred function to open
-a URL since it takes care of using user&#8217;s preferences.</p>
+a URL since it takes care of applying user&#8217;s preferences.</p>
 </div>
 </dd></dl>
 
@@ -704,11 +704,39 @@ according to its location. Returns <code class="docutils literal"><span class="p
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The location of the desired string. The
 expected format is normally &#8220;&#64;&lt;PE-path&gt;,-&lt;stringID&gt;&#8221; but the
 underlying function tries to be as flexible as possible since a lot
-of applications and shell extensions does not strictly comply to
+of applications and shell extensions do not strictly comply to
 Microsoft&#8217;s rules.</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="keypirinha_util.shell_url_scheme_to_command">
+<code class="descclassname">keypirinha_util.</code><code class="descname">shell_url_scheme_to_command</code><span class="sig-paren">(</span><em>url_scheme</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_url_scheme_to_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get system&#8217;s default command line associated with the given URL scheme(s);
+and the location of its default icon.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url_scheme</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The URL scheme name (e.g. &#8220;http&#8221;, &#8220;ftp&#8221;, &#8220;mailto&#8221;,
+&#8220;skype&#8221;, ...).
+This argument <strong>can also be an iterable</strong> of URL schemes, in which
+case this function iterates over the given schemes until it finds a
+valid associated command line.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The command line associated with the scheme and the shell
+location string of class&#8217; default icon.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)">tuple</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha_util.cmdline_split" title="keypirinha_util.cmdline_split"><code class="xref py py-func docutils literal"><span class="pre">cmdline_split()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -854,7 +882,7 @@ The given <em>url</em> argument is invalid.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -94,6 +94,22 @@ CatalogItem class
         .. todo:: Explain the *loop_on_suggest* concept.
 
 
+    .. py:method:: data_bag()
+
+        Returns the content (string) of the data bag of this item.
+
+        .. seealso::
+            :py:meth:`set_data_bag`
+
+
+    .. py:method:: set_data_bag(content)
+
+        Change the *content* (string) of the data bag of this item.
+
+        .. seealso::
+            :py:meth:`data_bag`
+
+
     .. py:method:: raw_args()
 
         Returns the *raw* arguments (string).

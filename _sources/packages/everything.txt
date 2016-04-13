@@ -25,8 +25,13 @@ This package populates the :term:`Catalog` with the following items:
 * Search for the items prefixed with ``Everything:`` (by default). They are
   added to the Catalog even if Everything is not running at init time.
 
-.. note::
-    The ``Rebuild DB`` item requires Everything v1.4.
+* The ``Search`` item allows to query Everything using its normal search syntax
+
+* The ``Regex Search`` item allows to query Everything using its regular
+  expression syntax
+
+* The ``Rebuild DB`` item request Everything to rebuild its database (**requires
+  Everything v1.4**).
 
 
 Introduction
@@ -39,7 +44,7 @@ searched-found-executed a file/folder using this package, it is kept in
 it.
 
 .. tip::
-    You can reduce even more the number of keystrokes to reach the same item by
+    You can reduce the number of keystrokes even more to reach the same item by
     using the :ref:`first-associate-keyword` feature.
 
 

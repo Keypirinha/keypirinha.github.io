@@ -142,3 +142,5 @@ In particular:
   Registry using the :py:mod:`winreg` Python standard module.
 
 * The ``Calc`` package imports a third-party bundled Python module.
+
+* The ``URL`` package extract an embedded resource file and parse it.

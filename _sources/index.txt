@@ -38,8 +38,9 @@ ticket if you stumble upon something that doesn't work right. Read the
 About this Documentation
 ========================
 
-This documentation is a work in progress. Comments and contributions are
-appreciated. It is written in reST_ and generated using the Sphinx_ tools suite.
+This documentation is a work in progress and the effort of a non-native english
+speaker. Comments and contributions are appreciated. It is written in reST_ and
+generated using the Sphinx_ tools suite.
 
 .. TODO: Move documentation to its own public repository.
 .. This documentation is a work in progress. Comments and contributions are

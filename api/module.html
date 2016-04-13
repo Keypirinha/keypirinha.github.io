@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.4
+                2.5
               </div>
             
           
@@ -246,6 +246,20 @@ system</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="keypirinha.ItemCategory.ERROR">
+<code class="descname">ERROR</code><em class="property"> = &lt;ItemCategory.ERROR: 1&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>An &#8220;error&#8221; item that cannot be executed. It is destined to show a
+warning/error message in the results list where a specific result would
+normally be expected by the user. It will be accepted by the application
+only as a <strong>suggestion</strong>. It cannot be part of the Catalog. The best
+usage example for it can be found in the official <code class="docutils literal"><span class="pre">Calc</span></code> plugin, which
+sets an <code class="docutils literal"><span class="pre">ERROR</span></code> item as a suggestion to indicate user her mathematical
+expression could not be evaluated.
+<code class="docutils literal"><span class="pre">ERROR</span></code> <strong>items should be created with</strong>
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.create_error_item()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="keypirinha.ItemCategory.EXPRESSION">
 <code class="descname">EXPRESSION</code><em class="property"> = &lt;ItemCategory.EXPRESSION: 50&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.EXPRESSION" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is an expression that has to be evaluated (e.g.: math, programming
@@ -315,6 +329,69 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dt id="keypirinha.ItemHitHint.NOARGS">
 <code class="descname">NOARGS</code><em class="property"> = &lt;ItemHitHint.NOARGS: 2&gt;</em><a class="headerlink" href="#keypirinha.ItemHitHint.NOARGS" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <strong>initial</strong> item object selected by the user will be added to History (omitting its arguments, if any)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keypirinha.Match">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Match</code><a class="headerlink" href="#keypirinha.Match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<p>Match methods</p>
+<dl class="attribute">
+<dt id="keypirinha.Match.ANY">
+<code class="descname">ANY</code><em class="property"> = &lt;Match.ANY: 0&gt;</em><a class="headerlink" href="#keypirinha.Match.ANY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match any item</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Match.DEFAULT">
+<code class="descname">DEFAULT</code><em class="property"> = &lt;Match.FUZZY: 1000&gt;</em><a class="headerlink" href="#keypirinha.Match.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default behavior: <code class="docutils literal"><span class="pre">FUZZY</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Match.FUZZY">
+<code class="descname">FUZZY</code><em class="property"> = &lt;Match.FUZZY: 1000&gt;</em><a class="headerlink" href="#keypirinha.Match.FUZZY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match items against user&#8217;s search terms using a fuzzy algorithm</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="keypirinha.Sort">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Sort</code><a class="headerlink" href="#keypirinha.Sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<p>Sort methods</p>
+<dl class="attribute">
+<dt id="keypirinha.Sort.DEFAULT">
+<code class="descname">DEFAULT</code><em class="property"> = &lt;Sort.SCORE_DESC: 1000&gt;</em><a class="headerlink" href="#keypirinha.Sort.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default behavior: <code class="docutils literal"><span class="pre">SCORE_DESC</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Sort.LABEL_ASC">
+<code class="descname">LABEL_ASC</code><em class="property"> = &lt;Sort.LABEL_ASC: 200&gt;</em><a class="headerlink" href="#keypirinha.Sort.LABEL_ASC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort results alphabetically by label (ascending)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Sort.NONE">
+<code class="descname">NONE</code><em class="property"> = &lt;Sort.NONE: 0&gt;</em><a class="headerlink" href="#keypirinha.Sort.NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not sort items</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Sort.SCORE_DESC">
+<code class="descname">SCORE_DESC</code><em class="property"> = &lt;Sort.SCORE_DESC: 1000&gt;</em><a class="headerlink" href="#keypirinha.Sort.SCORE_DESC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort results by descending score (for now, this sort method must be
+combined with <a class="reference internal" href="#keypirinha.Match.FUZZY" title="keypirinha.Match.FUZZY"><code class="xref py py-const docutils literal"><span class="pre">Match.FUZZY</span></code></a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Sort.TARGET_ASC">
+<code class="descname">TARGET_ASC</code><em class="property"> = &lt;Sort.TARGET_ASC: 100&gt;</em><a class="headerlink" href="#keypirinha.Sort.TARGET_ASC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort results alphabetically by target (ascending)</p>
 </dd></dl>
 
 </dd></dl>
@@ -635,12 +712,19 @@ values in use (i.e.: the default ones).</li>
 
 <dl class="function">
 <dt id="keypirinha.should_terminate">
-<code class="descclassname">keypirinha.</code><code class="descname">should_terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.should_terminate" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">should_terminate</code><span class="sig-paren">(</span><em>wait_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.should_terminate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether the current task (i.e.: thread) should return as soon as
 possible, without finishing its job.</p>
 <p>Delayed tasks (i.e.: scheduled with <a class="reference internal" href="#keypirinha.delay" title="keypirinha.delay"><code class="xref py py-func docutils literal"><span class="pre">delay()</span></code></a>) <strong>must</strong> call this
-function frequently. Especially at I/O operations boundaries (storage
+function <strong>frequently</strong>. Especially at I/O operations boundaries (storage
 accesses and network communications).</p>
+<p>The optional <em>wait_seconds</em> argument allows to wait for a given amout of
+seconds before returning (can be a float), unless the return value is
+<code class="docutils literal"><span class="pre">True</span></code> before the end of the period.
+This is useful in case you don&#8217;t want to handle an incoming message from the
+application (typically <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_suggest()</span></code></a>) too quickly/often in
+order to avoid any flooding due to user typing her search (hard-drive
+scratching, IPC queries, network requests, ...).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -759,7 +843,7 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
