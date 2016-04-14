@@ -2,10 +2,10 @@
 Calc Package
 ============
 
+Available since version 2.0.
+
 The *Calc* package allows to quickly evaluate a mathematical expression directly
 from |project| and eventually copy its result to the clipboard.
-
-Available since version 2.0.
 
 .. image:: ../images/pack-calc.png
     :align: center

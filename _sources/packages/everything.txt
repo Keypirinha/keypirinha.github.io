@@ -2,9 +2,9 @@
 Everything Package
 ==================
 
-Query Everything_ from |project| to find and open any file or folder.
-
 Available since version 2.3.
+
+Query Everything_ from |project| to find and open any file or folder.
 
 
 Requirements

@@ -2,14 +2,14 @@
 WebSearch Package
 =================
 
+Available since version 2.0.
+
 Launch a search on any configured website using system's default web browser.
 
 Some search sites are already configured by default. Currently: ``Bing``,
 ``DuckDuckGo``, ``Google``, ``Twitter``, ``Yahoo``, ``WolframAlpha``, ``IMDB``,
 ``Wikipedia``, ``YouTube``, ``C++``, ``CPAN``, ``Git``, ``PHP``, ``Python3`` and
 ``RubyGems`` (this list may vary).
-
-Available since version 2.0.
 
 .. image:: ../images/pack-websearch.png
     :align: center

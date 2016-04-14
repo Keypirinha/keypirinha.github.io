@@ -2,10 +2,10 @@
 Apps Package
 ============
 
+Available since version 2.0.
+
 The *Apps* package finds the main applications and executable files installed on
 your computer and makes them available from |project|'s :term:`Catalog`.
-
-Available since version 2.0.
 
 .. image:: ../images/wndrun-search2.png
     :align: center

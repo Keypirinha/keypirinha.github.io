@@ -2,12 +2,12 @@
 Bookmarks Package
 =================
 
+Available since version 2.1.
+
 Launch Chrome, Firefox and Internet Explorer bookmarks.
 
 This plugin allows to search for and open bookmarks kept by the Chrome, Chrome
 Canary, Chromium, Firefox, Internet Explorer and Vivaldi web browsers.
-
-Available since version 2.1.
 
 .. image:: ../images/pack-bookmarks.png
     :align: center

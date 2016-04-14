@@ -2,6 +2,8 @@
 URL Package
 ===========
 
+Available since version 2.5.
+
 Launch URLs directly from |project|
 
 The ``URL`` plugin allows you to launch any URL that has its scheme (a.k.a.
@@ -28,7 +30,9 @@ Note that the ``http``, ``https`` and ``ftp`` schemes are always associated with
 your web browser by |project| so application settings like ``web_browser``,
 ``web_browser_new_window`` and ``web_browser_private_mode`` can be applied.
 
-Available since version 2.5.
+.. tip::
+    You can always use the :kbd:`Ctrl+Space` combination to insert a space
+    character if needed.
 
 
 Configuration

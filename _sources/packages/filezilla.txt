@@ -2,6 +2,8 @@
 FileZilla Package
 =================
 
+Available since version 2.0.
+
 Allows to launch *FileZilla Client* sessions directly.
 
 This plugin automatically detects the installed version of the official
@@ -11,8 +13,6 @@ launched directly from |project|.
 The portable version of *FileZilla Client* can also be registered in package's
 dedicated configuration file. Edit the configuration file for more info (search
 for the ``Configure Package: FileZilla`` item to do that).
-
-Available since version 2.0.
 
 
 Catalog Items
