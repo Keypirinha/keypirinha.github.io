@@ -172,6 +172,27 @@ dialog. Note that one time is enough if you didn't type anything.
     The :kbd:`Alt+F4` standard Windows shortcut closes the dialog as expected.
 
 
+Drag and Drop
+=============
+
+The LaunchBox allows drag-and-drop operations.
+
+For example, a file from Windows Explorer can be dropped to the search box to
+insert its full path.
+
+Also, items in the results list can be dragged out. The effect of the resulting
+drop depends on the type of item and the destination application:
+
+* ``FILE`` items will be copied to the drop destination
+* The text content of the ``URL``, ``CMDLINE``, ``EXPRESSION`` and ``ERROR``
+  items will be copied to the drop destination. For example:
+
+  - a ``URL`` item dropped to your web browser's window will usually open this
+    ``URL``
+  - a ``CMDLINE`` item dropped to a text editor will insert the ``CMDLINE``
+    itself
+
+
 Configuration
 =============
 

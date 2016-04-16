@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="4. Overview" href="overview.html"/>
+        <link rel="next" title="4. Keyboard Shortcuts" href="keyboard.html"/>
         <link rel="prev" title="2. Update Procedure" href="update.html"/> 
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.5.1
+                2.5.2
               </div>
             
           
@@ -99,19 +99,21 @@
 <li class="toctree-l2"><a class="reference internal" href="#actions">3.7. Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#maximize-the-launchbox">3.8. Maximize the LaunchBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leave-a-search">3.9. Leave a Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">3.10. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.11. Extending <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drag-and-drop">3.10. Drag and Drop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">3.11. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.12. Extending <em>Keypirinha</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">4. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">5. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">6. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">7. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">8. Extending <em>Keypirinha</em> (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">9. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">10. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">11. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">12. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">5. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">6. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">7. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">8. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">9. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">10. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">11. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">12. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">13. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -279,12 +281,31 @@ dialog. Note that one time is enough if you didn&#8217;t type anything.</p>
 <p class="last">The <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code> standard Windows shortcut closes the dialog as expected.</p>
 </div>
 </div>
+<div class="section" id="drag-and-drop">
+<h2>3.10. Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this headline">¶</a></h2>
+<p>The LaunchBox allows drag-and-drop operations.</p>
+<p>For example, a file from Windows Explorer can be dropped to the search box to
+insert its full path.</p>
+<p>Also, items in the results list can be dragged out. The effect of the resulting
+drop depends on the type of item and the destination application:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">FILE</span></code> items will be copied to the drop destination</li>
+<li>The text content of the <code class="docutils literal"><span class="pre">URL</span></code>, <code class="docutils literal"><span class="pre">CMDLINE</span></code>, <code class="docutils literal"><span class="pre">EXPRESSION</span></code> and <code class="docutils literal"><span class="pre">ERROR</span></code>
+items will be copied to the drop destination. For example:<ul>
+<li>a <code class="docutils literal"><span class="pre">URL</span></code> item dropped to your web browser&#8217;s window will usually open this
+<code class="docutils literal"><span class="pre">URL</span></code></li>
+<li>a <code class="docutils literal"><span class="pre">CMDLINE</span></code> item dropped to a text editor will insert the <code class="docutils literal"><span class="pre">CMDLINE</span></code>
+itself</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="configuration">
-<h2>3.10. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.11. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>See the <a class="reference internal" href="configuration.html"><em>Configuration</em></a> section for more info.</p>
 </div>
 <div class="section" id="extending-project">
-<h2>3.11. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
+<h2>3.12. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
 <p>Despite its apparent simplicity, <em>Keypirinha</em> is a generic tool that is able to
 welcome a very wide range of features not offered yet by the official bundled
 plugins. An API allows to extend <em>Keypirinha</em>&#8216;s features to make them fit your
@@ -300,7 +321,7 @@ needs.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="overview.html" class="btn btn-neutral float-right" title="4. Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="keyboard.html" class="btn btn-neutral float-right" title="4. Keyboard Shortcuts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="update.html" class="btn btn-neutral" title="2. Update Procedure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -333,7 +354,7 @@ needs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.5.1',
+            VERSION:'2.5.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
