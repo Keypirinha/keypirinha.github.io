@@ -100,8 +100,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#maximize-the-launchbox">3.8. Maximize the LaunchBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leave-a-search">3.9. Leave a Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#drag-and-drop">3.10. Drag and Drop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">3.11. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.12. Extending <em>Keypirinha</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clear-the-history">3.11. Clear the history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">3.12. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-project">3.13. Extending <em>Keypirinha</em></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
@@ -234,7 +235,7 @@ just type <code class="docutils literal"><span class="pre">f</span></code> and s
 <div class="section" id="specify-arguments">
 <h2>3.6. Specify arguments<a class="headerlink" href="#specify-arguments" title="Permalink to this headline">¶</a></h2>
 <p>In <em>Keypirinha</em>, some items accept arguments. They even sometimes require some.</p>
-<p>One you typed your search term and <strong>selected</strong> the desired item, hit the
+<p>Once you typed your search term and <strong>selected</strong> the desired item, hit the
 <code class="kbd docutils literal"><span class="pre">Tab</span></code> key (the <code class="kbd docutils literal"><span class="pre">Space</span></code> key also works in this case).</p>
 <p>To keep going with our example, <em>Firefox</em> currently accepts the <code class="docutils literal"><span class="pre">-preferences</span></code>
 command line option so let&#8217;s try typing this one and execute our item.</p>
@@ -258,10 +259,8 @@ our example, the following actions are made available:</p>
 <p><code class="kbd docutils literal"><span class="pre">Alt+X</span></code> (or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
 state.</p>
 <p>You may need to <strong>temporarily extend the size</strong> of the LaunchBox sometimes in
-order to see the full value of some results in the list. While it is possible to
-do it using the conventional Windows way by dragging the right-bottom corner of
-the window with the mouse, <em>Keypirinha</em> offers a more convenient and instantaneous
-way of maximizing the window by pressing <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code>.</p>
+order to see the full value of some items in the results list. You can do that
+by either pressing <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code> (toggle).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This feature does not impact the geometry you manually setup in case your
@@ -276,13 +275,11 @@ in maximized mode</strong> or you will loose your previous geometry.</p>
 <p>May you wish to abort what you were doing on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>, press the
 <code class="kbd docutils literal"><span class="pre">Esc</span></code> key. Press it <strong>once</strong>, to clear your search, <strong>twice</strong> to close the
 dialog. Note that one time is enough if you didn&#8217;t type anything.</p>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">The <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code> standard Windows shortcut closes the dialog as expected.</p>
-</div>
+<p>If you wish to close the window directly, press <code class="kbd docutils literal"><span class="pre">Shift+Esc</span></code> or
+<code class="kbd docutils literal"><span class="pre">Alt+F4</span></code>.</p>
 </div>
 <div class="section" id="drag-and-drop">
-<h2>3.10. Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this headline">¶</a></h2>
+<span id="first-drag"></span><h2>3.10. Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this headline">¶</a></h2>
 <p>The LaunchBox allows drag-and-drop operations.</p>
 <p>For example, a file from Windows Explorer can be dropped to the search box to
 insert its full path.</p>
@@ -299,13 +296,35 @@ itself</li>
 </ul>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Like in Windows Explorer, you can drag out <code class="docutils literal"><span class="pre">FILE</span></code> items using either the
+left mouse button to have a regular behavior, or the right mouse button to
+popup a contextual menu at drop destination that allows you to choose the
+desired drop effect.</p>
+</div>
+</div>
+<div class="section" id="clear-the-history">
+<h2>3.11. Clear the history<a class="headerlink" href="#clear-the-history" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to clear the history of every executed items by executing the
+<code class="docutils literal"><span class="pre">Clear</span> <span class="pre">History</span></code> item that can always be found in the Catalog. It can be done
+from application&#8217;s main contextual menu as well (right click on the LaunchBox).</p>
+<p>If you just want to erase a <strong>single</strong> item from the history, just search for
+it, select it and press <code class="kbd docutils literal"><span class="pre">Ctrl+Del</span></code>. A message dialog will ask you to
+confirm the operation.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">By clearing the full history, the score subsystem is also reset and you will
+also loose the internal dictionary of the keywords you associated with
+items, that is described in the <a class="reference internal" href="#first-associate-keyword"><span>Associate a Keyword to an Item</span></a> section.</p>
+</div>
 </div>
 <div class="section" id="configuration">
-<h2>3.11. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.12. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>See the <a class="reference internal" href="configuration.html"><em>Configuration</em></a> section for more info.</p>
 </div>
 <div class="section" id="extending-project">
-<h2>3.12. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
+<h2>3.13. Extending <em>Keypirinha</em><a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
 <p>Despite its apparent simplicity, <em>Keypirinha</em> is a generic tool that is able to
 welcome a very wide range of features not offered yet by the official bundled
 plugins. An API allows to extend <em>Keypirinha</em>&#8216;s features to make them fit your

@@ -16,8 +16,7 @@ and flexible it can be (variables assignment, inplace replacement of environment
 variables anywhere, machine-specific configuration, ...).
 
 Nevertheless, |project| offers a convenient way to open and edit its
-configuration files at runtime. And even that feature is configurable by
-offering you the ability to choose your favorite text editor!
+configuration files at runtime.
 
 Search for the "|project|: Configure ..." items from the :term:`LaunchBox`.
 

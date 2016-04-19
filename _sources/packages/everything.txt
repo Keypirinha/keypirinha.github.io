@@ -34,8 +34,8 @@ This package populates the :term:`Catalog` with the following items:
   Everything v1.4**).
 
 
-Introduction
-============
+Usage
+=====
 
 To query Everything from |project| allows you to take advantage of both
 Everything's speed and |project|'s matching algorithm. Once you have
@@ -46,6 +46,11 @@ it.
 .. tip::
     You can reduce the number of keystrokes even more to reach the same item by
     using the :ref:`first-associate-keyword` feature.
+
+.. tip::
+    Remember you can drag the resulting items the same way you would drag files
+    to/from the Windows Explorer, in order to copy files or create shell links
+    for example. See the :ref:`first-drag` section for more info.
 
 
 Troubleshooting
