@@ -27,14 +27,6 @@ What is |project|
 .. include:: common/what.rst
 
 
-Beta Stage
-==========
-
-|project| is young and needs to be improved, it’s in *beta* stage. File a bug
-ticket if you stumble upon something that doesn't work right. Read the
-:ref:`contribute-issue` section for more info.
-
-
 About this Documentation
 ========================
 

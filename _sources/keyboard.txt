@@ -11,15 +11,19 @@ LaunchBox
 | Show/Hide the LaunchBox                 | :kbd:`Ctrl+Win+K` (default)        |
 +-----------------------------------------+------------------------------------+
 | Next step (add args, choose action)     | :kbd:`Tab` (or :kbd:`Space` while  |
-|                                         | at first step)                     |
+|                                         | being at first |br| step and if    |
+|                                         | the ``space_as_tab`` |br| setting  |
+|                                         | is enabled)                        |
 +-----------------------------------------+------------------------------------+
-| Force insert a space character while at | * :kbd:`Ctrl+Space`                |
-| first step                              | * :kbd:`Shift+Space`               |
-|                                         | * :kbd:`Alt+Space`                 |
+| Force insert a space character while at | :kbd:`Ctrl+Space` or               |
+| first step                              | :kbd:`Shift+Space`                 |
 +-----------------------------------------+------------------------------------+
 | Directly select an action               | :kbd:`Ctrl+Enter`                  |
 +-----------------------------------------+------------------------------------+
 | Show selected item's properties         | :kbd:`Alt+Enter`                   |
++-----------------------------------------+------------------------------------+
+| Show Shell's "Properties" dialog for    | :kbd:`Shift+Alt+Enter`             |
+| the selected **FILE** item              |                                    |
 +-----------------------------------------+------------------------------------+
 | Maximize the LaunchBox (toggle)         | :kbd:`Alt+X` or                    |
 |                                         | :kbd:`Win+Up`                      |
@@ -27,8 +31,7 @@ LaunchBox
 | * Reset your current search (once)      | :kbd:`Esc`                         |
 | * Hide the LaunchBox (twice)            |                                    |
 +-----------------------------------------+------------------------------------+
-| Hide the LaunchBox                      | * :kbd:`Shift+Esc`                 |
-|                                         | * :kbd:`Alt+F4`                    |
+| Hide the LaunchBox                      | :kbd:`Shift+Esc` or :kbd:`Alt+F4`  |
 +-----------------------------------------+------------------------------------+
 | Erase a single item from history        | :kbd:`Ctrl+Del`                    |
 +-----------------------------------------+------------------------------------+
