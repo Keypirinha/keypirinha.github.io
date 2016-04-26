@@ -12,7 +12,7 @@ LaunchBox
 +-----------------------------------------+------------------------------------+
 | Next step (add args, choose action)     | :kbd:`Tab` (or :kbd:`Space` while  |
 |                                         | being at first |br| step and if    |
-|                                         | the ``space_as_tab`` |br| setting  |
+|                                         | the ``space_as_tab`` |br| option   |
 |                                         | is enabled)                        |
 +-----------------------------------------+------------------------------------+
 | Force insert a space character while at | :kbd:`Ctrl+Space` or               |
@@ -43,7 +43,7 @@ Console
 +-----------------------------------------+------------------------------------+
 | Action                                  | Shortcut(s)                        |
 +=========================================+====================================+
-| Hide the LaunchBox                      | :kbd:`Esc` or :kbd:`Alt+F4`        |
+| Hide the Console                        | :kbd:`Esc` or :kbd:`Alt+F4`        |
 +-----------------------------------------+------------------------------------+
 | Switch focus between command and log    | :kbd:`Ctrl+Tab`                    |
 | controls                                |                                    |
