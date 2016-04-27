@@ -11,8 +11,8 @@ Installation
 Requirements
 ============
 
-|project| works on Windows 64bits (7, 8, 8.1) and does not require additional
-dependencies. It hasn't been tested on Windows 10 but should work just fine.
+|project| works on Windows 64bits (7, 8, 8.1, 10) and does not require
+additional dependencies.
 
 There is no plan in a near future to support 32bits platforms.
 
@@ -24,8 +24,8 @@ Installation
 anywhere you want. There is no installer.
 
 **Out of the box**, it is configured to run in :ref:`install-portable`, which
-means all the configuration and runtime files are stored in a single folder,
-located under |project|'s directory.
+means all the configuration and runtime files are stored in |project|'s
+directory.
 
 
 Installed vs. Portable mode

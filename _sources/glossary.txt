@@ -12,35 +12,46 @@ Glossary
         The class name of an :term:`item`.
 
     Console
-        The Console window's purpose is two-fold. It gives you an overview of
-        what happens under |project|'s hood. It also allows to check if a plugin
-        emitted a informational/warning/error message.
+        The Console window gives access to the output of application's log. It
+        should be your first destination in case of error or unexpected
+        behavior to check if a plugin emitted a informational/warning/error
+        message.
+
+        It also gives you an interactive access to the embedded Python
+        interpreter.
 
         .. image:: images/console.png
             :alt: |project|'s Console
             :align: center
 
     InstanceID
-        The InstanceID number is an unsigned integer internally used by the
-        application and assigned at runtime to every loaded :term:`package`. It
-        is used to ensure Plugins are not messing up the :term:`catalog`.
+        |project| allows the code source of its packages to be modified at
+        runtime by automatically reloading them every time a modification is
+        done.
+
+        The InstanceID number is an unsigned integer internally managed by the
+        application and assigned at runtime to each :term:`package`, each time
+        they are (re)loaded.
+
+        It is also used to ensure only the latest instance of a given package
+        has write access to its section of the :term:`Catalog`.
 
         Read :doc:`api/overview` for more information.
 
     Item
     Items
-        An item is a simple data structure created by the :term:`plugins` and
-        that holds some properties like a display name (label), a category
-        (File, URL, Command Line, ...), a reference to the parent
+        An item is the data unit of the :term:`Catalog` (|project|'s internal
+        database). It is a simple data structure, created by the
+        :term:`plugins`, that has some properties like a display name (label),
+        a category (File, URL, Command Line, ...), a reference to the parent
         :term:`plugin`, etc...
-
-        The Item is also the smallest data unit of |project|'s internal
-        database (the :term:`Catalog`).
 
     LaunchBox
         The L(a)unchBox is |project|'s main dialog window, from which you can
         make a search and launch the selected :term:`item`. It can be opened by
         pressing the :kbd:`Ctrl+Win+K` combination (by default).
+
+        More info in the :doc:`first` chapter.
 
         .. image:: images/wndrun.png
             :alt: |project|'s LaunchBox

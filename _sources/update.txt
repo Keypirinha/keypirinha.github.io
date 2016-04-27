@@ -3,11 +3,11 @@ Update Procedure
 ================
 
 
-If |project| is not installed on your machine yet. You should head over the
+If |project| is not installed on your machine yet. You should head over to the
 :doc:`install` chapter instead.
 
 |project| does not come with an installer yet so the update procedure must be
-done manually. Fortunately it is not a nightmare to get through it.
+done manually.
 
 .. warning::
     You must first ensure |project| is not running before doing anything else!
@@ -49,7 +49,7 @@ Update in Installed Mode
   You should now have a :file:`U:\\Keypirinha` directory.
 
 * Delete the :file:`U:\\Keypirinha\\portable` directory. |br|
-  That instructs |project| to run in Installed Mode.
+  That indicates |project| it must run in Installed Mode.
 
 * You're done! |br|
   You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file. |br|

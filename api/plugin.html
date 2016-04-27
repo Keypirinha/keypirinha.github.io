@@ -104,7 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="catalogaction.html">9.2.3. CatalogAction class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="catalogitem.html">9.2.4. CatalogItem class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iconhandle.html">9.2.5. IconHandle class</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">9.2.6. Plugin class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">9.2.6. Plugin class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="settings.html">9.2.7. Settings class</a></li>
 </ul>
 </li>
@@ -140,7 +140,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -190,7 +190,7 @@ application.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin&#8217;s default constructor. When implementing a new plugin, it is good
 practice to call it:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -205,8 +205,8 @@ a plugin has been instanciated.</p>
 inside <code class="docutils literal"><span class="pre">__init__</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">See the <a class="reference internal" href="overview.html#api-overview-loading"><span>Loading</span></a> section for more information
-about the <em>plugin loading</em> process. And <a class="reference internal" href="overview.html#api-overview-msgflow"><span>Messages Workflow</span></a>.</p>
+<p class="last">See the <a class="reference internal" href="overview.html#api-overview-loading"><span class="std std-ref">Loading</span></a> section for more information
+about the <em>plugin loading</em> process. And <a class="reference internal" href="overview.html#api-overview-msgflow"><span class="std std-ref">Messages Workflow</span></a>.</p>
 </div>
 </dd></dl>
 
@@ -217,8 +217,8 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 <a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal"><span class="pre">set_catalog()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal"><span class="pre">merge_catalog()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">See the <a class="reference internal" href="overview.html#api-overview-loading"><span>Loading</span></a> section for more information
-about the <em>plugin loading</em> process. And <a class="reference internal" href="overview.html#api-overview-msgflow"><span>Messages Workflow</span></a>.</p>
+<p class="last">See the <a class="reference internal" href="overview.html#api-overview-loading"><span class="std std-ref">Loading</span></a> section for more information
+about the <em>plugin loading</em> process. And <a class="reference internal" href="overview.html#api-overview-msgflow"><span class="std std-ref">Messages Workflow</span></a>.</p>
 </div>
 </dd></dl>
 
@@ -240,7 +240,7 @@ argument to <em>initial_catalog_item</em>.</p>
 suggestions may be empty.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">See the <a class="reference internal" href="overview.html#api-overview-msgflow"><span>Messages Workflow</span></a> section.</p>
+<p class="last">See the <a class="reference internal" href="overview.html#api-overview-msgflow"><span class="std std-ref">Messages Workflow</span></a> section.</p>
 </div>
 </dd></dl>
 
@@ -257,7 +257,7 @@ case <a class="reference internal" href="module-util.html#keypirinha_util.execut
 interest.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">See the <a class="reference internal" href="overview.html#api-overview-msgflow"><span>Messages Workflow</span></a> section.</p>
+<p class="last">See the <a class="reference internal" href="overview.html#api-overview-msgflow"><span class="std std-ref">Messages Workflow</span></a> section.</p>
 </div>
 </dd></dl>
 
@@ -526,7 +526,7 @@ target).</li>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.dbg">
-<code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
+<code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an debug message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
@@ -546,7 +546,7 @@ present in plugin&#8217;s source code.</p>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.err">
-<code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
+<code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an error message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
@@ -592,10 +592,8 @@ mess in plugin&#8217;s logic.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211;
-Failed to get package&#8217;s cache directory</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
-Failed to create the directory (in case <em>create</em> argument
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Failed to get package&#8217;s cache directory</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; Failed to create the directory (in case <em>create</em> argument
 is <code class="docutils literal"><span class="pre">True</span></code>).</li>
 </ul>
 </td>
@@ -626,7 +624,7 @@ located in the package. Examples: <code class="docutils literal"><span class="pr
 
 <dl class="method">
 <dt id="keypirinha.Plugin.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
+<code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an informational message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
@@ -642,12 +640,9 @@ specified resource.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211;
-The resource could not be found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211;
-Error while opening or reading the resource.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211;
-Unexpected/Unknown error.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The resource could not be found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211; Error while opening or reading the resource.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Unexpected/Unknown error.</li>
 </ul>
 </td>
 </tr>
@@ -702,7 +697,7 @@ be Unicode decoded.</p>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.log">
-<code class="descname">log</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em>, <em>level=1</em>, <em>lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
+<code class="descname">log</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em>, <em>level=1</em>, <em>lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -730,9 +725,13 @@ that have been created with <a class="reference internal" href="#keypirinha.Plug
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The actual number of actions taken into account. Actions are
-filtered out when they don&#8217;t belong to this plugin for example,
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>The actual number of actions taken into account. Actions are</dt>
+<dd><p class="first last">filtered out when they don&#8217;t belong to this plugin for example,
 or if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction.valid" title="keypirinha.CatalogAction.valid"><code class="xref py py-meth docutils literal"><span class="pre">CatalogAction.valid()</span></code></a> returns <code class="docutils literal"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
@@ -805,7 +804,7 @@ to know more about the meaning of the returned value.</li>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.warn">
-<code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
+<code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an warning message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
