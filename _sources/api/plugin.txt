@@ -19,8 +19,8 @@ Plugin class
         This is always the first callback method called by the application after
         a plugin has been instanciated.
 
-        *Heavy* initialization, if any, must be performed here **instead** of
-        inside ``__init__``.
+        *Heavy* one-time initialization, if any, must be performed here
+        **instead** of inside ``__init__`` or :py:meth:`on_catalog`.
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information
@@ -31,6 +31,11 @@ Plugin class
 
         Plugin is requested to setup its catalog by calling either
         :py:meth:`set_catalog` or :py:meth:`merge_catalog`.
+
+        .. note::
+            Since this method may be called several times during instance's
+            lifetime, one-time initialization, if any, must always be done in
+            :py:meth:`on_init`.
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information

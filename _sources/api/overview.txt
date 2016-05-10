@@ -29,8 +29,14 @@ for :file:`*.py` scripts. Each one of those scripts is loaded through the Python
 interpreter and the application performs some introspection to list all the
 classes derived from :py:class:`keypirinha.Plugin` and instantiates them.
 
-The application then calls the :py:meth:`keypirinha.Plugin.on_catalog` method of
-every loaded plugin.
+The application then calls the :py:meth:`keypirinha.Plugin.on_start` method of
+every loaded plugin so they have the opportunity to do heavy one-time
+initialization, if any.
+
+For now, this call is immediately followed by a call to
+:py:meth:`keypirinha.Plugin.on_catalog` method. Note that this behavior might be
+altered in a future version so :py:meth:`keypirinha.Plugin.on_catalog` may not
+always be called at startup time.
 
 
 Reloading

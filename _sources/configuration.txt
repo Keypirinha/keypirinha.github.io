@@ -72,6 +72,11 @@ Save the ``User`` configuration file by pressing :kbd:`Ctrl+S` or by clicking
 the :menuselection:`File --> Save` menu of the editor. Modifications are now
 applied, you can close both editor windows.
 
+.. tip::
+    If the ``gui`` section was already declared in your configuration file, you
+    do not need to repeat the ``[gui]`` line as long as its settings are all
+    grouped under it.
+
 
 Modification at Runtime
 =======================

@@ -5,6 +5,8 @@ Overview
 This section provides some insights about |project|'s design and philosophy.
 
 
+.. _overview-architecture:
+
 Architecture
 ============
 

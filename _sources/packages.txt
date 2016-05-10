@@ -112,7 +112,7 @@ Rules for package naming:
 
 * Name must be at least 3 characters long
 
-* Name must not begin or end with a space character
+* Name must begin and end by an alpha-numeric character
 
 * Sequences of multiple space characters are not accepted
 
@@ -122,6 +122,7 @@ Rules for package naming:
     :columns: 3
 
     - |project|
+    - ``all``
     - ``app``
     - ``application``
     - ``builtin``
@@ -138,6 +139,7 @@ Rules for package naming:
     - ``local``
     - ``locale``
     - ``main``
+    - ``none``
     - ``official``
     - ``package``
     - ``python``

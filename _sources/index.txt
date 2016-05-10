@@ -54,6 +54,7 @@ Contents
     keyboard
     overview
     configuration
+    custom-catalog
     packages
     shipped-packages
     api

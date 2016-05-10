@@ -228,6 +228,14 @@ Configuration
 See the :doc:`configuration` section for more info.
 
 
+Customize your Catalog
+======================
+
+Read the :doc:`custom-catalog` chapter to discover how you can gain full control
+over what will be referenced in |project|'s database and consequently, in search
+results.
+
+
 Extending |project|
 ===================
 
