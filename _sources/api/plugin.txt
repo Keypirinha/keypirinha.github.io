@@ -116,23 +116,19 @@ Plugin class
             :py:meth:`on_activated`
 
 
-    .. py:method:: on_config_changed(flags)
+    .. py:method:: on_events(flags)
 
-        Called when one or several configuration file(s) of the application
-        or/and plugins has been edited and saved.
+        Called when some event(s) occurred.
 
-        *flags* is one or several flags from :py:class:`ConfChangedFlags`.
+        *flags* can be one or several flags defined in :py:class:`Events`.
 
-
-    .. py:method:: on_env_changed(flags)
-
-        Called when system environment has changed.
-
-        For example when one or several environment variables have been
-        modified, or when a removable media has been inserted or ejected, or
-        when a storage device has been plugged-in or unplugged.
-
-        *flags* is one or several flags from :py:class:`EnvChangedFlags`.
+        .. note::
+            While Keypirinha tries to group flags at a given time in order to
+            reduce the number of calls made to this method, calls are still made
+            in a real-time fashion to ensure plugin gets notified as soon as
+            possible. In other words, there is no waiting mechanism involved to
+            accumulate these flags and plugin developer should not expect flags
+            to be always grouped.
 
 
     .. py:method:: id()

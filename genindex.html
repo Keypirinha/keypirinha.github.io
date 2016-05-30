@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.5.6
+                2.6
               </div>
             
           
@@ -210,11 +210,11 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="api/module.html#keypirinha.ConfChangedFlags.APP">APP (keypirinha.ConfChangedFlags attribute)</a>
+  <dt><a href="api/catalogaction.html#keypirinha.CatalogAction.app_owned">app_owned() (keypirinha.CatalogAction method)</a>
   </dt>
 
       
-  <dt><a href="api/catalogaction.html#keypirinha.CatalogAction.app_owned">app_owned() (keypirinha.CatalogAction method)</a>
+  <dt><a href="api/module.html#keypirinha.Events.APPCONFIG">APPCONFIG (keypirinha.Events attribute)</a>
   </dt>
 
       
@@ -283,10 +283,6 @@
 
       
   <dt><a href="api/module.html#keypirinha.computer_name">computer_name() (in module keypirinha)</a>
-  </dt>
-
-      
-  <dt><a href="api/module.html#keypirinha.ConfChangedFlags">ConfChangedFlags (class in keypirinha)</a>
   </dt>
 
       
@@ -368,7 +364,7 @@
   </dt>
 
       
-  <dt><a href="api/module.html#keypirinha.EnvChangedFlags">EnvChangedFlags (class in keypirinha)</a>
+  <dt><a href="api/module.html#keypirinha.Events.ENV">ENV (keypirinha.Events attribute)</a>
   </dt>
 
       
@@ -377,6 +373,10 @@
 
       
   <dt><a href="api/module.html#keypirinha.ItemCategory.ERROR">ERROR (keypirinha.ItemCategory attribute)</a>
+  </dt>
+
+      
+  <dt><a href="api/module.html#keypirinha.Events">Events (class in keypirinha)</a>
   </dt>
 
       
@@ -774,19 +774,15 @@
   </dt>
 
       
-  <dt><a href="api/plugin.html#keypirinha.Plugin.on_config_changed">on_config_changed() (keypirinha.Plugin method)</a>
+  <dt><a href="api/plugin.html#keypirinha.Plugin.on_deactivated">on_deactivated() (keypirinha.Plugin method)</a>
   </dt>
 
       
-  <dt><a href="api/plugin.html#keypirinha.Plugin.on_deactivated">on_deactivated() (keypirinha.Plugin method)</a>
+  <dt><a href="api/plugin.html#keypirinha.Plugin.on_events">on_events() (keypirinha.Plugin method)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/plugin.html#keypirinha.Plugin.on_env_changed">on_env_changed() (keypirinha.Plugin method)</a>
-  </dt>
-
       
   <dt><a href="api/plugin.html#keypirinha.Plugin.on_execute">on_execute() (keypirinha.Plugin method)</a>
   </dt>
@@ -810,10 +806,6 @@
   </dt>
 
       
-  <dt><a href="api/module.html#keypirinha.ConfChangedFlags.PACKAGE">PACKAGE (keypirinha.ConfChangedFlags attribute)</a>
-  </dt>
-
-      
   <dt><a href="api/module.html#keypirinha.package_cache_dir">package_cache_dir() (in module keypirinha)</a>
   </dt>
 
@@ -829,14 +821,18 @@
   <dt><a href="glossary.html#term-packages"><strong>Packages</strong></a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/module.html#keypirinha.packages_list">packages_list() (in module keypirinha)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="api/module.html#keypirinha.packages_path">packages_path() (in module keypirinha)</a>
+  </dt>
+
+      
+  <dt><a href="api/module.html#keypirinha.Events.PACKCONFIG">PACKCONFIG (keypirinha.Events attribute)</a>
   </dt>
 
       
@@ -1030,7 +1026,7 @@
   </dt>
 
       
-  <dt><a href="api/module.html#keypirinha.EnvChangedFlags.STORAGEDEV">STORAGEDEV (keypirinha.EnvChangedFlags attribute)</a>
+  <dt><a href="api/module.html#keypirinha.Events.STORAGEDEV">STORAGEDEV (keypirinha.Events attribute)</a>
   </dt>
 
   </dl></td>
@@ -1098,15 +1094,11 @@
 
       </dl></dd>
       
-  <dt><a href="api/module.html#keypirinha.EnvChangedFlags.VARS">VARS (keypirinha.EnvChangedFlags attribute)</a>
+  <dt><a href="api/module.html#keypirinha.version">version() (in module keypirinha)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="api/module.html#keypirinha.version">version() (in module keypirinha)</a>
-  </dt>
-
       
   <dt><a href="api/module.html#keypirinha.version_string">version_string() (in module keypirinha)</a>
   </dt>
@@ -1162,7 +1154,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.5.6',
+            VERSION:'2.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

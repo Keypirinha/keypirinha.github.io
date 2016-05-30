@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.5.6
+                2.6
               </div>
             
           
@@ -615,7 +615,7 @@ that way:</p>
 
 <dl class="function">
 <dt id="keypirinha_util.shell_execute">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_execute</code><span class="sig-paren">(</span><em>thing</em>, <em>args=''</em>, <em>working_dir=''</em>, <em>verb=''</em>, <em>try_runas=True</em>, <em>detect_nongui=True</em>, <em>api_flags=None</em>, <em>terminal_cmd=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha_util.</code><code class="descname">shell_execute</code><span class="sig-paren">(</span><em>thing</em>, <em>args=''</em>, <em>working_dir=''</em>, <em>verb=''</em>, <em>try_runas=True</em>, <em>detect_nongui=True</em>, <em>api_flags=None</em>, <em>terminal_cmd=None</em>, <em>show=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes, opens, edits (or whatever) an application, a file, a directory, by
 calling Win32&#8217;s <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code> function.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -652,6 +652,10 @@ See <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code
 to force the console emulator to use, instead of reading the
 <code class="docutils literal"><span class="pre">terminal</span></code> setting of the <code class="docutils literal"><span class="pre">external</span></code> section defined in the
 application&#8217;s configuration file.</li>
+<li><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Value directly forwarded to the <code class="docutils literal"><span class="pre">nShow</span></code> parameter of
+<code class="docutils literal"><span class="pre">ShellExecuteEx</span></code>. It must be one of the <code class="docutils literal"><span class="pre">SW_</span></code> constants. If this
+value is less than zero, default will be applied (currently
+<code class="docutils literal"><span class="pre">SW_SHOWNORMAL</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -889,7 +893,7 @@ or not the launch request is successful.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.5.6',
+            VERSION:'2.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

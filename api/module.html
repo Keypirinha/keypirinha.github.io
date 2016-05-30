@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.5.6
+                2.6
               </div>
             
           
@@ -171,41 +171,43 @@
 exposes the functions and classes necessary to develop a new plugin for
 <em>Keypirinha</em>.</p>
 <span class="target" id="module-keypirinha"></span><dl class="class">
-<dt id="keypirinha.ConfChangedFlags">
-<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">ConfChangedFlags</code><a class="headerlink" href="#keypirinha.ConfChangedFlags" title="Permalink to this definition">¶</a></dt>
+<dt id="keypirinha.Events">
+<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Events</code><a class="headerlink" href="#keypirinha.Events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
-<p>The <em>flags</em> passed to <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_config_changed()</span></code></a>.</p>
+<p>The <em>flags</em> passed to <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_events()</span></code></a>.</p>
 <dl class="attribute">
-<dt id="keypirinha.ConfChangedFlags.APP">
-<code class="descname">APP</code><em class="property"> = &lt;ConfChangedFlags.APP: 1&gt;</em><a class="headerlink" href="#keypirinha.ConfChangedFlags.APP" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Application&#8217;s configuration has changed (i.e.</em> &#8211; a value has been modified)</p>
+<dt id="keypirinha.Events.APPCONFIG">
+<code class="descname">APPCONFIG</code><em class="property"> = &lt;Events.APPCONFIG: 1&gt;</em><a class="headerlink" href="#keypirinha.Events.APPCONFIG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application configuration has changed. Either because of a manual
+modification by the user, or because a change to an environment variable
+has impacted at least one value (in which case this flag is combined with
+<code class="docutils literal"><span class="pre">ENV</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="keypirinha.ConfChangedFlags.PACKAGE">
-<code class="descname">PACKAGE</code><em class="property"> = &lt;ConfChangedFlags.PACKAGE: 2&gt;</em><a class="headerlink" href="#keypirinha.ConfChangedFlags.PACKAGE" title="Permalink to this definition">¶</a></dt>
-<dd><p>At least one configuration file has been modified in this package</p>
+<dt id="keypirinha.Events.ENV">
+<code class="descname">ENV</code><em class="property"> = &lt;Events.ENV: 256&gt;</em><a class="headerlink" href="#keypirinha.Events.ENV" title="Permalink to this definition">¶</a></dt>
+<dd><p>At least one environment variable has been added/removed/modified.
+Note that if this change impacts application and/or package
+configuration, this flag is combined with <code class="docutils literal"><span class="pre">APPCONFIG</span></code> and/or
+<code class="docutils literal"><span class="pre">PACKCONFIG</span></code>.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="keypirinha.EnvChangedFlags">
-<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">EnvChangedFlags</code><a class="headerlink" href="#keypirinha.EnvChangedFlags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
-<p>The <em>flags</em> passed to <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_env_changed" title="keypirinha.Plugin.on_env_changed"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_env_changed()</span></code></a>.</p>
 <dl class="attribute">
-<dt id="keypirinha.EnvChangedFlags.STORAGEDEV">
-<code class="descname">STORAGEDEV</code><em class="property"> = &lt;EnvChangedFlags.STORAGEDEV: 2&gt;</em><a class="headerlink" href="#keypirinha.EnvChangedFlags.STORAGEDEV" title="Permalink to this definition">¶</a></dt>
+<dt id="keypirinha.Events.PACKCONFIG">
+<code class="descname">PACKCONFIG</code><em class="property"> = &lt;Events.PACKCONFIG: 2&gt;</em><a class="headerlink" href="#keypirinha.Events.PACKCONFIG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Package configuration has changed. Either because of a manual
+modification by the user, or because a change to an environment variable
+has impacted at least one value (in which case this flag is combined with
+<code class="docutils literal"><span class="pre">ENV</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Events.STORAGEDEV">
+<code class="descname">STORAGEDEV</code><em class="property"> = &lt;Events.STORAGEDEV: 512&gt;</em><a class="headerlink" href="#keypirinha.Events.STORAGEDEV" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or several logical volume have been inserted, removed, connected or
 disconnected. This event can be related to a storage device, a media or a
 network volume.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="keypirinha.EnvChangedFlags.VARS">
-<code class="descname">VARS</code><em class="property"> = &lt;EnvChangedFlags.VARS: 1&gt;</em><a class="headerlink" href="#keypirinha.EnvChangedFlags.VARS" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or several environment variables have been added/modified/deleted</p>
 </dd></dl>
 
 </dd></dl>
@@ -702,11 +704,11 @@ application.</p>
 <ul class="last simple">
 <li>Settings might change at any time if the end-user decides to edit the
 configuration file. Once she did, the application will notify every
-loaded plugins by calling <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_config_changed()</span></code></a> with the
-<a class="reference internal" href="#keypirinha.ConfChangedFlags.APP" title="keypirinha.ConfChangedFlags.APP"><code class="xref py py-const docutils literal"><span class="pre">ConfChangedFlags.APP</span></code></a> flag.</li>
+loaded plugins by calling <code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_config_changed()</span></code> with the
+<a class="reference internal" href="#keypirinha.Events.APPCONFIG" title="keypirinha.Events.APPCONFIG"><code class="xref py py-const docutils literal"><span class="pre">Events.APPCONFIG</span></code></a> flag.</li>
 <li>The values returned by the <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">Settings</span></code></a> object are always
 up-to-date so you do not have to get a new object in case of a
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_config_changed" title="keypirinha.Plugin.on_config_changed"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_config_changed()</span></code></a> notification.</li>
+<code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_config_changed()</span></code> notification.</li>
 <li>If the end-user did not overwrite any default value (e.g.: empty
 configuration file), the dictionary will always be populated with the
 values in use (i.e.: the default ones).</li>
@@ -847,7 +849,7 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.5.6',
+            VERSION:'2.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
