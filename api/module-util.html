@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.6.1
+                2.7
               </div>
             
           
@@ -309,6 +309,58 @@ This flag might be combined with other flags except <a class="reference internal
 </dd></dl>
 
 <dl class="function">
+<dt id="keypirinha_util.browse_directory">
+<code class="descclassname">keypirinha_util.</code><code class="descname">browse_directory</code><span class="sig-paren">(</span><em>plugin</em>, <em>base_dir</em>, <em>check_base_dir=True</em>, <em>search_terms=''</em>, <em>store_score=False</em>, <em>show_dirs_first=True</em>, <em>show_hidden_files=False</em>, <em>show_system_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper to browse the first level of a directory and pass its content to
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>plugin</strong> (<a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><em>keypirinha.Plugin</em></a>) &#8211; The parent plugin of the
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.CatalogItem</span></code></a> objects to be created. It may be
+used to print error/warning messages as well.</li>
+<li><strong>base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The path of the directory to browse.</li>
+<li><strong>check_base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Print an error message if the directory does not
+exist and returns an <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">keypirinha.ItemCategory.ERROR</span></code></a>
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.CatalogItem</span></code></a> object in the result (the format
+of the returned <code class="docutils literal"><span class="pre">tuple</span></code> is unchanged).</li>
+<li><strong>search_terms</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; If not empty, it will be <em>fuzzy matched</em> against the
+name of each found item (see <a class="reference internal" href="#keypirinha_util.fuzzy_score" title="keypirinha_util.fuzzy_score"><code class="xref py py-func docutils literal"><span class="pre">fuzzy_score()</span></code></a>). If the
+returned score is zero, the item is not included in the returned
+list. If the string is empty, items will be sorted by name using the
+<code class="docutils literal"><span class="pre">natsort</span></code> module.</li>
+<li><strong>store_score</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; If <em>search_terms</em> is not empty, the resulting score
+of the call to <a class="reference internal" href="#keypirinha_util.fuzzy_score" title="keypirinha_util.fuzzy_score"><code class="xref py py-func docutils literal"><span class="pre">fuzzy_score()</span></code></a> will be stored in the
+<code class="docutils literal"><span class="pre">data_bag</span></code> property of every inserted result item.</li>
+<li><strong>show_dirs_first</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Indicates if directories should be pushed at
+the top of the resulting list.</li>
+<li><strong>show_hidden_files</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Indicates if hidden items should included.
+Note that a hidden item can also be system.</li>
+<li><strong>show_system_files</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Indicates if system items should included.
+Note that a system item can also be hidden.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>A tuple of 3 elements <code class="docutils literal"><span class="pre">(items,</span> <span class="pre">match_method,</span> <span class="pre">sort_method)</span></code></dt>
+<dd><p class="first last">where <em>items</em> is a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.CatalogItem</span></code></a>
+objects, <em>match_method</em> is a <a class="reference internal" href="module.html#keypirinha.Match" title="keypirinha.Match"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Match</span></code></a> value and
+<em>sort_method</em> is a <a class="reference internal" href="module.html#keypirinha.Sort" title="keypirinha.Sort"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Sort</span></code></a> value.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)">tuple</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="keypirinha_util.chardet_open">
 <code class="descclassname">keypirinha_util.</code><code class="descname">chardet_open</code><span class="sig-paren">(</span><em>file</em>, <em>mode='r'</em>, <em>buffering=-1</em>, <em>encoding=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_open" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#open" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">open()</span></code></a> function that <strong>tries</strong> to detect text file&#8217;s encoding.</p>
@@ -479,7 +531,7 @@ dictionary.</p>
 <dt id="keypirinha_util.kwargs_encode">
 <code class="descclassname">keypirinha_util.</code><code class="descname">kwargs_encode</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_encode" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL encodes passed keyword arguments into an escaped string that can be used
-as a <em>target</em> property for a CatalogItem object.</p>
+as a <em>target</em> property for a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.CatalogItem</span></code></a> object.</p>
 <p>Only basic types are allowed: <code class="docutils literal"><span class="pre">bool</span></code>, <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">float</span></code> and <code class="docutils literal"><span class="pre">str</span></code>.
 <strong>Hint:</strong> use the unpack operator to pass a dictionary like in:
 <code class="docutils literal"><span class="pre">kwargs_encode(**mydict)</span></code></p>
@@ -893,7 +945,7 @@ or not the launch request is successful.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.6.1',
+            VERSION:'2.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

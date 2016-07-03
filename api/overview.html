@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.6.1
+                2.7
               </div>
             
           
@@ -248,19 +248,20 @@ its parent package when it is loaded or reloaded.</p>
 <span id="api-overview-msgflow"></span><h3>10.1.2.4. Messages Workflow<a class="headerlink" href="#messages-workflow" title="Permalink to this headline">¶</a></h3>
 <p><em>Keypirinha</em> sends <em>messages</em> to its plugins either to notify them about a specific
 event, or to request them to perform a specific task.</p>
-<p>Once a plugin is loaded, its <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method is
-called.</p>
+<p>Once a plugin is loaded, its <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_start" title="keypirinha.Plugin.on_start"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_start()</span></code></a> method is
+called, shortly followed by a call to the
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method.</p>
 <p>When the user starts typing its search and each time her search terms have
-changed, the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_suggest()</span></code></a> method is. There is a
-subtlety here. This message is broadcasted when the user hasn&#8217;t selected an item
-yet. But once she did, the message will be sent only to the plugin that created
-the selected item.</p>
+changed, the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_suggest()</span></code></a> method is called. There is
+a subtlety here. This message is broadcasted when the user hasn&#8217;t selected an
+item yet. But once she did, the message will be sent only to the plugin that
+created the selected item.</p>
 <p>When the user wants to execute the selected item, the
 <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_execute" title="keypirinha.Plugin.on_execute"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_execute()</span></code></a> method of the appropriate plugin is
 called and it is up to it to actually execute the passed item.</p>
-<p>These are the 3 main messages that a plugin developer normally wants to
-implement. Other messages are mainly notifications that helps plugin to be
-up-to-date with user&#8217;s settings and environment.</p>
+<p>These are the main messages that a plugin developer normally wants to implement.
+Other messages are mainly notifications that helps plugin to be up-to-date with
+user&#8217;s settings and environment.</p>
 </div>
 </div>
 <div class="section" id="getting-started">
@@ -325,7 +326,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.6.1',
+            VERSION:'2.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

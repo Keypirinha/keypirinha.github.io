@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.6. FileBrowser Package &mdash; Keypirinha</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha" href="../index.html"/>
+        <link rel="up" title="9. Shipped Packages" href="../shipped-packages.html"/>
+        <link rel="next" title="9.7. FileZilla Package" href="filezilla.html"/>
+        <link rel="prev" title="9.5. Everything Package" href="everything.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="../_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">4. Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">5. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">6. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">7. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">8. Packages</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../shipped-packages.html">9. Shipped Packages</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="apps.html">9.1. Apps Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bookmarks.html">9.2. Bookmarks Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calc.html">9.3. Calc Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpanel.html">9.4. ControlPanel Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">9.5. Everything Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.6. FileBrowser Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#catalog-items">9.6.1. Catalog Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#home-feature">9.6.2. Home feature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actions">9.6.3. Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">9.6.4. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">9.7. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">9.8. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">9.9. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test.html">9.10. Test Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">9.11. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">9.12. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">9.13. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">9.14. WinSCP Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">10. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">11. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">12. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">13. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">14. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../shipped-packages.html">9. Shipped Packages</a> &raquo;</li>
+      
+    <li>9.6. FileBrowser Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="filebrowser-package">
+<h1>9.6. FileBrowser Package<a class="headerlink" href="#filebrowser-package" title="Permalink to this headline">¶</a></h1>
+<p>Available since version 2.7.</p>
+<p>The FileBrowser package allows to browse the file system as you type.</p>
+<div class="section" id="catalog-items">
+<h2>9.6.1. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
+<p>This package does not pre-create any item in the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. Instead, it
+tries to match your initial search term with specific patterns:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">/</span></code> or <code class="docutils literal"><span class="pre">\</span></code> will list the drives that are mounted (e.g. <code class="docutils literal"><span class="pre">C:\</span></code>, ...)</li>
+<li><code class="docutils literal"><span class="pre">C:</span></code>, <code class="docutils literal"><span class="pre">D:</span></code> or <code class="docutils literal"><span class="pre">X:</span></code> (case insensitive) will start browsing the drive
+associated with the given letter</li>
+<li>An absolute path like <code class="docutils literal"><span class="pre">c:\windows</span></code> or <code class="docutils literal"><span class="pre">D:\My</span> <span class="pre">Dir\AnyFile.txt</span></code></li>
+<li>The <code class="docutils literal"><span class="pre">~</span></code> (tilde) character (<strong>configurable</strong>) to access to your &#8220;home&#8221;
+directory(ies). Check the &#8220;Home feature&#8221; section below.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some items from the filesystem may or may not show up, depending on
+package&#8217;s configuration. For more info, refer to the configuration file and
+check the <code class="docutils literal"><span class="pre">show_dirs_first</span></code>, <code class="docutils literal"><span class="pre">show_hidden_files</span></code>,
+<code class="docutils literal"><span class="pre">show_system_files</span></code> and <code class="docutils literal"><span class="pre">show_network_files</span></code> settings.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">While on Windows, convention is to use the <code class="docutils literal"><span class="pre">\</span></code> character, <em>Keypirinha</em> also
+interprets <code class="docutils literal"><span class="pre">/</span></code> as a path separator.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This package is <a class="reference internal" href="../first.html#first-drag"><span class="std std-ref">Drag and Drop</span></a> compliant.</p>
+</div>
+</div>
+<div class="section" id="home-feature">
+<h2>9.6.2. Home feature<a class="headerlink" href="#home-feature" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;home&#8221; feature allows you to get quick access to your favorite(s) folder(s)
+by typing a given <em>trigger</em> of your choice (<code class="docutils literal"><span class="pre">~</span></code> by default).</p>
+<p>Check out package&#8217;s configuration file for more details.</p>
+</div>
+<div class="section" id="actions">
+<h2>9.6.3. Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>To go deeper in the file system hierarchy, select a folder item in the results
+list and press <code class="docutils literal"><span class="pre">TAB</span></code>.</li>
+<li>To open a folder, select it in the results list and press <code class="docutils literal"><span class="pre">Enter</span></code>.</li>
+<li>To list all the actions available that are associated with a specific item,
+select it in the results list and press <code class="docutils literal"><span class="pre">Ctrl+Enter</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2>9.6.4. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>This package is configurable, more details about every setting can be found in
+its configuration file.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="filezilla.html" class="btn btn-neutral float-right" title="9.7. FileZilla Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="everything.html" class="btn btn-neutral" title="9.5. Everything Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.7',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</body>
+</html>

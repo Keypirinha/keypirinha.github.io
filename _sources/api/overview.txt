@@ -106,22 +106,23 @@ Messages Workflow
 |project| sends *messages* to its plugins either to notify them about a specific
 event, or to request them to perform a specific task.
 
-Once a plugin is loaded, its :py:meth:`keypirinha.Plugin.on_catalog` method is
-called.
+Once a plugin is loaded, its :py:meth:`keypirinha.Plugin.on_start` method is
+called, shortly followed by a call to the
+:py:meth:`keypirinha.Plugin.on_catalog` method.
 
 When the user starts typing its search and each time her search terms have
-changed, the :py:meth:`keypirinha.Plugin.on_suggest` method is. There is a
-subtlety here. This message is broadcasted when the user hasn't selected an item
-yet. But once she did, the message will be sent only to the plugin that created
-the selected item.
+changed, the :py:meth:`keypirinha.Plugin.on_suggest` method is called. There is
+a subtlety here. This message is broadcasted when the user hasn't selected an
+item yet. But once she did, the message will be sent only to the plugin that
+created the selected item.
 
 When the user wants to execute the selected item, the
 :py:meth:`keypirinha.Plugin.on_execute` method of the appropriate plugin is
 called and it is up to it to actually execute the passed item.
 
-These are the 3 main messages that a plugin developer normally wants to
-implement. Other messages are mainly notifications that helps plugin to be
-up-to-date with user's settings and environment.
+These are the main messages that a plugin developer normally wants to implement.
+Other messages are mainly notifications that helps plugin to be up-to-date with
+user's settings and environment.
 
 
 Getting started

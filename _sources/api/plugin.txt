@@ -42,21 +42,26 @@ Plugin class
             about the *plugin loading* process. And :ref:`api-overview-msgflow`.
 
 
-    .. py:method:: on_suggest(user_input, initial_item=None, current_item=None)
+    .. py:method:: on_suggest(user_input, items_chain=[])
 
         Called when the user is typing her search terms *or* item's arguments.
 
-        If *initial_catalog_item* is ``None``, no item has been selected yet and
-        this ``SUGGEST`` message has been broadcasted to every loaded plugin. In
-        that case *user_input* is a string containing the search terms.
+        When no item has been selected yet by the user, the *items_chain* list
+        is empty and *user_input* is a string containing the initial search
+        terms. In that case, this ``SUGGEST`` message has been broadcasted to
+        every loaded plugin.
 
-        Otherwise, *initial_catalog_item* is a :py:class:`CatalogItem` object
-        that belongs to this plugin and *user_input* is a string containing the
-        arguments typed by the user. Note that it might be empty.
+        Otherwise, this ``SUGGEST`` message has been sent to this plugin only
+        and *items_chain* is a non-empty list that contains one or more
+        :py:class:`CatalogItem` object(s) that belong to this plugin and
+        *user_input* is a string typed by the user that is meant to be the
+        arguments of the lastly selected item (i.e. ``items_chain[-1]``).
 
-        If *initial_catalog_item* is not ``None``, *current_catalog_item* is
-        either *initial_catalog_item* or a new item the user has selected as an
-        argument to *initial_catalog_item*.
+        While in that case, *items_chain* contains the full history of the items
+        that have been selected by the user during this search session, plugins
+        usually only need to deal with the first and/or the last item(s) in the
+        *items_chain* list (i.e. ``items_chain[0]`` and/or ``items_chain[-1]``;
+        which may be equal).
 
         If the plugin implements this method, it is expected to setup its
         **suggestions** catalog by using :py:meth:`set_suggestions`. The list of

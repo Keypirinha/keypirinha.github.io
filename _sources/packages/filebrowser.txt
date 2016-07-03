@@ -1,0 +1,63 @@
+===================
+FileBrowser Package
+===================
+
+Available since version 2.7.
+
+The FileBrowser package allows to browse the file system as you type.
+
+
+Catalog Items
+=============
+
+This package does not pre-create any item in the :term:`Catalog`. Instead, it
+tries to match your initial search term with specific patterns:
+
+* ``/`` or ``\`` will list the drives that are mounted (e.g. ``C:\``, ...)
+* ``C:``, ``D:`` or ``X:`` (case insensitive) will start browsing the drive
+  associated with the given letter
+* An absolute path like ``c:\windows`` or ``D:\My Dir\AnyFile.txt``
+* The ``~`` (tilde) character (**configurable**) to access to your "home"
+  directory(ies). Check the "Home feature" section below.
+
+.. note::
+    Some items from the filesystem may or may not show up, depending on
+    package's configuration. For more info, refer to the configuration file and
+    check the ``show_dirs_first``, ``show_hidden_files``,
+    ``show_system_files`` and ``show_network_files`` settings.
+
+.. tip::
+    While on Windows, convention is to use the ``\`` character, |project| also
+    interprets ``/`` as a path separator.
+
+.. tip::
+    This package is :ref:`first-drag` compliant.
+
+
+Home feature
+============
+
+The "home" feature allows you to get quick access to your favorite(s) folder(s)
+by typing a given *trigger* of your choice (``~`` by default).
+
+Check out package's configuration file for more details.
+
+
+Actions
+=======
+
+* To go deeper in the file system hierarchy, select a folder item in the results
+  list and press ``TAB``.
+* To open a folder, select it in the results list and press ``Enter``.
+* To list all the actions available that are associated with a specific item,
+  select it in the results list and press ``Ctrl+Enter``.
+
+
+Configuration
+=============
+
+This package is configurable, more details about every setting can be found in
+its configuration file.
+
+.. seealso::
+    The :doc:`../configuration` chapter

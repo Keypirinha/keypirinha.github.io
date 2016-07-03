@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.6.1
+                2.7
               </div>
             
           
@@ -231,17 +231,22 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 
 <dl class="method">
 <dt id="keypirinha.Plugin.on_suggest">
-<code class="descname">on_suggest</code><span class="sig-paren">(</span><em>user_input</em>, <em>initial_item=None</em>, <em>current_item=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
+<code class="descname">on_suggest</code><span class="sig-paren">(</span><em>user_input</em>, <em>items_chain=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when the user is typing her search terms <em>or</em> item&#8217;s arguments.</p>
-<p>If <em>initial_catalog_item</em> is <code class="docutils literal"><span class="pre">None</span></code>, no item has been selected yet and
-this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been broadcasted to every loaded plugin. In
-that case <em>user_input</em> is a string containing the search terms.</p>
-<p>Otherwise, <em>initial_catalog_item</em> is a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object
-that belongs to this plugin and <em>user_input</em> is a string containing the
-arguments typed by the user. Note that it might be empty.</p>
-<p>If <em>initial_catalog_item</em> is not <code class="docutils literal"><span class="pre">None</span></code>, <em>current_catalog_item</em> is
-either <em>initial_catalog_item</em> or a new item the user has selected as an
-argument to <em>initial_catalog_item</em>.</p>
+<p>When no item has been selected yet by the user, the <em>items_chain</em> list
+is empty and <em>user_input</em> is a string containing the initial search
+terms. In that case, this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been broadcasted to
+every loaded plugin.</p>
+<p>Otherwise, this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been sent to this plugin only
+and <em>items_chain</em> is a non-empty list that contains one or more
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object(s) that belong to this plugin and
+<em>user_input</em> is a string typed by the user that is meant to be the
+arguments of the lastly selected item (i.e. <code class="docutils literal"><span class="pre">items_chain[-1]</span></code>).</p>
+<p>While in that case, <em>items_chain</em> contains the full history of the items
+that have been selected by the user during this search session, plugins
+usually only need to deal with the first and/or the last item(s) in the
+<em>items_chain</em> list (i.e. <code class="docutils literal"><span class="pre">items_chain[0]</span></code> and/or <code class="docutils literal"><span class="pre">items_chain[-1]</span></code>;
+which may be equal).</p>
 <p>If the plugin implements this method, it is expected to setup its
 <strong>suggestions</strong> catalog by using <a class="reference internal" href="#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">set_suggestions()</span></code></a>. The list of
 suggestions may be empty.</p>
@@ -769,15 +774,15 @@ or if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogA
 <code class="descname">set_suggestions</code><span class="sig-paren">(</span><em>suggestions</em>, <em>match_method=&lt;Match.FUZZY: 1000&gt;</em>, <em>sort_method=&lt;Sort.SCORE_DESC: 1000&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_suggestions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Offer some suggestions to the user according to her current search
 terms. This method is meant to be called from <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a>.</p>
-<p><em>suggested_items</em> must be a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects.</p>
+<p><em>suggestions</em> must be a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects.</p>
 <p><em>match_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Match" title="keypirinha.Match"><code class="xref py py-class docutils literal"><span class="pre">Match</span></code></a> value.</p>
 <p><em>sort_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Sort" title="keypirinha.Sort"><code class="xref py py-class docutils literal"><span class="pre">Sort</span></code></a> value.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The <em>match_method</em> and <em>sort_method</em> arguments are taken into
 account by the application only when the user has selected an item.
-In other words, when the <em>initial_item</em> argument of
-<a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> is not <code class="docutils literal"><span class="pre">None</span></code>.</p>
+In other words, when the <em>items_chain</em> argument of
+<a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> is not empty.</p>
 </div>
 </dd></dl>
 
@@ -859,7 +864,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.6.1',
+            VERSION:'2.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

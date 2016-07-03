@@ -22,6 +22,7 @@ take advantage of the improvements you applied. Read the
     packages/calc
     packages/controlpanel
     packages/everything
+    packages/filebrowser
     packages/filezilla
     packages/putty
     packages/taskswitcher
