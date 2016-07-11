@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.7
+                2.8
               </div>
             
           
@@ -101,7 +101,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#comments">6.4.2. Comments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#multiple-line-values">6.4.3. Multiple Line Values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reusable-values">6.4.4. Reusable Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pre-defined-variables">6.4.5. Pre-defined variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-variables">6.4.5. Predefined variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#environment-values">6.4.6. Environment Values</a></li>
 </ul>
 </li>
@@ -111,11 +111,12 @@
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">7. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">10. Extending <em>Keypirinha</em> (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">11. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">12. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">13. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">14. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">15. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -290,56 +291,149 @@ file.</p>
 </div>
 <p>See the <a class="reference internal" href="#ini-example"><span class="std std-ref">Example</span></a> section above for an exampe.</p>
 </div>
-<div class="section" id="pre-defined-variables">
-<h3>6.4.5. Pre-defined variables<a class="headerlink" href="#pre-defined-variables" title="Permalink to this headline">¶</a></h3>
-<p><em>Keypirinha</em> also silently populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
+<div class="section" id="predefined-variables">
+<h3>6.4.5. Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
+<p><em>Keypirinha</em> also automatically populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
 values that may come handy.</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">APP_DIR</span></code> <br />
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">APP_DIR</span></code> <br />
 The path to the root/install directory of the application. <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha</span></code> (portable mode)</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">APP_EXE</span></code> <br />
+<li><p class="first"><code class="docutils literal"><span class="pre">APP_EXE</span></code> <br />
 The path to application&#8217;s executable <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha\Keypirinha.exe</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\Keypirinha.exe</span></code> (portable mode)</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">PROFILE_DIR</span></code> <br />
+<li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR</span></code> <br />
 The <em>Profile</em> directory, parent of the <em>User</em>, <em>InstalledPackages</em> and
 <em>Packages</em> directories. <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile</span></code> (portable mode)</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">PROFILE_DIR_USER</span></code> <br />
+<li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_USER</span></code> <br />
 The <em>User</em> directory, where user&#8217;s configuration files are stored. <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\User</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\User</span></code> (portable mode)</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">PROFILE_DIR_INSTALLED_PACKS</span></code> <br />
+<li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_INSTALLED_PACKS</span></code> <br />
 The <em>InstalledPackages</em> directory, home of the downloaded packages. <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\InstalledPackages</span></code> in installed
 mode</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\InstalledPackages</span></code> in portable
 mode</li>
 </ul>
 </li>
-<li><code class="docutils literal"><span class="pre">PROFILE_DIR_LIVE_PACKS</span></code> <br />
+<li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_LIVE_PACKS</span></code> <br />
 The <em>Packages</em> directory, where the live packages (modifiable at runtime) are
 stored. <br />
-Examples:<ul>
+Examples:</p>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\Packages</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\Packages</span></code> (portable mode)</li>
 </ul>
+</li>
+<li><p class="first">For convenience, the GUIDs of Windows&#8217;
+<a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx">Known Folders</a>
+are also predefined. They may come handy to configure some packages.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="30%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Expands to</th>
+<th class="head">Usual location</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ACCOUNTPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{008ca0b1-55b4-4c56-b8a8-4de4b299d3be}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\AccountPictures</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTMENU</span></code></td>
+<td><code class="docutils literal"><span class="pre">{a4115719-d62e-491d-aa7c-e74b8be3b067}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ALLUSERSPROFILE%\Microsoft\Windows\Start</span> <span class="pre">Menu</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTUP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{82a5ea35-d9cd-47c5-9629-e15d2f714e6e}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ALLUSERSPROFILE%\Microsoft\Windows\Start</span> <span class="pre">Menu\Programs\StartUp</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DESKTOP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b4bfcc3a-db2c-424c-b029-7fe99a87c641}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Desktop</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{fdd39ad0-238f-46af-adb4-6c85480369c7}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Documents</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DOWNLOADS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{374de290-123f-4565-9164-39c4925e467b}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Downloads</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">{f1b32785-6fba-4fcf-9d55-7b8e7f157091}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%</span> <span class="pre">(%USERPROFILE%\AppData\Local)</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATALOW</span></code></td>
+<td><code class="docutils literal"><span class="pre">{A520A1A4-1780-4FF6-BD18-167343C5AF16}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\AppData\LocalLow</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROFILE</span></code></td>
+<td><code class="docutils literal"><span class="pre">{5e6c858f-0e22-4760-9afe-ea3317b67173}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%</span> <span class="pre">(%SystemDrive%\Users\%USERNAME%)</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{905e63b6-c1bf-494e-b29c-65b732d3d21a}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles%</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESX64</span></code></td>
+<td><code class="docutils literal"><span class="pre">{6d809377-6af0-444b-8957-a3773f02200e}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles%</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">{7c5a40ef-a0fb-4bfc-874a-c0f2e0b9fa8e}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles(x86)%</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ROAMINGAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">{3eb685db-65f9-4cf6-a03a-e3ef65729f3d}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%</span> <span class="pre">(%USERPROFILE%\AppData\Roaming)</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTMENU</span></code></td>
+<td><code class="docutils literal"><span class="pre">{625b53c3-ab48-4ec1-ba1f-a1ef4146fc19}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\Start</span> <span class="pre">Menu</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTUP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b97d20bb-f46a-4c97-ba10-5e3608430854}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\Start</span> <span class="pre">Menu\Programs\StartUp</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_USERPROGRAMFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{5cd7aee2-2219-4a67-b85d-6c9ce15660cb}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%\Programs</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_WINDOWS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{f38bf404-1d43-42f2-9305-67de0b28fc23}</span></code></td>
+<td><code class="docutils literal"><span class="pre">%windir%</span></code></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 </div>
@@ -356,12 +450,12 @@ file.</p>
 <h2>6.5. Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to have settings that will be applied only when <em>Keypirinha</em> runs on
 a specific <strong>machine</strong> and/or under a specific <strong>user</strong> session.</p>
-<p>To do that, the configuration file must be named according to a pre-defined
+<p>To do that, the configuration file must be named according to a predefined
 pattern.</p>
 <p>For example, <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code> which is application&#8217;s main configuration
 file. <code class="docutils literal"><span class="pre">Keypirinha</span></code> being the <em>name</em> part of the file. <em>Keypirinha</em> will
 automatically scan for these files each time it has to load its configuration
-files, <strong>in order</strong> of precedence, which means a value re-defined in a file
+files, <strong>in order</strong> of precedence, which means a value redefined in a file
 <strong>overrides</strong> the previous one(s):</p>
 <ul class="simple">
 <li><code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code>: the main file</li>
@@ -422,7 +516,7 @@ directory.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.7',
+            VERSION:'2.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

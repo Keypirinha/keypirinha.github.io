@@ -21,8 +21,8 @@ This package populates the Catalog with the following items:
 * Executable files pointed by the ``PATH`` environment variable. The ``PATHEXT``
   environment variable is used to get the list of valid executable files.
 
-* All the executable files referenced by the ``extra_paths`` setting in
-  package's dedicated configuration file.
+* All the files (any kind, being executable or not) referenced by the
+  ``extra_paths`` setting in package's dedicated configuration file.
 
 
 Configuration

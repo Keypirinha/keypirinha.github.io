@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. Extending Keypirinha (API) &mdash; Keypirinha</title>
+  <title>11. Extending Keypirinha (API) &mdash; Keypirinha</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="10.1. Overview" href="api/overview.html"/>
-        <link rel="prev" title="9.14. WinSCP Package" href="packages/winscp.html"/> 
+        <link rel="next" title="11.1. Overview" href="api/overview.html"/>
+        <link rel="prev" title="10. Contributions" href="contributions.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.7
+                2.8
               </div>
             
           
@@ -96,16 +96,17 @@
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">7. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Extending <em>Keypirinha</em> (API)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/overview.html">10.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/reference.html">10.2. API Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/python.html">10.3. Embedded Python Interpreter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Extending <em>Keypirinha</em> (API)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/overview.html">11.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/reference.html">11.2. API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/python.html">11.3. Embedded Python Interpreter</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">11. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">12. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">13. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">14. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">15. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -139,7 +140,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>10. Extending <em>Keypirinha</em> (API)</li>
+    <li>11. Extending <em>Keypirinha</em> (API)</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -152,7 +153,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="extending-project-api">
-<h1>10. Extending <em>Keypirinha</em> (API)<a class="headerlink" href="#extending-project-api" title="Permalink to this headline">¶</a></h1>
+<h1>11. Extending <em>Keypirinha</em> (API)<a class="headerlink" href="#extending-project-api" title="Permalink to this headline">¶</a></h1>
 <p><em>Keypirinha</em> offers a flexible way to be extended thanks to its embedded <a class="reference external" href="https://python.org">Python3</a>
 interpreter and its exposed Python API through two Python modules:
 <a class="reference internal" href="api/module.html#module-keypirinha" title="keypirinha"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha</span></code></a> and <a class="reference internal" href="api/module-util.html#module-keypirinha_util" title="keypirinha_util"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha_util</span></code></a>.</p>
@@ -161,25 +162,25 @@ section to picture how <em>Keypirinha</em> loads and interprets its packages and
 plugins, as well as the subtleties between the different types of packages.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/overview.html">10.1. Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/overview.html#threading">10.1.1. Threading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/overview.html#plugin-lifecycle">10.1.2. Plugin Lifecycle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/overview.html#getting-started">10.1.3. Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/overview.html">11.1. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/overview.html#threading">11.1.1. Threading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/overview.html#plugin-lifecycle">11.1.2. Plugin Lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/overview.html#getting-started">11.1.3. Getting started</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/reference.html">10.2. API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/module.html">10.2.1. keypirinha module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/module-util.html">10.2.2. keypirinha_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/catalogaction.html">10.2.3. CatalogAction class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/catalogitem.html">10.2.4. CatalogItem class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/iconhandle.html">10.2.5. IconHandle class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/plugin.html">10.2.6. Plugin class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/settings.html">10.2.7. Settings class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/reference.html">11.2. API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/module.html">11.2.1. keypirinha module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/module-util.html">11.2.2. keypirinha_util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/catalogaction.html">11.2.3. CatalogAction class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/catalogitem.html">11.2.4. CatalogItem class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/iconhandle.html">11.2.5. IconHandle class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/plugin.html">11.2.6. Plugin class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/settings.html">11.2.7. Settings class</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api/python.html">10.3. Embedded Python Interpreter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/python.html#version">10.3.1. Version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/python.html#modifications">10.3.2. Modifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/python.html">11.3. Embedded Python Interpreter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/python.html#version">11.3.1. Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/python.html#modifications">11.3.2. Modifications</a></li>
 </ul>
 </li>
 </ul>
@@ -193,10 +194,10 @@ plugins, as well as the subtleties between the different types of packages.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api/overview.html" class="btn btn-neutral float-right" title="10.1. Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api/overview.html" class="btn btn-neutral float-right" title="11.1. Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="packages/winscp.html" class="btn btn-neutral" title="9.14. WinSCP Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="contributions.html" class="btn btn-neutral" title="10. Contributions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -226,7 +227,7 @@ plugins, as well as the subtleties between the different types of packages.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.7',
+            VERSION:'2.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

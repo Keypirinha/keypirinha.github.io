@@ -13,6 +13,9 @@ Note that it is also possible to contribute to their development so everyone can
 take advantage of the improvements you applied. Read the
 :ref:`contribute-packages` section if you want to get involved.
 
+Some |project| users already have shared their packages and modifications to the
+community. Check out the :doc:`contributions` chapter for more info.
+
 
 .. toctree::
     :maxdepth: 2

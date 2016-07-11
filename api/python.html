@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10.3. Embedded Python Interpreter &mdash; Keypirinha</title>
+  <title>11.3. Embedded Python Interpreter &mdash; Keypirinha</title>
   
 
   
@@ -33,9 +33,9 @@
 
   
     <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="10. Extending Keypirinha (API)" href="../api.html"/>
-        <link rel="next" title="11. Contribute" href="../contribute.html"/>
-        <link rel="prev" title="10.2.7. Settings class" href="settings.html"/> 
+        <link rel="up" title="11. Extending Keypirinha (API)" href="../api.html"/>
+        <link rel="next" title="12. Contribute" href="../contribute.html"/>
+        <link rel="prev" title="11.2.7. Settings class" href="settings.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.7
+                2.8
               </div>
             
           
@@ -97,24 +97,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">7. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../packages.html">8. Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">10. Extending <em>Keypirinha</em> (API)</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html">10.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference.html">10.2. API Reference</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">10.3. Embedded Python Interpreter</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#version">10.3.1. Version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#modifications">10.3.2. Modifications</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#exit-and-quit">10.3.2.1. exit() and quit()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#os-environ">10.3.2.2. os.environ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">10. Contributions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">11. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">11.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">11.2. API Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.3. Embedded Python Interpreter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#version">11.3.1. Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifications">11.3.2. Modifications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exit-and-quit">11.3.2.1. exit() and quit()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#os-environ">11.3.2.2. os.environ</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute.html">11. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">12. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">13. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../credits.html">14. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">15. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
@@ -148,9 +149,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../api.html">10. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+          <li><a href="../api.html">11. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
       
-    <li>10.3. Embedded Python Interpreter</li>
+    <li>11.3. Embedded Python Interpreter</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -163,9 +164,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="embedded-python-interpreter">
-<h1>10.3. Embedded Python Interpreter<a class="headerlink" href="#embedded-python-interpreter" title="Permalink to this headline">¶</a></h1>
+<h1>11.3. Embedded Python Interpreter<a class="headerlink" href="#embedded-python-interpreter" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="version">
-<h2>10.3.1. Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<h2>11.3.1. Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
 <p>The embedded <a class="reference external" href="https://python.org">Python3</a> interpreter is a vanilla version of <em>CPython</em>, the
 official distribution. The Python environment you get in <em>Keypirinha</em> is pretty
 similar to the original one except that some modules have been removed from the
@@ -181,11 +182,11 @@ commands in the Console window:</p>
 </div>
 </div>
 <div class="section" id="modifications">
-<h2>10.3.2. Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
+<h2>11.3.2. Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
 <p>There are some modifications made by <em>Keypirinha</em> that impact the default behavior
 of Python. All of these modifications are documented in this section.</p>
 <div class="section" id="exit-and-quit">
-<h3>10.3.2.1. exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
+<h3>11.3.2.1. exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
 <p>In its <em>vanilla</em> version, Python offers numerous ways to exit a program.
 <em>Keypirinha</em> on the other hand is not meant to be shutdown by its plugins and would
 crash in that case so traps have been installed to avoid that.</p>
@@ -198,7 +199,7 @@ application anyway, Python and <em>Keypirinha</em> both offer numerous ways to d
 too.</p>
 </div>
 <div class="section" id="os-environ">
-<h3>10.3.2.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
+<h3>11.3.2.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
 <p><strong>In short:</strong> <em>Keypirinha</em> automatically updates the content of the
 <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map every time an environment variable has been modified.</p>
 <p><strong>Context:</strong> <em>Keypirinha</em> has been designed to dynamically adapt as much as
@@ -228,10 +229,10 @@ map or by calling <a class="reference external" href="https://docs.python.org/3.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../contribute.html" class="btn btn-neutral float-right" title="11. Contribute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../contribute.html" class="btn btn-neutral float-right" title="12. Contribute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="settings.html" class="btn btn-neutral" title="10.2.7. Settings class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="settings.html" class="btn btn-neutral" title="11.2.7. Settings class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -261,7 +262,7 @@ map or by calling <a class="reference external" href="https://docs.python.org/3.
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.7',
+            VERSION:'2.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

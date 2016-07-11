@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.7
+                2.8
               </div>
             
           
@@ -112,11 +112,12 @@
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">7. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">10. Extending <em>Keypirinha</em> (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">11. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">12. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">13. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">14. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">15. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -320,6 +321,11 @@ from application&#8217;s main contextual menu as well (right click on the Launch
 <p>If you just want to erase a <strong>single</strong> item from the history, just search for
 it, select it and press <code class="kbd docutils literal"><span class="pre">Ctrl+Del</span></code>. A message dialog will ask you to
 confirm the operation.</p>
+<p>It is also possible to delete every reference to a specific package from the
+history by selecting a result item from this package, then clicking the
+<code class="docutils literal"><span class="pre">Remove</span> <span class="pre">parent</span> <span class="pre">package</span> <span class="pre">from</span> <span class="pre">History</span></code> action from its contextual menu. <br />
+Note that no keyboard shortcut is provided here as it is assumed to be rarely
+used and to avoid any mistake.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">By clearing the full history, the score subsystem is also reset and you will
@@ -387,7 +393,7 @@ needs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.7',
+            VERSION:'2.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

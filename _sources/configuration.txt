@@ -166,10 +166,10 @@ replicating the ``var`` section in every subsequently loaded configuration file.
 See the :ref:`ini-example` section above for an exampe.
 
 
-Pre-defined variables
----------------------
+Predefined variables
+--------------------
 
-|project| also silently populates the ``var`` section with some predefined
+|project| also automatically populates the ``var`` section with some predefined
 values that may come handy.
 
 * ``APP_DIR`` |br|
@@ -224,6 +224,48 @@ values that may come handy.
 
   - ``U:\USBApps\Keypirinha\portable\Profile\Packages`` (portable mode)
 
+* For convenience, the GUIDs of Windows'
+  `Known Folders <https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx>`_
+  are also predefined. They may come handy to configure some packages.
+
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | Name                             | Expands to                                 | Usual location                                                      |
+  +==================================+============================================+=====================================================================+
+  | ``KNOWNFOLDER_ACCOUNTPICTURES``  | ``{008ca0b1-55b4-4c56-b8a8-4de4b299d3be}`` | ``%APPDATA%\Microsoft\Windows\AccountPictures``                     |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_COMMONSTARTMENU``  | ``{a4115719-d62e-491d-aa7c-e74b8be3b067}`` | ``%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu``                  |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_COMMONSTARTUP``    | ``{82a5ea35-d9cd-47c5-9629-e15d2f714e6e}`` | ``%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\StartUp`` |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_DESKTOP``          | ``{b4bfcc3a-db2c-424c-b029-7fe99a87c641}`` | ``%USERPROFILE%\Desktop``                                           |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_DOCUMENTS``        | ``{fdd39ad0-238f-46af-adb4-6c85480369c7}`` | ``%USERPROFILE%\Documents``                                         |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_DOWNLOADS``        | ``{374de290-123f-4565-9164-39c4925e467b}`` | ``%USERPROFILE%\Downloads``                                         |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_LOCALAPPDATA``     | ``{f1b32785-6fba-4fcf-9d55-7b8e7f157091}`` | ``%LOCALAPPDATA% (%USERPROFILE%\AppData\Local)``                    |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_LOCALAPPDATALOW``  | ``{A520A1A4-1780-4FF6-BD18-167343C5AF16}`` | ``%USERPROFILE%\AppData\LocalLow``                                  |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_PROFILE``          | ``{5e6c858f-0e22-4760-9afe-ea3317b67173}`` | ``%USERPROFILE% (%SystemDrive%\Users\%USERNAME%)``                  |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_PROGRAMFILES``     | ``{905e63b6-c1bf-494e-b29c-65b732d3d21a}`` | ``%ProgramFiles%``                                                  |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_PROGRAMFILESX64``  | ``{6d809377-6af0-444b-8957-a3773f02200e}`` | ``%ProgramFiles%``                                                  |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_PROGRAMFILESX86``  | ``{7c5a40ef-a0fb-4bfc-874a-c0f2e0b9fa8e}`` | ``%ProgramFiles(x86)%``                                             |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_ROAMINGAPPDATA``   | ``{3eb685db-65f9-4cf6-a03a-e3ef65729f3d}`` | ``%APPDATA% (%USERPROFILE%\AppData\Roaming)``                       |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_STARTMENU``        | ``{625b53c3-ab48-4ec1-ba1f-a1ef4146fc19}`` | ``%APPDATA%\Microsoft\Windows\Start Menu``                          |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_STARTUP``          | ``{b97d20bb-f46a-4c97-ba10-5e3608430854}`` | ``%APPDATA%\Microsoft\Windows\Start Menu\Programs\StartUp``         |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_USERPROGRAMFILES`` | ``{5cd7aee2-2219-4a67-b85d-6c9ce15660cb}`` | ``%LOCALAPPDATA%\Programs``                                         |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+  | ``KNOWNFOLDER_WINDOWS``          | ``{f38bf404-1d43-42f2-9305-67de0b28fc23}`` | ``%windir%``                                                        |
+  +----------------------------------+--------------------------------------------+---------------------------------------------------------------------+
+
 
 Environment Values
 ------------------
@@ -242,13 +284,13 @@ Machine and User Specific Settings
 It is possible to have settings that will be applied only when |project| runs on
 a specific **machine** and/or under a specific **user** session.
 
-To do that, the configuration file must be named according to a pre-defined
+To do that, the configuration file must be named according to a predefined
 pattern.
 
 For example, :file:`Keypirinha.ini` which is application's main configuration
 file. ``Keypirinha`` being the *name* part of the file. |project| will
 automatically scan for these files each time it has to load its configuration
-files, **in order** of precedence, which means a value re-defined in a file
+files, **in order** of precedence, which means a value redefined in a file
 **overrides** the previous one(s):
 
 * :file:`Keypirinha.ini`: the main file

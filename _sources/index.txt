@@ -54,6 +54,7 @@ Contents
     custom-catalog
     packages
     shipped-packages
+    contributions
     api
     contribute
     glossary

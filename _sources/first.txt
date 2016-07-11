@@ -216,6 +216,12 @@ If you just want to erase a **single** item from the history, just search for
 it, select it and press :kbd:`Ctrl+Del`. A message dialog will ask you to
 confirm the operation.
 
+It is also possible to delete every reference to a specific package from the
+history by selecting a result item from this package, then clicking the
+``Remove parent package from History`` action from its contextual menu. |br|
+Note that no keyboard shortcut is provided here as it is assumed to be rarely
+used and to avoid any mistake.
+
 .. warning::
     By clearing the full history, the score subsystem is also reset and you will
     also loose the internal dictionary of the keywords you associated with

@@ -1,0 +1,62 @@
+=============
+Contributions
+=============
+
+Some users have taken |project| a step further by creating their own packages or
+by patching the official ones, and have kindly shared their work to the
+community via the official |chat_room|.
+
+
+Packages
+========
+
+psistorm/DictLeo
+----------------
+
+`@psistorm`_'s package to query the german
+`Leo Dictionary <http://dict.leo.org/>`_ online. |br|
+Source: `<https://github.com/psistorm/keypirinha-dictleo>`_
+
+psistorm/HeidiSQL
+-----------------
+
+`@psistorm`_'s package to list and launch `HeidiSQL <http://www.heidisql.com>`_
+sessions directly as well as HeidiSQL itself. |br|
+Source: `<https://github.com/psistorm/keypirinha-heidisql>`_
+
+psistorm/SystemCommands
+-----------------------
+
+`@psistorm`_'s package to provide some system commands to |project|'s catalog
+like:
+
+* ``trash``: show the recycle bin
+* ``emptytrash``: empty the recycle bin
+* ``lock``: show Windows lockscreen (similar to Win+L)
+* ``logout``: logout current User from Windows
+* ``restart``: restarts Windows
+* ``shutdown``: shutdown Windows
+* ``sleep``: sleep Windows
+* ``hibernate``: hibernate Windows
+
+Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
+
+ueffel/Kill
+-----------
+
+`@ueffel`_'s package to terminate a running process by its name or ID. |br|
+Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
+
+
+Contributions and Patches
+=========================
+
+* `@gschenck`_ has provided a patch to the official `Calc` package in order to
+  be able to use a ``,`` (comma) as a decimal mark, and the ``^`` character as
+  an alias to the ``**`` operator (power of). |br|
+  Source: `<https://github.com/Keypirinha/Keypirinha/issues/70>`_
+
+
+.. _@gschenck: https://github.com/gschenck
+.. _@psistorm: https://github.com/psistorm
+.. _@ueffel: https://github.com/ueffel
