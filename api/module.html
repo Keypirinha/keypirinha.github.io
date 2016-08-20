@@ -44,6 +44,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -66,7 +68,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -448,9 +450,9 @@ I/O operations like disk accesses and network communications).</p>
 
 <dl class="function">
 <dt id="keypirinha.installed_package_dir">
-<code class="descclassname">keypirinha.</code><code class="descname">installed_package_dir</code><span class="sig-paren">(</span><em>package_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.installed_package_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">installed_package_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.installed_package_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the path of an <em>installed</em> package (i.e.: <code class="docutils literal"><span class="pre">*.keypirinha-package</span></code>), or
-the base directory for <a class="reference internal" href="../packages.html#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a> if <em>package_name</em> is not
+the base directory for <a class="reference internal" href="../packages.html#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a> if <em>package_full_name</em> is not
 specified.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal"><span class="pre">%APPDATA%/Keypirinha/InstalledPackages</span></code> in installed mode and
@@ -475,9 +477,9 @@ specified.</p>
 
 <dl class="function">
 <dt id="keypirinha.live_package_dir">
-<code class="descclassname">keypirinha.</code><code class="descname">live_package_dir</code><span class="sig-paren">(</span><em>package_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.live_package_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">live_package_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.live_package_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the directory of a <em>live</em> package, or the base directory for
-<a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> in case <em>package_name</em> is not specified.</p>
+<a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> in case <em>package_full_name</em> is not specified.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal"><span class="pre">%APPDATA%/Keypirinha/Packages</span></code> in installed mode and
 <code class="file docutils literal"><span class="pre">X:/Keypirinha/portable/Profile/Packages</span></code> in portable mode.</p>
@@ -496,7 +498,7 @@ given package.</p>
 
 <dl class="function">
 <dt id="keypirinha.load_icon">
-<code class="descclassname">keypirinha.</code><code class="descname">load_icon</code><span class="sig-paren">(</span><em>sources</em>, <em>force_reload=False</em>, <em>package_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.load_icon" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">load_icon</code><span class="sig-paren">(</span><em>sources</em>, <em>force_reload=False</em>, <em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.load_icon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads an icon if it has not been loaded already and returns a handle to it.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -513,9 +515,9 @@ holds all the desired dimensions, or a list containing several
 may impact user experience quite significantly because of bad
 performances. It is recommended to ensure icon sources really have
 been modified since the last time it has been loaded.</li>
-<li><strong>package_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to which this icon will be
-attached. The lifetime of an icon handle is bound to the lifetime of
-its parent Package. If the Package gets unloaded or reloaded, its
+<li><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to which this icon will
+be attached. The lifetime of an icon handle is bound to the lifetime
+of its parent Package. If the Package gets unloaded or reloaded, its
 resources will be freed automatically and any handle pointing to
 those resources will become invalid.
 This argument is optional because the application has the ability to
@@ -610,14 +612,14 @@ Examples:</p>
 
 <dl class="function">
 <dt id="keypirinha.load_settings">
-<code class="descclassname">keypirinha.</code><code class="descname">load_settings</code><span class="sig-paren">(</span><em>package_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.load_settings" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">load_settings</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.load_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">Settings</span></code></a> object associated with a <em>package</em>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>package_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to load/get the settings
-from.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to load/get the
+settings from.
 This argument is optional because the application has the ability to
 match a calling thread with its source Package. Nevertheless, in
 some rare conditions (e.g.: the calling thread is a Python thread),
@@ -640,9 +642,9 @@ possible.</p>
 
 <dl class="function">
 <dt id="keypirinha.package_cache_dir">
-<code class="descclassname">keypirinha.</code><code class="descname">package_cache_dir</code><span class="sig-paren">(</span><em>package_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.package_cache_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">package_cache_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.package_cache_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the cache directory of a package, or its base directory if
-<em>package_name</em> is not specified.</p>
+<em>package_full_name</em> is not specified.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal"><span class="pre">%LOCALAPPDATA%/Keypirinha/Packages</span></code> in installed mode and
 <code class="file docutils literal"><span class="pre">X:/Keypirinha/portable/Local/Packages</span></code> in portable mode.</p>
@@ -661,7 +663,7 @@ given package.</p>
 
 <dl class="function">
 <dt id="keypirinha.package_path">
-<code class="descclassname">keypirinha.</code><code class="descname">package_path</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.package_path" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">keypirinha.</code><code class="descname">package_path</code><span class="sig-paren">(</span><em>full_name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.package_path" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified">Deprecated since version 2.1: </span>Use <a class="reference internal" href="#keypirinha.live_package_dir" title="keypirinha.live_package_dir"><code class="xref py py-func docutils literal"><span class="pre">live_package_dir()</span></code></a> instead</p>
 </div>
@@ -850,7 +852,7 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -875,15 +877,15 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

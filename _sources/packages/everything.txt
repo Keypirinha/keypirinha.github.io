@@ -4,7 +4,8 @@ Everything Package
 
 Available since version 2.3.
 
-Query Everything_ from |project| to find and open any file or folder.
+Query Everything_ (a **separate** tool) from |project| to find and open any file
+or folder.
 
 
 Requirements
@@ -13,35 +14,33 @@ Requirements
 Everything_ v1.3 or more recent must be running to do a search.
 
 .. note::
-    This package retries to find Everything instance each time you want to do a
-    search so you can freely (re)start Everything whenever you need to.
+    This package retries to find *Everything* instance each time you want to do
+    a search so you can freely (re)start *Everything* whenever you need to.
 
 
 Catalog Items
 =============
 
-This package populates the :term:`Catalog` with the following items:
+By default, this package populates the :term:`Catalog` with the following items:
 
-* Search for the items prefixed with ``Everything:`` (by default). They are
-  added to the Catalog even if Everything is not running at init time.
+* The ``Everything: Search`` item (default name) allows to query *Everything*
+  using its normal search syntax
 
-* The ``Search`` item allows to query Everything using its normal search syntax
+* The ``Everything: Regex Search`` item (default name) allows to query
+  *Everything* using its regular expression syntax
 
-* The ``Regex Search`` item allows to query Everything using its regular
-  expression syntax
-
-* The ``Rebuild DB`` item request Everything to rebuild its database (**requires
-  Everything v1.4**).
+* The ``Everything: Rebuild DB`` item request *Everything* to rebuild its
+  database (**requires Everything v1.4**).
 
 
 Usage
 =====
 
-To query Everything from |project| allows you to take advantage of both
-Everything's speed and |project|'s matching algorithm. Once you have
+To query *Everything* from |project| allows you to take advantage of both
+*Everything*'s speed and |project|'s matching algorithm. Once you have
 searched-found-executed a file/folder using this package, it is kept in
-|project|'s history so you do not have to query Everything a second time to open
-it.
+|project|'s history so you do not have to query *Everything* a second time to
+open it.
 
 .. tip::
     You can reduce the number of keystrokes even more to reach the same item by
@@ -56,6 +55,6 @@ it.
 Troubleshooting
 ===============
 
-If no item appear after a search query, ensure Everything is running and no
+If no item appear after a search query, ensure *Everything* is running and no
 error message has been emitted by the plugin (check |project|'s
 :term:`Console`).

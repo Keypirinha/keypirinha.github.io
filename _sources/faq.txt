@@ -61,6 +61,29 @@ Generally speaking, a launcher like |project| may deeply impact your everyday
 work-flow.
 
 
+Is it open source?
+==================
+
+The application itself is not and is distributed as a
+`Freeware <https://en.wikipedia.org/wiki/Freeware>`_. |br|
+Its official plugins are open source and will always be.
+
+As of August 2016, project status is not meant to change in a short-term future
+in that regard. However, there is a strong will to make the project
+community-oriented through the development of an open and automated packages
+management platform.
+
+
+How to support the project?
+===========================
+
+You can show your support to the |project| project by:
+
+* Spreading nice words about it!
+* Giving the project a **Like** or a **Star**: |br|
+  |social_buttons|
+
+
 Where does this weird name come from?!
 ======================================
 
@@ -72,6 +95,6 @@ It's great!
 Any translation?
 ================
 
-Currently, |project| is available in English only and there are no plan to
+Currently, |project| is available in English only and there is no plan to
 support additional languages in a near future. For now, we prefer to focus on
 bug fixing and the implementation of new features.

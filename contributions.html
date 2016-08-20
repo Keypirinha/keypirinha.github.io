@@ -43,6 +43,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +67,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -100,11 +102,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#packages">10.1. Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#psistorm-dictleo">10.1.1. psistorm/DictLeo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#psistorm-heidisql">10.1.2. psistorm/HeidiSQL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#psistorm-systemcommands">10.1.3. psistorm/SystemCommands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ueffel-kill">10.1.4. ueffel/Kill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#psistorm-kitty">10.1.3. psistorm/KiTTY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#psistorm-systemcommands">10.1.4. psistorm/SystemCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ueffel-kill">10.1.5. ueffel/Kill</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#contributions-and-patches">10.2. Contributions and Patches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integrated-patches">10.2. Integrated Patches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obsolete-contributions">10.3. Obsolete Contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#obsolete-as-of-v2-9">10.3.1. Obsolete as of v2.9</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
@@ -161,7 +168,8 @@
 <h1>10. Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h1>
 <p>Some users have taken <em>Keypirinha</em> a step further by creating their own packages or
 by patching the official ones, and have kindly shared their work to the
-community via the official <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>.</p>
+community via the official <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>. <br />
+Check out the <a class="reference internal" href="contribute.html"><span class="doc">Contribute</span></a> chapter to know how you can contribute.</p>
 <div class="section" id="packages">
 <h2>10.1. Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="psistorm-dictleo">
@@ -176,8 +184,14 @@ Source: <a class="reference external" href="https://github.com/psistorm/keypirin
 sessions directly as well as HeidiSQL itself. <br />
 Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-heidisql">https://github.com/psistorm/keypirinha-heidisql</a></p>
 </div>
+<div class="section" id="psistorm-kitty">
+<h3>10.1.3. psistorm/KiTTY<a class="headerlink" href="#psistorm-kitty" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>&#8216;s package to launch <a class="reference external" href="http://www.9bis.net/kitty/">KiTTY</a> (either
+installed or portable) and KiTTY sessions directly. <br />
+Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-kitty">https://github.com/psistorm/keypirinha-kitty</a></p>
+</div>
 <div class="section" id="psistorm-systemcommands">
-<h3>10.1.3. psistorm/SystemCommands<a class="headerlink" href="#psistorm-systemcommands" title="Permalink to this headline">¶</a></h3>
+<h3>10.1.4. psistorm/SystemCommands<a class="headerlink" href="#psistorm-systemcommands" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>&#8216;s package to provide some system commands to <em>Keypirinha</em>&#8216;s catalog
 like:</p>
 <ul class="simple">
@@ -193,19 +207,35 @@ like:</p>
 <p>Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-systemcommands">https://github.com/psistorm/keypirinha-systemcommands</a></p>
 </div>
 <div class="section" id="ueffel-kill">
-<h3>10.1.4. ueffel/Kill<a class="headerlink" href="#ueffel-kill" title="Permalink to this headline">¶</a></h3>
+<h3>10.1.5. ueffel/Kill<a class="headerlink" href="#ueffel-kill" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/ueffel">&#64;ueffel</a>&#8216;s package to terminate a running process by its name or ID. <br />
 Source: <a class="reference external" href="https://github.com/ueffel/Keypirinha-Plugin-Kill">https://github.com/ueffel/Keypirinha-Plugin-Kill</a></p>
 </div>
 </div>
-<div class="section" id="contributions-and-patches">
-<h2>10.2. Contributions and Patches<a class="headerlink" href="#contributions-and-patches" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integrated-patches">
+<h2>10.2. Integrated Patches<a class="headerlink" href="#integrated-patches" title="Permalink to this headline">¶</a></h2>
+<p>Some patches offered by third-party developers have been fully or partly
+integrated to the official packages.</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/gschenck">&#64;gschenck</a> has provided a patch to the official <cite>Calc</cite> package in order to
-be able to use a <code class="docutils literal"><span class="pre">,</span></code> (comma) as a decimal mark, and the <code class="docutils literal"><span class="pre">^</span></code> character as
-an alias to the <code class="docutils literal"><span class="pre">**</span></code> operator (power of). <br />
+<li><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>&#8216;s patch to allow predefined searches in <code class="docutils literal"><span class="pre">Everything</span></code> package
+(see issue <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/94">#94</a>) <br />
+<strong>Integrated in v2.9</strong></li>
+</ul>
+</div>
+<div class="section" id="obsolete-contributions">
+<h2>10.3. Obsolete Contributions<a class="headerlink" href="#obsolete-contributions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="obsolete-as-of-v2-9">
+<h3>10.3.1. Obsolete as of v2.9<a class="headerlink" href="#obsolete-as-of-v2-9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/ThaSiouL">&#64;ThaSiouL</a>&#8216;s fork of the official <code class="docutils literal"><span class="pre">Calc</span></code> package offered improvements
+against v2.8 and previous versions. <br />
+Source: <a class="reference external" href="https://github.com/ThaSiouL/Keypirinha-Package-Calc">https://github.com/ThaSiouL/Keypirinha-Package-Calc</a></li>
+<li><a class="reference external" href="https://github.com/gschenck">&#64;gschenck</a>&#8216;s patch against the official <code class="docutils literal"><span class="pre">Calc</span></code> package (v2.8 and previous)
+in order to be able to use a <code class="docutils literal"><span class="pre">,</span></code> (comma) as a decimal mark, and the <code class="docutils literal"><span class="pre">^</span></code>
+character as an alias to the <code class="docutils literal"><span class="pre">**</span></code> operator (power of). <br />
 Source: <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/70">https://github.com/Keypirinha/Keypirinha/issues/70</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -249,7 +279,7 @@ Source: <a class="reference external" href="https://github.com/Keypirinha/Keypir
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -274,15 +304,15 @@ Source: <a class="reference external" href="https://github.com/Keypirinha/Keypir
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

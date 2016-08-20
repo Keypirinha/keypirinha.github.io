@@ -43,6 +43,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +67,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -170,42 +172,54 @@
 <td><code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> (default)</td>
 </tr>
 <tr class="row-odd"><td>Next step (add args, choose action)</td>
-<td><code class="kbd docutils literal"><span class="pre">Tab</span></code> (or <code class="kbd docutils literal"><span class="pre">Space</span></code> while
-being at first <br /> step and if
-the <code class="docutils literal"><span class="pre">space_as_tab</span></code> <br /> option
-is enabled)</td>
+<td><code class="kbd docutils literal"><span class="pre">Tab</span></code> or <code class="kbd docutils literal"><span class="pre">Alt+Right</span></code> (or
+<code class="kbd docutils literal"><span class="pre">Space</span></code> while being <br /> at
+first step and if the
+<code class="docutils literal"><span class="pre">space_as_tab</span></code> option <br /> is
+enabled)</td>
 </tr>
-<tr class="row-even"><td>Force insert a space character while at
+<tr class="row-even"><td>Forcefully go back to previous search
+step</td>
+<td><code class="kbd docutils literal"><span class="pre">Alt+Left</span></code></td>
+</tr>
+<tr class="row-odd"><td>Force insert a space character while at
 first step</td>
 <td><code class="kbd docutils literal"><span class="pre">Ctrl+Space</span></code> or
 <code class="kbd docutils literal"><span class="pre">Shift+Space</span></code></td>
 </tr>
-<tr class="row-odd"><td>Directly select an action</td>
+<tr class="row-even"><td>Directly select an action</td>
 <td><code class="kbd docutils literal"><span class="pre">Ctrl+Enter</span></code></td>
 </tr>
-<tr class="row-even"><td>Show selected item&#8217;s properties</td>
+<tr class="row-odd"><td>Show selected item&#8217;s properties</td>
 <td><code class="kbd docutils literal"><span class="pre">Alt+Enter</span></code></td>
 </tr>
-<tr class="row-odd"><td>Show Shell&#8217;s &#8220;Properties&#8221; dialog for
+<tr class="row-even"><td>Show Shell&#8217;s &#8220;Properties&#8221; dialog for
 the selected <strong>FILE</strong> item</td>
 <td><code class="kbd docutils literal"><span class="pre">Shift+Alt+Enter</span></code></td>
 </tr>
-<tr class="row-even"><td>Maximize the LaunchBox (toggle)</td>
+<tr class="row-odd"><td>Maximize the LaunchBox (toggle)</td>
 <td><code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or
 <code class="kbd docutils literal"><span class="pre">Win+Up</span></code></td>
 </tr>
-<tr class="row-odd"><td><ul class="first last simple">
+<tr class="row-even"><td><ul class="first last simple">
 <li>Reset your current search (once)</li>
 <li>Hide the LaunchBox (twice)</li>
 </ul>
 </td>
 <td><code class="kbd docutils literal"><span class="pre">Esc</span></code></td>
 </tr>
-<tr class="row-even"><td>Hide the LaunchBox</td>
+<tr class="row-odd"><td>Hide the LaunchBox</td>
 <td><code class="kbd docutils literal"><span class="pre">Shift+Esc</span></code> or <code class="kbd docutils literal"><span class="pre">Alt+F4</span></code></td>
 </tr>
-<tr class="row-odd"><td>Erase a single item from history</td>
+<tr class="row-even"><td>Erase a single item from history</td>
 <td><code class="kbd docutils literal"><span class="pre">Ctrl+Del</span></code></td>
+</tr>
+<tr class="row-odd"><td>Erase previous word</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl+BackSpace</span></code></td>
+</tr>
+<tr class="row-even"><td>Show history items</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl+Down</span></code> (or <code class="kbd docutils literal"><span class="pre">Down</span></code>
+if search state is clean)</td>
 </tr>
 </tbody>
 </table>
@@ -232,6 +246,9 @@ controls</td>
 </tr>
 <tr class="row-even"><td>Validate command</td>
 <td><code class="kbd docutils literal"><span class="pre">Enter</span></code></td>
+</tr>
+<tr class="row-odd"><td>Erase previous word</td>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl+BackSpace</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -278,7 +295,7 @@ controls</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -303,15 +320,15 @@ controls</td>
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

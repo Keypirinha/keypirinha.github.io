@@ -4,7 +4,8 @@ Contributions
 
 Some users have taken |project| a step further by creating their own packages or
 by patching the official ones, and have kindly shared their work to the
-community via the official |chat_room|.
+community via the official |chat_room|. |br|
+Check out the :doc:`contribute` chapter to know how you can contribute.
 
 
 Packages
@@ -24,6 +25,14 @@ psistorm/HeidiSQL
 sessions directly as well as HeidiSQL itself. |br|
 Source: `<https://github.com/psistorm/keypirinha-heidisql>`_
 
+psistorm/KiTTY
+--------------
+
+`@psistorm`_'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_ (either
+installed or portable) and KiTTY sessions directly. |br|
+Source: `<https://github.com/psistorm/keypirinha-kitty>`_
+
+
 psistorm/SystemCommands
 -----------------------
 
@@ -41,6 +50,7 @@ like:
 
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
+
 ueffel/Kill
 -----------
 
@@ -48,15 +58,36 @@ ueffel/Kill
 Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
 
 
-Contributions and Patches
-=========================
+Integrated Patches
+==================
 
-* `@gschenck`_ has provided a patch to the official `Calc` package in order to
-  be able to use a ``,`` (comma) as a decimal mark, and the ``^`` character as
-  an alias to the ``**`` operator (power of). |br|
+Some patches offered by third-party developers have been fully or partly
+integrated to the official packages.
+
+* `@psistorm`_'s patch to allow predefined searches in ``Everything`` package
+  (see issue `#94`_) |br|
+  **Integrated in v2.9**
+
+
+Obsolete Contributions
+======================
+
+Obsolete as of v2.9
+-------------------
+
+* `@ThaSiouL`_'s fork of the official ``Calc`` package offered improvements
+  against v2.8 and previous versions. |br|
+  Source: `<https://github.com/ThaSiouL/Keypirinha-Package-Calc>`_
+
+* `@gschenck`_'s patch against the official ``Calc`` package (v2.8 and previous)
+  in order to be able to use a ``,`` (comma) as a decimal mark, and the ``^``
+  character as an alias to the ``**`` operator (power of). |br|
   Source: `<https://github.com/Keypirinha/Keypirinha/issues/70>`_
 
 
+
 .. _@gschenck: https://github.com/gschenck
-.. _@psistorm: https://github.com/psistorm
+.. _@ThaSiouL: https://github.com/ThaSiouL
 .. _@ueffel: https://github.com/ueffel
+
+.. _#94: https://github.com/Keypirinha/Keypirinha/issues/94

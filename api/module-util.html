@@ -44,6 +44,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -66,7 +68,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -584,7 +586,9 @@ Does nothing if <em>winerr</em> or eventually the result of
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dict containing the properties:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="s2">&quot;The resolved target file; path is already expanded&quot;</span><span class="p">,</span>
     <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="s2">&quot;Target&#39;s parameters (may be None)&quot;</span><span class="p">,</span>
     <span class="s1">&#39;working_dir&#39;</span><span class="p">:</span> <span class="s2">&quot;Working directory (may be None)&quot;</span><span class="p">,</span>
-    <span class="s1">&#39;desc&#39;</span><span class="p">:</span> <span class="s2">&quot;Description (may be None)&quot;</span><span class="p">}</span>
+    <span class="s1">&#39;desc&#39;</span><span class="p">:</span> <span class="s2">&quot;Description (may be None)&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;show_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;The &#39;show command&#39; value (int; can be SW_SHOWNORMAL, SW_SHOWMAXIMIZED or SW_SHOWMINIMIZED; may be None)&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;icon_location&#39;</span><span class="p">:</span> <span class="s2">&quot;The icon location string that should be readable by shell_string_resource() (may be None)&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </td>
@@ -681,7 +685,8 @@ file, a directory, or anything recognized by <code class="docutils literal"><spa
 <li><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The quoted arguments (optional). Note that a
 <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">list</span></code></a> of arguments (strings) can be given in which case
 <a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</li>
-<li><strong>working_dir</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The directory to execute from. Can be empty.</li>
+<li><strong>working_dir</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The directory to execute from. This value can be
+empty, in which case this function tries to automatically detect it.</li>
 <li><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; Specifies the action to be performed and is passed as-is to
 <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code>. This value can be empty to request default
 action associated with the given <em>thing</em>. Here is the list of the
@@ -701,10 +706,12 @@ in the application&#8217;s configuration file will be used to launch
 <code class="docutils literal"><span class="pre">SEE_MASK_FLAG_NO_UI</span></code> (<code class="docutils literal"><span class="pre">0x400</span></code>) and <code class="docutils literal"><span class="pre">SEE_MASK_INVOKEIDLIST</span></code>
 (<code class="docutils literal"><span class="pre">0xC</span></code>) flags are passed if this argument is <code class="docutils literal"><span class="pre">None</span></code>.
 See <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code> documentation from Microsoft for more info.</li>
-<li><strong>terminal_cmd</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; If <em>detect_nongui</em> is <code class="docutils literal"><span class="pre">True</span></code>, this argument allows
-to force the console emulator to use, instead of reading the
+<li><strong>terminal_cmd</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; If <em>detect_nongui</em> is <code class="docutils literal"><span class="pre">True</span></code>, this value allows to
+force the console emulator to use, instead of reading the
 <code class="docutils literal"><span class="pre">terminal</span></code> setting of the <code class="docutils literal"><span class="pre">external</span></code> section defined in the
-application&#8217;s configuration file.</li>
+application&#8217;s configuration file. Note that, like for the <em>args</em>
+parameter, a <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">list</span></code></a> of arguments (strings) can be given in
+which case <a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</li>
 <li><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) &#8211; Value directly forwarded to the <code class="docutils literal"><span class="pre">nShow</span></code> parameter of
 <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code>. It must be one of the <code class="docutils literal"><span class="pre">SW_</span></code> constants. If this
 value is less than zero, default will be applied (currently
@@ -713,9 +720,10 @@ value is less than zero, default will be applied (currently
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The thing was not found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code> failed with the given thing and arguments.
-Or an unexpected/unknown error occurred internally.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The <em>thing</em> was not found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; Specified <em>thing</em> is a link that could not be read. Or
+<code class="docutils literal"><span class="pre">ShellExecuteEx</span></code> failed with the given thing and arguments. Or an
+unexpected/unknown error occurred internally.</li>
 </ul>
 </td>
 </tr>
@@ -734,6 +742,9 @@ and behaves incorrectly in some cases.</p>
 <li>A successful call, does not necessarily mean the item has effectively
 been launched/executed as expected, or that the launched process ended
 successfully.</li>
+<li>This function tries to resolve shell links for the <em>thing</em> and the
+<em>terminal_cmd</em> arguments. Which also mean shortucts&#8217; arguments will be
+prepended, if any, to the final list of arguments.</li>
 </ul>
 </div>
 <div class="admonition seealso">
@@ -946,7 +957,7 @@ or not the launch request is successful.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -971,15 +982,15 @@ or not the launch request is successful.</p>
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

@@ -10,10 +10,14 @@ LaunchBox
 +=========================================+====================================+
 | Show/Hide the LaunchBox                 | :kbd:`Ctrl+Win+K` (default)        |
 +-----------------------------------------+------------------------------------+
-| Next step (add args, choose action)     | :kbd:`Tab` (or :kbd:`Space` while  |
-|                                         | being at first |br| step and if    |
-|                                         | the ``space_as_tab`` |br| option   |
-|                                         | is enabled)                        |
+| Next step (add args, choose action)     | :kbd:`Tab` or :kbd:`Alt+Right` (or |
+|                                         | :kbd:`Space` while being |br| at   |
+|                                         | first step and if the              |
+|                                         | ``space_as_tab`` option |br| is    |
+|                                         | enabled)                           |
++-----------------------------------------+------------------------------------+
+| Forcefully go back to previous search   | :kbd:`Alt+Left`                    |
+| step                                    |                                    |
 +-----------------------------------------+------------------------------------+
 | Force insert a space character while at | :kbd:`Ctrl+Space` or               |
 | first step                              | :kbd:`Shift+Space`                 |
@@ -35,6 +39,11 @@ LaunchBox
 +-----------------------------------------+------------------------------------+
 | Erase a single item from history        | :kbd:`Ctrl+Del`                    |
 +-----------------------------------------+------------------------------------+
+| Erase previous word                     | :kbd:`Ctrl+BackSpace`              |
++-----------------------------------------+------------------------------------+
+| Show history items                      | :kbd:`Ctrl+Down` (or :kbd:`Down`   |
+|                                         | if search state is clean)          |
++-----------------------------------------+------------------------------------+
 
 
 Console
@@ -49,4 +58,6 @@ Console
 | controls                                |                                    |
 +-----------------------------------------+------------------------------------+
 | Validate command                        | :kbd:`Enter`                       |
++-----------------------------------------+------------------------------------+
+| Erase previous word                     | :kbd:`Ctrl+BackSpace`              |
 +-----------------------------------------+------------------------------------+

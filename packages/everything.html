@@ -44,6 +44,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -66,7 +68,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -175,36 +177,36 @@
   <div class="section" id="everything-package">
 <h1>9.5. Everything Package<a class="headerlink" href="#everything-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.3.</p>
-<p>Query <a class="reference external" href="http://www.voidtools.com">Everything</a> from <em>Keypirinha</em> to find and open any file or folder.</p>
+<p>Query <a class="reference external" href="http://www.voidtools.com">Everything</a> (a <strong>separate</strong> tool) from <em>Keypirinha</em> to find and open any file
+or folder.</p>
 <div class="section" id="requirements">
 <h2>9.5.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.voidtools.com">Everything</a> v1.3 or more recent must be running to do a search.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This package retries to find Everything instance each time you want to do a
-search so you can freely (re)start Everything whenever you need to.</p>
+<p class="last">This package retries to find <em>Everything</em> instance each time you want to do
+a search so you can freely (re)start <em>Everything</em> whenever you need to.</p>
 </div>
 </div>
 <div class="section" id="catalog-items">
 <h2>9.5.2. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
-<p>This package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
+<p>By default, this package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
 <ul class="simple">
-<li>Search for the items prefixed with <code class="docutils literal"><span class="pre">Everything:</span></code> (by default). They are
-added to the Catalog even if Everything is not running at init time.</li>
-<li>The <code class="docutils literal"><span class="pre">Search</span></code> item allows to query Everything using its normal search syntax</li>
-<li>The <code class="docutils literal"><span class="pre">Regex</span> <span class="pre">Search</span></code> item allows to query Everything using its regular
-expression syntax</li>
-<li>The <code class="docutils literal"><span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request Everything to rebuild its database (<strong>requires
-Everything v1.4</strong>).</li>
+<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Search</span></code> item (default name) allows to query <em>Everything</em>
+using its normal search syntax</li>
+<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Regex</span> <span class="pre">Search</span></code> item (default name) allows to query
+<em>Everything</em> using its regular expression syntax</li>
+<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request <em>Everything</em> to rebuild its
+database (<strong>requires Everything v1.4</strong>).</li>
 </ul>
 </div>
 <div class="section" id="usage">
 <h2>9.5.3. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>To query Everything from <em>Keypirinha</em> allows you to take advantage of both
-Everything&#8217;s speed and <em>Keypirinha</em>&#8216;s matching algorithm. Once you have
+<p>To query <em>Everything</em> from <em>Keypirinha</em> allows you to take advantage of both
+<em>Everything</em>&#8216;s speed and <em>Keypirinha</em>&#8216;s matching algorithm. Once you have
 searched-found-executed a file/folder using this package, it is kept in
-<em>Keypirinha</em>&#8216;s history so you do not have to query Everything a second time to open
-it.</p>
+<em>Keypirinha</em>&#8216;s history so you do not have to query <em>Everything</em> a second time to
+open it.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">You can reduce the number of keystrokes even more to reach the same item by
@@ -219,7 +221,7 @@ for example. See the <a class="reference internal" href="../first.html#first-dra
 </div>
 <div class="section" id="troubleshooting">
 <h2>9.5.4. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
-<p>If no item appear after a search query, ensure Everything is running and no
+<p>If no item appear after a search query, ensure <em>Everything</em> is running and no
 error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
 <a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a>).</p>
 </div>
@@ -265,7 +267,7 @@ error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -290,15 +292,15 @@ error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

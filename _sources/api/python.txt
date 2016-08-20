@@ -58,10 +58,10 @@ environment variables.
 **Problem:** In the CPython implementation, the :py:data:`os.environ` map is
 created at import time and never updated. The :py:func:`os.getenv` function does
 not help here because it is just a wrapper around ``os.environ.get()``. As a
-consequence, a plugin that receives the ``ENV_CHANGED`` message (see
-:py:meth:`keypirinha.Plugin.on_env_changed`) and wants to get the up-to-date
-value of an environment variable would not be able to do so easily with the
-default implementation.
+consequence, a plugin that receives the ``EVENTS`` message (see
+:py:meth:`keypirinha.Plugin.on_events`) and wants to get the up-to-date value of
+an environment variable would not be able to do so easily with the default
+implementation.
 
 **Solution:** When |project| catches a system notification indicating a
 modification to the environment, it updates the environment block associated to

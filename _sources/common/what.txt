@@ -1,12 +1,24 @@
-|project| is a semantic launcher for keyboard ninjas on Windows.
+|project| is a launcher for keyboard ninjas on Windows.
 
-It is a very generic tool hand-crafted with love by a nerd for nerds that allows
-to execute any kind of task using your keyboard only, by typing a small fraction
-of its name. |br| May it be to start an application, to open a file, a web
-bookmark, or more exotic tasks like evaluating a mathematical expression in-
-line, or launching a *PuTTY*/*FileZilla*/*WinSCP* session directly, ...
+**Features:**
 
-It has been designed to allow lightning fast searches, to have a small memory
-footprint and a file-driven configuration scheme. It is also battery friendly.
+* Quickly find and launch plethora of items like applications, files,
+  bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), ...
+* Evaluate a mathematical expression
+* Convert numbers
+* Switch to a running application searched by name
+* Associate a keyword to a specific item
+* ...
+* An embedded Python3_ API
 
-Finally, it is extensible by writing :term:`plugin` scripts in Python3_.
+**Properties:**
+
+* Lightning fast
+* Fairly small memory footprint
+* Battery friendly
+* Extensible by writing :term:`plugin` scripts in Python3_.
+
+You can see |project| as an alternative to Launchy and a cousin to Alfred.
+
+See the :doc:`first` chapter for more information.
+

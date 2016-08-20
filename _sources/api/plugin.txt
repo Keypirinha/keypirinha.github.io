@@ -144,9 +144,32 @@ Plugin class
         **only**.
 
 
+    .. py:method:: full_name()
+
+        Get the fully qualified name of this plugin.
+
+        .. seealso::
+            :py:meth:`friendly_name`, :py:meth:`package_full_name`
+
+
+    .. py:method:: name()
+
+        .. deprecated:: 2.9
+            Use :py:func:`full_name` instead
+
+
+    .. py:method:: package_full_name()
+
+        Get the fully qualified name of this plugin's parent package.
+
+        .. seealso::
+            :py:meth:`full_name`, :py:meth:`friendly_name`
+
+
     .. py:method:: package_name()
 
-        Get the name of plugin's package.
+        .. deprecated:: 2.9
+            Use :py:func:`package_full_name` instead
 
 
     .. py:method:: set_catalog(catalog_items)
@@ -159,6 +182,7 @@ Plugin class
 
         .. seealso::
             :py:meth:`merge_catalog`
+
 
     .. py:method:: merge_catalog(catalog_items, erase_untouched_items)
 

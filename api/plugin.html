@@ -44,6 +44,8 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    
+
   <div class="wy-grid-for-nav">
 
     
@@ -66,7 +68,7 @@
             
             
               <div class="version">
-                2.8
+                2.9
               </div>
             
           
@@ -338,9 +340,39 @@ to be always grouped.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="keypirinha.Plugin.full_name">
+<code class="descname">full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.full_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the fully qualified name of this plugin.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal"><span class="pre">friendly_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal"><span class="pre">package_full_name()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.name">
+<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.name" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-func docutils literal"><span class="pre">full_name()</span></code></a> instead</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.package_full_name">
+<code class="descname">package_full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.package_full_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the fully qualified name of this plugin&#8217;s parent package.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal"><span class="pre">friendly_name()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="keypirinha.Plugin.package_name">
 <code class="descname">package_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.package_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the name of plugin&#8217;s package.</p>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-func docutils literal"><span class="pre">package_full_name()</span></code></a> instead</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -557,6 +589,10 @@ you wish to redistribute it. The <a class="reference internal" href="#keypirinha
 flag must be left untouched and no call to this method should be
 present in plugin&#8217;s source code.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -565,6 +601,10 @@ present in plugin&#8217;s source code.</p>
 <dd><p>Log an error message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -586,6 +626,16 @@ be empty.</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.Plugin.friendly_name">
+<code class="descname">friendly_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.friendly_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns plugin&#8217;s friendly (short) name.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal"><span class="pre">package_full_name()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -643,6 +693,10 @@ located in the package. Examples: <code class="docutils literal"><span class="pr
 <dd><p>Log an informational message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -823,6 +877,10 @@ to know more about the meaning of the returned value.</li>
 <dd><p>Log an warning message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -869,7 +927,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -894,15 +952,15 @@ to know more about the meaning of the returned value.</li>
       });
   </script>
   
+   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-74522446-1', 'auto');
     ga('send', 'pageview');
   </script>
-
 
 </body>
 </html>

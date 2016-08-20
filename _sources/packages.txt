@@ -27,8 +27,8 @@ Repositories is the way they are stored and their location.
 
 .. important::
     A Package content can span over multiple Repositories. This is convenient if
-    you wish to modify an Installed or Official package like its configuration
-    or its source code for example, without having to alter the original files.
+    you wish to modify an Installed or Official package like its source code for
+    example, without having to alter the original files.
 
     For that reason, there is an order of precedence when loading a Package and
     if two files with the same name belong to the same Package, the file located
@@ -106,15 +106,15 @@ Package Naming
 
 Rules for package naming:
 
-* Name can contain alpha-numeric characters (case insensitive) and space
-  characters (``0x20``), as well as the following characters: ``-``, ``+``,
+* Name can contain alphanumeric characters (case insensitive) and space
+  characters (code ``0x20``), as well as the following characters: ``-``, ``+``,
   ``=``, ``_``, ``#``, ``@``, ``(``, ``)``, ``[``, ``]``, ``{``, ``}``
 
-* Name must be at least 3 characters long
+* Name must be at least 3 characters, up to 50
 
-* Name must begin and end by an alpha-numeric character
+* Name must begin and end by an alphanumeric character
 
-* Sequences of multiple space characters are not accepted
+* Consecutives non-alphanumeric characters are not allowed.
 
 * The following names are reserved:
 
@@ -139,7 +139,10 @@ Rules for package naming:
     - ``local``
     - ``locale``
     - ``main``
+    - ``name``
+    - ``nil``
     - ``none``
+    - ``null``
     - ``official``
     - ``package``
     - ``python``
@@ -147,6 +150,7 @@ Rules for package naming:
     - ``resource``
     - ``temp``
     - ``tmp``
+    - ``type``
     - ``user``
 
 If the name of a Package does not comply to those rules, the Package will be

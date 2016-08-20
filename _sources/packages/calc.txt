@@ -5,7 +5,9 @@ Calc Package
 Available since version 2.0.
 
 The *Calc* package allows to quickly evaluate a mathematical expression directly
-from |project| and eventually copy its result to the clipboard.
+from |project| and eventually copy its result to the clipboard. It also offers
+**base conversion** of integers (hexadecimal, binary, octal) and **currency
+formatting**.
 
 .. image:: ../images/pack-calc.png
     :align: center
@@ -21,9 +23,12 @@ This package populates the :term:`Catalog` with the following items:
 
 .. tip::
 
-    You do not need to use the ``=`` item to start typing your mathematical
-    expression. This plugin allows to you to enter it directly and it will be
-    evaluated as long as its syntax is valid.
+    * You do not need to use the ``=`` item to start typing your mathematical
+      expression. This plugin allows to you to enter it directly and it will be
+      evaluated as long as its syntax is valid.
+    * It is also possible to prefix your expression with the ``=`` keyword to
+      indicate the plugin you wish the trailing part to be evaluated in case the
+      ``always_evaluate`` option is disabled.
 
 
 Configuration
@@ -58,121 +63,230 @@ Quick Examples
 
 * ``(3+4)*2`` (parentheses are supported)
 
-* ``3**3`` (power of)
+* ``3^3`` or ``3**3`` (power of)
+
+* ``2K`` (number suffix; see section below)
 
 * ``0xa`` (hexadecimal numbers will be converted to decimal)
 
 * ``0b100`` (binary numbers will be converted to decimal)
 
+* ``0o3`` (octal numbers will be converted to decimal)
+
 * ``0b100 * 0x2`` (hexadecimal and binary numbers can be used in operations as
   well)
+
+* Bitwise operators:
+
+    - ``1 << 2`` (left shift)
+    - ``10 >> 1`` (right shift)
+    - ``1 & 2`` (AND)
+    - ``1 | 2`` (OR)
+    - ``1 ~ 2`` (XOR)
 
 
 Predefined Constants
 --------------------
 
-* ``pi = 3.141592653589793``
++---------------+--------------------------------------------------------------+
+| Name          | Value / Meaning                                              |
++===============+==============================================================+
+| ``pi``        | See Python's :py:data:`math.pi`                              |
++---------------+--------------------------------------------------------------+
+| ``e``         | See Python's :py:data:`math.e`                               |
++---------------+--------------------------------------------------------------+
+| ``inf``       | See Python's :py:data:`math.inf` (Infinity)                  |
++---------------+--------------------------------------------------------------+
+| ``nan``       | See Python's :py:data:`math.nan` (Not A Number)              |
++---------------+--------------------------------------------------------------+
+| ``ans``       | The result of the last valid operation |br|                  |
+|               | Reset to zero at |project|'s startup or when the package is  |
+|               | reloaded                                                     |
++---------------+--------------------------------------------------------------+
 
-* ``e = 2.718281828459045``
 
-* ``inf`` (infinity)
+Number Suffixes
+---------------
 
-* ``nan`` (Not A Number)
+To ease input, it is possible to specify a multiple of a number by its
+name. |br|
+Example: ``1Ki`` is equal to ``1024``. |br|
+
+.. warning::
+    Suffixes are **case-sensitive** which means ``Ki`` is not equivalent to
+    ``ki``.
+
+This package supports the following suffixes:
+
+**Metric System:**
+
++--------+-------+-------------------+
+| Suffix | Name  | Expands to        |
++========+=======+===================+
+| ``y``  | yocto | ``n / 1000 ** 8`` |
++--------+-------+-------------------+
+| ``z``  | zepto | ``n / 1000 ** 7`` |
++--------+-------+-------------------+
+| ``a``  | atto  | ``n / 1000 ** 6`` |
++--------+-------+-------------------+
+| ``f``  | femto | ``n / 1000 ** 5`` |
++--------+-------+-------------------+
+| ``p``  | pico  | ``n / 1000 ** 4`` |
++--------+-------+-------------------+
+| ``n``  | nano  | ``n / 1000 ** 3`` |
++--------+-------+-------------------+
+| ``u``  | micro | ``n / 1000 ** 2`` |
++--------+-------+-------------------+
+| ``m``  | milli | ``n / 1000``      |
++--------+-------+-------------------+
+| ``c``  | centi | ``n / 100``       |
++--------+-------+-------------------+
+| ``d``  | deci  | ``n / 10``        |
++--------+-------+-------------------+
+| ``da`` | deca  | ``n * 10``        |
++--------+-------+-------------------+
+| ``h``  | hecto | ``n * 100``       |
++--------+-------+-------------------+
+| ``k``  | Kilo  | ``n * 1000``      |
++--------+-------+-------------------+
+| ``M``  | Mega  | ``n * 1000 ** 2`` |
++--------+-------+-------------------+
+| ``G``  | Giga  | ``n * 1000 ** 3`` |
++--------+-------+-------------------+
+| ``T``  | Tera  | ``n * 1000 ** 4`` |
++--------+-------+-------------------+
+| ``P``  | Peta  | ``n * 1000 ** 5`` |
++--------+-------+-------------------+
+| ``E``  | Exa   | ``n * 1000 ** 6`` |
++--------+-------+-------------------+
+| ``Z``  | Zetta | ``n * 1000 ** 7`` |
++--------+-------+-------------------+
+| ``Y``  | Yotta | ``n * 1000 ** 8`` |
++--------+-------+-------------------+
+
+**Orders of Magnitude of Data:**
+
++--------+-------+-------------------+
+| Suffix | Name  | Expands to        |
++========+=======+===================+
+| ``Ki`` | Kibi  | ``n * 1024``      |
++--------+-------+-------------------+
+| ``Mi`` | Mebi  | ``n * 1024 ** 2`` |
++--------+-------+-------------------+
+| ``Gi`` | Gibi  | ``n * 1024 ** 3`` |
++--------+-------+-------------------+
+| ``Ti`` | Tebi  | ``n * 1024 ** 4`` |
++--------+-------+-------------------+
+| ``Pi`` | Pebi  | ``n * 1024 ** 5`` |
++--------+-------+-------------------+
+| ``Ei`` | Exbi  | ``n * 1024 ** 6`` |
++--------+-------+-------------------+
+| ``Zi`` | Zebi  | ``n * 1024 ** 7`` |
++--------+-------+-------------------+
+| ``Yi`` | Yobi  | ``n * 1024 ** 8`` |
++--------+-------+-------------------+
 
 
 Core Functions
 --------------
 
-* ``abs`` (see standard Python function :py:func:`abs`)
-
-* ``bool`` (see standard Python function :py:func:`bool`)
-
-* ``chr`` (see standard Python function :py:func:`chr`)
-
-* ``divmod`` (see standard Python function :py:func:`divmod`)
-
-* ``float`` (see standard Python function :py:func:`float`)
-
-* ``hex`` (see standard Python function :py:func:`hex`)
-
-* ``int`` (see standard Python function :py:func:`int`)
-
-* ``len`` (see standard Python function :py:func:`len`)
-
-* ``min`` (see standard Python function :py:func:`min`)
-
-* ``max`` (see standard Python function :py:func:`max`)
-
-* ``oct`` (see standard Python function :py:func:`oct`)
-
-* ``ord`` (see standard Python function :py:func:`ord`)
-
-* ``pow`` (see standard Python function :py:func:`pow`)
-
-* ``round`` (see standard Python function :py:func:`round`)
-
-* ``str`` (see standard Python function :py:func:`str`)
++---------------+--------------------------------+
+| ``abs``       | See Python's :py:func:`abs`    |
++---------------+--------------------------------+
+| ``bin``       | See Python's :py:func:`bin`    |
++---------------+--------------------------------+
+| ``bool``      | See Python's :py:func:`bool`   |
++---------------+--------------------------------+
+| ``chr``       | See Python's :py:func:`chr`    |
++---------------+--------------------------------+
+| ``divmod``    | See Python's :py:func:`divmod` |
++---------------+--------------------------------+
+| ``float``     | See Python's :py:func:`float`  |
++---------------+--------------------------------+
+| ``hex``       | See Python's :py:func:`hex`    |
++---------------+--------------------------------+
+| ``int``       | See Python's :py:func:`int`    |
++---------------+--------------------------------+
+| ``len``       | See Python's :py:func:`len`    |
++---------------+--------------------------------+
+| ``min``       | See Python's :py:func:`min`    |
++---------------+--------------------------------+
+| ``max``       | See Python's :py:func:`max`    |
++---------------+--------------------------------+
+| ``oct``       | See Python's :py:func:`oct`    |
++---------------+--------------------------------+
+| ``ord``       | See Python's :py:func:`ord`    |
++---------------+--------------------------------+
+| ``pow``       | See Python's :py:func:`pow`    |
++---------------+--------------------------------+
+| ``round``     | See Python's :py:func:`round`  |
++---------------+--------------------------------+
+| ``str``       | See Python's :py:func:`str`    |
++---------------+--------------------------------+
 
 
 Math Functions
 --------------
 
-* ``acos`` (see standard Python function :py:func:`math.acos`)
-
-* ``acosh`` (see standard Python function :py:func:`math.acosh`)
-
-* ``asin`` (see standard Python function :py:func:`math.asin`)
-
-* ``asinh`` (see standard Python function :py:func:`math.asinh`)
-
-* ``atan`` (see standard Python function :py:func:`math.atan`)
-
-* ``atan2`` (see standard Python function :py:func:`math.atan2`)
-
-* ``atanh`` (see standard Python function :py:func:`math.atanh`)
-
-* ``ceil`` (see standard Python function :py:func:`math.ceil`)
-
-* ``cos`` (see standard Python function :py:func:`math.cos`)
-
-* ``cosh`` (see standard Python function :py:func:`math.cosh`)
-
-* ``deg`` (see standard Python function :py:func:`math.degrees`)
-
-* ``exp`` (see standard Python function :py:func:`math.exp`)
-
-* ``factor`` (see standard Python function :py:func:`math.factorial`)
-
-* ``floor`` (see standard Python function :py:func:`math.floor`)
-
-* ``gcd`` (see standard Python function :py:func:`math.gcd`)
-
-* ``hypot`` (see standard Python function :py:func:`math.hypot`)
-
-* ``log`` (see standard Python function :py:func:`math.log`)
-
-* ``rad`` (see standard Python function :py:func:`math.radians`)
-
-* ``sin`` (see standard Python function :py:func:`math.sin`)
-
-* ``sinh`` (see standard Python function :py:func:`math.sinh`)
-
-* ``sqrt`` (see standard Python function :py:func:`math.sqrt`)
-
-* ``tan`` (see standard Python function :py:func:`math.tan`)
-
-* ``tanh`` (see standard Python function :py:func:`math.tanh`)
++---------------+----------------------------------------+
+| ``acos``      | See Python's :py:func:`math.acos`      |
++---------------+----------------------------------------+
+| ``acosh``     | See Python's :py:func:`math.acosh`     |
++---------------+----------------------------------------+
+| ``asin``      | See Python's :py:func:`math.asin`      |
++---------------+----------------------------------------+
+| ``asinh``     | See Python's :py:func:`math.asinh`     |
++---------------+----------------------------------------+
+| ``atan``      | See Python's :py:func:`math.atan`      |
++---------------+----------------------------------------+
+| ``atan2``     | See Python's :py:func:`math.atan2`     |
++---------------+----------------------------------------+
+| ``atanh``     | See Python's :py:func:`math.atanh`     |
++---------------+----------------------------------------+
+| ``ceil``      | See Python's :py:func:`math.ceil`      |
++---------------+----------------------------------------+
+| ``cos``       | See Python's :py:func:`math.cos`       |
++---------------+----------------------------------------+
+| ``cosh``      | See Python's :py:func:`math.cosh`      |
++---------------+----------------------------------------+
+| ``deg``       | See Python's :py:func:`math.degrees`   |
++---------------+----------------------------------------+
+| ``exp``       | See Python's :py:func:`math.exp`       |
++---------------+----------------------------------------+
+| ``factor``    | See Python's :py:func:`math.factorial` |
++---------------+----------------------------------------+
+| ``floor``     | See Python's :py:func:`math.floor`     |
++---------------+----------------------------------------+
+| ``gcd``       | See Python's :py:func:`math.gcd`       |
++---------------+----------------------------------------+
+| ``hypot``     | See Python's :py:func:`math.hypot`     |
++---------------+----------------------------------------+
+| ``log``       | See Python's :py:func:`math.log`       |
++---------------+----------------------------------------+
+| ``rad``       | See Python's :py:func:`math.radians`   |
++---------------+----------------------------------------+
+| ``sin``       | See Python's :py:func:`math.sin`       |
++---------------+----------------------------------------+
+| ``sinh``      | See Python's :py:func:`math.sinh`      |
++---------------+----------------------------------------+
+| ``sqrt``      | See Python's :py:func:`math.sqrt`      |
++---------------+----------------------------------------+
+| ``tan``       | See Python's :py:func:`math.tan`       |
++---------------+----------------------------------------+
+| ``tanh``      | See Python's :py:func:`math.tanh`      |
++---------------+----------------------------------------+
 
 
 Random Functions
 ----------------
 
-* ``rand`` |br|
-  Usage: ``rand(top)`` |br|
-  Returns an integer below *top*.
-
-* ``rand1`` (see standard Python function :py:func:`random.random`)
-
-* ``randf`` (see standard Python function :py:func:`random.uniform`)
-
-* ``randi`` (see standard Python function :py:func:`random.randint`)
++---------------+----------------------------------------+
+| ``rand``      | Usage: ``rand(top)`` |br|              |
+|               | Returns an integer below *top*.        |
++---------------+----------------------------------------+
+| ``rand1``     | See Python's :py:func:`random.random`  |
++---------------+----------------------------------------+
+| ``randf``     | See Python's :py:func:`random.uniform` |
++---------------+----------------------------------------+
+| ``randi``     | See Python's :py:func:`random.randint` |
++---------------+----------------------------------------+
