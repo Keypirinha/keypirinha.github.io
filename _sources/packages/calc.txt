@@ -65,7 +65,7 @@ Quick Examples
 
 * ``3^3`` or ``3**3`` (power of)
 
-* ``2K`` (number suffix; see section below)
+* ``2k`` (number suffix; see section below)
 
 * ``0xa`` (hexadecimal numbers will be converted to decimal)
 

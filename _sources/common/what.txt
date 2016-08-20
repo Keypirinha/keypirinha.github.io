@@ -8,8 +8,7 @@
 * Convert numbers
 * Switch to a running application searched by name
 * Associate a keyword to a specific item
-* ...
-* An embedded Python3_ API
+* An embedded Python3_ API to extend |project|'s features
 
 **Properties:**
 
@@ -18,7 +17,7 @@
 * Battery friendly
 * Extensible by writing :term:`plugin` scripts in Python3_.
 
-You can see |project| as an alternative to Launchy and a cousin to Alfred.
+You can see |project| as an alternative to *Launchy* and a cousin to *Alfred*.
 
 See the :doc:`first` chapter for more information.
 
