@@ -17,7 +17,8 @@
 * Battery friendly
 * Extensible by writing :term:`plugin` scripts in Python3_.
 
-You can see |project| as an alternative to *Launchy* and a cousin to *Alfred*.
+You can think of |project| as an alternative to *Launchy* and a cousin to
+*Alfred*.
 
 See the :doc:`first` chapter for more information.
 
