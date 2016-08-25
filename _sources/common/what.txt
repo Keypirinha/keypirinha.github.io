@@ -4,8 +4,10 @@
 
 * Quickly find and launch plethora of items like applications, files,
   bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), ...
+* Launch a search on any configured website or online dictionary
 * Evaluate a mathematical expression
 * Convert numbers
+* Launch a pasted URL directly (``http``, ``mailto``, ``skype``, ...)
 * Switch to a running application searched by name
 * Associate a keyword to a specific item
 * An embedded Python3_ API to extend |project|'s features
@@ -16,6 +18,7 @@
 * Fairly small memory footprint
 * Battery friendly
 * Extensible by writing :term:`plugin` scripts in Python3_.
+* A community full of enthusiasts
 
 You can think of |project| as an alternative to *Launchy* and a cousin to
 *Alfred*.
