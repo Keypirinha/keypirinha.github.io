@@ -36,8 +36,7 @@ What is |project|
 Current Developments
 ====================
 
-Here are the headlines of |project|'s current developments as of
-**August 2016**.
+Here are the headlines of |project|'s current developments.
 
 **Open Packages Platform:** |project| is glad to welcome `@psistorm`_ as a
 project member! He is currently working on developing the online side of the

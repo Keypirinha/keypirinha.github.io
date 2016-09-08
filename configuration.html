@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                2.9.3
+                2.9.4
               </div>
             
           
@@ -350,89 +350,314 @@ Examples:</p>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\Packages</span></code> (portable mode)</li>
 </ul>
 </li>
-<li><p class="first">For convenience, the GUIDs of Windows&#8217;
+<li><p class="first">For convenience, some Windows&#8217;
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx">Known Folders</a>
 are also predefined. They may come handy to configure some packages.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="23%" />
-<col width="30%" />
-<col width="47%" />
+<col width="37%" />
+<col width="63%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
-<th class="head">Expands to</th>
-<th class="head">Usual location</th>
+<th class="head">Usual Location</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ACCOUNTPICTURES</span></code></td>
-<td><code class="docutils literal"><span class="pre">{008ca0b1-55b4-4c56-b8a8-4de4b299d3be}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\AccountPictures</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTMENU</span></code></td>
-<td><code class="docutils literal"><span class="pre">{a4115719-d62e-491d-aa7c-e74b8be3b067}</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_CAMERAROLL</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures\Camera</span> <span class="pre">Roll</span></code> (Win8.1+)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTMENU</span></code></td>
 <td><code class="docutils literal"><span class="pre">%ALLUSERSPROFILE%\Microsoft\Windows\Start</span> <span class="pre">Menu</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTUP</span></code></td>
-<td><code class="docutils literal"><span class="pre">{82a5ea35-d9cd-47c5-9629-e15d2f714e6e}</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_COMMONSTARTUP</span></code></td>
 <td><code class="docutils literal"><span class="pre">%ALLUSERSPROFILE%\Microsoft\Windows\Start</span> <span class="pre">Menu\Programs\StartUp</span></code></td>
 </tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_CONTACTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Contacts</span></code></td>
+</tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DESKTOP</span></code></td>
-<td><code class="docutils literal"><span class="pre">{b4bfcc3a-db2c-424c-b029-7fe99a87c641}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%USERPROFILE%\Desktop</span></code></td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DOCUMENTS</span></code></td>
-<td><code class="docutils literal"><span class="pre">{fdd39ad0-238f-46af-adb4-6c85480369c7}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%USERPROFILE%\Documents</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_DOWNLOADS</span></code></td>
-<td><code class="docutils literal"><span class="pre">{374de290-123f-4565-9164-39c4925e467b}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%USERPROFILE%\Downloads</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATA</span></code></td>
-<td><code class="docutils literal"><span class="pre">{f1b32785-6fba-4fcf-9d55-7b8e7f157091}</span></code></td>
-<td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%</span> <span class="pre">(%USERPROFILE%\AppData\Local)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_FAVORITES</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Favorites</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATALOW</span></code></td>
-<td><code class="docutils literal"><span class="pre">{A520A1A4-1780-4FF6-BD18-167343C5AF16}</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_FONTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%windir%\Fonts</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LINKS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Links</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%</span></code> (<code class="docutils literal"><span class="pre">%USERPROFILE%\AppData\Local</span></code>)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_LOCALAPPDATALOW</span></code></td>
 <td><code class="docutils literal"><span class="pre">%USERPROFILE%\AppData\LocalLow</span></code></td>
 </tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_MUSIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Music</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PLAYLISTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Music\Playlists</span></code></td>
+</tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROFILE</span></code></td>
-<td><code class="docutils literal"><span class="pre">{5e6c858f-0e22-4760-9afe-ea3317b67173}</span></code></td>
-<td><code class="docutils literal"><span class="pre">%USERPROFILE%</span> <span class="pre">(%SystemDrive%\Users\%USERNAME%)</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%</span></code> (<code class="docutils literal"><span class="pre">%SystemDrive%\Users\%USERNAME%</span></code>)</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILES</span></code></td>
-<td><code class="docutils literal"><span class="pre">{905e63b6-c1bf-494e-b29c-65b732d3d21a}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%ProgramFiles%</span></code></td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESX64</span></code></td>
-<td><code class="docutils literal"><span class="pre">{6d809377-6af0-444b-8957-a3773f02200e}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%ProgramFiles%</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESX86</span></code></td>
-<td><code class="docutils literal"><span class="pre">{7c5a40ef-a0fb-4bfc-874a-c0f2e0b9fa8e}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%ProgramFiles(x86)%</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ROAMINGAPPDATA</span></code></td>
-<td><code class="docutils literal"><span class="pre">{3eb685db-65f9-4cf6-a03a-e3ef65729f3d}</span></code></td>
-<td><code class="docutils literal"><span class="pre">%APPDATA%</span> <span class="pre">(%USERPROFILE%\AppData\Roaming)</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESCOMMON</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles%\Common</span> <span class="pre">Files</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTMENU</span></code></td>
-<td><code class="docutils literal"><span class="pre">{625b53c3-ab48-4ec1-ba1f-a1ef4146fc19}</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESCOMMONX64</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles%\Common</span> <span class="pre">Files</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMFILESCOMMONX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">%ProgramFiles(x86)%\Common</span> <span class="pre">Files</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PROGRAMS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\Start</span> <span class="pre">Menu\Programs</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%</span></code> (<code class="docutils literal"><span class="pre">%SystemDrive%\Users\Public</span></code>)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICDESKTOP</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Desktop</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICDOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Documents</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICDOWNLOADS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Downloads</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICMUSIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Music</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Pictures</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_PUBLICVIDEOS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%PUBLIC%\Videos</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ROAMINGAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%</span></code> (<code class="docutils literal"><span class="pre">%USERPROFILE%\AppData\Roaming</span></code>)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SCREENSHOTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures\Screenshots</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SENDTO</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\SendTo</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SKYDRIVE</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\OneDrive</span></code> (Win8.1+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SKYDRIVECAMERAROLL</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\OneDrive\Pictures\Camera</span> <span class="pre">Roll</span></code> (Win8.1+)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SKYDRIVEDOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\OneDrive\Documents</span></code> (Win8.1+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SKYDRIVEPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\OneDrive\Pictures</span></code> (Win8.1+)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTMENU</span></code></td>
 <td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\Start</span> <span class="pre">Menu</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTUP</span></code></td>
-<td><code class="docutils literal"><span class="pre">{b97d20bb-f46a-4c97-ba10-5e3608430854}</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_STARTUP</span></code></td>
 <td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\Start</span> <span class="pre">Menu\Programs\StartUp</span></code></td>
 </tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SYSTEM</span></code></td>
+<td><code class="docutils literal"><span class="pre">%windir%\system32</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SYSTEMX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">%windir%\system32</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_USERPROFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">%SystemDrive%\Users</span></code></td>
+</tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_USERPROGRAMFILES</span></code></td>
-<td><code class="docutils literal"><span class="pre">{5cd7aee2-2219-4a67-b85d-6c9ce15660cb}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%\Programs</span></code></td>
 </tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_USERPROGRAMFILESCOMMON</span></code></td>
+<td><code class="docutils literal"><span class="pre">%LOCALAPPDATA%\Programs\Common</span></code> (Win7+)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_VIDEOS</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Videos</span></code></td>
+</tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_WINDOWS</span></code></td>
-<td><code class="docutils literal"><span class="pre">{f38bf404-1d43-42f2-9305-67de0b28fc23}</span></code></td>
 <td><code class="docutils literal"><span class="pre">%windir%</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Expands to</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_ACCOUNTPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{008ca0b1-55b4-4c56-b8a8-4de4b299d3be}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_CAMERAROLL</span></code></td>
+<td><code class="docutils literal"><span class="pre">{ab5fb87b-7ce2-4f83-915d-550846c9537b}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_COMMONSTARTMENU</span></code></td>
+<td><code class="docutils literal"><span class="pre">{a4115719-d62e-491d-aa7c-e74b8be3b067}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_COMMONSTARTUP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{82a5ea35-d9cd-47c5-9629-e15d2f714e6e}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_CONTACTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{56784854-c6cb-462b-8169-88e350acb882}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_DESKTOP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b4bfcc3a-db2c-424c-b029-7fe99a87c641}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_DOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{fdd39ad0-238f-46af-adb4-6c85480369c7}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_DOWNLOADS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{374de290-123f-4565-9164-39c4925e467b}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_FAVORITES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{1777f761-68ad-4d8a-87bd-30b759fa33dd}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_FONTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{fd228cb7-ae11-4ae3-864c-16f3910ab8fe}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_LINKS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{bfb9d5e0-c6a9-404c-b2b2-ae6db6af4968}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_LOCALAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">{f1b32785-6fba-4fcf-9d55-7b8e7f157091}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_LOCALAPPDATALOW</span></code></td>
+<td><code class="docutils literal"><span class="pre">{a520a1a4-1780-4ff6-bd18-167343c5af16}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_MUSIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">{4bd8d571-6d19-48d3-be97-422220080e43}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{33e28130-4e1e-4676-835a-98395c3bc3bb}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PLAYLISTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{de92c1c7-837f-4f69-a3bb-86e631204a23}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROFILE</span></code></td>
+<td><code class="docutils literal"><span class="pre">{5e6c858f-0e22-4760-9afe-ea3317b67173}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{905e63b6-c1bf-494e-b29c-65b732d3d21a}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILESX64</span></code></td>
+<td><code class="docutils literal"><span class="pre">{6d809377-6af0-444b-8957-a3773f02200e}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILESX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">{7c5a40ef-a0fb-4bfc-874a-c0f2e0b9fa8e}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILESCOMMON</span></code></td>
+<td><code class="docutils literal"><span class="pre">{f7f1ed05-9f6d-47a2-aaae-29d317c6f066}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILESCOMMONX64</span></code></td>
+<td><code class="docutils literal"><span class="pre">{6365d5a7-0f0d-45e5-87f6-0da56b6a4f7d}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMFILESCOMMONX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">{de974d24-d9c6-4d3e-bf91-f4455120b917}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PROGRAMS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{a77f5d77-2e2b-44c3-a6a2-aba601054a51}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">{dfdf76a2-c82a-4d63-906a-5644ac457385}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICDESKTOP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{c4aa340d-f20f-4863-afef-f87ef2e6ba25}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICDOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{ed4824af-dce4-45a8-81e2-fc7965083634}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICDOWNLOADS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{3d644c9b-1fb8-4f30-9b45-f670235f79c0}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICMUSIC</span></code></td>
+<td><code class="docutils literal"><span class="pre">{3214fab5-9757-4298-bb61-92a9deaa44ff}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b6ebfb86-6907-413c-9af7-4fc2abf07cc5}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_PUBLICVIDEOS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{2400183a-6185-49fb-a2d8-4a392a602ba3}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_ROAMINGAPPDATA</span></code></td>
+<td><code class="docutils literal"><span class="pre">{3eb685db-65f9-4cf6-a03a-e3ef65729f3d}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SCREENSHOTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b7bede81-df94-4682-a7d8-57a52620b86f}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SENDTO</span></code></td>
+<td><code class="docutils literal"><span class="pre">{8983036c-27c0-404b-8f08-102d10dcfd74}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SKYDRIVE</span></code></td>
+<td><code class="docutils literal"><span class="pre">{a52bba46-e9e1-435f-b3d9-28daa648c0f6}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SKYDRIVECAMERAROLL</span></code></td>
+<td><code class="docutils literal"><span class="pre">{767e6811-49cb-4273-87c2-20f355e1085b}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SKYDRIVEDOCUMENTS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{24d89e24-2f19-4534-9dde-6a6671fbb8fe}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SKYDRIVEPICTURES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{339719b5-8c47-4894-94c2-d8f77add44a6}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_STARTMENU</span></code></td>
+<td><code class="docutils literal"><span class="pre">{625b53c3-ab48-4ec1-ba1f-a1ef4146fc19}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_STARTUP</span></code></td>
+<td><code class="docutils literal"><span class="pre">{b97d20bb-f46a-4c97-ba10-5e3608430854}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SYSTEM</span></code></td>
+<td><code class="docutils literal"><span class="pre">{1ac14e77-02e7-4e5d-b744-2eb1ae5198b7}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_SYSTEMX86</span></code></td>
+<td><code class="docutils literal"><span class="pre">{d65231b0-b2f1-4857-a4ce-a8e7c6ea7d27}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_USERPROFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{0762d272-c50a-4bb0-a382-697dcd729b80}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_USERPROGRAMFILES</span></code></td>
+<td><code class="docutils literal"><span class="pre">{5cd7aee2-2219-4a67-b85d-6c9ce15660cb}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_USERPROGRAMFILESCOMMON</span></code></td>
+<td><code class="docutils literal"><span class="pre">{bcbd3057-ca5c-4622-b42d-bc56db0ae516}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_VIDEOS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{18989b1d-99b5-455b-841c-ab7c74e4ddfc}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDERGUID_WINDOWS</span></code></td>
+<td><code class="docutils literal"><span class="pre">{f38bf404-1d43-42f2-9305-67de0b28fc23}</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -518,7 +743,7 @@ directory.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.3',
+            VERSION:'2.9.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
