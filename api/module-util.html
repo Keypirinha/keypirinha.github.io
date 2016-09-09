@@ -788,9 +788,12 @@ specified Known Folder is virtual.</li>
 <dl class="function">
 <dt id="keypirinha_util.shell_resolve_exe_path">
 <code class="descclassname">keypirinha_util.</code><code class="descname">shell_resolve_exe_path</code><span class="sig-paren">(</span><em>path_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_resolve_exe_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tries to resolve <em>path_or_name</em> using environment PATH and PATHEXT
-variables. Returns <code class="docutils literal"><span class="pre">None</span></code> if executable could not be found or if an error
-occurred.</p>
+<dd><p>Tries to resolve <em>path_or_name</em> using environment <code class="docutils literal"><span class="pre">PATH</span></code> and <code class="docutils literal"><span class="pre">PATHEXT</span></code>
+variables.</p>
+<p><em>path_or_name</em> can be a path or just the name of the executable to
+find, in which case <code class="docutils literal"><span class="pre">PATHEXT</span></code> will be used to find a match in the
+directories listed in the <code class="docutils literal"><span class="pre">PATH</span></code> value.</p>
+<p>Returns <code class="docutils literal"><span class="pre">None</span></code> if executable could not be found or if an error occurred.</p>
 </dd></dl>
 
 <dl class="function">
