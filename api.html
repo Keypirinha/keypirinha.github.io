@@ -43,8 +43,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-    
-
   <div class="wy-grid-for-nav">
 
     
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -99,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Extending <em>Keypirinha</em> (API)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">11. Extending <em>Keypirinha</em> (API)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/overview.html">11.1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/reference.html">11.2. API Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/python.html">11.3. Embedded Python Interpreter</a></li>
@@ -134,7 +132,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -157,9 +155,12 @@
   <div class="section" id="extending-project-api">
 <h1>11. Extending <em>Keypirinha</em> (API)<a class="headerlink" href="#extending-project-api" title="Permalink to this headline">¶</a></h1>
 <p><em>Keypirinha</em> offers a flexible way to be extended thanks to its embedded <a class="reference external" href="https://python.org">Python3</a>
-interpreter and its exposed Python API through two Python modules:
-<a class="reference internal" href="api/module.html#module-keypirinha" title="keypirinha"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha</span></code></a> and <a class="reference internal" href="api/module-util.html#module-keypirinha_util" title="keypirinha_util"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha_util</span></code></a>.</p>
-<p>Before reading further, you may want to get familiar with the <a class="reference internal" href="packages.html"><span class="doc">Packages</span></a>
+interpreter and its exposed Python API through Python modules:
+<a class="reference internal" href="api/module.html#module-keypirinha" title="keypirinha"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha</span></code></a>, <a class="reference internal" href="api/module-util.html#module-keypirinha_util" title="keypirinha_util"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha_util</span></code></a> and <a class="reference internal" href="api/module-net.html#module-keypirinha_net" title="keypirinha_net"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha_net</span></code></a>.</p>
+<p>A Software Development Kit (SDK) is available that comes with a small battery of
+tools to help you through the process of creating your own plugin. You can grab
+it from here: <a class="reference external" href="https://github.com/Keypirinha/SDK">SDK Repository (GitHub)</a></p>
+<p>Before reading further, you may want to get familiar with the <a class="reference internal" href="packages.html"><em>Packages</em></a>
 section to picture how <em>Keypirinha</em> loads and interprets its packages and their
 plugins, as well as the subtleties between the different types of packages.</p>
 <div class="toctree-wrapper compound">
@@ -173,11 +174,12 @@ plugins, as well as the subtleties between the different types of packages.</p>
 <li class="toctree-l1"><a class="reference internal" href="api/reference.html">11.2. API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/module.html">11.2.1. keypirinha module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/module-util.html">11.2.2. keypirinha_util module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/catalogaction.html">11.2.3. CatalogAction class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/catalogitem.html">11.2.4. CatalogItem class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/iconhandle.html">11.2.5. IconHandle class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/plugin.html">11.2.6. Plugin class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/settings.html">11.2.7. Settings class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/module-net.html">11.2.3. keypirinha_net module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/catalogaction.html">11.2.4. CatalogAction class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/catalogitem.html">11.2.5. CatalogItem class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/iconhandle.html">11.2.6. IconHandle class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/plugin.html">11.2.7. Plugin class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/settings.html">11.2.8. Settings class</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api/python.html">11.3. Embedded Python Interpreter</a><ul>
@@ -229,7 +231,7 @@ plugins, as well as the subtleties between the different types of packages.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

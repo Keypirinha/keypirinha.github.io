@@ -6,6 +6,6 @@ IconHandle class
 
 .. autoclass:: keypirinha.IconHandle
     :members:
-    :undoc-members:
+    :special-members:
     :no-private-members:
-    :no-special-members:
+..    :undoc-members:

@@ -3,8 +3,12 @@ Extending |project| (API)
 =========================
 
 |project| offers a flexible way to be extended thanks to its embedded Python3_
-interpreter and its exposed Python API through two Python modules:
-:py:mod:`keypirinha` and :py:mod:`keypirinha_util`.
+interpreter and its exposed Python API through Python modules:
+:py:mod:`keypirinha`, :py:mod:`keypirinha_util` and :py:mod:`keypirinha_net`.
+
+A Software Development Kit (SDK) is available that comes with a small battery of
+tools to help you through the process of creating your own plugin. You can grab
+it from here: |sdkrepo_link|
 
 Before reading further, you may want to get familiar with the :doc:`packages`
 section to picture how |project| loads and interprets its packages and their

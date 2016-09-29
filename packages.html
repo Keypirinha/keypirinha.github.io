@@ -43,8 +43,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-    
-
   <div class="wy-grid-for-nav">
 
     
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -96,7 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="overview.html">5. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">6. Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">7. Customize your Catalog</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Packages</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">8. Packages</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#packages-repositories">8.1. Packages Repositories</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#live-packages">8.1.1. Live Packages</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installed-packages-downloaded">8.1.2. Installed Packages (Downloaded)</a></li>
@@ -139,7 +137,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -176,15 +174,15 @@ dependencies, if any.</p>
 <p>There are four <a class="reference internal" href="glossary.html#term-repositories"><span class="xref std std-term">repositories</span></a> of packages. <strong>In order of descending
 priority:</strong></p>
 <ul class="simple">
-<li><a class="reference internal" href="#pack-live"><span class="std std-ref">Live Packages</span></a>: individual directories with loose files</li>
-<li><a class="reference internal" href="#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
+<li><a class="reference internal" href="#pack-live"><span>Live Packages</span></a>: individual directories with loose files</li>
+<li><a class="reference internal" href="#pack-installed"><span>Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
 extension, downloaded and/or installed manually by the user.</li>
-<li><a class="reference internal" href="#pack-official"><span class="std std-ref">Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
+<li><a class="reference internal" href="#pack-official"><span>Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
 extension. Packages officially supported and shipped with the application.</li>
-<li><a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a>
+<li><a class="reference internal" href="#pack-internal"><span>Internal Package</span></a>
 Hard-coded in the application.</li>
 </ul>
-<p>Except for the <a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a> type, the only difference between those
+<p>Except for the <a class="reference internal" href="#pack-internal"><span>Internal Package</span></a> type, the only difference between those
 Repositories is the way they are stored and their location.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
@@ -205,7 +203,7 @@ an existing one.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Package naming is pretty strict and <em>Keypirinha</em> will <strong>silently</strong> ignore a
 Package if its name does not comply to the rules described in the
-<a class="reference internal" href="#pack-naming"><span class="std std-ref">Package Naming</span></a> section below.</p>
+<a class="reference internal" href="#pack-naming"><span>Package Naming</span></a> section below.</p>
 </div>
 <p>This Repository is named <em>Live</em> because it is the only one that allows file
 change at runtime. May it be to configuration files, to its source code or any
@@ -244,15 +242,17 @@ that exposes some core features to the <a class="reference internal" href="gloss
 <span id="pack-naming"></span><h2>8.2. Package Naming<a class="headerlink" href="#package-naming" title="Permalink to this headline">¶</a></h2>
 <p>Rules for package naming:</p>
 <ul>
-<li><p class="first">Name can contain alphanumeric characters (case insensitive) and space
-characters (code <code class="docutils literal"><span class="pre">0x20</span></code>), as well as the following characters: <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">+</span></code>,
-<code class="docutils literal"><span class="pre">=</span></code>, <code class="docutils literal"><span class="pre">_</span></code>, <code class="docutils literal"><span class="pre">#</span></code>, <code class="docutils literal"><span class="pre">&#64;</span></code>, <code class="docutils literal"><span class="pre">(</span></code>, <code class="docutils literal"><span class="pre">)</span></code>, <code class="docutils literal"><span class="pre">[</span></code>, <code class="docutils literal"><span class="pre">]</span></code>, <code class="docutils literal"><span class="pre">{</span></code>, <code class="docutils literal"><span class="pre">}</span></code></p>
+<li><p class="first">Name can contain alphanumeric characters (case insensitive) and the following
+characters: <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">=</span></code>, <code class="docutils literal"><span class="pre">_</span></code>, <code class="docutils literal"><span class="pre">#</span></code>, <code class="docutils literal"><span class="pre">&#64;</span></code>, <code class="docutils literal"><span class="pre">(</span></code>, <code class="docutils literal"><span class="pre">)</span></code>, <code class="docutils literal"><span class="pre">[</span></code>,
+<code class="docutils literal"><span class="pre">]</span></code>, <code class="docutils literal"><span class="pre">{</span></code>, <code class="docutils literal"><span class="pre">}</span></code></p>
 </li>
 <li><p class="first">Name must be at least 3 characters, up to 50</p>
 </li>
 <li><p class="first">Name must begin and end by an alphanumeric character</p>
 </li>
 <li><p class="first">Consecutives non-alphanumeric characters are not allowed.</p>
+</li>
+<li><p class="first">Name must not contain &#8220;<em>Keypirinha</em>&#8220;</p>
 </li>
 <li><p class="first">The following names are reserved:</p>
 <table class="hlist"><tr><td><ul class="simple">
@@ -265,32 +265,40 @@ characters (code <code class="docutils literal"><span class="pre">0x20</span></c
 <li><code class="docutils literal"><span class="pre">cache</span></code></li>
 <li><code class="docutils literal"><span class="pre">data</span></code></li>
 <li><code class="docutils literal"><span class="pre">default</span></code></li>
+<li><code class="docutils literal"><span class="pre">env</span></code></li>
 <li><code class="docutils literal"><span class="pre">extern</span></code></li>
 <li><code class="docutils literal"><span class="pre">external</span></code></li>
+<li><code class="docutils literal"><span class="pre">hook</span></code></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">intern</span></code></li>
-<li><code class="docutils literal"><span class="pre">internal</span></code></li>
 <li><code class="docutils literal"><span class="pre">icon</span></code></li>
 <li><code class="docutils literal"><span class="pre">image</span></code></li>
+<li><code class="docutils literal"><span class="pre">intern</span></code></li>
+<li><code class="docutils literal"><span class="pre">internal</span></code></li>
+<li><code class="docutils literal"><span class="pre">kpsdk</span></code></li>
 <li><code class="docutils literal"><span class="pre">local</span></code></li>
 <li><code class="docutils literal"><span class="pre">locale</span></code></li>
 <li><code class="docutils literal"><span class="pre">main</span></code></li>
 <li><code class="docutils literal"><span class="pre">name</span></code></li>
 <li><code class="docutils literal"><span class="pre">nil</span></code></li>
 <li><code class="docutils literal"><span class="pre">none</span></code></li>
-</ul>
-</td><td><ul class="simple">
 <li><code class="docutils literal"><span class="pre">null</span></code></li>
 <li><code class="docutils literal"><span class="pre">official</span></code></li>
+</ul>
+</td><td><ul class="simple">
 <li><code class="docutils literal"><span class="pre">package</span></code></li>
+<li><code class="docutils literal"><span class="pre">plugin</span></code></li>
 <li><code class="docutils literal"><span class="pre">python</span></code></li>
 <li><code class="docutils literal"><span class="pre">res</span></code></li>
 <li><code class="docutils literal"><span class="pre">resource</span></code></li>
+<li><code class="docutils literal"><span class="pre">sdk</span></code></li>
 <li><code class="docutils literal"><span class="pre">temp</span></code></li>
+<li><code class="docutils literal"><span class="pre">theme</span></code></li>
 <li><code class="docutils literal"><span class="pre">tmp</span></code></li>
 <li><code class="docutils literal"><span class="pre">type</span></code></li>
+<li><code class="docutils literal"><span class="pre">script</span></code></li>
 <li><code class="docutils literal"><span class="pre">user</span></code></li>
+<li><code class="docutils literal"><span class="pre">var</span></code></li>
 </ul>
 </td></tr></table>
 </li>
@@ -341,7 +349,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

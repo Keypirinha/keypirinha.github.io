@@ -1,0 +1,15 @@
+=====================
+keypirinha_net module
+=====================
+
+The ``keypirinha_net`` module offers some network utility features frequently
+required by the plugin developer.
+
+
+Reference
+=========
+
+.. automodule:: keypirinha_net
+    :members:
+    :no-private-members:
+    :show-inheritance:

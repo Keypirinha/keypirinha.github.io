@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11.2.7. Settings class &mdash; Keypirinha</title>
+  <title>11.2.8. Settings class &mdash; Keypirinha</title>
   
 
   
@@ -35,7 +35,7 @@
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="11.2. API Reference" href="reference.html"/>
         <link rel="next" title="11.3. Embedded Python Interpreter" href="python.html"/>
-        <link rel="prev" title="11.2.6. Plugin class" href="plugin.html"/> 
+        <link rel="prev" title="11.2.7. Plugin class" href="plugin.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -43,8 +43,6 @@
 </head>
 
 <body class="wy-body-for-nav" role="document">
-
-    
 
   <div class="wy-grid-for-nav">
 
@@ -68,7 +66,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -105,11 +103,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="module.html">11.2.1. keypirinha module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="module-util.html">11.2.2. keypirinha_util module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.3. CatalogAction class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.4. CatalogItem class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="iconhandle.html">11.2.5. IconHandle class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.6. Plugin class</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">11.2.7. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module-net.html">11.2.3. keypirinha_net module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.5. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iconhandle.html">11.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.7. Plugin class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.8. Settings class</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="python.html">11.3. Embedded Python Interpreter</a></li>
@@ -144,7 +143,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -156,7 +155,7 @@
       
           <li><a href="reference.html">11.2. API Reference</a> &raquo;</li>
       
-    <li>11.2.7. Settings class</li>
+    <li>11.2.8. Settings class</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -169,13 +168,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="settings-class">
-<h1>11.2.7. Settings class<a class="headerlink" href="#settings-class" title="Permalink to this headline">¶</a></h1>
+<h1>11.2.8. Settings class<a class="headerlink" href="#settings-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="keypirinha.Settings">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Settings</code><span class="sig-paren">(</span><em>settings_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class to access the Settings of a Package/Plugin.</p>
 <p>It is not meant to be instantiated manually. You should rather use
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> or <a class="reference internal" href="module.html#keypirinha.load_settings" title="keypirinha.load_settings"><code class="xref py py-func docutils literal"><span class="pre">load_settings()</span></code></a>.</p>
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> or <a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal"><span class="pre">settings()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha.Settings.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>unquote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get" title="Permalink to this definition">¶</a></dt>
@@ -197,12 +196,8 @@ a pair of single-quotes <code class="docutils literal"><span class="pre">'</span
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
-<dt>The found value, or <em>fallback</em> in case <em>key</em> was not found in</dt>
-<dd><p class="first last"><em>section</em>.</p>
-</dd>
-</dl>
-</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The found value, or <em>fallback</em> in case <em>key</em> was not found in
+<em>section</em>.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
@@ -357,7 +352,7 @@ spaces).</p>
         <a href="python.html" class="btn btn-neutral float-right" title="11.3. Embedded Python Interpreter" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="plugin.html" class="btn btn-neutral" title="11.2.6. Plugin class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plugin.html" class="btn btn-neutral" title="11.2.7. Plugin class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -387,7 +382,7 @@ spaces).</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11.2.5. IconHandle class &mdash; Keypirinha</title>
+  <title>11.2.6. IconHandle class &mdash; Keypirinha</title>
   
 
   
@@ -34,8 +34,8 @@
   
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="11.2. API Reference" href="reference.html"/>
-        <link rel="next" title="11.2.6. Plugin class" href="plugin.html"/>
-        <link rel="prev" title="11.2.4. CatalogItem class" href="catalogitem.html"/> 
+        <link rel="next" title="11.2.7. Plugin class" href="plugin.html"/>
+        <link rel="prev" title="11.2.5. CatalogItem class" href="catalogitem.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -43,8 +43,6 @@
 </head>
 
 <body class="wy-body-for-nav" role="document">
-
-    
 
   <div class="wy-grid-for-nav">
 
@@ -68,7 +66,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -105,11 +103,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="module.html">11.2.1. keypirinha module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="module-util.html">11.2.2. keypirinha_util module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.3. CatalogAction class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.4. CatalogItem class</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">11.2.5. IconHandle class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.6. Plugin class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="settings.html">11.2.7. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module-net.html">11.2.3. keypirinha_net module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.5. CatalogItem class</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.7. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">11.2.8. Settings class</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="python.html">11.3. Embedded Python Interpreter</a></li>
@@ -144,7 +143,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -156,7 +155,7 @@
       
           <li><a href="reference.html">11.2. API Reference</a> &raquo;</li>
       
-    <li>11.2.5. IconHandle class</li>
+    <li>11.2.6. IconHandle class</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -169,12 +168,24 @@
            <div itemprop="articleBody">
             
   <div class="section" id="iconhandle-class">
-<h1>11.2.5. IconHandle class<a class="headerlink" href="#iconhandle-class" title="Permalink to this headline">¶</a></h1>
+<h1>11.2.6. IconHandle class<a class="headerlink" href="#iconhandle-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="keypirinha.IconHandle">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">IconHandle</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
 <dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_icon()</span></code></a> and
 by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal"><span class="pre">load_icon()</span></code></a>.</p>
+<dl class="method">
+<dt id="keypirinha.IconHandle.__bool__">
+<code class="descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__bool__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate whether this handle has been <a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">free()</span></code></a> or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.IconHandle.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#keypirinha.IconHandle.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="keypirinha.IconHandle.free">
 <code class="descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.free" title="Permalink to this definition">¶</a></dt>
@@ -183,14 +194,11 @@ by <a class="reference internal" href="module.html#keypirinha.load_icon" title="
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
-<dt>A boolean value to indicate whether resources have actually</dt>
-<dd>been freed or not. This method may return <code class="docutils literal"><span class="pre">False</span></code> if it has
-been called already for this handle, or by an other
-<a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a> object pointing to the same icon
-resource. You usually do not need to check the return value.</dd>
-</dl>
-</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean value to indicate whether resources have actually
+been freed or not. This method may return <code class="docutils literal"><span class="pre">False</span></code> if it has been
+called already for this handle, or by an other
+<a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a> object pointing to the same icon resource.
+You usually do not need to check the return value.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
 </tr>
@@ -206,8 +214,9 @@ by the destructor of this object.</p>
 <dl class="method">
 <dt id="keypirinha.IconHandle.is_init">
 <code class="descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a boolean to indicate whether this handle has been
-<a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">free()</span></code></a> or not.</p>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 2.9.6: </span>Use standard <a class="reference internal" href="#keypirinha.IconHandle.__bool__" title="keypirinha.IconHandle.__bool__"><code class="xref py py-meth docutils literal"><span class="pre">__bool__()</span></code></a> operator instead</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -221,10 +230,10 @@ by the destructor of this object.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="plugin.html" class="btn btn-neutral float-right" title="11.2.6. Plugin class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plugin.html" class="btn btn-neutral float-right" title="11.2.7. Plugin class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="catalogitem.html" class="btn btn-neutral" title="11.2.4. CatalogItem class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="catalogitem.html" class="btn btn-neutral" title="11.2.5. CatalogItem class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -254,7 +263,7 @@ by the destructor of this object.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -44,8 +44,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-    
-
   <div class="wy-grid-for-nav">
 
     
@@ -68,7 +66,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -103,13 +101,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">11. Extending <em>Keypirinha</em> (API)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">11.1. Overview</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">11.2.1. keypirinha module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.1. keypirinha module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="module-util.html">11.2.2. keypirinha_util module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.3. CatalogAction class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.4. CatalogItem class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="iconhandle.html">11.2.5. IconHandle class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.6. Plugin class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="settings.html">11.2.7. Settings class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module-net.html">11.2.3. keypirinha_net module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.5. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iconhandle.html">11.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.7. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">11.2.8. Settings class</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="python.html">11.3. Embedded Python Interpreter</a></li>
@@ -144,7 +143,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -170,7 +169,7 @@
             
   <div class="section" id="keypirinha-module">
 <h1>11.2.1. keypirinha module<a class="headerlink" href="#keypirinha-module" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference internal" href="#module-keypirinha" title="keypirinha"><code class="xref py py-mod docutils literal"><span class="pre">keypirinha</span></code></a> module is the main module of the API. It implements and
+<p>The <code class="docutils literal"><span class="pre">keypirinha</span></code> module is the main module of the API. It implements and
 exposes the functions and classes necessary to develop a new plugin for
 <em>Keypirinha</em>.</p>
 <span class="target" id="module-keypirinha"></span><dl class="class">
@@ -194,6 +193,18 @@ has impacted at least one value (in which case this flag is combined with
 Note that if this change impacts application and/or package
 configuration, this flag is combined with <code class="docutils literal"><span class="pre">APPCONFIG</span></code> and/or
 <code class="docutils literal"><span class="pre">PACKCONFIG</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Events.NETOPTIONS">
+<code class="descname">NETOPTIONS</code><em class="property"> = &lt;Events.NETOPTIONS: 1024&gt;</em><a class="headerlink" href="#keypirinha.Events.NETOPTIONS" title="Permalink to this definition">¶</a></dt>
+<dd><p>System&#8217;s network settings have been modified (via the
+<code class="docutils literal"><span class="pre">Internet</span> <span class="pre">Properties</span></code> dialog for example), and plugins that perform
+network requests should upgrade their state.
+Practically, it means <a class="reference internal" href="module-net.html#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_net.build_urllib_opener()</span></code></a>
+should be called in order to get a new opener object.
+This event usually goes along with the <code class="docutils literal"><span class="pre">APPCONFIG</span></code> event, but developer
+should not rely on this behavior.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -269,7 +280,7 @@ expression could not be evaluated.
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.EXPRESSION">
 <code class="descname">EXPRESSION</code><em class="property"> = &lt;ItemCategory.EXPRESSION: 50&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.EXPRESSION" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Item is an expression that has to be evaluated (e.g.</em> &#8211; math, programming
+<dd><p>Item is an expression that has to be evaluated (e.g.: math, programming
 language, ...)</p>
 </dd></dl>
 
@@ -354,7 +365,7 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dl class="attribute">
 <dt id="keypirinha.Match.DEFAULT">
 <code class="descname">DEFAULT</code><em class="property"> = &lt;Match.FUZZY: 1000&gt;</em><a class="headerlink" href="#keypirinha.Match.DEFAULT" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Default behavior</em> &#8211; <code class="docutils literal"><span class="pre">FUZZY</span></code></p>
+<dd><p>Default behavior: <code class="docutils literal"><span class="pre">FUZZY</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -373,7 +384,7 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dl class="attribute">
 <dt id="keypirinha.Sort.DEFAULT">
 <code class="descname">DEFAULT</code><em class="property"> = &lt;Sort.SCORE_DESC: 1000&gt;</em><a class="headerlink" href="#keypirinha.Sort.DEFAULT" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Default behavior</em> &#8211; <code class="docutils literal"><span class="pre">SCORE_DESC</span></code></p>
+<dd><p>Default behavior: <code class="docutils literal"><span class="pre">SCORE_DESC</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -426,7 +437,8 @@ files.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; <em>seconds</em> value is invalid or <em>func</em> is not a callable.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211;
+<em>seconds</em> value is invalid or <em>func</em> is not a callable.</td>
 </tr>
 </tbody>
 </table>
@@ -452,7 +464,7 @@ I/O operations like disk accesses and network communications).</p>
 <dt id="keypirinha.installed_package_dir">
 <code class="descclassname">keypirinha.</code><code class="descname">installed_package_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.installed_package_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the path of an <em>installed</em> package (i.e.: <code class="docutils literal"><span class="pre">*.keypirinha-package</span></code>), or
-the base directory for <a class="reference internal" href="../packages.html#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a> if <em>package_full_name</em> is not
+the base directory for <a class="reference internal" href="../packages.html#pack-installed"><span>Installed Packages (Downloaded)</span></a> if <em>package_full_name</em> is not
 specified.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal"><span class="pre">%APPDATA%/Keypirinha/InstalledPackages</span></code> in installed mode and
@@ -479,7 +491,7 @@ specified.</p>
 <dt id="keypirinha.live_package_dir">
 <code class="descclassname">keypirinha.</code><code class="descname">live_package_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.live_package_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the directory of a <em>live</em> package, or the base directory for
-<a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> in case <em>package_full_name</em> is not specified.</p>
+<a class="reference internal" href="../packages.html#pack-live"><span>Live Packages</span></a> in case <em>package_full_name</em> is not specified.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal"><span class="pre">%APPDATA%/Keypirinha/Packages</span></code> in installed mode and
 <code class="file docutils literal"><span class="pre">X:/Keypirinha/portable/Profile/Packages</span></code> in portable mode.</p>
@@ -527,18 +539,15 @@ this association might fail.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
-<dt>An handle to the icon. <a class="reference internal" href="iconhandle.html#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">IconHandle.free()</span></code></a> must be</dt>
-<dd><p class="first last">called explicitely if you plan to reload, override this icon.</p>
-</dd>
-</dl>
-</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">An handle to the icon. <a class="reference internal" href="iconhandle.html#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">IconHandle.free()</span></code></a> must be
+called explicitely if you plan to reload, override this icon.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle">IconHandle</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; The specified <em>sources</em> could not be read or loaded.</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211;
+The specified <em>sources</em> could not be read or loaded.</p>
 </td>
 </tr>
 </tbody>
@@ -633,6 +642,10 @@ this association might fail.</td>
 <p class="last"><a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> must be called instead, whenever it is
 possible.</p>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a>, <a class="reference internal" href="#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal"><span class="pre">settings()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -718,6 +731,10 @@ configuration file), the dictionary will always be populated with the
 values in use (i.e.: the default ones).</li>
 </ul>
 </div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -797,7 +814,7 @@ This is the name used when looking for user-specific configuration files.</p>
 <dd><p>Returns application&#8217;s version in a tuple of unsigned integers that can be
 used for comparison. Format is <code class="docutils literal"><span class="pre">(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code>.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">()</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># test if version is strictly greater than &quot;2&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">version</span><span class="p">()</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># test if version is strictly greater than &quot;2&quot;</span>
 <span class="n">version</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># test if version is less than or equal to &quot;1.1&quot;</span>
 </pre></div>
 </div>
@@ -853,7 +870,7 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

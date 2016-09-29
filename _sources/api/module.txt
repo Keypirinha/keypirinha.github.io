@@ -2,7 +2,7 @@
 keypirinha module
 =================
 
-The :py:mod:`keypirinha` module is the main module of the API. It implements and
+The ``keypirinha`` module is the main module of the API. It implements and
 exposes the functions and classes necessary to develop a new plugin for
 |project|.
 

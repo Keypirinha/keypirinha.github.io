@@ -2,8 +2,8 @@
 keypirinha_util module
 ======================
 
-The *keypirinha_util* module offers some utility features frequently required by
-the plugin developer.
+The ``keypirinha_util`` module offers some utility features frequently required
+by the plugin developer.
 
 
 Reference

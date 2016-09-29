@@ -43,8 +43,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-    
-
   <div class="wy-grid-for-nav">
 
     
@@ -67,7 +65,7 @@
             
             
               <div class="version">
-                2.9.5
+                2.9.6
               </div>
             
           
@@ -101,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Glossary</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">13. Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">14. Frequently Asked Questions (FAQ)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">15. Credits</a></li>
 </ul>
@@ -129,7 +127,7 @@
         <div class="rst-content">
           
 
- 
+
 
 
 
@@ -175,10 +173,9 @@ application and assigned at runtime to each <a class="reference internal" href="
 they are (re)loaded.</p>
 <p>It is also used to ensure only the latest instance of a given package
 has write access to its section of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
-<p class="last">Read <a class="reference internal" href="api/overview.html"><span class="doc">Overview</span></a> for more information.</p>
+<p class="last">Read <a class="reference internal" href="api/overview.html"><em>Overview</em></a> for more information.</p>
 </dd>
-<dt id="term-item">Item</dt>
-<dt id="term-items">Items</dt>
+<dt id="term-item"><span id="term-items"></span>Item<br />Items</dt>
 <dd>An item is the data unit of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a> (<em>Keypirinha</em>&#8216;s internal
 database). It is a simple data structure, created by the
 <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a>, that has some properties like a display name (label),
@@ -188,11 +185,10 @@ a category (File, URL, Command Line, ...), a reference to the parent
 <dd><p class="first">The L(a)unchBox is <em>Keypirinha</em>&#8216;s main dialog window, from which you can
 make a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
 pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (by default).</p>
-<p>More info in the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter.</p>
+<p>More info in the <a class="reference internal" href="first.html"><em>First steps</em></a> chapter.</p>
 <img alt="|project|'s LaunchBox" class="last align-center" src="_images/wndrun.png" />
 </dd>
-<dt id="term-package">Package</dt>
-<dt id="term-packages">Packages</dt>
+<dt id="term-package"><span id="term-packages"></span>Package<br />Packages</dt>
 <dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and that
 represents a unique feature visible to the user.</p>
 <p>This container holds the source code of its plugins, their dependencies,
@@ -200,15 +196,13 @@ a default configuration file, if any, and optionally some documentation.</p>
 <p>Its content can be stored in a directory or packed in an archive to ease
 its redistribution (i.e. a <code class="file docutils literal"><span class="pre">*.keypirinha-package</span></code> file, which is
 actually a regular zip archive).</p>
-<p class="last">Read <a class="reference internal" href="packages.html"><span class="doc">Packages</span></a> for more information.</p>
+<p class="last">Read <a class="reference internal" href="packages.html"><em>Packages</em></a> for more information.</p>
 </dd>
-<dt id="term-plugin">Plugin</dt>
-<dt id="term-plugins">Plugins</dt>
+<dt id="term-plugin"><span id="term-plugins"></span>Plugin<br />Plugins</dt>
 <dd>In the context of <em>Keypirinha</em>, a Plugin is a software component written in
 <a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. It is always
 encapsulated in a <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</dd>
-<dt id="term-repository">Repository</dt>
-<dt id="term-repositories">Repositories</dt>
+<dt id="term-repository"><span id="term-repositories"></span>Repository<br />Repositories</dt>
 <dd>A Repository is a directory dedicated to the storage of
 <a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It also defines the way Packages are stored (i.e.:
 loose files or packed in a single archive).</dd>
@@ -255,7 +249,7 @@ loose files or packed in a single archive).</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.5',
+            VERSION:'2.9.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

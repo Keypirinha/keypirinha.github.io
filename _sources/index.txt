@@ -20,7 +20,7 @@ Need Help?
   * :ref:`contribute-issue`
 
 You like |project|?
-  * :ref:`contribute-packages`
+  * :ref:`contribute-packages` (**GitHub repository is now open**)
   * Give it a **Like** or a **Star** to show your support: |br|
     |social_buttons|
 

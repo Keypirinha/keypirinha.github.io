@@ -87,7 +87,7 @@ You can show your support to the |project| project by:
 Where does this weird name come from?!
 ======================================
 
-Keypirinha is combined from combining the terms Keyboard and Caipirinha, the
+Keypirinha is a combination from the terms Keyboard and Caipirinha, the
 brazilian cocktail, which the author really encourages you to try if you haven't
 yet!
 

@@ -1,0 +1,25 @@
+==============
+WinReg Package
+==============
+
+Available since version 2.9.6.
+
+Browse and open Windows Registry keys directly from |project|
+
+Examples or recognized entries:
+
+  * ``HKEY_CURRENT_USER\Software``
+  * ``CURRENT_USER\Software``
+  * ``HKCU\Software``
+  * ``hkey_local_machine\system\CURRENTCONTROLSET``
+  * ``hklm\SYSTEM/currentcontrolset/``
+  * ``HKLM``
+
+A Registry key is recognized as such by the plugin if and only if the specified
+path is absolute (i.e. starting with one of the ``HKEY_`` values) **and** the
+specified key exists **and is readable** (i.e. right access privileges), at the
+moment you are typing it.
+
+.. note::
+    * ``/`` character is also supported as separator in addition to ``\``
+    * Paths are case-insensitive

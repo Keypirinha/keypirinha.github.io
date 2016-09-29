@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>11.2.3. keypirinha_net module &mdash; Keypirinha</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha" href="../index.html"/>
+        <link rel="up" title="11.2. API Reference" href="reference.html"/>
+        <link rel="next" title="11.2.4. CatalogAction class" href="catalogaction.html"/>
+        <link rel="prev" title="11.2.2. keypirinha_util module" href="module-util.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="../_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.9.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">4. Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">5. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">6. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">7. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">8. Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shipped-packages.html">9. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">10. Contributions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">11. Extending <em>Keypirinha</em> (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">11.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module.html">11.2.1. keypirinha module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module-util.html">11.2.2. keypirinha_util module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.3. keypirinha_net module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-keypirinha_net">11.2.3.1. Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="catalogaction.html">11.2.4. CatalogAction class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="catalogitem.html">11.2.5. CatalogItem class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iconhandle.html">11.2.6. IconHandle class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin.html">11.2.7. Plugin class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings.html">11.2.8. Settings class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">11.3. Embedded Python Interpreter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">15. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../api.html">11. Extending <em>Keypirinha</em> (API)</a> &raquo;</li>
+      
+          <li><a href="reference.html">11.2. API Reference</a> &raquo;</li>
+      
+    <li>11.2.3. keypirinha_net module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="keypirinha-net-module">
+<h1>11.2.3. keypirinha_net module<a class="headerlink" href="#keypirinha-net-module" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">keypirinha_net</span></code> module offers some network utility features frequently
+required by the plugin developer.</p>
+<div class="section" id="module-keypirinha_net">
+<span id="reference"></span><h2>11.2.3.1. Reference<a class="headerlink" href="#module-keypirinha_net" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="keypirinha_net.UrllibOpener">
+<em class="property">class </em><code class="descclassname">keypirinha_net.</code><code class="descname">UrllibOpener</code><span class="sig-paren">(</span><em>opener</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>A replacement to <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.OpenerDirector" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.OpenerDirector</span></code></a> to apply user&#8217;s
+global settings if needed and to ensure reasonable default <code class="docutils literal"><span class="pre">timeout</span></code> value
+(i.e. too long hanging due to bad connection).</p>
+<p>This class is not meant to be used directly, see
+<a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">build_urllib_opener()</span></code></a>.</p>
+<dl class="method">
+<dt id="keypirinha_net.UrllibOpener.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>fullurl</em>, <em>*args</em>, <em>data=None</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>This overrides <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.OpenerDirector.open" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">urllib.request.OpenerDirector.open()</span></code></a> in order to
+apply the <code class="docutils literal"><span class="pre">timeout</span></code> value automatically from Keypirinha&#8217;s settings.
+Forcing a <em>timeout</em> value here is still allowed but discouraged.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="keypirinha_net.build_urllib_opener">
+<code class="descclassname">keypirinha_net.</code><code class="descname">build_urllib_opener</code><span class="sig-paren">(</span><em>proxies=None</em>, <em>ssl_check_hostname=None</em>, <em>extra_handlers=[]</em>, <em>extra_pre_handlers=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.build_urllib_opener" title="Permalink to this definition">¶</a></dt>
+<dd><p>A replacement to <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">urllib.request.build_opener()</span></code></a> that takes care of
+using current user&#8217;s global settings (Keypirinha and/or system&#8217;s) regarding
+network connections, by inserting and configuring one or several connection
+handlers (derived from <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.BaseHandler" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.BaseHandler</span></code></a>).</p>
+<p>Examples:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># example 1</span>
+<span class="n">opener</span> <span class="o">=</span> <span class="n">build_urllib_opener</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/user-agent&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="c1"># example 2: HTTP proxy</span>
+<span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s2">&quot;http://proxy_user:proxy_pass@127.0.0.1:8080&quot;</span><span class="p">}</span>
+<span class="n">opener</span> <span class="o">=</span> <span class="n">build_urllib_opener</span><span class="p">(</span><span class="n">proxies</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/ip&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>proxies</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) &#8211; <p>A dictionary of proxies to pass to the constructor of
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.ProxyHandler" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.ProxyHandler</span></code></a>, if any. Notes:</p>
+<ul>
+<li><code class="docutils literal"><span class="pre">None</span></code> (default; <strong>recommended</strong>) means proxies configured by
+the user at Keypirinha&#8217;s level, or by default at system level will
+be used.</li>
+<li>An empty dictionary (i.e. <code class="docutils literal"><span class="pre">{}</span></code>) means <strong>no</strong> proxy will be
+configured regardless of user or machine settings. Note that going
+against user&#8217;s will is against Keypirinha&#8217;s design policy!</li>
+<li>See the notes below about <code class="docutils literal"><span class="pre">SOCKS</span></code> proxies.</li>
+<li>See <code class="xref py py-func docutils literal"><span class="pre">proxies_list_to_dict()</span></code> if you need to convert a list
+of proxies URLs into a dictionary.</li>
+</ul>
+</li>
+<li><strong>extra_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; A list/tuple of extra handlers to <strong>append</strong> to
+the final handlers chain before passing it to
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">urllib.request.build_opener()</span></code></a>.</li>
+<li><strong>extra_pre_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; <p>A list/tuple of extra handlers to <strong>prepend</strong>
+to the final handlers chain before passing it to
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">urllib.request.build_opener()</span></code></a>.</p>
+<p><strong>CAUTION:</strong> This parameter is here for convenience and you should
+use it only if you know what you are doing as it may interfere with
+the handlers added by this function.</p>
+</li>
+<li><strong>ssl_check_hostname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; <p>Should the hostname be checked against
+received security certificate? This argument is equivalent to
+tweaking with <a class="reference external" href="https://docs.python.org/3.5/library/ssl.html#ssl.SSLContext.check_hostname" title="(in Python v3.5)"><code class="xref py py-attr docutils literal"><span class="pre">ssl.SSLContext.check_hostname</span></code></a> and
+<a class="reference external" href="https://docs.python.org/3.5/library/ssl.html#ssl.SSLContext.verify_mode" title="(in Python v3.5)"><code class="xref py py-attr docutils literal"><span class="pre">ssl.SSLContext.verify_mode</span></code></a>.</p>
+<p>Default behavior of the <code class="docutils literal"><span class="pre">urllib</span></code> module (i.e. <code class="docutils literal"><span class="pre">None</span></code> value) is
+to check the hostname unless explicitely specified here (boolean),
+in which case this function will either add an
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.HTTPSHandler" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.HTTPSHandler</span></code></a> handler with the appropriate
+arguments to the chain, or, if caller already added a
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.HTTPSHandler" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.HTTPSHandler</span></code></a> handler (either in the
+<em>extra_handlers</em> or <em>extra_pre_handlers</em> list), it will be modified
+accordingly.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.OpenerDirector" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.OpenerDirector</span></code></a>-compatible opener object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#keypirinha_net.UrllibOpener" title="keypirinha_net.UrllibOpener">UrllibOpener</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Notes about <code class="docutils literal"><span class="pre">SOCKS</span></code> proxy support:</p>
+<ul class="last simple">
+<li>Support for <code class="docutils literal"><span class="pre">SOCKS</span></code> proxy (v4 and v5) is <strong>experimental</strong> and uses
+the <a class="reference external" href="https://github.com/Anorov/PySocks">PySocks</a> third-party module
+under the hood.</li>
+<li>DNS requests do not go through the proxy server.</li>
+<li>IPv6 connections through the proxy server are not supported.</li>
+<li>Tests have shown that if proxies for several schemes have been
+specified, <code class="docutils literal"><span class="pre">UNKNOWN_PROTOCOL</span></code> SSL error may occurs under some
+circumstances. For that reason, if a <code class="docutils literal"><span class="pre">SOCKS</span></code> proxy is specified, it
+takes precedence over the other proxy servers that might be in the
+dictionary as well so they will be purely ignored by this function in
+favor of the <code class="docutils literal"><span class="pre">SOCKS</span></code> proxy.</li>
+</ul>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="keypirinha_net.proxies_to_dict">
+<code class="descclassname">keypirinha_net.</code><code class="descname">proxies_to_dict</code><span class="sig-paren">(</span><em>proxies</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.proxies_to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform a list of proxy specification lines into a dictionary that is
+suitable to use with <a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">build_urllib_opener()</span></code></a> and
+<a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#module-urllib.request" title="(in Python v3.5)"><code class="xref py py-mod docutils literal"><span class="pre">urllib.request</span></code></a>.</p>
+<p>This function is used by <a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">build_urllib_opener()</span></code></a> to parse
+Keypirinha&#8217;s <code class="docutils literal"><span class="pre">proxy</span></code> global setting of the <code class="docutils literal"><span class="pre">[network]</span></code> section.</p>
+<p><em>proxies</em> may be an iterable or a string, in which case it is split first
+using <code class="docutils literal"><span class="pre">\n</span></code> as a separator and each line is trimmed with
+<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str.strip" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">str.strip()</span></code></a>.</p>
+<p>Each entry of <em>proxies</em> must be a string that complies to the following
+grammar:</p>
+<div class="highlight-python"><div class="highlight"><pre>prox_entry  ::= [ conn_scheme &quot;=&quot; ] proxy_url
+conn_scheme ::= ( &quot;http&quot; | &quot;https&quot; | &quot;socks&quot; | &quot;socks4&quot; | &quot;socks5&quot;)
+proxy_url   ::= url_scheme &quot;://&quot; [ proxy_user &quot;:&quot; proxy_pass &quot;@&quot; ] netloc &quot;:&quot; proxy_port
+proxy_port  ::= unsigned
+</pre></div>
+</div>
+<p>If the <code class="docutils literal"><span class="pre">conn_scheme</span></code> part is not specified, <code class="docutils literal"><span class="pre">url_scheme</span></code> is assumed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211;
+<em>proxies</em> cannot be parsed</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If two proxies have the same scheme, the last one prevails.</p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="catalogaction.html" class="btn btn-neutral float-right" title="11.2.4. CatalogAction class" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="module-util.html" class="btn btn-neutral" title="11.2.2. keypirinha_util module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2016, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.9.6',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+   
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

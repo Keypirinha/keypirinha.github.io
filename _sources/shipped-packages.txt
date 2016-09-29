@@ -29,8 +29,8 @@ community. Check out the :doc:`contributions` chapter for more info.
     packages/filezilla
     packages/putty
     packages/taskswitcher
-    packages/test
     packages/url
     packages/websearch
     packages/winamp
+    packages/winreg
     packages/winscp

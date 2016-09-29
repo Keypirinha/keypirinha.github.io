@@ -106,15 +106,17 @@ Package Naming
 
 Rules for package naming:
 
-* Name can contain alphanumeric characters (case insensitive) and space
-  characters (code ``0x20``), as well as the following characters: ``-``, ``+``,
-  ``=``, ``_``, ``#``, ``@``, ``(``, ``)``, ``[``, ``]``, ``{``, ``}``
+* Name can contain alphanumeric characters (case insensitive) and the following
+  characters: ``-``, ``+``, ``=``, ``_``, ``#``, ``@``, ``(``, ``)``, ``[``,
+  ``]``, ``{``, ``}``
 
 * Name must be at least 3 characters, up to 50
 
 * Name must begin and end by an alphanumeric character
 
 * Consecutives non-alphanumeric characters are not allowed.
+
+* Name must not contain "|project|"
 
 * The following names are reserved:
 
@@ -130,12 +132,15 @@ Rules for package naming:
     - ``cache``
     - ``data``
     - ``default``
+    - ``env``
     - ``extern``
     - ``external``
-    - ``intern``
-    - ``internal``
+    - ``hook``
     - ``icon``
     - ``image``
+    - ``intern``
+    - ``internal``
+    - ``kpsdk``
     - ``local``
     - ``locale``
     - ``main``
@@ -145,13 +150,18 @@ Rules for package naming:
     - ``null``
     - ``official``
     - ``package``
+    - ``plugin``
     - ``python``
     - ``res``
     - ``resource``
+    - ``sdk``
     - ``temp``
+    - ``theme``
     - ``tmp``
     - ``type``
+    - ``script``
     - ``user``
+    - ``var``
 
 If the name of a Package does not comply to those rules, the Package will be
 silently ignored by the application and never be loaded until renamed

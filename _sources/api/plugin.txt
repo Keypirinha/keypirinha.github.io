@@ -16,11 +16,16 @@ Plugin class
 
     .. py:method:: on_start()
 
-        This is always the first callback method called by the application after
-        a plugin has been instanciated.
+        This is the first method called by the application after a plugin has
+        been instanciated.
 
-        *Heavy* one-time initialization, if any, must be performed here
-        **instead** of inside ``__init__`` or :py:meth:`on_catalog`.
+        It is good for:
+
+        * Reading configuration file(s)
+        * Reading state data from package's cache, if any, that may be needed
+          elsewhere in this plugin
+        * Doing any heavy, one-time, initialization (i.e. instead of doing it
+          from ``__init__`` or even :py:meth:`on_catalog` for example)
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information
@@ -33,9 +38,11 @@ Plugin class
         :py:meth:`set_catalog` or :py:meth:`merge_catalog`.
 
         .. note::
-            Since this method may be called several times during instance's
-            lifetime, one-time initialization, if any, must always be done in
-            :py:meth:`on_init`.
+            * This method may be called at any time, and not necessarily at
+              start-time.
+            * Since this method may be called several times during instance's
+              lifetime, one-time initialization, if any, must always be done in
+              :py:meth:`on_init`.
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information
@@ -90,9 +97,9 @@ Plugin class
 
     .. py:method:: on_activated()
 
-        Called when the :term:`LaunchBox` has been activated, either by typing
-        the dedicated global hotkey, or by using the contextual menu of the
-        application icon located in the system tray.
+        Called when the :term:`LaunchBox` has been invoked by the user, either
+        by typing the dedicated global hotkey, or by using the contextual menu
+        of the application icon located in the system tray.
 
         .. note::
             The ``ACTIVATED`` message automatically discards any pending
@@ -110,7 +117,9 @@ Plugin class
 
     .. py:method:: on_deactivated()
 
-        Called when the :term:`LaunchBox` has been deactivated.
+        Called when the :term:`LaunchBox` has been hidden. Either because an
+        item has been executed for example, or because the user canceled her
+        search.
 
         .. note::
             A ``DEACTIVATED`` message is not always preceded by an ``ACTIVATED``
