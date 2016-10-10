@@ -12,13 +12,10 @@ There are four :term:`repositories` of packages. **In order of descending
 priority:**
 
 * :ref:`pack-live`: individual directories with loose files
-
 * :ref:`pack-installed`: Zip archives with the :file:`.keypirinha-package`
   extension, downloaded and/or installed manually by the user.
-
 * :ref:`pack-official`: Zip archives with the :file:`.keypirinha-package`
   extension. Packages officially supported and shipped with the application.
-
 * :ref:`pack-internal`
   Hard-coded in the application.
 
@@ -92,11 +89,10 @@ Internal Package
 itself.
 
 The ``Internal`` package is implemented in the application itself and its
-behavior is unalterable. For now it only embeds the ``Internal.About`` plugin
-that exposes some core features to the :term:`catalog` like ``About``, ``Exit``,
-``Configure Application``, etc...
+behavior is unalterable. Any other type of :term:`package` is said to be
+*external*.
 
-Any other type of :term:`package` is said to be *external*.
+See :doc:`packages/internal` for more information about how to use this package.
 
 
 .. _pack-naming:
@@ -123,7 +119,6 @@ Rules for package naming:
   .. hlist::
     :columns: 3
 
-    - |project|
     - ``all``
     - ``app``
     - ``application``

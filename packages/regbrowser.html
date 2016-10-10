@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.6. Everything Package &mdash; Keypirinha</title>
+  <title>9.10. RegBrowser Package &mdash; Keypirinha</title>
   
 
   
@@ -34,8 +34,8 @@
   
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="9. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="9.7. FileBrowser Package" href="filebrowser.html"/>
-        <link rel="prev" title="9.5. ControlPanel Package" href="controlpanel.html"/> 
+        <link rel="next" title="9.11. TaskSwitcher Package" href="taskswitcher.html"/>
+        <link rel="prev" title="9.9. PuTTY Package" href="putty.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -102,17 +102,11 @@
 <li class="toctree-l2"><a class="reference internal" href="bookmarks.html">9.3. Bookmarks Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calc.html">9.4. Calc Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controlpanel.html">9.5. ControlPanel Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.6. Everything Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#requirements">9.6.1. Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#catalog-items">9.6.2. Catalog Items</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#usage">9.6.3. Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">9.6.4. Troubleshooting</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">9.6. Everything Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">9.7. FileBrowser Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filezilla.html">9.8. FileZilla Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="putty.html">9.9. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">9.10. RegBrowser Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">9.10. RegBrowser Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">9.11. TaskSwitcher Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url.html">9.12. URL Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="websearch.html">9.13. WebSearch Package</a></li>
@@ -161,7 +155,7 @@
       
           <li><a href="../shipped-packages.html">9. Shipped Packages</a> &raquo;</li>
       
-    <li>9.6. Everything Package</li>
+    <li>9.10. RegBrowser Package</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -173,56 +167,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="everything-package">
-<h1>9.6. Everything Package<a class="headerlink" href="#everything-package" title="Permalink to this headline">¶</a></h1>
-<p>Available since version 2.3.</p>
-<p>Query <a class="reference external" href="http://www.voidtools.com">Everything</a> (a <strong>separate</strong> tool) from <em>Keypirinha</em> to find and open any file
-or folder.</p>
-<div class="section" id="requirements">
-<h2>9.6.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www.voidtools.com">Everything</a> v1.3 or more recent must be running to do a search.</p>
+  <div class="section" id="regbrowser-package">
+<h1>9.10. RegBrowser Package<a class="headerlink" href="#regbrowser-package" title="Permalink to this headline">¶</a></h1>
+<p>Available since version 2.9.6.</p>
+<p>Browse and open Windows Registry keys directly from <em>Keypirinha</em></p>
+<p>Examples or recognized entries:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">HKEY_CURRENT_USER\Software</span></code></li>
+<li><code class="docutils literal"><span class="pre">CURRENT_USER\Software</span></code></li>
+<li><code class="docutils literal"><span class="pre">HKCU\Software</span></code></li>
+<li><code class="docutils literal"><span class="pre">hkey_local_machine\system\CURRENTCONTROLSET</span></code></li>
+<li><code class="docutils literal"><span class="pre">hklm\SYSTEM/currentcontrolset/</span></code></li>
+<li><code class="docutils literal"><span class="pre">HKLM</span></code></li>
+</ul>
+</div></blockquote>
+<p>A Registry key is recognized as such by the plugin if and only if the specified
+path is absolute (i.e. starting with one of the <code class="docutils literal"><span class="pre">HKEY_</span></code> values) <strong>and</strong> the
+specified key exists <strong>and is readable</strong> (i.e. right access privileges), at the
+moment you are typing it.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This package retries to find <em>Everything</em> instance each time you want to do
-a search so you can freely (re)start <em>Everything</em> whenever you need to.</p>
-</div>
-</div>
-<div class="section" id="catalog-items">
-<h2>9.6.2. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
-<p>By default, this package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
-<ul class="simple">
-<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Search</span></code> item (default name) allows to query <em>Everything</em>
-using its normal search syntax</li>
-<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Regex</span> <span class="pre">Search</span></code> item (default name) allows to query
-<em>Everything</em> using its regular expression syntax</li>
-<li>The <code class="docutils literal"><span class="pre">Everything:</span> <span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request <em>Everything</em> to rebuild its
-database (<strong>requires Everything v1.4</strong>).</li>
+<ul class="last simple">
+<li><code class="docutils literal"><span class="pre">/</span></code> character is also supported as separator in addition to <code class="docutils literal"><span class="pre">\</span></code></li>
+<li>Paths are case-insensitive</li>
 </ul>
-</div>
-<div class="section" id="usage">
-<h2>9.6.3. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>To query <em>Everything</em> from <em>Keypirinha</em> allows you to take advantage of both
-<em>Everything</em>&#8216;s speed and <em>Keypirinha</em>&#8216;s matching algorithm. Once you have
-searched-found-executed a file/folder using this package, it is kept in
-<em>Keypirinha</em>&#8216;s history so you do not have to query <em>Everything</em> a second time to
-open it.</p>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">You can reduce the number of keystrokes even more to reach the same item by
-using the <a class="reference internal" href="../first.html#first-associate-keyword"><span>Associate a Keyword to an Item</span></a> feature.</p>
-</div>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Remember you can drag the resulting items the same way you would drag files
-to/from the Windows Explorer, in order to copy files or create shell links
-for example. See the <a class="reference internal" href="../first.html#first-drag"><span>Drag and Drop</span></a> section for more info.</p>
-</div>
-</div>
-<div class="section" id="troubleshooting">
-<h2>9.6.4. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
-<p>If no item appear after a search query, ensure <em>Everything</em> is running and no
-error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
-<a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a>).</p>
 </div>
 </div>
 
@@ -233,10 +202,10 @@ error message has been emitted by the plugin (check <em>Keypirinha</em>&#8216;s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="filebrowser.html" class="btn btn-neutral float-right" title="9.7. FileBrowser Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="taskswitcher.html" class="btn btn-neutral float-right" title="9.11. TaskSwitcher Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="controlpanel.html" class="btn btn-neutral" title="9.5. ControlPanel Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="putty.html" class="btn btn-neutral" title="9.9. PuTTY Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

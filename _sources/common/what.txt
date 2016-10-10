@@ -3,7 +3,7 @@
 **Features:**
 
 * Quickly find and launch plethora of items like applications, files,
-  bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), ...
+  bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...
 * Launch a search on any configured website or online dictionary
 * Evaluate a mathematical expression
 * Convert numbers

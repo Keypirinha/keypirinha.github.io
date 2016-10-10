@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.6
+                2.9.7
               </div>
             
           
@@ -569,11 +569,10 @@ method.</p>
 <li><code class="samp docutils literal"><span class="pre">str(item_object)</span></code> is equivalent to
 <code class="samp docutils literal"><span class="pre">item_object.label()</span></code>.</li>
 <li>May you wish to compare two item objects, the <code class="docutils literal"><span class="pre">__eq__</span></code>,
-<code class="docutils literal"><span class="pre">__ne__</span></code>, <code class="docutils literal"><span class="pre">__lt__</span></code>, <code class="docutils literal"><span class="pre">__le__</span></code>, <code class="docutils literal"><span class="pre">__gt__</span></code> and <code class="docutils literal"><span class="pre">__ge__</span></code>
-operators are implemented. The <code class="docutils literal"><span class="pre">__eq__</span></code> and <code class="docutils literal"><span class="pre">__ne__</span></code> operators
-are fast and cheap. The others are slower. They can be used to
-sort a list alphabetically (by label, short description and
-target).</li>
+<code class="docutils literal"><span class="pre">__ne__</span></code>, <code class="docutils literal"><span class="pre">__lt__</span></code>, <code class="docutils literal"><span class="pre">__le__</span></code>, <code class="docutils literal"><span class="pre">__gt__</span></code>, <code class="docutils literal"><span class="pre">__ge__</span></code> and
+<code class="docutils literal"><span class="pre">__hash__</span></code> operators are implemented. They are fast and cheap
+since they use the internal unique id of the item, which is
+computed at construction time or when its arguments are updated.</li>
 </ul>
 </div>
 <div class="admonition seealso">
@@ -943,7 +942,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.6',
+            VERSION:'2.9.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

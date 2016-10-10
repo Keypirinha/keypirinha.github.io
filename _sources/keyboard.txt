@@ -24,6 +24,13 @@ LaunchBox
 +-----------------------------------------+------------------------------------+
 | Directly select an action               | :kbd:`Ctrl+Enter`                  |
 +-----------------------------------------+------------------------------------+
+| Execute the item without closing the    | :kbd:`Shift+Enter`                 |
+| LaunchBox, and reset                    |                                    |
++-----------------------------------------+------------------------------------+
+| Execute the item without closing the    | :kbd:`Ctrl+Shift+Enter`            |
+| LaunchBox, and go back to the initial   |                                    |
+| step of the current search              |                                    |
++-----------------------------------------+------------------------------------+
 | Show selected item's properties         | :kbd:`Alt+Enter`                   |
 +-----------------------------------------+------------------------------------+
 | Show Shell's "Properties" dialog for    | :kbd:`Shift+Alt+Enter`             |

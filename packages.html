@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.9.6
+                2.9.7
               </div>
             
           
@@ -165,10 +165,6 @@ the concept of <a class="reference internal" href="glossary.html#term-packages">
 the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension) that groups one or several plugins
 designed to work together. It also contains the configuration files and
 dependencies, if any.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><em>Keypirinha</em> cannot load a plugin if it is not encapsulated in a Package.</p>
-</div>
 <div class="section" id="packages-repositories">
 <h2>8.1. Packages Repositories<a class="headerlink" href="#packages-repositories" title="Permalink to this headline">¶</a></h2>
 <p>There are four <a class="reference internal" href="glossary.html#term-repositories"><span class="xref std std-term">repositories</span></a> of packages. <strong>In order of descending
@@ -232,10 +228,9 @@ located under <em>Keypirinha</em>&#8216;s installation directory.</p>
 <p><code class="docutils literal"><span class="pre">Internal</span></code> is actually both a type of package and the name of the package
 itself.</p>
 <p>The <code class="docutils literal"><span class="pre">Internal</span></code> package is implemented in the application itself and its
-behavior is unalterable. For now it only embeds the <code class="docutils literal"><span class="pre">Internal.About</span></code> plugin
-that exposes some core features to the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">catalog</span></a> like <code class="docutils literal"><span class="pre">About</span></code>, <code class="docutils literal"><span class="pre">Exit</span></code>,
-<code class="docutils literal"><span class="pre">Configure</span> <span class="pre">Application</span></code>, etc...</p>
-<p>Any other type of <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a> is said to be <em>external</em>.</p>
+behavior is unalterable. Any other type of <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a> is said to be
+<em>external</em>.</p>
+<p>See <a class="reference internal" href="packages/internal.html"><em>Internal Package</em></a> for more information about how to use this package.</p>
 </div>
 </div>
 <div class="section" id="package-naming">
@@ -256,7 +251,6 @@ characters: <code class="docutils literal"><span class="pre">-</span></code>, <c
 </li>
 <li><p class="first">The following names are reserved:</p>
 <table class="hlist"><tr><td><ul class="simple">
-<li><em>Keypirinha</em></li>
 <li><code class="docutils literal"><span class="pre">all</span></code></li>
 <li><code class="docutils literal"><span class="pre">app</span></code></li>
 <li><code class="docutils literal"><span class="pre">application</span></code></li>
@@ -269,9 +263,9 @@ characters: <code class="docutils literal"><span class="pre">-</span></code>, <c
 <li><code class="docutils literal"><span class="pre">extern</span></code></li>
 <li><code class="docutils literal"><span class="pre">external</span></code></li>
 <li><code class="docutils literal"><span class="pre">hook</span></code></li>
+<li><code class="docutils literal"><span class="pre">icon</span></code></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">icon</span></code></li>
 <li><code class="docutils literal"><span class="pre">image</span></code></li>
 <li><code class="docutils literal"><span class="pre">intern</span></code></li>
 <li><code class="docutils literal"><span class="pre">internal</span></code></li>
@@ -284,9 +278,9 @@ characters: <code class="docutils literal"><span class="pre">-</span></code>, <c
 <li><code class="docutils literal"><span class="pre">none</span></code></li>
 <li><code class="docutils literal"><span class="pre">null</span></code></li>
 <li><code class="docutils literal"><span class="pre">official</span></code></li>
+<li><code class="docutils literal"><span class="pre">package</span></code></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">package</span></code></li>
 <li><code class="docutils literal"><span class="pre">plugin</span></code></li>
 <li><code class="docutils literal"><span class="pre">python</span></code></li>
 <li><code class="docutils literal"><span class="pre">res</span></code></li>
@@ -349,7 +343,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.6',
+            VERSION:'2.9.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

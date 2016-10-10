@@ -1,0 +1,22 @@
+================
+Internal Package
+================
+
+``Internal`` is the only package that is not visible on the filesystem as it is
+implemented in the application itself. It gives access to some core features of
+|project| by populating the :term:`Catalog` with special items that all have got
+the ``Keypirinha:`` prefix.
+
+Here are some of the items that the ``Internal.About`` plugin populates:
+
+* ``Keypirinha: Configure Application`` to edit application's configuration
+  file(s)
+* ``Keypirinha: Refresh Catalog`` to ask all packages to force refresh their
+  catalog
+* ``Keypirinha: Console`` to show the :term:`Console` window
+* ``Keypirinha: About`` to see application's ``About`` dialog box
+* ``Keypirinha: Exit`` to quit |project|
+
+.. tip::
+    The best way to list all the items populated by this plugin is to type the
+    ``keypirinha:`` string in the :term:`LaunchBox`.

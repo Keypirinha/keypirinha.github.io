@@ -1,6 +1,6 @@
-==============
-WinReg Package
-==============
+==================
+RegBrowser Package
+==================
 
 Available since version 2.9.6.
 

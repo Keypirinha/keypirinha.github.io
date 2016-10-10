@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.13. WinReg Package &mdash; Keypirinha</title>
+  <title>9.1. Internal Package &mdash; Keypirinha</title>
   
 
   
@@ -34,8 +34,8 @@
   
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="9. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="9.14. WinSCP Package" href="winscp.html"/>
-        <link rel="prev" title="9.12. Winamp Package" href="winamp.html"/> 
+        <link rel="next" title="9.2. Apps Package" href="apps.html"/>
+        <link rel="prev" title="9. Shipped Packages" href="../shipped-packages.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.6
+                2.9.7
               </div>
             
           
@@ -97,20 +97,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">7. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../packages.html">8. Packages</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../shipped-packages.html">9. Shipped Packages</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="apps.html">9.1. Apps Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bookmarks.html">9.2. Bookmarks Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calc.html">9.3. Calc Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controlpanel.html">9.4. ControlPanel Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="everything.html">9.5. Everything Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">9.6. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">9.7. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">9.8. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">9.9. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="url.html">9.10. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">9.11. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">9.12. Winamp Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.13. WinReg Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">9.14. WinSCP Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">9.1. Internal Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps.html">9.2. Apps Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bookmarks.html">9.3. Bookmarks Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calc.html">9.4. Calc Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpanel.html">9.5. ControlPanel Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">9.6. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">9.7. FileBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">9.8. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">9.9. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">9.10. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">9.11. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">9.12. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">9.13. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">9.14. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">9.15. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">10. Contributions</a></li>
@@ -154,7 +155,7 @@
       
           <li><a href="../shipped-packages.html">9. Shipped Packages</a> &raquo;</li>
       
-    <li>9.13. WinReg Package</li>
+    <li>9.1. Internal Package</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -166,31 +167,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="winreg-package">
-<h1>9.13. WinReg Package<a class="headerlink" href="#winreg-package" title="Permalink to this headline">¶</a></h1>
-<p>Available since version 2.9.6.</p>
-<p>Browse and open Windows Registry keys directly from <em>Keypirinha</em></p>
-<p>Examples or recognized entries:</p>
-<blockquote>
-<div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">HKEY_CURRENT_USER\Software</span></code></li>
-<li><code class="docutils literal"><span class="pre">CURRENT_USER\Software</span></code></li>
-<li><code class="docutils literal"><span class="pre">HKCU\Software</span></code></li>
-<li><code class="docutils literal"><span class="pre">hkey_local_machine\system\CURRENTCONTROLSET</span></code></li>
-<li><code class="docutils literal"><span class="pre">hklm\SYSTEM/currentcontrolset/</span></code></li>
-<li><code class="docutils literal"><span class="pre">HKLM</span></code></li>
+  <div class="section" id="internal-package">
+<h1>9.1. Internal Package<a class="headerlink" href="#internal-package" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">Internal</span></code> is the only package that is not visible on the filesystem as it is
+implemented in the application itself. It gives access to some core features of
+<em>Keypirinha</em> by populating the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with special items that all have got
+the <code class="docutils literal"><span class="pre">Keypirinha:</span></code> prefix.</p>
+<p>Here are some of the items that the <code class="docutils literal"><span class="pre">Internal.About</span></code> plugin populates:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Configure</span> <span class="pre">Application</span></code> to edit application&#8217;s configuration
+file(s)</li>
+<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Refresh</span> <span class="pre">Catalog</span></code> to ask all packages to force refresh their
+catalog</li>
+<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Console</span></code> to show the <a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a> window</li>
+<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">About</span></code> to see application&#8217;s <code class="docutils literal"><span class="pre">About</span></code> dialog box</li>
+<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Exit</span></code> to quit <em>Keypirinha</em></li>
 </ul>
-</div></blockquote>
-<p>A Registry key is recognized as such by the plugin if and only if the specified
-path is absolute (i.e. starting with one of the <code class="docutils literal"><span class="pre">HKEY_</span></code> values) <strong>and</strong> the
-specified key exists <strong>and is readable</strong> (i.e. right access privileges), at the
-moment you are typing it.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li><code class="docutils literal"><span class="pre">/</span></code> character is also supported as separator in addition to <code class="docutils literal"><span class="pre">\</span></code></li>
-<li>Paths are case-insensitive</li>
-</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The best way to list all the items populated by this plugin is to type the
+<code class="docutils literal"><span class="pre">keypirinha:</span></code> string in the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
 </div>
 </div>
 
@@ -201,10 +197,10 @@ moment you are typing it.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="winscp.html" class="btn btn-neutral float-right" title="9.14. WinSCP Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="apps.html" class="btn btn-neutral float-right" title="9.2. Apps Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="winamp.html" class="btn btn-neutral" title="9.12. Winamp Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../shipped-packages.html" class="btn btn-neutral" title="9. Shipped Packages" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -234,7 +230,7 @@ moment you are typing it.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.6',
+            VERSION:'2.9.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
