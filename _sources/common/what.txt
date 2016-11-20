@@ -7,8 +7,8 @@
 * Launch a search on any configured website or online dictionary
 * Evaluate a mathematical expression
 * Convert numbers
-* Launch a pasted URL directly (``http``, ``mailto``, ``skype``, ...)
-* Switch to a running application searched by name
+* Launch a copied URL directly (``http``, ``mailto``, ``skype``, ...)
+* Switch to a running application searched by its name
 * Associate a keyword to a specific item
 * An embedded Python3_ API to extend |project|'s features
 
@@ -18,11 +18,9 @@
 * Fairly small memory footprint
 * Battery friendly
 * Extensible by writing :term:`plugin` scripts in Python3_.
-* A community full of enthusiasts
 * Freeware, no nag screen, no time limit, no ads
 
 You can think of |project| as an alternative to *Launchy* and a cousin of
 *Alfred*.
 
 See the :doc:`first` chapter for more information.
-

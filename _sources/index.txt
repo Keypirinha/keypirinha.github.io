@@ -13,7 +13,6 @@ A fast launcher for keyboard ninjas on Windows.
 * Take a look at the :doc:`install` procedure or the :doc:`update`
 * Read the :doc:`first` chapter
 * Check out the :doc:`changelog` to know what's new
-* Check out the :ref:`current-developments` section below to see **what's next**
 
 Need Help?
   * Join the |chat_room|
@@ -29,46 +28,6 @@ What is |project|
 =================
 
 .. include:: common/what.rst
-
-
-.. _current-developments:
-
-Current Developments
-====================
-
-Here are the headlines of |project|'s current developments.
-
-**Open Packages Platform:** |project| is glad to welcome `@psistorm`_ as a
-project member! He is currently working on developing the online side of the
-project in order to make it more **community-oriented**. That includes
-|project|'s website and more importantly a **packages management platform** to
-allow users to easily search, list, install, update and uninstall official and
-third-party packages. **Third-party developers** will be able to share their
-package with the community by registering their GitHub_ or Bitbucket_
-repository.
-
-**Catalog sub-system:** Several features regarding the Catalog sub-system have
-been requested by users and have been hanging in the issue tracker for quite a
-while now (issues `#22`_, `#52`_ and `#60`_). Altogether, they imply deep
-changes under the hood and require some time to be implemented. It is slowly
-making its way.
-
-.. _#22: https://github.com/Keypirinha/Keypirinha/issues/22
-.. _#52: https://github.com/Keypirinha/Keypirinha/issues/52
-.. _#60: https://github.com/Keypirinha/Keypirinha/issues/60
-
-
-About this Documentation
-========================
-
-This documentation is a work in progress and the effort of a non-native english
-speaker. Comments and contributions are appreciated. It is written in reST_ and
-generated using the Sphinx_ tools suite.
-
-.. TODO: Move documentation to its own public repository.
-.. This documentation is a work in progress. Comments and contributions are
-.. appreciated and can be done from this dedicated |docsrepo_link|. It is written
-.. in reST_ and generated using the Sphinx_ tools suite.
 
 
 Contents
@@ -102,6 +61,19 @@ Contents
     :hidden:
 
     changelog
+
+
+About this Documentation
+========================
+
+This documentation is a work in progress and the effort of a non-native english
+speaker. Comments and contributions are appreciated. It is written in reST_ and
+generated using the Sphinx_ tools suite.
+
+.. TODO: Move documentation to its own public repository.
+.. This documentation is a work in progress. Comments and contributions are
+.. appreciated and can be done from this dedicated |docsrepo_link|. It is written
+.. in reST_ and generated using the Sphinx_ tools suite.
 
 
 Indices and tables

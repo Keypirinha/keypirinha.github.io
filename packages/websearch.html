@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.7
+                2.9.8
               </div>
             
           
@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="regbrowser.html">9.10. RegBrowser Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">9.11. TaskSwitcher Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url.html">9.12. URL Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">9.13. WebSearch Package</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.13. WebSearch Package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#catalog-items">9.13.1. Catalog Items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configuring-search-sites">9.13.2. Configuring Search Sites</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#multi-url-search-site">9.13.2.1. Multi-URL Search Site</a></li>
@@ -152,7 +152,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -194,12 +194,12 @@
 <h2>9.13.2. Configuring Search Sites<a class="headerlink" href="#configuring-search-sites" title="Permalink to this headline">¶</a></h2>
 <p><em>WebSearch</em> allows flexible and fine-grained configuration. Use the
 <code class="docutils literal"><span class="pre">Configure</span> <span class="pre">Package:</span> <span class="pre">WebSearch</span></code> item to edit it (check out the
-<a class="reference internal" href="../configuration.html"><em>Configuration</em></a> chapter for an overview about how to edit <em>Keypirinha</em>&#8216;s
+<a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter for an overview about how to edit <em>Keypirinha</em>&#8216;s
 configuration files).</p>
 <p>For example, if you wish to be able to request the <em>DuckDuckGo</em> search engine
 from <em>Keypirinha</em> (which is already configured by default), add the following into
 your configuration file:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span class="k">[site/DuckDuckGo]</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[site/DuckDuckGo]</span>
 <span class="na">url</span> <span class="o">=</span> <span class="s">https://duckduckgo.com/?q=%s</span>
 <span class="na">new_window</span> <span class="o">=</span> <span class="s">yes</span>
 <span class="na">incognito</span> <span class="o">=</span> <span class="s">no</span>
@@ -257,7 +257,7 @@ digits, and the characters <code class="docutils literal"><span class="pre">_.-<
 <div class="section" id="multi-url-search-site">
 <h3>9.13.2.1. Multi-URL Search Site<a class="headerlink" href="#multi-url-search-site" title="Permalink to this headline">¶</a></h3>
 <p>Example of multi-URL search site:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span class="k">[site/Multi]</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[site/Multi]</span>
 <span class="na">url</span> <span class="o">=</span><span class="s"></span>
 <span class="s">    https://duckduckgo.com/?q=%s</span>
 <span class="s">    https://encrypted.google.com/search?q=%s</span>
@@ -311,7 +311,7 @@ digits, and the characters <code class="docutils literal"><span class="pre">_.-<
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.7',
+            VERSION:'2.9.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

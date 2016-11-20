@@ -88,6 +88,5 @@ Obsolete as of v2.9
 
 .. _@gschenck: https://github.com/gschenck
 .. _@ThaSiouL: https://github.com/ThaSiouL
-.. _@ueffel: https://github.com/ueffel
 
 .. _#94: https://github.com/Keypirinha/Keypirinha/issues/94

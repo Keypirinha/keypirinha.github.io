@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.7
+                2.9.8
               </div>
             
           
@@ -103,7 +103,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="module.html">11.2.1. keypirinha module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="module-util.html">11.2.2. keypirinha_util module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.3. keypirinha_net module</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">11.2.3. keypirinha_net module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#module-keypirinha_net">11.2.3.1. Reference</a></li>
 </ul>
 </li>
@@ -146,7 +146,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -187,7 +187,7 @@ global settings if needed and to ensure reasonable default <code class="docutils
 <a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">build_urllib_opener()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha_net.UrllibOpener.open">
-<code class="descname">open</code><span class="sig-paren">(</span><em>fullurl</em>, <em>*args</em>, <em>data=None</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener.open" title="Permalink to this definition">¶</a></dt>
+<code class="descname">open</code><span class="sig-paren">(</span><em>fullurl</em>, <em>*args</em>, <em>*</em>, <em>data=None</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener.open" title="Permalink to this definition">¶</a></dt>
 <dd><p>This overrides <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.OpenerDirector.open" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">urllib.request.OpenerDirector.open()</span></code></a> in order to
 apply the <code class="docutils literal"><span class="pre">timeout</span></code> value automatically from Keypirinha&#8217;s settings.
 Forcing a <em>timeout</em> value here is still allowed but discouraged.</p>
@@ -203,16 +203,16 @@ using current user&#8217;s global settings (Keypirinha and/or system&#8217;s) re
 network connections, by inserting and configuring one or several connection
 handlers (derived from <a class="reference external" href="https://docs.python.org/3.5/library/urllib.request.html#urllib.request.BaseHandler" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">urllib.request.BaseHandler</span></code></a>).</p>
 <p>Examples:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c1"># example 1</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># example 1</span>
 <span class="n">opener</span> <span class="o">=</span> <span class="n">build_urllib_opener</span><span class="p">()</span>
 <span class="k">with</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/user-agent&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
 <span class="c1"># example 2: HTTP proxy</span>
 <span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s2">&quot;http://proxy_user:proxy_pass@127.0.0.1:8080&quot;</span><span class="p">}</span>
 <span class="n">opener</span> <span class="o">=</span> <span class="n">build_urllib_opener</span><span class="p">(</span><span class="n">proxies</span><span class="p">)</span>
 <span class="k">with</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/ip&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -301,10 +301,10 @@ using <code class="docutils literal"><span class="pre">\n</span></code> as a sep
 <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str.strip" title="(in Python v3.5)"><code class="xref py py-meth docutils literal"><span class="pre">str.strip()</span></code></a>.</p>
 <p>Each entry of <em>proxies</em> must be a string that complies to the following
 grammar:</p>
-<div class="highlight-python"><div class="highlight"><pre>prox_entry  ::= [ conn_scheme &quot;=&quot; ] proxy_url
-conn_scheme ::= ( &quot;http&quot; | &quot;https&quot; | &quot;socks&quot; | &quot;socks4&quot; | &quot;socks5&quot;)
-proxy_url   ::= url_scheme &quot;://&quot; [ proxy_user &quot;:&quot; proxy_pass &quot;@&quot; ] netloc &quot;:&quot; proxy_port
-proxy_port  ::= unsigned
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prox_entry</span>  <span class="p">::</span><span class="o">=</span> <span class="p">[</span> <span class="n">conn_scheme</span> <span class="s2">&quot;=&quot;</span> <span class="p">]</span> <span class="n">proxy_url</span>
+<span class="n">conn_scheme</span> <span class="p">::</span><span class="o">=</span> <span class="p">(</span> <span class="s2">&quot;http&quot;</span> <span class="o">|</span> <span class="s2">&quot;https&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks4&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks5&quot;</span><span class="p">)</span>
+<span class="n">proxy_url</span>   <span class="p">::</span><span class="o">=</span> <span class="n">url_scheme</span> <span class="s2">&quot;://&quot;</span> <span class="p">[</span> <span class="n">proxy_user</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_pass</span> <span class="s2">&quot;@&quot;</span> <span class="p">]</span> <span class="n">netloc</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_port</span>
+<span class="n">proxy_port</span>  <span class="p">::</span><span class="o">=</span> <span class="n">unsigned</span>
 </pre></div>
 </div>
 <p>If the <code class="docutils literal"><span class="pre">conn_scheme</span></code> part is not specified, <code class="docutils literal"><span class="pre">url_scheme</span></code> is assumed.</p>
@@ -312,8 +312,7 @@ proxy_port  ::= unsigned
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211;
-<em>proxies</em> cannot be parsed</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; <em>proxies</em> cannot be parsed</td>
 </tr>
 </tbody>
 </table>
@@ -366,7 +365,7 @@ proxy_port  ::= unsigned
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.7',
+            VERSION:'2.9.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

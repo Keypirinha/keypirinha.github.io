@@ -64,14 +64,9 @@ work-flow.
 Is it open source?
 ==================
 
-The application itself is not and is distributed as a
+The application itself is distributed as a
 `Freeware <https://en.wikipedia.org/wiki/Freeware>`_. |br|
-Its official plugins are open source and will always be.
-
-As of August 2016, project status is not meant to change in a short-term future
-in that regard. However, there is a strong will to make the project
-community-oriented through the development of an open and automated packages
-management platform.
+Its official plugins however are open source and will always be.
 
 
 How to support the project?

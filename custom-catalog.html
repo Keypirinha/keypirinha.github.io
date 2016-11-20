@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.9.7
+                2.9.8
               </div>
             
           
@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">5. Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">6. Configuration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">7. Customize your Catalog</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Customize your Catalog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">7.1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#disable-everything">7.2. Disable everything</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expanding-your-catalog">7.3. Expanding your Catalog</a></li>
@@ -133,7 +133,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -164,10 +164,10 @@ expand it with only the desired features/items.</p>
 <div class="section" id="introduction">
 <h2>7.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>To understand how to customize your Catalog, you must first understand how it is
-built. The tiny <a class="reference internal" href="overview.html#overview-architecture"><span>Architecture</span></a> section gives you an overview of
+built. The tiny <a class="reference internal" href="overview.html#overview-architecture"><span class="std std-ref">Architecture</span></a> section gives you an overview of
 the role plugins play in <em>Keypirinha</em>.</p>
 <p>This guide assumes you already know how to configure <em>Keypirinha</em> so you might want
-to open the <a class="reference internal" href="configuration.html"><em>Configuration</em></a> chapter aside and have it handy while reading
+to open the <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> chapter aside and have it handy while reading
 the following sections.</p>
 </div>
 <div class="section" id="disable-everything">
@@ -176,7 +176,7 @@ the following sections.</p>
 except the <code class="docutils literal"><span class="pre">Internal</span></code> one.</p>
 <p>Open <em>Keypirinha</em>&#8216;s configuration file and create/modify the <code class="docutils literal"><span class="pre">ignored_packages</span></code>
 setting as follows:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span class="k">[app]</span>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[app]</span>
 <span class="na">ignored_packages</span> <span class="o">=</span> <span class="s">&lt;All&gt;, -Internal</span>
 </pre></div>
 </div>
@@ -200,7 +200,7 @@ referenced in their favorite web browser...</p>
 roughly represent a single feature or a set of related features. For example,
 the <cite>Calc</cite> package does just what its name implies: it evaluates a mathematical
 expression you typed, then shows its result.</p>
-<p>Check out the list of the available <a class="reference internal" href="shipped-packages.html"><em>Shipped Packages</em></a> and learn more about
+<p>Check out the list of the available <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a> and learn more about
 their individual purpose to see if they suit your needs. You may then want to
 enable them one by one using the <code class="docutils literal"><span class="pre">ignored_packages</span></code> setting.</p>
 <p>Also, do not forget that some of them are configurable, which means that you may
@@ -260,7 +260,7 @@ item. Among them the name of the parent plugin.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.7',
+            VERSION:'2.9.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

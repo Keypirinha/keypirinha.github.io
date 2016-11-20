@@ -9,15 +9,20 @@ features by using your keyboard only. Keep that in mind!
 Start |project|
 ===============
 
-|project| is a *resident* application, which means it directly goes to the
-background when it is started. You can check application is running by looking
-for its icon in the system tray's notification area. It is located next to the
-system clock on your desktop, which is usually located in the lower-right corner
-of your main monitor.
+|project| is a *resident* application, it directly goes to background when it is
+started. You can check application is running by looking for its icon in the
+system tray's notification area. It is located next to the system clock on your
+desktop, which is usually located in the lower-right corner of your main
+monitor.
 
 .. image:: images/systray.png
     :alt: |project|'s icon in the system's tray
     :align: center
+
+.. tip::
+    This ``k`` icon also idicates any activity from the plugins (e.g.
+    cataloging, suggesting, executing, ...) by **turning green**. Color is
+    restored to normal as soon as plugins have finished their jobs.
 
 
 Open the LaunchBox

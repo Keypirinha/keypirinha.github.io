@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.7
+                2.9.8
               </div>
             
           
@@ -102,7 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="overview.html">11.1. Overview</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="module.html">11.2.1. keypirinha module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">11.2.2. keypirinha_util module</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">11.2.2. keypirinha_util module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#module-keypirinha_util">11.2.2.1. Reference</a></li>
 </ul>
 </li>
@@ -146,7 +146,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -299,7 +299,7 @@ This flag might be combined with other flags except <a class="reference internal
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.FILES">
 <code class="descname">FILES</code><em class="property"> = &lt;ScanFlags.FILES: 1&gt;</em><a class="headerlink" href="#keypirinha_util.ScanFlags.FILES" title="Permalink to this definition">¶</a></dt>
-<dd><p>List files (i.e.: everything that is not a directory)</p>
+<dd><p><em>List files (i.e.</em> &#8211; everything that is not a directory)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -407,8 +407,7 @@ arguments.</p>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211;
-At least one of the passed arguments has an unsupported type.</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211; At least one of the passed arguments has an unsupported type.</p>
 </td>
 </tr>
 </tbody>
@@ -433,8 +432,7 @@ argument.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a></td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
-The underlying call to Win32&#8217;s <code class="docutils literal"><span class="pre">CommandLineToArgvW</span></code> function
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; The underlying call to Win32&#8217;s <code class="docutils literal"><span class="pre">CommandLineToArgvW</span></code> function
 failed.</td>
 </tr>
 </tbody>
@@ -469,8 +467,7 @@ also a link file (i.e.: only one level of recursion).</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#keypirinha_util.FileAttr" title="keypirinha_util.FileAttr">FileAttr</a></td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211;
-<em>file</em> is not found or not accessible. Or if the link
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; <em>file</em> is not found or not accessible. Or if the link
 could not be resolved (in case <em>follow_link</em> is True).</td>
 </tr>
 </tbody>
@@ -540,10 +537,8 @@ as a <em>target</em> property for a <a class="reference internal" href="catalogi
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211;
-The type of a passed value is invalid.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#UnicodeEncodeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">UnicodeEncodeError</span></code></a> &#8211;
-<a class="reference external" href="https://docs.python.org/3.5/library/urllib.parse.html#urllib.parse.quote_plus" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">urllib.parse.quote_plus()</span></code></a> failed.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211; The type of a passed value is invalid.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#UnicodeEncodeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">UnicodeEncodeError</span></code></a> &#8211; <a class="reference external" href="https://docs.python.org/3.5/library/urllib.parse.html#urllib.parse.quote_plus" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">urllib.parse.quote_plus()</span></code></a> failed.</li>
 </ul>
 </td>
 </tr>
@@ -576,7 +571,7 @@ Does nothing if <em>winerr</em> or eventually the result of
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>link_file</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The path of the <code class="docutils literal"><span class="pre">.lnk</span></code> file.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dict containing the properties:<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span><span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="s2">&quot;The resolved target file; path is already expanded&quot;</span><span class="p">,</span>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dict containing the properties:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="s2">&quot;The resolved target file; path is already expanded&quot;</span><span class="p">,</span>
     <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="s2">&quot;Target&#39;s parameters (may be None)&quot;</span><span class="p">,</span>
     <span class="s1">&#39;working_dir&#39;</span><span class="p">:</span> <span class="s2">&quot;Working directory (may be None)&quot;</span><span class="p">,</span>
     <span class="s1">&#39;desc&#39;</span><span class="p">:</span> <span class="s2">&quot;Description (may be None)&quot;</span><span class="p">,</span>
@@ -589,8 +584,7 @@ Does nothing if <em>winerr</em> or eventually the result of
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211;
-The file could not be read or is not a link.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211; The file could not be read or is not a link.</td>
 </tr>
 </tbody>
 </table>
@@ -628,7 +622,7 @@ content of its sub-directories, and so on... Specify a value of
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>The paths (strings) of found files and/or directories. Paths are
 relative to <em>base_dir</em>. The full path of an element can be build that
 way:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;c:/dir&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;c:/dir&quot;</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">keypirinha</span><span class="o">.</span><span class="n">scan_directory</span><span class="p">(</span><span class="n">root_dir</span><span class="p">)</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">full_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root_dir</span><span class="p">,</span> <span class="n">files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -640,8 +634,7 @@ way:</p>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
-something went wrong while trying to open the specified
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; something went wrong while trying to open the specified
 <em>base_dir</em> or during the scan.</p>
 </td>
 </tr>
@@ -713,10 +706,8 @@ value is less than zero, default will be applied (currently
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211;
-The <em>thing</em> was not found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
-Specified <em>thing</em> is a link that could not be read. Or
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The <em>thing</em> was not found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; Specified <em>thing</em> is a link that could not be read. Or
 <code class="docutils literal"><span class="pre">ShellExecuteEx</span></code> failed with the given thing and arguments. Or an
 unexpected/unknown error occurred internally.</li>
 </ul>
@@ -765,12 +756,10 @@ Note that not all Known Folders are available on every platforms.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211;
-The specified GUID is invalid (type, format or value). Or
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; The specified GUID is invalid (type, format or value). Or
 this Known Folder is not available on this platform. Or the
 specified Known Folder is virtual.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211;
-The Known Folder is virtual, or not available on this platform.</li>
+<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; The Known Folder is virtual, or not available on this platform.</li>
 </ul>
 </td>
 </tr>
@@ -851,15 +840,16 @@ location string of class&#8217; default icon.</td>
 <dl class="function">
 <dt id="keypirinha_util.web_browser_command">
 <code class="descclassname">keypirinha_util.</code><code class="descname">web_browser_command</code><span class="sig-paren">(</span><em>private_mode=None</em>, <em>new_window=None</em>, <em>url=None</em>, <em>execute=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.web_browser_command" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Swiss Knife function to deal with the configured web browser, or by
-default, with the detected system&#8217;s default web browser.</p>
-<p>It allows to:</p>
+<dd><p>A Swiss Knife function to deal with the web browser setup in Keypirinha&#8217;s
+global configuration (see the <code class="docutils literal"><span class="pre">web_browser</span></code> setting in the <code class="docutils literal"><span class="pre">[external]</span></code>
+section), or by default, with the system&#8217;s default web browser.</p>
+<p>This function allows to:</p>
 <ul class="simple">
-<li>Open the given URL.</li>
+<li>Open the given URL</li>
 <li>Get the split command line to execute the web browser, including the given
-URL.</li>
+URL</li>
 <li>Get the split command line to execute the web browser, including a
-placeholder element to indicate where to insert the URL to open.</li>
+placeholder element to indicate where to insert the URL to open</li>
 </ul>
 <p>All the above cases take the <em>private_mode</em> and <em>new_window</em> arguments into
 account. The execution flow of this function depends on the <em>url</em> and
@@ -879,11 +869,18 @@ default (i.e. <code class="docutils literal"><span class="pre">None</span></code
 configuration, or will fall back to browser&#8217;s default behavior.
 Specifying a boolean value (other than <code class="docutils literal"><span class="pre">None</span></code>), will override
 user&#8217;s configuration.</li>
-<li><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; If specified, the given URL will be inserted at the right
+<li><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; <p>If specified, the given URL(s) will be inserted at the right
 place in the command line so the caller does not have to do it
-manually. This is convenient since, while being uncommon, the URL
+manually. This is convenient since, while being uncommon, the URL(s)
 might have to be inserted in the command line instead of just being
-appended.</li>
+appended.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last"><em>url</em> can also be an iterable of strings in case several URLs
+are to be launched, in which case, they will be opened together
+if possible (i.e. using the same command line).</p>
+</div>
+</li>
 <li><strong>execute</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Only taken into account if a <em>url</em> is specified. If this
 argument is <code class="docutils literal"><span class="pre">True</span></code>, the given <em>url</em> will be opened using
 <a class="reference internal" href="#keypirinha_util.shell_execute" title="keypirinha_util.shell_execute"><code class="xref py py-func docutils literal"><span class="pre">shell_execute()</span></code></a> and taking the <em>private_mode</em> and
@@ -900,8 +897,7 @@ represent the command line to execute in order to launch the web web
 browser. In that case, <em>url</em> can be specified so the returned
 command line arguments list is ready to use. Otherwise, the returned
 list will contain a placeholder (<code class="docutils literal"><span class="pre">%1</span></code>) to indicate where to insert
-the URL to open. Returns <code class="docutils literal"><span class="pre">None</span></code> if no we browser could not be
-found.</p>
+the URL to open. Returns <code class="docutils literal"><span class="pre">None</span></code> if no browser could be found.</p>
 </dd>
 <dt>bool</dt>
 <dd><p class="first last">If <em>execute</em> is <code class="docutils literal"><span class="pre">True</span></code> and a <em>url</em> is specified, this function
@@ -912,8 +908,7 @@ or not the launch request is successful.</p>
 </p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211;
-The given <em>url</em> argument is invalid.</p>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> &#8211; The given <em>url</em> argument is invalid.</p>
 </td>
 </tr>
 </tbody>
@@ -963,7 +958,7 @@ The given <em>url</em> argument is invalid.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.7',
+            VERSION:'2.9.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
