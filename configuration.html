@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.9.8
+                2.9.9
               </div>
             
           
@@ -295,13 +295,16 @@ file.</p>
 <h3>6.4.5. Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
 <p><em>Keypirinha</em> also automatically populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
 values that may come handy.</p>
+<p>To use them, use the following syntax in your configuration file: <br />
+<code class="docutils literal"><span class="pre">${var:APP_DIR}</span></code> or <code class="docutils literal"><span class="pre">${var:KNOWNFOLDER_MUSIC}</span></code>, ...</p>
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">APP_DIR</span></code> <br />
 The path to the root/install directory of the application. <br />
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha</span></code> (installed mode)</li>
-<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha</span></code> (portable mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha</span></code> (portable mode)
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">APP_EXE</span></code> <br />
@@ -309,7 +312,8 @@ The path to application&#8217;s executable <br />
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha\Keypirinha.exe</span></code> (installed mode)</li>
-<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\Keypirinha.exe</span></code> (portable mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\Keypirinha.exe</span></code> (portable mode)
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR</span></code> <br />
@@ -318,7 +322,8 @@ The <em>Profile</em> directory, parent of the <em>User</em>, <em>InstalledPackag
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha</span></code> (installed mode)</li>
-<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile</span></code> (portable mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile</span></code> (portable mode)
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_USER</span></code> <br />
@@ -326,7 +331,8 @@ The <em>User</em> directory, where user&#8217;s configuration files are stored. 
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\User</span></code> (installed mode)</li>
-<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\User</span></code> (portable mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\User</span></code> (portable mode)
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_INSTALLED_PACKS</span></code> <br />
@@ -336,7 +342,8 @@ Examples:</p>
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\InstalledPackages</span></code> in installed
 mode</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\InstalledPackages</span></code> in portable
-mode</li>
+mode
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_LIVE_PACKS</span></code> <br />
@@ -345,7 +352,8 @@ stored. <br />
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\Packages</span></code> (installed mode)</li>
-<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\Packages</span></code> (portable mode)</li>
+<li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\portable\Profile\Packages</span></code> (portable mode)
+<br /> <br /></li>
 </ul>
 </li>
 <li><p class="first">For convenience, some Windows&#8217;
@@ -358,12 +366,12 @@ are also predefined. They may come handy to configure some packages.</p>
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
-<th class="head">Usual Location</th>
+<th class="head">Expands to (example; may differ on your system)</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_ACCOUNTPICTURES</span></code></td>
-<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\AccountPictures</span></code></td>
+<td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\AccountPictures</span></code> (Win8+)</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_CAMERAROLL</span></code></td>
 <td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures\Camera</span> <span class="pre">Roll</span></code> (Win8.1+)</td>
@@ -459,7 +467,7 @@ are also predefined. They may come handy to configure some packages.</p>
 <td><code class="docutils literal"><span class="pre">%APPDATA%</span></code> (<code class="docutils literal"><span class="pre">%USERPROFILE%\AppData\Roaming</span></code>)</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SCREENSHOTS</span></code></td>
-<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures\Screenshots</span></code></td>
+<td><code class="docutils literal"><span class="pre">%USERPROFILE%\Pictures\Screenshots</span></code> (Win8+)</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">KNOWNFOLDER_SENDTO</span></code></td>
 <td><code class="docutils literal"><span class="pre">%APPDATA%\Microsoft\Windows\SendTo</span></code></td>
@@ -741,7 +749,7 @@ directory.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.9.8',
+            VERSION:'2.9.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

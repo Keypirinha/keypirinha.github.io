@@ -172,21 +172,24 @@ Predefined variables
 |project| also automatically populates the ``var`` section with some predefined
 values that may come handy.
 
+To use them, use the following syntax in your configuration file: |br|
+``${var:APP_DIR}`` or ``${var:KNOWNFOLDER_MUSIC}``, ...
+
 * ``APP_DIR`` |br|
   The path to the root/install directory of the application. |br|
   Examples:
 
   - ``C:\Program Files\Keypirinha`` (installed mode)
-
   - ``U:\USBApps\Keypirinha`` (portable mode)
+    |br| |br|
 
 * ``APP_EXE`` |br|
   The path to application's executable |br|
   Examples:
 
   - ``C:\Program Files\Keypirinha\Keypirinha.exe`` (installed mode)
-
   - ``U:\USBApps\Keypirinha\Keypirinha.exe`` (portable mode)
+    |br| |br|
 
 * ``PROFILE_DIR`` |br|
   The *Profile* directory, parent of the *User*, *InstalledPackages* and
@@ -194,16 +197,16 @@ values that may come handy.
   Examples:
 
   - ``C:\Users\Bob\AppData\Roaming\Keypirinha`` (installed mode)
-
   - ``U:\USBApps\Keypirinha\portable\Profile`` (portable mode)
+    |br| |br|
 
 * ``PROFILE_DIR_USER`` |br|
   The *User* directory, where user's configuration files are stored. |br|
   Examples:
 
   - ``C:\Users\Bob\AppData\Roaming\Keypirinha\User`` (installed mode)
-
   - ``U:\USBApps\Keypirinha\portable\Profile\User`` (portable mode)
+    |br| |br|
 
 * ``PROFILE_DIR_INSTALLED_PACKS`` |br|
   The *InstalledPackages* directory, home of the downloaded packages. |br|
@@ -211,9 +214,9 @@ values that may come handy.
 
   - ``C:\Users\Bob\AppData\Roaming\Keypirinha\InstalledPackages`` in installed
     mode
-
   - ``U:\USBApps\Keypirinha\portable\Profile\InstalledPackages`` in portable
     mode
+    |br| |br|
 
 * ``PROFILE_DIR_LIVE_PACKS`` |br|
   The *Packages* directory, where the live packages (modifiable at runtime) are
@@ -221,17 +224,17 @@ values that may come handy.
   Examples:
 
   - ``C:\Users\Bob\AppData\Roaming\Keypirinha\Packages`` (installed mode)
-
   - ``U:\USBApps\Keypirinha\portable\Profile\Packages`` (portable mode)
+    |br| |br|
 
 * For convenience, some Windows'
   `Known Folders <https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx>`_
   are also predefined. They may come handy to configure some packages.
 
   +----------------------------------------+---------------------------------------------------------------------+
-  | Name                                   | Usual Location                                                      |
+  | Name                                   | Expands to (example; may differ on your system)                     |
   +========================================+=====================================================================+
-  | ``KNOWNFOLDER_ACCOUNTPICTURES``        | ``%APPDATA%\Microsoft\Windows\AccountPictures``                     |
+  | ``KNOWNFOLDER_ACCOUNTPICTURES``        | ``%APPDATA%\Microsoft\Windows\AccountPictures`` (Win8+)             |
   +----------------------------------------+---------------------------------------------------------------------+
   | ``KNOWNFOLDER_CAMERAROLL``             | ``%USERPROFILE%\Pictures\Camera Roll`` (Win8.1+)                    |
   +----------------------------------------+---------------------------------------------------------------------+
@@ -295,7 +298,7 @@ values that may come handy.
   +----------------------------------------+---------------------------------------------------------------------+
   | ``KNOWNFOLDER_ROAMINGAPPDATA``         | ``%APPDATA%`` (``%USERPROFILE%\AppData\Roaming``)                   |
   +----------------------------------------+---------------------------------------------------------------------+
-  | ``KNOWNFOLDER_SCREENSHOTS``            | ``%USERPROFILE%\Pictures\Screenshots``                              |
+  | ``KNOWNFOLDER_SCREENSHOTS``            | ``%USERPROFILE%\Pictures\Screenshots`` (Win8+)                      |
   +----------------------------------------+---------------------------------------------------------------------+
   | ``KNOWNFOLDER_SENDTO``                 | ``%APPDATA%\Microsoft\Windows\SendTo``                              |
   +----------------------------------------+---------------------------------------------------------------------+

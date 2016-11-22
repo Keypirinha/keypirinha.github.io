@@ -5,66 +5,69 @@ Keyboard Shortcuts
 LaunchBox
 =========
 
-+-----------------------------------------+------------------------------------+
-| Action(s)                               | Shortcut(s)                        |
-+=========================================+====================================+
-| Show/Hide the LaunchBox                 | :kbd:`Ctrl+Win+K` (default)        |
-+-----------------------------------------+------------------------------------+
-| Next step (add args, choose action)     | :kbd:`Tab` or :kbd:`Alt+Right` (or |
-|                                         | :kbd:`Space` while being |br| at   |
-|                                         | first step and if the              |
-|                                         | ``space_as_tab`` option |br| is    |
-|                                         | enabled)                           |
-+-----------------------------------------+------------------------------------+
-| Forcefully go back to previous search   | :kbd:`Alt+Left`                    |
-| step                                    |                                    |
-+-----------------------------------------+------------------------------------+
-| Force insert a space character while at | :kbd:`Ctrl+Space` or               |
-| first step                              | :kbd:`Shift+Space`                 |
-+-----------------------------------------+------------------------------------+
-| Directly select an action               | :kbd:`Ctrl+Enter`                  |
-+-----------------------------------------+------------------------------------+
-| Execute the item without closing the    | :kbd:`Shift+Enter`                 |
-| LaunchBox, and reset                    |                                    |
-+-----------------------------------------+------------------------------------+
-| Execute the item without closing the    | :kbd:`Ctrl+Shift+Enter`            |
-| LaunchBox, and go back to the initial   |                                    |
-| step of the current search              |                                    |
-+-----------------------------------------+------------------------------------+
-| Show selected item's properties         | :kbd:`Alt+Enter`                   |
-+-----------------------------------------+------------------------------------+
-| Show Shell's "Properties" dialog for    | :kbd:`Shift+Alt+Enter`             |
-| the selected **FILE** item              |                                    |
-+-----------------------------------------+------------------------------------+
-| Maximize the LaunchBox (toggle)         | :kbd:`Alt+X` or                    |
-|                                         | :kbd:`Win+Up`                      |
-+-----------------------------------------+------------------------------------+
-| * Reset your current search (once)      | :kbd:`Esc`                         |
-| * Hide the LaunchBox (twice)            |                                    |
-+-----------------------------------------+------------------------------------+
-| Hide the LaunchBox                      | :kbd:`Shift+Esc` or :kbd:`Alt+F4`  |
-+-----------------------------------------+------------------------------------+
-| Erase a single item from history        | :kbd:`Ctrl+Del`                    |
-+-----------------------------------------+------------------------------------+
-| Erase previous word                     | :kbd:`Ctrl+BackSpace`              |
-+-----------------------------------------+------------------------------------+
-| Show history items                      | :kbd:`Ctrl+Down` (or :kbd:`Down`   |
-|                                         | if search state is clean)          |
-+-----------------------------------------+------------------------------------+
++------------------------------------+-----------------------------------------+
+| Shortcut(s)                        | Action(s)                               |
++====================================+=========================================+
+| :kbd:`Ctrl+Win+K` (default)        | Show/Hide the LaunchBox                 |
++------------------------------------+-----------------------------------------+
+| * :kbd:`Tab`                       | Next step (add args, choose action)     |
+| * :kbd:`Alt+Right`                 |                                         |
+| * :kbd:`Space` (while being at     |                                         |
+|   first |br| step and if the       |                                         |
+|   ``space_as_tab`` |br| option is  |                                         |
+|   enabled)                         |                                         |
++------------------------------------+-----------------------------------------+
+| :kbd:`Alt+Left`                    | Forcefully go back to previous search   |
+|                                    | step                                    |
++------------------------------------+-----------------------------------------+
+| * :kbd:`Ctrl+Space`                | Force insert a space character while at |
+| * :kbd:`Shift+Space`               | first step                              |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+Enter`                  | Directly select an action               |
++------------------------------------+-----------------------------------------+
+| :kbd:`Shift+Enter`                 | Execute the item without closing the    |
+|                                    | LaunchBox, and reset                    |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+Shift+Enter`            | Execute the item without closing the    |
+|                                    | LaunchBox, and go back to |br| the      |
+|                                    | initial step of the current search      |
++------------------------------------+-----------------------------------------+
+| :kbd:`Alt+Enter`                   | Show selected item's properties         |
++------------------------------------+-----------------------------------------+
+| :kbd:`Shift+Alt+Enter`             | Show Shell's "Properties" dialog for    |
+|                                    | the selected **FILE** item              |
++------------------------------------+-----------------------------------------+
+| * :kbd:`Alt+X`                     | Maximize the LaunchBox (toggle)         |
+| * :kbd:`Win+Up`                    |                                         |
++------------------------------------+-----------------------------------------+
+| :kbd:`Esc`                         | * Reset your current search (once)      |
+|                                    | * Hide the LaunchBox (twice)            |
++------------------------------------+-----------------------------------------+
+| * :kbd:`Shift+Esc`                 | Hide the LaunchBox                      |
+| * :kbd:`Alt+F4`                    | Hide the LaunchBox                      |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+Del`                    | Erase a single item from history        |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+BackSpace`              | Erase previous word                     |
++------------------------------------+-----------------------------------------+
+| * :kbd:`Ctrl+Down`                 | Show history items                      |
+| * :kbd:`Down`                      |                                         |
+|   (if search state is clean)       |                                         |
++------------------------------------+-----------------------------------------+
 
 
 Console
 =======
 
-+-----------------------------------------+------------------------------------+
-| Action                                  | Shortcut(s)                        |
-+=========================================+====================================+
-| Hide the Console                        | :kbd:`Esc` or :kbd:`Alt+F4`        |
-+-----------------------------------------+------------------------------------+
-| Switch focus between command and log    | :kbd:`Ctrl+Tab`                    |
-| controls                                |                                    |
-+-----------------------------------------+------------------------------------+
-| Validate command                        | :kbd:`Enter`                       |
-+-----------------------------------------+------------------------------------+
-| Erase previous word                     | :kbd:`Ctrl+BackSpace`              |
-+-----------------------------------------+------------------------------------+
++-----------------------+------------------------------------------------------+
+| Shortcut(s)           | Action                                               |
++=======================+======================================================+
+| * :kbd:`Esc`          | Hide the Console                                     |
+| * :kbd:`Alt+F4`       |                                                      |
++-----------------------+------------------------------------------------------+
+| :kbd:`Ctrl+Tab`       | Switch focus between command and log controls        |
++-----------------------+------------------------------------------------------+
+| :kbd:`Enter`          | Validate command                                     |
++-----------------------+------------------------------------------------------+
+| :kbd:`Ctrl+BackSpace` | Erase previous word                                  |
++-----------------------+------------------------------------------------------+
