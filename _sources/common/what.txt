@@ -10,6 +10,8 @@
 * Launch a copied URL directly (``http``, ``mailto``, ``skype``, ...)
 * Switch to a running application searched by its name
 * Associate a keyword to a specific item
+* File-driven configuration
+* Machine-specific and/or user-specific configuration
 * An embedded Python3_ API to extend |project|'s features
 
 **Properties:**

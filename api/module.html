@@ -200,7 +200,7 @@ configuration, this flag is combined with <code class="docutils literal"><span c
 <code class="descname">NETOPTIONS</code><em class="property"> = &lt;Events.NETOPTIONS: 1024&gt;</em><a class="headerlink" href="#keypirinha.Events.NETOPTIONS" title="Permalink to this definition">¶</a></dt>
 <dd><p>System&#8217;s network settings have been modified (via the
 <code class="docutils literal"><span class="pre">Internet</span> <span class="pre">Properties</span></code> dialog for example), and plugins that perform
-network requests should upgrade their state.
+network requests should update their state.
 Practically, it means <a class="reference internal" href="module-net.html#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_net.build_urllib_opener()</span></code></a>
 should be called in order to get a new opener object.
 This event usually goes along with the <code class="docutils literal"><span class="pre">APPCONFIG</span></code> event, but developer
