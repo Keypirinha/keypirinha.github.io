@@ -6,11 +6,11 @@ Embedded Python Interpreter
 Version
 =======
 
-The embedded Python3_ interpreter is a vanilla version of *CPython*, the
-official distribution. The Python environment you get in |project| is pretty
-similar to the original one except that some modules have been removed from the
-standard library: ``distutils``, ``ensurepip``, ``idlelib``, ``lib2to3`` and
-``tkinter``.
+The embedded Python3_ interpreter is a vanilla version of *CPython* (the
+official Python distribution). The Python environment you get in |project| is
+pretty similar to the original one except that some modules have been removed
+from the standard library: ``distutils``, ``ensurepip``, ``idlelib``,
+``lib2to3`` and ``tkinter``.
 
 The exact version number of the application and the interpreter can be read at
 the beginning of the log in the :term:`Console`. Or by typing the following
@@ -49,7 +49,8 @@ os.environ
 ----------
 
 **In short:** |project| automatically updates the content of the
-:py:data:`os.environ` map every time an environment variable has been modified.
+:py:data:`os.environ` map every time an environment variable has been modified
+so the plugins always get up-to-date values environment.
 
 **Context:** |project| has been designed to dynamically adapt as much as
 possible to any modification made to its running context. That includes the
@@ -65,7 +66,7 @@ implementation.
 
 **Solution:** When |project| catches a system notification indicating a
 modification to the environment, it updates the environment block associated to
-the current process, then finally refreshes the :py:data:`os.environ` map. This
-mechanism is totally transparent to the plugins and updated environment values
-can be just read the standard way: either by accessing the :py:data:`os.environ`
-map or by calling :py:func:`os.getenv`.
+the current process, then eventually refreshes the :py:data:`os.environ` map.
+This mechanism is totally transparent to the plugins and updated environment
+values can be just read the standard way: either by accessing the
+:py:data:`os.environ` map or by calling :py:func:`os.getenv`.

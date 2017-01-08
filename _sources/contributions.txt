@@ -51,6 +51,22 @@ like:
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
 
+tuteken/Ditto
+-------------
+
+`@tuteken`_'s package to access to your saved items in
+`Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
+Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
+
+
+tuteken/Pinboard
+----------------
+
+`@tuteken`_'s package to access to your bookmarks on
+`Pinboard <http://pinboard.in>`_ |br|
+Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
+
+
 ueffel/Kill
 -----------
 
@@ -58,35 +74,4 @@ ueffel/Kill
 Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
 
 
-Integrated Patches
-==================
-
-Some patches offered by third-party developers have been fully or partly
-integrated to the official packages.
-
-* `@psistorm`_'s patch to allow predefined searches in ``Everything`` package
-  (see issue `#94`_) |br|
-  **Integrated in v2.9**
-
-
-Obsolete Contributions
-======================
-
-Obsolete as of v2.9
--------------------
-
-* `@ThaSiouL`_'s fork of the official ``Calc`` package offered improvements
-  against v2.8 and previous versions. |br|
-  Source: `<https://github.com/ThaSiouL/Keypirinha-Package-Calc>`_
-
-* `@gschenck`_'s patch against the official ``Calc`` package (v2.8 and previous)
-  in order to be able to use a ``,`` (comma) as a decimal mark, and the ``^``
-  character as an alias to the ``**`` operator (power of). |br|
-  Source: `<https://github.com/Keypirinha/Keypirinha/issues/70>`_
-
-
-
-.. _@gschenck: https://github.com/gschenck
-.. _@ThaSiouL: https://github.com/ThaSiouL
-
-.. _#94: https://github.com/Keypirinha/Keypirinha/issues/94
+.. _@tuteken: https://github.com/tuteken

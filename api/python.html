@@ -167,11 +167,11 @@
 <h1>11.3. Embedded Python Interpreter<a class="headerlink" href="#embedded-python-interpreter" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="version">
 <h2>11.3.1. Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
-<p>The embedded <a class="reference external" href="https://python.org">Python3</a> interpreter is a vanilla version of <em>CPython</em>, the
-official distribution. The Python environment you get in <em>Keypirinha</em> is pretty
-similar to the original one except that some modules have been removed from the
-standard library: <code class="docutils literal"><span class="pre">distutils</span></code>, <code class="docutils literal"><span class="pre">ensurepip</span></code>, <code class="docutils literal"><span class="pre">idlelib</span></code>, <code class="docutils literal"><span class="pre">lib2to3</span></code> and
-<code class="docutils literal"><span class="pre">tkinter</span></code>.</p>
+<p>The embedded <a class="reference external" href="https://python.org">Python3</a> interpreter is a vanilla version of <em>CPython</em> (the
+official Python distribution). The Python environment you get in <em>Keypirinha</em> is
+pretty similar to the original one except that some modules have been removed
+from the standard library: <code class="docutils literal"><span class="pre">distutils</span></code>, <code class="docutils literal"><span class="pre">ensurepip</span></code>, <code class="docutils literal"><span class="pre">idlelib</span></code>,
+<code class="docutils literal"><span class="pre">lib2to3</span></code> and <code class="docutils literal"><span class="pre">tkinter</span></code>.</p>
 <p>The exact version number of the application and the interpreter can be read at
 the beginning of the log in the <a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a>. Or by typing the following
 commands in the Console window:</p>
@@ -201,7 +201,8 @@ too.</p>
 <div class="section" id="os-environ">
 <h3>11.3.2.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
 <p><strong>In short:</strong> <em>Keypirinha</em> automatically updates the content of the
-<a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map every time an environment variable has been modified.</p>
+<a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map every time an environment variable has been modified
+so the plugins always get up-to-date values environment.</p>
 <p><strong>Context:</strong> <em>Keypirinha</em> has been designed to dynamically adapt as much as
 possible to any modification made to its running context. That includes the
 environment variables.</p>
@@ -214,10 +215,10 @@ an environment variable would not be able to do so easily with the default
 implementation.</p>
 <p><strong>Solution:</strong> When <em>Keypirinha</em> catches a system notification indicating a
 modification to the environment, it updates the environment block associated to
-the current process, then finally refreshes the <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map. This
-mechanism is totally transparent to the plugins and updated environment values
-can be just read the standard way: either by accessing the <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a>
-map or by calling <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.getenv" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a>.</p>
+the current process, then eventually refreshes the <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map.
+This mechanism is totally transparent to the plugins and updated environment
+values can be just read the standard way: either by accessing the
+<a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.environ" title="(in Python v3.5)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map or by calling <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.getenv" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a>.</p>
 </div>
 </div>
 </div>
