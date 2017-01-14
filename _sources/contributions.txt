@@ -11,30 +11,49 @@ Check out the :doc:`contribute` chapter to know how you can contribute.
 Packages
 ========
 
-psistorm/DictLeo
-----------------
+DictLeo
+-------
 
 `@psistorm`_'s package to query the german
 `Leo Dictionary <http://dict.leo.org/>`_ online. |br|
 Source: `<https://github.com/psistorm/keypirinha-dictleo>`_
 
-psistorm/HeidiSQL
------------------
+Ditto
+-----
+
+`@tuteken`_'s package to access to your saved items in
+`Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
+Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
+
+HeidiSQL
+--------
 
 `@psistorm`_'s package to list and launch `HeidiSQL <http://www.heidisql.com>`_
 sessions directly as well as HeidiSQL itself. |br|
 Source: `<https://github.com/psistorm/keypirinha-heidisql>`_
 
-psistorm/KiTTY
---------------
+Kill
+----
+
+`@ueffel`_'s package to terminate a running process by its name or ID. |br|
+Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
+
+KiTTY
+-----
 
 `@psistorm`_'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_ (either
 installed or portable) and KiTTY sessions directly. |br|
 Source: `<https://github.com/psistorm/keypirinha-kitty>`_
 
+Pinboard
+--------
 
-psistorm/SystemCommands
------------------------
+`@tuteken`_'s package to access to your bookmarks on
+`Pinboard <http://pinboard.in>`_ |br|
+Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
+
+SystemCommands
+--------------
 
 `@psistorm`_'s package to provide some system commands to |project|'s catalog
 like:
@@ -49,29 +68,6 @@ like:
 * ``hibernate``: hibernate Windows
 
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
-
-
-tuteken/Ditto
--------------
-
-`@tuteken`_'s package to access to your saved items in
-`Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
-Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
-
-
-tuteken/Pinboard
-----------------
-
-`@tuteken`_'s package to access to your bookmarks on
-`Pinboard <http://pinboard.in>`_ |br|
-Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
-
-
-ueffel/Kill
------------
-
-`@ueffel`_'s package to terminate a running process by its name or ID. |br|
-Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
 
 
 .. _@tuteken: https://github.com/tuteken
