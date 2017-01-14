@@ -45,14 +45,50 @@ quickly.
 
 .. _contribute-packages:
 
-Get involved in the development of the Official Packages
-========================================================
+Get involved in the development of the Packages
+===============================================
 
 If you are interested in improving an official package, the |packsrepo_link| is
 online and accepts pull requests.
 
 
+.. _contribute-platform:
+
+Get involved in the development of the Platform
+===============================================
+
+|project| is looking for a skilled web developer to help creating its online
+platform dedicated to the automated redistribution of plugins (i.e. website and
+service).
+
+**The project**
+
+* Platform's code would be fully open source
+* Its main language would be Python3
+* It must run on a Linux platform
+* It will include current |project|'s website (documentation)
+
+**About you**
+
+* You want to improve |project|
+* You have a crystal clear view of the requirements for such a task
+* You want to volunteer and spend some of your free time on a long run project
+* You are of the kind who like to get the job done
+* You are willing to enter a friendly online relationship with an other
+  developer for the good of a project :)
+
+**Application**
+
+Please PM `@polyvertex <https://gitter.im/polyvertex>`_ and provide some info
+about your background. Links to your code repositories are welcome.
+
+*@polyvertex* is a former long-time traveler who values humanized and friendly
+online relationships between developers. Having a beer (or five) with him
+somewhere, someday, is a non-negociable requirement to your application :)
+
+
 Help with the Documentation
 ===========================
 
-.. todo:: Soon...
+Documentation's repository is not open yet, but please file an issue on the
+|bugtracker_link| if you notice mistakes, if you have some

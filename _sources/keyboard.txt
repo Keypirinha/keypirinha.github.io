@@ -54,6 +54,11 @@ LaunchBox
 | * :kbd:`Down`                      |                                         |
 |   (if search state is clean)       |                                         |
 +------------------------------------+-----------------------------------------+
+| :kbd:`F5`                          | Refresh Catalog |br| Identical to       |
+|                                    | clicking the ``Refresh Catalog`` menu   |
+|                                    | or launching the |br|                   |
+|                                    | ``Keypirinha: Refresh Catalog`` item    |
++------------------------------------+-----------------------------------------+
 
 
 Console
