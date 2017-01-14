@@ -57,16 +57,20 @@ online and accepts pull requests.
 Get involved in the development of the Platform
 ===============================================
 
-|project| is looking for a skilled web developer to help creating its online
-platform dedicated to the automated redistribution of plugins (i.e. website and
-service).
+|project| is looking for a skilled full stack web developer to help creating its
+online platform dedicated to the automated redistribution of plugins (i.e.
+website and service).
 
 **The project**
 
-* Platform's code would be fully open source
+* Code would be fully open source
+* It mainly consists of a website and a service to be accessed by |project|
+  itself. Pretty much like `Package Control <https://packagecontrol.io/>`_ for
+  `SublimeText <http://www.sublimetext.com>`_, or
+  `Packal <http://www.packal.org>`_ for `Alfred <https://www.alfredapp.com>`_
+* It will include current |project|'s website (documentation)
 * Its main language would be Python3
 * It must run on a Linux platform
-* It will include current |project|'s website (documentation)
 
 **About you**
 
@@ -91,4 +95,4 @@ Help with the Documentation
 ===========================
 
 Documentation's repository is not open yet, but please file an issue on the
-|bugtracker_link| if you notice mistakes, if you have some
+|bugtracker_link| if you noticed a mistake or if you have some comments.

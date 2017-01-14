@@ -19,8 +19,8 @@ Need Help?
   * :ref:`contribute-issue`
 
 .. note::
-    **Help wanted!** |project| is looking for a skilled web developer.
-    :ref:`contribute-platform`.
+    **Help wanted!** |project| is looking for a skilled full stack web
+    developer. :ref:`contribute-platform`.
 
 You like |project|?
   * :ref:`contribute-packages`
