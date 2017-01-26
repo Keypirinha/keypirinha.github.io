@@ -2,7 +2,7 @@
 FileBrowser Package
 ===================
 
-Available since version 2.7.
+Available since version 2.7
 
 The FileBrowser package allows to browse the file system as you type.
 
@@ -27,11 +27,9 @@ tries to match your initial search term with specific patterns:
     ``show_system_files`` and ``show_network_files`` settings.
 
 .. tip::
-    While on Windows, convention is to use the ``\`` character, |project| also
-    interprets ``/`` as a path separator.
-
-.. tip::
-    This package is :ref:`first-drag` compliant.
+    * While on Windows, convention is to use the ``\`` character, |project| also
+      interprets ``/`` as a path separator.
+    * This package is :ref:`first-drag` compliant.
 
 
 Home feature

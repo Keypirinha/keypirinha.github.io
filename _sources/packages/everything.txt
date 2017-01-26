@@ -2,7 +2,7 @@
 Everything Package
 ==================
 
-Available since version 2.3.
+Available since version 2.3
 
 Query Everything_ (a **separate** tool) from |project| to find and open any file
 or folder.

@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.9.10
+                2.10
               </div>
             
           
@@ -187,6 +187,17 @@ has impacted at least one value (in which case this flag is combined with
 </dd></dl>
 
 <dl class="attribute">
+<dt id="keypirinha.Events.DESKTOP">
+<code class="descname">DESKTOP</code><em class="property"> = &lt;Events.DESKTOP: 4096&gt;</em><a class="headerlink" href="#keypirinha.Events.DESKTOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content of the Desktop has changed (common and/or user&#8217;s).
+It can be because its structure has been modified (folders), or because
+some files/shortcuts have been added, modified, moved or removed.
+Keypirinha groups events from the file system a little before sending
+them to the plugins by waiting a couple of seconds in order to avoid
+flooding the plugins.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="keypirinha.Events.ENV">
 <code class="descname">ENV</code><em class="property"> = &lt;Events.ENV: 256&gt;</em><a class="headerlink" href="#keypirinha.Events.ENV" title="Permalink to this definition">¶</a></dt>
 <dd><p>At least one environment variable has been added/removed/modified.
@@ -214,6 +225,17 @@ should not rely on this behavior.</p>
 modification by the user, or because a change to an environment variable
 has impacted at least one value (in which case this flag is combined with
 <code class="docutils literal"><span class="pre">ENV</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="keypirinha.Events.STARTMENU">
+<code class="descname">STARTMENU</code><em class="property"> = &lt;Events.STARTMENU: 8192&gt;</em><a class="headerlink" href="#keypirinha.Events.STARTMENU" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content of the Start Menu has changed (common and/or user&#8217;s).
+It can be because its structure has been modified (folders), or because
+some files/shortcuts have been added, modified, moved or removed.
+Keypirinha groups events from the file system a little before sending
+them to the plugins by waiting a couple of seconds in order to avoid
+flooding the plugins.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -256,6 +278,31 @@ network volume.</p>
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">ItemCategory</code><a class="headerlink" href="#keypirinha.ItemCategory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.category" title="keypirinha.CatalogItem.category"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.category()</span></code></a> property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>.</p>
+<p>Item&#8217;s category ID reflects the content of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.target" title="keypirinha.CatalogItem.target"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.target()</span></code></a>
+(i.e. not <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.raw_args" title="keypirinha.CatalogItem.raw_args"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.raw_args()</span></code></a> or
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.displayed_args" title="keypirinha.CatalogItem.displayed_args"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.displayed_args()</span></code></a>) and it helps the plugin to know what
+a given item is about.</p>
+<p>Note that it&#8217;s almost solely for the exclusive use of the plugin as
+Keypirinha interprets this value only if the ID is a standard one (i.e.
+<code class="docutils literal"><span class="pre">ERROR</span></code>, <code class="docutils literal"><span class="pre">FILE</span></code>, ...) and for displaying purpose. For example, a
+<code class="docutils literal"><span class="pre">FILE</span></code> item will automatically be given an icon from the OS by Keypirinha
+if it doesn&#8217;t have one already and if it has to be displayed on the GUI.</p>
+<p>When creating items, it is recommended to use a <em>standard</em> category as much
+as possible and only if its meaning perfectly matches the content of
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.target" title="keypirinha.CatalogItem.target"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.target()</span></code></a>. Otherwise, plugin developer may prefer to
+create their own set of category IDs, starting with
+<code class="docutils literal"><span class="pre">ItemCategory.USER_BASE</span> <span class="pre">+</span> <span class="pre">1</span></code>. Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MY_CUSTOM_ITEMCAT</span> <span class="o">=</span> <span class="n">keypirinha</span><span class="o">.</span><span class="n">ItemCategory</span><span class="o">.</span><span class="n">USER_BASE</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">MY_SECOND_CUSTOM_ITEMCAT</span> <span class="o">=</span> <span class="n">keypirinha</span><span class="o">.</span><span class="n">ItemCategory</span><span class="o">.</span><span class="n">USER_BASE</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Category IDs are internally registered on a <strong>per-plugin</strong> basis. There
+will be no collision if two plugins, may they have the same parent
+package or not, define a category having the value <code class="docutils literal"><span class="pre">USER_BASE</span> <span class="pre">+</span> <span class="pre">1</span></code>
+with a different meaning.</p>
+</div>
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.CMDLINE">
 <code class="descname">CMDLINE</code><em class="property"> = &lt;ItemCategory.CMDLINE: 30&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.CMDLINE" title="Permalink to this definition">¶</a></dt>
@@ -868,7 +915,7 @@ revision. Use the <a class="reference internal" href="#keypirinha.version" title
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.9.10',
+            VERSION:'2.10',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

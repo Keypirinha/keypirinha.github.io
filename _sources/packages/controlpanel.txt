@@ -2,7 +2,7 @@
 ControlPanel Package
 ====================
 
-Available since version 2.0.
+Available since version 2.0
 
 Launch Windows' Control Panel items.
 

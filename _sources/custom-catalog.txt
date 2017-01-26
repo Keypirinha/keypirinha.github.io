@@ -77,11 +77,10 @@ a look at the ``scan_start_menu`` and ``scan_env_path`` settings.
 Tracking down unwanted features
 ===============================
 
-After having used |project| with your new configuration for a while. You may
-discover that some unwanted features are still enabled. For that matter, it is
+If you happen to notice that some unwanted features are still enabled, it is
 worth mentioning that it is possible to know what plugin (and by extension, what
-package) created a given catalog item in the list of results.
+package) created a specific catalog item in the list of results.
 
 To do that, select an item and press :kbd:`Alt+Enter`. The :term:`Console`
-window will popup and the last log lines list the properties of the selected
+window will show up and the last log lines list the properties of the selected
 item. Among them the name of the parent plugin.

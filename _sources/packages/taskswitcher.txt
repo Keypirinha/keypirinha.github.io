@@ -2,7 +2,7 @@
 TaskSwitcher Package
 ====================
 
-Available since version 2.0.
+Available since version 2.0
 
 An Alt+Tab alternative for |project|.
 

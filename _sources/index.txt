@@ -18,14 +18,14 @@ Need Help?
   * Join the |chat_room|
   * :ref:`contribute-issue`
 
-.. note::
-    **Help wanted!** |project| is looking for a skilled full stack web
-    developer. :ref:`contribute-platform`.
-
 You like |project|?
   * :ref:`contribute-packages`
   * Give it a **Like** or a **Star** to show your support: |br|
     |social_buttons|
+
+.. note::
+    **Help wanted** |project| is looking for a developer.
+    :ref:`contribute-platform`.
 
 
 What is |project|

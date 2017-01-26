@@ -2,7 +2,7 @@
 WebSearch Package
 =================
 
-Available since version 2.0.
+Available since version 2.0
 
 Launch a search on any configured website using system's default web browser.
 

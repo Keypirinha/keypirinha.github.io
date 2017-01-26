@@ -2,7 +2,7 @@
 Bookmarks Package
 =================
 
-Available since version 2.1.
+Available since version 2.1
 
 Launch Chrome, Firefox and Internet Explorer bookmarks.
 

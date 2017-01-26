@@ -2,7 +2,7 @@
 Winamp Package
 ==============
 
-Available since version 2.0.
+Available since version 2.0
 
 This plugin offers simple playback control of Winamp (i.e.: Play, Pause, Stop,
 Previous, Next) and a ``Jump To Track`` feature to search and play tracks in the
