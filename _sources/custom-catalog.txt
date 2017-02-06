@@ -15,7 +15,7 @@ Introduction
 ============
 
 To understand how to customize your Catalog, you must first understand how it is
-built. The tiny :ref:`overview-architecture` section gives you an overview of
+built. The tiny :ref:`architecture-overview` section gives you an overview of
 the role plugins play in |project|.
 
 This guide assumes you already know how to configure |project| so you might want

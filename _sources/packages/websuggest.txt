@@ -4,16 +4,17 @@ WebSuggest Package
 
 Available since version 2.10
 
-Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia
-and Yahoo.
+Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia,
+Yahoo, ...
 
 
 Usage
 =====
 
 By default, several items are inserted into the :term:`Catalog`. One for each
-predefined suggestions provider: ``Bing``, ``DuckDuckGo``, ``Google``,
-``Wikipedia`` and ``Yahoo``.
+predefined suggestions provider: ``Amazon``, ``Bing``, ``DuckDuckGo``,
+``Google``, ``Qwant``, ``Wikipedia``, ``Yahoo`` and ``YouTube`` (see package's
+configuration file for an exhaustive list).
 
 Select one of those items and start typing your search term(s) as item's
 argument.

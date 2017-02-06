@@ -44,12 +44,12 @@ Contents
     install
     update
     first
-    keyboard
     shipped-packages
     contributions
     configuration
+    keyboard
     custom-catalog
-    overview
+    architecture
     packages
     api
     contribute

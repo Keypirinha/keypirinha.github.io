@@ -1,14 +1,14 @@
-========
-Overview
-========
+============
+Architecture
+============
 
 This section provides some insights about |project|'s design and philosophy.
 
 
-.. _overview-architecture:
+.. _architecture-overview:
 
-Architecture
-============
+Overview
+========
 
 |project| by itself is just a database (the :term:`Catalog`) sweetened with a
 small adaptive search engine and a straightforward graphical interface. Thus,

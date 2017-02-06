@@ -57,9 +57,9 @@ online and accepts pull requests.
 Get involved in the development of the Platform
 ===============================================
 
-|project| is looking for a skilled full stack web developer to help creating its
-online platform dedicated to the automated redistribution of plugins (i.e.
-website and service).
+|project| is looking for a skilled developer to help creating its online
+platform dedicated to the automated redistribution of plugins (i.e. website and
+service).
 
 **The project**
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. Configuration &mdash; Keypirinha</title>
+  <title>6. Configuration &mdash; Keypirinha</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="8. Customize your Catalog" href="custom-catalog.html"/>
-        <link rel="prev" title="6. Third-Party Packages" href="contributions.html"/> 
+        <link rel="next" title="7. Keyboard Shortcuts" href="keyboard.html"/>
+        <link rel="prev" title="5. Third-Party Packages" href="contributions.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -90,27 +90,27 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">1. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">7.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#first-modification">7.2. First Modification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#modification-at-runtime">7.3. Modification at Runtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-ini-format">7.4. The INI Format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example">7.4.1. Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#comments">7.4.2. Comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#multiple-line-values">7.4.3. Multiple Line Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reusable-values">7.4.4. Reusable Values</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#predefined-variables">7.4.5. Predefined variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#environment-values">7.4.6. Environment Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">4. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">5. Third-Party Packages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">6.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-modification">6.2. First Modification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modification-at-runtime">6.3. Modification at Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-ini-format">6.4. The INI Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">6.4.1. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">6.4.2. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-line-values">6.4.3. Multiple Line Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reusable-values">6.4.4. Reusable Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-variables">6.4.5. Predefined variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment-values">6.4.6. Environment Values</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#machine-and-user-specific-settings">7.5. Machine and User Specific Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#machine-and-user-specific-settings">6.5. Machine and User Specific Settings</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">7. Keyboard Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">8. Customize your Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">9. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">9. Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">10. Packages Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
@@ -150,7 +150,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>7. Configuration</li>
+    <li>6. Configuration</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -163,9 +163,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="configuration">
-<h1>7. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<h1>6. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>7.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>6.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p><em>Keypirinha</em> is file-driven. Its configuration data resides in files, which are
 human readable and modifiable.</p>
 <p>By design, <em>Keypirinha</em> does not offer any graphical interface to modify its
@@ -187,7 +187,7 @@ runtime and new/modified settings will immediately be applied.</p>
 </div>
 </div>
 <div class="section" id="first-modification">
-<h2>7.2. First Modification<a class="headerlink" href="#first-modification" title="Permalink to this headline">¶</a></h2>
+<h2>6.2. First Modification<a class="headerlink" href="#first-modification" title="Permalink to this headline">¶</a></h2>
 <p>If you have selected the <code class="docutils literal"><span class="pre">Configure</span> <span class="pre">Application</span></code> item for the first time, you
 should now see two text files opened side by side on your screen.</p>
 <p>The one on the <strong>left</strong> is the original configuration file, bundled with the
@@ -221,19 +221,19 @@ grouped under it.</p>
 </div>
 </div>
 <div class="section" id="modification-at-runtime">
-<h2>7.3. Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
+<h2>6.3. Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
 <p>When you save a new version of one or several of your configuration files,
 <em>Keypirinha</em> automatically detects any modification you have made and apply it at
 runtime. The same mechanism goes to packages&#8217; configuration.</p>
 </div>
 <div class="section" id="the-ini-format">
-<h2>7.4. The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
+<h2>6.4. The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">INI</span></code> file format is not precisely defined and there are plenty of
 variants out there. The format used by <em>Keypirinha</em> is readable by
 <a class="reference external" href="https://docs.python.org/3.5/library/configparser.html#module-configparser" title="(in Python v3.5)"><code class="xref py py-mod docutils literal"><span class="pre">configparser</span></code></a> (<code class="docutils literal"><span class="pre">ExtendedInterpolation</span></code> is used), a <a class="reference external" href="https://python.org">Python</a> standard
 module for those who are familiar with it.</p>
 <div class="section" id="example">
-<span id="ini-example"></span><h3>7.4.1. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<span id="ini-example"></span><h3>6.4.1. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># This is a comment line so I can write whatever I want</span>
 
 <span class="k">[config]</span>
@@ -255,14 +255,14 @@ module for those who are familiar with it.</p>
 </div>
 </div>
 <div class="section" id="comments">
-<h3>7.4.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<h3>6.4.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
 <p>It is possible to add comments to an <code class="docutils literal"><span class="pre">INI</span></code> file. Comments are not interpreted
 by the application and they are skipped at parsing-time.</p>
 <p>To add a comment to your configuration file, start a line with a <code class="docutils literal"><span class="pre">#</span></code>
 character.</p>
 </div>
 <div class="section" id="multiple-line-values">
-<h3>7.4.3. Multiple Line Values<a class="headerlink" href="#multiple-line-values" title="Permalink to this headline">¶</a></h3>
+<h3>6.4.3. Multiple Line Values<a class="headerlink" href="#multiple-line-values" title="Permalink to this headline">¶</a></h3>
 <p><em>Keypirinha</em> or its packages may accept multiple line values for some of their
 settings (it is always specified). When you write mutiple line values, you must
 take care of <strong>indenting</strong> each line correctly to ensure the configuration file
@@ -270,7 +270,7 @@ will be interpreted properly by the application.</p>
 <p>See the <a class="reference internal" href="#ini-example"><span class="std std-ref">Example</span></a> section above for an exampe.</p>
 </div>
 <div class="section" id="reusable-values">
-<h3>7.4.4. Reusable Values<a class="headerlink" href="#reusable-values" title="Permalink to this headline">¶</a></h3>
+<h3>6.4.4. Reusable Values<a class="headerlink" href="#reusable-values" title="Permalink to this headline">¶</a></h3>
 <p><em>Keypirinha</em> allows you to declare values that can be used elsewhere in <strong>any</strong>
 configuration file (application and plugins).</p>
 <p>If you wish your reusable value to be usable in any configuration file, you must
@@ -292,7 +292,7 @@ file.</p>
 <p>See the <a class="reference internal" href="#ini-example"><span class="std std-ref">Example</span></a> section above for an exampe.</p>
 </div>
 <div class="section" id="predefined-variables">
-<h3>7.4.5. Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
+<h3>6.4.5. Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
 <p><em>Keypirinha</em> also automatically populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
 values that may come handy.</p>
 <p>To use them, use the following syntax in your configuration file: <br />
@@ -671,7 +671,7 @@ are also predefined. They may come handy to configure some packages.</p>
 </ul>
 </div>
 <div class="section" id="environment-values">
-<h3>7.4.6. Environment Values<a class="headerlink" href="#environment-values" title="Permalink to this headline">¶</a></h3>
+<h3>6.4.6. Environment Values<a class="headerlink" href="#environment-values" title="Permalink to this headline">¶</a></h3>
 <p>For convenience, <em>Keypirinha</em> automatically defines a section named <code class="docutils literal"><span class="pre">env</span></code>,
 populated with all the environment variables that could be found at the moment
 the configuration file is read.</p>
@@ -680,7 +680,7 @@ file.</p>
 </div>
 </div>
 <div class="section" id="machine-and-user-specific-settings">
-<h2>7.5. Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
+<h2>6.5. Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to have settings that will be applied only when <em>Keypirinha</em> runs on
 a specific <strong>machine</strong> and/or under a specific <strong>user</strong> session.</p>
 <p>To do that, the configuration file must be named according to a predefined
@@ -716,10 +716,10 @@ directory.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="custom-catalog.html" class="btn btn-neutral float-right" title="8. Customize your Catalog" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="keyboard.html" class="btn btn-neutral float-right" title="7. Keyboard Shortcuts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="contributions.html" class="btn btn-neutral" title="6. Third-Party Packages" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="contributions.html" class="btn btn-neutral" title="5. Third-Party Packages" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
