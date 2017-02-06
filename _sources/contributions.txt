@@ -1,6 +1,6 @@
-=============
-Contributions
-=============
+====================
+Third-Party Packages
+====================
 
 Some users have taken |project| a step further by creating their own packages or
 by patching the official ones, and have kindly shared their work to the

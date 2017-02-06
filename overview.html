@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Overview &mdash; Keypirinha</title>
+  <title>9. Overview &mdash; Keypirinha</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="6. Configuration" href="configuration.html"/>
-        <link rel="prev" title="4. Keyboard Shortcuts" href="keyboard.html"/> 
+        <link rel="next" title="10. Packages Structure" href="packages.html"/>
+        <link rel="prev" title="8. Customize your Catalog" href="custom-catalog.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.10
+                2.11
               </div>
             
           
@@ -91,17 +91,17 @@
 <li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#architecture">5.1. Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#packages-and-plugins">5.2. Packages and Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">5.3. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">8. Customize your Catalog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#architecture">9.1. Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packages-and-plugins">9.2. Packages and Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">9.3. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">6. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">7. Customize your Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">10. Packages Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
@@ -140,7 +140,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>5. Overview</li>
+    <li>9. Overview</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -153,10 +153,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="overview">
-<h1>5. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h1>9. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>This section provides some insights about <em>Keypirinha</em>&#8216;s design and philosophy.</p>
 <div class="section" id="architecture">
-<span id="overview-architecture"></span><h2>5.1. Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
+<span id="overview-architecture"></span><h2>9.1. Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
 <p><em>Keypirinha</em> by itself is just a database (the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>) sweetened with a
 small adaptive search engine and a straightforward graphical interface. Thus,
 <strong>the task of feeding the Catalog is entirely left to its</strong> <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">Plugins</span></a>.</p>
@@ -170,17 +170,17 @@ then sorted and stored in an internal database called the <a class="reference in
 making them quickly searchable and easily executable.</p>
 </div>
 <div class="section" id="packages-and-plugins">
-<h2>5.2. Packages and Plugins<a class="headerlink" href="#packages-and-plugins" title="Permalink to this headline">¶</a></h2>
+<h2>9.2. Packages and Plugins<a class="headerlink" href="#packages-and-plugins" title="Permalink to this headline">¶</a></h2>
 <p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a> easier to redistribute, <em>Keypirinha</em> has been introduced
 the concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
 <p>In <em>Keypirinha</em>, a package is a container (e.g.: a directory; or a Zip archive with
 the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension) that groups one or several plugins
 designed to work together. It also contains the configuration files and
 dependencies, if any.</p>
-<p>Read more about <a class="reference internal" href="packages.html"><span class="doc">Packages</span></a>.</p>
+<p>Read more about <a class="reference internal" href="packages.html"><span class="doc">Packages Structure</span></a>.</p>
 </div>
 <div class="section" id="configuration">
-<h2>5.3. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>9.3. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>By design, to configure <em>Keypirinha</em> and its packages requires to edit
 configuration files manually. There is no graphical interface to do that.
 <em>Keypirinha</em> uses the <code class="docutils literal"><span class="pre">ini</span></code> file format to read, and it <strong>only reads</strong> its
@@ -196,10 +196,10 @@ configuration.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="configuration.html" class="btn btn-neutral float-right" title="6. Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="packages.html" class="btn btn-neutral float-right" title="10. Packages Structure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="keyboard.html" class="btn btn-neutral" title="4. Keyboard Shortcuts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="custom-catalog.html" class="btn btn-neutral" title="8. Customize your Catalog" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -229,7 +229,7 @@ configuration.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.10',
+            VERSION:'2.11',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

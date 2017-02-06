@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.15. WebSuggest Package &mdash; Keypirinha</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Keypirinha" href="../index.html"/>
+        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
+        <link rel="next" title="5.16. Winamp Package" href="winamp.html"/>
+        <link rel="prev" title="5.14. WebSearch Package" href="websearch.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Keypirinha
+          
+
+          
+            
+            <img src="../_static/app-128.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.11
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update.html">2. Update Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first.html">3. First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">4. Keyboard Shortcuts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../shipped-packages.html">5. Shipped Packages</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="internal.html">5.1. Internal Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps.html">5.2. Apps Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bookmarks.html">5.3. Bookmarks Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calc.html">5.4. Calc Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlpanel.html">5.5. ControlPanel Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">5.6. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.7. FileBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.8. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.9. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.10. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.11. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.12. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">5.13. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.14. WebSearch Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.15. WebSuggest Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">5.15.1. Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-items">5.15.2. Custom Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#declare-extra-items">5.15.2.1. Declare extra items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#override-default-items">5.15.2.2. Override default items</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-providers">5.15.3. Custom Providers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.16. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.17. WinSCP Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">7. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">8. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">9. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">10. Packages Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">12. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">13. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">14. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">15. Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Keypirinha</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
+      
+    <li>5.15. WebSuggest Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="websuggest-package">
+<h1>5.15. WebSuggest Package<a class="headerlink" href="#websuggest-package" title="Permalink to this headline">¶</a></h1>
+<p>Available since version 2.10</p>
+<p>Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia
+and Yahoo.</p>
+<div class="section" id="usage">
+<h2>5.15.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>By default, several items are inserted into the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. One for each
+predefined suggestions provider: <code class="docutils literal"><span class="pre">Bing</span></code>, <code class="docutils literal"><span class="pre">DuckDuckGo</span></code>, <code class="docutils literal"><span class="pre">Google</span></code>,
+<code class="docutils literal"><span class="pre">Wikipedia</span></code> and <code class="docutils literal"><span class="pre">Yahoo</span></code>.</p>
+<p>Select one of those items and start typing your search term(s) as item&#8217;s
+argument.</p>
+<p>The plugin then queries the selected provider and populates the results list
+using the answer it got.</p>
+<p>The default action when pressing the <code class="kbd docutils literal"><span class="pre">Enter</span></code> key is to start the web
+browser to search for the selected suggestion, on the selected provider&#8217;s site.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>This package has to rely on means that are not always officially supported
+by the suggestions providers as they do not always share the technical
+details of their interface.</p>
+<p class="last">If things seem to be broken without having changed the configuration for a
+while, please submit a report to the <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues">Official Bug Tracker</a> so the problem can be
+corrected upstream to the benefit of the other <em>Keypirinha</em> users.</p>
+</div>
+</div>
+<div class="section" id="custom-items">
+<h2>5.15.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to change the list of the items to Catalog or their properties.
+There are two complementary ways to do so:</p>
+<ul class="simple">
+<li>by registering additional items</li>
+<li>by overriding the properties of the <strong>predefined</strong> items</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are new to <em>Keypirinha</em>, you may want to read the
+<a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter before going further.</p>
+</div>
+<div class="section" id="declare-extra-items">
+<h3>5.15.2.1. Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
+<p>Each <em>item</em> depends on a suggestions <em>provider</em>; several items may rely on the
+same <em>provider</em>. Here is a documented example:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[item/DuckDuckGo Autocomplete]</span>
+<span class="c1"># Required: the name of a declared provider.</span>
+<span class="c1"># It must reference a declared and enabled provider</span>
+<span class="c1"># (i.e. ``[predefined_provider/*]`` or ``[provider/*]`` sections).</span>
+<span class="na">provider</span> <span class="o">=</span> <span class="s">duckduckgo</span>
+
+<span class="c1"># Optional: override the default_action value from the [main] section.</span>
+<span class="c1"># In this example, we use copy_result to simulate an &quot;autocomplete&quot;</span>
+<span class="c1"># behavior.</span>
+<span class="na">default_action</span> <span class="o">=</span> <span class="s">copy_result</span>
+
+<span class="c1"># Optional: enable/disable an item at runtime</span>
+<span class="c1"># * A disabled item will not be inserted into the Catalog</span>
+<span class="c1"># * Default: yes</span>
+<span class="na">enable</span> <span class="o">=</span> <span class="s">no</span>
+
+<span class="c1"># Optionally, any setting of the underlying provider can be overridden</span>
+<span class="c1"># specifically for this particular item. To do so, just redefine them here</span>
+<span class="c1"># by prefixing their name with &quot;provider.&quot; (without quotes).</span>
+<span class="c1">#</span>
+<span class="c1"># In other words, the &quot;provider.*&quot; values defined here only affect the</span>
+<span class="c1"># initial definition of the &quot;duckduckgo&quot; provider for this particular item.</span>
+<span class="c1">#</span>
+<span class="c1"># For this example, we override the HTTP User-Agent value sent by Keypirinha</span>
+<span class="c1"># to the DuckDuckGo API; we also ensure that the DuckDuckGo web interface</span>
+<span class="c1"># provides search results in English.</span>
+<span class="na">provider.api_headers</span> <span class="o">=</span> <span class="s">User-Agent Keypirinha</span>
+<span class="na">provider.browse_args</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    q {terms}</span>
+<span class="s">    kl us-en</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal"><span class="pre">DuckDuckGo</span> <span class="pre">Autocomplete</span></code> is the name of the item to appear
+in your Catalog.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<ul class="last simple">
+<li>An extra item must be declared using the <code class="docutils literal"><span class="pre">item/</span></code> prefix in its section
+name, like in <code class="docutils literal"><span class="pre">[item/DuckDuckGo</span> <span class="pre">Autocomplete]</span></code>.</li>
+<li>Having both <code class="docutils literal"><span class="pre">[predefined_item/DuckDuckGo]</span></code> and <code class="docutils literal"><span class="pre">[item/DuckDuckGo]</span></code> for
+example is not possible.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="override-default-items">
+<h3>5.15.2.2. Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
+<p>Predefined items are registered using the <code class="docutils literal"><span class="pre">predefined_item/</span></code> prefix in the
+name of the configuration section.</p>
+<p>For instance, if you wish to override the item <code class="docutils literal"><span class="pre">DuckDuckGo</span></code> predefined by
+default, the <code class="docutils literal"><span class="pre">[predefined_item/DuckDuckGo]</span></code> section is the one to override in
+your configuration file.</p>
+<p>The definition of a <code class="docutils literal"><span class="pre">predefined_item</span></code> is the same than an <code class="docutils literal"><span class="pre">item</span></code>.</p>
+</div>
+</div>
+<div class="section" id="custom-providers">
+<h2>5.15.3. Custom Providers<a class="headerlink" href="#custom-providers" title="Permalink to this headline">¶</a></h2>
+<p>With some technical knowledge it is possible to extend the list of the supported
+suggestions providers by registering them via the package&#8217;s configuration file.</p>
+<p>Documented example:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[provider/DuckDuckGo]</span>
+<span class="c1"># Declare a new provider named &quot;duckduckgo&quot; (names are lowercased</span>
+<span class="c1"># internally).</span>
+<span class="c1"># A provider has two main groups of settings: for its *suggest API* and for</span>
+<span class="c1"># the *browse* actions.</span>
+
+<span class="c1"># Required: the *base* part of the URL to the API.</span>
+<span class="c1"># It may contain the {terms} and {time} placeholders.</span>
+<span class="na">api_base</span> <span class="o">=</span> <span class="s">https://ac.duckduckgo.com/ac/</span>
+
+<span class="c1"># Optional: the HTTP method used to reach the API (get or post)</span>
+<span class="c1"># Default: get</span>
+<span class="na">api_method</span> <span class="o">=</span> <span class="s">get</span>
+
+<span class="c1"># Optional: define the query part of the API URL by adding arguments.</span>
+<span class="c1"># This is a multiline value that accepts a single ``name value`` pair per</span>
+<span class="c1"># line. Values must not be URL-encoded yet.</span>
+<span class="na">api_args</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    q {terms}</span>
+<span class="s">    type list</span>
+<span class="s">    _ {time}</span>
+
+<span class="c1"># Optional: it is possible to specify extra HTTP headers to be sent to the</span>
+<span class="c1"># API.</span>
+<span class="c1"># It is useful for example to prevent some providers to filter-out requests</span>
+<span class="c1"># that do not seem to be issued by a regular browser (the Google Suggest API</span>
+<span class="c1"># does that).</span>
+<span class="na">api_headers</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    User-Agent Mozilla/5.0</span>
+
+<span class="c1"># Optional: the name of the parser used to read the response from the API.</span>
+<span class="c1"># * There are two internal parsers at the moment, &quot;opensearch&quot; and &quot;qwant&quot;.</span>
+<span class="c1">#   You may want to read the code of this package and search for</span>
+<span class="c1">#   &quot;_api_parser_opensearch&quot; or &quot;_api_parser_qwant&quot;.</span>
+<span class="c1"># * Alternatively, you may need to write your own parser for a provider that</span>
+<span class="c1">#   is not supported yet. In that case, you must create a file named</span>
+<span class="c1">#   websuggest_user_parsers.py in package&#39;s live directory (example:</span>
+<span class="c1">#   &quot;Keypirinha/portable/Profile/Packages/WebSuggest/websuggest_user_parsers.py&quot;)</span>
+<span class="c1">#   and define a Python function with the same signature than the</span>
+<span class="c1">#   _api_parser_opensearch static method in package&#39;s code.</span>
+<span class="c1">#   Own parser&#39;s name must be referenced here with the &quot;user.&quot; prefix</span>
+<span class="c1">#   (without quotes). Example: api_parser = user.my_parser</span>
+<span class="c1"># * Default: opensearch</span>
+<span class="na">api_parser</span> <span class="o">=</span> <span class="s">opensearch</span>
+
+<span class="c1"># Required: the *base* part of the search URL to be used when a browse</span>
+<span class="c1"># action is triggered.</span>
+<span class="c1"># This value has the same properties than api_url.</span>
+<span class="na">browse_base</span> <span class="o">=</span> <span class="s">https://duckduckgo.com/</span>
+
+<span class="c1"># Optional: the *query* part of the search URL.</span>
+<span class="c1"># This value has the same properties than api_args.</span>
+<span class="na">browse_args</span> <span class="o">=</span> <span class="s">q {terms}</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you think that a new provider you added may benefit to other <em>Keypirinha</em>
+users, feel free to submit its configuration and parser to the
+<a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues">Official Bug Tracker</a> or the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>, so it can be added to <em>Keypirinha</em>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="winamp.html" class="btn btn-neutral float-right" title="5.16. Winamp Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="websearch.html" class="btn btn-neutral" title="5.14. WebSearch Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2013-2017, Jean-Charles Lefebvre.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.11',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+   
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74522446-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

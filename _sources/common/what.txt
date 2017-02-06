@@ -5,21 +5,21 @@
 * Quickly find and launch plethora of items like applications, files,
   bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...
 * Launch a search on any configured website or online dictionary
+* Language translations on-the-fly
 * Evaluate a mathematical expression
 * Convert numbers
 * Launch a copied URL directly (``http``, ``mailto``, ``skype``, ...)
-* Switch to a running application searched by its name
-* Associate a keyword to a specific item
-* File-driven configuration
+* Switch to a running application by name
+* Naturally associate a keyword to a specific item
 * Machine-specific and/or user-specific configuration
-* An embedded Python3_ API to extend |project|'s features
 
 **Properties:**
 
 * Lightning fast
 * Fairly small memory footprint
 * Battery friendly
-* Extensible by writing :term:`plugin` scripts in Python3_.
+* File-driven configuration
+* An embedded Python3_ API to extend |project|'s features via :term:`plugins`
 * Freeware, no nag screen, no time limit, no ads
 
 You can think of |project| as an alternative to *Launchy* and a cousin of

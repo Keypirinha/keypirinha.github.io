@@ -3,9 +3,9 @@ Credits
 =======
 
 
-Several **great** open-source projects are part of |project|'s binary form, or
-redistributed with it, or have been involved during the development of this
-project.
+Several *great* open-source projects are part of |project|'s binary form, or
+redistributed with it, or have been involved during the development of
+|project|.
 
 Their respective license file can be found in the :file:`licenses` folder
 located into |project|'s directory.
@@ -46,3 +46,11 @@ located into |project|'s directory.
 * *zlib* |br|
   The famous compression/decompression C library |br|
   http://zlib.net
+
+
+About this Documentation
+========================
+
+This documentation is a work in progress and the effort of a non-native speaker.
+Comments and contributions are appreciated. It is written in reST_ and generated
+using the Sphinx_ tools suite. See :ref:`contribute-doc` for more information.

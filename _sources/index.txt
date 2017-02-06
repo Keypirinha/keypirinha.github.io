@@ -45,12 +45,12 @@ Contents
     update
     first
     keyboard
-    overview
-    configuration
-    custom-catalog
-    packages
     shipped-packages
     contributions
+    configuration
+    custom-catalog
+    overview
+    packages
     api
     contribute
     glossary
@@ -67,23 +67,10 @@ Contents
     changelog
 
 
-About this Documentation
-========================
-
-This documentation is a work in progress and the effort of a non-native english
-speaker. Comments and contributions are appreciated. It is written in reST_ and
-generated using the Sphinx_ tools suite.
-
-.. TODO: Move documentation to its own public repository.
-.. This documentation is a work in progress. Comments and contributions are
-.. appreciated and can be done from this dedicated |docsrepo_link|. It is written
-.. in reST_ and generated using the Sphinx_ tools suite.
-
-
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
+* :ref:`modindex` (API)
 
 .. * :ref:`search`

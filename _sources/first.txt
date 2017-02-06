@@ -239,6 +239,14 @@ Configuration
 See the :doc:`configuration` section for more info.
 
 
+Shipped Packages
+================
+
+Some packages are shipped with |project| and are available out of the box.
+
+See :doc:`shipped-packages` for more information.
+
+
 Customize your Catalog
 ======================
 

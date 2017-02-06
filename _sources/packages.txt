@@ -1,6 +1,6 @@
-========
-Packages
-========
+==================
+Packages Structure
+==================
 
 .. include:: common/packages-intro.rst
 

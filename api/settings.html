@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.10
+                2.11
               </div>
             
           
@@ -92,12 +92,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../update.html">2. Update Procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../first.html">3. First steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../keyboard.html">4. Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview.html">5. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../configuration.html">6. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">7. Customize your Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../packages.html">8. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributions.html">10. Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shipped-packages.html">5. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">7. Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom-catalog.html">8. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">9. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">10. Packages Structure</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">11. Extending <em>Keypirinha</em> (API)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">11.1. Overview</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="reference.html">11.2. API Reference</a><ul class="current">
@@ -173,13 +173,12 @@
 <dt id="keypirinha.Settings">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Settings</code><span class="sig-paren">(</span><em>settings_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class to access the Settings of a Package/Plugin.</p>
-<p>It is not meant to be instantiated manually. You should rather use
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> or <a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal"><span class="pre">settings()</span></code></a>.</p>
+<p>It is not meant to be instantiated manually: <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a>
+should be called instead, or <a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal"><span class="pre">settings()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha.Settings.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>unquote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the string value of the specified <em>key</em> in <em>section</em>.</p>
-<p>Resulting value is auto</p>
+<dd><p>Get the string value of the specified <em>key</em> in <em>section</em>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -317,25 +316,25 @@ spaces).</p>
 <dl class="method">
 <dt id="keypirinha.Settings.has">
 <code class="descname">has</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks the existence of a <em>key</em> in a <em>section</em> and returns a boolean.</p>
+<dd><p>Check the existence of a <em>key</em> in a <em>section</em> and return a boolean.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.has_section">
 <code class="descname">has_section</code><span class="sig-paren">(</span><em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has_section" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks the existence of <em>section</em> and returns a boolean.</p>
+<dd><p>Check the existence of <em>section</em> and return a boolean.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.keys">
 <code class="descname">keys</code><span class="sig-paren">(</span><em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.keys" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of the keys found in <em>section</em>, or an empty list.</p>
+<dd><p>Return a list of the keys found in <em>section</em>, or an empty list.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.sections">
 <code class="descname">sections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.sections" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of the loaded sections, or an empty list.</p>
+<dd><p>Return a list of the loaded sections, or an empty list.</p>
 </dd></dl>
 
 </dd></dl>
@@ -382,7 +381,7 @@ spaces).</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.10',
+            VERSION:'2.11',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

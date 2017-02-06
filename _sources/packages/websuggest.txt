@@ -1,0 +1,180 @@
+==================
+WebSuggest Package
+==================
+
+Available since version 2.10
+
+Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia
+and Yahoo.
+
+
+Usage
+=====
+
+By default, several items are inserted into the :term:`Catalog`. One for each
+predefined suggestions provider: ``Bing``, ``DuckDuckGo``, ``Google``,
+``Wikipedia`` and ``Yahoo``.
+
+Select one of those items and start typing your search term(s) as item's
+argument.
+
+The plugin then queries the selected provider and populates the results list
+using the answer it got.
+
+The default action when pressing the :kbd:`Enter` key is to start the web
+browser to search for the selected suggestion, on the selected provider's site.
+
+.. important::
+    This package has to rely on means that are not always officially supported
+    by the suggestions providers as they do not always share the technical
+    details of their interface.
+
+    If things seem to be broken without having changed the configuration for a
+    while, please submit a report to the |bugtracker_link| so the problem can be
+    corrected upstream to the benefit of the other |project| users.
+
+
+Custom Items
+============
+
+It is possible to change the list of the items to Catalog or their properties.
+There are two complementary ways to do so:
+
+* by registering additional items
+* by overriding the properties of the **predefined** items
+
+.. note::
+    If you are new to |project|, you may want to read the
+    :doc:`../configuration` chapter before going further.
+
+
+Declare extra items
+-------------------
+
+Each *item* depends on a suggestions *provider*; several items may rely on the
+same *provider*. Here is a documented example:
+
+.. code-block:: ini
+
+    [item/DuckDuckGo Autocomplete]
+    # Required: the name of a declared provider.
+    # It must reference a declared and enabled provider
+    # (i.e. ``[predefined_provider/*]`` or ``[provider/*]`` sections).
+    provider = duckduckgo
+
+    # Optional: override the default_action value from the [main] section.
+    # In this example, we use copy_result to simulate an "autocomplete"
+    # behavior.
+    default_action = copy_result
+
+    # Optional: enable/disable an item at runtime
+    # * A disabled item will not be inserted into the Catalog
+    # * Default: yes
+    enable = no
+
+    # Optionally, any setting of the underlying provider can be overridden
+    # specifically for this particular item. To do so, just redefine them here
+    # by prefixing their name with "provider." (without quotes).
+    #
+    # In other words, the "provider.*" values defined here only affect the
+    # initial definition of the "duckduckgo" provider for this particular item.
+    #
+    # For this example, we override the HTTP User-Agent value sent by Keypirinha
+    # to the DuckDuckGo API; we also ensure that the DuckDuckGo web interface
+    # provides search results in English.
+    provider.api_headers = User-Agent Keypirinha
+    provider.browse_args =
+        q {terms}
+        kl us-en
+
+In this example, ``DuckDuckGo Autocomplete`` is the name of the item to appear
+in your Catalog.
+
+.. important::
+    * An extra item must be declared using the ``item/`` prefix in its section
+      name, like in ``[item/DuckDuckGo Autocomplete]``.
+    * Having both ``[predefined_item/DuckDuckGo]`` and ``[item/DuckDuckGo]`` for
+      example is not possible.
+
+
+Override default items
+----------------------
+
+Predefined items are registered using the ``predefined_item/`` prefix in the
+name of the configuration section.
+
+For instance, if you wish to override the item ``DuckDuckGo`` predefined by
+default, the ``[predefined_item/DuckDuckGo]`` section is the one to override in
+your configuration file.
+
+The definition of a ``predefined_item`` is the same than an ``item``.
+
+
+Custom Providers
+================
+
+With some technical knowledge it is possible to extend the list of the supported
+suggestions providers by registering them via the package's configuration file.
+
+Documented example:
+
+.. code-block:: ini
+
+    [provider/DuckDuckGo]
+    # Declare a new provider named "duckduckgo" (names are lowercased
+    # internally).
+    # A provider has two main groups of settings: for its *suggest API* and for
+    # the *browse* actions.
+
+    # Required: the *base* part of the URL to the API.
+    # It may contain the {terms} and {time} placeholders.
+    api_base = https://ac.duckduckgo.com/ac/
+
+    # Optional: the HTTP method used to reach the API (get or post)
+    # Default: get
+    api_method = get
+
+    # Optional: define the query part of the API URL by adding arguments.
+    # This is a multiline value that accepts a single ``name value`` pair per
+    # line. Values must not be URL-encoded yet.
+    api_args =
+        q {terms}
+        type list
+        _ {time}
+
+    # Optional: it is possible to specify extra HTTP headers to be sent to the
+    # API.
+    # It is useful for example to prevent some providers to filter-out requests
+    # that do not seem to be issued by a regular browser (the Google Suggest API
+    # does that).
+    api_headers =
+        User-Agent Mozilla/5.0
+
+    # Optional: the name of the parser used to read the response from the API.
+    # * There are two internal parsers at the moment, "opensearch" and "qwant".
+    #   You may want to read the code of this package and search for
+    #   "_api_parser_opensearch" or "_api_parser_qwant".
+    # * Alternatively, you may need to write your own parser for a provider that
+    #   is not supported yet. In that case, you must create a file named
+    #   websuggest_user_parsers.py in package's live directory (example:
+    #   "Keypirinha/portable/Profile/Packages/WebSuggest/websuggest_user_parsers.py")
+    #   and define a Python function with the same signature than the
+    #   _api_parser_opensearch static method in package's code.
+    #   Own parser's name must be referenced here with the "user." prefix
+    #   (without quotes). Example: api_parser = user.my_parser
+    # * Default: opensearch
+    api_parser = opensearch
+
+    # Required: the *base* part of the search URL to be used when a browse
+    # action is triggered.
+    # This value has the same properties than api_url.
+    browse_base = https://duckduckgo.com/
+
+    # Optional: the *query* part of the search URL.
+    # This value has the same properties than api_args.
+    browse_args = q {terms}
+
+.. tip::
+    If you think that a new provider you added may benefit to other |project|
+    users, feel free to submit its configuration and parser to the
+    |bugtracker_link| or the |chat_room|, so it can be added to |project|.

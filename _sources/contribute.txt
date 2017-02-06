@@ -91,6 +91,8 @@ online relationships between developers. Having a beer (or five) with him
 somewhere, someday, is a non-negociable requirement to your application :)
 
 
+.. _contribute-doc:
+
 Help with the Documentation
 ===========================
 

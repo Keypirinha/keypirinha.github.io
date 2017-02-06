@@ -1,0 +1,201 @@
+=======================
+GoogleTranslate Package
+=======================
+
+Available since version 2.10
+
+Suggest translations using Google Translate online service, to/from any
+supported language.
+
+
+Usage
+=====
+
+By default, a ``Translate`` item is inserted into the Catalog using the default
+source and target language parameters provided by the configuration file.
+
+Select the item and type the term(s) you wish to translate as item's argument.
+
+The plugin then queries the Google Translate service and adds the result as a
+suggestion in the results list.
+
+The default action when pressing the :kbd:`Enter` key is to copy the result to
+the clipboard. Press :kbd:`Ctrl+Enter` for a list a available actions related to
+this result.
+
+
+Custom Items
+============
+
+If you wish to have more "translate" items available with different predefined
+language parameters, it is possible to define extra items in the configuration
+file by declaring ``custom_item`` sections.
+
+Refer to the default configuration file of the package for more information.
+
+.. seealso::
+    The :doc:`../configuration` chapter
+
+
+Search Grammar
+==============
+
+For translation queries that do not necessitate the creation of custom items, it
+is possible to change the language parameters on-the-fly, at search time,
+without having to modify the configuration file.
+
+To do so, select **any** item created by this plugin and to use one of following
+grammars as its argument::
+
+    A. <terms>
+    B. [[lang_in]:[lang_out]] <terms>
+    C. <terms> [[lang_in]:[lang_out]]
+
+Examples::
+
+   1. fr:en Bonjour
+   2. :es Danke
+   3. en: Hello world
+   4. hello world en:
+   5. Que tal? -:en
+
+Grammar ``A`` being the most basic, it fully relies on the source and target
+languages used to create the item that is currently selected (may it be the
+*default* item or a *custom* one).
+
+Grammar ``B`` and ``C`` both allow to override item's language code(s).
+
+Example ``2`` forces the target language to be Spanish, but keeps the source
+language of the currently selected item.
+
+Examples ``3`` and ``4`` are equivalent and secure the source language to be
+English.
+
+Example ``5`` requests the translation of ``Que tal?`` from the ``auto``
+language (Google will interpret this sentence as being Spanish) to English.
+
+.. tip::
+  * The placement of the ``:`` character matters. It makes the difference
+    between the *source* and the *target* language.
+  * For convenience, ``-`` can be used instead of ``auto`` as the source
+    language.
+  * If both grammars ``B`` and ``C`` are used in the same argument, ``C``
+    prevails.
+  * If a source/target language code specified via this grammar is unknown, no
+    warning message is issued and item's code will silently be used. However it
+    is possible to check what language code have been used in a particular query
+    by having a look at item's description line.
+
+
+Google Translate Supported Languages
+====================================
+
+=====  =====================  ==============
+Code   Name                   Input/Output
+=====  =====================  ==============
+auto   Auto                   input only
+af     Afrikaans              both supported
+am     Amharic                both supported
+ar     Arabic                 both supported
+az     Azerbaijani            both supported
+be     Belarusian             both supported
+bg     Bulgarian              both supported
+bn     Bengali                both supported
+bs     Bosnian                both supported
+ca     Catalan                both supported
+ceb    Cebuano                both supported
+co     Corsican               both supported
+cs     Czech                  both supported
+cy     Welsh                  both supported
+da     Danish                 both supported
+de     German                 both supported
+el     Greek                  both supported
+en     English                both supported
+eo     Esperanto              both supported
+es     Spanish                both supported
+et     Estonian               both supported
+eu     Basque                 both supported
+fa     Persian                both supported
+fi     Finnish                both supported
+fr     French                 both supported
+fy     Frisian                both supported
+ga     Irish                  both supported
+gd     Scots Gaelic           both supported
+gl     Galician               both supported
+gu     Gujarati               both supported
+ha     Hausa                  both supported
+haw    Hawaiian               both supported
+hi     Hindi                  both supported
+hmn    Hmong                  both supported
+hr     Croatian               both supported
+ht     Haitian Creole         both supported
+hu     Hungarian              both supported
+hy     Armenian               both supported
+id     Indonesian             both supported
+ig     Igbo                   both supported
+is     Icelandic              both supported
+it     Italian                both supported
+iw     Hebrew                 both supported
+ja     Japanese               both supported
+jw     Javanese               both supported
+ka     Georgian               both supported
+kk     Kazakh                 both supported
+km     Khmer                  both supported
+kn     Kannada                both supported
+ko     Korean                 both supported
+ku     Kurdish (Kurmanji)     both supported
+ky     Kyrgyz                 both supported
+la     Latin                  both supported
+lb     Luxembourgish          both supported
+lo     Lao                    both supported
+lt     Lithuanian             both supported
+lv     Latvian                both supported
+mg     Malagasy               both supported
+mi     Maori                  both supported
+mk     Macedonian             both supported
+ml     Malayalam              both supported
+mn     Mongolian              both supported
+mr     Marathi                both supported
+ms     Malay                  both supported
+mt     Maltese                both supported
+my     Myanmar (Burmese)      both supported
+ne     Nepali                 both supported
+nl     Dutch                  both supported
+no     Norwegian              both supported
+ny     Chichewa               both supported
+pa     Punjabi                both supported
+pl     Polish                 both supported
+ps     Pashto                 both supported
+pt     Portuguese             both supported
+ro     Romanian               both supported
+ru     Russian                both supported
+sd     Sindhi                 both supported
+si     Sinhala                both supported
+sk     Slovak                 both supported
+sl     Slovenian              both supported
+sm     Samoan                 both supported
+sn     Shona                  both supported
+so     Somali                 both supported
+sq     Albanian               both supported
+sr     Serbian                both supported
+st     Sesotho                both supported
+su     Sundanese              both supported
+sv     Swedish                both supported
+sw     Swahili                both supported
+ta     Tamil                  both supported
+te     Telugu                 both supported
+tg     Tajik                  both supported
+th     Thai                   both supported
+tl     Filipino               both supported
+tr     Turkish                both supported
+uk     Ukrainian              both supported
+ur     Urdu                   both supported
+uz     Uzbek                  both supported
+vi     Vietnamese             both supported
+xh     Xhosa                  both supported
+yi     Yiddish                both supported
+yo     Yoruba                 both supported
+zh-CN  Chinese (Simplified)   both supported
+zh-TW  Chinese (Traditional)  output only
+zu     Zulu                   both supported
+=====  =====================  ==============

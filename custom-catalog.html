@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. Customize your Catalog &mdash; Keypirinha</title>
+  <title>8. Customize your Catalog &mdash; Keypirinha</title>
   
 
   
@@ -33,8 +33,8 @@
 
   
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="8. Packages" href="packages.html"/>
-        <link rel="prev" title="6. Configuration" href="configuration.html"/> 
+        <link rel="next" title="9. Overview" href="overview.html"/>
+        <link rel="prev" title="7. Configuration" href="configuration.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.10
+                2.11
               </div>
             
           
@@ -91,18 +91,18 @@
 <li class="toctree-l1"><a class="reference internal" href="update.html">2. Update Procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first.html">3. First steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">4. Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">5. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration.html">6. Configuration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Customize your Catalog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">7.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#disable-everything">7.2. Disable everything</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#expanding-your-catalog">7.3. Expanding your Catalog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tracking-down-unwanted-features">7.4. Tracking down unwanted features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Customize your Catalog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">8.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disable-everything">8.2. Disable everything</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expanding-your-catalog">8.3. Expanding your Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tracking-down-unwanted-features">8.4. Tracking down unwanted features</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">8. Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">9. Shipped Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributions.html">10. Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">9. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">10. Packages Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">11. Extending <em>Keypirinha</em> (API)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">12. Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">13. Glossary</a></li>
@@ -141,7 +141,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>7. Customize your Catalog</li>
+    <li>8. Customize your Catalog</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -154,7 +154,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="customize-your-catalog">
-<h1>7. Customize your Catalog<a class="headerlink" href="#customize-your-catalog" title="Permalink to this headline">¶</a></h1>
+<h1>8. Customize your Catalog<a class="headerlink" href="#customize-your-catalog" title="Permalink to this headline">¶</a></h1>
 <p>By default, almost all <em>Keypirinha</em>&#8216;s features are enabled. While the vast majority
 of users will find this convenient not to have to configure <em>Keypirinha</em> straight
 out of the box, some might prefer to have full control on what is actually
@@ -162,7 +162,7 @@ available in <em>Keypirinha</em>&#8216;s <a class="reference internal" href="glo
 <p>This small guide shows how to clear the Catalog entirely so you can then
 expand it with only the desired features/items.</p>
 <div class="section" id="introduction">
-<h2>7.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>To understand how to customize your Catalog, you must first understand how it is
 built. The tiny <a class="reference internal" href="overview.html#overview-architecture"><span class="std std-ref">Architecture</span></a> section gives you an overview of
 the role plugins play in <em>Keypirinha</em>.</p>
@@ -171,7 +171,7 @@ to open the <a class="reference internal" href="configuration.html"><span class=
 the following sections.</p>
 </div>
 <div class="section" id="disable-everything">
-<h2>7.2. Disable everything<a class="headerlink" href="#disable-everything" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Disable everything<a class="headerlink" href="#disable-everything" title="Permalink to this headline">¶</a></h2>
 <p>To start with a clean slate, we will disable every shipped <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a>
 except the <code class="docutils literal"><span class="pre">Internal</span></code> one.</p>
 <p>Open <em>Keypirinha</em>&#8216;s configuration file and create/modify the <code class="docutils literal"><span class="pre">ignored_packages</span></code>
@@ -190,7 +190,7 @@ enabled but technically-wise, nothing prevents you from disabling it as well
 (<code class="docutils literal"><span class="pre">ignored_packages</span> <span class="pre">=</span> <span class="pre">&lt;All&gt;</span></code>).</p>
 </div>
 <div class="section" id="expanding-your-catalog">
-<h2>7.3. Expanding your Catalog<a class="headerlink" href="#expanding-your-catalog" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. Expanding your Catalog<a class="headerlink" href="#expanding-your-catalog" title="Permalink to this headline">¶</a></h2>
 <p><em>Keypirinha</em> is a generic tool that allows a very wide range of use cases.</p>
 <p>For that reason, this section cannot be explicit or exhaustive since it entirely
 depends on how you want to use <em>Keypirinha</em>. For example, some users only want to
@@ -209,7 +209,7 @@ Catalog. For example, if you enable the <code class="docutils literal"><span cla
 a look at the <code class="docutils literal"><span class="pre">scan_start_menu</span></code> and <code class="docutils literal"><span class="pre">scan_env_path</span></code> settings.</p>
 </div>
 <div class="section" id="tracking-down-unwanted-features">
-<h2>7.4. Tracking down unwanted features<a class="headerlink" href="#tracking-down-unwanted-features" title="Permalink to this headline">¶</a></h2>
+<h2>8.4. Tracking down unwanted features<a class="headerlink" href="#tracking-down-unwanted-features" title="Permalink to this headline">¶</a></h2>
 <p>If you happen to notice that some unwanted features are still enabled, it is
 worth mentioning that it is possible to know what plugin (and by extension, what
 package) created a specific catalog item in the list of results.</p>
@@ -226,10 +226,10 @@ item. Among them the name of the parent plugin.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="packages.html" class="btn btn-neutral float-right" title="8. Packages" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="overview.html" class="btn btn-neutral float-right" title="9. Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="configuration.html" class="btn btn-neutral" title="6. Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="configuration.html" class="btn btn-neutral" title="7. Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,7 +259,7 @@ item. Among them the name of the parent plugin.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.10',
+            VERSION:'2.11',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

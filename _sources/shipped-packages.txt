@@ -18,7 +18,7 @@ community. Check out the :doc:`contributions` chapter for more info.
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     packages/internal
     packages/apps
@@ -28,10 +28,12 @@ community. Check out the :doc:`contributions` chapter for more info.
     packages/everything
     packages/filebrowser
     packages/filezilla
+    packages/googletranslate
     packages/putty
     packages/regbrowser
     packages/taskswitcher
     packages/url
     packages/websearch
+    packages/websuggest
     packages/winamp
     packages/winscp
