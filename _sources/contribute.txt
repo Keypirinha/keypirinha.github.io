@@ -17,8 +17,17 @@ quickly.
 
 * First search if your issue has already been reported
 
-* Provide the exact and complete version number of the application. You can get
-  it by displaying the :term:`Console` (scroll up to the top lines)
+* Copy and paste the first lines of the :term:`Console`. They should look like
+  this:
+
+  .. code-block:: text
+
+    22:27:30.915 Keypirinha 2.11 (66a575a) for x64
+    22:27:30.915 System: WinNT-x64 6.3.9600-ws-0x0100
+    22:27:30.915 Portable mode
+    22:27:30.915 Keyboard layout: 0000040C
+    22:27:30.915 Monitor #1: Name[\\.\DISPLAY1] Rect[0, 0, 1920, 1200] DpiScale[1.00] PRIMARY
+    22:27:30.915 Monitor #2: Name[\\.\DISPLAY2] Rect[0, 0, 1024, 768] DpiScale[1.00]
 
 * One bug per report
 
@@ -35,8 +44,8 @@ quickly.
 * Optionally attach screenshots so we can "see" the issue
 
 * Optionally attach the complete log of the session during which the bug
-  occurred (the log indicates critical information including the complete
-  version number). |br|
+  occurred (the log may reveal critical information to help tracking down the
+  issue). |br|
   Note that you may want to strip the log file first since it may contain
   several sessions.
 
@@ -48,8 +57,12 @@ quickly.
 Get involved in the development of the Packages
 ===============================================
 
-If you are interested in improving an official package, the |packsrepo_link| is
-online and accepts pull requests.
+If you are not sure where to start from, some feature requests or issues
+reported by users may be associated with the `help-appreciated
+<https://github.com/Keypirinha/Keypirinha/issues?q=is%3Aissue+is%3Aopen+label%3Ahelp-appreciated>`_
+tag.
+
+The |packsrepo_link| is online and accepts pull requests.
 
 
 .. _contribute-platform:
@@ -57,7 +70,7 @@ online and accepts pull requests.
 Get involved in the development of the Platform
 ===============================================
 
-|project| is looking for a skilled developer to help creating its online
+|project| is looking for an involved developer to help creating its online
 platform dedicated to the automated redistribution of plugins (i.e. website and
 service).
 
@@ -65,7 +78,7 @@ service).
 
 * Code would be fully open source
 * It mainly consists of a website and a service to be accessed by |project|
-  itself. Pretty much like `Package Control <https://packagecontrol.io/>`_ for
+  itself. Pretty much like `Package Control <https://packagecontrol.io>`_ for
   `SublimeText <http://www.sublimetext.com>`_, or
   `Packal <http://www.packal.org>`_ for `Alfred <https://www.alfredapp.com>`_
 * It will include current |project|'s website (documentation)
@@ -76,19 +89,18 @@ service).
 
 * You want to improve |project|
 * You have a crystal clear view of the requirements for such a task
-* You want to volunteer and spend some of your free time on a long run project
+* You want to spend some of your free time on a long run project
 * You are of the kind who like to get the job done
 * You are willing to enter a friendly online relationship with an other
   developer for the good of a project :)
 
 **Application**
 
-Please PM `@polyvertex <https://gitter.im/polyvertex>`_ and provide some info
-about your background. Links to your code repositories are welcome.
+Please PM `@polyvertex <https://gitter.im/polyvertex>`_
 
-*@polyvertex* is a former long-time traveler who values humanized and friendly
+*@polyvertex* is a former long-term traveler who values humanized and friendly
 online relationships between developers. Having a beer (or five) with him
-somewhere, someday, is a non-negociable requirement to your application :)
+somewhere, someday, will be part of the deal :)
 
 
 .. _contribute-doc:

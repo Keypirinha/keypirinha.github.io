@@ -70,4 +70,33 @@ like:
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
 
+How to Install
+==============
+
+Package developers usually offer a ready-to-install ``.keypirinha-package``
+file.
+
+If the package is hosted on GitHub, you may find it in the ``releases`` section:
+
+.. image:: images/github-pack-repo.png
+    :align: center
+
+
+In the releases section, you usually want the most up-tu-date release marked as
+``Latest release``. Locate it and grab the ``.keypirinha-package`` file
+associated to it.
+
+.. image:: images/github-pack-release.png
+    :align: center
+
+
+If no ``.keypirinha-package`` file is associated to the latest release, please
+contact the package developer.
+
+Once you have downloaded the ``.keypirinha-package`` file, simply move it to the
+:file:`Keypirinha\\portable\\Profile\\InstalledPackages` folder if you are in
+Portable mode, or to the :file:`%APPDATA%\\Keypirinha\\InstalledPackages` folder
+in Installed mode.
+
+
 .. _@tuteken: https://github.com/tuteken

@@ -7,8 +7,7 @@ A fast launcher for keyboard ninjas on Windows.
 .. image:: images/wndrun-search2.png
     :align: center
 
-* **Download** the latest release: |latest_link| |br|
-  Requires Windows **64-bit** (7, 8, 8.1 or 10) |br|
+* :doc:`download` |br|
   **Freeware**, no nag screen, no time limit, no ads
 * Take a look at the :doc:`install` procedure or the :doc:`update`
 * Read the :doc:`first` chapter
@@ -19,13 +18,11 @@ Need Help?
   * :ref:`contribute-issue`
 
 You like |project|?
-  * :ref:`contribute-packages`
   * Give it a **Like** or a **Star** to show your support: |br|
     |social_buttons|
-
-.. note::
-    **Help wanted** |project| is looking for a developer.
-    :ref:`contribute-platform`.
+  * **Help wanted! Keypirinha is looking for a developer:** |br|
+    :ref:`contribute-platform`
+  * Or, :ref:`contribute-packages`
 
 
 What is |project|
@@ -41,6 +38,7 @@ Contents
     :maxdepth: 2
     :numbered:
 
+    download
     install
     update
     first

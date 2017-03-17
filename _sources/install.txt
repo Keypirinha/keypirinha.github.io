@@ -11,8 +11,8 @@ Installation
 Requirements
 ============
 
-|project| works on Windows 64bits (7, 8, 8.1, 10) and does not require
-additional dependencies.
+|project| works on Windows (7, 8, 8.1, 10) and does not require additional
+dependencies.
 
 
 Installation
@@ -32,15 +32,31 @@ Installed vs. Portable mode
 |project| can run in two different flavors: :ref:`install-installed` or
 :ref:`install-portable`.
 
-Each time |project| is being launched, it checks if a :file:`portable` folder
-exists under |project|'s directory. In that case, the application will run in
-:ref:`install-portable`, otherwise the :ref:`install-installed` is selected.
+Each time |project| is being launched, it checks if the :file:`portable` folder
+exists under |project|'s directory. If the folder exists, the application will
+run in :ref:`install-portable`, otherwise the :ref:`install-installed` is
+selected.
 
 .. note::
     There is currently no automated tool to ease switching between the two modes
     so you will have to copy the directories manually if you wish to switch to
-    the :ref:`install-installed`. **Just ensure first the application is not
+    the :ref:`install-installed`. **Please ensure first the application is not
     running.**
+
+
+.. _install-portable:
+
+Portable Mode
+-------------
+
+The Portable Mode keeps all the files needed by |project| in a single folder,
+making it easy to be moved around on a USB stick for example.
+
+The configuration files and downloaded extra packages will be stored in the
+:file:`portable\\Profile` folder, directly located in |project|'s directory.
+
+Cache files and any other kind of temporary files will be stored in the
+:file:`portable\\Local` folder, directly located in |project|'s directory.
 
 
 .. _install-installed:
@@ -57,7 +73,7 @@ The configuration files and downloaded extra packages will be stored in the
 That might be translated to something like that on your machine:
 :file:`C:\\Users\\%USERNAME%\\AppData\\Roaming\\Keypirinha`.
 
-Runtime files and any other kind of temporary files will be stored in the
+Cache files and any other kind of temporary files will be stored in the
 :file:`%LOCALAPPDATA%\\Keypirinha` folder.
 That might be translated to something like that on your machine:
 :file:`C:\\Users\\%USERNAME%\\AppData\\Local\\Keypirinha`.
@@ -66,18 +82,3 @@ That might be translated to something like that on your machine:
     In order to be able to run under this mode, the :file:`portable` directory
     must **not** exist. So be sure you have deleted it after copying your files
     to their new locations.
-
-
-.. _install-portable:
-
-Portable Mode
--------------
-
-The Portable Mode keeps all the files needed by |project| in a single folder,
-making it easy to be moved around on a USB stick for example.
-
-The configuration files and downloaded extra packages will be stored in the
-:file:`portable\\Profile` folder, directly located in |project|'s directory.
-
-Runtime files and any other kind of temporary files will be stored in the
-:file:`portable\\Local` folder, directly located in |project|'s directory.

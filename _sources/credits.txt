@@ -14,9 +14,9 @@ located into |project|'s directory.
   A C++ wrapper over Python's C API |br|
   http://boost.org
 
-* *cppformat* |br|
+* *fmtlib* |br|
   Small, safe and fast formatting library for C++ |br|
-  http://cppformat.github.io
+  http://fmtlib.net
 
 * *JsonCpp* |br|
   A C++ library to read/write JSON streams |br|
@@ -27,8 +27,7 @@ located into |project|'s directory.
   https://github.com/XhmikosR/notepad2-mod
 
 * *Python* |br|
-  The famous programming language. |project| embeds the official *CPython*
-  interpreter |br|
+  |project| embeds the official implementation of the Python language |br|
   http://python.org
 
 * *Sphinx* |br|
@@ -44,7 +43,7 @@ located into |project|'s directory.
   https://github.com/Cyan4973/xxHash
 
 * *zlib* |br|
-  The famous compression/decompression C library |br|
+  A compression/decompression C library |br|
   http://zlib.net
 
 

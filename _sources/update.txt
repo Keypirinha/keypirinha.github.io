@@ -10,7 +10,7 @@ If |project| is not installed on your machine yet. You should head over to the
 done manually.
 
 .. warning::
-    You must first ensure |project| is not running before doing anything else!
+    You must first ensure |project| is not running!
     This is because it keeps open some of its files at runtime so you would not
     be able to modify/delete them...
 
@@ -18,8 +18,8 @@ done manually.
 
     * Fire up the :term:`LaunchBox` and search-then-execute the
       ``Keypirinha: Exit`` item.
-    * Or, use the ``Exit`` item of the main contextual menu. To get the
-      contextual menu, right-click of |project|'s icon in the system tray, or
+    * Use the ``Exit`` item of the main contextual menu. To get the contextual
+      menu, right-click of |project|'s icon in the system tray, or
       right-click directly on the :term:`LaunchBox`.
 
 Once you're sure |project| is not running anymore, the procedure depends on
@@ -35,7 +35,7 @@ Update in Installed Mode
 ========================
 
 * Open |project|'s install directory. |br|
-  Say it's :file:`U:\\Keypirinha` for example. |br|
+  :file:`U:\\Keypirinha` for example. |br|
   Ensure there is **no** :file:`U:\\Keypirinha\\portable` directory!
 
 * Delete it. |br|
@@ -43,7 +43,7 @@ Update in Installed Mode
   folder (i.e. under :file:`%APPDATA%\\Keypirinha`).
 
 * Open |project|'s distribution archive (its name should be something like
-  :file:`keypirinha-x64-portable.zip`).
+  :file:`keypirinha-x64-portable.7z`).
 
 * Extract its content to :file:`U:\\`. |br|
   You should now have a :file:`U:\\Keypirinha` directory.
@@ -64,7 +64,7 @@ Update in Portable Mode
 =======================
 
 * Open |project|'s install directory. |br|
-  Say it's :file:`U:\\Keypirinha` for example. |br|
+  :file:`U:\\Keypirinha` for example. |br|
   Ensure there **is** a :file:`U:\\Keypirinha\\portable` directory!
 
 * Delete everything in :file:`U:\\Keypirinha` **except**
@@ -73,7 +73,7 @@ Update in Portable Mode
   located!
 
 * Open |project|'s distribution archive (its name should be something like
-  :file:`keypirinha-x64-portable.zip`).
+  :file:`keypirinha-x64-portable.7z`).
 
 * Extract its content to :file:`U:\\`. |br|
   It is safe to anwser yes to the ``Overwrite?`` question concerning the
@@ -96,7 +96,7 @@ Overridden Shipped Packages
 
 If you have modified some official package, you may want to ensure their code,
 their resources **and** the nomenclature of their default configuration files
-hasn't changed much!
+hasn't changed!
 
 If you run into trouble with an official package, try first to move away its
 loose folder to check if your issue is reproducible.
