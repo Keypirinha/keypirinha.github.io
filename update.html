@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.12
+                2.12.1
               </div>
             
           
@@ -87,7 +87,7 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="download.html">1. Download Keypirinha</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">1. Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">2. Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Update Procedure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#update-in-installed-mode">3.1. Update in Installed Mode</a></li>
@@ -161,9 +161,7 @@
 done manually.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p>You must first ensure Keypirinha is not running!
-This is because it keeps open some of its files at runtime so you would not
-be able to modify/delete them...</p>
+<p>You must first ensure Keypirinha is not running!</p>
 <p>To exit Keypirinha, you have two options:</p>
 <ul class="last simple">
 <li>Fire up the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> and search-then-execute the
@@ -173,33 +171,31 @@ menu, right-click of Keypirinha&#8216;s icon in the system tray, or
 right-click directly on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</li>
 </ul>
 </div>
-<p>Once you&#8217;re sure Keypirinha is not running anymore, the procedure depends on
-whether you chose the <a class="reference internal" href="install.html#install-installed"><span class="std std-ref">Installed Mode</span></a> or the <a class="reference internal" href="install.html#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
+<p>Once you have ensured Keypirinha is not running, the procedure depends on whether
+you chose the <a class="reference internal" href="install.html#install-installed"><span class="std std-ref">Installed Mode</span></a> or the <a class="reference internal" href="install.html#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">To check in which mode Keypirinha is, open its install directory and check
-for a <code class="file docutils literal"><span class="pre">portable</span></code> directory. If it is there, you are in
+<p class="last">To check which mode Keypirinha is running in, open its install directory and
+check if the <code class="file docutils literal"><span class="pre">portable</span></code> directory exists. If it does, you are in
 <a class="reference internal" href="install.html#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
 </div>
 <div class="section" id="update-in-installed-mode">
 <h2>3.1. Update in Installed Mode<a class="headerlink" href="#update-in-installed-mode" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Open Keypirinha&#8216;s install directory. <br />
-<code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> for example. <br />
-Ensure there is <strong>no</strong> <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory!</li>
-<li>Delete it. <br />
-Don&#8217;t worry. In this mode, your configuration files are stored in your Home
-folder (i.e. under <code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code>).</li>
-<li>Open Keypirinha&#8216;s distribution archive (its name should be something like
-<code class="file docutils literal"><span class="pre">keypirinha-x64-portable.7z</span></code>).</li>
-<li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code>. <br />
-You should now have a <code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> directory.</li>
-<li>Delete the <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory. <br />
-That indicates Keypirinha it must run in Installed Mode.</li>
-<li>You&#8217;re done! <br />
-You may now execute the <code class="file docutils literal"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file. <br />
-It might be named <code class="file docutils literal"><span class="pre">keypirinha</span></code> in your <em>Windows Explorer</em> view, so to
-recognize it, it is the one with the squared-K icon.</li>
+<li>Open Keypirinha&#8216;s install directory <br />
+<code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> for example <br />
+Ensure there is <strong>no</strong> <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory</li>
+<li>Delete it <br />
+It is safe to do so. In this mode, your configuration files are stored in your
+Home folder (i.e. under <code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code>)</li>
+<li>Open Keypirinha&#8216;s distribution archive <br />
+Its name should be something like <code class="file docutils literal"><span class="pre">keypirinha-x64-portable.7z</span></code></li>
+<li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code> <br />
+You should now have a <code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> directory</li>
+<li>Delete the <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory <br />
+So Keypirinha knows it must run in Installed Mode</li>
+<li>You&#8217;re done <br />
+You may now execute the <code class="file docutils literal"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -209,23 +205,18 @@ recognize it, it is the one with the squared-K icon.</li>
 <div class="section" id="update-in-portable-mode">
 <h2>3.2. Update in Portable Mode<a class="headerlink" href="#update-in-portable-mode" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Open Keypirinha&#8216;s install directory. <br />
-<code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> for example. <br />
-Ensure there <strong>is</strong> a <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory!</li>
+<li>Open Keypirinha&#8216;s install directory <br />
+<code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> for example <br />
+Ensure there <strong>is</strong> a <code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> directory</li>
 <li>Delete everything in <code class="file docutils literal"><span class="pre">U:\Keypirinha</span></code> <strong>except</strong>
-<code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code>. <br />
-Don&#8217;t mess up with this one, this is where your configuration files are
-located!</li>
-<li>Open Keypirinha&#8216;s distribution archive (its name should be something like
-<code class="file docutils literal"><span class="pre">keypirinha-x64-portable.7z</span></code>).</li>
-<li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code>. <br />
-It is safe to anwser yes to the <code class="docutils literal"><span class="pre">Overwrite?</span></code> question concerning the
-<code class="file docutils literal"><span class="pre">portable</span></code> directory since it is just about replacing a dummy file (i.e.
-<code class="file docutils literal"><span class="pre">KEEPME</span></code>).</li>
-<li>You&#8217;re done! <br />
-You may now execute the <code class="file docutils literal"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file. <br />
-It might be named <code class="file docutils literal"><span class="pre">keypirinha</span></code> in your <em>Windows Explorer</em> view, so to
-recognize it, it is the one with the squared-K icon.</li>
+<code class="file docutils literal"><span class="pre">U:\Keypirinha\portable</span></code> (this is where your configuration files are
+located)</li>
+<li>Open Keypirinha&#8216;s distribution archive <br />
+Its name should be something like <code class="file docutils literal"><span class="pre">keypirinha-x64-portable.7z</span></code></li>
+<li>Extract its content to <code class="file docutils literal"><span class="pre">U:\</span></code> <br />
+It is OK to overwrite the dummy file <code class="file docutils literal"><span class="pre">portable\KEEPME</span></code></li>
+<li>You&#8217;re done <br />
+You may now execute the <code class="file docutils literal"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -282,7 +273,7 @@ loose folder to check if your issue is reproducible.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.12',
+            VERSION:'2.12.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

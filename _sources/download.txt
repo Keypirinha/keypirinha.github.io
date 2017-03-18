@@ -1,35 +1,23 @@
-==================
-Download |project|
-==================
+========
+Download
+========
 
-+-------------------------+------------------------+---------------------+---------------------+
-|                         | |project| Full         | |project| 64-bit    | |project| 32-bit    |
-+=========================+========================+=====================+=====================+
-| Windows **32-bit** |br| | |ico_tick|             | |ico_cross|         | |ico_tick|          |
-| (7, 8, 8.1, 10)         |                        |                     |                     |
-+-------------------------+------------------------+---------------------+---------------------+
-| Windows **64-bit** |br| | |ico_tick|             | |ico_tick|          | |ico_cross|         |
-| (7, 8, 8.1, 10)         |                        |                     |                     |
-+-------------------------+------------------------+---------------------+---------------------+
-| Note                    | Recommended for |br|   | For 64-bit OS       | For 32-bit OS       |
-|                         | USB key or if you |br| | **only**            | **only**            |
-|                         | do not know what |br|  |                     |                     |
-|                         | version to choose      |                     |                     |
-+-------------------------+------------------------+---------------------+---------------------+
-| Portable |br|           | |dl_full| |br|         | |dl_x64| |br|       | |dl_x86| |br|       |
-| (no installer)          | **Download**           | **Download**        | **Download**        |
-|                         | |version| **(full)**   | |version| **(x64)** | |version| **(x86)** |
-+-------------------------+------------------------+---------------------+---------------------+
+|project| |version|
 
-.. |ico_tick| image:: images/icon-tick.png
-   :align: middle
+* |dl_full_portable|
 
-.. |ico_cross| image:: images/icon-cross.png
-   :align: middle
+  * recommended if you do not know what flavor to choose
+  * or if you want to install |project| on a USB device
+
+* |dl_x64_portable|
+
+* |dl_x86_portable|
 
 
-**Next**
+**What next**
 
 * Take a look at the :doc:`install` procedure or the :doc:`update`
 * Read the :doc:`first` chapter
 * Check out the :doc:`changelog` to know what's new
+* Please consider donating |br|
+  |donate_button|

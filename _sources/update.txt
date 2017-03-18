@@ -11,8 +11,6 @@ done manually.
 
 .. warning::
     You must first ensure |project| is not running!
-    This is because it keeps open some of its files at runtime so you would not
-    be able to modify/delete them...
 
     To exit |project|, you have two options:
 
@@ -22,39 +20,37 @@ done manually.
       menu, right-click of |project|'s icon in the system tray, or
       right-click directly on the :term:`LaunchBox`.
 
-Once you're sure |project| is not running anymore, the procedure depends on
-whether you chose the :ref:`install-installed` or the :ref:`install-portable`.
+Once you have ensured |project| is not running, the procedure depends on whether
+you chose the :ref:`install-installed` or the :ref:`install-portable`.
 
 .. tip::
-    To check in which mode |project| is, open its install directory and check
-    for a :file:`portable` directory. If it is there, you are in
+    To check which mode |project| is running in, open its install directory and
+    check if the :file:`portable` directory exists. If it does, you are in
     :ref:`install-portable`.
 
 
 Update in Installed Mode
 ========================
 
-* Open |project|'s install directory. |br|
-  :file:`U:\\Keypirinha` for example. |br|
-  Ensure there is **no** :file:`U:\\Keypirinha\\portable` directory!
+* Open |project|'s install directory |br|
+  :file:`U:\\Keypirinha` for example |br|
+  Ensure there is **no** :file:`U:\\Keypirinha\\portable` directory
 
-* Delete it. |br|
-  Don't worry. In this mode, your configuration files are stored in your Home
-  folder (i.e. under :file:`%APPDATA%\\Keypirinha`).
+* Delete it |br|
+  It is safe to do so. In this mode, your configuration files are stored in your
+  Home folder (i.e. under :file:`%APPDATA%\\Keypirinha`)
 
-* Open |project|'s distribution archive (its name should be something like
-  :file:`keypirinha-x64-portable.7z`).
+* Open |project|'s distribution archive |br|
+  Its name should be something like :file:`keypirinha-x64-portable.7z`
 
-* Extract its content to :file:`U:\\`. |br|
-  You should now have a :file:`U:\\Keypirinha` directory.
+* Extract its content to :file:`U:\\` |br|
+  You should now have a :file:`U:\\Keypirinha` directory
 
-* Delete the :file:`U:\\Keypirinha\\portable` directory. |br|
-  That indicates |project| it must run in Installed Mode.
+* Delete the :file:`U:\\Keypirinha\\portable` directory |br|
+  So |project| knows it must run in Installed Mode
 
-* You're done! |br|
-  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file. |br|
-  It might be named :file:`keypirinha` in your *Windows Explorer* view, so to
-  recognize it, it is the one with the squared-K icon.
+* You're done |br|
+  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file
 
 .. warning::
     Be sure to read the section below about :ref:`update-overpacks`.
@@ -63,27 +59,22 @@ Update in Installed Mode
 Update in Portable Mode
 =======================
 
-* Open |project|'s install directory. |br|
-  :file:`U:\\Keypirinha` for example. |br|
-  Ensure there **is** a :file:`U:\\Keypirinha\\portable` directory!
+* Open |project|'s install directory |br|
+  :file:`U:\\Keypirinha` for example |br|
+  Ensure there **is** a :file:`U:\\Keypirinha\\portable` directory
 
 * Delete everything in :file:`U:\\Keypirinha` **except**
-  :file:`U:\\Keypirinha\\portable`. |br|
-  Don't mess up with this one, this is where your configuration files are
-  located!
+  :file:`U:\\Keypirinha\\portable` (this is where your configuration files are
+  located)
 
-* Open |project|'s distribution archive (its name should be something like
-  :file:`keypirinha-x64-portable.7z`).
+* Open |project|'s distribution archive |br|
+  Its name should be something like :file:`keypirinha-x64-portable.7z`
 
-* Extract its content to :file:`U:\\`. |br|
-  It is safe to anwser yes to the ``Overwrite?`` question concerning the
-  :file:`portable` directory since it is just about replacing a dummy file (i.e.
-  :file:`KEEPME`).
+* Extract its content to :file:`U:\\` |br|
+  It is OK to overwrite the dummy file :file:`portable\\KEEPME`
 
-* You're done! |br|
-  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file. |br|
-  It might be named :file:`keypirinha` in your *Windows Explorer* view, so to
-  recognize it, it is the one with the squared-K icon.
+* You're done |br|
+  You may now execute the :file:`U:\\Keypirinha\\keypirinha.exe` file
 
 .. warning::
     Be sure to read the section below about :ref:`update-overpacks`.

@@ -33,15 +33,14 @@ Installed vs. Portable mode
 :ref:`install-portable`.
 
 Each time |project| is being launched, it checks if the :file:`portable` folder
-exists under |project|'s directory. If the folder exists, the application will
-run in :ref:`install-portable`, otherwise the :ref:`install-installed` is
-selected.
+exists under |project|'s directory. If it does, the application will run in
+:ref:`install-portable`, otherwise the :ref:`install-installed` is selected.
 
 .. note::
-    There is currently no automated tool to ease switching between the two modes
+    There is currently no automated way to ease switching between the two modes
     so you will have to copy the directories manually if you wish to switch to
-    the :ref:`install-installed`. **Please ensure first the application is not
-    running.**
+    the :ref:`install-installed`. **Please ensure first that the application is
+    not running.**
 
 
 .. _install-portable:

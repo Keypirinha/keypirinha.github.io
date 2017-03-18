@@ -65,8 +65,9 @@ Is it open source?
 ==================
 
 The application itself is distributed as a
-`Freeware <https://en.wikipedia.org/wiki/Freeware>`_. |br|
-Its official plugins however are open source and will always be.
+`freeware <https://en.wikipedia.org/wiki/Freeware>`_. |br|
+Its official plugins are
+`open source <https://en.wikipedia.org/wiki/Open-source_license>`_.
 
 
 How to support the project?
@@ -74,8 +75,10 @@ How to support the project?
 
 You can show your support to the |project| project by:
 
-* Spreading nice words about it!
-* Giving the project a **Like** or a **Star**: |br|
+* Making a donation |br|
+  |donate_button|
+
+* Spreading nice words about it |br|
   |social_buttons|
 
 
