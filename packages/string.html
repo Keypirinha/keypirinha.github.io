@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.11. PuTTY Package &mdash; Keypirinha</title>
+  <title>5.13. String Package &mdash; Keypirinha</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.12. RegBrowser Package" href="regbrowser.html"/>
-        <link rel="prev" title="5.10. GoogleTranslate Package" href="googletranslate.html"/> 
+        <link rel="next" title="5.14. TaskSwitcher Package" href="taskswitcher.html"/>
+        <link rel="prev" title="5.12. RegBrowser Package" href="regbrowser.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -106,13 +106,13 @@
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.10. GoogleTranslate Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.11. PuTTY Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#catalog-items">5.11.1. Catalog Items</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration">5.11.2. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.13. String Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">5.13.1. Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">5.13.2. Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="string.html">5.13. String Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url.html">5.15. URL Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
@@ -167,7 +167,7 @@
       
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
       
-    <li>5.11. PuTTY Package</li>
+    <li>5.13. String Package</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -179,32 +179,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="putty-package">
-<h1>5.11. PuTTY Package<a class="headerlink" href="#putty-package" title="Permalink to this headline">¶</a></h1>
-<p>Available since version 2.0</p>
-<p>Allows to launch <em>PuTTY</em> sessions directly.</p>
-<p>This plugin automatically detects the installed version of the official <em>PuTTY</em>
-distribution and lists its configured sessions so they can be launched directly
-from Keypirinha.</p>
-<p>The <em>PortableApps.com</em> distribution of <em>PuTTY</em> can also be registered in
-package&#8217;s dedicated configuration file. Edit the configuration file for more
-info (search for the <code class="docutils literal"><span class="pre">Configure</span> <span class="pre">Package:</span> <span class="pre">PuTTY</span></code> item to do that).</p>
-<div class="section" id="catalog-items">
-<h2>5.11.1. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
-<p>This package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
+  <div class="section" id="string-package">
+<h1>5.13. String Package<a class="headerlink" href="#string-package" title="Permalink to this headline">¶</a></h1>
+<p>Available since version 2.13</p>
+<p>A multi-purpose plugin for string conversion and generation.</p>
+<div class="section" id="features">
+<h2>5.13.1. Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Search for the items prefixed with <code class="docutils literal"><span class="pre">PuTTY</span></code> (by default). Their appear
-only if <em>PuTTY</em> is detected.</li>
+<li>Hash a string using standard algorithms like CRC32, MD5, SHA*, etc...</li>
+<li>Generate a random UUID, also called GUID</li>
+<li>Generate a random password</li>
+<li>Generate random bytes</li>
+<li>URL-quote a string</li>
+<li>URL-unquote a string</li>
+<li>Split a URL</li>
+<li>Convert URL arguments to JSON</li>
+<li>Quote a command line argument (Windows &amp; Unix style)</li>
+<li>Split a command line (Windows &amp; Unix style)</li>
 </ul>
+<p>Example of splitting a URL and convert its arguments to JSON from URL:
+<code class="docutils literal"><span class="pre">https://l0gin:p%4055w0rd&#64;www.example.com:443/%7Ebob/index.html?arg=%20val;a2=test#specific-section</span></code></p>
+<img alt="../_images/pack-string-urlsplit.png" class="align-center" src="../_images/pack-string-urlsplit.png" />
 </div>
-<div class="section" id="configuration">
-<h2>5.11.2. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>This package is configurable, more details about every setting can be found in
-its configuration file.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">The <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter</p>
-</div>
+<div class="section" id="usage">
+<h2>5.13.2. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>For an overview of all the items populated by this package, type <code class="docutils literal"><span class="pre">string:</span></code> in
+the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
+<p>Most of these items are self-explanatory, however some of them accept a bit of
+tweaking at runtime via their argument:</p>
+<ul class="simple">
+<li>Item <code class="docutils literal"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Bytes</span></code> accepts an integer to specify the number of
+bytes to be generated. Also, the <code class="kbd docutils literal"><span class="pre">Space</span></code> key can be hit at will to
+generate a new sequence.</li>
+<li>Item <code class="docutils literal"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Password</span></code> accepts an integer to specify the number of
+characters to be generated. Also, the <code class="kbd docutils literal"><span class="pre">Space</span></code> key can be hit at will to
+generate a new password.</li>
+<li>Item <code class="docutils literal"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">UUID/GUID</span></code> generates a new UUID each time its argument
+changes</li>
+</ul>
 </div>
 </div>
 
@@ -215,10 +227,10 @@ its configuration file.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="regbrowser.html" class="btn btn-neutral float-right" title="5.12. RegBrowser Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="taskswitcher.html" class="btn btn-neutral float-right" title="5.14. TaskSwitcher Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="googletranslate.html" class="btn btn-neutral" title="5.10. GoogleTranslate Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="regbrowser.html" class="btn btn-neutral" title="5.12. RegBrowser Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

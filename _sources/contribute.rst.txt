@@ -78,9 +78,7 @@ service).
 
 * Code would be fully open source
 * It mainly consists of a website and a service to be accessed by |project|
-  itself. Pretty much like `Package Control <https://packagecontrol.io>`_ for
-  `SublimeText <http://www.sublimetext.com>`_, or
-  `Packal <http://www.packal.org>`_ for `Alfred <https://www.alfredapp.com>`_
+  itself
 * It will include current |project|'s website (documentation)
 * Its main language would be Python3
 * It must run on a Linux platform
@@ -88,7 +86,6 @@ service).
 **About you**
 
 * You want to improve |project|
-* You have a crystal clear view of the requirements for such a task
 * You want to spend some of your free time on a long run project
 * You are of the kind who like to get the job done
 * You are willing to enter a friendly online relationship with an other
@@ -108,5 +105,5 @@ somewhere, someday, will be part of the deal :)
 Help with the Documentation
 ===========================
 
-Documentation's repository is not open yet, but please file an issue on the
-|bugtracker_link| if you noticed a mistake or if you have some comments.
+Please file an issue on the |bugtracker_link| if you noticed a mistake, if you
+have some comment or if you wish to make some improvement.

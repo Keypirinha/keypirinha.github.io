@@ -13,11 +13,17 @@ Download
 
 * |dl_x86_portable|
 
+* |dl_checksums|
+
 
 **What next**
 
 * Take a look at the :doc:`install` procedure or the :doc:`update`
 * Read the :doc:`first` chapter
 * Check out the :doc:`changelog` to know what's new
-* Please consider donating |br|
-  |donate_button|
+
+You like |project|?
+  * Stay tuned and consider donating |br|
+    |social_buttons|
+    |donate_button|
+  * See :ref:`faq-support`

@@ -8,8 +8,12 @@
 * Language translations on-the-fly
 * Evaluate a mathematical expression
 * Convert numbers
+* Search your environment variables
 * Launch a copied URL directly (``http``, ``mailto``, ``skype``, ...)
+* Split a URL and convert its arguments to JSON
 * Switch to a running application by name
+* Hash a string (CRC32, MD5, SHA, ...)
+* Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
 * Machine-specific and/or user-specific configuration
 

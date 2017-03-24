@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="12.2. API Reference" href="reference.html"/>
         <link rel="next" title="12.2.8. Settings class" href="settings.html"/>
@@ -66,7 +69,7 @@
             
             
               <div class="version">
-                2.12.1
+                2.13
               </div>
             
           
@@ -437,13 +440,13 @@ plugin if <em>category</em> is <code class="docutils literal"><span class="pre">
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the action, normally lowercased, no space.
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The name of the action, normally lowercased, no space.
 Words can be separated by an underscore (<code class="docutils literal"><span class="pre">_</span></code>).</li>
-<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The display name of the action. This is the value the
+<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The display name of the action. This is the value the
 user will see.</li>
-<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
+<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
 will be displayed right under the label on the GUI.</li>
-<li><strong>data_bag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The <em>data bag</em> is a string container, exclusively
+<li><strong>data_bag</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The <em>data bag</em> is a string container, exclusively
 for the use of this plugin. Entirely optional and never read by
 the application.</li>
 </ul>
@@ -455,7 +458,7 @@ the application.</li>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction">CatalogAction</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; Action could not be created due to one or more invalid
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; Action could not be created due to one or more invalid
 passed argument.</p>
 </td>
 </tr>
@@ -516,11 +519,11 @@ example. In that case, this argument should be <code class="docutils literal"><s
 reflect the content of the <em>target</em> property.
 Prefer <a class="reference internal" href="#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">create_error_item()</span></code></a> to easily create an item of
 the <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.ERROR</span></code></a> category.</li>
-<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The display name of the item. This is the value the
+<li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The display name of the item. This is the value the
 user will see. It must not be empty.</li>
-<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
+<li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; An optional one-line description of the item. It
 will be displayed right under the label on the GUI.</li>
-<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; This is the main property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>,
+<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; This is the main property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>,
 the plugin can put whatever it needs to differentiate this item
 among others. <strong>This value cannot be null</strong> unless <em>category</em> is
 <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.ERROR</span></code></a>.</li>
@@ -534,7 +537,7 @@ choice here.</li>
 <li><strong>hit_hint</strong> (<a class="reference internal" href="module.html#keypirinha.ItemHitHint" title="keypirinha.ItemHitHint"><em>ItemHitHint</em></a>) &#8211; Indicates how the application should deal
 with this item once it has been executed by the user, regarding
 the History.</li>
-<li><strong>loop_on_suggest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Indicates the GUI should call
+<li><strong>loop_on_suggest</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Indicates the GUI should call
 <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> as long as this flag is raised. This
 argument should be left <code class="docutils literal"><span class="pre">False</span></code> unless you know what you are
 doing.</li>
@@ -547,7 +550,7 @@ associated with it will be displayed to the user so
 application will try to fall back to plugin&#8217;s default icon, if
 any. Eventually, if no icon could be associated to this item,
 the default application icon will displayed.</li>
-<li><strong>data_bag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; An arbitrary string for the exclusive use of the
+<li><strong>data_bag</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; An arbitrary string for the exclusive use of the
 plugin. The <em>data bag</em> is a modifiable and persistent property
 that will never be interpreted by the application and that can
 be used to transport some data meant to be associated with this
@@ -588,10 +591,10 @@ computed at construction time or when its arguments are updated.</li>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.dbg">
-<code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
+<code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an debug message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than by
-<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">By default, this method will produce no output unless the
@@ -612,10 +615,10 @@ present in plugin&#8217;s source code.</p>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.err">
-<code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
+<code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an error message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than by
-<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
@@ -630,14 +633,14 @@ present in plugin&#8217;s source code.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The pattern to match the <strong>name</strong> part of the
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The pattern to match the <strong>name</strong> part of the
 resource(s). Accepted wildcards are <code class="docutils literal"><span class="pre">*</span></code> (i.e.: matches zero or
 several characters), and <code class="docutils literal"><span class="pre">?</span></code> (matches a single character).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of the relative paths to the matched resources. May
 be empty.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a></td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></td>
 </tr>
 </tbody>
 </table>
@@ -672,8 +675,8 @@ mess in plugin&#8217;s logic.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Failed to get package&#8217;s cache directory</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#OSError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; Failed to create the directory (in case <em>create</em> argument
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Failed to get package&#8217;s cache directory</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> &#8211; Failed to create the directory (in case <em>create</em> argument
 is <code class="docutils literal"><span class="pre">True</span></code>).</li>
 </ul>
 </td>
@@ -694,7 +697,7 @@ is <code class="docutils literal"><span class="pre">True</span></code>).</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relative_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The relative path to the desired resource file
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relative_path</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The relative path to the desired resource file
 located in the package. Examples: <code class="docutils literal"><span class="pre">resource.png</span></code>,
 <code class="docutils literal"><span class="pre">subdir/resource.png</span></code>.</td>
 </tr>
@@ -704,10 +707,10 @@ located in the package. Examples: <code class="docutils literal"><span class="pr
 
 <dl class="method">
 <dt id="keypirinha.Plugin.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
+<code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an informational message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than by
-<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
@@ -717,16 +720,16 @@ located in the package. Examples: <code class="docutils literal"><span class="pr
 <dl class="method">
 <dt id="keypirinha.Plugin.load_binary_resource">
 <code class="descname">load_binary_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_binary_resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
+<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bytes" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
 specified resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#FileNotFoundError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The resource could not be found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#IOError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211; Error while opening or reading the resource.</li>
-<li><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#RuntimeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Unexpected/Unknown error.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> &#8211; The resource could not be found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#IOError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> &#8211; Error while opening or reading the resource.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> &#8211; Unexpected/Unknown error.</li>
 </ul>
 </td>
 </tr>
@@ -777,16 +780,16 @@ hold a <a class="reference internal" href="settings.html#keypirinha.Settings" ti
 <dl class="method">
 <dt id="keypirinha.Plugin.load_text_resource">
 <code class="descname">load_text_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_text_resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">str</span></code></a> object holding the content of the specified
+<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">str</span></code></a> object holding the content of the specified
 resource.</p>
 <p>May raise the same exceptions than <a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal"><span class="pre">load_binary_resource()</span></code></a>, plus
-the <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> exception if resource&#8217;s content could not be
+the <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> exception if resource&#8217;s content could not be
 decoded (Unicode error).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.log">
-<code class="descname">log</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em>, <em>level=1</em>, <em>lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
+<code class="descname">log</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em>, <em>level=1</em>, <em>lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -809,7 +812,7 @@ methods instead.</p>
 <li><strong>category</strong> (<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><em>ItemCategory</em></a>) &#8211; The category of item to associate the
 actions with. If needed, you can assign the same list of actions
 with several categories by calling this method several times.</li>
-<li><strong>actions_list</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; A list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects
+<li><strong>actions_list</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; A list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects
 that have been created with <a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal"><span class="pre">create_action()</span></code></a>.</li>
 </ul>
 </td>
@@ -819,7 +822,7 @@ filtered out when they don&#8217;t belong to this plugin for example, or
 if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction.valid" title="keypirinha.CatalogAction.valid"><code class="xref py py-meth docutils literal"><span class="pre">CatalogAction.valid()</span></code></a> returns <code class="docutils literal"><span class="pre">False</span></code>.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></p>
 </td>
 </tr>
 </tbody>
@@ -889,10 +892,10 @@ to know more about the meaning of the returned value.</li>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.warn">
-<code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>*</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
+<code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an warning message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than by
-<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#print" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
@@ -943,7 +946,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.12.1',
+            VERSION:'2.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

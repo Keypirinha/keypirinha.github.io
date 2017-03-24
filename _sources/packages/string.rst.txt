@@ -1,0 +1,49 @@
+==============
+String Package
+==============
+
+Available since version 2.13
+
+A multi-purpose plugin for string conversion and generation.
+
+
+Features
+========
+
+* Hash a string using standard algorithms like CRC32, MD5, SHA*, etc...
+* Generate a random UUID, also called GUID
+* Generate a random password
+* Generate random bytes
+* URL-quote a string
+* URL-unquote a string
+* Split a URL
+* Convert URL arguments to JSON
+* Quote a command line argument (Windows & Unix style)
+* Split a command line (Windows & Unix style)
+
+Example of splitting a URL and convert its arguments to JSON from URL:
+``https://l0gin:p%4055w0rd@www.example.com:443/%7Ebob/index.html?arg=%20val;a2=test#specific-section``
+
+.. image:: ../images/pack-string-urlsplit.png
+    :align: center
+
+
+Usage
+=====
+
+For an overview of all the items populated by this package, type ``string:`` in
+the :term:`LaunchBox`.
+
+Most of these items are self-explanatory, however some of them accept a bit of
+tweaking at runtime via their argument:
+
+* Item ``String: Random Bytes`` accepts an integer to specify the number of
+  bytes to be generated. Also, the :kbd:`Space` key can be hit at will to
+  generate a new sequence.
+
+* Item ``String: Random Password`` accepts an integer to specify the number of
+  characters to be generated. Also, the :kbd:`Space` key can be hit at will to
+  generate a new password.
+
+* Item ``String: Random UUID/GUID`` generates a new UUID each time its argument
+  changes

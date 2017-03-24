@@ -70,16 +70,55 @@ Its official plugins are
 `open source <https://en.wikipedia.org/wiki/Open-source_license>`_.
 
 
+.. _faq-support:
+
 How to support the project?
 ===========================
 
-You can show your support to the |project| project by:
+|project| is distributed for free and you are absolutely not required to
+participate in any way, so please do not feel that you *have to*.
 
-* Making a donation |br|
+However, the application itself and the official packages are the result of
+several hundreds of hours of development spent by a single person so if you do
+wish to show your support, please know that it is greatly appreciated and taken
+as an encouragement for future developments.
+
+There are several ways to support |project|:
+
+* Make a donation |br|
   |donate_button|
 
-* Spreading nice words about it |br|
+* *Like* it, *Star* it, spread nice words about it |br|
   |social_buttons|
+
+* :ref:`contribute-doc`
+
+* Help to develop the official packages |br|
+  :ref:`contribute-packages`
+
+* There are plans to develop an automated packages redistribution platform |br|
+  :ref:`contribute-platform`
+
+
+How my donation will be used?
+=============================
+
+All donations will be used for the project.
+
+Small donations will probably be spent on coffee to cheer up the developer in
+his cave. Bigger amounts will be spared for:
+
+* a Windows 10 license, which would help in the development of some requested
+  features
+* the domain name
+* the hosting of the dynamic website and the packages redistribution platform
+  that is planned
+* a digital certificate for signing |project|'s binaries so users can ensure
+  the ones they installed can be trusted to be issued by the original author
+* some hardware used in the development of the project
+
+If you have further questions or special enquiries, please PM
+`@polyvertex <https://gitter.im/polyvertex>`_
 
 
 Where does this weird name come from?!
@@ -95,4 +134,4 @@ Any translation?
 
 Currently, |project| is available in English only and there is no plan to
 support additional languages in a near future. For now, we prefer to focus on
-bug fixing and the implementation of new features.
+bug fixing and the implementation of functional features.

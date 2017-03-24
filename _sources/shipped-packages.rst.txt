@@ -25,12 +25,14 @@ community. Check out the :doc:`contributions` chapter for more info.
     packages/bookmarks
     packages/calc
     packages/controlpanel
+    packages/env
     packages/everything
     packages/filebrowser
     packages/filezilla
     packages/googletranslate
     packages/putty
     packages/regbrowser
+    packages/string
     packages/taskswitcher
     packages/url
     packages/websearch

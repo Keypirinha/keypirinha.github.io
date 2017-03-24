@@ -7,7 +7,7 @@ A fast launcher for keyboard ninjas on Windows
 .. image:: images/wndrun-search2.png
     :align: center
 
-* :doc:`download` |br|
+* :doc:`download` |version| |br|
 * Read the :doc:`first` chapter
 * Check out the :doc:`changelog` to know what's new
 
@@ -16,11 +16,10 @@ Need Help?
   * :ref:`contribute-issue`
 
 You like |project|?
-  * Please consider donating |br|
+  * Stay tuned and consider donating |br|
+    |social_buttons|
     |donate_button|
-  * :ref:`contribute-platform`
-  * :ref:`contribute-packages`
-  * |social_buttons|
+  * See :ref:`faq-support`
 
 
 What is |project|

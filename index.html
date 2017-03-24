@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Keypirinha" href="#"/>
         <link rel="next" title="1. Download" href="download.html"/> 
 
@@ -64,7 +67,7 @@
             
             
               <div class="version">
-                2.12.1
+                2.13
               </div>
             
           
@@ -152,7 +155,7 @@
 <p>A fast launcher for keyboard ninjas on Windows</p>
 <img alt="_images/wndrun-search2.png" class="align-center" src="_images/wndrun-search2.png" />
 <ul class="simple">
-<li><a class="reference internal" href="download.html"><span class="doc">Download</span></a> <br /></li>
+<li><a class="reference internal" href="download.html"><span class="doc">Download</span></a> <strong>v2.13</strong> <br /></li>
 <li>Read the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter</li>
 <li>Check out the <a class="reference internal" href="changelog.html"><span class="doc">Change Log</span></a> to know what&#8217;s new</li>
 </ul>
@@ -165,20 +168,19 @@
 </dd>
 <dt>You like Keypirinha?</dt>
 <dd><ul class="first last simple">
-<li>Please consider donating <br />
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="WKCWBE6M4HKP8">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate">
-<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form></li>
-<li><a class="reference internal" href="contribute.html#contribute-platform"><span class="std std-ref">Get involved in the development of the Platform</span></a></li>
-<li><a class="reference internal" href="contribute.html#contribute-packages"><span class="std std-ref">Get involved in the development of the Packages</span></a></li>
-<li><span id="a2itemwidget"></span><script src="https://api.alternativeto.net/software/keypirinha/widgetjs/blue" type="text/javascript"></script>
+<li>Stay tuned and consider donating <br />
 <iframe src="https://ghbtns.com/github-btn.html?user=keypirinha&repo=keypirinha&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px" style="margin-top:5px;"></iframe><br />
 <a href="https://twitter.com/keylauncher" class="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @keylauncher</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br />
 <a href="https://twitter.com/intent/tweet?button_hashtag=keypirinha" class="twitter-hashtag-button" data-text="A fast keystroke launcher on windows http://keypirinha.com via @keylauncher" data-show-count="false">Tweet #keypirinha</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br />
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fkeypirinha&width=100&layout=button&action=like&size=small&show_faces=false&share=true&height=20&appId" width="100" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></li>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fkeypirinha&width=100&layout=button&action=like&size=small&show_faces=false&share=true&height=20&appId" width="100" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<span id="a2itemwidget"></span><script src="https://api.alternativeto.net/software/keypirinha/widgetjs/blue" type="text/javascript"></script>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WKCWBE6M4HKP8">
+<input type="image" src="_static/donate.gif" border="0" name="submit" alt="Donate" style="margin-top:3px;">
+<img alt="" border="0" src="_static/pixel.gif" width="1" height="1">
+</form></li>
+<li>See <a class="reference internal" href="faq.html#faq-support"><span class="std std-ref">How to support the project?</span></a></li>
 </ul>
 </dd>
 </dl>
@@ -193,8 +195,12 @@ bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...</li>
 <li>Language translations on-the-fly</li>
 <li>Evaluate a mathematical expression</li>
 <li>Convert numbers</li>
+<li>Search your environment variables</li>
 <li>Launch a copied URL directly (<code class="docutils literal"><span class="pre">http</span></code>, <code class="docutils literal"><span class="pre">mailto</span></code>, <code class="docutils literal"><span class="pre">skype</span></code>, ...)</li>
+<li>Split a URL and convert its arguments to JSON</li>
 <li>Switch to a running application by name</li>
+<li>Hash a string (CRC32, MD5, SHA, ...)</li>
+<li>Generate random UUIDs, passwords, bytes sequences</li>
 <li>Naturally associate a keyword to a specific item</li>
 <li>Machine-specific and/or user-specific configuration</li>
 </ul>
@@ -252,18 +258,20 @@ bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...</li>
 <li class="toctree-l2"><a class="reference internal" href="packages/bookmarks.html">5.3. Bookmarks Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packages/calc.html">5.4. Calc Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="packages/controlpanel.html">5.5. ControlPanel Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/everything.html">5.6. Everything Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/filebrowser.html">5.7. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/filezilla.html">5.8. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/googletranslate.html">5.9. GoogleTranslate Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/putty.html">5.10. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/regbrowser.html">5.11. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/taskswitcher.html">5.12. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/url.html">5.13. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/websearch.html">5.14. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/websuggest.html">5.15. WebSuggest Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/winamp.html">5.16. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="packages/winscp.html">5.17. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/env.html">5.6. Env Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/everything.html">5.7. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/filebrowser.html">5.8. FileBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/filezilla.html">5.9. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/googletranslate.html">5.10. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/putty.html">5.11. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/regbrowser.html">5.12. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/string.html">5.13. String Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/taskswitcher.html">5.14. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/url.html">5.15. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/websearch.html">5.16. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/websuggest.html">5.17. WebSuggest Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winamp.html">5.18. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages/winscp.html">5.19. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a><ul>
@@ -322,8 +330,9 @@ bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...</li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#so-a-replacement-to-the-start-menu">15.3. So... A replacement to the Start Menu?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#is-it-open-source">15.4. Is it open source?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#how-to-support-the-project">15.5. How to support the project?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#where-does-this-weird-name-come-from">15.6. Where does this weird name come from?!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#any-translation">15.7. Any translation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-my-donation-will-be-used">15.6. How my donation will be used?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#where-does-this-weird-name-come-from">15.7. Where does this weird name come from?!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#any-translation">15.8. Any translation?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">16. Credits</a><ul>
@@ -382,7 +391,7 @@ bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.12.1',
+            VERSION:'2.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

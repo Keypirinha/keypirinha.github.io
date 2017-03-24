@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.15. WebSuggest Package &mdash; Keypirinha</title>
+  <title>5.17. WebSuggest Package &mdash; Keypirinha</title>
   
 
   
@@ -32,10 +32,13 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.16. Winamp Package" href="winamp.html"/>
-        <link rel="prev" title="5.14. WebSearch Package" href="websearch.html"/> 
+        <link rel="next" title="5.18. Winamp Package" href="winamp.html"/>
+        <link rel="prev" title="5.16. WebSearch Package" href="websearch.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -66,7 +69,7 @@
             
             
               <div class="version">
-                2.12.1
+                2.13
               </div>
             
           
@@ -98,27 +101,29 @@
 <li class="toctree-l2"><a class="reference internal" href="bookmarks.html">5.3. Bookmarks Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calc.html">5.4. Calc Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controlpanel.html">5.5. ControlPanel Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="everything.html">5.6. Everything Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.7. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.8. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.9. GoogleTranslate Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">5.10. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.11. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.12. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="url.html">5.13. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.14. WebSearch Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.15. WebSuggest Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#usage">5.15.1. Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-items">5.15.2. Custom Items</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#declare-extra-items">5.15.2.1. Declare extra items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#override-default-items">5.15.2.2. Override default items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env.html">5.6. Env Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">5.7. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.10. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">5.13. String Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">5.15. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.17. WebSuggest Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">5.17.1. Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-items">5.17.2. Custom Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#declare-extra-items">5.17.2.1. Declare extra items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#override-default-items">5.17.2.2. Override default items</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-providers">5.15.3. Custom Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-providers">5.17.3. Custom Providers</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.16. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.17. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.18. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.19. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
@@ -167,7 +172,7 @@
       
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
       
-    <li>5.15. WebSuggest Package</li>
+    <li>5.17. WebSuggest Package</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -180,12 +185,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="websuggest-package">
-<h1>5.15. WebSuggest Package<a class="headerlink" href="#websuggest-package" title="Permalink to this headline">¶</a></h1>
+<h1>5.17. WebSuggest Package<a class="headerlink" href="#websuggest-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.10</p>
 <p>Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia,
 Yahoo, ...</p>
 <div class="section" id="usage">
-<h2>5.15.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>5.17.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>By default, several items are inserted into the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. One for each
 predefined suggestions provider: <code class="docutils literal"><span class="pre">Amazon</span></code>, <code class="docutils literal"><span class="pre">Bing</span></code>, <code class="docutils literal"><span class="pre">DuckDuckGo</span></code>,
 <code class="docutils literal"><span class="pre">Google</span></code>, <code class="docutils literal"><span class="pre">Qwant</span></code>, <code class="docutils literal"><span class="pre">Wikipedia</span></code>, <code class="docutils literal"><span class="pre">Yahoo</span></code> and <code class="docutils literal"><span class="pre">YouTube</span></code> (see package&#8217;s
@@ -207,7 +212,7 @@ corrected upstream to the benefit of the other Keypirinha users.</p>
 </div>
 </div>
 <div class="section" id="custom-items">
-<h2>5.15.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
+<h2>5.17.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to change the list of the items to Catalog or their properties.
 There are two complementary ways to do so:</p>
 <ul class="simple">
@@ -220,7 +225,7 @@ There are two complementary ways to do so:</p>
 <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter before going further.</p>
 </div>
 <div class="section" id="declare-extra-items">
-<h3>5.15.2.1. Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
+<h3>5.17.2.1. Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
 <p>Each <em>item</em> depends on a suggestions <em>provider</em>; several items may rely on the
 same <em>provider</em>. Here is a documented example:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[item/DuckDuckGo Autocomplete]</span>
@@ -268,7 +273,7 @@ example is not possible.</li>
 </div>
 </div>
 <div class="section" id="override-default-items">
-<h3>5.15.2.2. Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
+<h3>5.17.2.2. Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
 <p>Predefined items are registered using the <code class="docutils literal"><span class="pre">predefined_item/</span></code> prefix in the
 name of the configuration section.</p>
 <p>For instance, if you wish to override the item <code class="docutils literal"><span class="pre">DuckDuckGo</span></code> predefined by
@@ -278,7 +283,7 @@ your configuration file.</p>
 </div>
 </div>
 <div class="section" id="custom-providers">
-<h2>5.15.3. Custom Providers<a class="headerlink" href="#custom-providers" title="Permalink to this headline">¶</a></h2>
+<h2>5.17.3. Custom Providers<a class="headerlink" href="#custom-providers" title="Permalink to this headline">¶</a></h2>
 <p>With some technical knowledge it is possible to extend the list of the supported
 suggestions providers by registering them via the package&#8217;s configuration file.</p>
 <p>Documented example:</p>
@@ -353,10 +358,10 @@ users, feel free to submit its configuration and parser to the
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="winamp.html" class="btn btn-neutral float-right" title="5.16. Winamp Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="winamp.html" class="btn btn-neutral float-right" title="5.18. Winamp Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="websearch.html" class="btn btn-neutral" title="5.14. WebSearch Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="websearch.html" class="btn btn-neutral" title="5.16. WebSearch Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -386,7 +391,7 @@ users, feel free to submit its configuration and parser to the
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.12.1',
+            VERSION:'2.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

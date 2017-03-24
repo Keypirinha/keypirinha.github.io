@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.13. URL Package &mdash; Keypirinha</title>
+  <title>5.15. URL Package &mdash; Keypirinha</title>
   
 
   
@@ -32,10 +32,13 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.14. WebSearch Package" href="websearch.html"/>
-        <link rel="prev" title="5.12. TaskSwitcher Package" href="taskswitcher.html"/> 
+        <link rel="next" title="5.16. WebSearch Package" href="websearch.html"/>
+        <link rel="prev" title="5.14. TaskSwitcher Package" href="taskswitcher.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -66,7 +69,7 @@
             
             
               <div class="version">
-                2.12.1
+                2.13
               </div>
             
           
@@ -98,21 +101,23 @@
 <li class="toctree-l2"><a class="reference internal" href="bookmarks.html">5.3. Bookmarks Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calc.html">5.4. Calc Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controlpanel.html">5.5. ControlPanel Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="everything.html">5.6. Everything Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.7. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.8. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.9. GoogleTranslate Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">5.10. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.11. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.12. TaskSwitcher Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.13. URL Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuration">5.13.1. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env.html">5.6. Env Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="everything.html">5.7. Everything Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.10. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">5.13. String Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.15. URL Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">5.15.1. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.14. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.15. WebSuggest Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.16. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.17. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.17. WebSuggest Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.18. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.19. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
@@ -161,7 +166,7 @@
       
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
       
-    <li>5.13. URL Package</li>
+    <li>5.15. URL Package</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -174,7 +179,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="url-package">
-<h1>5.13. URL Package<a class="headerlink" href="#url-package" title="Permalink to this headline">¶</a></h1>
+<h1>5.15. URL Package<a class="headerlink" href="#url-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.5</p>
 <p>Launch URLs directly from Keypirinha</p>
 <p>The <code class="docutils literal"><span class="pre">URL</span></code> plugin allows you to launch any URL that has its scheme (a.k.a.
@@ -209,7 +214,7 @@ your web browser by Keypirinha so application settings like <code class="docutil
 character if needed.</p>
 </div>
 <div class="section" id="configuration">
-<h2>5.13.1. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.15.1. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>This package is configurable, more details about every setting can be found in
 its configuration file.</p>
 <div class="admonition seealso">
@@ -226,10 +231,10 @@ its configuration file.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="websearch.html" class="btn btn-neutral float-right" title="5.14. WebSearch Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="websearch.html" class="btn btn-neutral float-right" title="5.16. WebSearch Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="taskswitcher.html" class="btn btn-neutral" title="5.12. TaskSwitcher Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="taskswitcher.html" class="btn btn-neutral" title="5.14. TaskSwitcher Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,7 +264,7 @@ its configuration file.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.12.1',
+            VERSION:'2.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

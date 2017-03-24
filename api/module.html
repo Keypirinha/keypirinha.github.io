@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="12.2. API Reference" href="reference.html"/>
         <link rel="next" title="12.2.2. keypirinha_util module" href="module-util.html"/>
@@ -66,7 +69,7 @@
             
             
               <div class="version">
-                2.12.1
+                2.13
               </div>
             
           
@@ -176,11 +179,11 @@ Keypirinha.</p>
 <span class="target" id="module-keypirinha"></span><dl class="class">
 <dt id="keypirinha.Events">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Events</code><a class="headerlink" href="#keypirinha.Events" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <em>flags</em> passed to <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.on_events()</span></code></a>.</p>
 <dl class="attribute">
 <dt id="keypirinha.Events.APPCONFIG">
-<code class="descname">APPCONFIG</code><em class="property"> = &lt;Events.APPCONFIG: 1&gt;</em><a class="headerlink" href="#keypirinha.Events.APPCONFIG" title="Permalink to this definition">¶</a></dt>
+<code class="descname">APPCONFIG</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha.Events.APPCONFIG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Application configuration has changed. Either because of a manual
 modification by the user, or because a change to an environment variable
 has impacted at least one value (in which case this flag is combined with
@@ -189,7 +192,7 @@ has impacted at least one value (in which case this flag is combined with
 
 <dl class="attribute">
 <dt id="keypirinha.Events.DESKTOP">
-<code class="descname">DESKTOP</code><em class="property"> = &lt;Events.DESKTOP: 4096&gt;</em><a class="headerlink" href="#keypirinha.Events.DESKTOP" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DESKTOP</code><em class="property"> = 4096</em><a class="headerlink" href="#keypirinha.Events.DESKTOP" title="Permalink to this definition">¶</a></dt>
 <dd><p>The content of the Desktop has changed (common and/or user&#8217;s).
 It can be because its structure has been modified (folders), or because
 some files/shortcuts have been added, modified, moved or removed.
@@ -200,7 +203,7 @@ flooding the plugins.</p>
 
 <dl class="attribute">
 <dt id="keypirinha.Events.ENV">
-<code class="descname">ENV</code><em class="property"> = &lt;Events.ENV: 256&gt;</em><a class="headerlink" href="#keypirinha.Events.ENV" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ENV</code><em class="property"> = 256</em><a class="headerlink" href="#keypirinha.Events.ENV" title="Permalink to this definition">¶</a></dt>
 <dd><p>At least one environment variable has been added/removed/modified.
 Note that if this change impacts application and/or package
 configuration, this flag is combined with <code class="docutils literal"><span class="pre">APPCONFIG</span></code> and/or
@@ -209,7 +212,7 @@ configuration, this flag is combined with <code class="docutils literal"><span c
 
 <dl class="attribute">
 <dt id="keypirinha.Events.NETOPTIONS">
-<code class="descname">NETOPTIONS</code><em class="property"> = &lt;Events.NETOPTIONS: 1024&gt;</em><a class="headerlink" href="#keypirinha.Events.NETOPTIONS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NETOPTIONS</code><em class="property"> = 1024</em><a class="headerlink" href="#keypirinha.Events.NETOPTIONS" title="Permalink to this definition">¶</a></dt>
 <dd><p>System&#8217;s network settings have been modified (via the
 <code class="docutils literal"><span class="pre">Internet</span> <span class="pre">Properties</span></code> dialog for example), and plugins that perform
 network requests should update their state.
@@ -221,7 +224,7 @@ should not rely on this behavior.</p>
 
 <dl class="attribute">
 <dt id="keypirinha.Events.PACKCONFIG">
-<code class="descname">PACKCONFIG</code><em class="property"> = &lt;Events.PACKCONFIG: 2&gt;</em><a class="headerlink" href="#keypirinha.Events.PACKCONFIG" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PACKCONFIG</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha.Events.PACKCONFIG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Package configuration has changed. Either because of a manual
 modification by the user, or because a change to an environment variable
 has impacted at least one value (in which case this flag is combined with
@@ -230,7 +233,7 @@ has impacted at least one value (in which case this flag is combined with
 
 <dl class="attribute">
 <dt id="keypirinha.Events.STARTMENU">
-<code class="descname">STARTMENU</code><em class="property"> = &lt;Events.STARTMENU: 8192&gt;</em><a class="headerlink" href="#keypirinha.Events.STARTMENU" title="Permalink to this definition">¶</a></dt>
+<code class="descname">STARTMENU</code><em class="property"> = 8192</em><a class="headerlink" href="#keypirinha.Events.STARTMENU" title="Permalink to this definition">¶</a></dt>
 <dd><p>The content of the Start Menu has changed (common and/or user&#8217;s).
 It can be because its structure has been modified (folders), or because
 some files/shortcuts have been added, modified, moved or removed.
@@ -241,7 +244,7 @@ flooding the plugins.</p>
 
 <dl class="attribute">
 <dt id="keypirinha.Events.STORAGEDEV">
-<code class="descname">STORAGEDEV</code><em class="property"> = &lt;Events.STORAGEDEV: 512&gt;</em><a class="headerlink" href="#keypirinha.Events.STORAGEDEV" title="Permalink to this definition">¶</a></dt>
+<code class="descname">STORAGEDEV</code><em class="property"> = 512</em><a class="headerlink" href="#keypirinha.Events.STORAGEDEV" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or several logical volume have been inserted, removed, connected or
 disconnected. This event can be related to a storage device, a media or a
 network volume.</p>
@@ -252,23 +255,23 @@ network volume.</p>
 <dl class="class">
 <dt id="keypirinha.ItemArgsHint">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">ItemArgsHint</code><a class="headerlink" href="#keypirinha.ItemArgsHint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.args_hint" title="keypirinha.CatalogItem.args_hint"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.args_hint()</span></code></a> property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>.</p>
 <dl class="attribute">
 <dt id="keypirinha.ItemArgsHint.ACCEPTED">
-<code class="descname">ACCEPTED</code><em class="property"> = &lt;ItemArgsHint.ACCEPTED: 1&gt;</em><a class="headerlink" href="#keypirinha.ItemArgsHint.ACCEPTED" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ACCEPTED</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha.ItemArgsHint.ACCEPTED" title="Permalink to this definition">¶</a></dt>
 <dd><p>The item object optionally accepts arguments</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemArgsHint.FORBIDDEN">
-<code class="descname">FORBIDDEN</code><em class="property"> = &lt;ItemArgsHint.FORBIDDEN: 0&gt;</em><a class="headerlink" href="#keypirinha.ItemArgsHint.FORBIDDEN" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FORBIDDEN</code><em class="property"> = 0</em><a class="headerlink" href="#keypirinha.ItemArgsHint.FORBIDDEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>The item object does not accept arguments</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemArgsHint.REQUIRED">
-<code class="descname">REQUIRED</code><em class="property"> = &lt;ItemArgsHint.REQUIRED: 2&gt;</em><a class="headerlink" href="#keypirinha.ItemArgsHint.REQUIRED" title="Permalink to this definition">¶</a></dt>
+<code class="descname">REQUIRED</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha.ItemArgsHint.REQUIRED" title="Permalink to this definition">¶</a></dt>
 <dd><p>The item object requires arguments</p>
 </dd></dl>
 
@@ -277,7 +280,7 @@ network volume.</p>
 <dl class="class">
 <dt id="keypirinha.ItemCategory">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">ItemCategory</code><a class="headerlink" href="#keypirinha.ItemCategory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.category" title="keypirinha.CatalogItem.category"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.category()</span></code></a> property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>.</p>
 <p>Item&#8217;s category ID reflects the content of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.target" title="keypirinha.CatalogItem.target"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.target()</span></code></a>
 (i.e. not <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.raw_args" title="keypirinha.CatalogItem.raw_args"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.raw_args()</span></code></a> or
@@ -306,14 +309,14 @@ with a different meaning.</p>
 </div>
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.CMDLINE">
-<code class="descname">CMDLINE</code><em class="property"> = &lt;ItemCategory.CMDLINE: 30&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.CMDLINE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CMDLINE</code><em class="property"> = 30</em><a class="headerlink" href="#keypirinha.ItemCategory.CMDLINE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is a command line to be executed, given as-is to the operating
 system</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.ERROR">
-<code class="descname">ERROR</code><em class="property"> = &lt;ItemCategory.ERROR: 1&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.ERROR" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ERROR</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha.ItemCategory.ERROR" title="Permalink to this definition">¶</a></dt>
 <dd><p>An &#8220;error&#8221; item that cannot be executed. It is destined to show a
 warning/error message in the results list where a specific result would
 normally be expected by the user. It will be accepted by the application
@@ -327,47 +330,47 @@ expression could not be evaluated.
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.EXPRESSION">
-<code class="descname">EXPRESSION</code><em class="property"> = &lt;ItemCategory.EXPRESSION: 50&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.EXPRESSION" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EXPRESSION</code><em class="property"> = 50</em><a class="headerlink" href="#keypirinha.ItemCategory.EXPRESSION" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Item is an expression that has to be evaluated (e.g.</em> &#8211; math, programming
 language, ...)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.FILE">
-<code class="descname">FILE</code><em class="property"> = &lt;ItemCategory.FILE: 20&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.FILE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FILE</code><em class="property"> = 20</em><a class="headerlink" href="#keypirinha.ItemCategory.FILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is a path to a file/dir/executable/...</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.KEYWORD">
-<code class="descname">KEYWORD</code><em class="property"> = &lt;ItemCategory.KEYWORD: 10&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.KEYWORD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">KEYWORD</code><em class="property"> = 10</em><a class="headerlink" href="#keypirinha.ItemCategory.KEYWORD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is a keyword that will be triggered by the application or a plugin
 (i.e.: an internal command)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.REFERENCE">
-<code class="descname">REFERENCE</code><em class="property"> = &lt;ItemCategory.REFERENCE: 60&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.REFERENCE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">REFERENCE</code><em class="property"> = 60</em><a class="headerlink" href="#keypirinha.ItemCategory.REFERENCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is a reference/id that can be used/interpreted only by the plugin
 that created the CatalogItem object</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.URL">
-<code class="descname">URL</code><em class="property"> = &lt;ItemCategory.URL: 40&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.URL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">URL</code><em class="property"> = 40</em><a class="headerlink" href="#keypirinha.ItemCategory.URL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Item is a url (http/ftp/mailto/...)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.USER_BASE">
-<code class="descname">USER_BASE</code><em class="property"> = &lt;ItemCategory.USER_BASE: 1000&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.USER_BASE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">USER_BASE</code><em class="property"> = 1000</em><a class="headerlink" href="#keypirinha.ItemCategory.USER_BASE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base category id for third-party plugins.
 Allowed range is [USER_BASE, USER_MAX].</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemCategory.USER_MAX">
-<code class="descname">USER_MAX</code><em class="property"> = &lt;ItemCategory.USER_MAX: 4294967294&gt;</em><a class="headerlink" href="#keypirinha.ItemCategory.USER_MAX" title="Permalink to this definition">¶</a></dt>
+<code class="descname">USER_MAX</code><em class="property"> = 4294967294</em><a class="headerlink" href="#keypirinha.ItemCategory.USER_MAX" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum category id for third-party plugins.
 Allowed range is [USER_BASE, USER_MAX].</p>
 </dd></dl>
@@ -377,23 +380,23 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dl class="class">
 <dt id="keypirinha.ItemHitHint">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">ItemHitHint</code><a class="headerlink" href="#keypirinha.ItemHitHint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem.hit_hint" title="keypirinha.CatalogItem.hit_hint"><code class="xref py py-meth docutils literal"><span class="pre">CatalogItem.hit_hint()</span></code></a> property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>.</p>
 <dl class="attribute">
 <dt id="keypirinha.ItemHitHint.IGNORE">
-<code class="descname">IGNORE</code><em class="property"> = &lt;ItemHitHint.IGNORE: 1&gt;</em><a class="headerlink" href="#keypirinha.ItemHitHint.IGNORE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IGNORE</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha.ItemHitHint.IGNORE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The item object will not be added to History</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemHitHint.KEEPALL">
-<code class="descname">KEEPALL</code><em class="property"> = &lt;ItemHitHint.KEEPALL: 0&gt;</em><a class="headerlink" href="#keypirinha.ItemHitHint.KEEPALL" title="Permalink to this definition">¶</a></dt>
+<code class="descname">KEEPALL</code><em class="property"> = 0</em><a class="headerlink" href="#keypirinha.ItemHitHint.KEEPALL" title="Permalink to this definition">¶</a></dt>
 <dd><p>The item object will be added to History, including its arguments, if any</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.ItemHitHint.NOARGS">
-<code class="descname">NOARGS</code><em class="property"> = &lt;ItemHitHint.NOARGS: 2&gt;</em><a class="headerlink" href="#keypirinha.ItemHitHint.NOARGS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NOARGS</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha.ItemHitHint.NOARGS" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <strong>initial</strong> item object selected by the user will be added to History
 (omitting its arguments, if any)</p>
 </dd></dl>
@@ -403,23 +406,23 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dl class="class">
 <dt id="keypirinha.Match">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Match</code><a class="headerlink" href="#keypirinha.Match" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>Match methods</p>
 <dl class="attribute">
 <dt id="keypirinha.Match.ANY">
-<code class="descname">ANY</code><em class="property"> = &lt;Match.ANY: 0&gt;</em><a class="headerlink" href="#keypirinha.Match.ANY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ANY</code><em class="property"> = 0</em><a class="headerlink" href="#keypirinha.Match.ANY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Match any item</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Match.DEFAULT">
-<code class="descname">DEFAULT</code><em class="property"> = &lt;Match.FUZZY: 1000&gt;</em><a class="headerlink" href="#keypirinha.Match.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DEFAULT</code><em class="property"> = 1000</em><a class="headerlink" href="#keypirinha.Match.DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Default behavior</em> &#8211; <code class="docutils literal"><span class="pre">FUZZY</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Match.FUZZY">
-<code class="descname">FUZZY</code><em class="property"> = &lt;Match.FUZZY: 1000&gt;</em><a class="headerlink" href="#keypirinha.Match.FUZZY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FUZZY</code><em class="property"> = 1000</em><a class="headerlink" href="#keypirinha.Match.FUZZY" title="Permalink to this definition">¶</a></dt>
 <dd><p>Match items against user&#8217;s search terms using a fuzzy algorithm</p>
 </dd></dl>
 
@@ -428,36 +431,36 @@ Allowed range is [USER_BASE, USER_MAX].</p>
 <dl class="class">
 <dt id="keypirinha.Sort">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Sort</code><a class="headerlink" href="#keypirinha.Sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.IntEnum" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>Sort methods</p>
 <dl class="attribute">
 <dt id="keypirinha.Sort.DEFAULT">
-<code class="descname">DEFAULT</code><em class="property"> = &lt;Sort.SCORE_DESC: 1000&gt;</em><a class="headerlink" href="#keypirinha.Sort.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DEFAULT</code><em class="property"> = 1000</em><a class="headerlink" href="#keypirinha.Sort.DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p><em>Default behavior</em> &#8211; <code class="docutils literal"><span class="pre">SCORE_DESC</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Sort.LABEL_ASC">
-<code class="descname">LABEL_ASC</code><em class="property"> = &lt;Sort.LABEL_ASC: 200&gt;</em><a class="headerlink" href="#keypirinha.Sort.LABEL_ASC" title="Permalink to this definition">¶</a></dt>
+<code class="descname">LABEL_ASC</code><em class="property"> = 200</em><a class="headerlink" href="#keypirinha.Sort.LABEL_ASC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sort results alphabetically by label (ascending)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Sort.NONE">
-<code class="descname">NONE</code><em class="property"> = &lt;Sort.NONE: 0&gt;</em><a class="headerlink" href="#keypirinha.Sort.NONE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NONE</code><em class="property"> = 0</em><a class="headerlink" href="#keypirinha.Sort.NONE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do not sort items</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Sort.SCORE_DESC">
-<code class="descname">SCORE_DESC</code><em class="property"> = &lt;Sort.SCORE_DESC: 1000&gt;</em><a class="headerlink" href="#keypirinha.Sort.SCORE_DESC" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SCORE_DESC</code><em class="property"> = 1000</em><a class="headerlink" href="#keypirinha.Sort.SCORE_DESC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sort results by descending score (for now, this sort method must be
 combined with <a class="reference internal" href="#keypirinha.Match.FUZZY" title="keypirinha.Match.FUZZY"><code class="xref py py-const docutils literal"><span class="pre">Match.FUZZY</span></code></a>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.Sort.TARGET_ASC">
-<code class="descname">TARGET_ASC</code><em class="property"> = &lt;Sort.TARGET_ASC: 100&gt;</em><a class="headerlink" href="#keypirinha.Sort.TARGET_ASC" title="Permalink to this definition">¶</a></dt>
+<code class="descname">TARGET_ASC</code><em class="property"> = 100</em><a class="headerlink" href="#keypirinha.Sort.TARGET_ASC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sort results alphabetically by target (ascending)</p>
 </dd></dl>
 
@@ -480,13 +483,13 @@ files.</p>
 <dl class="function">
 <dt id="keypirinha.delay">
 <code class="descclassname">keypirinha.</code><code class="descname">delay</code><span class="sig-paren">(</span><em>seconds</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.delay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Schedules a call to <em>func</em> in <em>seconds</em> seconds (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a>).</p>
+<dd><p>Schedules a call to <em>func</em> in <em>seconds</em> seconds (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a>).</p>
 <p><strong>TO BE IMPLEMENTED</strong></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; <em>seconds</em> value is invalid or <em>func</em> is not a callable.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; <em>seconds</em> value is invalid or <em>func</em> is not a callable.</td>
 </tr>
 </tbody>
 </table>
@@ -565,17 +568,17 @@ given package.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>sources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) &#8211; Can be a string in case of a single source or a list of
+<li><strong>sources</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) &#8211; Can be a string in case of a single source or a list of
 strings. This argument allows to specify one or several image files
 that are meant to represent the <strong>same</strong> icon, with different sizes.
 For example, you may want to specify a single <code class="docutils literal"><span class="pre">.ico</span></code> file that
 holds all the desired dimensions, or a list containing several
 <code class="docutils literal"><span class="pre">.png</span></code> files. See the Notes below for more info.</li>
-<li><strong>force_reload</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) &#8211; Force the icon to be reloaded. Raising this flag
+<li><strong>force_reload</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Force the icon to be reloaded. Raising this flag
 may impact user experience quite significantly because of bad
 performances. It is recommended to ensure icon sources really have
 been modified since the last time it has been loaded.</li>
-<li><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to which this icon will
+<li><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The name of the Package to which this icon will
 be attached. The lifetime of an icon handle is bound to the lifetime
 of its parent Package. If the Package gets unloaded or reloaded, its
 resources will be freed automatically and any handle pointing to
@@ -594,7 +597,7 @@ called explicitly if you plan to reload, override this icon.</p>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle">IconHandle</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#ValueError" title="(in Python v3.5)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; The specified <em>sources</em> could not be read or loaded.</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> &#8211; The specified <em>sources</em> could not be read or loaded.</p>
 </td>
 </tr>
 </tbody>
@@ -676,7 +679,7 @@ Examples:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) &#8211; The name of the Package to load/get the
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>package_full_name</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The name of the Package to load/get the
 settings from.
 This argument is optional (but recommended) because the application
 has the ability to match a calling thread with its source Package.
@@ -752,7 +755,7 @@ given package.</p>
 <dd><p>Return the <strong>main</strong> process ID of the application.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This function should be preferred over <a class="reference external" href="https://docs.python.org/3.5/library/os.html#os.getpid" title="(in Python v3.5)"><code class="xref py py-func docutils literal"><span class="pre">os.getpid()</span></code></a> if you want
+<p class="last">This function should be preferred over <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getpid" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">os.getpid()</span></code></a> if you want
 to get the PID of Keypirinha.
 Keypirinha&#8217;s architecture might change in the future and, for example,
 Python plugins may have a dedicated process, separated from
@@ -821,7 +824,7 @@ application to free its resources</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></td>
 </tr>
 </tbody>
 </table>
@@ -920,7 +923,7 @@ revision. Prefer <a class="reference internal" href="#keypirinha.version" title=
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.12.1',
+            VERSION:'2.13',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
