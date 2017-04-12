@@ -12,6 +12,9 @@ formatting**.
 .. image:: ../images/pack-calc.png
     :align: center
 
+.. image:: ../images/pack-calc-baseconv.png
+    :align: center
+
 
 Catalog Items
 =============

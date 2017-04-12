@@ -10,10 +10,15 @@ Introduction
 human readable and modifiable.
 
 By design, |project| does not offer any graphical interface to modify its
-settings. While, at first glance, it might seem like backward design choice for
+settings, neither does it alter your configuration files.
+
+While, at first glance, it might seem like backward design choice for
 a desktop application, it perfectly makes sense when you realize how powerful
-and flexible it can be (variables assignment, inplace replacement of environment
-variables anywhere, machine-specific configuration, ...).
+and flexible it can be:
+
+* variables assignment
+* use of system or environment variables anywhere
+* machine-specific and/or user-specific configuration
 
 Nevertheless, |project| offers a convenient way to open and edit its
 configuration files at runtime.

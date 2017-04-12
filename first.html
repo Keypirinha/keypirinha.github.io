@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.13
+                2.14
               </div>
             
           
@@ -114,15 +114,16 @@
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keyboard.html">8. Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">9. Customize your Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">10. Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packages.html">11. Packages Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">12. Extending Keypirinha (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">13. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">14. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">15. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">16. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">8. Theming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">9. Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">10. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">11. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">12. Packages Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">13. Extending Keypirinha (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">14. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">15. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">16. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">17. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -177,12 +178,11 @@ features by using your keyboard only. Keep that in mind!</p>
 <p>Keypirinha is a <em>resident</em> application, it directly goes to background when it is
 started. You can check application is running by looking for its icon in the
 system tray&#8217;s notification area. It is located next to the system clock on your
-desktop, which is usually located in the lower-right corner of your main
-monitor.</p>
+desktop, usually in the lower-right corner of your main monitor.</p>
 <img alt="|project|'s icon in the system's tray" class="align-center" src="_images/systray.png" />
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">This <code class="docutils literal"><span class="pre">k</span></code> icon also idicates any activity from the plugins (e.g.
+<p class="last">This <code class="docutils literal"><span class="pre">k</span></code> icon also indicates any activity from the plugins (e.g.
 cataloging, suggesting, executing, ...) by <strong>turning green</strong>. Color is
 restored to normal as soon as plugins have finished their jobs.</p>
 </div>
@@ -192,6 +192,10 @@ restored to normal as soon as plugins have finished their jobs.</p>
 <p>Once Keypirinha is running, press <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> (by default) to show the
 <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>...</p>
 <img alt="|project|'s main dialog" class="align-center" src="_images/wndrun.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Many users coming from Launchy change the default hotkey to <code class="kbd docutils literal"><span class="pre">Alt+Space</span></code></p>
+</div>
 </div>
 <div class="section" id="first-search">
 <h2>4.3. First Search<a class="headerlink" href="#first-search" title="Permalink to this headline">¶</a></h2>
@@ -204,8 +208,8 @@ up in the results list as long as <em>Firefox</em> is installed on your machine.
 Keypirinha will then automatically go back to background...</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Search is case-insensitive in Keypirinha, thus the <code class="docutils literal"><span class="pre">FFOX</span></code> search term is
-equivalent to <code class="docutils literal"><span class="pre">ffox</span></code> or <code class="docutils literal"><span class="pre">FfoX</span></code>.</p>
+<p class="last">Search is case-insensitive in Keypirinha, the search term <code class="docutils literal"><span class="pre">FFOX</span></code> is
+equivalent to <code class="docutils literal"><span class="pre">ffox</span></code> or <code class="docutils literal"><span class="pre">FfoX</span></code></p>
 </div>
 </div>
 <div class="section" id="second-search">
@@ -232,7 +236,7 @@ displayed on that screenshot.</p>
 <p>Still with our example, if you happen to launch your <em>Firefox</em> browser a lot,
 you probably want to keep the number of keystrokes that are required to search
 and launch it to a minimum.</p>
-<p>Keypirinha offers the ability to <strong>implicitely associate a keyword with a
+<p>Keypirinha offers the ability to <strong>implicitly associate a keyword with a
 particular item</strong>.</p>
 <p>In the last section, we typed the search term <code class="docutils literal"><span class="pre">F</span></code> (or <code class="docutils literal"><span class="pre">f</span></code>, search is case-
 insensitive), before <strong>executing</strong> <em>Firefox</em>. Keypirinha recorded that
@@ -247,7 +251,7 @@ item.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">You may want to <em>associate</em> <code class="docutils literal"><span class="pre">f</span></code> with an other item later. In that case,
 just type <code class="docutils literal"><span class="pre">f</span></code> and select this other item before <strong>executing</strong> it.
-Keypirinha will change the association implicitely.</p>
+Keypirinha will change the association implicitly.</p>
 </div>
 </div>
 <div class="section" id="specify-arguments">
@@ -264,10 +268,10 @@ line option so let&#8217;s try typing this one and execute our item.</p>
 <h2>4.7. Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
 <p>Items may have several actions associated to them, or their type.</p>
 <p>Search and select the <em>Firefox</em> item again.</p>
-<img alt="_images/wndrun-actions-available.png" class="align-center" src="_images/wndrun-actions-available.png" />
-<p>At the bottom of the LaunchBox, the status bar indicates that <code class="docutils literal"><span class="pre">8</span> <span class="pre">actions</span></code> are
-available for this item. Hit the <code class="kbd docutils literal"><span class="pre">Ctrl+Enter</span></code> to visualize these actions
-(or the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key until you reach the actions list).</p>
+<img alt="_images/wndrun-search2.png" class="align-center" src="_images/wndrun-search2.png" />
+<p>By default, the number of actions available for the selected item are displayed
+at the right side: <code class="docutils literal"><span class="pre">8</span> <span class="pre">actions</span></code>. Hit the <code class="kbd docutils literal"><span class="pre">Ctrl+Enter</span></code> to visualize these
+actions (or the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key until you reach the actions list).</p>
 <p>Because this particular <em>Firefox</em> item is a file, even a <code class="file docutils literal"><span class="pre">*.lnk</span></code> file in
 our example, the following actions are made available:</p>
 <img alt="_images/wndrun-actions.png" class="align-center" src="_images/wndrun-actions.png" />
@@ -318,9 +322,9 @@ itself</li>
 </ul>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">As in Windows Explorer, you can drag out <code class="docutils literal"><span class="pre">FILE</span></code> items using either the
+<p class="last">Like in Windows Explorer, you can drag out <code class="docutils literal"><span class="pre">FILE</span></code> items using either the
 left mouse button to have a regular behavior, or the right mouse button to
-popup a contextual menu at drop destination that allows you to choose the
+invoke a contextual menu at drop destination that allows you to choose the
 desired drop effect.</p>
 </div>
 </div>
@@ -409,7 +413,7 @@ needs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.13',
+            VERSION:'2.14',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

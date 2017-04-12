@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>11. Packages Structure &mdash; Keypirinha</title>
+  <title>12. Packages Structure &mdash; Keypirinha</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="12. Extending Keypirinha (API)" href="api.html"/>
-        <link rel="prev" title="10. Architecture" href="architecture.html"/> 
+        <link rel="next" title="13. Extending Keypirinha (API)" href="api.html"/>
+        <link rel="prev" title="11. Architecture" href="architecture.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.13
+                2.14
               </div>
             
           
@@ -97,25 +97,26 @@
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keyboard.html">8. Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">9. Customize your Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">10. Architecture</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Packages Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#packages-repositories">11.1. Packages Repositories</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#live-packages">11.1.1. Live Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installed-packages-downloaded">11.1.2. Installed Packages (Downloaded)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#official-packages-shipped">11.1.3. Official Packages (Shipped)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#internal-package">11.1.4. Internal Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">8. Theming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">9. Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">10. Customize your Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">11. Architecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Packages Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#packages-repositories">12.1. Packages Repositories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#live-packages">12.1.1. Live Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installed-packages-downloaded">12.1.2. Installed Packages (Downloaded)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#official-packages-shipped">12.1.3. Official Packages (Shipped)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#internal-package">12.1.4. Internal Package</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#package-naming">11.2. Package Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#package-naming">12.2. Package Naming</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">12. Extending Keypirinha (API)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">13. Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">14. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">15. Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="credits.html">16. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">13. Extending Keypirinha (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">14. Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">15. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">16. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">17. Credits</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
@@ -149,7 +150,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>11. Packages Structure</li>
+    <li>12. Packages Structure</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -162,7 +163,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="packages-structure">
-<h1>11. Packages Structure<a class="headerlink" href="#packages-structure" title="Permalink to this headline">¶</a></h1>
+<h1>12. Packages Structure<a class="headerlink" href="#packages-structure" title="Permalink to this headline">¶</a></h1>
 <p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a> easier to redistribute, Keypirinha has been introduced
 the concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
 <p>In Keypirinha, a package is a container (e.g.: a directory; or a Zip archive with
@@ -170,7 +171,7 @@ the <code class="file docutils literal"><span class="pre">.keypirinha-package</s
 designed to work together. It also contains the configuration files and
 dependencies, if any.</p>
 <div class="section" id="packages-repositories">
-<h2>11.1. Packages Repositories<a class="headerlink" href="#packages-repositories" title="Permalink to this headline">¶</a></h2>
+<h2>12.1. Packages Repositories<a class="headerlink" href="#packages-repositories" title="Permalink to this headline">¶</a></h2>
 <p>There are four <a class="reference internal" href="glossary.html#term-repositories"><span class="xref std std-term">repositories</span></a> of packages. <strong>In order of descending
 priority:</strong></p>
 <ul class="simple">
@@ -194,7 +195,7 @@ if two files with the same name belong to the same Package, the file located
 in the Repository with the highest priority will override the others.</p>
 </div>
 <div class="section" id="live-packages">
-<span id="pack-live"></span><h3>11.1.1. Live Packages<a class="headerlink" href="#live-packages" title="Permalink to this headline">¶</a></h3>
+<span id="pack-live"></span><h3>12.1.1. Live Packages<a class="headerlink" href="#live-packages" title="Permalink to this headline">¶</a></h3>
 <p>Live packages, or Loose packages, are individual directories containing loose
 files. They are located under the <code class="file docutils literal"><span class="pre">Packages</span></code> directory in user&#8217;s folder.</p>
 <p>This is the place to start if you wish to create your own package or to modify
@@ -214,21 +215,21 @@ is modified, the application will broadcast the <code class="docutils literal"><
 package instead of fully reloading it.</p>
 </div>
 <div class="section" id="installed-packages-downloaded">
-<span id="pack-installed"></span><h3>11.1.2. Installed Packages (Downloaded)<a class="headerlink" href="#installed-packages-downloaded" title="Permalink to this headline">¶</a></h3>
+<span id="pack-installed"></span><h3>12.1.2. Installed Packages (Downloaded)<a class="headerlink" href="#installed-packages-downloaded" title="Permalink to this headline">¶</a></h3>
 <p>Packages are meant to be easily redistributable and installable. A dedicated
 directory called <code class="file docutils literal"><span class="pre">InstalledPackages</span></code> under user&#8217;s directory is available
 for this purpose.</p>
 <p>Package files are Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension.</p>
 </div>
 <div class="section" id="official-packages-shipped">
-<span id="pack-official"></span><h3>11.1.3. Official Packages (Shipped)<a class="headerlink" href="#official-packages-shipped" title="Permalink to this headline">¶</a></h3>
+<span id="pack-official"></span><h3>12.1.3. Official Packages (Shipped)<a class="headerlink" href="#official-packages-shipped" title="Permalink to this headline">¶</a></h3>
 <p>The Official packages are shipped with every Keypirinha&#8216;s distribution. They are
 individually packed in a Zip archive with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
 extension and are stored in the <code class="file docutils literal"><span class="pre">default/Packages</span></code> directory directly
 located under Keypirinha&#8216;s installation directory.</p>
 </div>
 <div class="section" id="internal-package">
-<span id="pack-internal"></span><h3>11.1.4. Internal Package<a class="headerlink" href="#internal-package" title="Permalink to this headline">¶</a></h3>
+<span id="pack-internal"></span><h3>12.1.4. Internal Package<a class="headerlink" href="#internal-package" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">Internal</span></code> is actually both a type of package and the name of the package
 itself.</p>
 <p>The <code class="docutils literal"><span class="pre">Internal</span></code> package is implemented in the application itself and its
@@ -238,7 +239,7 @@ behavior is unalterable. Any other type of <a class="reference internal" href="g
 </div>
 </div>
 <div class="section" id="package-naming">
-<span id="pack-naming"></span><h2>11.2. Package Naming<a class="headerlink" href="#package-naming" title="Permalink to this headline">¶</a></h2>
+<span id="pack-naming"></span><h2>12.2. Package Naming<a class="headerlink" href="#package-naming" title="Permalink to this headline">¶</a></h2>
 <p>Rules for package naming:</p>
 <ul>
 <li><p class="first">Name can contain alphanumeric characters (case insensitive) and the following
@@ -314,10 +315,10 @@ accordingly. Renaming can be done at runtime in this case.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api.html" class="btn btn-neutral float-right" title="12. Extending Keypirinha (API)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api.html" class="btn btn-neutral float-right" title="13. Extending Keypirinha (API)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="architecture.html" class="btn btn-neutral" title="10. Architecture" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="architecture.html" class="btn btn-neutral" title="11. Architecture" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -347,7 +348,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.13',
+            VERSION:'2.14',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

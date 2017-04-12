@@ -12,15 +12,14 @@ Start |project|
 |project| is a *resident* application, it directly goes to background when it is
 started. You can check application is running by looking for its icon in the
 system tray's notification area. It is located next to the system clock on your
-desktop, which is usually located in the lower-right corner of your main
-monitor.
+desktop, usually in the lower-right corner of your main monitor.
 
 .. image:: images/systray.png
     :alt: |project|'s icon in the system's tray
     :align: center
 
 .. tip::
-    This ``k`` icon also idicates any activity from the plugins (e.g.
+    This ``k`` icon also indicates any activity from the plugins (e.g.
     cataloging, suggesting, executing, ...) by **turning green**. Color is
     restored to normal as soon as plugins have finished their jobs.
 
@@ -34,6 +33,9 @@ Once |project| is running, press :kbd:`Ctrl+Win+K` (by default) to show the
 .. image:: images/wndrun.png
     :alt: |project|'s main dialog
     :align: center
+
+.. tip::
+    Many users coming from Launchy change the default hotkey to :kbd:`Alt+Space`
 
 
 First Search
@@ -52,8 +54,8 @@ Once the desired item is selected (you can use the :kbd:`Down`, :kbd:`Up`,
 |project| will then automatically go back to background...
 
 .. note::
-    Search is case-insensitive in |project|, thus the ``FFOX`` search term is
-    equivalent to ``ffox`` or ``FfoX``.
+    Search is case-insensitive in |project|, the search term ``FFOX`` is
+    equivalent to ``ffox`` or ``FfoX``
 
 
 Second Search
@@ -92,7 +94,7 @@ Still with our example, if you happen to launch your *Firefox* browser a lot,
 you probably want to keep the number of keystrokes that are required to search
 and launch it to a minimum.
 
-|project| offers the ability to **implicitely associate a keyword with a
+|project| offers the ability to **implicitly associate a keyword with a
 particular item**.
 
 In the last section, we typed the search term ``F`` (or ``f``, search is case-
@@ -107,7 +109,7 @@ will be pushed up to the top of the results list.
 .. note::
     You may want to *associate* ``f`` with an other item later. In that case,
     just type ``f`` and select this other item before **executing** it.
-    |project| will change the association implicitely.
+    |project| will change the association implicitly.
 
 
 Specify arguments
@@ -133,12 +135,12 @@ Items may have several actions associated to them, or their type.
 
 Search and select the *Firefox* item again.
 
-.. image:: images/wndrun-actions-available.png
+.. image:: images/wndrun-search2.png
     :align: center
 
-At the bottom of the LaunchBox, the status bar indicates that ``8 actions`` are
-available for this item. Hit the :kbd:`Ctrl+Enter` to visualize these actions
-(or the :kbd:`Tab` key until you reach the actions list).
+By default, the number of actions available for the selected item are displayed
+at the right side: ``8 actions``. Hit the :kbd:`Ctrl+Enter` to visualize these
+actions (or the :kbd:`Tab` key until you reach the actions list).
 
 Because this particular *Firefox* item is a file, even a :file:`*.lnk` file in
 our example, the following actions are made available:
@@ -204,9 +206,9 @@ drop depends on the type of item and the destination application:
     itself
 
 .. tip::
-    As in Windows Explorer, you can drag out ``FILE`` items using either the
+    Like in Windows Explorer, you can drag out ``FILE`` items using either the
     left mouse button to have a regular behavior, or the right mouse button to
-    popup a contextual menu at drop destination that allows you to choose the
+    invoke a contextual menu at drop destination that allows you to choose the
     desired drop effect.
 
 

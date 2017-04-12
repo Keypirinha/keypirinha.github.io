@@ -2,10 +2,11 @@
 |project|
 =========
 
+.. image:: images/wndrun-jumbo.png
+    :align: center
+
 A fast launcher for keyboard ninjas on Windows
 
-.. image:: images/wndrun-search2.png
-    :align: center
 
 * :doc:`download` |version| |br|
 * Read the :doc:`first` chapter
@@ -42,6 +43,7 @@ Contents
     shipped-packages
     contributions
     configuration
+    theming
     keyboard
     custom-catalog
     architecture

@@ -1,0 +1,127 @@
+=======
+Theming
+=======
+
+Since v2.14, |project| GUI can be customized via the ``theme`` setting. Here are
+the screenshots of some sample themes available by default.
+
+Check out the default configuration file for (search for the
+``[theme/...]`` sections).
+
+.. tip::
+    You can change the ``theme`` setting at runtime to visualize the new theme
+    while Keypirinha's LaunchBox is displayed
+
+
+Layout Themes
+=============
+
+TinyLayout
+----------
+
+.. image:: images/theme-layout-tiny.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = TinyLayout
+
+
+MediumLayout
+------------
+
+.. image:: images/theme-layout-medium.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout
+
+
+JumboLayout
+-----------
+
+.. image:: images/theme-layout-jumbo.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = JumboLayout
+
+
+Classic Theme (pre v2.14)
+-------------------------
+
+.. image:: images/theme-old.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = AnthraciteFull
+
+
+Color Themes
+============
+
+Default Colors
+--------------
+
+.. image:: images/theme-colors-default.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout, SolarizedLightColors
+
+
+SolarizedLightColors
+--------------------
+
+.. image:: images/theme-colors-solarized-light.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout, SolarizedLightColors
+
+
+SolarizedDarkColors
+-------------------
+
+.. image:: images/theme-colors-solarized-dark.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout, SolarizedDarkColors
+
+
+ElectricStateColors
+-------------------
+
+.. image:: images/theme-colors-electricstate.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout, ElectricStateColors
+
+
+PrincessColors
+--------------
+
+.. image:: images/theme-colors-princess.png
+    :align: center
+
+.. code-block:: ini
+
+    [gui]
+    theme = MediumLayout, PrincessColors
