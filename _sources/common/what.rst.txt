@@ -6,7 +6,7 @@
   bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, ...
 * Launch a search on any configured website or online dictionary
 * Language translations on-the-fly
-* Evaluate a mathematical expression
+* Evaluate mathematical expressions
 * Convert numbers
 * Search your environment variables
 * Launch a copied URL directly (``http``, ``mailto``, ``skype``, ...)
@@ -16,6 +16,7 @@
 * Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
 * Machine-specific and/or user-specific configuration
+* More details on :doc:`shipped-packages`...
 
 **Properties:**
 
@@ -23,7 +24,8 @@
 * Fairly small memory footprint
 * Battery friendly
 * File-driven configuration
-* An embedded Python3_ API to extend |project|'s features via :term:`plugins`
+* Themable GUI (colors, fonts, toggling and positioning of elements)
+* Written in C++, exposes a Python3_ API for its :term:`plugins`
 * Freeware, no nag screen, no time limit, no ads
 
 You can think of |project| as an alternative to *Launchy* and a cousin of

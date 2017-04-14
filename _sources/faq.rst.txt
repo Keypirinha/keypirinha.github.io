@@ -85,11 +85,11 @@ as an encouragement for future developments.
 
 There are several ways to support |project|:
 
-* Make a donation |br|
-  |donate_button|
-
 * *Like* it, *Star* it, spread nice words about it |br|
   |social_buttons|
+
+* Make a donation |br|
+  |donate_button|
 
 * :ref:`contribute-doc`
 
@@ -106,13 +106,11 @@ How my donation will be used?
 All donations will be used for the project.
 
 Small donations will probably be spent on coffee to cheer up the developer in
-his cave. Bigger amounts will be spared for:
+his cave. Bigger amounts will be spared for (in order of importance):
 
-* a Windows 10 license, which would help in the development of some requested
-  features
-* the domain name
 * the hosting of the dynamic website and the packages redistribution platform
   that is planned
+* the domain name
 * a digital certificate for signing |project|'s binaries so users can ensure
   the ones they installed can be trusted to be issued by the original author
 * some hardware used in the development of the project
