@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                2.14.1
+                2.15
               </div>
             
           
@@ -209,13 +209,13 @@ practice to call it:</p>
 <code class="descname">on_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the first method called by the application after a plugin has
 been instanciated.</p>
-<p>It is good for:</p>
+<p>What should be done in this method:</p>
 <ul class="simple">
-<li>Reading configuration file(s)</li>
-<li>Reading state data from package&#8217;s cache, if any, that may be needed
+<li>Read configuration file(s)</li>
+<li>Read state data from package&#8217;s cache, if any, that may be needed
 elsewhere in this plugin</li>
-<li>Doing any heavy, one-time, initialization (i.e. instead of doing it
-from <code class="docutils literal"><span class="pre">__init__</span></code> or even <a class="reference internal" href="#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">on_catalog()</span></code></a> for example)</li>
+<li>Do any heavy, one-time, initialization (i.e. instead of doing it from
+<code class="docutils literal"><span class="pre">__init__</span></code> or even <a class="reference internal" href="#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">on_catalog()</span></code></a> for example)</li>
 </ul>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -249,7 +249,7 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 <dl class="method">
 <dt id="keypirinha.Plugin.on_suggest">
 <code class="descname">on_suggest</code><span class="sig-paren">(</span><em>user_input</em>, <em>items_chain=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the user is typing her search terms <em>or</em> item&#8217;s arguments.</p>
+<dd><p>Called when the user is typing their search terms <em>or</em> item&#8217;s arguments.</p>
 <p>When no item has been selected yet by the user, the <em>items_chain</em> list
 is empty and <em>user_input</em> is a string containing the initial search
 terms. In that case, this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been broadcasted to
@@ -259,12 +259,12 @@ and <em>items_chain</em> is a non-empty list that contains one or more
 <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object(s) that belong to this plugin and
 <em>user_input</em> is a string typed by the user that is meant to be the
 arguments of the lastly selected item (i.e. <code class="docutils literal"><span class="pre">items_chain[-1]</span></code>).</p>
-<p>While in that case, <em>items_chain</em> contains the full history of the items
+<p>More precisely, <em>items_chain</em> contains the full history of the items
 that have been selected by the user during this search session, plugins
-usually only need to deal with the first and/or the last item(s) in the
-<em>items_chain</em> list (i.e. <code class="docutils literal"><span class="pre">items_chain[0]</span></code> and/or <code class="docutils literal"><span class="pre">items_chain[-1]</span></code>;
+usually only need to deal with the last and/or the first item(s) in the
+<em>items_chain</em> list (i.e. <code class="docutils literal"><span class="pre">items_chain[-1]</span></code> and/or <code class="docutils literal"><span class="pre">items_chain[0]</span></code>;
 which may be equal).</p>
-<p>If the plugin implements this method, it is expected to setup its
+<p>If the plugin implements this method, it is expected to set its
 <strong>suggestions</strong> catalog by using <a class="reference internal" href="#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">set_suggestions()</span></code></a>. The list of
 suggestions may be empty.</p>
 <div class="admonition seealso">
@@ -282,7 +282,7 @@ optionally using the passed action.</p>
 execute, belonging to this plugin.</p>
 <p><em>catalog_action</em> is either <code class="docutils literal"><span class="pre">None</span></code> or a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a>
 object; it might not have been created by this plugin though, in which
-case <a class="reference internal" href="module-util.html#keypirinha_util.execute_default_action" title="keypirinha_util.execute_default_action"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.execute_default_action()</span></code></a> may be of
+case <code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.execute_default_action()</span></code> may be of
 interest.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -947,7 +947,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.14.1',
+            VERSION:'2.15',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

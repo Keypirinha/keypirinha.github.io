@@ -42,9 +42,12 @@ LaunchBox
 +------------------------------------+-----------------------------------------+
 | :kbd:`Esc`                         | * Reset your current search (once)      |
 |                                    | * Hide the LaunchBox (twice)            |
+|                                    |                                         |
+|                                    | Also, see the ``escape_always_closes``  |
+|                                    | setting.                                |
 +------------------------------------+-----------------------------------------+
 | * :kbd:`Shift+Esc`                 | Hide the LaunchBox                      |
-| * :kbd:`Alt+F4`                    | Hide the LaunchBox                      |
+| * :kbd:`Alt+F4`                    |                                         |
 +------------------------------------+-----------------------------------------+
 | :kbd:`Ctrl+Del`                    | Erase a single item from history        |
 +------------------------------------+-----------------------------------------+

@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.14.1
+                2.15
               </div>
             
           
@@ -98,19 +98,8 @@
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">8. Theming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#layout-themes">8.1. Layout Themes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#jumbolayout">8.1.1. JumboLayout</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mediumlayout">8.1.2. MediumLayout</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tinylayout">8.1.3. TinyLayout</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#classic-theme-pre-v2-14">8.1.4. Classic Theme (pre v2.14)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#color-themes">8.2. Color Themes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#solarizedlightcolors">8.2.1. SolarizedLightColors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#solarizeddarkcolors">8.2.2. SolarizedDarkColors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#electricstatecolors">8.2.3. ElectricStateColors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#princesscolors">8.2.4. PrincessColors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#default-colors">8.2.5. Default Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-themes">8.1. Third-Party Themes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clearlight">8.1.1. ClearLight</a></li>
 </ul>
 </li>
 </ul>
@@ -171,91 +160,76 @@
             
   <div class="section" id="theming">
 <h1>8. Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h1>
-<p>Since v2.14, Keypirinha GUI can be customized via the <code class="docutils literal"><span class="pre">theme</span></code> setting. Here are
-the screenshots of some sample themes available by default.</p>
-<p>Check out the default configuration file for (search for the
-<code class="docutils literal"><span class="pre">[theme/...]</span></code> sections).</p>
+<p>Since v2.14, Keypirinha GUI can be customized via the <code class="docutils literal"><span class="pre">theme</span></code> setting.</p>
+<p>Below are some possible combinations of the themes that are available by
+default. All those themes are defined in Keypirinha&#8216;s default configuration file,
+search for the <code class="docutils literal"><span class="pre">[theme/...]</span></code> sections nearby the end of the file.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">You can change the <code class="docutils literal"><span class="pre">theme</span></code> setting at runtime to visualize the new theme
 while Keypirinha&#8217;s LaunchBox is displayed</p>
 </div>
-<div class="section" id="layout-themes">
-<h2>8.1. Layout Themes<a class="headerlink" href="#layout-themes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="jumbolayout">
-<h3>8.1.1. JumboLayout<a class="headerlink" href="#jumbolayout" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-layout-jumbo.png" class="align-center" src="_images/theme-layout-jumbo.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">JumboLayout</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="mediumlayout">
-<h3>8.1.2. MediumLayout<a class="headerlink" href="#mediumlayout" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-layout-medium.png" class="align-center" src="_images/theme-layout-medium.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="tinylayout">
-<h3>8.1.3. TinyLayout<a class="headerlink" href="#tinylayout" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-layout-tiny.png" class="align-center" src="_images/theme-layout-tiny.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">TinyLayout</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="classic-theme-pre-v2-14">
-<h3>8.1.4. Classic Theme (pre v2.14)<a class="headerlink" href="#classic-theme-pre-v2-14" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-old.png" class="align-center" src="_images/theme-old.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">AnthraciteFull</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="color-themes">
-<h2>8.2. Color Themes<a class="headerlink" href="#color-themes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="solarizedlightcolors">
-<h3>8.2.1. SolarizedLightColors<a class="headerlink" href="#solarizedlightcolors" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-colors-solarized-light.png" class="align-center" src="_images/theme-colors-solarized-light.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedLightColors</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="solarizeddarkcolors">
-<h3>8.2.2. SolarizedDarkColors<a class="headerlink" href="#solarizeddarkcolors" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-colors-solarized-dark.png" class="align-center" src="_images/theme-colors-solarized-dark.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedDarkColors</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+<img alt="_images/theme-colors-purplenight.png" class="align-center" src="_images/theme-colors-purplenight.png" />
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PurpleNightColors</span>
+</pre></div>
 </div>
-<div class="section" id="electricstatecolors">
-<h3>8.2.3. ElectricStateColors<a class="headerlink" href="#electricstatecolors" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-colors-electricstate.png" class="align-center" src="_images/theme-colors-electricstate.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, ElectricStateColors</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="princesscolors">
-<h3>8.2.4. PrincessColors<a class="headerlink" href="#princesscolors" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
 <img alt="_images/theme-colors-princess.png" class="align-center" src="_images/theme-colors-princess.png" />
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PrincessColors</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="default-colors">
-<h3>8.2.5. Default Colors<a class="headerlink" href="#default-colors" title="Permalink to this headline">¶</a></h3>
-<img alt="_images/theme-colors-default.png" class="align-center" src="_images/theme-colors-default.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout</span>
-</pre></div>
-</div>
+<div class="section" id="third-party-themes">
+<h2>8.1. Third-Party Themes<a class="headerlink" href="#third-party-themes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clearlight">
+<h3>8.1.1. ClearLight<a class="headerlink" href="#clearlight" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/bege10">&#64;bege10</a> kindly shared their
+<a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/180">ClearLight theme</a>.</p>
+<img alt="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" class="align-center" src="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" />
 </div>
 </div>
 </div>
@@ -300,7 +274,7 @@ while Keypirinha&#8217;s LaunchBox is displayed</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.14.1',
+            VERSION:'2.15',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

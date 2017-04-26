@@ -11,13 +11,6 @@ Check out the :doc:`contribute` chapter to know how you can contribute.
 Packages
 ========
 
-DictLeo
--------
-
-`@psistorm`_'s package to query the german
-`Leo Dictionary <http://dict.leo.org/>`_ online. |br|
-Source: `<https://github.com/psistorm/keypirinha-dictleo>`_
-
 Ditto
 -----
 

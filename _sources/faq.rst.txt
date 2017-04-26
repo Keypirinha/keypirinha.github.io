@@ -103,20 +103,18 @@ There are several ways to support |project|:
 How my donation will be used?
 =============================
 
-All donations will be used for the project.
-
-Small donations will probably be spent on coffee to cheer up the developer in
-his cave. Bigger amounts will be spared for (in order of importance):
+Small donations (10 euros) will probably be spent on coffee to cheer up the
+developer in his cave. Higher amounts will be spared for:
 
 * the hosting of the dynamic website and the packages redistribution platform
   that is planned
 * the domain name
-* a digital certificate for signing |project|'s binaries so users can ensure
-  the ones they installed can be trusted to be issued by the original author
-* some hardware used in the development of the project
+* a digital certificate for signing |project|'s binaries
+* some software/hardware used directly in the development of the project
 
-If you have further questions or special enquiries, please PM
-`@polyvertex <https://gitter.im/polyvertex>`_
+If you wish your donation to go towards something specific, or if you have
+questions or special enquiries, PM `@polyvertex <https://gitter.im/polyvertex>`_
+first.
 
 
 Where does this weird name come from?!

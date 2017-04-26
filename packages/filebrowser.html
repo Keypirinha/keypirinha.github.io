@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                2.14.1
+                2.15
               </div>
             
           
@@ -194,7 +194,9 @@ tries to match your initial search term with specific patterns:</p>
 <li><code class="docutils literal"><span class="pre">/</span></code> or <code class="docutils literal"><span class="pre">\</span></code> will list the drives that are mounted (e.g. <code class="docutils literal"><span class="pre">C:\</span></code>, ...)</li>
 <li><code class="docutils literal"><span class="pre">C:</span></code>, <code class="docutils literal"><span class="pre">D:</span></code> or <code class="docutils literal"><span class="pre">X:</span></code> (case insensitive) will start browsing the drive
 associated with the given letter</li>
-<li>An absolute path like <code class="docutils literal"><span class="pre">c:\windows</span></code> or <code class="docutils literal"><span class="pre">D:\My</span> <span class="pre">Dir\AnyFile.txt</span></code></li>
+<li>An absolute path like <code class="docutils literal"><span class="pre">c:\windows</span></code>, <code class="docutils literal"><span class="pre">D:\My</span> <span class="pre">Dir\AnyFile.txt</span></code></li>
+<li>Environment variables are automatically expanded like in
+<code class="docutils literal"><span class="pre">%USERPROFILE%\Documents</span></code></li>
 <li>The <code class="docutils literal"><span class="pre">~</span></code> (tilde) character (<strong>configurable</strong>) to access to your &#8220;home&#8221;
 directory(ies). Check the &#8220;Home feature&#8221; section below.</li>
 </ul>
@@ -281,7 +283,7 @@ its configuration file.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.14.1',
+            VERSION:'2.15',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

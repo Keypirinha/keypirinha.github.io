@@ -16,7 +16,9 @@ tries to match your initial search term with specific patterns:
 * ``/`` or ``\`` will list the drives that are mounted (e.g. ``C:\``, ...)
 * ``C:``, ``D:`` or ``X:`` (case insensitive) will start browsing the drive
   associated with the given letter
-* An absolute path like ``c:\windows`` or ``D:\My Dir\AnyFile.txt``
+* An absolute path like ``c:\windows``, ``D:\My Dir\AnyFile.txt``
+* Environment variables are automatically expanded like in
+  ``%USERPROFILE%\Documents``
 * The ``~`` (tilde) character (**configurable**) to access to your "home"
   directory(ies). Check the "Home feature" section below.
 

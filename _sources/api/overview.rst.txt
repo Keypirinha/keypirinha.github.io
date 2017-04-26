@@ -108,19 +108,20 @@ event, or to request them to perform a specific task.
 
 Once a plugin is loaded, its :py:meth:`keypirinha.Plugin.on_start` method is
 called, shortly followed by a call to the
-:py:meth:`keypirinha.Plugin.on_catalog` method.
+:py:meth:`keypirinha.Plugin.on_catalog` method (this behavior may change in the
+future).
 
-When the user starts typing its search and each time her search terms have
+When the user starts typing their search and each time search terms have
 changed, the :py:meth:`keypirinha.Plugin.on_suggest` method is called. There is
-a subtlety here. This message is broadcasted when the user hasn't selected an
-item yet. But once she did, the message will be sent only to the plugin that
-created the selected item.
+a subtlety here: if no item has been selected yet (i.e. :kb:`Tab` key has not
+been pressed yet), the message is *broadcasted* to every loaded package.
+Otherwise, it is sent only to the parent *plugin*.
 
 When the user wants to execute the selected item, the
 :py:meth:`keypirinha.Plugin.on_execute` method of the appropriate plugin is
 called and it is up to it to actually execute the passed item.
 
-These are the main messages that a plugin developer normally wants to implement.
+These are the main messages that a plugin developer usually wants to implement.
 Other messages are mainly notifications that helps plugin to be up-to-date with
 user's settings and environment.
 
@@ -131,23 +132,20 @@ Getting started
 Plugin development should be done in the :ref:`pack-live` directory.
 
 The best way to get your hands in the dirt is to use the ``Test`` package as a
-new package skeleton, then take a look at the source code of the official
-plugins.
+new package skeleton, then have a look at the source code of the official
+packages.
 
 Official packages are all located in the
 :file:`default\\Packages\\*.keypirinha-package`.
 
 In particular:
 
-* The ``Apps`` package shows how to use |project|'s API to scan directories and
+* the ``Apps`` package shows how to use |project|'s API to scan directories and
   files.
-
-* The ``TaskSwitcher`` and ``Winamp`` packages interact with the Win32 API via
+* the ``TaskSwitcher`` and ``Winamp`` packages interact with the Win32 API via
   the :py:mod:`ctypes` Python standard module.
-
-* The ``ControlPanel`` and ``PuTTY`` packages show how to dig into system's
+* the ``ControlPanel`` and ``PuTTY`` packages show how to dig into system's
   Registry using the :py:mod:`winreg` Python standard module.
-
-* The ``Calc`` package imports a third-party bundled Python module.
-
-* The ``URL`` package extract an embedded resource file and parse it.
+* the ``Calc`` package imports a third-party bundled Python module.
+* the ``GoogleTranslate`` package does online HTTP requests to a web-service.
+* the ``URL`` package extract an embedded resource file and parse it.

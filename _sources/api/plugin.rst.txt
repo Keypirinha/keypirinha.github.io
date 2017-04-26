@@ -19,13 +19,13 @@ Plugin class
         This is the first method called by the application after a plugin has
         been instanciated.
 
-        It is good for:
+        What should be done in this method:
 
-        * Reading configuration file(s)
-        * Reading state data from package's cache, if any, that may be needed
+        * Read configuration file(s)
+        * Read state data from package's cache, if any, that may be needed
           elsewhere in this plugin
-        * Doing any heavy, one-time, initialization (i.e. instead of doing it
-          from ``__init__`` or even :py:meth:`on_catalog` for example)
+        * Do any heavy, one-time, initialization (i.e. instead of doing it from
+          ``__init__`` or even :py:meth:`on_catalog` for example)
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information
@@ -51,7 +51,7 @@ Plugin class
 
     .. py:method:: on_suggest(user_input, items_chain=[])
 
-        Called when the user is typing her search terms *or* item's arguments.
+        Called when the user is typing their search terms *or* item's arguments.
 
         When no item has been selected yet by the user, the *items_chain* list
         is empty and *user_input* is a string containing the initial search
@@ -64,13 +64,13 @@ Plugin class
         *user_input* is a string typed by the user that is meant to be the
         arguments of the lastly selected item (i.e. ``items_chain[-1]``).
 
-        While in that case, *items_chain* contains the full history of the items
+        More precisely, *items_chain* contains the full history of the items
         that have been selected by the user during this search session, plugins
-        usually only need to deal with the first and/or the last item(s) in the
-        *items_chain* list (i.e. ``items_chain[0]`` and/or ``items_chain[-1]``;
+        usually only need to deal with the last and/or the first item(s) in the
+        *items_chain* list (i.e. ``items_chain[-1]`` and/or ``items_chain[0]``;
         which may be equal).
 
-        If the plugin implements this method, it is expected to setup its
+        If the plugin implements this method, it is expected to set its
         **suggestions** catalog by using :py:meth:`set_suggestions`. The list of
         suggestions may be empty.
 
