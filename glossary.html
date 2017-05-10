@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.15
+                2.15.1
               </div>
             
           
@@ -110,6 +110,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
             
@@ -159,14 +160,14 @@
 <dd>The Catalog is the name of the internal database of Keypirinha where all
 the <a class="reference internal" href="#term-items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</dd>
 <dt id="term-catalogitem">CatalogItem</dt>
-<dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>.</dd>
+<dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a> (API).</dd>
 <dt id="term-console">Console</dt>
 <dd><p class="first">The Console window gives access to the output of application&#8217;s log. It
 should be your first destination in case of error or unexpected
-behavior to check if a plugin emitted a informational/warning/error
+behavior in order to check if a plugin emitted some warning or error
 message.</p>
 <p>It also gives you an interactive access to the embedded Python
-interpreter.</p>
+interpreter and Keypirinha&#8216;s API.</p>
 <img alt="|project|'s Console" class="last align-center" src="_images/console.png" />
 </dd>
 <dt id="term-instanceid">InstanceID</dt>
@@ -188,28 +189,28 @@ database). It is a simple data structure, created by the
 a category (File, URL, Command Line, ...), a reference to the parent
 <a class="reference internal" href="#term-plugin"><span class="xref std std-term">plugin</span></a>, etc...</dd>
 <dt id="term-launchbox">LaunchBox</dt>
-<dd><p class="first">The L(a)unchBox is Keypirinha&#8216;s main dialog window, from which you can
-make a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
+<dd><p class="first">The L(a)unchBox is the main window of Keypirinha, from which you can make
+a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
 pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (by default).</p>
 <p>More info in the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter.</p>
 <img alt="|project|'s LaunchBox" class="last align-center" src="_images/wndrun.png" />
 </dd>
 <dt id="term-package">Package</dt>
 <dt id="term-packages">Packages</dt>
-<dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> and that
-represents a unique feature visible to the user.</p>
-<p>This container holds the source code of its plugins, their dependencies,
-a default configuration file, if any, and optionally some documentation.</p>
-<p>Its content can be stored in a directory or packed in an archive to ease
-its redistribution (i.e. a <code class="file docutils literal"><span class="pre">*.keypirinha-package</span></code> file, which is
-actually a regular zip archive).</p>
+<dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> that
+represent a single feature, or a set of related features.</p>
+<p>It contains the source code of its plugins, their dependencies, a
+default configuration file, if any, and optionally some documentation.</p>
+<p>It can come in the form of a directory with loose files, or it can be
+packed in an archive to ease its redistribution (i.e. a
+<code class="file docutils literal"><span class="pre">*.keypirinha-package</span></code> file, which is a regular zip archive).</p>
 <p class="last">Read <a class="reference internal" href="packages.html"><span class="doc">Packages Structure</span></a> for more information.</p>
 </dd>
 <dt id="term-plugin">Plugin</dt>
 <dt id="term-plugins">Plugins</dt>
 <dd>In the context of Keypirinha, a Plugin is a software component written in
-<a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. It is always
-encapsulated in a <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</dd>
+<a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. <strong>It is
+always encapsulated in a :term:`package`.</strong></dd>
 <dt id="term-repository">Repository</dt>
 <dt id="term-repositories">Repositories</dt>
 <dd>A Repository is a directory dedicated to the storage of
@@ -258,7 +259,7 @@ loose files or packed in a single archive).</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.15',
+            VERSION:'2.15.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

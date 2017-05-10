@@ -9,16 +9,16 @@ Glossary
         the :term:`items` are indexed to allow a quick search.
 
     CatalogItem
-        The class name of an :term:`item`.
+        The class name of an :term:`item` (API).
 
     Console
         The Console window gives access to the output of application's log. It
         should be your first destination in case of error or unexpected
-        behavior to check if a plugin emitted a informational/warning/error
+        behavior in order to check if a plugin emitted some warning or error
         message.
 
         It also gives you an interactive access to the embedded Python
-        interpreter.
+        interpreter and |project|'s API.
 
         .. image:: images/console.png
             :alt: |project|'s Console
@@ -47,8 +47,8 @@ Glossary
         :term:`plugin`, etc...
 
     LaunchBox
-        The L(a)unchBox is |project|'s main dialog window, from which you can
-        make a search and launch the selected :term:`item`. It can be opened by
+        The L(a)unchBox is the main window of |project|, from which you can make
+        a search and launch the selected :term:`item`. It can be opened by
         pressing the :kbd:`Ctrl+Win+K` combination (by default).
 
         More info in the :doc:`first` chapter.
@@ -59,23 +59,23 @@ Glossary
 
     Package
     Packages
-        A Package is a container of one or several :term:`plugins` and that
-        represents a unique feature visible to the user.
+        A Package is a container of one or several :term:`plugins` that
+        represent a single feature, or a set of related features.
 
-        This container holds the source code of its plugins, their dependencies,
-        a default configuration file, if any, and optionally some documentation.
+        It contains the source code of its plugins, their dependencies, a
+        default configuration file, if any, and optionally some documentation.
 
-        Its content can be stored in a directory or packed in an archive to ease
-        its redistribution (i.e. a :file:`*.keypirinha-package` file, which is
-        actually a regular zip archive).
+        It can come in the form of a directory with loose files, or it can be
+        packed in an archive to ease its redistribution (i.e. a
+        :file:`*.keypirinha-package` file, which is a regular zip archive).
 
         Read :doc:`packages` for more information.
 
     Plugin
     Plugins
         In the context of |project|, a Plugin is a software component written in
-        Python3_ that extends the base features of the application. It is always
-        encapsulated in a :term:`package`.
+        Python3_ that extends the base features of the application. **It is
+        always encapsulated in a :term:`package`.**
 
     Repository
     Repositories

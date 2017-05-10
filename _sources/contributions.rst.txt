@@ -11,44 +11,51 @@ Check out the :doc:`contribute` chapter to know how you can contribute.
 Packages
 ========
 
+Currency
+--------
+
+:ghu:`AvatarHurden`'s package to convert currencies. |br|
+Source: `<https://github.com/AvatarHurden/keypirinha-currency>`_
+
 Ditto
 -----
 
-`@tuteken`_'s package to access to your saved items in
+:ghu:`tuteken`'s package to access to your saved items in
 `Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
 
 HeidiSQL
 --------
 
-`@psistorm`_'s package to list and launch `HeidiSQL <http://www.heidisql.com>`_
-sessions directly as well as HeidiSQL itself. |br|
+:ghu:`psistorm`'s package to list and launch
+`HeidiSQL <http://www.heidisql.com>`_ sessions directly as well as HeidiSQL
+itself. |br|
 Source: `<https://github.com/psistorm/keypirinha-heidisql>`_
 
 Kill
 ----
 
-`@ueffel`_'s package to terminate a running process by its name or ID. |br|
+:ghu:`ueffel`'s package to terminate a running process by its name or ID. |br|
 Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
 
 KiTTY
 -----
 
-`@psistorm`_'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_ (either
+:ghu:`psistorm`'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_ (either
 installed or portable) and KiTTY sessions directly. |br|
 Source: `<https://github.com/psistorm/keypirinha-kitty>`_
 
 Pinboard
 --------
 
-`@tuteken`_'s package to access to your bookmarks on
+:ghu:`tuteken`'s package to access to your bookmarks on
 `Pinboard <http://pinboard.in>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
 
 SystemCommands
 --------------
 
-`@psistorm`_'s package to provide some system commands to |project|'s catalog
+:ghu:`psistorm`'s package to provide some system commands to |project|'s catalog
 like:
 
 * ``trash``: show the recycle bin
@@ -90,6 +97,3 @@ Once you have downloaded the ``.keypirinha-package`` file, simply move it to the
 :file:`Keypirinha\\portable\\Profile\\InstalledPackages` folder if you are in
 Portable mode, or to the :file:`%APPDATA%\\Keypirinha\\InstalledPackages` folder
 in Installed mode.
-
-
-.. _@tuteken: https://github.com/tuteken

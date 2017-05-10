@@ -13,14 +13,13 @@ A fast launcher for keyboard ninjas on Windows
 * Check out the :doc:`changelog` to know what's new
 
 Need Help?
-  * Join the |chat_room|
-  * :ref:`contribute-issue`
+    * Join the |chat_room|
+    * :ref:`contribute-issue`
 
 You like |project|?
-  * Stay tuned and consider donating |br|
-    |social_buttons|
-    |donate_button|
-  * See :ref:`faq-support`
+    |donate_button| |br|
+    |social_buttons| |br|
+    Or see :ref:`faq-support`
 
 
 What is |project|
@@ -62,6 +61,7 @@ Contents
     :hidden:
 
     changelog
+    license
 
 
 Indices and tables

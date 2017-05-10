@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Theming &mdash; Keypirinha</title>
+  <title>License &mdash; Keypirinha</title>
   
 
   
@@ -36,8 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="9. Keyboard Shortcuts" href="keyboard.html"/>
-        <link rel="prev" title="7. Configuration" href="configuration.html"/> 
+        <link rel="prev" title="Change Log" href="changelog.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -89,7 +88,7 @@
           
             
             
-                <ul class="current">
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="download.html">1. Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">2. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="update.html">3. Update Procedure</a></li>
@@ -97,13 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Theming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#third-party-themes">8.1. Third-Party Themes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#clearlight">8.1.1. ClearLight</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">8. Theming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">9. Keyboard Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom-catalog.html">10. Customize your Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">11. Architecture</a></li>
@@ -114,9 +107,9 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">16. Frequently Asked Questions (FAQ)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">17. Credits</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">License</a></li>
 </ul>
 
             
@@ -147,7 +140,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>8. Theming</li>
+    <li>License</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -159,80 +152,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="theming">
-<h1>8. Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h1>
-<p>Since v2.14, Keypirinha GUI can be customized via the <code class="docutils literal"><span class="pre">theme</span></code> setting.</p>
-<p>Below are some possible combinations of the themes that are available by
-default. All those themes are defined in Keypirinha&#8216;s default configuration file,
-search for the <code class="docutils literal"><span class="pre">[theme/...]</span></code> sections nearby the end of the file.</p>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">You can change the <code class="docutils literal"><span class="pre">theme</span></code> setting at runtime to visualize the new theme
-while Keypirinha&#8217;s LaunchBox is displayed</p>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-layout-jumbo.png" class="align-center" src="_images/theme-layout-jumbo.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">JumboLayout</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-layout-medium.png" class="align-center" src="_images/theme-layout-medium.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-layout-tiny.png" class="align-center" src="_images/theme-layout-tiny.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">TinyLayout</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-old.png" class="align-center" src="_images/theme-old.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">AnthraciteFull</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-colors-solarized-light.png" class="align-center" src="_images/theme-colors-solarized-light.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedLightColors</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-colors-solarized-dark.png" class="align-center" src="_images/theme-colors-solarized-dark.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedDarkColors</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-colors-purplenight.png" class="align-center" src="_images/theme-colors-purplenight.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PurpleNightColors</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-colors-electricstate.png" class="align-center" src="_images/theme-colors-electricstate.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, ElectricStateColors</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<img alt="_images/theme-colors-princess.png" class="align-center" src="_images/theme-colors-princess.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
-<span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PrincessColors</span>
-</pre></div>
-</div>
-<div class="section" id="third-party-themes">
-<h2>8.1. Third-Party Themes<a class="headerlink" href="#third-party-themes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="clearlight">
-<h3>8.1.1. ClearLight<a class="headerlink" href="#clearlight" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://github.com/bege10">&#64;bege10</a> kindly shared their
-<a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/180">ClearLight theme</a>.</p>
-<img alt="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" class="align-center" src="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" />
-</div>
-</div>
+  <div class="section" id="license">
+<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
+<p>Keypirinha
+Copyright (c) 2013-2017 Jean-Charles Lefebvre &lt;<a class="reference external" href="mailto:polyvertex&#37;&#52;&#48;gmail&#46;com">polyvertex<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;
+All rights reserved.</p>
+<p>Redistribution and use in binary form, without modification, are permitted
+provided that the following conditions are met:</p>
+<p>Only unmodified installers and/or packages can be redistributed; redistribution
+of Keypirinha binaries in any other form is not permitted. Neither the name of
+the author nor the names of its contributors may be used to endorse or promote
+products derived from this software without specific prior written permission.</p>
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, THE
+COPYRIGHT HOLDERS OR THE CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
 </div>
 
 
@@ -242,10 +179,8 @@ while Keypirinha&#8217;s LaunchBox is displayed</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="keyboard.html" class="btn btn-neutral float-right" title="9. Keyboard Shortcuts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="configuration.html" class="btn btn-neutral" title="7. Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="changelog.html" class="btn btn-neutral" title="Change Log" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

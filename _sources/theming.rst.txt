@@ -109,7 +109,7 @@ Third-Party Themes
 ClearLight
 ----------
 
-`@bege10`_ kindly shared their
+:ghu:`bege10` kindly shared their
 `ClearLight theme <https://github.com/Keypirinha/Keypirinha/issues/180>`_.
 
 .. image:: https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png

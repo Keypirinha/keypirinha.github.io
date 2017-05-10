@@ -181,6 +181,6 @@ Documented example:
     |bugtracker_link| or the |chat_room|, so it can be added to |project|.
 
 .. note::
-    For German-speaking fellows, `@bege10`_ has kindly shared their customized
-    ``[predefined_provider/*]`` sections to get German suggestions
+    For German-speaking fellows, :ghu:`@bege10` has kindly shared their
+    customized ``[predefined_provider/*]`` sections to get German suggestions
     `here <https://github.com/Keypirinha/Keypirinha/issues/189#issuecomment-298979416>`_.

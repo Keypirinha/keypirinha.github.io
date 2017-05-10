@@ -1,0 +1,6 @@
+===================
+Donation Successful
+===================
+
+Thank you for encouraging |project|. Your support is appreciated and hopefully
+this project will continue to be useful to you and to deserve your attention.

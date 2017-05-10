@@ -23,17 +23,18 @@ extensible, too bloated, too slow or just outdated (implying a broken support
 for recent platforms).
 
 |project| has been started as a personal project and is not meant to be better
-than all of them. It offers a recent alternative that is fast, flexible, memory
-efficient, battery friendly and smart about the search results it provides.
+than all of them. It offers a recent alternative that is blazing fast, flexible,
+memory efficient, battery friendly and smart about the search results it
+provides.
 
 By *battery friendly*, we mean that with the default configuration and plugins,
 |project| consumes zero CPU cycle once it has been initialized and when not used
 (i.e. most of its lifetime).
 
-That being said, by design, its graphical user interface (GUI) is (very)
-minimalistic and supports functional tweaking only. Also, its learning curve can
-be more steep, depending on how you want to use it and extend it. That makes
-|project| quite a *niche* project, mostly addressed to advanced users.
+That being said, by design, its graphical user interface (GUI) is minimalistic
+and its learning curve may feel steep for some, depending on how you want to use
+it and extend it. That makes |project| quite a *niche* project, mostly addressed
+to advanced users.
 
 
 So... A replacement to the Start Menu?
@@ -41,7 +42,7 @@ So... A replacement to the Start Menu?
 
 Many people who have not tried |project| (or sometimes any other keystroke
 launcher), tend to think that it's just about being a replacement to the Start
-Menu, the system's Search feature, or even just organized shortcuts and batch
+Menu, the :kbd:`Win+S` feature, or even just some organized shortcuts and
 scripts.
 
 It would be a mistake to think of |project| as an application launcher only.
@@ -53,19 +54,21 @@ switching to a running application using its name, evaluate a mathematical
 expression inline, ...
 
 Its whole architecture is about being generic, configurable and scriptable
-(Python3_). And its search engine also tries to be smarter and to give better
+(Python3_). And its search algorithm also tries to be smarter and to give better
 score to tasks that you most likely want to launch given the current search
 terms and context.
 
 Generally speaking, a launcher like |project| may deeply impact your everyday
-work-flow.
+work-flow. You may even find yourself
+`missing it <https://twitter.com/Paratron/status/884451322736644096>`_!
 
 
 Is it open source?
 ==================
 
 The application itself is distributed as a
-`freeware <https://en.wikipedia.org/wiki/Freeware>`_. |br|
+`freeware <https://en.wikipedia.org/wiki/Freeware>`_ (see the :doc:`license`).
+
 Its official plugins are
 `open source <https://en.wikipedia.org/wiki/Open-source_license>`_.
 
@@ -85,36 +88,24 @@ as an encouragement for future developments.
 
 There are several ways to support |project|:
 
-* *Like* it, *Star* it, spread nice words about it |br|
-  |social_buttons|
-
 * Make a donation |br|
   |donate_button|
+  Please PM `@polyvertex <https://gitter.im/polyvertex>`_ if you have questions
+  or special enquiries. |br|
+  |br|
 
-* :ref:`contribute-doc`
+* *Like* it, *Star* it, spread nice words about it |br|
+  |social_buttons| |br|
+
+* :ref:`contribute-doc` |br|
+  |br|
 
 * Help to develop the official packages |br|
-  :ref:`contribute-packages`
+  :ref:`contribute-packages` |br|
+  |br|
 
 * There are plans to develop an automated packages redistribution platform |br|
   :ref:`contribute-platform`
-
-
-How my donation will be used?
-=============================
-
-Small donations (10 euros) will probably be spent on coffee to cheer up the
-developer in his cave. Higher amounts will be spared for:
-
-* the hosting of the dynamic website and the packages redistribution platform
-  that is planned
-* the domain name
-* a digital certificate for signing |project|'s binaries
-* some software/hardware used directly in the development of the project
-
-If you wish your donation to go towards something specific, or if you have
-questions or special enquiries, PM `@polyvertex <https://gitter.im/polyvertex>`_
-first.
 
 
 Where does this weird name come from?!

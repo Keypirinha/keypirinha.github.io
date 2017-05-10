@@ -113,7 +113,7 @@ future).
 
 When the user starts typing their search and each time search terms have
 changed, the :py:meth:`keypirinha.Plugin.on_suggest` method is called. There is
-a subtlety here: if no item has been selected yet (i.e. :kb:`Tab` key has not
+a subtlety here: if no item has been selected yet (i.e. :kbd:`Tab` key has not
 been pressed yet), the message is *broadcasted* to every loaded package.
 Otherwise, it is sent only to the parent *plugin*.
 

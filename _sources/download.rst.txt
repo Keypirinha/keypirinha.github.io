@@ -23,7 +23,6 @@ Download
 * Check out the :doc:`changelog` to know what's new
 
 You like |project|?
-  * Stay tuned and consider donating |br|
-    |social_buttons|
-    |donate_button|
-  * See :ref:`faq-support`
+    |donate_button| |br|
+    |social_buttons| |br|
+    Or see :ref:`faq-support`
