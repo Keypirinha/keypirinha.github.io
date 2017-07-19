@@ -16,7 +16,7 @@
 * Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
 * Machine-specific and/or user-specific configuration
-* And more, see :doc:`shipped-packages`
+* ... and more, see :doc:`shipped-packages` and :doc:`contributions`
 
 **Properties:**
 

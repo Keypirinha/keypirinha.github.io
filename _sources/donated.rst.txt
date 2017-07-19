@@ -2,5 +2,17 @@
 Donation Successful
 ===================
 
-Thank you for encouraging |project|. Your support is appreciated and hopefully
-this project will continue to be useful to you and to deserve your attention.
+Thank you for encouraging the development of |project|.
+
+Your support is appreciated and hopefully this project will continue to be
+useful to you and to deserve your attention.
+
+If you have any question regarding your donation, please PM
+`@polyvertex <https://gitter.im/polyvertex>`_.
+
+If you need help to use |project|, head over to the |chat_room| where a small
+but involved and friendly community can help. See you there!
+
+Found a bug? Check out :ref:`contribute-issue`
+
+-- Jean-Charles

@@ -19,22 +19,22 @@ lot of them before deciding to develop |project|. Including the inspiring
 *Synapse*, which unfortunately supports Linux only.
 
 They are either not keyboard-only oriented, not flexible enough, not always
-extensible, too bloated, too slow or just outdated (implying a broken support
-for recent platforms).
+extensible, too bloated, too slow, unstable, or just outdated (implying a broken
+support for recent platforms).
 
 |project| has been started as a personal project and is not meant to be better
 than all of them. It offers a recent alternative that is blazing fast, flexible,
 memory efficient, battery friendly and smart about the search results it
 provides.
 
-By *battery friendly*, we mean that with the default configuration and plugins,
-|project| consumes zero CPU cycle once it has been initialized and when not used
-(i.e. most of its lifetime).
+By *battery friendly*, we mean that with the default configuration, |project|
+consumes zero CPU cycle once it has been initialized and when not used (i.e.
+most of its lifetime).
 
-That being said, by design, its graphical user interface (GUI) is minimalistic
-and its learning curve may feel steep for some, depending on how you want to use
-it and extend it. That makes |project| quite a *niche* project, mostly addressed
-to advanced users.
+However, by design, its graphical user interface (GUI) is minimalistic and its
+learning curve may feel steep for some, depending on how you want to use it and
+extend it. **That makes of |project| quite a *niche* project, mostly addressed
+to advanced users.**
 
 
 So... A replacement to the Start Menu?
@@ -49,17 +49,17 @@ It would be a mistake to think of |project| as an application launcher only.
 |project| itself is very **generic**. It is just a database of *items* sweetened
 with a small search engine. In other words, it can launch any kind of task
 provided by its plugins. May it be a document, a URL, creating an alarm at a
-given time, launching a web search, directly launching a FileZilla session,
-switching to a running application using its name, evaluate a mathematical
-expression inline, ...
+given time, launching a web search, directly launching a PuTTY or a FileZilla
+session, switching to a running application using its name, evaluate a
+mathematical expression inline, ...
 
 Its whole architecture is about being generic, configurable and scriptable
-(Python3_). And its search algorithm also tries to be smarter and to give better
-score to tasks that you most likely want to launch given the current search
-terms and context.
+(Python3_). Its search algorithm tries to be smarter by giving a better score to
+tasks that you most likely want to launch given the current search terms and
+context.
 
-Generally speaking, a launcher like |project| may deeply impact your everyday
-work-flow. You may even find yourself
+A launcher like |project| may deeply impact your everyday work-flow. You may
+even find yourself
 `missing it <https://twitter.com/Paratron/status/884451322736644096>`_!
 
 
@@ -67,10 +67,25 @@ Is it open source?
 ==================
 
 The application itself is distributed as a
-`freeware <https://en.wikipedia.org/wiki/Freeware>`_ (see the :doc:`license`).
+`freeware <https://en.wikipedia.org/wiki/Freeware>`_ (see also the
+:doc:`license`). In other words, |project| is distributed for free and there is
+no time limit, no nag screen, no ad.
 
-Its official plugins are
-`open source <https://en.wikipedia.org/wiki/Open-source_license>`_.
+Its official plugins however, which are distributed with the application, are
+`open source <https://en.wikipedia.org/wiki/Open-source_license>`_ and
+distributed under the terms of the
+`zLib license <https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_,
+that is known for being permissive.
+
+
+Is it Beta software?
+====================
+
+No, |project| can be considered stable.
+
+|project| is used by a small but involved community that has shown itself
+reactive in reporting issues and interacting with the developer. As a result,
+maintenance releases are usually pushed pretty fast if a bug is reported.
 
 
 .. _faq-support:
@@ -120,5 +135,4 @@ Any translation?
 ================
 
 Currently, |project| is available in English only and there is no plan to
-support additional languages in a near future. For now, we prefer to focus on
-bug fixing and the implementation of functional features.
+support additional languages in a near future.
