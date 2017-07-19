@@ -90,8 +90,8 @@ There are several ways to support |project|:
 
 * Make a donation |br|
   |donate_button|
-  Please PM `@polyvertex <https://gitter.im/polyvertex>`_ if you have questions
-  or special enquiries. |br|
+  PM `@polyvertex <https://gitter.im/polyvertex>`_ if you have questions or
+  special enquiries. |br|
   |br|
 
 * *Like* it, *Star* it, spread nice words about it |br|
