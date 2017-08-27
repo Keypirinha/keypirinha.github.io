@@ -10,6 +10,7 @@ A multi-purpose plugin for string conversion and generation.
 Features
 ========
 
+* Case conversion
 * Hash a string using standard algorithms like CRC32, MD5, SHA*, etc...
 * Generate a random UUID, also called GUID
 * Generate a random password

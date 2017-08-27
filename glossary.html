@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
+  
+  
 
   
 
@@ -46,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -68,7 +71,7 @@
             
             
               <div class="version">
-                2.15.3
+                2.15.4
               </div>
             
           
@@ -89,7 +92,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="download.html">1. Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">2. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="update.html">3. Update Procedure</a></li>
@@ -123,8 +129,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Keypirinha</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Keypirinha</a>
+        
       </nav>
 
 
@@ -133,21 +141,38 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>15. Glossary</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>15. Glossary</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -181,8 +206,7 @@ they are (re)loaded.</p>
 has write access to its section of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
 <p class="last">Read <a class="reference internal" href="api/overview.html"><span class="doc">Overview</span></a> for more information.</p>
 </dd>
-<dt id="term-item">Item</dt>
-<dt id="term-items">Items</dt>
+<dt id="term-item">Item<dt id="term-items">Items</dt>
 <dd>An item is the data unit of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a> (Keypirinha&#8216;s internal
 database). It is a simple data structure, created by the
 <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a>, that has some properties like a display name (label),
@@ -195,8 +219,7 @@ pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</sp
 <p>More info in the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter.</p>
 <img alt="|project|'s LaunchBox" class="last align-center" src="_images/wndrun.png" />
 </dd>
-<dt id="term-package">Package</dt>
-<dt id="term-packages">Packages</dt>
+<dt id="term-package">Package<dt id="term-packages">Packages</dt>
 <dd><p class="first">A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> that
 represent a single feature, or a set of related features.</p>
 <p>It contains the source code of its plugins, their dependencies, a
@@ -206,13 +229,11 @@ packed in an archive to ease its redistribution (i.e. a
 <code class="file docutils literal"><span class="pre">*.keypirinha-package</span></code> file, which is a regular zip archive).</p>
 <p class="last">Read <a class="reference internal" href="packages.html"><span class="doc">Packages Structure</span></a> for more information.</p>
 </dd>
-<dt id="term-plugin">Plugin</dt>
-<dt id="term-plugins">Plugins</dt>
+<dt id="term-plugin">Plugin<dt id="term-plugins">Plugins</dt>
 <dd>In the context of Keypirinha, a Plugin is a software component written in
 <a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. <strong>It is
-always encapsulated in a :term:`package`.</strong></dd>
-<dt id="term-repository">Repository</dt>
-<dt id="term-repositories">Repositories</dt>
+always encapsulated in a</strong> <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</dd>
+<dt id="term-repository">Repository<dt id="term-repositories">Repositories</dt>
 <dd>A Repository is a directory dedicated to the storage of
 <a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It also defines the way Packages are stored (i.e.:
 loose files or packed in a single archive).</dd>
@@ -221,15 +242,18 @@ loose files or packed in a single archive).</dd>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="faq.html" class="btn btn-neutral float-right" title="16. Frequently Asked Questions (FAQ)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="16. Frequently Asked Questions (FAQ)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="contribute.html" class="btn btn-neutral" title="14. Contribute" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="contribute.html" class="btn btn-neutral" title="14. Contribute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -259,10 +283,11 @@ loose files or packed in a single archive).</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.15.3',
+            VERSION:'2.15.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

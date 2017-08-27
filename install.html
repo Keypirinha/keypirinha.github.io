@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
+  
+  
 
   
 
@@ -46,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -68,7 +71,7 @@
             
             
               <div class="version">
-                2.15.3
+                2.15.4
               </div>
             
           
@@ -89,7 +92,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="download.html">1. Download</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#requirements">2.1. Requirements</a></li>
@@ -132,8 +138,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Keypirinha</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Keypirinha</a>
+        
       </nav>
 
 
@@ -142,21 +150,38 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>2. Installation</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>2. Installation</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -179,8 +204,14 @@ dependencies.</p>
 <p>Keypirinha currently comes in a simple archive that can be uncompressed about
 anywhere you want. There is no installer.</p>
 <p><strong>Out of the box</strong>, it is configured to run in <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>, which
-means all the configuration and runtime files are stored in Keypirinha&#8216;s
+means all the configuration and runtime files are contained under Keypirinha&#8216;s
 directory.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is <strong>not recommended</strong> to extract Keypirinha to your Desktop or you Start
+Menu folder as you may experience unexpected behavior (see <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/229">issue #229</a> for
+more info).</p>
+</div>
 </div>
 <div class="section" id="installed-vs-portable-mode">
 <h2>2.3. Installed vs. Portable mode<a class="headerlink" href="#installed-vs-portable-mode" title="Permalink to this headline">¶</a></h2>
@@ -230,15 +261,18 @@ to their new locations.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="update.html" class="btn btn-neutral float-right" title="3. Update Procedure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="update.html" class="btn btn-neutral float-right" title="3. Update Procedure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="download.html" class="btn btn-neutral" title="1. Download" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="download.html" class="btn btn-neutral" title="1. Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -268,10 +302,11 @@ to their new locations.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.15.3',
+            VERSION:'2.15.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

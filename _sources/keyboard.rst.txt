@@ -57,6 +57,10 @@ LaunchBox
 | * :kbd:`Down`                      |                                         |
 |   (if search state is clean)       |                                         |
 +------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+Home`                   | Scroll up to the first result           |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+End`                    | Scroll down to the last result          |
++------------------------------------+-----------------------------------------+
 | :kbd:`F5`                          | Refresh Catalog |br| Identical to       |
 |                                    | clicking the ``Refresh Catalog`` menu   |
 |                                    | or launching the |br|                   |

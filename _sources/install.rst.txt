@@ -22,8 +22,13 @@ Installation
 anywhere you want. There is no installer.
 
 **Out of the box**, it is configured to run in :ref:`install-portable`, which
-means all the configuration and runtime files are stored in |project|'s
+means all the configuration and runtime files are contained under |project|'s
 directory.
+
+.. warning::
+    It is **not recommended** to extract |project| to your Desktop or you Start
+    Menu folder as you may experience unexpected behavior (see :issue:`229` for
+    more info).
 
 
 Installed vs. Portable mode

@@ -52,21 +52,18 @@ Pinboard
 `Pinboard <http://pinboard.in>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
 
+Steam
+-----
+
+:ghu:`EhsanKia`'s package to add Steam games to your Catalog |br|
+Source: `<https://github.com/EhsanKia/keypirinha-plugins/tree/master/keypirinha-steam>`_
+
 SystemCommands
 --------------
 
 :ghu:`psistorm`'s package to provide some system commands to |project|'s catalog
-like:
-
-* ``trash``: show the recycle bin
-* ``emptytrash``: empty the recycle bin
-* ``lock``: show Windows lockscreen (similar to Win+L)
-* ``logout``: logout current User from Windows
-* ``restart``: restarts Windows
-* ``shutdown``: shutdown Windows
-* ``sleep``: sleep Windows
-* ``hibernate``: hibernate Windows
-
+like ``shutdown``, ``hibernate``, ``sleep``, ``restart``, ``lock``, ``logout``,
+``trash``, ``emptytrash``, ... |br|
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
 

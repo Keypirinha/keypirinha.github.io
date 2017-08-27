@@ -13,7 +13,9 @@ Catalog Items
 This package does not pre-create any item in the :term:`Catalog`. Instead, it
 tries to match your initial search term with specific patterns:
 
-* ``/`` or ``\`` will list the drives that are mounted (e.g. ``C:\``, ...)
+* ``/`` or ``\`` will list the drives that are mounted (e.g. ``C:\``, ...) |br|
+  If the ``show_recents`` option is enabled (default), the list of the paths
+  recently entered into Windows Explorer's address bar will also be included
 * ``C:``, ``D:`` or ``X:`` (case insensitive) will start browsing the drive
   associated with the given letter
 * An absolute path like ``c:\windows``, ``D:\My Dir\AnyFile.txt``
@@ -29,8 +31,8 @@ tries to match your initial search term with specific patterns:
     ``show_system_files`` and ``show_network_files`` settings.
 
 .. tip::
-    * While on Windows, convention is to use the ``\`` character, |project| also
-      interprets ``/`` as a path separator.
+    * For convenience, |project| interprets ``/`` as a path separator in
+      addition to ``\``.
     * This package is :ref:`first-drag` compliant.
 
 

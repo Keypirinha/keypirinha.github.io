@@ -75,7 +75,7 @@ Glossary
     Plugins
         In the context of |project|, a Plugin is a software component written in
         Python3_ that extends the base features of the application. **It is
-        always encapsulated in a :term:`package`.**
+        always encapsulated in a** :term:`package`.
 
     Repository
     Repositories

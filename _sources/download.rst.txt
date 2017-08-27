@@ -16,6 +16,9 @@ Download
 * |dl_checksums|
 
 
+|project| is also on `Chocolatey <https://chocolatey.org/packages/keypirinha>`_
+
+
 **What next**
 
 * Take a look at the :doc:`install` procedure or the :doc:`update`

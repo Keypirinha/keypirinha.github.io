@@ -33,8 +33,8 @@ most of its lifetime).
 
 However, by design, its graphical user interface (GUI) is minimalistic and its
 learning curve may feel steep for some, depending on how you want to use it and
-extend it. **That makes of |project| quite a *niche* project, mostly addressed
-to advanced users.**
+extend it. **That makes of Keypirinha quite a niche project, mostly addressed to
+advanced users.**
 
 
 So... A replacement to the Start Menu?
@@ -66,16 +66,18 @@ even find yourself
 Is it open source?
 ==================
 
-The application itself is distributed as a
-`freeware <https://en.wikipedia.org/wiki/Freeware>`_ (see also the
-:doc:`license`). In other words, |project| is distributed for free and there is
-no time limit, no nag screen, no ad.
+In short, the application itself is not, its official plugins are.
 
-Its official plugins however, which are distributed with the application, are
-`open source <https://en.wikipedia.org/wiki/Open-source_license>`_ and
-distributed under the terms of the
-`zLib license <https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_,
-that is known for being permissive.
+The application itself is distributed as a `freeware
+<https://en.wikipedia.org/wiki/Freeware>`_ (see the :doc:`license`).
+It means |project| is distributed for free and there is no time limit, no nag
+screen, no ad.
+
+Its official plugins distributed with the application, are `open source
+<https://en.wikipedia.org/wiki/Open-source_license>`_ and published under the
+terms of the `zLib license
+<https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_, a pretty
+permissive license.
 
 
 Is it Beta software?
@@ -134,5 +136,4 @@ yet!
 Any translation?
 ================
 
-Currently, |project| is available in English only and there is no plan to
-support additional languages in a near future.
+Sorry, there is no plan to support additional language in a near future.
