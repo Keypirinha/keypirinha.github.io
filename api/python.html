@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -114,9 +114,10 @@
 <li class="toctree-l2"><a class="reference internal" href="reference.html">13.2. API Reference</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">13.3. Embedded Python Interpreter</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#version">13.3.1. Version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#modifications">13.3.2. Modifications</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#exit-and-quit">13.3.2.1. exit() and quit()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#os-environ">13.3.2.2. os.environ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#non-debug">13.3.2. Non-Debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifications">13.3.3. Modifications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exit-and-quit">13.3.3.1. exit() and quit()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#os-environ">13.3.3.2. os.environ</a></li>
 </ul>
 </li>
 </ul>
@@ -212,12 +213,20 @@ commands in the Console window:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="non-debug">
+<h2>13.3.2. Non-Debug<a class="headerlink" href="#non-debug" title="Permalink to this headline">¶</a></h2>
+<p>When started, Keypirinha initializes the embedded Python interpreter and enables
+its <em>optimize</em> flag. This is equivalent to running the standard Python command
+with the <code class="docutils literal"><span class="pre">-O</span></code> option.</p>
+<p>As a result, the <code class="docutils literal"><span class="pre">__debug__</span></code> constant is false and <code class="docutils literal"><span class="pre">assert</span></code> statements are
+not executed.</p>
+</div>
 <div class="section" id="modifications">
-<h2>13.3.2. Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
+<h2>13.3.3. Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
 <p>There are some modifications made by Keypirinha that impact the default behavior
 of Python. All of these modifications are documented in this section.</p>
 <div class="section" id="exit-and-quit">
-<h3>13.3.2.1. exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
+<h3>13.3.3.1. exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
 <p>In its <em>vanilla</em> version, Python offers numerous ways to exit a program.
 Keypirinha on the other hand is not meant to be shutdown by its plugins and would
 crash in that case so traps have been installed to avoid that.</p>
@@ -230,26 +239,17 @@ application anyway, Python and Keypirinha both offer numerous ways to do that
 too.</p>
 </div>
 <div class="section" id="os-environ">
-<h3>13.3.2.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
-<p><strong>In short:</strong> Keypirinha automatically updates the content of the
-<a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map every time an environment variable has been modified
-so the plugins always get up-to-date values environment.</p>
-<p><strong>Context:</strong> Keypirinha has been designed to dynamically adapt as much as
-possible to any modification made to its running context. That includes the
-environment variables.</p>
-<p><strong>Problem:</strong> In the CPython implementation, the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map is
-created at import time and never updated. The <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a> function does
-not help here because it is just a wrapper around <code class="docutils literal"><span class="pre">os.environ.get()</span></code>. As a
-consequence, a plugin that receives the <code class="docutils literal"><span class="pre">EVENTS</span></code> message (see
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_events()</span></code></a>) and wants to get the up-to-date value of
-an environment variable would not be able to do so easily with the default
-implementation.</p>
-<p><strong>Solution:</strong> When Keypirinha catches a system notification indicating a
-modification to the environment, it updates the environment block associated to
-the current process, then eventually refreshes the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map.
-This mechanism is totally transparent to the plugins and updated environment
-values can be just read the standard way: either by accessing the
-<a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a> map or by calling <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a>.</p>
+<h3>13.3.3.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
+<p>In the Python implementation that Keypirinha embeds, the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a>
+map is created at import time and never updated. The <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a>
+function does not help here because it is just a wrapper around
+<code class="docutils literal"><span class="pre">os.environ.get()</span></code>.</p>
+<p>As a result, a Keypirinha plugin would not be able to read up-to-date environment
+variables except by requesting the Windows API which is quite tedious in this
+case.</p>
+<p>Keypirinha solves this issue by automatically updating <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a>
+every time an environment variable has been modified so the plugins always get
+up-to-date values.</p>
 </div>
 </div>
 </div>
@@ -297,7 +297,7 @@ values can be just read the standard way: either by accessing the
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

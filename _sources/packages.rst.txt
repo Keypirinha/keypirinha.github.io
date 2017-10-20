@@ -52,9 +52,9 @@ This Repository is named *Live* because it is the only one that allows file
 change at runtime. May it be to configuration files, to its source code or any
 other resource, the Package will be reloaded soon after a file has been
 modified, renamed or delete. However, note that if **only** an :file:`.ini` file
-is modified, the application will broadcast the ``CONFIG_CHANGED`` message (see
-:py:meth:`keypirinha.Plugin.on_config_changed`) to the plugins of the concerned
-package instead of fully reloading it.
+is modified, the application will call the
+:py:meth:`keypirinha.Plugin.on_events` method of every plugin that belong to the
+parent package instead of fully reloading it.
 
 
 .. _pack-installed:

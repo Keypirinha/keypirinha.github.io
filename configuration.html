@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -211,7 +211,7 @@ and flexible it can be:</p>
 </ul>
 <p>Nevertheless, Keypirinha offers a convenient way to open and edit its
 configuration files at runtime.</p>
-<p>Search for the &#8220;Keypirinha: Configure ...&#8221; items from the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
+<p>Search for the “Keypirinha: Configure …” items from the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
 <img alt="The 'Configure' items" class="align-center" src="_images/wndrun-config-search.png" />
 <p>Or use the main popup menu by clicking the right mouse button anywhere on the
 <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> except the text field.</p>
@@ -228,19 +228,19 @@ runtime and new/modified settings will immediately be applied.</p>
 should now see two text files opened side by side on your screen.</p>
 <p>The one on the <strong>left</strong> is the original configuration file, bundled with the
 application. It shows the exhaustive list of the available settings. This file
-is <strong>not</strong> meant to be modified. Let&#8217;s call it <code class="docutils literal"><span class="pre">Default</span></code>.</p>
+is <strong>not</strong> meant to be modified. Let’s call it <code class="docutils literal"><span class="pre">Default</span></code>.</p>
 <p>The one on the <strong>right</strong> side should be blank on a fresh install, which means
 all the default configuration values defined in the <code class="docutils literal"><span class="pre">Default</span></code> file are used.
-Let&#8217;s call this file <code class="docutils literal"><span class="pre">User</span></code>.</p>
+Let’s call this file <code class="docutils literal"><span class="pre">User</span></code>.</p>
 <p>Configuration files in Keypirinha are <code class="docutils literal"><span class="pre">INI</span></code> files. This format has been chosen
 because it is easy to read and to edit. But there are some things to keep in
-mind when editing a configuration file...</p>
+mind when editing a configuration file…</p>
 <p>Say you want to modify the <code class="docutils literal"><span class="pre">max_results</span></code> value for example. In
-Keypirinha&#8216;s <code class="docutils literal"><span class="pre">INI</span></code> files, every value belongs to a given <strong>section</strong>. So if
+Keypirinha’s <code class="docutils literal"><span class="pre">INI</span></code> files, every value belongs to a given <strong>section</strong>. So if
 you just add a single line like <code class="docutils literal"><span class="pre">max_results</span> <span class="pre">=</span> <span class="pre">100</span></code> to the <code class="docutils literal"><span class="pre">User</span></code> file,
 it <strong>will not</strong> have the desired effect. The <code class="docutils literal"><span class="pre">max_results</span></code> setting is
 part of the <code class="docutils literal"><span class="pre">gui</span></code> section so you must prepend the <code class="docutils literal"><span class="pre">[gui]</span></code> line.</p>
-<p>The default value of <code class="docutils literal"><span class="pre">max_results</span></code> is <code class="docutils literal"><span class="pre">100</span></code>, let&#8217;s change it to <code class="docutils literal"><span class="pre">90</span></code>. The
+<p>The default value of <code class="docutils literal"><span class="pre">max_results</span></code> is <code class="docutils literal"><span class="pre">100</span></code>, let’s change it to <code class="docutils literal"><span class="pre">90</span></code>. The
 <code class="docutils literal"><span class="pre">User</span></code> file should now look like this:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">max_results</span> <span class="o">=</span> <span class="s">90</span>
@@ -260,7 +260,7 @@ grouped under it.</p>
 <h2>7.3. Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
 <p>When you save a new version of one or several of your configuration files,
 Keypirinha automatically detects any modification you have made and apply it at
-runtime. The same mechanism goes to packages&#8217; configuration.</p>
+runtime. The same mechanism goes to packages’ configuration.</p>
 </div>
 <div class="section" id="the-ini-format">
 <h2>7.4. The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
@@ -310,7 +310,7 @@ will be interpreted properly by the application.</p>
 <p>Keypirinha allows you to declare values that can be used elsewhere in <strong>any</strong>
 configuration file (application and plugins).</p>
 <p>If you wish your reusable value to be usable in any configuration file, you must
-declare it in the <code class="docutils literal"><span class="pre">var</span></code> dedicated section in the main application&#8217;s
+declare it in the <code class="docutils literal"><span class="pre">var</span></code> dedicated section in the main application’s
 configuration file <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code>. Keypirinha will take care of
 replicating the <code class="docutils literal"><span class="pre">var</span></code> section in every subsequently loaded configuration file.</p>
 <div class="admonition tip">
@@ -332,8 +332,16 @@ file.</p>
 <p>Keypirinha also automatically populates the <code class="docutils literal"><span class="pre">var</span></code> section with some predefined
 values that may come handy.</p>
 <p>To use them, use the following syntax in your configuration file: <br />
-<code class="docutils literal"><span class="pre">${var:APP_DIR}</span></code> or <code class="docutils literal"><span class="pre">${var:KNOWNFOLDER_MUSIC}</span></code>, ...</p>
+<code class="docutils literal"><span class="pre">${var:APP_DIR}</span></code> or <code class="docutils literal"><span class="pre">${var:KNOWNFOLDER_MUSIC}</span></code>, …</p>
 <ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">APP_DRIVE</span></code> <br />
+The drive on which the application is installed. <br />
+Example:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">C:\</span></code>
+<br /> <br /></li>
+</ul>
+</li>
 <li><p class="first"><code class="docutils literal"><span class="pre">APP_DIR</span></code> <br />
 The path to the root/install directory of the application. <br />
 Examples:</p>
@@ -344,11 +352,20 @@ Examples:</p>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">APP_EXE</span></code> <br />
-The path to application&#8217;s executable <br />
+The path to application’s executable <br />
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\Keypirinha\Keypirinha.exe</span></code> (installed mode)</li>
 <li><code class="docutils literal"><span class="pre">U:\USBApps\Keypirinha\Keypirinha.exe</span></code> (portable mode)
+<br /> <br /></li>
+</ul>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">APP_ARCH</span></code> <br />
+The architecture of the application. <br />
+Possible values:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">x86</span></code> (32-bit)</li>
+<li><code class="docutils literal"><span class="pre">x64</span></code> (64-bit)
 <br /> <br /></li>
 </ul>
 </li>
@@ -363,7 +380,7 @@ Examples:</p>
 </ul>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">PROFILE_DIR_USER</span></code> <br />
-The <em>User</em> directory, where user&#8217;s configuration files are stored. <br />
+The <em>User</em> directory, where user’s configuration files are stored. <br />
 Examples:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">C:\Users\Bob\AppData\Roaming\Keypirinha\User</span></code> (installed mode)</li>
@@ -392,7 +409,7 @@ Examples:</p>
 <br /> <br /></li>
 </ul>
 </li>
-<li><p class="first">For convenience, some Windows&#8217;
+<li><p class="first">For convenience, some Windows’
 <a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx">Known Folders</a>
 are also predefined. They may come handy to configure some packages.</p>
 <table border="1" class="docutils">
@@ -721,7 +738,7 @@ file.</p>
 a specific <strong>machine</strong> and/or under a specific <strong>user</strong> session.</p>
 <p>To do that, the configuration file must be named according to a predefined
 pattern.</p>
-<p>For example, <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code> which is application&#8217;s main configuration
+<p>For example, <code class="file docutils literal"><span class="pre">Keypirinha.ini</span></code> which is application’s main configuration
 file. <code class="docutils literal"><span class="pre">Keypirinha</span></code> being the <em>name</em> part of the file. Keypirinha will
 automatically scan for these files each time it has to load its configuration
 files, <strong>in order</strong> of precedence, which means a value redefined in a file
@@ -788,7 +805,7 @@ directory.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

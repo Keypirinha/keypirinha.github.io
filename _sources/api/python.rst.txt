@@ -21,6 +21,17 @@ commands in the Console window::
     '3.5.0 (default, Oct 18 2015, 16:49:14) [MSC v.1800 64 bit (AMD64)]'
 
 
+Non-Debug
+=========
+
+When started, |project| initializes the embedded Python interpreter and enables
+its *optimize* flag. This is equivalent to running the standard Python command
+with the ``-O`` option.
+
+As a result, the ``__debug__`` constant is false and ``assert`` statements are
+not executed.
+
+
 Modifications
 =============
 
@@ -48,25 +59,15 @@ too.
 os.environ
 ----------
 
-**In short:** |project| automatically updates the content of the
-:py:data:`os.environ` map every time an environment variable has been modified
-so the plugins always get up-to-date values environment.
+In the Python implementation that |project| embeds, the :py:data:`os.environ`
+map is created at import time and never updated. The :py:func:`os.getenv`
+function does not help here because it is just a wrapper around
+``os.environ.get()``.
 
-**Context:** |project| has been designed to dynamically adapt as much as
-possible to any modification made to its running context. That includes the
-environment variables.
+As a result, a |project| plugin would not be able to read up-to-date environment
+variables except by requesting the Windows API which is quite tedious in this
+case.
 
-**Problem:** In the CPython implementation, the :py:data:`os.environ` map is
-created at import time and never updated. The :py:func:`os.getenv` function does
-not help here because it is just a wrapper around ``os.environ.get()``. As a
-consequence, a plugin that receives the ``EVENTS`` message (see
-:py:meth:`keypirinha.Plugin.on_events`) and wants to get the up-to-date value of
-an environment variable would not be able to do so easily with the default
-implementation.
-
-**Solution:** When |project| catches a system notification indicating a
-modification to the environment, it updates the environment block associated to
-the current process, then eventually refreshes the :py:data:`os.environ` map.
-This mechanism is totally transparent to the plugins and updated environment
-values can be just read the standard way: either by accessing the
-:py:data:`os.environ` map or by calling :py:func:`os.getenv`.
+|project| solves this issue by automatically updating :py:data:`os.environ`
+every time an environment variable has been modified so the plugins always get
+up-to-date values.

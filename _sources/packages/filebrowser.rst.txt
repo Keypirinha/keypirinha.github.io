@@ -6,6 +6,13 @@ Available since version 2.7
 
 The FileBrowser package allows to browse the file system as you type.
 
+.. note::
+    * If you are looking for a way to catalog files you frequently use, check
+      out the :doc:`filescatalog`
+    * If you are looking for a way to search for files regardless of their
+      location, check out the :doc:`everything` (requires a third-party
+      software)
+
 
 Catalog Items
 =============

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1. Internal Package &mdash; Keypirinha</title>
+  <title>5.9. FilesCatalog Package &mdash; Keypirinha</title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.2. Apps Package" href="apps.html"/>
-        <link rel="prev" title="5. Shipped Packages" href="../shipped-packages.html"/> 
+        <link rel="next" title="5.10. FileZilla Package" href="filezilla.html"/>
+        <link rel="prev" title="5.8. FileBrowser Package" href="filebrowser.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -102,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../update.html">3. Update Procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../first.html">4. First steps</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../shipped-packages.html">5. Shipped Packages</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.1. Internal Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal.html">5.1. Internal Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="apps.html">5.2. Apps Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bookmarks.html">5.3. Bookmarks Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calc.html">5.4. Calc Package</a></li>
@@ -110,7 +110,10 @@
 <li class="toctree-l2"><a class="reference internal" href="env.html">5.6. Env Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="everything.html">5.7. Everything Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filescatalog.html">5.9. FilesCatalog Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.9. FilesCatalog Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">5.9.1. Introduction</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.10. FileZilla Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.11. GoogleTranslate Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="putty.html">5.12. PuTTY Package</a></li>
@@ -186,7 +189,7 @@
         
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
         
-      <li>5.1. Internal Package</li>
+      <li>5.9. FilesCatalog Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,26 +206,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="internal-package">
-<h1>5.1. Internal Package<a class="headerlink" href="#internal-package" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal"><span class="pre">Internal</span></code> is the only package that is not visible on the filesystem as it is
-implemented in the application itself. It gives access to some core features of
-Keypirinha by populating the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with special items that all have got
-the <code class="docutils literal"><span class="pre">Keypirinha:</span></code> prefix.</p>
-<p>Here are some of the items that the <code class="docutils literal"><span class="pre">Internal.About</span></code> plugin populates:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Configure</span> <span class="pre">Application</span></code> to edit application’s configuration
-file(s)</li>
-<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Refresh</span> <span class="pre">Catalog</span></code> to ask all packages to force refresh their
-catalog</li>
-<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Console</span></code> to show the <a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a> window</li>
-<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">About</span></code> to see application’s <code class="docutils literal"><span class="pre">About</span></code> dialog box</li>
-<li><code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Exit</span></code> to quit Keypirinha</li>
+  <div class="section" id="filescatalog-package">
+<h1>5.9. FilesCatalog Package<a class="headerlink" href="#filescatalog-package" title="Permalink to this headline">¶</a></h1>
+<p>Available since version 2.16</p>
+<p>A package to catalog the content of your filesystem in a fine-grained fashion.</p>
+<p>It allows to quickly access specific files and/or applications <strong>you frequently
+use</strong> without needing a third-party software like the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a> does.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This package is addressed to advanced users (read more below)</li>
+<li>If you are looking for a way to browse the file system as you type a path,
+check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></li>
+<li>If you are looking for a way to search for files regardless of their
+location, check out the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a> (requires a third-party
+software)</li>
 </ul>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">The best way to list all the items populated by this plugin is to type the
-<code class="docutils literal"><span class="pre">keypirinha:</span></code> string in the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
+</div>
+<div class="section" id="introduction">
+<h2>5.9.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This package does not catalog any item by default and must be configured.</p>
+<p>It is mainly addressed to advanced users who wish to have full control on the
+content of their <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. As a result, configuring it may feel like
+quite a tedious task to some, in which case you are invited to either explore
+the features offered by the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a>, or ask for help in the
+<a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>.</p>
+<p>To get the best out of it in terms of efficiency (speed and memory), it is
+important to understand the technical details exposed as comments in package’s
+default configuration file.</p>
+<p>Head over to the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a> if you have technical questions.</p>
 </div>
 </div>
 
@@ -236,10 +248,10 @@ catalog</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="apps.html" class="btn btn-neutral float-right" title="5.2. Apps Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="filezilla.html" class="btn btn-neutral float-right" title="5.10. FileZilla Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../shipped-packages.html" class="btn btn-neutral" title="5. Shipped Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="filebrowser.html" class="btn btn-neutral" title="5.8. FileBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

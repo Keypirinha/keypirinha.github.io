@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.13. String Package &mdash; Keypirinha</title>
+  <title>5.14. String Package &mdash; Keypirinha</title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.14. TaskSwitcher Package" href="taskswitcher.html"/>
-        <link rel="prev" title="5.12. RegBrowser Package" href="regbrowser.html"/> 
+        <link rel="next" title="5.15. TaskSwitcher Package" href="taskswitcher.html"/>
+        <link rel="prev" title="5.13. RegBrowser Package" href="regbrowser.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -110,21 +110,22 @@
 <li class="toctree-l2"><a class="reference internal" href="env.html">5.6. Env Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="everything.html">5.7. Everything Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.10. GoogleTranslate Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.13. String Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#features">5.13.1. Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#usage">5.13.2. Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filescatalog.html">5.9. FilesCatalog Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.10. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.11. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.12. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.13. RegBrowser Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.14. String Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">5.14.1. Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">5.14.2. Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="url.html">5.15. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.17. WebSuggest Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.18. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.19. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.15. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">5.16. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.17. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.18. WebSuggest Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.19. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.20. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
@@ -189,7 +190,7 @@
         
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
         
-      <li>5.13. String Package</li>
+      <li>5.14. String Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -207,14 +208,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="string-package">
-<h1>5.13. String Package<a class="headerlink" href="#string-package" title="Permalink to this headline">¶</a></h1>
+<h1>5.14. String Package<a class="headerlink" href="#string-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.13</p>
 <p>A multi-purpose plugin for string conversion and generation.</p>
 <div class="section" id="features">
-<h2>5.13.1. Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<h2>5.14.1. Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Case conversion</li>
-<li>Hash a string using standard algorithms like CRC32, MD5, SHA*, etc...</li>
+<li>Hash a string using standard algorithms like CRC32, MD5, SHA*, etc…</li>
 <li>Generate a random UUID, also called GUID</li>
 <li>Generate a random password</li>
 <li>Generate random bytes</li>
@@ -230,7 +231,7 @@
 <img alt="../_images/pack-string-urlsplit.png" class="align-center" src="../_images/pack-string-urlsplit.png" />
 </div>
 <div class="section" id="usage">
-<h2>5.13.2. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>5.14.2. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>For an overview of all the items populated by this package, type <code class="docutils literal"><span class="pre">string:</span></code> in
 the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>.</p>
 <p>Most of these items are self-explanatory, however some of them accept a bit of
@@ -258,10 +259,10 @@ changes</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="taskswitcher.html" class="btn btn-neutral float-right" title="5.14. TaskSwitcher Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="taskswitcher.html" class="btn btn-neutral float-right" title="5.15. TaskSwitcher Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="regbrowser.html" class="btn btn-neutral" title="5.12. RegBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="regbrowser.html" class="btn btn-neutral" title="5.13. RegBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -291,7 +292,7 @@ changes</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

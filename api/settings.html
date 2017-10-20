@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -215,12 +215,12 @@ should be called instead, or <a class="reference internal" href="module.html#key
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; The name of the setting to find</li>
-<li><strong>section</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) &#8211; You can optionally specify a section name.
+<li><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The name of the setting to find</li>
+<li><strong>section</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – You can optionally specify a section name.
 Otherwise the key will be searched in the default section.</li>
-<li><strong>fallback</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#any" title="(in Python v3.6)"><em>any</em></a>) &#8211; A fallback value in case <em>key</em> does not exist in the
+<li><strong>fallback</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#any" title="(in Python v3.6)"><em>any</em></a>) – A fallback value in case <em>key</em> does not exist in the
 specified <em>section</em>.</li>
-<li><strong>unquote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) &#8211; Unquote the resulting value if it is encapsulated by
+<li><strong>unquote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Unquote the resulting value if it is encapsulated by
 a pair of single-quotes <code class="docutils literal"><span class="pre">'</span></code> or by a pair of double-quotes
 <code class="docutils literal"><span class="pre">&quot;</span></code>.</li>
 </ul>
@@ -325,8 +325,8 @@ argument) then stripped before being compared.</p>
 <code class="descname">get_multiline</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=[]</em>, <em>keep_empty_lines=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_multiline" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal"><span class="pre">get()</span></code></a> to read multiline values.
 It returns a list of lines (strings).</p>
-<p>The <em>fallback</em> argument is returned if the setting was not found or if
-the read value is empty (i.e. no line remains after the
+<p>A copy of the <em>fallback</em> argument is returned if the setting was not
+found or if the read value is empty (i.e. no line remains after the
 <em>keep_empty_lines</em> option has been applied).</p>
 </dd></dl>
 
@@ -415,7 +415,7 @@ spaces).</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

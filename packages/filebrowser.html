@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.9. FileZilla Package" href="filezilla.html"/>
+        <link rel="next" title="5.9. FilesCatalog Package" href="filescatalog.html"/>
         <link rel="prev" title="5.7. Everything Package" href="everything.html"/> 
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -116,17 +116,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#configuration">5.8.4. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.10. GoogleTranslate Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="string.html">5.13. String Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="url.html">5.15. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.17. WebSuggest Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.18. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.19. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filescatalog.html">5.9. FilesCatalog Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.10. FileZilla Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googletranslate.html">5.11. GoogleTranslate Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.12. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.13. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">5.14. String Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.15. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">5.16. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.17. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.18. WebSuggest Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.19. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.20. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
@@ -212,26 +213,36 @@
 <h1>5.8. FileBrowser Package<a class="headerlink" href="#filebrowser-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.7</p>
 <p>The FileBrowser package allows to browse the file system as you type.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If you are looking for a way to catalog files you frequently use, check
+out the <a class="reference internal" href="filescatalog.html"><span class="doc">FilesCatalog Package</span></a></li>
+<li>If you are looking for a way to search for files regardless of their
+location, check out the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a> (requires a third-party
+software)</li>
+</ul>
+</div>
 <div class="section" id="catalog-items">
 <h2>5.8.1. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
 <p>This package does not pre-create any item in the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. Instead, it
 tries to match your initial search term with specific patterns:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">/</span></code> or <code class="docutils literal"><span class="pre">\</span></code> will list the drives that are mounted (e.g. <code class="docutils literal"><span class="pre">C:\</span></code>, ...) <br />
+<li><code class="docutils literal"><span class="pre">/</span></code> or <code class="docutils literal"><span class="pre">\</span></code> will list the drives that are mounted (e.g. <code class="docutils literal"><span class="pre">C:\</span></code>, …) <br />
 If the <code class="docutils literal"><span class="pre">show_recents</span></code> option is enabled (default), the list of the paths
-recently entered into Windows Explorer&#8217;s address bar will also be included</li>
+recently entered into Windows Explorer’s address bar will also be included</li>
 <li><code class="docutils literal"><span class="pre">C:</span></code>, <code class="docutils literal"><span class="pre">D:</span></code> or <code class="docutils literal"><span class="pre">X:</span></code> (case insensitive) will start browsing the drive
 associated with the given letter</li>
 <li>An absolute path like <code class="docutils literal"><span class="pre">c:\windows</span></code>, <code class="docutils literal"><span class="pre">D:\My</span> <span class="pre">Dir\AnyFile.txt</span></code></li>
 <li>Environment variables are automatically expanded like in
 <code class="docutils literal"><span class="pre">%USERPROFILE%\Documents</span></code></li>
-<li>The <code class="docutils literal"><span class="pre">~</span></code> (tilde) character (<strong>configurable</strong>) to access to your &#8220;home&#8221;
-directory(ies). Check the &#8220;Home feature&#8221; section below.</li>
+<li>The <code class="docutils literal"><span class="pre">~</span></code> (tilde) character (<strong>configurable</strong>) to access to your “home”
+directory(ies). Check the “Home feature” section below.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Some items from the filesystem may or may not show up, depending on
-package&#8217;s configuration. For more info, refer to the configuration file and
+package’s configuration. For more info, refer to the configuration file and
 check the <code class="docutils literal"><span class="pre">show_dirs_first</span></code>, <code class="docutils literal"><span class="pre">show_hidden_files</span></code>,
 <code class="docutils literal"><span class="pre">show_system_files</span></code> and <code class="docutils literal"><span class="pre">show_network_files</span></code> settings.</p>
 </div>
@@ -246,9 +257,9 @@ addition to <code class="docutils literal"><span class="pre">\</span></code>.</l
 </div>
 <div class="section" id="home-feature">
 <h2>5.8.2. Home feature<a class="headerlink" href="#home-feature" title="Permalink to this headline">¶</a></h2>
-<p>The &#8220;home&#8221; feature allows you to get quick access to your favorite(s) folder(s)
+<p>The “home” feature allows you to get quick access to your favorite(s) folder(s)
 by typing a given <em>trigger</em> of your choice (<code class="docutils literal"><span class="pre">~</span></code> by default).</p>
-<p>Check out package&#8217;s configuration file for more details.</p>
+<p>Check out package’s configuration file for more details.</p>
 </div>
 <div class="section" id="actions">
 <h2>5.8.3. Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
@@ -281,7 +292,7 @@ its configuration file.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="filezilla.html" class="btn btn-neutral float-right" title="5.9. FileZilla Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="filescatalog.html" class="btn btn-neutral float-right" title="5.9. FilesCatalog Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="everything.html" class="btn btn-neutral" title="5.7. Everything Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -314,7 +325,7 @@ its configuration file.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

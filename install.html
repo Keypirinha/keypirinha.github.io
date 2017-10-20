@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -191,8 +191,8 @@
 <h1>2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If Keypirinha is already installed and you just want to update, go to the
-<a class="reference internal" href="update.html"><span class="doc">Update Procedure</span></a> chapter.</p>
+<p class="last">Go to the <a class="reference internal" href="update.html"><span class="doc">Update Procedure</span></a> chapter if Keypirinha is already installed and you
+just want to update.</p>
 </div>
 <div class="section" id="requirements">
 <h2>2.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
@@ -204,13 +204,12 @@ dependencies.</p>
 <p>Keypirinha currently comes in a simple archive that can be uncompressed about
 anywhere you want. There is no installer.</p>
 <p><strong>Out of the box</strong>, it is configured to run in <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>, which
-means all the configuration and runtime files are contained under Keypirinha&#8216;s
+means all the configuration and runtime files are contained under Keypirinha’s
 directory.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">It is <strong>not recommended</strong> to extract Keypirinha to your Desktop or you Start
-Menu folder as you may experience unexpected behavior (see <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/229">issue #229</a> for
-more info).</p>
+Menu folder as you may experience unexpected behavior (see <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/229">issue #229</a>).</p>
 </div>
 </div>
 <div class="section" id="installed-vs-portable-mode">
@@ -218,8 +217,9 @@ more info).</p>
 <p>Keypirinha can run in two different flavors: <a class="reference internal" href="#install-installed"><span class="std std-ref">Installed Mode</span></a> or
 <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
 <p>Each time Keypirinha is being launched, it checks if the <code class="file docutils literal"><span class="pre">portable</span></code> folder
-exists under Keypirinha&#8216;s directory. If it does, the application will run in
-<a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>, otherwise the <a class="reference internal" href="#install-installed"><span class="std std-ref">Installed Mode</span></a> is selected.</p>
+or the <code class="file docutils literal"><span class="pre">portable.ini</span></code> file exist under Keypirinha’s directory. If they do,
+the application will run in <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>, otherwise the
+<a class="reference internal" href="#install-installed"><span class="std std-ref">Installed Mode</span></a> is selected.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">There is currently no automated way to ease switching between the two modes
@@ -231,29 +231,63 @@ not running.</strong></p>
 <span id="install-portable"></span><h3>2.3.1. Portable Mode<a class="headerlink" href="#portable-mode" title="Permalink to this headline">¶</a></h3>
 <p>The Portable Mode keeps all the files needed by Keypirinha in a single folder,
 making it easy to be moved around on a USB stick for example.</p>
-<p>The configuration files and downloaded extra packages will be stored in the
-<code class="file docutils literal"><span class="pre">portable\Profile</span></code> folder, directly located in Keypirinha&#8216;s directory.</p>
-<p>Cache files and any other kind of temporary files will be stored in the
-<code class="file docutils literal"><span class="pre">portable\Local</span></code> folder, directly located in Keypirinha&#8216;s directory.</p>
+<p>By default, all the data files of Keypirinha and its plugins will be located
+under the <code class="file docutils literal"><span class="pre">portable</span></code> directory, directly located in Keypirinha’s
+directory:</p>
+<ul class="simple">
+<li>Configuration files and downloaded extra packages will be stored in
+<code class="file docutils literal"><span class="pre">portable\Profile</span></code></li>
+<li>Cache files and any other kind of temporary files will be stored in
+<code class="file docutils literal"><span class="pre">portable\Local</span></code></li>
+</ul>
+<p>Optionally, it is also possible to specify the location of the content of
+the <code class="file docutils literal"><span class="pre">portable</span></code> directory by creating a <code class="file docutils literal"><span class="pre">portable.ini</span></code> file in
+Keypirinha’s directory (i.e. same directory than <code class="file docutils literal"><span class="pre">keypirinha.exe</span></code>) and
+define the <code class="docutils literal"><span class="pre">portable_dir</span></code> value in it. <br />
+Here is a sample <code class="file docutils literal"><span class="pre">portable.ini</span></code> (only the <code class="docutils literal"><span class="pre">portable_dir</span></code> line is
+needed):</p>
+<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="c1"># Notes:</span>
+<span class="c1"># * The specified directory must exist already when Keypirinha is started</span>
+<span class="c1">#   and it must be readable and writable by Keypirinha</span>
+<span class="c1"># * If the path is not absolute, it is assumed to be relative to</span>
+<span class="c1">#   Keypirinha&#39;s directory</span>
+<span class="c1"># * In this example, both sub-directories will be created automatically by</span>
+<span class="c1">#   Keypirinha if needed:</span>
+<span class="c1">#     C:\SomewhereUnderTheRainbow\KeypirinhaData\Profile</span>
+<span class="c1">#     C:\SomewhereUnderTheRainbow\KeypirinhaData\Local</span>
+<span class="c1"># * It does not have to be named KeypirinhaData</span>
+<span class="c1"># * File must be encoded in UTF-8 (no BOM necessary)</span>
+<span class="na">portable_dir</span> <span class="o">=</span> <span class="s">C:\SomewhereUnderTheRainbow\KeypirinhaData</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The <code class="file docutils literal"><span class="pre">portable.ini</span></code> file takes precedence over the presence of the
+<code class="file docutils literal"><span class="pre">portable</span></code> directory</li>
+<li>The <code class="file docutils literal"><span class="pre">portable</span></code> directory may be removed if you are using a
+<code class="file docutils literal"><span class="pre">portable.ini</span></code> file</li>
+<li>To avoid any trouble with your data, Keypirinha will exit immediately if
+any error occurs related to this setting.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="installed-mode">
 <span id="install-installed"></span><h3>2.3.2. Installed Mode<a class="headerlink" href="#installed-mode" title="Permalink to this headline">¶</a></h3>
-<p>The Installed Mode complies to the Windows&#8217; conventional way of storing
-applications&#8217; data under user&#8217;s dedicated folder. Usually something like:
-<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%</span></code>.</p>
-<p>The configuration files and downloaded extra packages will be stored in the
-<code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code> folder.
-That might be translated to something like that on your machine:
-<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Roaming\Keypirinha</span></code>.</p>
-<p>Cache files and any other kind of temporary files will be stored in the
-<code class="file docutils literal"><span class="pre">%LOCALAPPDATA%\Keypirinha</span></code> folder.
-That might be translated to something like that on your machine:
-<code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Local\Keypirinha</span></code>.</p>
+<p>The Installed Mode complies to the Windows’ standard way of storing data under
+user’s dedicated folder (e.g. <code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%</span></code>).</p>
+<ul class="simple">
+<li>Configuration files and downloaded extra packages will be stored in
+<code class="file docutils literal"><span class="pre">%APPDATA%\Keypirinha</span></code> folder. <br />
+e.g. <code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Roaming\Keypirinha</span></code></li>
+<li>Cache files and any other kind of temporary files will be stored in
+<code class="file docutils literal"><span class="pre">%LOCALAPPDATA%\Keypirinha</span></code> <br />
+e.g. <code class="file docutils literal"><span class="pre">C:\Users\%USERNAME%\AppData\Local\Keypirinha</span></code></li>
+</ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">In order to be able to run under this mode, the <code class="file docutils literal"><span class="pre">portable</span></code> directory
-must <strong>not</strong> exist. So be sure you have deleted it after copying your files
-to their new locations.</p>
+<p class="last">In order to be able to run under this mode, both <code class="file docutils literal"><span class="pre">portable</span></code> and
+<code class="file docutils literal"><span class="pre">portable.ini</span></code> must <strong>not</strong> exist in Keypirinha’s directory.</p>
 </div>
 </div>
 </div>
@@ -302,7 +336,7 @@ to their new locations.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

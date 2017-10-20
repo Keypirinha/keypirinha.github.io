@@ -87,7 +87,8 @@ No, |project| can be considered stable.
 
 |project| is used by a small but involved community that has shown itself
 reactive in reporting issues and interacting with the developer. As a result,
-maintenance releases are usually pushed pretty fast if a bug is reported.
+maintenance releases are usually pushed pretty fast if a severe issue is
+reported.
 
 
 .. _faq-support:

@@ -180,6 +180,13 @@ values that may come handy.
 To use them, use the following syntax in your configuration file: |br|
 ``${var:APP_DIR}`` or ``${var:KNOWNFOLDER_MUSIC}``, ...
 
+* ``APP_DRIVE`` |br|
+  The drive on which the application is installed. |br|
+  Example:
+
+  - ``C:\``
+    |br| |br|
+
 * ``APP_DIR`` |br|
   The path to the root/install directory of the application. |br|
   Examples:
@@ -194,6 +201,14 @@ To use them, use the following syntax in your configuration file: |br|
 
   - ``C:\Program Files\Keypirinha\Keypirinha.exe`` (installed mode)
   - ``U:\USBApps\Keypirinha\Keypirinha.exe`` (portable mode)
+    |br| |br|
+
+* ``APP_ARCH`` |br|
+  The architecture of the application. |br|
+  Possible values:
+
+  - ``x86`` (32-bit)
+  - ``x64`` (64-bit)
     |br| |br|
 
 * ``PROFILE_DIR`` |br|

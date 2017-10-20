@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.10. GoogleTranslate Package &mdash; Keypirinha</title>
+  <title>5.11. GoogleTranslate Package &mdash; Keypirinha</title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Keypirinha" href="../index.html"/>
         <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.11. PuTTY Package" href="putty.html"/>
-        <link rel="prev" title="5.9. FileZilla Package" href="filezilla.html"/> 
+        <link rel="next" title="5.12. PuTTY Package" href="putty.html"/>
+        <link rel="prev" title="5.10. FileZilla Package" href="filezilla.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -110,23 +110,24 @@
 <li class="toctree-l2"><a class="reference internal" href="env.html">5.6. Env Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="everything.html">5.7. Everything Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.9. FileZilla Package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.10. GoogleTranslate Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#usage">5.10.1. Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-items">5.10.2. Custom Items</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#search-grammar">5.10.3. Search Grammar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#google-translate-supported-languages">5.10.4. Google Translate Supported Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filescatalog.html">5.9. FilesCatalog Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.10. FileZilla Package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.11. GoogleTranslate Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">5.11.1. Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-items">5.11.2. Custom Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-grammar">5.11.3. Search Grammar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-translate-supported-languages">5.11.4. Google Translate Supported Languages</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="putty.html">5.11. PuTTY Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.12. RegBrowser Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="string.html">5.13. String Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.14. TaskSwitcher Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="url.html">5.15. URL Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.16. WebSearch Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.17. WebSuggest Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.18. Winamp Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.19. WinSCP Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="putty.html">5.12. PuTTY Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regbrowser.html">5.13. RegBrowser Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">5.14. String Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taskswitcher.html">5.15. TaskSwitcher Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url.html">5.16. URL Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch.html">5.17. WebSearch Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websuggest.html">5.18. WebSuggest Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winamp.html">5.19. Winamp Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winscp.html">5.20. WinSCP Package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributions.html">6. Third-Party Packages</a></li>
@@ -191,7 +192,7 @@
         
           <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
         
-      <li>5.10. GoogleTranslate Package</li>
+      <li>5.11. GoogleTranslate Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -209,15 +210,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="googletranslate-package">
-<h1>5.10. GoogleTranslate Package<a class="headerlink" href="#googletranslate-package" title="Permalink to this headline">¶</a></h1>
+<h1>5.11. GoogleTranslate Package<a class="headerlink" href="#googletranslate-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.10</p>
 <p>Suggest translations using Google Translate online service, to/from any
 supported language.</p>
 <div class="section" id="usage">
-<h2>5.10.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>5.11.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>By default, a <code class="docutils literal"><span class="pre">Translate</span></code> item is inserted into the Catalog using the default
 source and target language parameters provided by the configuration file.</p>
-<p>Select the item and type the term(s) you wish to translate as item&#8217;s argument.</p>
+<p>Select the item and type the term(s) you wish to translate as item’s argument.</p>
 <p>The plugin then queries the Google Translate service and adds the result as a
 suggestion in the results list.</p>
 <p>The default action when pressing the <code class="kbd docutils literal"><span class="pre">Enter</span></code> key is to copy the result to
@@ -225,8 +226,8 @@ the clipboard. Press <code class="kbd docutils literal"><span class="pre">Ctrl+E
 this result.</p>
 </div>
 <div class="section" id="custom-items">
-<h2>5.10.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
-<p>If you wish to have more &#8220;translate&#8221; items available with different predefined
+<h2>5.11.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
+<p>If you wish to have more “translate” items available with different predefined
 language parameters, it is possible to define extra items in the configuration
 file by declaring <code class="docutils literal"><span class="pre">custom_item</span></code> sections.</p>
 <p>Refer to the default configuration file of the package for more information.</p>
@@ -236,7 +237,7 @@ file by declaring <code class="docutils literal"><span class="pre">custom_item</
 </div>
 </div>
 <div class="section" id="search-grammar">
-<h2>5.10.3. Search Grammar<a class="headerlink" href="#search-grammar" title="Permalink to this headline">¶</a></h2>
+<h2>5.11.3. Search Grammar<a class="headerlink" href="#search-grammar" title="Permalink to this headline">¶</a></h2>
 <p>For translation queries that do not necessitate the creation of custom items, it
 is possible to change the language parameters on-the-fly, at search time,
 without having to modify the configuration file.</p>
@@ -258,7 +259,7 @@ grammars as its argument:</p>
 <p>Grammar <code class="docutils literal"><span class="pre">A</span></code> being the most basic, it fully relies on the source and target
 languages used to create the item that is currently selected (may it be the
 <em>default</em> item or a <em>custom</em> one).</p>
-<p>Grammar <code class="docutils literal"><span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">C</span></code> both allow to override item&#8217;s language code(s).</p>
+<p>Grammar <code class="docutils literal"><span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">C</span></code> both allow to override item’s language code(s).</p>
 <p>Example <code class="docutils literal"><span class="pre">2</span></code> forces the target language to be Spanish, but keeps the source
 language of the currently selected item.</p>
 <p>Examples <code class="docutils literal"><span class="pre">3</span></code> and <code class="docutils literal"><span class="pre">4</span></code> are equivalent and secure the source language to be
@@ -275,14 +276,14 @@ language.</li>
 <li>If both grammars <code class="docutils literal"><span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">C</span></code> are used in the same argument, <code class="docutils literal"><span class="pre">C</span></code>
 prevails.</li>
 <li>If a source/target language code specified via this grammar is unknown, no
-warning message is issued and item&#8217;s code will silently be used. However it
+warning message is issued and item’s code will silently be used. However it
 is possible to check what language code have been used in a particular query
-by having a look at item&#8217;s description line.</li>
+by having a look at item’s description line.</li>
 </ul>
 </div>
 </div>
 <div class="section" id="google-translate-supported-languages">
-<h2>5.10.4. Google Translate Supported Languages<a class="headerlink" href="#google-translate-supported-languages" title="Permalink to this headline">¶</a></h2>
+<h2>5.11.4. Google Translate Supported Languages<a class="headerlink" href="#google-translate-supported-languages" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="13%" />
@@ -731,10 +732,10 @@ by having a look at item&#8217;s description line.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="putty.html" class="btn btn-neutral float-right" title="5.11. PuTTY Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="putty.html" class="btn btn-neutral float-right" title="5.12. PuTTY Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="filezilla.html" class="btn btn-neutral" title="5.9. FileZilla Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="filezilla.html" class="btn btn-neutral" title="5.10. FileZilla Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -764,7 +765,7 @@ by having a look at item&#8217;s description line.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

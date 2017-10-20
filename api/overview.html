@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.15.4
+                2.16
               </div>
             
           
@@ -254,11 +254,11 @@ to the Plugins a very cheap API call
 <a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a> method <strong>as frequently as
 possible</strong> to check if the current call should be interrupted immediately.
 Especially at <strong>I/O boundaries</strong> like file operation, directories scanning,
-network requests, etc...</p>
+network requests, etc…</p>
 </div>
 <p>To synthesize, it is technically possible that several instances of a same
 plugin coexist. In that case, Keypirinha will <strong>always</strong> use and communicate with
-the <strong>last loaded</strong> instance so the user wouldn&#8217;t even notice. To differentiate
+the <strong>last loaded</strong> instance so the user wouldn’t even notice. To differentiate
 several instances of a Plugin, Keypirinha internally gives an incremented ID
 number to every loaded instance of a Package and its plugins.</p>
 </div>
@@ -294,7 +294,7 @@ Otherwise, it is sent only to the parent <em>plugin</em>.</p>
 called and it is up to it to actually execute the passed item.</p>
 <p>These are the main messages that a plugin developer usually wants to implement.
 Other messages are mainly notifications that helps plugin to be up-to-date with
-user&#8217;s settings and environment.</p>
+user’s settings and environment.</p>
 </div>
 </div>
 <div class="section" id="getting-started">
@@ -307,11 +307,11 @@ packages.</p>
 <code class="file docutils literal"><span class="pre">default\Packages\*.keypirinha-package</span></code>.</p>
 <p>In particular:</p>
 <ul class="simple">
-<li>the <code class="docutils literal"><span class="pre">Apps</span></code> package shows how to use Keypirinha&#8216;s API to scan directories and
+<li>the <code class="docutils literal"><span class="pre">Apps</span></code> package shows how to use Keypirinha’s API to scan directories and
 files.</li>
 <li>the <code class="docutils literal"><span class="pre">TaskSwitcher</span></code> and <code class="docutils literal"><span class="pre">Winamp</span></code> packages interact with the Win32 API via
 the <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#module-ctypes" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">ctypes</span></code></a> Python standard module.</li>
-<li>the <code class="docutils literal"><span class="pre">ControlPanel</span></code> and <code class="docutils literal"><span class="pre">PuTTY</span></code> packages show how to dig into system&#8217;s
+<li>the <code class="docutils literal"><span class="pre">ControlPanel</span></code> and <code class="docutils literal"><span class="pre">PuTTY</span></code> packages show how to dig into system’s
 Registry using the <a class="reference external" href="https://docs.python.org/3.6/library/winreg.html#module-winreg" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">winreg</span></code></a> Python standard module.</li>
 <li>the <code class="docutils literal"><span class="pre">Calc</span></code> package imports a third-party bundled Python module.</li>
 <li>the <code class="docutils literal"><span class="pre">GoogleTranslate</span></code> package does online HTTP requests to a web-service.</li>
@@ -363,7 +363,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.15.4',
+            VERSION:'2.16',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

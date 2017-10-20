@@ -7,6 +7,12 @@ Available since version 2.3
 Query Everything_ (a **separate** tool) from |project| to find and open any file
 or folder.
 
+.. note::
+    * If you are looking for a way to browse the file system as you type a path,
+      check out the :doc:`filebrowser`
+    * If you are looking for a way to catalog files you frequently use, check
+      out the :doc:`filescatalog`
+
 
 Requirements
 ============

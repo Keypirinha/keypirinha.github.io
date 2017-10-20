@@ -4,8 +4,8 @@ Installation
 
 
 .. warning::
-    If |project| is already installed and you just want to update, go to the
-    :doc:`update` chapter.
+    Go to the :doc:`update` chapter if |project| is already installed and you
+    just want to update.
 
 
 Requirements
@@ -27,8 +27,7 @@ directory.
 
 .. warning::
     It is **not recommended** to extract |project| to your Desktop or you Start
-    Menu folder as you may experience unexpected behavior (see :issue:`229` for
-    more info).
+    Menu folder as you may experience unexpected behavior (see :issue:`229`).
 
 
 Installed vs. Portable mode
@@ -38,8 +37,9 @@ Installed vs. Portable mode
 :ref:`install-portable`.
 
 Each time |project| is being launched, it checks if the :file:`portable` folder
-exists under |project|'s directory. If it does, the application will run in
-:ref:`install-portable`, otherwise the :ref:`install-installed` is selected.
+or the :file:`portable.ini` file exist under |project|'s directory. If they do,
+the application will run in :ref:`install-portable`, otherwise the
+:ref:`install-installed` is selected.
 
 .. note::
     There is currently no automated way to ease switching between the two modes
@@ -56,11 +56,44 @@ Portable Mode
 The Portable Mode keeps all the files needed by |project| in a single folder,
 making it easy to be moved around on a USB stick for example.
 
-The configuration files and downloaded extra packages will be stored in the
-:file:`portable\\Profile` folder, directly located in |project|'s directory.
+By default, all the data files of |project| and its plugins will be located
+under the :file:`portable` directory, directly located in |project|'s
+directory:
 
-Cache files and any other kind of temporary files will be stored in the
-:file:`portable\\Local` folder, directly located in |project|'s directory.
+* Configuration files and downloaded extra packages will be stored in
+  :file:`portable\\Profile`
+* Cache files and any other kind of temporary files will be stored in
+  :file:`portable\\Local`
+
+Optionally, it is also possible to specify the location of the content of
+the :file:`portable` directory by creating a :file:`portable.ini` file in
+|project|'s directory (i.e. same directory than :file:`keypirinha.exe`) and
+define the ``portable_dir`` value in it. |br|
+Here is a sample :file:`portable.ini` (only the ``portable_dir`` line is
+needed):
+
+.. code-block:: ini
+
+    # Notes:
+    # * The specified directory must exist already when Keypirinha is started
+    #   and it must be readable and writable by Keypirinha
+    # * If the path is not absolute, it is assumed to be relative to
+    #   Keypirinha's directory
+    # * In this example, both sub-directories will be created automatically by
+    #   Keypirinha if needed:
+    #     C:\SomewhereUnderTheRainbow\KeypirinhaData\Profile
+    #     C:\SomewhereUnderTheRainbow\KeypirinhaData\Local
+    # * It does not have to be named KeypirinhaData
+    # * File must be encoded in UTF-8 (no BOM necessary)
+    portable_dir = C:\SomewhereUnderTheRainbow\KeypirinhaData
+
+.. note::
+    * The :file:`portable.ini` file takes precedence over the presence of the
+      :file:`portable` directory
+    * The :file:`portable` directory may be removed if you are using a
+      :file:`portable.ini` file
+    * To avoid any trouble with your data, |project| will exit immediately if
+      any error occurs related to this setting.
 
 
 .. _install-installed:
@@ -68,21 +101,16 @@ Cache files and any other kind of temporary files will be stored in the
 Installed Mode
 --------------
 
-The Installed Mode complies to the Windows' conventional way of storing
-applications' data under user's dedicated folder. Usually something like:
-:file:`C:\\Users\\%USERNAME%`.
+The Installed Mode complies to the Windows' standard way of storing data under
+user's dedicated folder (e.g. :file:`C:\\Users\\%USERNAME%`).
 
-The configuration files and downloaded extra packages will be stored in the
-:file:`%APPDATA%\\Keypirinha` folder.
-That might be translated to something like that on your machine:
-:file:`C:\\Users\\%USERNAME%\\AppData\\Roaming\\Keypirinha`.
-
-Cache files and any other kind of temporary files will be stored in the
-:file:`%LOCALAPPDATA%\\Keypirinha` folder.
-That might be translated to something like that on your machine:
-:file:`C:\\Users\\%USERNAME%\\AppData\\Local\\Keypirinha`.
+* Configuration files and downloaded extra packages will be stored in
+  :file:`%APPDATA%\\Keypirinha` folder. |br|
+  e.g. :file:`C:\\Users\\%USERNAME%\\AppData\\Roaming\\Keypirinha`
+* Cache files and any other kind of temporary files will be stored in
+  :file:`%LOCALAPPDATA%\\Keypirinha` |br|
+  e.g. :file:`C:\\Users\\%USERNAME%\\AppData\\Local\\Keypirinha`
 
 .. warning::
-    In order to be able to run under this mode, the :file:`portable` directory
-    must **not** exist. So be sure you have deleted it after copying your files
-    to their new locations.
+    In order to be able to run under this mode, both :file:`portable` and
+    :file:`portable.ini` must **not** exist in |project|'s directory.

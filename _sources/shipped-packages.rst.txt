@@ -28,6 +28,7 @@ community. Check out the :doc:`contributions` chapter for more info.
     packages/env
     packages/everything
     packages/filebrowser
+    packages/filescatalog
     packages/filezilla
     packages/googletranslate
     packages/putty
