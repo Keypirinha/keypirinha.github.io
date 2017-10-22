@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.16
+                2.16.1
               </div>
             
           
@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="filebrowser.html">5.8. FileBrowser Package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.9. FilesCatalog Package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">5.9.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profiles">5.9.2. Profiles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="filezilla.html">5.10. FileZilla Package</a></li>
@@ -232,9 +233,30 @@ quite a tedious task to some, in which case you are invited to either explore
 the features offered by the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a>, or ask for help in the
 <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>.</p>
 <p>To get the best out of it in terms of efficiency (speed and memory), it is
-important to understand the technical details exposed as comments in package’s
-default configuration file.</p>
-<p>Head over to the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a> if you have technical questions.</p>
+best to understand the technical details exposed as inline comments in the
+default configuration file of the package.</p>
+<p>Do not hesitate to head over to the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a> if you have questions.</p>
+</div>
+<div class="section" id="profiles">
+<h2>5.9.2. Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h2>
+<p>The configuration of this package is profile-based. Each profile correspond to
+one scanning-then-filtering process of your files, before registering them into
+Keypirinha’s <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
+<p>Each profile has essentially the following properties:</p>
+<ul class="simple">
+<li>Its own configuration section in <code class="file docutils literal"><span class="pre">filescatalog.ini</span></code></li>
+<li>A unique name among all the profiles. <br />
+Recommended form is to keep it without space character, in lower case except
+for the first letter of each word like in: <code class="docutils literal"><span class="pre">MyProfile</span></code>, <code class="docutils literal"><span class="pre">Applications</span></code>,
+<code class="docutils literal"><span class="pre">PortableSoftwares</span></code>.</li>
+<li>A set of <em>paths</em> to scan</li>
+<li>A set of <em>filters</em> to include/exclude the scanned items according to their
+name, extension and filesystem attributes (hidden, read-only, …), …</li>
+<li>Optionally a base profile to inherit from. <br />
+It is convenient if you do not want to replicate in the current profile the
+values you already defined in the base profile.</li>
+<li>And other…</li>
+</ul>
 </div>
 </div>
 
@@ -281,7 +303,7 @@ default configuration file.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.16',
+            VERSION:'2.16.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

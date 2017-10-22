@@ -30,7 +30,30 @@ the features offered by the :doc:`everything`, or ask for help in the
 |chat_room|.
 
 To get the best out of it in terms of efficiency (speed and memory), it is
-important to understand the technical details exposed as comments in package's
-default configuration file.
+best to understand the technical details exposed as inline comments in the
+default configuration file of the package.
 
-Head over to the |chat_room| if you have technical questions.
+Do not hesitate to head over to the |chat_room| if you have questions.
+
+
+Profiles
+========
+
+The configuration of this package is profile-based. Each profile correspond to
+one scanning-then-filtering process of your files, before registering them into
+|project|'s :term:`Catalog`.
+
+Each profile has essentially the following properties:
+
+* Its own configuration section in :file:`filescatalog.ini`
+* A unique name among all the profiles. |br|
+  Recommended form is to keep it without space character, in lower case except
+  for the first letter of each word like in: ``MyProfile``, ``Applications``,
+  ``PortableSoftwares``.
+* A set of *paths* to scan
+* A set of *filters* to include/exclude the scanned items according to their
+  name, extension and filesystem attributes (hidden, read-only, ...), ...
+* Optionally a base profile to inherit from. |br|
+  It is convenient if you do not want to replicate in the current profile the
+  values you already defined in the base profile.
+* And other...
