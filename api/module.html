@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -222,10 +222,12 @@ has impacted at least one value (in which case this flag is combined with
 <code class="descname">DESKTOP</code><em class="property"> = 4096</em><a class="headerlink" href="#keypirinha.Events.DESKTOP" title="Permalink to this definition">¶</a></dt>
 <dd><p>The content of the Desktop has changed (common and/or user’s).
 It can be because its structure has been modified (folders), or because
-some files/shortcuts have been added, modified, moved or removed.
-Keypirinha groups events from the file system a little before sending
+some files/shortcuts have been added, modified, moved or removed.</p>
+<p>Keypirinha groups events from the file system a little before sending
 them to the plugins by waiting a couple of seconds in order to avoid
 flooding the plugins.</p>
+<p><strong>IMPORTANT:</strong> Keypirinha will never send this notification if it is
+installed in one of the Desktop folders.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -242,8 +244,8 @@ configuration, this flag is combined with <code class="docutils literal"><span c
 <code class="descname">NETOPTIONS</code><em class="property"> = 1024</em><a class="headerlink" href="#keypirinha.Events.NETOPTIONS" title="Permalink to this definition">¶</a></dt>
 <dd><p>System’s network settings have been modified (via the
 <code class="docutils literal"><span class="pre">Internet</span> <span class="pre">Properties</span></code> dialog for example), and plugins that perform
-network requests should update their state.
-Practically, it means <a class="reference internal" href="module-net.html#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_net.build_urllib_opener()</span></code></a>
+network requests should update their state.</p>
+<p>Practically, it means <a class="reference internal" href="module-net.html#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_net.build_urllib_opener()</span></code></a>
 should be called in order to get a new opener object.
 This event usually goes along with the <code class="docutils literal"><span class="pre">APPCONFIG</span></code> event, but developer
 should not rely on this behavior.</p>
@@ -263,10 +265,12 @@ has impacted at least one value (in which case this flag is combined with
 <code class="descname">STARTMENU</code><em class="property"> = 8192</em><a class="headerlink" href="#keypirinha.Events.STARTMENU" title="Permalink to this definition">¶</a></dt>
 <dd><p>The content of the Start Menu has changed (common and/or user’s).
 It can be because its structure has been modified (folders), or because
-some files/shortcuts have been added, modified, moved or removed.
-Keypirinha groups events from the file system a little before sending
+some files/shortcuts have been added, modified, moved or removed.</p>
+<p>Keypirinha groups events from the file system a little before sending
 them to the plugins by waiting a couple of seconds in order to avoid
 flooding the plugins.</p>
+<p><strong>IMPORTANT:</strong> Keypirinha will never send this notification if it is
+installed in one of the Start Menu folders.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -953,7 +957,7 @@ revision. Prefer <a class="reference internal" href="#keypirinha.version" title=
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

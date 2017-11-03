@@ -12,7 +12,7 @@ Glossary
         The class name of an :term:`item` (API).
 
     Console
-        The Console window gives access to the output of application's log. It
+        The *Console* window gives access to the output of application's log. It
         should be your first destination in case of error or unexpected
         behavior in order to check if a plugin emitted some warning or error
         message.
@@ -20,9 +20,27 @@ Glossary
         It also gives you an interactive access to the embedded Python
         interpreter and |project|'s API.
 
+        The *Console* can be opened:
+
+        * by pressing :kbd:`F2` from the :term:`LaunchBox`
+        * by executing the ``Keypirinha: Console`` item (the ``Internal``
+          package must be enabled)
+        * via |project|'s main menu
+
         .. image:: images/console.png
             :alt: |project|'s Console
             :align: center
+
+    Diagnostic Window
+        The *Diagnostic Window* is useful in case you want to report an issue.
+        See :ref:`contribute-issue`.
+
+        The *Diagnostic Window* can be opened:
+
+        * by pressing :kbd:`F3` from the :term:`LaunchBox`
+        * by executing the ``Keypirinha: Diagnostic Window`` item (the
+          ``Internal`` package must be enabled)
+        * via |project|'s main menu
 
     InstanceID
         |project| allows the code source of its packages to be modified at
@@ -49,7 +67,7 @@ Glossary
     LaunchBox
         The L(a)unchBox is the main window of |project|, from which you can make
         a search and launch the selected :term:`item`. It can be opened by
-        pressing the :kbd:`Ctrl+Win+K` combination (by default).
+        pressing the :kbd:`Ctrl+Win+K` combination (default).
 
         More info in the :doc:`first` chapter.
 

@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -187,13 +187,31 @@ the <a class="reference internal" href="#term-items"><span class="xref std std-t
 <dt id="term-catalogitem">CatalogItem</dt>
 <dd>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a> (API).</dd>
 <dt id="term-console">Console</dt>
-<dd><p class="first">The Console window gives access to the output of application’s log. It
+<dd><p class="first">The <em>Console</em> window gives access to the output of application’s log. It
 should be your first destination in case of error or unexpected
 behavior in order to check if a plugin emitted some warning or error
 message.</p>
 <p>It also gives you an interactive access to the embedded Python
 interpreter and Keypirinha’s API.</p>
+<p>The <em>Console</em> can be opened:</p>
+<ul class="simple">
+<li>by pressing <code class="kbd docutils literal"><span class="pre">F2</span></code> from the <a class="reference internal" href="#term-launchbox"><span class="xref std std-term">LaunchBox</span></a></li>
+<li>by executing the <code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Console</span></code> item (the <code class="docutils literal"><span class="pre">Internal</span></code>
+package must be enabled)</li>
+<li>via Keypirinha’s main menu</li>
+</ul>
 <img alt="|project|'s Console" class="last align-center" src="_images/console.png" />
+</dd>
+<dt id="term-diagnostic-window">Diagnostic Window</dt>
+<dd><p class="first">The <em>Diagnostic Window</em> is useful in case you want to report an issue.
+See <a class="reference internal" href="contribute.html#contribute-issue"><span class="std std-ref">How to Report an Issue</span></a>.</p>
+<p>The <em>Diagnostic Window</em> can be opened:</p>
+<ul class="last simple">
+<li>by pressing <code class="kbd docutils literal"><span class="pre">F3</span></code> from the <a class="reference internal" href="#term-launchbox"><span class="xref std std-term">LaunchBox</span></a></li>
+<li>by executing the <code class="docutils literal"><span class="pre">Keypirinha:</span> <span class="pre">Diagnostic</span> <span class="pre">Window</span></code> item (the
+<code class="docutils literal"><span class="pre">Internal</span></code> package must be enabled)</li>
+<li>via Keypirinha’s main menu</li>
+</ul>
 </dd>
 <dt id="term-instanceid">InstanceID</dt>
 <dd><p class="first">Keypirinha allows the code source of its packages to be modified at
@@ -215,7 +233,7 @@ a category (File, URL, Command Line, …), a reference to the parent
 <dt id="term-launchbox">LaunchBox</dt>
 <dd><p class="first">The L(a)unchBox is the main window of Keypirinha, from which you can make
 a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
-pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (by default).</p>
+pressing the <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> combination (default).</p>
 <p>More info in the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter.</p>
 <img alt="|project|'s LaunchBox" class="last align-center" src="_images/wndrun.png" />
 </dd>
@@ -283,7 +301,7 @@ loose files or packed in a single archive).</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -10,23 +10,20 @@ If |project| is not installed on your machine yet. You should head over to the
 done manually.
 
 .. warning::
-    You must first ensure |project| is not running!
+    |project| must not be running during the update procedure:
 
-    To exit |project|, you have two options:
-
-    * Fire up the :term:`LaunchBox` and search-then-execute the
+    * Invoke the :term:`LaunchBox` and search-then-execute the
       ``Keypirinha: Exit`` item.
-    * Use the ``Exit`` item of the main contextual menu. To get the contextual
-      menu, right-click of |project|'s icon in the system tray, or
-      right-click directly on the :term:`LaunchBox`.
+    * **OR** click ``Exit`` from |project|'s menu (right-click on |project|'s
+      system tray ``k`` icon).
 
 Once you have ensured |project| is not running, the procedure depends on whether
 you chose the :ref:`install-installed` or the :ref:`install-portable`.
 
 .. tip::
     To check which mode |project| is running in, open its install directory and
-    check if the :file:`portable` directory exists. If it does, you are in
-    :ref:`install-portable`.
+    check if the :file:`portable` directory or the :file:`portable.ini` file
+    exists. If it does, you are in :ref:`install-portable`.
 
 
 Update in Installed Mode

@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -216,7 +216,7 @@ use</strong> without needing a third-party software like the <a class="reference
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>This package is addressed to advanced users (read more below)</li>
+<li>This package is addressed to advanced users (more info below)</li>
 <li>If you are looking for a way to browse the file system as you type a path,
 check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></li>
 <li>If you are looking for a way to search for files regardless of their
@@ -229,9 +229,8 @@ software)</li>
 <p>This package does not catalog any item by default and must be configured.</p>
 <p>It is mainly addressed to advanced users who wish to have full control on the
 content of their <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. As a result, configuring it may feel like
-quite a tedious task to some, in which case you are invited to either explore
-the features offered by the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a>, or ask for help in the
-<a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>.</p>
+quite a tedious task to some, in which case you may prefer to explore the
+features offered by the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a>, or ask for help in the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a>.</p>
 <p>To get the best out of it in terms of efficiency (speed and memory), it is
 best to understand the technical details exposed as inline comments in the
 default configuration file of the package.</p>
@@ -239,7 +238,7 @@ default configuration file of the package.</p>
 </div>
 <div class="section" id="profiles">
 <h2>5.9.2. Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h2>
-<p>The configuration of this package is profile-based. Each profile correspond to
+<p>The configuration of this package is profile-based. Each profile corresponds to
 one scanning-then-filtering process of your files, before registering them into
 Keypirinha’s <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
 <p>Each profile has essentially the following properties:</p>
@@ -250,8 +249,9 @@ Recommended form is to keep it without space character, in lower case except
 for the first letter of each word like in: <code class="docutils literal"><span class="pre">MyProfile</span></code>, <code class="docutils literal"><span class="pre">Applications</span></code>,
 <code class="docutils literal"><span class="pre">PortableSoftwares</span></code>.</li>
 <li>A set of <em>paths</em> to scan</li>
-<li>A set of <em>filters</em> to include/exclude the scanned items according to their
-name, extension and filesystem attributes (hidden, read-only, …), …</li>
+<li>Optionally a set of <em>filters</em> to include/exclude the scanned items according
+to their name, extension and filesystem attributes (hidden, read-only, …),
+…</li>
 <li>Optionally a base profile to inherit from. <br />
 It is convenient if you do not want to replicate in the current profile the
 values you already defined in the base profile.</li>
@@ -303,7 +303,7 @@ values you already defined in the base profile.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

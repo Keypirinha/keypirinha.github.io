@@ -10,7 +10,7 @@ It allows to quickly access specific files and/or applications **you frequently
 use** without needing a third-party software like the :doc:`everything` does.
 
 .. note::
-    * This package is addressed to advanced users (read more below)
+    * This package is addressed to advanced users (more info below)
     * If you are looking for a way to browse the file system as you type a path,
       check out the :doc:`filebrowser`
     * If you are looking for a way to search for files regardless of their
@@ -25,9 +25,8 @@ This package does not catalog any item by default and must be configured.
 
 It is mainly addressed to advanced users who wish to have full control on the
 content of their :term:`Catalog`. As a result, configuring it may feel like
-quite a tedious task to some, in which case you are invited to either explore
-the features offered by the :doc:`everything`, or ask for help in the
-|chat_room|.
+quite a tedious task to some, in which case you may prefer to explore the
+features offered by the :doc:`everything`, or ask for help in the |chat_room|.
 
 To get the best out of it in terms of efficiency (speed and memory), it is
 best to understand the technical details exposed as inline comments in the
@@ -39,7 +38,7 @@ Do not hesitate to head over to the |chat_room| if you have questions.
 Profiles
 ========
 
-The configuration of this package is profile-based. Each profile correspond to
+The configuration of this package is profile-based. Each profile corresponds to
 one scanning-then-filtering process of your files, before registering them into
 |project|'s :term:`Catalog`.
 
@@ -51,8 +50,9 @@ Each profile has essentially the following properties:
   for the first letter of each word like in: ``MyProfile``, ``Applications``,
   ``PortableSoftwares``.
 * A set of *paths* to scan
-* A set of *filters* to include/exclude the scanned items according to their
-  name, extension and filesystem attributes (hidden, read-only, ...), ...
+* Optionally a set of *filters* to include/exclude the scanned items according
+  to their name, extension and filesystem attributes (hidden, read-only, ...),
+  ...
 * Optionally a base profile to inherit from. |br|
   It is convenient if you do not want to replicate in the current profile the
   values you already defined in the base profile.

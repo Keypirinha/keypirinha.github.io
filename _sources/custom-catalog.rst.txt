@@ -2,10 +2,15 @@
 Customize your Catalog
 ======================
 
-By default, almost all |project|'s features are enabled. While the vast majority
-of users will find this convenient not to have to configure |project| straight
-out of the box, some might prefer to have full control on what is actually
-available in |project|'s :term:`catalog` and consequently in search results.
+By default, almost all |project|'s features are enabled.
+
+While the majority of users will find convenient not to have to configure
+|project| straight out of the box, some might prefer to have full control on
+what is actually available in the :term:`Catalog`.
+
+At the cost of extra time spent on configuring |project|, reducing the number of
+items in the :term:`Catalog` may have a significant impact on both memory
+footprint and search speed.
 
 This small guide shows how to clear the Catalog entirely so you can then
 expand it with only the desired features/items.
@@ -18,13 +23,13 @@ To understand how to customize your Catalog, you must first understand how it is
 built. The tiny :ref:`architecture-overview` section gives you an overview of
 the role plugins play in |project|.
 
-This guide assumes you already know how to configure |project| so you might want
-to open the :doc:`configuration` chapter aside and have it handy while reading
-the following sections.
+Also, this guide assumes you already know how to configure |project| so you
+might want to open the :doc:`configuration` chapter aside and have it handy
+while reading the following sections.
 
 
-Disable everything
-==================
+Shrinking your Catalog
+======================
 
 To start with a clean slate, we will disable every shipped :term:`package`
 except the ``Internal`` one.
@@ -44,7 +49,7 @@ Save your configuration file.
 
 From now on, only items from the ``Internal`` package are available. The
 ``Internal`` package enables access to some core features of |project| and is
-very lightweight in terms of number of items. So it is advised to keep it
+very lightweight in terms of number of items. So it is recommended to keep it
 enabled but technically-wise, nothing prevents you from disabling it as well
 (``ignored_packages = <All>``).
 
@@ -59,19 +64,20 @@ depends on how you want to use |project|. For example, some users only want to
 launch applications while other may want to have full access to every bookmarks
 referenced in their favorite web browser...
 
-One important thing to keep in mind though is that, in |project|, each package
-roughly represent a single feature or a set of related features. For example,
-the `Calc` package does just what its name implies: it evaluates a mathematical
-expression you typed, then shows its result.
+An thing to keep in mind though is that in |project|, each package roughly
+represents a single feature or a set of related features. |br|
+For example, the :doc:`packages/calc` does just what its name implies: it
+evaluates the mathematical expression you typed, then shows its result(s).
 
 Check out the list of the available :doc:`shipped-packages` and learn more about
-their individual purpose to see if they suit your needs. You may then want to
-enable them one by one using the ``ignored_packages`` setting.
+their purpose to see if they suit your needs. You may then want to enable them
+one by one using the ``ignored_packages`` setting.
 
 Also, do not forget that some of them are configurable, which means that you may
-be able to have a more fine-grained control on what they may reference in the
-Catalog. For example, if you enable the ``Apps`` package, you might want to have
-a look at the ``scan_start_menu`` and ``scan_env_path`` settings.
+be able to have a more fine-grained control on what they insert in the
+*Catalog*. |br|
+For example, if you enable the ``Apps`` package, you might want to have a look
+at the ``scan_start_menu`` and ``scan_env_path`` settings.
 
 
 Tracking down unwanted features

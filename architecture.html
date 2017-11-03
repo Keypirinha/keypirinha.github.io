@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -192,22 +192,23 @@
 small adaptive search engine and a straightforward graphical interface. Thus,
 <strong>the task of feeding the Catalog is entirely left to its</strong> <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">Plugins</span></a>.</p>
 <p>From that point of view, we can say that the whole architecture of Keypirinha
-depends on its <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a>. They are responsible of finding items on your
-computer, like a applications and documents for example, but not only (i.e.: the
-official <a class="reference internal" href="packages/calc.html"><span class="doc">Calc Package</span></a> is the one that evaluates mathematical
-expressions).</p>
-<p>Those <a class="reference internal" href="glossary.html#term-items"><span class="xref std std-term">items</span></a> are created by the plugins, sent to the application, and are
-then sorted and stored in an internal database called the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">catalog</span></a>,
-making them quickly searchable and easily executable.</p>
+depends on its <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a>. They are responsible of finding <a class="reference internal" href="glossary.html#term-items"><span class="xref std std-term">items</span></a> on
+your computer, like applications, documents and bookmarks for example, as well
+as offering to evaluate mathematical expressions, monetary conversions and so
+on…</p>
+<p>These <a class="reference internal" href="glossary.html#term-items"><span class="xref std std-term">items</span></a> are created by the <em>plugins</em> and are then sorted and stored
+in an internal database called the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>, to make making them quickly
+searchable and easily executable.</p>
 </div>
 <div class="section" id="packages-and-plugins">
 <h2>11.2. Packages and Plugins<a class="headerlink" href="#packages-and-plugins" title="Permalink to this headline">¶</a></h2>
-<p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a> easier to redistribute, Keypirinha has been introduced
-the concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
-<p>In Keypirinha, a package is a container (e.g.: a directory; or a Zip archive with
-the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension) that groups one or several plugins
-designed to work together. It also contains the configuration files and
-dependencies, if any.</p>
+<p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">Plugins</span></a> easier to distribute, Keypirinha has been introduced the
+concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
+<p>In Keypirinha, a package is a container that groups one or several plugins
+designed to work together, as well as optional configuration files and
+dependencies.</p>
+<p>A package can take the form of a directory containing loose files, or a Zip
+archive with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension (for redistribution).</p>
 <p>Read more about <a class="reference internal" href="packages.html"><span class="doc">Packages Structure</span></a>.</p>
 </div>
 <div class="section" id="configuration">
@@ -263,7 +264,7 @@ configuration.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

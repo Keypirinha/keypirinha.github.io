@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -224,19 +224,19 @@ bookmarks, URLs, sessions (PuTTY, WinSCP, FileZilla), registry keys, …</li>
 <li>Hash a string (CRC32, MD5, SHA, …)</li>
 <li>Generate random UUIDs, passwords, bytes sequences</li>
 <li>Naturally associate a keyword to a specific item</li>
-<li>Machine-specific and/or user-specific configuration</li>
+<li>Machine-specific and/or user-specific configuration in separate config files</li>
 <li>… and more, see <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a> and <a class="reference internal" href="contributions.html"><span class="doc">Third-Party Packages</span></a></li>
 </ul>
 <p><strong>Properties:</strong></p>
 <ul class="simple">
-<li>Freeware, no nag screen, no time limit, no ads</li>
-<li>Customizable GUI (colors, fonts, toggling and positioning of elements)</li>
+<li>Plugin-oriented architecture (C++ at its core, <a class="reference external" href="https://python.org">Python3</a> for its <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a>)</li>
+<li>File-driven configuration</li>
 <li>Lightning fast</li>
 <li>Fairly small memory footprint</li>
 <li>Battery friendly</li>
-<li>File-driven configuration</li>
+<li>Customizable GUI (colors, fonts, toggling and positioning of elements)</li>
 <li>Steep but rewarding learning curve</li>
-<li>Written in C++, exposes a <a class="reference external" href="https://python.org">Python3</a> API for its <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a></li>
+<li>Freeware, no nag screen, no time limit, no ads</li>
 </ul>
 <p>You can think of Keypirinha as an alternative to <em>Launchy</em> and a cousin of
 <em>Alfred</em>.</p>
@@ -258,16 +258,15 @@ provides.</p>
 consumes zero CPU cycle once it has been initialized and when not used (i.e.
 most of its lifetime).</p>
 <p>However, by design, its graphical user interface (GUI) is minimalistic and its
-learning curve may feel steep for some, depending on how you want to use it and
+learning curve may feel steep to some, depending on how you want to use it and
 extend it. <strong>That makes of Keypirinha quite a niche project, mostly addressed to
 advanced users.</strong></p>
 </div>
 <div class="section" id="so-a-replacement-to-the-start-menu">
 <h2><a class="toc-backref" href="#id4">16.3. So… A replacement to the Start Menu?</a><a class="headerlink" href="#so-a-replacement-to-the-start-menu" title="Permalink to this headline">¶</a></h2>
-<p>Many people who have not tried Keypirinha (or sometimes any other keystroke
-launcher), tend to think that it’s just about being a replacement to the Start
-Menu, the <code class="kbd docutils literal"><span class="pre">Win+S</span></code> feature, or even just some organized shortcuts and
-scripts.</p>
+<p>Many people who have not tried Keypirinha or any other keystroke launcher are
+tempted to think it is just about being a replacement to the Start Menu, or the
+<code class="kbd docutils literal"><span class="pre">Win+S</span></code> feature, or even just some organized shortcuts and scripts.</p>
 <p>It would be a mistake to think of Keypirinha as an application launcher only.
 Keypirinha itself is very <strong>generic</strong>. It is just a database of <em>items</em> sweetened
 with a small search engine. In other words, it can launch any kind of task
@@ -287,11 +286,11 @@ even find yourself
 <h2><a class="toc-backref" href="#id5">16.4. Is it open source?</a><a class="headerlink" href="#is-it-open-source" title="Permalink to this headline">¶</a></h2>
 <p>In short, the application itself is not, its official plugins are.</p>
 <p>The application itself is distributed as a <a class="reference external" href="https://en.wikipedia.org/wiki/Freeware">freeware</a> (see the <a class="reference internal" href="license.html"><span class="doc">License</span></a>).
-It means Keypirinha is distributed for free and there is no time limit, no nag
-screen, no ad.</p>
-<p>Its official plugins distributed with the application, are <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_license">open source</a> and published under the
-terms of the <a class="reference external" href="https://github.com/Keypirinha/Packages/blob/master/LICENSE">zLib license</a>, a pretty
-permissive license.</p>
+In other words, Keypirinha is distributed for free and there is no time limit, no
+nag screen, no ad.</p>
+<p>Its official plugins that are shipped with it are <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_license">open source</a> and published under the
+terms of the <a class="reference external" href="https://github.com/Keypirinha/Packages/blob/master/LICENSE">zLib license</a>, a permissive
+license.</p>
 </div>
 <div class="section" id="is-it-beta-software">
 <h2><a class="toc-backref" href="#id6">16.5. Is it Beta software?</a><a class="headerlink" href="#is-it-beta-software" title="Permalink to this headline">¶</a></h2>
@@ -338,7 +337,7 @@ special enquiries. <br />
 </div>
 <div class="section" id="where-does-this-weird-name-come-from">
 <h2><a class="toc-backref" href="#id8">16.7. Where does this weird name come from?!</a><a class="headerlink" href="#where-does-this-weird-name-come-from" title="Permalink to this headline">¶</a></h2>
-<p>Keypirinha is a combination from the terms Keyboard and Caipirinha, the
+<p>Keypirinha is a combination from the terms <em>Keyboard</em> and <em>Caipirinha</em>, the
 brazilian cocktail, which the author really encourages you to try if you haven’t
 yet!</p>
 </div>
@@ -391,7 +390,7 @@ yet!</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -15,14 +15,14 @@ small adaptive search engine and a straightforward graphical interface. Thus,
 **the task of feeding the Catalog is entirely left to its** :term:`Plugins`.
 
 From that point of view, we can say that the whole architecture of |project|
-depends on its :term:`plugins`. They are responsible of finding items on your
-computer, like a applications and documents for example, but not only (i.e.: the
-official :doc:`packages/calc` is the one that evaluates mathematical
-expressions).
+depends on its :term:`plugins`. They are responsible of finding :term:`items` on
+your computer, like applications, documents and bookmarks for example, as well
+as offering to evaluate mathematical expressions, monetary conversions and so
+on...
 
-Those :term:`items` are created by the plugins, sent to the application, and are
-then sorted and stored in an internal database called the :term:`catalog`,
-making them quickly searchable and easily executable.
+These :term:`items` are created by the *plugins* and are then sorted and stored
+in an internal database called the :term:`Catalog`, to make making them quickly
+searchable and easily executable.
 
 
 Packages and Plugins

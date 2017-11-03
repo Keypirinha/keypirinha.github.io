@@ -15,24 +15,15 @@ Here are some guidelines to report an issue. Please follow them! To accurately
 report an issue strongly increases the chances of your issue to be fixed
 quickly.
 
-* First search if your issue has already been reported
+* Ensure your are running the latest version of |project|
 
-* Copy and paste the first lines of the :term:`Console`. They should look like
-  this:
+* Search if your issue has been reported already
 
-  .. code-block:: text
-
-    22:27:30.915 Keypirinha 2.11 (66a575a) for x64
-    22:27:30.915 System: WinNT-x64 6.3.9600-ws-0x0100
-    22:27:30.915 Portable mode
-    22:27:30.915 Keyboard layout: 0000040C
-    22:27:30.915 Monitor #1: Name[\\.\DISPLAY1] Rect[0, 0, 1920, 1200] DpiScale[1.00] PRIMARY
-    22:27:30.915 Monitor #2: Name[\\.\DISPLAY2] Rect[0, 0, 1024, 768] DpiScale[1.00]
+* Check if some warning/error message has been printed on the :term:`Console`
 
 * One bug per report
 
-* Describe the issue clearly, with simple language, in English (bullet points
-  are good)
+* Describe the issue clearly, in English. Bullet points are good
 
 * Provide step-by-step instructions so we can reproduce the issue (we can't fix
   what we can't reproduce).
@@ -42,12 +33,6 @@ quickly.
   - What do you see instead?
 
 * Optionally attach screenshots so we can "see" the issue
-
-* Optionally attach the complete log of the session during which the bug
-  occurred (the log may reveal critical information to help tracking down the
-  issue). |br|
-  Note that you may want to strip the log file first since it may contain
-  several sessions.
 
 * Workarounds or other related tips on how to avoid the issue are welcome
 
@@ -62,7 +47,7 @@ reported by users may be associated with the `help-appreciated
 <https://github.com/Keypirinha/Keypirinha/issues?q=is%3Aissue+is%3Aopen+label%3Ahelp-appreciated>`_
 tag.
 
-The |packsrepo_link| is online and accepts pull requests.
+The |packsrepo_link| is online and accepts *Pull Requests*.
 
 
 .. _contribute-platform:
@@ -105,5 +90,5 @@ somewhere, someday, will be part of the deal :)
 Help with the Documentation
 ===========================
 
-Please file an issue on the |bugtracker_link| if you noticed a mistake, if you
-have some comment or if you wish to make some improvement.
+Please file an issue on the |bugtracker_link| if you noticed a mistake (language
+or technical), if you have some comment or if you wish to make some improvement.

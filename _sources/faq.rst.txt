@@ -32,7 +32,7 @@ consumes zero CPU cycle once it has been initialized and when not used (i.e.
 most of its lifetime).
 
 However, by design, its graphical user interface (GUI) is minimalistic and its
-learning curve may feel steep for some, depending on how you want to use it and
+learning curve may feel steep to some, depending on how you want to use it and
 extend it. **That makes of Keypirinha quite a niche project, mostly addressed to
 advanced users.**
 
@@ -40,10 +40,9 @@ advanced users.**
 So... A replacement to the Start Menu?
 ======================================
 
-Many people who have not tried |project| (or sometimes any other keystroke
-launcher), tend to think that it's just about being a replacement to the Start
-Menu, the :kbd:`Win+S` feature, or even just some organized shortcuts and
-scripts.
+Many people who have not tried |project| or any other keystroke launcher are
+tempted to think it is just about being a replacement to the Start Menu, or the
+:kbd:`Win+S` feature, or even just some organized shortcuts and scripts.
 
 It would be a mistake to think of |project| as an application launcher only.
 |project| itself is very **generic**. It is just a database of *items* sweetened
@@ -70,14 +69,14 @@ In short, the application itself is not, its official plugins are.
 
 The application itself is distributed as a `freeware
 <https://en.wikipedia.org/wiki/Freeware>`_ (see the :doc:`license`).
-It means |project| is distributed for free and there is no time limit, no nag
-screen, no ad.
+In other words, |project| is distributed for free and there is no time limit, no
+nag screen, no ad.
 
-Its official plugins distributed with the application, are `open source
+Its official plugins that are shipped with it are `open source
 <https://en.wikipedia.org/wiki/Open-source_license>`_ and published under the
 terms of the `zLib license
-<https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_, a pretty
-permissive license.
+<https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_, a permissive
+license.
 
 
 Is it Beta software?
@@ -129,7 +128,7 @@ There are several ways to support |project|:
 Where does this weird name come from?!
 ======================================
 
-Keypirinha is a combination from the terms Keyboard and Caipirinha, the
+Keypirinha is a combination from the terms *Keyboard* and *Caipirinha*, the
 brazilian cocktail, which the author really encourages you to try if you haven't
 yet!
 

@@ -139,7 +139,7 @@ Plugin class
         .. note::
             While Keypirinha tries to group flags at a given time in order to
             reduce the number of calls made to this method, calls are still made
-            in a real-time fashion to ensure plugin gets notified as soon as
+            in a real-time fashion to ensure plugins get notified as soon as
             possible. In other words, there is no waiting mechanism involved to
             accumulate these flags and plugin developer should not expect flags
             to be always grouped.
@@ -149,8 +149,8 @@ Plugin class
 
         Get the *id* number (int) of this plugin.
 
-        This *id* uniquely identifies this plugin during the current session
-        **only**.
+        This *id* uniquely identifies this plugin **during the current session
+        only**.
 
 
     .. py:method:: full_name()

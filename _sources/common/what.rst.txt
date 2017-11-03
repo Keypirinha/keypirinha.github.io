@@ -15,19 +15,19 @@
 * Hash a string (CRC32, MD5, SHA, ...)
 * Generate random UUIDs, passwords, bytes sequences
 * Naturally associate a keyword to a specific item
-* Machine-specific and/or user-specific configuration
+* Machine-specific and/or user-specific configuration in separate config files
 * ... and more, see :doc:`shipped-packages` and :doc:`contributions`
 
 **Properties:**
 
-* Freeware, no nag screen, no time limit, no ads
-* Customizable GUI (colors, fonts, toggling and positioning of elements)
+* Plugin-oriented architecture (C++ at its core, Python3_ for its :term:`plugins`)
+* File-driven configuration
 * Lightning fast
 * Fairly small memory footprint
 * Battery friendly
-* File-driven configuration
+* Customizable GUI (colors, fonts, toggling and positioning of elements)
 * Steep but rewarding learning curve
-* Written in C++, exposes a Python3_ API for its :term:`plugins`
+* Freeware, no nag screen, no time limit, no ads
 
 You can think of |project| as an alternative to *Launchy* and a cousin of
 *Alfred*.

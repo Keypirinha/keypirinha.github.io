@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.16.3
+                2.17
               </div>
             
           
@@ -107,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="keyboard.html">9. Keyboard Shortcuts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. Customize your Catalog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">10.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#disable-everything">10.2. Disable everything</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shrinking-your-catalog">10.2. Shrinking your Catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#expanding-your-catalog">10.3. Expanding your Catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tracking-down-unwanted-features">10.4. Tracking down unwanted features</a></li>
 </ul>
@@ -186,10 +186,13 @@
             
   <div class="section" id="customize-your-catalog">
 <h1>10. Customize your Catalog<a class="headerlink" href="#customize-your-catalog" title="Permalink to this headline">¶</a></h1>
-<p>By default, almost all Keypirinha’s features are enabled. While the vast majority
-of users will find this convenient not to have to configure Keypirinha straight
-out of the box, some might prefer to have full control on what is actually
-available in Keypirinha’s <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">catalog</span></a> and consequently in search results.</p>
+<p>By default, almost all Keypirinha’s features are enabled.</p>
+<p>While the majority of users will find convenient not to have to configure
+Keypirinha straight out of the box, some might prefer to have full control on
+what is actually available in the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
+<p>At the cost of extra time spent on configuring Keypirinha, reducing the number of
+items in the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> may have a significant impact on both memory
+footprint and search speed.</p>
 <p>This small guide shows how to clear the Catalog entirely so you can then
 expand it with only the desired features/items.</p>
 <div class="section" id="introduction">
@@ -197,12 +200,12 @@ expand it with only the desired features/items.</p>
 <p>To understand how to customize your Catalog, you must first understand how it is
 built. The tiny <a class="reference internal" href="architecture.html#architecture-overview"><span class="std std-ref">Overview</span></a> section gives you an overview of
 the role plugins play in Keypirinha.</p>
-<p>This guide assumes you already know how to configure Keypirinha so you might want
-to open the <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> chapter aside and have it handy while reading
-the following sections.</p>
+<p>Also, this guide assumes you already know how to configure Keypirinha so you
+might want to open the <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> chapter aside and have it handy
+while reading the following sections.</p>
 </div>
-<div class="section" id="disable-everything">
-<h2>10.2. Disable everything<a class="headerlink" href="#disable-everything" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shrinking-your-catalog">
+<h2>10.2. Shrinking your Catalog<a class="headerlink" href="#shrinking-your-catalog" title="Permalink to this headline">¶</a></h2>
 <p>To start with a clean slate, we will disable every shipped <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a>
 except the <code class="docutils literal"><span class="pre">Internal</span></code> one.</p>
 <p>Open Keypirinha’s configuration file and create/modify the <code class="docutils literal"><span class="pre">ignored_packages</span></code>
@@ -216,7 +219,7 @@ file for more info on the meaning and the syntax of this value.</p>
 <p>Save your configuration file.</p>
 <p>From now on, only items from the <code class="docutils literal"><span class="pre">Internal</span></code> package are available. The
 <code class="docutils literal"><span class="pre">Internal</span></code> package enables access to some core features of Keypirinha and is
-very lightweight in terms of number of items. So it is advised to keep it
+very lightweight in terms of number of items. So it is recommended to keep it
 enabled but technically-wise, nothing prevents you from disabling it as well
 (<code class="docutils literal"><span class="pre">ignored_packages</span> <span class="pre">=</span> <span class="pre">&lt;All&gt;</span></code>).</p>
 </div>
@@ -227,17 +230,18 @@ enabled but technically-wise, nothing prevents you from disabling it as well
 depends on how you want to use Keypirinha. For example, some users only want to
 launch applications while other may want to have full access to every bookmarks
 referenced in their favorite web browser…</p>
-<p>One important thing to keep in mind though is that, in Keypirinha, each package
-roughly represent a single feature or a set of related features. For example,
-the <cite>Calc</cite> package does just what its name implies: it evaluates a mathematical
-expression you typed, then shows its result.</p>
+<p>An thing to keep in mind though is that in Keypirinha, each package roughly
+represents a single feature or a set of related features. <br />
+For example, the <a class="reference internal" href="packages/calc.html"><span class="doc">Calc Package</span></a> does just what its name implies: it
+evaluates the mathematical expression you typed, then shows its result(s).</p>
 <p>Check out the list of the available <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a> and learn more about
-their individual purpose to see if they suit your needs. You may then want to
-enable them one by one using the <code class="docutils literal"><span class="pre">ignored_packages</span></code> setting.</p>
+their purpose to see if they suit your needs. You may then want to enable them
+one by one using the <code class="docutils literal"><span class="pre">ignored_packages</span></code> setting.</p>
 <p>Also, do not forget that some of them are configurable, which means that you may
-be able to have a more fine-grained control on what they may reference in the
-Catalog. For example, if you enable the <code class="docutils literal"><span class="pre">Apps</span></code> package, you might want to have
-a look at the <code class="docutils literal"><span class="pre">scan_start_menu</span></code> and <code class="docutils literal"><span class="pre">scan_env_path</span></code> settings.</p>
+be able to have a more fine-grained control on what they insert in the
+<em>Catalog</em>. <br />
+For example, if you enable the <code class="docutils literal"><span class="pre">Apps</span></code> package, you might want to have a look
+at the <code class="docutils literal"><span class="pre">scan_start_menu</span></code> and <code class="docutils literal"><span class="pre">scan_env_path</span></code> settings.</p>
 </div>
 <div class="section" id="tracking-down-unwanted-features">
 <h2>10.4. Tracking down unwanted features<a class="headerlink" href="#tracking-down-unwanted-features" title="Permalink to this headline">¶</a></h2>
@@ -293,7 +297,7 @@ item. Among them the name of the parent plugin.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.16.3',
+            VERSION:'2.17',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

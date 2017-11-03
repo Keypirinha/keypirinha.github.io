@@ -11,7 +11,7 @@ Installation
 Requirements
 ============
 
-|project| works on Windows (7, 8, 8.1, 10) and does not require additional
+|project| works on Windows (7, 8, 8.1, 10) and does not require extra
 dependencies.
 
 
@@ -21,13 +21,13 @@ Installation
 |project| currently comes in a simple archive that can be uncompressed about
 anywhere you want. There is no installer.
 
-**Out of the box**, it is configured to run in :ref:`install-portable`, which
-means all the configuration and runtime files are contained under |project|'s
-directory.
+Out of the box, it is configured to run in :ref:`install-portable`. All the
+configuration and runtime files are contained under |project|'s directory.
 
-.. warning::
-    It is **not recommended** to extract |project| to your Desktop or you Start
-    Menu folder as you may experience unexpected behavior (see :issue:`229`).
+.. note::
+    It is recommended to avoid installing |project| under your Desktop or Start
+    Menu folder as you will loose the benefits of having your catalog
+    automatically refreshed when an application gets (un)installed.
 
 
 Installed vs. Portable mode

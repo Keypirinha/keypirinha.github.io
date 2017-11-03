@@ -41,8 +41,8 @@ Source: `<https://github.com/ueffel/Keypirinha-Plugin-Kill>`_
 KiTTY
 -----
 
-:ghu:`psistorm`'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_ (either
-installed or portable) and KiTTY sessions directly. |br|
+:ghu:`psistorm`'s package to launch `KiTTY <http://www.9bis.net/kitty/>`_
+(either installed or portable) and KiTTY sessions directly. |br|
 Source: `<https://github.com/psistorm/keypirinha-kitty>`_
 
 Pinboard
