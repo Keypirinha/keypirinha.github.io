@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -214,23 +214,23 @@ code is running.</p>
 builds a list of the available <a class="reference internal" href="../glossary.html#term-packages"><span class="xref std std-term">packages</span></a>, omitting the ones that are
 flagged as <em>disabled</em> in the configuration file.</p>
 <p>Once the list of valid packages is built, Keypirinha scans their files and look
-for <code class="file docutils literal"><span class="pre">*.py</span></code> scripts. Each one of those scripts is loaded through the Python
+for <code class="file docutils literal notranslate"><span class="pre">*.py</span></code> scripts. Each one of those scripts is loaded through the Python
 interpreter and the application performs some introspection to list all the
-classes derived from <a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Plugin</span></code></a> and instantiates them.</p>
-<p>The application then calls the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_start" title="keypirinha.Plugin.on_start"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_start()</span></code></a> method of
+classes derived from <a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Plugin</span></code></a> and instantiates them.</p>
+<p>The application then calls the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_start" title="keypirinha.Plugin.on_start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_start()</span></code></a> method of
 every loaded plugin so they have the opportunity to do heavy one-time
 initialization, if any.</p>
 <p>For now, this call is immediately followed by a call to
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method. Note that this behavior might be
-altered in a future version so <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> may not
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method. Note that this behavior might be
+altered in a future version so <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> may not
 always be called at startup time.</p>
 </div>
 <div class="section" id="reloading">
 <h3>13.1.2.2. Reloading<a class="headerlink" href="#reloading" title="Permalink to this headline">¶</a></h3>
 <p>Keypirinha monitors the <a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> directory to detect any change made to
-<strong>any</strong> file of the loaded packages (i.e.: not only the <code class="file docutils literal"><span class="pre">*.py</span></code> scripts).</p>
-<p>If a modification is detected, and unless it concerns only <code class="file docutils literal"><span class="pre">*.ini</span></code> file(s)
-(in which case <code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_config_changed()</span></code> is called), the
+<strong>any</strong> file of the loaded packages (i.e.: not only the <code class="file docutils literal notranslate"><span class="pre">*.py</span></code> scripts).</p>
+<p>If a modification is detected, and unless it concerns only <code class="file docutils literal notranslate"><span class="pre">*.ini</span></code> file(s)
+(in which case <code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_config_changed()</span></code> is called), the
 concerned package will be fully reloaded.</p>
 <p>At the beginning of the reloading process, the entire package is first unloaded
 from the application including its resources and associated items. Also, Python
@@ -246,12 +246,12 @@ the code of a plugin is running while the application tries to unload it.</p>
 <p>To avoid that and to be as flexible as possible, Keypirinha will never force a
 particular plugin, or more generally a thread, to terminate. Instead, it offers
 to the Plugins a very cheap API call
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a>, that allows Plugins to
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a>, that allows Plugins to
 <strong>frequently</strong> check if they should stop any work and leave the current call.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">It is up to the plugin developer to call the
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a> method <strong>as frequently as
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a> method <strong>as frequently as
 possible</strong> to check if the current call should be interrupted immediately.
 Especially at <strong>I/O boundaries</strong> like file operation, directories scanning,
 network requests, etc…</p>
@@ -267,7 +267,7 @@ number to every loaded instance of a Package and its plugins.</p>
 <p>The InstanceID is an unsigned integer internally created and managed by the
 application, assigned at runtime to every loaded package and plugin. It is
 essentially used to ensure plugins are not messing up the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">catalog</span></a>.</p>
-<p>When a package is loaded for the first time, it receives the InstanceID <code class="docutils literal"><span class="pre">1</span></code>,
+<p>When a package is loaded for the first time, it receives the InstanceID <code class="docutils literal notranslate"><span class="pre">1</span></code>,
 as well as its plugins. When any change is detected in one or several of its
 files, the package is reloaded and its InstanceID is incremented.</p>
 <div class="admonition note">
@@ -280,17 +280,17 @@ its parent package when it is loaded or reloaded.</p>
 <span id="api-overview-msgflow"></span><h3>13.1.2.4. Messages Workflow<a class="headerlink" href="#messages-workflow" title="Permalink to this headline">¶</a></h3>
 <p>Keypirinha sends <em>messages</em> to its plugins either to notify them about a specific
 event, or to request them to perform a specific task.</p>
-<p>Once a plugin is loaded, its <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_start" title="keypirinha.Plugin.on_start"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_start()</span></code></a> method is
+<p>Once a plugin is loaded, its <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_start" title="keypirinha.Plugin.on_start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_start()</span></code></a> method is
 called, shortly followed by a call to the
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method (this behavior may change in the
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_catalog()</span></code></a> method (this behavior may change in the
 future).</p>
 <p>When the user starts typing their search and each time search terms have
-changed, the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_suggest()</span></code></a> method is called. There is
-a subtlety here: if no item has been selected yet (i.e. <code class="kbd docutils literal"><span class="pre">Tab</span></code> key has not
+changed, the <a class="reference internal" href="plugin.html#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_suggest()</span></code></a> method is called. There is
+a subtlety here: if no item has been selected yet (i.e. <kbd class="kbd docutils literal notranslate">Tab</kbd> key has not
 been pressed yet), the message is <em>broadcasted</em> to every loaded package.
 Otherwise, it is sent only to the parent <em>plugin</em>.</p>
 <p>When the user wants to execute the selected item, the
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_execute" title="keypirinha.Plugin.on_execute"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_execute()</span></code></a> method of the appropriate plugin is
+<a class="reference internal" href="plugin.html#keypirinha.Plugin.on_execute" title="keypirinha.Plugin.on_execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_execute()</span></code></a> method of the appropriate plugin is
 called and it is up to it to actually execute the passed item.</p>
 <p>These are the main messages that a plugin developer usually wants to implement.
 Other messages are mainly notifications that helps plugin to be up-to-date with
@@ -300,22 +300,22 @@ user’s settings and environment.</p>
 <div class="section" id="getting-started">
 <h2>13.1.3. Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>Plugin development should be done in the <a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> directory.</p>
-<p>The best way to get your hands in the dirt is to use the <code class="docutils literal"><span class="pre">Test</span></code> package as a
+<p>The best way to get your hands in the dirt is to use the <code class="docutils literal notranslate"><span class="pre">Test</span></code> package as a
 new package skeleton, then have a look at the source code of the official
 packages.</p>
 <p>Official packages are all located in the
-<code class="file docutils literal"><span class="pre">default\Packages\*.keypirinha-package</span></code>.</p>
+<code class="file docutils literal notranslate"><span class="pre">default\Packages\*.keypirinha-package</span></code>.</p>
 <p>In particular:</p>
 <ul class="simple">
-<li>the <code class="docutils literal"><span class="pre">Apps</span></code> package shows how to use Keypirinha’s API to scan directories and
+<li>the <code class="docutils literal notranslate"><span class="pre">Apps</span></code> package shows how to use Keypirinha’s API to scan directories and
 files.</li>
-<li>the <code class="docutils literal"><span class="pre">TaskSwitcher</span></code> and <code class="docutils literal"><span class="pre">Winamp</span></code> packages interact with the Win32 API via
-the <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#module-ctypes" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">ctypes</span></code></a> Python standard module.</li>
-<li>the <code class="docutils literal"><span class="pre">ControlPanel</span></code> and <code class="docutils literal"><span class="pre">PuTTY</span></code> packages show how to dig into system’s
-Registry using the <a class="reference external" href="https://docs.python.org/3.6/library/winreg.html#module-winreg" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">winreg</span></code></a> Python standard module.</li>
-<li>the <code class="docutils literal"><span class="pre">Calc</span></code> package imports a third-party bundled Python module.</li>
-<li>the <code class="docutils literal"><span class="pre">GoogleTranslate</span></code> package does online HTTP requests to a web-service.</li>
-<li>the <code class="docutils literal"><span class="pre">URL</span></code> package extract an embedded resource file and parse it.</li>
+<li>the <code class="docutils literal notranslate"><span class="pre">TaskSwitcher</span></code> and <code class="docutils literal notranslate"><span class="pre">Winamp</span></code> packages interact with the Win32 API via
+the <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#module-ctypes" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> Python standard module.</li>
+<li>the <code class="docutils literal notranslate"><span class="pre">ControlPanel</span></code> and <code class="docutils literal notranslate"><span class="pre">PuTTY</span></code> packages show how to dig into system’s
+Registry using the <a class="reference external" href="https://docs.python.org/3.6/library/winreg.html#module-winreg" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code></a> Python standard module.</li>
+<li>the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> package imports a third-party bundled Python module.</li>
+<li>the <code class="docutils literal notranslate"><span class="pre">GoogleTranslate</span></code> package does online HTTP requests to a web-service.</li>
+<li>the <code class="docutils literal notranslate"><span class="pre">URL</span></code> package extract an embedded resource file and parse it.</li>
 </ul>
 </div>
 </div>
@@ -363,7 +363,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -43,8 +43,8 @@ Get involved in the development of the Packages
 ===============================================
 
 If you are not sure where to start from, some feature requests or issues
-reported by users may be associated with the `help-appreciated
-<https://github.com/Keypirinha/Keypirinha/issues?q=is%3Aissue+is%3Aopen+label%3Ahelp-appreciated>`_
+reported by users may be associated with the `contrib-appreciated
+<https://github.com/Keypirinha/Keypirinha/issues?q=is%3Aissue+is%3Aopen+label%3Acontrib-appreciated>`_
 tag.
 
 The |packsrepo_link| is online and accepts *Pull Requests*.

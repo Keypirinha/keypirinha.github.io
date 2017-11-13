@@ -4,6 +4,25 @@ Theming
 
 Since v2.14, |project| GUI can be customized via the ``theme`` setting.
 
+A more detailed description is available in the ``Keypirinha.ini`` default
+config file.
+
+
+Theme Builder
+=============
+
+:ghu:`Fuhrmann` made an awesome theme builder to ease the generation of your
+|project| theme settings.
+`Check it out here <https://fuhrmann.github.io/keypirinha-theme-builder/>`_!
+
+.. image:: images/theme-builder.png
+    :align: center
+    :target: https://fuhrmann.github.io/keypirinha-theme-builder/
+
+
+Predefined Official Themes
+==========================
+
 Below are some possible combinations of the themes that are available by
 default. All those themes are defined in |project|'s default configuration file,
 search for the ``[theme/...]`` sections nearby the end of the file.

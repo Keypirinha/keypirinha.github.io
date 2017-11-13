@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -104,8 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="contributions.html">6. Third-Party Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">7. Configuration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">8. Theming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#third-party-themes">8.1. Third-Party Themes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#clearlight">8.1.1. ClearLight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#theme-builder">8.1. Theme Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#predefined-official-themes">8.2. Predefined Official Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-themes">8.3. Third-Party Themes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clearlight">8.3.1. ClearLight</a></li>
 </ul>
 </li>
 </ul>
@@ -186,73 +188,85 @@
             
   <div class="section" id="theming">
 <h1>8. Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h1>
-<p>Since v2.14, Keypirinha GUI can be customized via the <code class="docutils literal"><span class="pre">theme</span></code> setting.</p>
+<p>Since v2.14, Keypirinha GUI can be customized via the <code class="docutils literal notranslate"><span class="pre">theme</span></code> setting.</p>
+<p>A more detailed description is available in the <code class="docutils literal notranslate"><span class="pre">Keypirinha.ini</span></code> default
+config file.</p>
+<div class="section" id="theme-builder">
+<h2>8.1. Theme Builder<a class="headerlink" href="#theme-builder" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a> made an awesome theme builder to ease the generation of your
+Keypirinha theme settings.
+<a class="reference external" href="https://fuhrmann.github.io/keypirinha-theme-builder/">Check it out here</a>!</p>
+<a class="reference external image-reference" href="https://fuhrmann.github.io/keypirinha-theme-builder/"><img alt="_images/theme-builder.png" class="align-center" src="_images/theme-builder.png" /></a>
+</div>
+<div class="section" id="predefined-official-themes">
+<h2>8.2. Predefined Official Themes<a class="headerlink" href="#predefined-official-themes" title="Permalink to this headline">¶</a></h2>
 <p>Below are some possible combinations of the themes that are available by
 default. All those themes are defined in Keypirinha’s default configuration file,
-search for the <code class="docutils literal"><span class="pre">[theme/...]</span></code> sections nearby the end of the file.</p>
+search for the <code class="docutils literal notranslate"><span class="pre">[theme/...]</span></code> sections nearby the end of the file.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">You can change the <code class="docutils literal"><span class="pre">theme</span></code> setting at runtime to visualize the new theme
+<p class="last">You can change the <code class="docutils literal notranslate"><span class="pre">theme</span></code> setting at runtime to visualize the new theme
 while Keypirinha’s LaunchBox is displayed</p>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-layout-jumbo.png" class="align-center" src="_images/theme-layout-jumbo.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">JumboLayout</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-layout-medium.png" class="align-center" src="_images/theme-layout-medium.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-layout-tiny.png" class="align-center" src="_images/theme-layout-tiny.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">TinyLayout</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-old.png" class="align-center" src="_images/theme-old.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">AnthraciteFull</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-colors-solarized-light.png" class="align-center" src="_images/theme-colors-solarized-light.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedLightColors</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-colors-solarized-dark.png" class="align-center" src="_images/theme-colors-solarized-dark.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, SolarizedDarkColors</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-colors-purplenight.png" class="align-center" src="_images/theme-colors-purplenight.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PurpleNightColors</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-colors-electricstate.png" class="align-center" src="_images/theme-colors-electricstate.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, ElectricStateColors</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <img alt="_images/theme-colors-princess.png" class="align-center" src="_images/theme-colors-princess.png" />
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[gui]</span>
 <span class="na">theme</span> <span class="o">=</span> <span class="s">MediumLayout, PrincessColors</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="third-party-themes">
-<h2>8.1. Third-Party Themes<a class="headerlink" href="#third-party-themes" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. Third-Party Themes<a class="headerlink" href="#third-party-themes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="clearlight">
-<h3>8.1.1. ClearLight<a class="headerlink" href="#clearlight" title="Permalink to this headline">¶</a></h3>
+<h3>8.3.1. ClearLight<a class="headerlink" href="#clearlight" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/bege10">&#64;bege10</a> kindly shared their
 <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/180">ClearLight theme</a>.</p>
 <img alt="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" class="align-center" src="https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png" />
@@ -303,7 +317,7 @@ while Keypirinha’s LaunchBox is displayed</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

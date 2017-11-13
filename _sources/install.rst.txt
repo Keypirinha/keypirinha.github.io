@@ -85,6 +85,7 @@ needed):
     #     C:\SomewhereUnderTheRainbow\KeypirinhaData\Local
     # * It does not have to be named KeypirinhaData
     # * File must be encoded in UTF-8 (no BOM necessary)
+    # * Environment variables are expanded (e.g. %USERNAME%)
     portable_dir = C:\SomewhereUnderTheRainbow\KeypirinhaData
 
 .. note::

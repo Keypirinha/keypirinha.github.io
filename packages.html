@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -196,16 +196,16 @@ concept of <a class="reference internal" href="glossary.html#term-packages"><spa
 designed to work together, as well as optional configuration files and
 dependencies.</p>
 <p>A package can take the form of a directory containing loose files, or a Zip
-archive with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension (for redistribution).</p>
+archive with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code> extension (for redistribution).</p>
 <div class="section" id="packages-repositories">
 <h2>12.1. Packages Repositories<a class="headerlink" href="#packages-repositories" title="Permalink to this headline">¶</a></h2>
 <p>There are four <a class="reference internal" href="glossary.html#term-repositories"><span class="xref std std-term">repositories</span></a> of packages. <strong>In order of descending
 priority:</strong></p>
 <ul class="simple">
 <li><a class="reference internal" href="#pack-live"><span class="std std-ref">Live Packages</span></a>: individual directories with loose files</li>
-<li><a class="reference internal" href="#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
+<li><a class="reference internal" href="#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
 extension, downloaded and/or installed manually by the user.</li>
-<li><a class="reference internal" href="#pack-official"><span class="std std-ref">Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
+<li><a class="reference internal" href="#pack-official"><span class="std std-ref">Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
 extension. Packages officially supported and shipped with the application.</li>
 <li><a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a>
 Hard-coded in the application.</li>
@@ -224,7 +224,7 @@ in the Repository with the highest priority will override the others.</p>
 <div class="section" id="live-packages">
 <span id="pack-live"></span><h3>12.1.1. Live Packages<a class="headerlink" href="#live-packages" title="Permalink to this headline">¶</a></h3>
 <p>Live packages, or Loose packages, are individual directories containing loose
-files. They are located under the <code class="file docutils literal"><span class="pre">Packages</span></code> directory in user’s folder.</p>
+files. They are located under the <code class="file docutils literal notranslate"><span class="pre">Packages</span></code> directory in user’s folder.</p>
 <p>This is the place to start if you wish to create your own package or to modify
 an existing one.</p>
 <div class="admonition note">
@@ -236,30 +236,30 @@ Package if its name does not comply to the rules described in the
 <p>This Repository is named <em>Live</em> because it is the only one that allows file
 change at runtime. May it be to configuration files, to its source code or any
 other resource, the Package will be reloaded soon after a file has been
-modified, renamed or delete. However, note that if <strong>only</strong> an <code class="file docutils literal"><span class="pre">.ini</span></code> file
+modified, renamed or delete. However, note that if <strong>only</strong> an <code class="file docutils literal notranslate"><span class="pre">.ini</span></code> file
 is modified, the application will call the
-<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-meth docutils literal"><span class="pre">keypirinha.Plugin.on_events()</span></code></a> method of every plugin that belong to the
+<a class="reference internal" href="api/plugin.html#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.on_events()</span></code></a> method of every plugin that belong to the
 parent package instead of fully reloading it.</p>
 </div>
 <div class="section" id="installed-packages-downloaded">
 <span id="pack-installed"></span><h3>12.1.2. Installed Packages (Downloaded)<a class="headerlink" href="#installed-packages-downloaded" title="Permalink to this headline">¶</a></h3>
 <p>Packages are meant to be easily redistributable and installable. A dedicated
-directory called <code class="file docutils literal"><span class="pre">InstalledPackages</span></code> under user’s directory is available
+directory called <code class="file docutils literal notranslate"><span class="pre">InstalledPackages</span></code> under user’s directory is available
 for this purpose.</p>
-<p>Package files are Zip archives with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code> extension.</p>
+<p>Package files are Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code> extension.</p>
 </div>
 <div class="section" id="official-packages-shipped">
 <span id="pack-official"></span><h3>12.1.3. Official Packages (Shipped)<a class="headerlink" href="#official-packages-shipped" title="Permalink to this headline">¶</a></h3>
 <p>The Official packages are shipped with every Keypirinha’s distribution. They are
-individually packed in a Zip archive with the <code class="file docutils literal"><span class="pre">.keypirinha-package</span></code>
-extension and are stored in the <code class="file docutils literal"><span class="pre">default/Packages</span></code> directory directly
+individually packed in a Zip archive with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
+extension and are stored in the <code class="file docutils literal notranslate"><span class="pre">default/Packages</span></code> directory directly
 located under Keypirinha’s installation directory.</p>
 </div>
 <div class="section" id="internal-package">
 <span id="pack-internal"></span><h3>12.1.4. Internal Package<a class="headerlink" href="#internal-package" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">Internal</span></code> is actually both a type of package and the name of the package
+<p><code class="docutils literal notranslate"><span class="pre">Internal</span></code> is actually both a type of package and the name of the package
 itself.</p>
-<p>The <code class="docutils literal"><span class="pre">Internal</span></code> package is implemented in the application itself and its
+<p>The <code class="docutils literal notranslate"><span class="pre">Internal</span></code> package is implemented in the application itself and its
 behavior is unalterable. Any other type of <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a> is said to be
 <em>external</em>.</p>
 <p>See <a class="reference internal" href="packages/internal.html"><span class="doc">Internal Package</span></a> for more information about how to use this package.</p>
@@ -270,8 +270,8 @@ behavior is unalterable. Any other type of <a class="reference internal" href="g
 <p>Rules for package naming:</p>
 <ul>
 <li><p class="first">Name can contain alphanumeric characters (case insensitive) and the following
-characters: <code class="docutils literal"><span class="pre">-</span></code>, <code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">=</span></code>, <code class="docutils literal"><span class="pre">_</span></code>, <code class="docutils literal"><span class="pre">#</span></code>, <code class="docutils literal"><span class="pre">&#64;</span></code>, <code class="docutils literal"><span class="pre">(</span></code>, <code class="docutils literal"><span class="pre">)</span></code>, <code class="docutils literal"><span class="pre">[</span></code>,
-<code class="docutils literal"><span class="pre">]</span></code>, <code class="docutils literal"><span class="pre">{</span></code>, <code class="docutils literal"><span class="pre">}</span></code></p>
+characters: <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">)</span></code>, <code class="docutils literal notranslate"><span class="pre">[</span></code>,
+<code class="docutils literal notranslate"><span class="pre">]</span></code>, <code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code></p>
 </li>
 <li><p class="first">Name must be at least 3 characters, up to 50</p>
 </li>
@@ -283,48 +283,48 @@ characters: <code class="docutils literal"><span class="pre">-</span></code>, <c
 </li>
 <li><p class="first">The following names are reserved:</p>
 <table class="hlist"><tr><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">all</span></code></li>
-<li><code class="docutils literal"><span class="pre">app</span></code></li>
-<li><code class="docutils literal"><span class="pre">application</span></code></li>
-<li><code class="docutils literal"><span class="pre">builtin</span></code></li>
-<li><code class="docutils literal"><span class="pre">builtins</span></code></li>
-<li><code class="docutils literal"><span class="pre">cache</span></code></li>
-<li><code class="docutils literal"><span class="pre">data</span></code></li>
-<li><code class="docutils literal"><span class="pre">default</span></code></li>
-<li><code class="docutils literal"><span class="pre">env</span></code></li>
-<li><code class="docutils literal"><span class="pre">extern</span></code></li>
-<li><code class="docutils literal"><span class="pre">external</span></code></li>
-<li><code class="docutils literal"><span class="pre">hook</span></code></li>
-<li><code class="docutils literal"><span class="pre">icon</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">all</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">app</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">application</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">builtin</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">builtins</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">cache</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">data</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">default</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">env</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">extern</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">external</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">hook</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">icon</span></code></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">image</span></code></li>
-<li><code class="docutils literal"><span class="pre">intern</span></code></li>
-<li><code class="docutils literal"><span class="pre">internal</span></code></li>
-<li><code class="docutils literal"><span class="pre">kpsdk</span></code></li>
-<li><code class="docutils literal"><span class="pre">local</span></code></li>
-<li><code class="docutils literal"><span class="pre">locale</span></code></li>
-<li><code class="docutils literal"><span class="pre">main</span></code></li>
-<li><code class="docutils literal"><span class="pre">name</span></code></li>
-<li><code class="docutils literal"><span class="pre">nil</span></code></li>
-<li><code class="docutils literal"><span class="pre">none</span></code></li>
-<li><code class="docutils literal"><span class="pre">null</span></code></li>
-<li><code class="docutils literal"><span class="pre">official</span></code></li>
-<li><code class="docutils literal"><span class="pre">package</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">image</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">intern</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">internal</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">kpsdk</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">local</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">locale</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">main</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">nil</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">none</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">null</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">official</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">package</span></code></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal"><span class="pre">plugin</span></code></li>
-<li><code class="docutils literal"><span class="pre">python</span></code></li>
-<li><code class="docutils literal"><span class="pre">res</span></code></li>
-<li><code class="docutils literal"><span class="pre">resource</span></code></li>
-<li><code class="docutils literal"><span class="pre">sdk</span></code></li>
-<li><code class="docutils literal"><span class="pre">temp</span></code></li>
-<li><code class="docutils literal"><span class="pre">theme</span></code></li>
-<li><code class="docutils literal"><span class="pre">tmp</span></code></li>
-<li><code class="docutils literal"><span class="pre">type</span></code></li>
-<li><code class="docutils literal"><span class="pre">script</span></code></li>
-<li><code class="docutils literal"><span class="pre">user</span></code></li>
-<li><code class="docutils literal"><span class="pre">var</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">plugin</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">python</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">res</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">resource</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">sdk</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">temp</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">theme</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">tmp</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">script</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">user</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">var</span></code></li>
 </ul>
 </td></tr></table>
 </li>
@@ -378,7 +378,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

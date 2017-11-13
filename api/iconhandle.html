@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -203,12 +203,18 @@
 <dl class="class">
 <dt id="keypirinha.IconHandle">
 <em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">IconHandle</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
-<dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_icon()</span></code></a> and
-by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal"><span class="pre">load_icon()</span></code></a>.</p>
+<dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_icon()</span></code></a> and
+by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_icon()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha.IconHandle.__bool__">
 <code class="descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__bool__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicate whether this handle has been <a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal"><span class="pre">free()</span></code></a> or not.</p>
+<dd><p>Indicate whether this handle has been <a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal notranslate"><span class="pre">free()</span></code></a> or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="keypirinha.IconHandle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -226,9 +232,9 @@ by <a class="reference internal" href="module.html#keypirinha.load_icon" title="
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean value to indicate whether resources have actually
-been freed or not. This method may return <code class="docutils literal"><span class="pre">False</span></code> if it has been
+been freed or not. This method may return <code class="docutils literal notranslate"><span class="pre">False</span></code> if it has been
 called already for this handle, or by an other
-<a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a> object pointing to the same icon resource.
+<a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">IconHandle</span></code></a> object pointing to the same icon resource.
 You usually do not need to check the return value.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></td>
@@ -246,7 +252,7 @@ by the destructor of this object.</p>
 <dt id="keypirinha.IconHandle.is_init">
 <code class="descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified">Deprecated since version 2.9.6: </span>Use standard <a class="reference internal" href="#keypirinha.IconHandle.__bool__" title="keypirinha.IconHandle.__bool__"><code class="xref py py-meth docutils literal"><span class="pre">__bool__()</span></code></a> operator instead</p>
+<p><span class="versionmodified">Deprecated since version 2.9.6: </span>Use standard <a class="reference internal" href="#keypirinha.IconHandle.__bool__" title="keypirinha.IconHandle.__bool__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__bool__()</span></code></a> operator instead</p>
 </div>
 </dd></dl>
 
@@ -297,7 +303,7 @@ by the destructor of this object.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

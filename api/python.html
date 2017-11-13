@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -202,12 +202,12 @@
 <p>The embedded <a class="reference external" href="https://python.org">Python3</a> interpreter is a vanilla version of <em>CPython</em> (the
 official Python distribution). The Python environment you get in Keypirinha is
 pretty similar to the original one except that some modules have been removed
-from the standard library: <code class="docutils literal"><span class="pre">distutils</span></code>, <code class="docutils literal"><span class="pre">ensurepip</span></code>, <code class="docutils literal"><span class="pre">idlelib</span></code>,
-<code class="docutils literal"><span class="pre">lib2to3</span></code> and <code class="docutils literal"><span class="pre">tkinter</span></code>.</p>
+from the standard library: <code class="docutils literal notranslate"><span class="pre">distutils</span></code>, <code class="docutils literal notranslate"><span class="pre">ensurepip</span></code>, <code class="docutils literal notranslate"><span class="pre">idlelib</span></code>,
+<code class="docutils literal notranslate"><span class="pre">lib2to3</span></code> and <code class="docutils literal notranslate"><span class="pre">tkinter</span></code>.</p>
 <p>The exact version number of the application and the interpreter can be read at
 the beginning of the log in the <a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a>. Or by typing the following
 commands in the Console window:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">version</span>
 <span class="go">&#39;3.5.0 (default, Oct 18 2015, 16:49:14) [MSC v.1800 64 bit (AMD64)]&#39;</span>
 </pre></div>
@@ -217,8 +217,8 @@ commands in the Console window:</p>
 <h2>13.3.2. Non-Debug<a class="headerlink" href="#non-debug" title="Permalink to this headline">¶</a></h2>
 <p>When started, Keypirinha initializes the embedded Python interpreter and enables
 its <em>optimize</em> flag. This is equivalent to running the standard Python command
-with the <code class="docutils literal"><span class="pre">-O</span></code> option.</p>
-<p>As a result, the <code class="docutils literal"><span class="pre">__debug__</span></code> constant is false and <code class="docutils literal"><span class="pre">assert</span></code> statements are
+with the <code class="docutils literal notranslate"><span class="pre">-O</span></code> option.</p>
+<p>As a result, the <code class="docutils literal notranslate"><span class="pre">__debug__</span></code> constant is false and <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements are
 not executed.</p>
 </div>
 <div class="section" id="modifications">
@@ -230,9 +230,9 @@ of Python. All of these modifications are documented in this section.</p>
 <p>In its <em>vanilla</em> version, Python offers numerous ways to exit a program.
 Keypirinha on the other hand is not meant to be shutdown by its plugins and would
 crash in that case so traps have been installed to avoid that.</p>
-<p>As a result, if a plugin calls one of the <code class="docutils literal"><span class="pre">exit</span></code> or <code class="docutils literal"><span class="pre">quit</span></code> standard
-functions like <a class="reference external" href="https://docs.python.org/3.6/library/sys.html#sys.exit" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">sys.exit()</span></code></a> or <a class="reference external" href="https://docs.python.org/3.6/library/_thread.html#_thread.exit" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">_thread.exit()</span></code></a>, directly or
-indirectly, a <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#NotImplementedError" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">NotImplementedError</span></code></a> exception is raised instead of the
+<p>As a result, if a plugin calls one of the <code class="docutils literal notranslate"><span class="pre">exit</span></code> or <code class="docutils literal notranslate"><span class="pre">quit</span></code> standard
+functions like <a class="reference external" href="https://docs.python.org/3.6/library/sys.html#sys.exit" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.exit()</span></code></a> or <a class="reference external" href="https://docs.python.org/3.6/library/_thread.html#_thread.exit" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">_thread.exit()</span></code></a>, directly or
+indirectly, a <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#NotImplementedError" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> exception is raised instead of the
 program being shutdown.</p>
 <p>As a side note, may the plugin developer absolutely wishes to crash the
 application anyway, Python and Keypirinha both offer numerous ways to do that
@@ -240,14 +240,14 @@ too.</p>
 </div>
 <div class="section" id="os-environ">
 <h3>13.3.3.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
-<p>In the Python implementation that Keypirinha embeds, the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a>
-map is created at import time and never updated. The <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">os.getenv()</span></code></a>
+<p>In the Python implementation that Keypirinha embeds, the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>
+map is created at import time and never updated. The <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getenv()</span></code></a>
 function does not help here because it is just a wrapper around
-<code class="docutils literal"><span class="pre">os.environ.get()</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">os.environ.get()</span></code>.</p>
 <p>As a result, a Keypirinha plugin would not be able to read up-to-date environment
 variables except by requesting the Windows API which is quite tedious in this
 case.</p>
-<p>Keypirinha solves this issue by automatically updating <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">os.environ</span></code></a>
+<p>Keypirinha solves this issue by automatically updating <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>
 every time an environment variable has been modified so the plugins always get
 up-to-date values.</p>
 </div>
@@ -297,7 +297,7 @@ up-to-date values.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

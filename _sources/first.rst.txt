@@ -78,10 +78,6 @@ Execute this item **again**. You will see why in the next section below.
     :alt: Second search for an already executed item
     :align: center
 
-.. note::
-    The score numbers you observe on your machine might differ from the ones
-    displayed on that screenshot.
-
 
 .. _first-associate-keyword:
 
@@ -239,6 +235,12 @@ Configuration
 =============
 
 See the :doc:`configuration` section for more info.
+
+
+GUI Theming
+===========
+
+It is possibe to tweak |project|'s GUI, see :doc:`theming` for more info.
 
 
 Shipped Packages

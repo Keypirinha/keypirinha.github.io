@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -112,9 +112,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#drag-and-drop">4.10. Drag and Drop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#clear-the-history">4.11. Clear the history</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration">4.12. Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shipped-packages">4.13. Shipped Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#customize-your-catalog">4.14. Customize your Catalog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extending-project">4.15. Extending Keypirinha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gui-theming">4.13. GUI Theming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shipped-packages">4.14. Shipped Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-your-catalog">4.15. Customize your Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-project">4.16. Extending Keypirinha</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="shipped-packages.html">5. Shipped Packages</a></li>
@@ -208,19 +209,19 @@ desktop, usually in the lower-right corner of your main monitor.</p>
 <img alt="|project|'s icon in the system's tray" class="align-center" src="_images/systray.png" />
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">This <code class="docutils literal"><span class="pre">k</span></code> icon also indicates any activity from the plugins (e.g.
+<p class="last">This <code class="docutils literal notranslate"><span class="pre">k</span></code> icon also indicates any activity from the plugins (e.g.
 cataloging, suggesting, executing, …) by <strong>turning green</strong>. Color is
 restored to normal as soon as plugins have finished their jobs.</p>
 </div>
 </div>
 <div class="section" id="open-the-launchbox">
 <h2>4.2. Open the LaunchBox<a class="headerlink" href="#open-the-launchbox" title="Permalink to this headline">¶</a></h2>
-<p>Once Keypirinha is running, press <code class="kbd docutils literal"><span class="pre">Ctrl+Win+K</span></code> (by default) to show the
+<p>Once Keypirinha is running, press <kbd class="kbd docutils literal notranslate">Ctrl+Win+K</kbd> (by default) to show the
 <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>…</p>
 <img alt="|project|'s main dialog" class="align-center" src="_images/wndrun.png" />
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Many users coming from Launchy change the default hotkey to <code class="kbd docutils literal"><span class="pre">Alt+Space</span></code></p>
+<p class="last">Many users coming from Launchy change the default hotkey to <kbd class="kbd docutils literal notranslate">Alt+Space</kbd></p>
 </div>
 </div>
 <div class="section" id="first-search">
@@ -229,13 +230,13 @@ restored to normal as soon as plugins have finished their jobs.</p>
 application, <em>Firefox</em> for example. Start typing its name and it will soon show
 up in the results list as long as <em>Firefox</em> is installed on your machine.</p>
 <img alt="First search" class="align-center" src="_images/wndrun-search1.png" />
-<p>Once the desired item is selected (you can use the <code class="kbd docutils literal"><span class="pre">Down</span></code>, <code class="kbd docutils literal"><span class="pre">Up</span></code>,
-<code class="kbd docutils literal"><span class="pre">PgDown</span></code> and <code class="kbd docutils literal"><span class="pre">PgUp</span></code> keys for that), press <code class="kbd docutils literal"><span class="pre">Enter</span></code> to launch it.
+<p>Once the desired item is selected (you can use the <kbd class="kbd docutils literal notranslate">Down</kbd>, <kbd class="kbd docutils literal notranslate">Up</kbd>,
+<kbd class="kbd docutils literal notranslate">PgDown</kbd> and <kbd class="kbd docutils literal notranslate">PgUp</kbd> keys for that), press <kbd class="kbd docutils literal notranslate">Enter</kbd> to launch it.
 Keypirinha will then automatically go back to background…</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Search is case-insensitive in Keypirinha, the search term <code class="docutils literal"><span class="pre">FFOX</span></code> is
-equivalent to <code class="docutils literal"><span class="pre">ffox</span></code> or <code class="docutils literal"><span class="pre">FfoX</span></code></p>
+<p class="last">Search is case-insensitive in Keypirinha, the search term <code class="docutils literal notranslate"><span class="pre">FFOX</span></code> is
+equivalent to <code class="docutils literal notranslate"><span class="pre">ffox</span></code> or <code class="docutils literal notranslate"><span class="pre">FfoX</span></code></p>
 </div>
 </div>
 <div class="section" id="second-search">
@@ -244,17 +245,12 @@ equivalent to <code class="docutils literal"><span class="pre">ffox</span></code
 already executed, chances are high that you will only need to type the very
 first couple of letters of its name to get the task at the top of the results
 list.</p>
-<p>To keep going with our example, we will <strong>just</strong> type the <code class="docutils literal"><span class="pre">F</span></code> letter since it
+<p>To keep going with our example, we will <strong>just</strong> type the <code class="docutils literal notranslate"><span class="pre">F</span></code> letter since it
 is the one that naturally comes to our mind when thinking about the name
-<code class="docutils literal"><span class="pre">Firefox</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">Firefox</span></code>.</p>
 <p>Notice how the score of the <em>Firefox</em> item is much higher now?</p>
 <p>Execute this item <strong>again</strong>. You will see why in the next section below.</p>
 <img alt="Second search for an already executed item" class="align-center" src="_images/wndrun-search2.png" />
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The score numbers you observe on your machine might differ from the ones
-displayed on that screenshot.</p>
-</div>
 </div>
 <div class="section" id="associate-a-keyword-to-an-item">
 <span id="first-associate-keyword"></span><h2>4.5. Associate a Keyword to an Item<a class="headerlink" href="#associate-a-keyword-to-an-item" title="Permalink to this headline">¶</a></h2>
@@ -264,9 +260,9 @@ you probably want to keep the number of keystrokes that are required to search
 and launch it to a minimum.</p>
 <p>Keypirinha offers the ability to <strong>implicitly associate a keyword with a
 particular item</strong>.</p>
-<p>In the last section, we typed the search term <code class="docutils literal"><span class="pre">F</span></code> (or <code class="docutils literal"><span class="pre">f</span></code>, search is case-
+<p>In the last section, we typed the search term <code class="docutils literal notranslate"><span class="pre">F</span></code> (or <code class="docutils literal notranslate"><span class="pre">f</span></code>, search is case-
 insensitive), before <strong>executing</strong> <em>Firefox</em>. Keypirinha recorded that
-information so every time your search term will be <code class="docutils literal"><span class="pre">f</span></code>, the <em>Firefox</em> item
+information so every time your search term will be <code class="docutils literal notranslate"><span class="pre">f</span></code>, the <em>Firefox</em> item
 will be pushed up to the top of the results list.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
@@ -275,8 +271,8 @@ item.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You may want to <em>associate</em> <code class="docutils literal"><span class="pre">f</span></code> with an other item later. In that case,
-just type <code class="docutils literal"><span class="pre">f</span></code> and select this other item before <strong>executing</strong> it.
+<p class="last">You may want to <em>associate</em> <code class="docutils literal notranslate"><span class="pre">f</span></code> with an other item later. In that case,
+just type <code class="docutils literal notranslate"><span class="pre">f</span></code> and select this other item before <strong>executing</strong> it.
 Keypirinha will change the association implicitly.</p>
 </div>
 </div>
@@ -284,9 +280,9 @@ Keypirinha will change the association implicitly.</p>
 <h2>4.6. Specify arguments<a class="headerlink" href="#specify-arguments" title="Permalink to this headline">¶</a></h2>
 <p>In Keypirinha, some items may accept and even require arguments.</p>
 <p>Once you typed your search term and <strong>selected</strong> the desired item, hit the
-<code class="kbd docutils literal"><span class="pre">Tab</span></code> key (by default, the <code class="kbd docutils literal"><span class="pre">Space</span></code> key also works in this particular
+<kbd class="kbd docutils literal notranslate">Tab</kbd> key (by default, the <kbd class="kbd docutils literal notranslate">Space</kbd> key also works in this particular
 case).</p>
-<p>Back to our example, <em>Firefox</em> currently accepts the <code class="docutils literal"><span class="pre">-preferences</span></code> command
+<p>Back to our example, <em>Firefox</em> currently accepts the <code class="docutils literal notranslate"><span class="pre">-preferences</span></code> command
 line option so let’s try typing this one and execute our item.</p>
 <img alt="_images/wndrun-args.png" class="align-center" src="_images/wndrun-args.png" />
 </div>
@@ -296,36 +292,36 @@ line option so let’s try typing this one and execute our item.</p>
 <p>Search and select the <em>Firefox</em> item again.</p>
 <img alt="_images/wndrun-search2.png" class="align-center" src="_images/wndrun-search2.png" />
 <p>By default, the number of actions available for the selected item are displayed
-at the right side: <code class="docutils literal"><span class="pre">8</span> <span class="pre">actions</span></code>. Hit the <code class="kbd docutils literal"><span class="pre">Ctrl+Enter</span></code> to visualize these
-actions (or the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key until you reach the actions list).</p>
-<p>Because this particular <em>Firefox</em> item is a file, even a <code class="file docutils literal"><span class="pre">*.lnk</span></code> file in
+at the right side: <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">actions</span></code>. Hit the <kbd class="kbd docutils literal notranslate">Ctrl+Enter</kbd> to visualize these
+actions (or the <kbd class="kbd docutils literal notranslate">Tab</kbd> key until you reach the actions list).</p>
+<p>Because this particular <em>Firefox</em> item is a file, even a <code class="file docutils literal notranslate"><span class="pre">*.lnk</span></code> file in
 our example, the following actions are made available:</p>
 <img alt="_images/wndrun-actions.png" class="align-center" src="_images/wndrun-actions.png" />
-<p>Select the one you want and press <code class="kbd docutils literal"><span class="pre">Enter</span></code> to execute.</p>
+<p>Select the one you want and press <kbd class="kbd docutils literal notranslate">Enter</kbd> to execute.</p>
 </div>
 <div class="section" id="maximize-the-launchbox">
 <span id="first-maximize"></span><h2>4.8. Maximize the LaunchBox<a class="headerlink" href="#maximize-the-launchbox" title="Permalink to this headline">¶</a></h2>
-<p><code class="kbd docutils literal"><span class="pre">Alt+X</span></code> (or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
+<p><kbd class="kbd docutils literal notranslate">Alt+X</kbd> (or <kbd class="kbd docutils literal notranslate">Win+Up</kbd>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
 state.</p>
 <p>You may need to <strong>temporarily extend the size</strong> of the LaunchBox sometimes in
 order to see the full content of some items in the results list. You can do that
-by either pressing <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> or <code class="kbd docutils literal"><span class="pre">Win+Up</span></code> (toggle).</p>
+by either pressing <kbd class="kbd docutils literal notranslate">Alt+X</kbd> or <kbd class="kbd docutils literal notranslate">Win+Up</kbd> (toggle).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This feature does not impact the geometry you manually setup in case your
-<code class="docutils literal"><span class="pre">geometry</span></code> setting is <code class="docutils literal"><span class="pre">persistent</span></code>. Hit <code class="kbd docutils literal"><span class="pre">Alt+X</span></code> again and your
+<code class="docutils literal notranslate"><span class="pre">geometry</span></code> setting is <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. Hit <kbd class="kbd docutils literal notranslate">Alt+X</kbd> again and your
 previous position and size will be restored. <strong>CAUTION:</strong> If you are in
-<code class="docutils literal"><span class="pre">persistent</span></code> geometry, do not reposition/resize the window <strong>while being
+<code class="docutils literal notranslate"><span class="pre">persistent</span></code> geometry, do not reposition/resize the window <strong>while being
 in maximized mode</strong> or you will loose your previous geometry.</p>
 </div>
 </div>
 <div class="section" id="leave-a-search">
 <h2>4.9. Leave a Search<a class="headerlink" href="#leave-a-search" title="Permalink to this headline">¶</a></h2>
 <p>May you wish to abort what you were doing on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>, press the
-<code class="kbd docutils literal"><span class="pre">Esc</span></code> key. Press it <strong>once</strong>, to clear your search, <strong>twice</strong> to close the
+<kbd class="kbd docutils literal notranslate">Esc</kbd> key. Press it <strong>once</strong>, to clear your search, <strong>twice</strong> to close the
 dialog. Note that one time is enough if you didn’t type anything.</p>
-<p>If you wish to close the window directly, press <code class="kbd docutils literal"><span class="pre">Shift+Esc</span></code> or
-<code class="kbd docutils literal"><span class="pre">Alt+F4</span></code>.</p>
+<p>If you wish to close the window directly, press <kbd class="kbd docutils literal notranslate">Shift+Esc</kbd> or
+<kbd class="kbd docutils literal notranslate">Alt+F4</kbd>.</p>
 </div>
 <div class="section" id="drag-and-drop">
 <span id="first-drag"></span><h2>4.10. Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this headline">¶</a></h2>
@@ -335,20 +331,20 @@ insert its full path.</p>
 <p>Also, items in the results list can be dragged out. The effect of the resulting
 drop depends on the type of item and the destination application:</p>
 <ul class="simple">
-<li>The actual file pointed at by a <code class="docutils literal"><span class="pre">FILE</span></code> item will be copied to the drop
+<li>The actual file pointed at by a <code class="docutils literal notranslate"><span class="pre">FILE</span></code> item will be copied to the drop
 destination.</li>
-<li>The text content of the <code class="docutils literal"><span class="pre">URL</span></code>, <code class="docutils literal"><span class="pre">CMDLINE</span></code>, <code class="docutils literal"><span class="pre">EXPRESSION</span></code> and <code class="docutils literal"><span class="pre">ERROR</span></code>
+<li>The text content of the <code class="docutils literal notranslate"><span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">CMDLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">EXPRESSION</span></code> and <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>
 items will be copied to the drop destination. For example:<ul>
-<li>a <code class="docutils literal"><span class="pre">URL</span></code> item dropped to your web browser’s window will usually open this
-<code class="docutils literal"><span class="pre">URL</span></code></li>
-<li>a <code class="docutils literal"><span class="pre">CMDLINE</span></code> item dropped to a text editor will insert the <code class="docutils literal"><span class="pre">CMDLINE</span></code>
+<li>a <code class="docutils literal notranslate"><span class="pre">URL</span></code> item dropped to your web browser’s window will usually open this
+<code class="docutils literal notranslate"><span class="pre">URL</span></code></li>
+<li>a <code class="docutils literal notranslate"><span class="pre">CMDLINE</span></code> item dropped to a text editor will insert the <code class="docutils literal notranslate"><span class="pre">CMDLINE</span></code>
 itself</li>
 </ul>
 </li>
 </ul>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Like in Windows Explorer, you can drag out <code class="docutils literal"><span class="pre">FILE</span></code> items using either the
+<p class="last">Like in Windows Explorer, you can drag out <code class="docutils literal notranslate"><span class="pre">FILE</span></code> items using either the
 left mouse button to have a regular behavior, or the right mouse button to
 invoke a contextual menu at drop destination that allows you to choose the
 desired drop effect.</p>
@@ -357,14 +353,14 @@ desired drop effect.</p>
 <div class="section" id="clear-the-history">
 <h2>4.11. Clear the history<a class="headerlink" href="#clear-the-history" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to clear the history of every executed items by executing the
-<code class="docutils literal"><span class="pre">Clear</span> <span class="pre">History</span></code> item that can always be found in the Catalog. It can be done
+<code class="docutils literal notranslate"><span class="pre">Clear</span> <span class="pre">History</span></code> item that can always be found in the Catalog. It can be done
 from application’s main contextual menu as well (right click on the LaunchBox).</p>
 <p>If you just want to erase a <strong>single</strong> item from the history, just search for
-it, select it and press <code class="kbd docutils literal"><span class="pre">Ctrl+Del</span></code>. A message dialog will ask you to
+it, select it and press <kbd class="kbd docutils literal notranslate">Ctrl+Del</kbd>. A message dialog will ask you to
 confirm the operation.</p>
 <p>It is also possible to delete every reference to a specific package from the
 history by selecting a result item from this package, then clicking the
-<code class="docutils literal"><span class="pre">Remove</span> <span class="pre">parent</span> <span class="pre">package</span> <span class="pre">from</span> <span class="pre">History</span></code> action from its contextual menu. <br />
+<code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">parent</span> <span class="pre">package</span> <span class="pre">from</span> <span class="pre">History</span></code> action from its contextual menu. <br />
 Note that no keyboard shortcut is provided here as it is assumed to be rarely
 used and to avoid any mistake.</p>
 <div class="admonition warning">
@@ -378,19 +374,23 @@ items, that is described in the <a class="reference internal" href="#first-assoc
 <h2>4.12. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>See the <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> section for more info.</p>
 </div>
+<div class="section" id="gui-theming">
+<h2>4.13. GUI Theming<a class="headerlink" href="#gui-theming" title="Permalink to this headline">¶</a></h2>
+<p>It is possibe to tweak Keypirinha’s GUI, see <a class="reference internal" href="theming.html"><span class="doc">Theming</span></a> for more info.</p>
+</div>
 <div class="section" id="shipped-packages">
-<h2>4.13. Shipped Packages<a class="headerlink" href="#shipped-packages" title="Permalink to this headline">¶</a></h2>
+<h2>4.14. Shipped Packages<a class="headerlink" href="#shipped-packages" title="Permalink to this headline">¶</a></h2>
 <p>Some packages are shipped with Keypirinha and are available out of the box.</p>
 <p>See <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a> for more information.</p>
 </div>
 <div class="section" id="customize-your-catalog">
-<h2>4.14. Customize your Catalog<a class="headerlink" href="#customize-your-catalog" title="Permalink to this headline">¶</a></h2>
+<h2>4.15. Customize your Catalog<a class="headerlink" href="#customize-your-catalog" title="Permalink to this headline">¶</a></h2>
 <p>Read the <a class="reference internal" href="custom-catalog.html"><span class="doc">Customize your Catalog</span></a> chapter to discover how you can gain full control
 over what will be referenced in Keypirinha’s database and consequently, in search
 results.</p>
 </div>
 <div class="section" id="extending-project">
-<h2>4.15. Extending Keypirinha<a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
+<h2>4.16. Extending Keypirinha<a class="headerlink" href="#extending-project" title="Permalink to this headline">¶</a></h2>
 <p>Despite its apparent simplicity, Keypirinha is a generic tool that is able to
 welcome a very wide range of features not offered yet by the official bundled
 plugins. An API allows to extend Keypirinha’s features to make them fit your
@@ -442,7 +442,7 @@ needs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -206,13 +206,13 @@
 <dd><p>Base class for third-party plugins.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Methods prefixed with <code class="docutils literal"><span class="pre">on_</span></code> are the only ones called by the
+<p class="last">Methods prefixed with <code class="docutils literal notranslate"><span class="pre">on_</span></code> are the only ones called by the
 application.</p>
 </div>
 <dl class="attribute">
 <dt id="keypirinha.Plugin._debug">
 <code class="descname">_debug</code><em class="property"> = False</em><a class="headerlink" href="#keypirinha.Plugin._debug" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flag to enable/disable output of <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a>.</p>
+<dd><p>Flag to enable/disable output of <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a>.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Redistributed plugins must always have this flag disabled.</p>
@@ -224,7 +224,7 @@ application.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin’s default constructor. When implementing a new plugin, it is good
 practice to call it:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -241,7 +241,7 @@ been instanciated.</p>
 <li>Read state data from package’s cache, if any, that may be needed
 elsewhere in this plugin</li>
 <li>Do any heavy, one-time, initialization (i.e. instead of doing it from
-<code class="docutils literal"><span class="pre">__init__</span></code> or even <a class="reference internal" href="#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal"><span class="pre">on_catalog()</span></code></a> for example)</li>
+<code class="docutils literal notranslate"><span class="pre">__init__</span></code> or even <a class="reference internal" href="#keypirinha.Plugin.on_catalog" title="keypirinha.Plugin.on_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_catalog()</span></code></a> for example)</li>
 </ul>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -254,7 +254,7 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 <dt id="keypirinha.Plugin.on_catalog">
 <code class="descname">on_catalog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin is requested to setup its catalog by calling either
-<a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal"><span class="pre">set_catalog()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal"><span class="pre">merge_catalog()</span></code></a>.</p>
+<a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_catalog()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">merge_catalog()</span></code></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
@@ -262,7 +262,7 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 start-time.</li>
 <li>Since this method may be called several times during instance’s
 lifetime, one-time initialization, if any, must always be done in
-<code class="xref py py-meth docutils literal"><span class="pre">on_init()</span></code>.</li>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">on_init()</span></code>.</li>
 </ul>
 </div>
 <div class="admonition seealso">
@@ -278,20 +278,20 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 <dd><p>Called when the user is typing their search terms <em>or</em> item’s arguments.</p>
 <p>When no item has been selected yet by the user, the <em>items_chain</em> list
 is empty and <em>user_input</em> is a string containing the initial search
-terms. In that case, this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been broadcasted to
+terms. In that case, this <code class="docutils literal notranslate"><span class="pre">SUGGEST</span></code> message has been broadcasted to
 every loaded plugin.</p>
-<p>Otherwise, this <code class="docutils literal"><span class="pre">SUGGEST</span></code> message has been sent to this plugin only
+<p>Otherwise, this <code class="docutils literal notranslate"><span class="pre">SUGGEST</span></code> message has been sent to this plugin only
 and <em>items_chain</em> is a non-empty list that contains one or more
-<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object(s) that belong to this plugin and
+<a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object(s) that belong to this plugin and
 <em>user_input</em> is a string typed by the user that is meant to be the
-arguments of the lastly selected item (i.e. <code class="docutils literal"><span class="pre">items_chain[-1]</span></code>).</p>
+arguments of the lastly selected item (i.e. <code class="docutils literal notranslate"><span class="pre">items_chain[-1]</span></code>).</p>
 <p>More precisely, <em>items_chain</em> contains the full history of the items
 that have been selected by the user during this search session, plugins
 usually only need to deal with the last and/or the first item(s) in the
-<em>items_chain</em> list (i.e. <code class="docutils literal"><span class="pre">items_chain[-1]</span></code> and/or <code class="docutils literal"><span class="pre">items_chain[0]</span></code>;
+<em>items_chain</em> list (i.e. <code class="docutils literal notranslate"><span class="pre">items_chain[-1]</span></code> and/or <code class="docutils literal notranslate"><span class="pre">items_chain[0]</span></code>;
 which may be equal).</p>
 <p>If the plugin implements this method, it is expected to set its
-<strong>suggestions</strong> catalog by using <a class="reference internal" href="#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal"><span class="pre">set_suggestions()</span></code></a>. The list of
+<strong>suggestions</strong> catalog by using <a class="reference internal" href="#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_suggestions()</span></code></a>. The list of
 suggestions may be empty.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -304,11 +304,11 @@ suggestions may be empty.</p>
 <code class="descname">on_execute</code><span class="sig-paren">(</span><em>catalog_item</em>, <em>catalog_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called once the user has selected an item and wants to launch it,
 optionally using the passed action.</p>
-<p><em>catalog_item</em> is the selected <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object to
+<p><em>catalog_item</em> is the selected <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object to
 execute, belonging to this plugin.</p>
-<p><em>catalog_action</em> is either <code class="docutils literal"><span class="pre">None</span></code> or a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a>
+<p><em>catalog_action</em> is either <code class="docutils literal notranslate"><span class="pre">None</span></code> or a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a>
 object; it might not have been created by this plugin though, in which
-case <a class="reference internal" href="module-util.html#keypirinha_util.execute_default_action" title="keypirinha_util.execute_default_action"><code class="xref py py-func docutils literal"><span class="pre">keypirinha_util.execute_default_action()</span></code></a> may be of
+case <a class="reference internal" href="module-util.html#keypirinha_util.execute_default_action" title="keypirinha_util.execute_default_action"><code class="xref py py-func docutils literal notranslate"><span class="pre">keypirinha_util.execute_default_action()</span></code></a> may be of
 interest.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -324,18 +324,18 @@ by typing the dedicated global hotkey, or by using the contextual menu
 of the application icon located in the system tray.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The <code class="docutils literal"><span class="pre">ACTIVATED</span></code> message automatically discards any pending
-<code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message in the queue. As a result, an <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
-message is not always followed by a <code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message. For
-example, if your plugin takes more time to process the <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span></code> message automatically discards any pending
+<code class="docutils literal notranslate"><span class="pre">DEACTIVATED</span></code> message in the queue. As a result, an <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span></code>
+message is not always followed by a <code class="docutils literal notranslate"><span class="pre">DEACTIVATED</span></code> message. For
+example, if your plugin takes more time to process the <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span></code>
 message than the end-user to perform her search <strong>and</strong> deactivate
 the window <strong>and</strong> then re-activate it, the plugin will receive a
-new <code class="docutils literal"><span class="pre">ACTIVATED</span></code> message without being notified about the
-<code class="docutils literal"><span class="pre">DEACTIVATED</span></code> event that occurred in between.</p>
+new <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span></code> message without being notified about the
+<code class="docutils literal notranslate"><span class="pre">DEACTIVATED</span></code> event that occurred in between.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_deactivated" title="keypirinha.Plugin.on_deactivated"><code class="xref py py-meth docutils literal"><span class="pre">on_deactivated()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_deactivated" title="keypirinha.Plugin.on_deactivated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_deactivated()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -347,13 +347,13 @@ item has been executed for example, or because the user canceled her
 search.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">A <code class="docutils literal"><span class="pre">DEACTIVATED</span></code> message is not always preceded by an <code class="docutils literal"><span class="pre">ACTIVATED</span></code>
-message. See the note in <a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal"><span class="pre">on_activated()</span></code></a> documentation for
+<p class="last">A <code class="docutils literal notranslate"><span class="pre">DEACTIVATED</span></code> message is not always preceded by an <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span></code>
+message. See the note in <a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_activated()</span></code></a> documentation for
 more information.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal"><span class="pre">on_activated()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.on_activated" title="keypirinha.Plugin.on_activated"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_activated()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -361,7 +361,7 @@ more information.</p>
 <dt id="keypirinha.Plugin.on_events">
 <code class="descname">on_events</code><span class="sig-paren">(</span><em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when some event(s) occurred.</p>
-<p><em>flags</em> can be one or several flags defined in <a class="reference internal" href="module.html#keypirinha.Events" title="keypirinha.Events"><code class="xref py py-class docutils literal"><span class="pre">Events</span></code></a>.</p>
+<p><em>flags</em> can be one or several flags defined in <a class="reference internal" href="module.html#keypirinha.Events" title="keypirinha.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">Events</span></code></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">While Keypirinha tries to group flags at a given time in order to
@@ -387,7 +387,7 @@ only</strong>.</p>
 <dd><p>Get the fully qualified name of this plugin.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal"><span class="pre">friendly_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal"><span class="pre">package_full_name()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">friendly_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">package_full_name()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -395,7 +395,7 @@ only</strong>.</p>
 <dt id="keypirinha.Plugin.name">
 <code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-func docutils literal"><span class="pre">full_name()</span></code></a> instead</p>
+<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">full_name()</span></code></a> instead</p>
 </div>
 </dd></dl>
 
@@ -405,7 +405,7 @@ only</strong>.</p>
 <dd><p>Get the fully qualified name of this plugin’s parent package.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal"><span class="pre">friendly_name()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.friendly_name" title="keypirinha.Plugin.friendly_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">friendly_name()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -413,7 +413,7 @@ only</strong>.</p>
 <dt id="keypirinha.Plugin.package_name">
 <code class="descname">package_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.package_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-func docutils literal"><span class="pre">package_full_name()</span></code></a> instead</p>
+<p><span class="versionmodified">Deprecated since version 2.9: </span>Use <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">package_full_name()</span></code></a> instead</p>
 </div>
 </dd></dl>
 
@@ -421,12 +421,12 @@ only</strong>.</p>
 <dt id="keypirinha.Plugin.set_catalog">
 <code class="descname">set_catalog</code><span class="sig-paren">(</span><em>catalog_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace current plugin’s catalog by <em>catalog_items</em>, which must be a
-list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects, created by <em>this</em> plugin. Note
+list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects, created by <em>this</em> plugin. Note
 that the list may be empty if you wish to clear plugin’s catalog.</p>
-<p>Internally calls <code class="docutils literal"><span class="pre">self.merge_catalog(catalog_items,</span> <span class="pre">True)</span></code></p>
+<p>Internally calls <code class="docutils literal notranslate"><span class="pre">self.merge_catalog(catalog_items,</span> <span class="pre">True)</span></code></p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal"><span class="pre">merge_catalog()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.merge_catalog" title="keypirinha.Plugin.merge_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">merge_catalog()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -434,7 +434,7 @@ that the list may be empty if you wish to clear plugin’s catalog.</p>
 <dt id="keypirinha.Plugin.merge_catalog">
 <code class="descname">merge_catalog</code><span class="sig-paren">(</span><em>catalog_items</em>, <em>erase_untouched_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.merge_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Merge current plugin’s catalog with <em>catalog_items</em>, which must be a
-list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects that have been created by <em>this</em>
+list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects that have been created by <em>this</em>
 plugin.</p>
 <p><em>erase_untouched_items</em> is a boolean flag to indicate if items related
 to this plugin, that were already present in the catalog and that were
@@ -442,7 +442,7 @@ not present in the given <em>catalog_items</em> list, should be erased from the
 catalog after other items have been merged.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal"><span class="pre">set_catalog()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.set_catalog" title="keypirinha.Plugin.set_catalog"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_catalog()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -450,25 +450,25 @@ catalog after other items have been merged.</p>
 <dt id="keypirinha.Plugin.clear_actions">
 <code class="descname">clear_actions</code><span class="sig-paren">(</span><em>category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.clear_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the list of actions associated to a given
-<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal"><span class="pre">ItemCategory</span></code></a>, or clear <em>all</em> actions associated to this
-plugin if <em>category</em> is <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemCategory</span></code></a>, or clear <em>all</em> actions associated to this
+plugin if <em>category</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal"><span class="pre">create_action()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.set_actions" title="keypirinha.Plugin.set_actions"><code class="xref py py-meth docutils literal"><span class="pre">set_actions()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_action()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.set_actions" title="keypirinha.Plugin.set_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_actions()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.create_action">
 <code class="descname">create_action</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>short_desc=''</em>, <em>data_bag=''</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> object.</p>
+<dd><p>Create a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The name of the action, normally lowercased, no space.
-Words can be separated by an underscore (<code class="docutils literal"><span class="pre">_</span></code>).</li>
+Words can be separated by an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>).</li>
 <li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The display name of the action. This is the value the
 user will see.</li>
 <li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – An optional one-line description of the item. It
@@ -485,7 +485,7 @@ the application.</li>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction">CatalogAction</a></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">ValueError</span></code></a> – Action could not be created due to one or more invalid
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – Action could not be created due to one or more invalid
 passed argument.</p>
 </td>
 </tr>
@@ -493,45 +493,45 @@ passed argument.</p>
 </table>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects must always be created using this
+<p class="last"><a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> objects must always be created using this
 method.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.set_actions" title="keypirinha.Plugin.set_actions"><code class="xref py py-meth docutils literal"><span class="pre">set_actions()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.clear_actions" title="keypirinha.Plugin.clear_actions"><code class="xref py py-meth docutils literal"><span class="pre">clear_actions()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.set_actions" title="keypirinha.Plugin.set_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_actions()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.clear_actions" title="keypirinha.Plugin.clear_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_actions()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.create_error_item">
 <code class="descname">create_error_item</code><span class="sig-paren">(</span><em>label</em>, <em>short_desc</em>, <em>target='error'</em>, <em>icon_handle=None</em>, <em>data_bag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_error_item" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object of the
-<a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.ERROR</span></code></a> category.</p>
+<dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object of the
+<a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.ERROR</span></code></a> category.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>An <code class="docutils literal"><span class="pre">ERROR</span></code> item will only be accepted by the application as a
+<li>An <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> item will only be accepted by the application as a
 suggestion. It cannot be part of plugin’s Catalog.</li>
-<li>Only one <code class="docutils literal"><span class="pre">ERROR</span></code> item is allowed per batch of suggestions. If
-plugin sends a list of suggestion containing several <code class="docutils literal"><span class="pre">ERROR</span></code>
+<li>Only one <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> item is allowed per batch of suggestions. If
+plugin sends a list of suggestion containing several <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>
 items, only the first one will be kept.</li>
 <li><em>short_desc</em> will be copied to <em>label</em> if <em>label</em> is empty to
 limit unexpected behavior (items with an empty label are filtered
-out by the application so the <code class="docutils literal"><span class="pre">ERROR</span></code> item would not be
+out by the application so the <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> item would not be
 displayed).</li>
 </ul>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_item" title="keypirinha.Plugin.create_item"><code class="xref py py-meth docutils literal"><span class="pre">create_item()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_item" title="keypirinha.Plugin.create_item"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_item()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.create_item">
 <code class="descname">create_item</code><span class="sig-paren">(</span><em>category</em>, <em>label</em>, <em>short_desc</em>, <em>target</em>, <em>args_hint</em>, <em>hit_hint</em>, <em>loop_on_suggest=False</em>, <em>icon_handle=None</em>, <em>data_bag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_item" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> object.</p>
-<p><a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> is the angular stone of Keypirinha. It is the
+<dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object.</p>
+<p><a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> is the angular stone of Keypirinha. It is the
 only data unit a plugin can use to be referenced in the central Catalog.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -540,40 +540,40 @@ only data unit a plugin can use to be referenced in the central Catalog.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>category</strong> (<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><em>ItemCategory</em></a>) – The category of the <strong>target</strong> of this
 item. Indeed, the <em>target</em> might be a
-<a class="reference internal" href="module.html#keypirinha.ItemCategory.KEYWORD" title="keypirinha.ItemCategory.KEYWORD"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.KEYWORD</span></code></a> whereas its argument might
-represent a mathematical <a class="reference internal" href="module.html#keypirinha.ItemCategory.EXPRESSION" title="keypirinha.ItemCategory.EXPRESSION"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.EXPRESSION</span></code></a> for
-example. In that case, this argument should be <code class="docutils literal"><span class="pre">KEYWORD</span></code> to
+<a class="reference internal" href="module.html#keypirinha.ItemCategory.KEYWORD" title="keypirinha.ItemCategory.KEYWORD"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.KEYWORD</span></code></a> whereas its argument might
+represent a mathematical <a class="reference internal" href="module.html#keypirinha.ItemCategory.EXPRESSION" title="keypirinha.ItemCategory.EXPRESSION"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.EXPRESSION</span></code></a> for
+example. In that case, this argument should be <code class="docutils literal notranslate"><span class="pre">KEYWORD</span></code> to
 reflect the content of the <em>target</em> property.
-Prefer <a class="reference internal" href="#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">create_error_item()</span></code></a> to easily create an item of
-the <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.ERROR</span></code></a> category.</li>
+Prefer <a class="reference internal" href="#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_error_item()</span></code></a> to easily create an item of
+the <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.ERROR</span></code></a> category.</li>
 <li><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The display name of the item. This is the value the
 user will see. It must not be empty.</li>
 <li><strong>short_desc</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – An optional one-line description of the item. It
 will be displayed right under the label on the GUI.</li>
-<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – This is the main property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a>,
+<li><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – This is the main property of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a>,
 the plugin can put whatever it needs to differentiate this item
 among others. <strong>This value cannot be null</strong> unless <em>category</em> is
-<a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.ERROR</span></code></a>.</li>
+<a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.ERROR</span></code></a>.</li>
 <li><strong>args_hint</strong> (<a class="reference internal" href="module.html#keypirinha.ItemArgsHint" title="keypirinha.ItemArgsHint"><em>ItemArgsHint</em></a>) – Indicates how the GUI should behave with
 this item when it comes to specifying its arguments. For
 example, if <em>target</em> is the path to an executabe file (in which
-case <em>category</em> should be <a class="reference internal" href="module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.FILE</span></code></a>), user
+case <em>category</em> should be <a class="reference internal" href="module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.FILE</span></code></a>), user
 might expect to be able to add extra arguments before executing
-this item: <a class="reference internal" href="module.html#keypirinha.ItemArgsHint.ACCEPTED" title="keypirinha.ItemArgsHint.ACCEPTED"><code class="xref py py-const docutils literal"><span class="pre">ItemArgsHint.ACCEPTED</span></code></a> is the logical
+this item: <a class="reference internal" href="module.html#keypirinha.ItemArgsHint.ACCEPTED" title="keypirinha.ItemArgsHint.ACCEPTED"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemArgsHint.ACCEPTED</span></code></a> is the logical
 choice here.</li>
 <li><strong>hit_hint</strong> (<a class="reference internal" href="module.html#keypirinha.ItemHitHint" title="keypirinha.ItemHitHint"><em>ItemHitHint</em></a>) – Indicates how the application should deal
 with this item once it has been executed by the user, regarding
 the History.</li>
 <li><strong>loop_on_suggest</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates the GUI should call
-<a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> as long as this flag is raised. This
-argument should be left <code class="docutils literal"><span class="pre">False</span></code> unless you know what you are
+<a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_suggest()</span></code></a> as long as this flag is raised. This
+argument should be left <code class="docutils literal notranslate"><span class="pre">False</span></code> unless you know what you are
 doing.</li>
 <li><strong>icon_handle</strong> (<a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><em>IconHandle</em></a>) – An optional icon handle to associate with
 this item. Keypirinha always tries to find the icon to an item
 that fits the best. For example, if item is a
-<a class="reference internal" href="module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal"><span class="pre">ItemCategory.FILE</span></code></a>, the system icon normally
+<a class="reference internal" href="module.html#keypirinha.ItemCategory.FILE" title="keypirinha.ItemCategory.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.FILE</span></code></a>, the system icon normally
 associated with it will be displayed to the user so
-<em>icon_handle</em> should be left <code class="docutils literal"><span class="pre">None</span></code>. Otherwise, the
+<em>icon_handle</em> should be left <code class="docutils literal notranslate"><span class="pre">None</span></code>. Otherwise, the
 application will try to fall back to plugin’s default icon, if
 any. Eventually, if no icon could be associated to this item,
 the default application icon will displayed.</li>
@@ -595,24 +595,24 @@ specific item.</li>
 </table>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects must always be created using this
+<p class="last"><a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects must always be created using this
 method.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li><code class="samp docutils literal"><span class="pre">str(item_object)</span></code> is equivalent to
-<code class="samp docutils literal"><span class="pre">item_object.label()</span></code>.</li>
-<li>May you wish to compare two item objects, the <code class="docutils literal"><span class="pre">__eq__</span></code>,
-<code class="docutils literal"><span class="pre">__ne__</span></code>, <code class="docutils literal"><span class="pre">__lt__</span></code>, <code class="docutils literal"><span class="pre">__le__</span></code>, <code class="docutils literal"><span class="pre">__gt__</span></code>, <code class="docutils literal"><span class="pre">__ge__</span></code> and
-<code class="docutils literal"><span class="pre">__hash__</span></code> operators are implemented. They are fast and cheap
+<li><code class="samp docutils literal notranslate"><span class="pre">str(item_object)</span></code> is equivalent to
+<code class="samp docutils literal notranslate"><span class="pre">item_object.label()</span></code>.</li>
+<li>May you wish to compare two item objects, the <code class="docutils literal notranslate"><span class="pre">__eq__</span></code>,
+<code class="docutils literal notranslate"><span class="pre">__ne__</span></code>, <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, <code class="docutils literal notranslate"><span class="pre">__le__</span></code>, <code class="docutils literal notranslate"><span class="pre">__gt__</span></code>, <code class="docutils literal notranslate"><span class="pre">__ge__</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__hash__</span></code> operators are implemented. They are fast and cheap
 since they use the internal unique id of the item, which is
 computed at construction time or when its arguments are updated.</li>
 </ul>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal"><span class="pre">create_error_item()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_error_item" title="keypirinha.Plugin.create_error_item"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_error_item()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -621,22 +621,22 @@ computed at construction time or when its arguments are updated.</li>
 <code class="descname">dbg</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log a debug message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
-<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">By default, this method will produce no output unless the
-<a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal"><span class="pre">keypirinha.Plugin._debug</span></code></a> flag is <code class="docutils literal"><span class="pre">True</span></code>.</p>
+<a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keypirinha.Plugin._debug</span></code></a> flag is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Use this method only temporarily, in order to debug your plugin. May
-you wish to redistribute it. The <a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal"><span class="pre">keypirinha.Plugin._debug</span></code></a>
+you wish to redistribute it. The <a class="reference internal" href="#keypirinha.Plugin._debug" title="keypirinha.Plugin._debug"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keypirinha.Plugin._debug</span></code></a>
 flag must be left untouched and no call to this method should be
 present in plugin’s source code.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal notranslate"><span class="pre">err()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -645,10 +645,10 @@ present in plugin’s source code.</p>
 <code class="descname">err</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an error message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
-<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -661,8 +661,8 @@ present in plugin’s source code.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name_pattern</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The pattern to match the <strong>name</strong> part of the
-resource(s). Accepted wildcards are <code class="docutils literal"><span class="pre">*</span></code> (i.e.: matches zero or
-several characters), and <code class="docutils literal"><span class="pre">?</span></code> (matches a single character).</td>
+resource(s). Accepted wildcards are <code class="docutils literal notranslate"><span class="pre">*</span></code> (i.e.: matches zero or
+several characters), and <code class="docutils literal notranslate"><span class="pre">?</span></code> (matches a single character).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of the relative paths to the matched resources. May
 be empty.</td>
@@ -679,7 +679,7 @@ be empty.</td>
 <dd><p>Return plugin’s friendly (short) name. I.e. its class name.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal"><span class="pre">package_full_name()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.full_name" title="keypirinha.Plugin.full_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">full_name()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.package_full_name" title="keypirinha.Plugin.package_full_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">package_full_name()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -701,9 +701,9 @@ deleted by the end-user between two runtime sessions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> – Failed to get package’s cache directory</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">OSError</span></code></a> – Failed to create the directory (in case <em>create</em> argument
-is <code class="docutils literal"><span class="pre">True</span></code>).</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – Failed to get package’s cache directory</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> – Failed to create the directory (in case <em>create</em> argument
+is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -711,7 +711,7 @@ is <code class="docutils literal"><span class="pre">True</span></code>).</li>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="module.html#keypirinha.package_cache_dir" title="keypirinha.package_cache_dir"><code class="xref py py-meth docutils literal"><span class="pre">package_cache_dir()</span></code></a></p>
+<p class="last"><a class="reference internal" href="module.html#keypirinha.package_cache_dir" title="keypirinha.package_cache_dir"><code class="xref py py-meth docutils literal notranslate"><span class="pre">package_cache_dir()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -724,8 +724,8 @@ is <code class="docutils literal"><span class="pre">True</span></code>).</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>relative_path</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The relative path to the desired resource file
-located in the package. Examples: <code class="docutils literal"><span class="pre">resource.png</span></code>,
-<code class="docutils literal"><span class="pre">subdir/resource.png</span></code>.</td>
+located in the package. Examples: <code class="docutils literal notranslate"><span class="pre">resource.png</span></code>,
+<code class="docutils literal notranslate"><span class="pre">subdir/resource.png</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -736,26 +736,26 @@ located in the package. Examples: <code class="docutils literal"><span class="pr
 <code class="descname">info</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an informational message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
-<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal notranslate"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.load_binary_resource">
 <code class="descname">load_binary_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_binary_resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#bytes" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
+<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#bytes" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
 specified resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">FileNotFoundError</span></code></a> – The resource could not be found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#IOError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">IOError</span></code></a> – Error while opening or reading the resource.</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">RuntimeError</span></code></a> – Unexpected/Unknown error.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a> – The resource could not be found.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#IOError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a> – Error while opening or reading the resource.</li>
+<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> – Unexpected/Unknown error.</li>
 </ul>
 </td>
 </tr>
@@ -771,45 +771,45 @@ the specified file size is bigger than 16MB (16777216 bytes).</p>
 <dl class="method">
 <dt id="keypirinha.Plugin.load_icon">
 <code class="descname">load_icon</code><span class="sig-paren">(</span><em>sources</em>, <em>force_reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_icon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load or get an <a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal"><span class="pre">IconHandle</span></code></a>.
-See <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal"><span class="pre">load_icon()</span></code></a> for more details.</p>
+<dd><p>Load or get an <a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">IconHandle</span></code></a>.
+See <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_icon()</span></code></a> for more details.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.load_settings">
 <code class="descname">load_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object associated with the
+<dd><p>Return the <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object associated with the
 parent Package.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
 <li>The configuration files will be loaded only the first time this
 method is called. Any subsequent call will return a new
-<a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object pointing to the same data
+<a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object pointing to the same data
 block.</li>
 <li>When the application detects that one or several configuration
 files have been modified in a Package, it will automatically
 re-read the files (only if they were previously loaded), then will
 notify every related plugin via a call to
-<a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal"><span class="pre">Plugin.on_events()</span></code></a>.</li>
-<li>In case <a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal"><span class="pre">Plugin.on_events()</span></code></a> is called, plugins will not
-have to call <a class="reference internal" href="#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal"><span class="pre">Plugin.load_settings()</span></code></a> again if they already
-hold a <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal"><span class="pre">keypirinha.Settings</span></code></a> object.</li>
+<a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a>.</li>
+<li>In case <a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a> is called, plugins will not
+have to call <a class="reference internal" href="#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_settings()</span></code></a> again if they already
+hold a <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object.</li>
 </ul>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal"><span class="pre">settings()</span></code></a></p>
+<p class="last"><a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal notranslate"><span class="pre">settings()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Plugin.load_text_resource">
 <code class="descname">load_text_resource</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_text_resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">str</span></code></a> object holding the content of the specified
+<dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> object holding the content of the specified
 resource.</p>
-<p>May raise the same exceptions than <a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal"><span class="pre">load_binary_resource()</span></code></a>, plus
-the <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code></a> exception if resource’s content could not be
+<p>May raise the same exceptions than <a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_binary_resource()</span></code></a>, plus
+the <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> exception if resource’s content could not be
 decoded (Unicode error).</p>
 </dd></dl>
 
@@ -820,7 +820,7 @@ decoded (Unicode error).</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This method is not meant to be used directly, prefer to call the
-<a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a>
+<a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.warn" title="keypirinha.Plugin.warn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">warn()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal notranslate"><span class="pre">err()</span></code></a> or <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a>
 methods instead.</p>
 </div>
 </dd></dl>
@@ -828,8 +828,8 @@ methods instead.</p>
 <dl class="method">
 <dt id="keypirinha.Plugin.set_actions">
 <code class="descname">set_actions</code><span class="sig-paren">(</span><em>category</em>, <em>actions_list</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_actions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Associate a given list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> to an
-<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal"><span class="pre">ItemCategory</span></code></a>.</p>
+<dd><p>Associate a given list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> to an
+<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemCategory</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -838,14 +838,14 @@ methods instead.</p>
 <li><strong>category</strong> (<a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><em>ItemCategory</em></a>) – The category of item to associate the
 actions with. If needed, you can assign the same list of actions
 with several categories by calling this method several times.</li>
-<li><strong>actions_list</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – A list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal"><span class="pre">CatalogAction</span></code></a> objects
-that have been created with <a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal"><span class="pre">create_action()</span></code></a>.</li>
+<li><strong>actions_list</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – A list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> objects
+that have been created with <a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_action()</span></code></a>.</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The actual number of actions taken into account. Actions are
 filtered out when they don’t belong to this plugin for example, or
-if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction.valid" title="keypirinha.CatalogAction.valid"><code class="xref py py-meth docutils literal"><span class="pre">CatalogAction.valid()</span></code></a> returns <code class="docutils literal"><span class="pre">False</span></code>.</p>
+if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction.valid" title="keypirinha.CatalogAction.valid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CatalogAction.valid()</span></code></a> returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></p>
@@ -855,7 +855,7 @@ if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogActi
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal"><span class="pre">create_action()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.clear_actions" title="keypirinha.Plugin.clear_actions"><code class="xref py py-meth docutils literal"><span class="pre">clear_actions()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.create_action" title="keypirinha.Plugin.create_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_action()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.clear_actions" title="keypirinha.Plugin.clear_actions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_actions()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -877,16 +877,16 @@ if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogActi
 <dt id="keypirinha.Plugin.set_suggestions">
 <code class="descname">set_suggestions</code><span class="sig-paren">(</span><em>suggestions</em>, <em>match_method=&lt;Match.FUZZY: 1000&gt;</em>, <em>sort_method=&lt;Sort.SCORE_DESC: 1000&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_suggestions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Offer some suggestions to the user according to the current search
-terms. This method is meant to be called from <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a>.</p>
-<p><em>suggestions</em> must be a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal"><span class="pre">CatalogItem</span></code></a> objects.</p>
-<p><em>match_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Match" title="keypirinha.Match"><code class="xref py py-class docutils literal"><span class="pre">Match</span></code></a> value.</p>
-<p><em>sort_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Sort" title="keypirinha.Sort"><code class="xref py py-class docutils literal"><span class="pre">Sort</span></code></a> value.</p>
+terms. This method is meant to be called from <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_suggest()</span></code></a>.</p>
+<p><em>suggestions</em> must be a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects.</p>
+<p><em>match_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Match" title="keypirinha.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">Match</span></code></a> value.</p>
+<p><em>sort_method</em> must be a <a class="reference internal" href="module.html#keypirinha.Sort" title="keypirinha.Sort"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sort</span></code></a> value.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The <em>match_method</em> and <em>sort_method</em> arguments are taken into
 account by the application only if the user has selected an item
 already (i.e. not at first step of the search). That is, when the
-<em>items_chain</em> argument of <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal"><span class="pre">on_suggest()</span></code></a> is not empty.</p>
+<em>items_chain</em> argument of <a class="reference internal" href="#keypirinha.Plugin.on_suggest" title="keypirinha.Plugin.on_suggest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_suggest()</span></code></a> is not empty.</p>
 </div>
 </dd></dl>
 
@@ -897,22 +897,22 @@ already (i.e. not at first step of the search). That is, when the
 soon as possible, without completing its job.</p>
 <p>Plugins should call this method <strong>frequently</strong>. Especially at I/O
 operations boundaries (storage accesses and network communications).</p>
-<p>See <a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a> for more info about the
+<p>See <a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">keypirinha.should_terminate()</span></code></a> for more info about the
 <em>wait_seconds</em> parameter.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>When calling code is from a <a class="reference internal" href="#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal"><span class="pre">Plugin</span></code></a>, it is preferred to
+<li>When calling code is from a <a class="reference internal" href="#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plugin</span></code></a>, it is preferred to
 call this method instead of the
-<a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a> function as it is
+<a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">keypirinha.should_terminate()</span></code></a> function as it is
 potentially faster.</li>
-<li>Check the documentation of <a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a>
+<li>Check the documentation of <a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">keypirinha.should_terminate()</span></code></a>
 to know more about the meaning of the returned value.</li>
 </ul>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal"><span class="pre">keypirinha.should_terminate()</span></code></a></p>
+<p class="last"><a class="reference internal" href="module.html#keypirinha.should_terminate" title="keypirinha.should_terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">keypirinha.should_terminate()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -921,10 +921,10 @@ to know more about the meaning of the returned value.</li>
 <code class="descname">warn</code><span class="sig-paren">(</span><em>*objects</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log a warning message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
-<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">print()</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal"><span class="pre">dbg()</span></code></a></p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.info" title="keypirinha.Plugin.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">info()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.err" title="keypirinha.Plugin.err"><code class="xref py py-meth docutils literal notranslate"><span class="pre">err()</span></code></a>, <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -975,7 +975,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

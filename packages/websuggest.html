@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -220,14 +220,14 @@ Yahoo, …</p>
 <div class="section" id="usage">
 <h2>5.18.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>By default, several items are inserted into the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. One for each
-predefined suggestions provider: <code class="docutils literal"><span class="pre">Amazon</span></code>, <code class="docutils literal"><span class="pre">Bing</span></code>, <code class="docutils literal"><span class="pre">DuckDuckGo</span></code>,
-<code class="docutils literal"><span class="pre">Google</span></code>, <code class="docutils literal"><span class="pre">Qwant</span></code>, <code class="docutils literal"><span class="pre">Wikipedia</span></code>, <code class="docutils literal"><span class="pre">Yahoo</span></code> and <code class="docutils literal"><span class="pre">YouTube</span></code> (see package’s
+predefined suggestions provider: <code class="docutils literal notranslate"><span class="pre">Amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing</span></code>, <code class="docutils literal notranslate"><span class="pre">DuckDuckGo</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Google</span></code>, <code class="docutils literal notranslate"><span class="pre">Qwant</span></code>, <code class="docutils literal notranslate"><span class="pre">Wikipedia</span></code>, <code class="docutils literal notranslate"><span class="pre">Yahoo</span></code> and <code class="docutils literal notranslate"><span class="pre">YouTube</span></code> (see package’s
 configuration file for an exhaustive list).</p>
 <p>Select one of those items and start typing your search term(s) as item’s
 argument.</p>
 <p>The plugin then queries the selected provider and populates the results list
 using the answer it got.</p>
-<p>The default action when pressing the <code class="kbd docutils literal"><span class="pre">Enter</span></code> key is to start the web
+<p>The default action when pressing the <kbd class="kbd docutils literal notranslate">Enter</kbd> key is to start the web
 browser to search for the selected suggestion, on the selected provider’s site.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
@@ -256,7 +256,7 @@ There are two complementary ways to do so:</p>
 <h3>5.18.2.1. Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
 <p>Each <em>item</em> depends on a suggestions <em>provider</em>; several items may rely on the
 same <em>provider</em>. Here is a documented example:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[item/DuckDuckGo Autocomplete]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[item/DuckDuckGo Autocomplete]</span>
 <span class="c1"># Required: the name of a declared provider.</span>
 <span class="c1"># It must reference a declared and enabled provider</span>
 <span class="c1"># (i.e. ``[predefined_provider/*]`` or ``[provider/*]`` sections).</span>
@@ -288,26 +288,26 @@ same <em>provider</em>. Here is a documented example:</p>
 <span class="s">    kl us-en</span>
 </pre></div>
 </div>
-<p>In this example, <code class="docutils literal"><span class="pre">DuckDuckGo</span> <span class="pre">Autocomplete</span></code> is the name of the item to appear
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">DuckDuckGo</span> <span class="pre">Autocomplete</span></code> is the name of the item to appear
 in your Catalog.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <ul class="last simple">
-<li>An extra item must be declared using the <code class="docutils literal"><span class="pre">item/</span></code> prefix in its section
-name, like in <code class="docutils literal"><span class="pre">[item/DuckDuckGo</span> <span class="pre">Autocomplete]</span></code>.</li>
-<li>Having both <code class="docutils literal"><span class="pre">[predefined_item/DuckDuckGo]</span></code> and <code class="docutils literal"><span class="pre">[item/DuckDuckGo]</span></code> for
+<li>An extra item must be declared using the <code class="docutils literal notranslate"><span class="pre">item/</span></code> prefix in its section
+name, like in <code class="docutils literal notranslate"><span class="pre">[item/DuckDuckGo</span> <span class="pre">Autocomplete]</span></code>.</li>
+<li>Having both <code class="docutils literal notranslate"><span class="pre">[predefined_item/DuckDuckGo]</span></code> and <code class="docutils literal notranslate"><span class="pre">[item/DuckDuckGo]</span></code> for
 example is not possible.</li>
 </ul>
 </div>
 </div>
 <div class="section" id="override-default-items">
 <h3>5.18.2.2. Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
-<p>Predefined items are registered using the <code class="docutils literal"><span class="pre">predefined_item/</span></code> prefix in the
+<p>Predefined items are registered using the <code class="docutils literal notranslate"><span class="pre">predefined_item/</span></code> prefix in the
 name of the configuration section.</p>
-<p>For instance, if you wish to override the item <code class="docutils literal"><span class="pre">DuckDuckGo</span></code> predefined by
-default, the <code class="docutils literal"><span class="pre">[predefined_item/DuckDuckGo]</span></code> section is the one to override in
+<p>For instance, if you wish to override the item <code class="docutils literal notranslate"><span class="pre">DuckDuckGo</span></code> predefined by
+default, the <code class="docutils literal notranslate"><span class="pre">[predefined_item/DuckDuckGo]</span></code> section is the one to override in
 your configuration file.</p>
-<p>The definition of a <code class="docutils literal"><span class="pre">predefined_item</span></code> is the same than an <code class="docutils literal"><span class="pre">item</span></code>.</p>
+<p>The definition of a <code class="docutils literal notranslate"><span class="pre">predefined_item</span></code> is the same than an <code class="docutils literal notranslate"><span class="pre">item</span></code>.</p>
 </div>
 </div>
 <div class="section" id="custom-providers">
@@ -315,7 +315,7 @@ your configuration file.</p>
 <p>With some technical knowledge it is possible to extend the list of the supported
 suggestions providers by registering them via the package’s configuration file.</p>
 <p>Documented example:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[provider/DuckDuckGo]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[provider/DuckDuckGo]</span>
 <span class="c1"># Declare a new provider named &quot;duckduckgo&quot; (names are lowercased</span>
 <span class="c1"># internally).</span>
 <span class="c1"># A provider has two main groups of settings: for its *suggest API* and for</span>
@@ -379,7 +379,7 @@ users, feel free to submit its configuration and parser to the
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For German-speaking fellows, <a class="reference external" href="https://github.com/bege10">&#64;bege10</a> has kindly shared their
-customized <code class="docutils literal"><span class="pre">[predefined_provider/*]</span></code> sections to get German suggestions
+customized <code class="docutils literal notranslate"><span class="pre">[predefined_provider/*]</span></code> sections to get German suggestions
 <a class="reference external" href="https://github.com/Keypirinha/Keypirinha/issues/189#issuecomment-298979416">here</a>.</p>
 </div>
 </div>
@@ -428,7 +428,7 @@ customized <code class="docutils literal"><span class="pre">[predefined_provider
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

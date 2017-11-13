@@ -2,14 +2,25 @@
 Third-Party Packages
 ====================
 
-Some users have taken |project| a step further by creating their own packages or
-by patching the official ones, and have kindly shared their work to the
-community via the official |chat_room|. |br|
+Some users have taken |project| a step further by creating their own packages
+and have kindly shared their work to the community via the official
+|chat_room|. |br|
+
 Check out the :doc:`contribute` chapter to know how you can contribute.
 
 
 Packages
 ========
+
+PackageControl
+--------------
+
+:ghu:`ueffel`'s package to install, update or remove third-party packages like
+the ones listed below. |br|
+Source: `<https://github.com/ueffel/Keypirinha-PackageControl>`_
+
+The list of available packages via PackageControl is manually curated by
+:ghu:`ueffel`.
 
 Currency
 --------
@@ -23,6 +34,25 @@ Ditto
 :ghu:`tuteken`'s package to access to your saved items in
 `Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
+
+FakerData
+---------
+
+:ghu:`Fuhrmann`'s package to generate different types of fake data |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-faker-data>`_
+
+Foobar2000
+----------
+
+:ghu:`tuteken`'s package to control foobar2000 from |project|. |br|
+Source: `<https://github.com/tuteken/Keypirinha-Plugin-foobar2000>`_
+
+Gitmoji
+-------
+
+:ghu:`Fuhrmann`'s package to search and copy
+`gitmojis <https://github.com/carloscuesta/gitmoji>`_ to your clipboard |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-gitmoji>`_
 
 HeidiSQL
 --------
@@ -45,12 +75,51 @@ KiTTY
 (either installed or portable) and KiTTY sessions directly. |br|
 Source: `<https://github.com/psistorm/keypirinha-kitty>`_
 
+Lipsum
+------
+
+:ghu:`Fuhrmann`'s package to generate Lorem Ipsum text. |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-lipsum>`_
+
+MovieDB
+-------
+
+:ghu:`Fuhrmann`'s package to get suggestions from `TMDB <http://themoviedb.org>`
+directly in |project| |br|
+Source:`<https://github.com/Fuhrmann/keypirinha-moviedb>`_
+
+MyIP
+----
+
+:ghu:`Fuhrmann`'s package to get your public and local IP directly from
+|project| |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-myip>`_
+
 Pinboard
 --------
 
 :ghu:`tuteken`'s package to access to your bookmarks on
 `Pinboard <http://pinboard.in>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
+
+SapGUI
+------
+
+:ghu:`ibnbr`'s package to have direct access to your SAP GUI entries from
+|project| |br|
+Source: `<https://github.com/ibnbr/Keypirinha-SapGUI>`_
+
+ShareX
+------
+
+:ghu:`Fuhrmann`'s package to execute ShareX actions and custom workflows |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-sharex>`_
+
+Snippets
+--------
+
+:ghu:`dozius`' package to quickly copy user defined snippets to the clipboard |br|
+Source: `<https://github.com/dozius/keypirinha-snippets>`_
 
 Steam
 -----
@@ -66,9 +135,44 @@ like ``shutdown``, ``hibernate``, ``sleep``, ``restart``, ``lock``, ``logout``,
 ``trash``, ``emptytrash``, ... |br|
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
+Units
+-----
+
+:ghu:`ArmaniKorsich`'s package for units conversion |br|
+Source: `<https://github.com/ArmaniKorsich/Keypirinha-Units>`_
+
+URLShortener
+------------
+:ghu:`Fuhrmann`'s package to use a URL shortener online service like Bitly,
+Google or TinyURL from |project| |br|
+Source: `<https://github.com/Fuhrmann/keypirinha-url-shortener>`_
+
+WindowsApps
+-----------
+
+:ghu:`ueffel`'s package to list and launch Windows Apps (formerly Metro Apps)
+from |project| |br|
+Source: `<https://github.com/ueffel/Keypirinha-WindowsApps>`_
+
+WinSys
+------
+:ghu:`kvnxiao`'s package
+Source: `<https://github.com/kvnxiao/keypirinha-winsys>`_
+
 
 How to Install
 ==============
+
+Managed
+-------
+
+:ghu:`ueffel` wrote `PackageControl <https://github.com/ueffel/Keypirinha-PackageControl>`_,
+a package manager that eases the install of third-party packages.
+
+It must be installed manually.
+
+Manual
+------
 
 Package developers usually offer a ready-to-install ``.keypirinha-package``
 file.

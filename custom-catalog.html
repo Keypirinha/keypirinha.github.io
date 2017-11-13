@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.18.1
+                2.18.2
               </div>
             
           
@@ -207,21 +207,21 @@ while reading the following sections.</p>
 <div class="section" id="shrinking-your-catalog">
 <h2>10.2. Shrinking your Catalog<a class="headerlink" href="#shrinking-your-catalog" title="Permalink to this headline">¶</a></h2>
 <p>To start with a clean slate, we will disable every shipped <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a>
-except the <code class="docutils literal"><span class="pre">Internal</span></code> one.</p>
-<p>Open Keypirinha’s configuration file and create/modify the <code class="docutils literal"><span class="pre">ignored_packages</span></code>
+except the <code class="docutils literal notranslate"><span class="pre">Internal</span></code> one.</p>
+<p>Open Keypirinha’s configuration file and create/modify the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code>
 setting as follows:</p>
-<div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[app]</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[app]</span>
 <span class="na">ignored_packages</span> <span class="o">=</span> <span class="s">&lt;All&gt;, -Internal</span>
 </pre></div>
 </div>
-<p>Read the comments related to <code class="docutils literal"><span class="pre">ignored_packages</span></code> in the default configuration
+<p>Read the comments related to <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code> in the default configuration
 file for more info on the meaning and the syntax of this value.</p>
 <p>Save your configuration file.</p>
-<p>From now on, only items from the <code class="docutils literal"><span class="pre">Internal</span></code> package are available. The
-<code class="docutils literal"><span class="pre">Internal</span></code> package enables access to some core features of Keypirinha and is
+<p>From now on, only items from the <code class="docutils literal notranslate"><span class="pre">Internal</span></code> package are available. The
+<code class="docutils literal notranslate"><span class="pre">Internal</span></code> package enables access to some core features of Keypirinha and is
 very lightweight in terms of number of items. So it is recommended to keep it
 enabled but technically-wise, nothing prevents you from disabling it as well
-(<code class="docutils literal"><span class="pre">ignored_packages</span> <span class="pre">=</span> <span class="pre">&lt;All&gt;</span></code>).</p>
+(<code class="docutils literal notranslate"><span class="pre">ignored_packages</span> <span class="pre">=</span> <span class="pre">&lt;All&gt;</span></code>).</p>
 </div>
 <div class="section" id="expanding-your-catalog">
 <h2>10.3. Expanding your Catalog<a class="headerlink" href="#expanding-your-catalog" title="Permalink to this headline">¶</a></h2>
@@ -236,19 +236,19 @@ For example, the <a class="reference internal" href="packages/calc.html"><span c
 evaluates the mathematical expression you typed, then shows its result(s).</p>
 <p>Check out the list of the available <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a> and learn more about
 their purpose to see if they suit your needs. You may then want to enable them
-one by one using the <code class="docutils literal"><span class="pre">ignored_packages</span></code> setting.</p>
+one by one using the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code> setting.</p>
 <p>Also, do not forget that some of them are configurable, which means that you may
 be able to have a more fine-grained control on what they insert in the
 <em>Catalog</em>. <br />
-For example, if you enable the <code class="docutils literal"><span class="pre">Apps</span></code> package, you might want to have a look
-at the <code class="docutils literal"><span class="pre">scan_start_menu</span></code> and <code class="docutils literal"><span class="pre">scan_env_path</span></code> settings.</p>
+For example, if you enable the <code class="docutils literal notranslate"><span class="pre">Apps</span></code> package, you might want to have a look
+at the <code class="docutils literal notranslate"><span class="pre">scan_start_menu</span></code> and <code class="docutils literal notranslate"><span class="pre">scan_env_path</span></code> settings.</p>
 </div>
 <div class="section" id="tracking-down-unwanted-features">
 <h2>10.4. Tracking down unwanted features<a class="headerlink" href="#tracking-down-unwanted-features" title="Permalink to this headline">¶</a></h2>
 <p>If you happen to notice that some unwanted features are still enabled, it is
 worth mentioning that it is possible to know what plugin (and by extension, what
 package) created a specific catalog item in the list of results.</p>
-<p>To do that, select an item and press <code class="kbd docutils literal"><span class="pre">Alt+Enter</span></code>. The <a class="reference internal" href="glossary.html#term-console"><span class="xref std std-term">Console</span></a>
+<p>To do that, select an item and press <kbd class="kbd docutils literal notranslate">Alt+Enter</kbd>. The <a class="reference internal" href="glossary.html#term-console"><span class="xref std std-term">Console</span></a>
 window will show up and the last log lines list the properties of the selected
 item. Among them the name of the parent plugin.</p>
 </div>
@@ -297,7 +297,7 @@ item. Among them the name of the parent plugin.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.18.1',
+            VERSION:'2.18.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
