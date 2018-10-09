@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.19
+                2.20
               </div>
             
           
@@ -506,8 +506,8 @@ combined with <a class="reference internal" href="#keypirinha.Match.FUZZY" title
 <dl class="function">
 <dt id="keypirinha.computer_name">
 <code class="descclassname">keypirinha.</code><code class="descname">computer_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.computer_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return computer’s NetBIOS name.
-This is the name used when looking for computer-specific configuration
+<dd><p>Return computer’s NetBIOS name.</p>
+<p>This is the name used when looking for computer-specific configuration
 files.</p>
 </dd></dl>
 
@@ -539,7 +539,8 @@ I/O operations like disk accesses and network communications).</p>
 <dl class="function">
 <dt id="keypirinha.exe_path">
 <code class="descclassname">keypirinha.</code><code class="descname">exe_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.exe_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the full path to Keypirinha’s bootstrap executable.</p>
+<dd><p>Return the full path to Keypirinha’s bootstrap executable (i.e. not the
+architecture-specific executable).</p>
 </dd></dl>
 
 <dl class="function">
@@ -553,7 +554,8 @@ specified.</p>
 <code class="file docutils literal notranslate"><span class="pre">X:/Keypirinha/portable/Profile/InstalledPackages</span></code> in portable mode.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The base directory is guaranteed to exist, but not the package itself.</p>
+<p class="last">The base directory is guaranteed to exist, but not the package itself.
+Thus it is the responsibility of the caller to create it if needed.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -574,13 +576,15 @@ specified.</p>
 <code class="descclassname">keypirinha.</code><code class="descname">live_package_dir</code><span class="sig-paren">(</span><em>package_full_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.live_package_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the directory of a <em>live</em> package, or the base directory for
 <a class="reference internal" href="../packages.html#pack-live"><span class="std std-ref">Live Packages</span></a> in case <em>package_full_name</em> is not specified.</p>
+<p>Prefer to use <a class="reference internal" href="plugin.html#keypirinha.Plugin.get_package_cache_path" title="keypirinha.Plugin.get_package_cache_path"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.get_package_cache_path()</span></code></a> when possible.</p>
 <p>The base directory should look similar to
 <code class="file docutils literal notranslate"><span class="pre">%APPDATA%/Keypirinha/Packages</span></code> in installed mode and
 <code class="file docutils literal notranslate"><span class="pre">X:/Keypirinha/portable/Profile/Packages</span></code> in portable mode.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The base directory is guaranteed to exist, but not the directory of the
-given package.</p>
+given package. Thus it is the responsibility of the caller to create it
+if needed.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -769,7 +773,7 @@ given package.</p>
 <dl class="function">
 <dt id="keypirinha.packages_list">
 <code class="descclassname">keypirinha.</code><code class="descname">packages_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.packages_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the list of the names of the currently loaded packages.</p>
+<dd><p>Return a list of the names of the packages that are currently loaded.</p>
 </dd></dl>
 
 <dl class="function">
@@ -888,8 +892,8 @@ portable mode.</p>
 <dl class="function">
 <dt id="keypirinha.user_name">
 <code class="descclassname">keypirinha.</code><code class="descname">user_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.user_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return current user’s name.
-This is the name used when looking for user-specific configuration files.</p>
+<dd><p>Return current user’s name.</p>
+<p>This is the name used when looking for user-specific configuration files.</p>
 </dd></dl>
 
 <dl class="function">
@@ -898,8 +902,8 @@ This is the name used when looking for user-specific configuration files.</p>
 <dd><p>Return application’s version in a tuple of unsigned integers that can be
 used for comparison. Format is <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code>.</p>
 <p>Examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">()</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c1"># test if version is strictly greater than &quot;2&quot;</span>
-<span class="n">version</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># test if version is less than or equal to &quot;1.1&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">()</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">)</span>   <span class="c1"># test if version is strictly greater than v2</span>
+<span class="n">version</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># test if version is less than or equal to v1.1</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -936,7 +940,7 @@ revision. Prefer <a class="reference internal" href="#keypirinha.version" title=
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2017, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
 
     </p>
   </div> 
@@ -957,7 +961,7 @@ revision. Prefer <a class="reference internal" href="#keypirinha.version" title=
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.19',
+            VERSION:'2.20',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

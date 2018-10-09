@@ -10,8 +10,10 @@ Start |project|
 ===============
 
 |project| is a *resident* application, it directly goes to background when it is
-started. You can check application is running by looking for its icon in the
-system tray's notification area. It is located next to the system clock on your
+started.
+
+You can check application is running by looking for its icon in the system
+tray's notification area. It is located next to the system clock on your
 desktop, usually in the lower-right corner of your main monitor.
 
 .. image:: images/systray.png
@@ -35,22 +37,27 @@ Once |project| is running, press :kbd:`Ctrl+Win+K` (by default) to show the
     :align: center
 
 .. tip::
-    Many users coming from Launchy change the default hotkey to :kbd:`Alt+Space`
+    Many former *Launchy* users change the default hotkey to :kbd:`Alt+Space`
 
 
 First Search
 ============
 
-You can now search for the task you wish to execute. Say you want to launch an
-application, *Firefox* for example. Start typing its name and it will soon show
-up in the results list as long as *Firefox* is installed on your machine.
+You can now search for the task you wish to execute.
+
+Say you want to launch the *Firefox* web browser for example. Start typing its
+name and it will soon show up in the results list as long as *Firefox* is
+installed on your machine.
+
+To select the desired item if not done already, you can use the :kbd:`Down`,
+:kbd:`Up`, :kbd:`PgDown` and :kbd:`PgUp` keys.
 
 .. image:: images/wndrun-search1.png
     :alt: First search
     :align: center
 
-Once the desired item is selected (you can use the :kbd:`Down`, :kbd:`Up`,
-:kbd:`PgDown` and :kbd:`PgUp` keys for that), press :kbd:`Enter` to launch it.
+Once the item is selected, press :kbd:`Enter` to launch it.
+
 |project| will then automatically go back to background...
 
 .. note::
@@ -70,8 +77,6 @@ To keep going with our example, we will **just** type the ``F`` letter since it
 is the one that naturally comes to our mind when thinking about the name
 ``Firefox``.
 
-Notice how the score of the *Firefox* item is much higher now?
-
 Execute this item **again**. You will see why in the next section below.
 
 .. image:: images/wndrun-search2.png
@@ -90,8 +95,8 @@ Still with our example, if you happen to launch your *Firefox* browser a lot,
 you probably want to keep the number of keystrokes that are required to search
 and launch it to a minimum.
 
-|project| offers the ability to **implicitly associate a keyword with a
-particular item**.
+|project| **implicitly associates a keyword with a particular item once this
+item is executed using any of the provided action** .
 
 In the last section, we typed the search term ``F`` (or ``f``, search is case-
 insensitive), before **executing** *Firefox*. |project| recorded that
@@ -111,11 +116,10 @@ will be pushed up to the top of the results list.
 Specify arguments
 =================
 
-In |project|, some items may accept and even require arguments.
+In |project|, some items accept or require arguments.
 
 Once you typed your search term and **selected** the desired item, hit the
-:kbd:`Tab` key (by default, the :kbd:`Space` key also works in this particular
-case).
+:kbd:`Tab` key (see also the ``space_as_tab`` setting).
 
 Back to our example, *Firefox* currently accepts the ``-preferences`` command
 line option so let's try typing this one and execute our item.
@@ -127,7 +131,7 @@ line option so let's try typing this one and execute our item.
 Actions
 =======
 
-Items may have several actions associated to them, or their type.
+Items may have several associated actions.
 
 Search and select the *Firefox* item again.
 
@@ -135,11 +139,11 @@ Search and select the *Firefox* item again.
     :align: center
 
 By default, the number of actions available for the selected item are displayed
-at the right side: ``8 actions``. Hit the :kbd:`Ctrl+Enter` to visualize these
-actions (or the :kbd:`Tab` key until you reach the actions list).
+at the right side: here ``8 actions``. Hit the :kbd:`Ctrl+Enter` to visualize
+these actions (or the :kbd:`Tab` key until you reach the actions list).
 
-Because this particular *Firefox* item is a file, even a :file:`*.lnk` file in
-our example, the following actions are made available:
+Because this particular *Firefox* item is a file, a :file:`*.lnk` file in this
+example, the following actions are made available:
 
 .. image:: images/wndrun-actions.png
     :align: center
@@ -243,12 +247,14 @@ GUI Theming
 It is possibe to tweak |project|'s GUI, see :doc:`theming` for more info.
 
 
-Shipped Packages
-================
+Plugins
+=======
 
-Some packages are shipped with |project| and are available out of the box.
+Some plugins, called :term:`packages` in |project|, are shipped with |project|
+and are available out of the box. See :doc:`shipped-packages`.
 
-See :doc:`shipped-packages` for more information.
+Also, some |project| users kindly shared the packages they developed to the
+community. You may find them useful. See :doc:`contributions`.
 
 
 Customize your Catalog

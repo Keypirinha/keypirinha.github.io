@@ -34,6 +34,10 @@ located into |project|'s directory.
   Python static documentation generator |br|
   http://www.sphinx-doc.org
 
+* *SQLite* |br|
+  An in-process SQL database engine |br|
+  https://www.sqlite.org
+
 * *utf8-cpp* |br|
   A C++ library to deal with UTF-8 strings |br|
   http://utfcpp.sourceforge.net

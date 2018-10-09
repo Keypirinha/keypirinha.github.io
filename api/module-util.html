@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.19
+                2.20
               </div>
             
           
@@ -344,8 +344,9 @@ This flag might be combined with other flags except <a class="reference internal
 <dl class="function">
 <dt id="keypirinha_util.browse_directory">
 <code class="descclassname">keypirinha_util.</code><code class="descname">browse_directory</code><span class="sig-paren">(</span><em>plugin</em>, <em>base_dir</em>, <em>check_base_dir=True</em>, <em>search_terms=''</em>, <em>store_score=False</em>, <em>show_dirs_first=True</em>, <em>show_hidden_files=False</em>, <em>show_system_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
-<dd><p>A helper to browse the first level of a directory and pass its content to
-<a class="reference internal" href="plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a>.</p>
+<dd><p>Scan the first level of a directory according to a search term (optional)
+and some filtering rules in order to get <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a>
+objects to feed <a class="reference internal" href="plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -540,8 +541,8 @@ the match is.</td>
 <dl class="function">
 <dt id="keypirinha_util.get_clipboard">
 <code class="descclassname">keypirinha_util.</code><code class="descname">get_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.get_clipboard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a string containing system’s clipboard if it contains text, or an
-empty string otherwise.</p>
+<dd><p>Returns a string containing system’s clipboard only if it contains text.</p>
+<p>An empty string is returned otherwise.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#keypirinha_util.set_clipboard" title="keypirinha_util.set_clipboard"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_clipboard()</span></code></a></p>
@@ -596,10 +597,9 @@ as a <em>target</em> property for a <a class="reference internal" href="catalogi
 <code class="descclassname">keypirinha_util.</code><code class="descname">raise_winerror</code><span class="sig-paren">(</span><em>winerr=None</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raises <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> (formerly <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#WindowsError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">WindowsError</span></code></a>) using the given
 Windows Error number. If the error number is not given,
-<a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a> is called which returns the last error code
-set by Windows in the calling thread.
-Does nothing if <em>winerr</em> or eventually the result of
-<a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a> is <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero).</p>
+<a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a> is called.</p>
+<p>Does nothing if <em>winerr</em>, or by default, the result of
+<a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a>, is <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero).</p>
 </dd></dl>
 
 <dl class="function">
@@ -641,7 +641,7 @@ Does nothing if <em>winerr</em> or eventually the result of
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <ul class="last simple">
-<li>This function is kept to maintain compatibility only. It is now
+<li>This function is only kept to maintain backward compatibility. It is
 recommended to use <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> instead.</li>
 <li>This function has been developed as a fast alternative to
 <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.walk" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.walk()</span></code></a>. However since then, <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> has been
@@ -697,6 +697,10 @@ way:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Win32’s <code class="docutils literal notranslate"><span class="pre">FindFirstFile</span></code> is used internally.</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified">Deprecated since version This: </span>function is deprecated in favor of <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a>. It is
+kept here only to maintain backward compatibility.</p>
 </div>
 </dd></dl>
 
@@ -779,7 +783,7 @@ and behaves incorrectly in some cases.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>A successful call, does not necessarily mean the item has effectively
+<li>A successful call does not necessarily mean the item has effectively
 been launched/executed as expected, or that the launched process ended
 successfully.</li>
 <li>This function tries to resolve shell links for the <em>thing</em> and the
@@ -994,7 +998,7 @@ or not the launch request is successful.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2017, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
 
     </p>
   </div> 
@@ -1015,7 +1019,7 @@ or not the launch request is successful.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.19',
+            VERSION:'2.20',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

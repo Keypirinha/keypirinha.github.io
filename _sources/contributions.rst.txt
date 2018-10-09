@@ -102,6 +102,11 @@ Pinboard
 `Pinboard <http://pinboard.in>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
 
+RocketChat
+----------
+:ghu:`malys`'s package for `RocketChat <https://rocket.chat>`_ |br|
+Source: `<https://github.com/malys/keypirinha-rocketchat>`_
+
 SapGUI
 ------
 
@@ -156,7 +161,8 @@ Source: `<https://github.com/ueffel/Keypirinha-WindowsApps>`_
 
 WinSys
 ------
-:ghu:`kvnxiao`'s package
+:ghu:`kvnxiao`'s package to invoke common system and shell commands for Windows
+10 |br|
 Source: `<https://github.com/kvnxiao/keypirinha-winsys>`_
 
 

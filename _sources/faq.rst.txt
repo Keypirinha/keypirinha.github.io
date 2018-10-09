@@ -47,10 +47,9 @@ tempted to think it is just about being a replacement to the Start Menu, or the
 It would be a mistake to think of |project| as an application launcher only.
 |project| itself is very **generic**. It is just a database of *items* sweetened
 with a small search engine. In other words, it can launch any kind of task
-provided by its plugins. May it be a document, a URL, creating an alarm at a
-given time, launching a web search, directly launching a PuTTY or a FileZilla
-session, switching to a running application using its name, evaluate a
-mathematical expression inline, ...
+provided by its plugins. May it be a document, a URL, launching a web search,
+directly launching a PuTTY or a FileZilla session, switching to a running
+application using its name, evaluate a mathematical expression inline, ...
 
 Its whole architecture is about being generic, configurable and scriptable
 (Python3_). Its search algorithm tries to be smarter by giving a better score to
@@ -65,16 +64,17 @@ even find yourself
 Is it open source?
 ==================
 
-In short, the application itself is not, its official plugins are.
+In short, the application itself is not, its official plugins and its exposed
+Python API are.
 
 The application itself is distributed as a `freeware
 <https://en.wikipedia.org/wiki/Freeware>`_ (see the :doc:`license`).
 In other words, |project| is distributed for free and there is no time limit, no
 nag screen, no ad.
 
-Its official plugins that are shipped with it are `open source
-<https://en.wikipedia.org/wiki/Open-source_license>`_ and published under the
-terms of the `zLib license
+Its official plugins that are shipped with it, as well its exposed Python API
+are `open source <https://en.wikipedia.org/wiki/Open-source_license>`_ and
+published under the terms of the `zLib license
 <https://github.com/Keypirinha/Packages/blob/master/LICENSE>`_, a permissive
 license.
 
@@ -98,10 +98,10 @@ How to support the project?
 |project| is distributed for free and you are absolutely not required to
 participate in any way, so please do not feel that you *have to*.
 
-However, the application itself and the official packages are the result of
-several hundreds of hours of development spent by a single person so if you do
-wish to show your support, please know that it is greatly appreciated and taken
-as an encouragement for future developments.
+The application itself and the official packages are the result of several
+hundreds of hours of development spent by a single person so if you do wish to
+show your support, be aware that it is greatly appreciated and taken as an
+encouragement for future developments.
 
 There are several ways to support |project|:
 
@@ -117,7 +117,7 @@ There are several ways to support |project|:
 * :ref:`contribute-doc` |br|
   |br|
 
-* Help to develop the official packages |br|
+* Help to develop the official packages and/or the Python API |br|
   :ref:`contribute-packages` |br|
   |br|
 

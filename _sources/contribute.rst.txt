@@ -39,15 +39,20 @@ quickly.
 
 .. _contribute-packages:
 
-Get involved in the development of the Packages
-===============================================
+Get involved in the development of the Packages and/or the API
+==============================================================
 
 If you are not sure where to start from, some feature requests or issues
 reported by users may be associated with the `contrib-appreciated
 <https://github.com/Keypirinha/Keypirinha/issues?q=is%3Aissue+is%3Aopen+label%3Acontrib-appreciated>`_
 tag.
 
-The |packsrepo_link| is online and accepts *Pull Requests*.
+This tag usually involves a development task that can be done in the
+|packsrepo_link| and/or the |pylibrepo_link| (i.e. the exposed Python API of
+|project|).
+
+Both repositories welcome *Pull Requests*. See their respective ``README`` file
+for more details on how to contribute.
 
 
 .. _contribute-platform:

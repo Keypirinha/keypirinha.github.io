@@ -11,9 +11,12 @@ config file.
 Theme Builder
 =============
 
-:ghu:`Fuhrmann` made an awesome theme builder to ease the generation of your
-|project| theme settings.
+:ghu:`Fuhrmann` made an awesome **color theme** builder to ease the generation
+of your |project| theme settings.
 `Check it out here <https://fuhrmann.github.io/keypirinha-theme-builder/>`_!
+
+Do note however that |project| also allows to change its GUI layout (i.e. not
+only its colors and fonts).
 
 .. image:: images/theme-builder.png
     :align: center

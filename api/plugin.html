@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                2.19
+                2.20
               </div>
             
           
@@ -763,8 +763,12 @@ specified resource.</p>
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For performance reason, the MemoryError exception will be raised if
-the specified file size is bigger than 16MB (16777216 bytes).</p>
+<p class="last">For performance reason, the <cite>MemoryError</cite> exception is raised if the
+specified file size is bigger than 16MB (16777216 bytes).</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.load_text_resource" title="keypirinha.Plugin.load_text_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_text_resource()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -783,18 +787,18 @@ parent Package.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>The configuration files will be loaded only the first time this
+<li>The configuration file(s) will be loaded only the first time this
 method is called. Any subsequent call will return a new
 <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object pointing to the same data
 block.</li>
 <li>When the application detects that one or several configuration
-files have been modified in a Package, it will automatically
-re-read the files (only if they were previously loaded), then will
-notify every related plugin via a call to
-<a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a>.</li>
-<li>In case <a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a> is called, plugins will not
-have to call <a class="reference internal" href="#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_settings()</span></code></a> again if they already
-hold a <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object.</li>
+files have been modified in a Package, it is automatically re-read
+the files (only if they were previously loaded), then will notify
+every related plugin via a call to <a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a>.</li>
+<li>It is not necessary to re-call this method upon a
+<a class="reference internal" href="#keypirinha.Plugin.on_events" title="keypirinha.Plugin.on_events"><code class="xref py py-func docutils literal notranslate"><span class="pre">Plugin.on_events()</span></code></a> if you already have a
+<a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object associated to this plugin.
+The application update user’s configuration data upon file change.</li>
 </ul>
 </div>
 <div class="admonition seealso">
@@ -811,6 +815,10 @@ resource.</p>
 <p>May raise the same exceptions than <a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_binary_resource()</span></code></a>, plus
 the <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> exception if resource’s content could not be
 decoded (Unicode error).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_binary_resource()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -954,7 +962,7 @@ to know more about the meaning of the returned value.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2017, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
 
     </p>
   </div> 
@@ -975,7 +983,7 @@ to know more about the meaning of the returned value.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.19',
+            VERSION:'2.20',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

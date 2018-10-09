@@ -55,6 +55,10 @@ The one on the **right** side should be blank on a fresh install, which means
 all the default configuration values defined in the ``Default`` file are used.
 Let's call this file ``User``.
 
+.. image:: images/config-edit.png
+    :alt: The 'Configure' menu
+    :align: center
+
 Configuration files in |project| are ``INI`` files. This format has been chosen
 because it is easy to read and to edit. But there are some things to keep in
 mind when editing a configuration file...
@@ -80,15 +84,21 @@ applied, you can close both editor windows.
 .. tip::
     If the ``gui`` section was already declared in your configuration file, you
     do not need to repeat the ``[gui]`` line as long as its settings are all
-    grouped under it.
+    grouped under it. For example:
+
+    .. code-block:: ini
+
+        [gui]
+        show_on_taskbar = no
+        max_results = 90
 
 
 Modification at Runtime
 =======================
 
 When you save a new version of one or several of your configuration files,
-|project| automatically detects any modification you have made and apply it at
-runtime. The same mechanism goes to packages' configuration.
+|project| automatically detects the modifications you have made, if any, and
+apply them at runtime. The same apply to packages' configuration.
 
 
 The INI Format
@@ -180,6 +190,13 @@ values that may come handy.
 To use them, use the following syntax in your configuration file: |br|
 ``${var:APP_DIR}`` or ``${var:KNOWNFOLDER_MUSIC}``, ...
 
+.. code-block:: ini
+
+    # Example of using a variable predefined by Keypirinha
+    [external]
+    editor = "%{var:APP_DIR}\..\MyEditor\MyEditor.exe"
+
+
 * ``APP_DRIVE`` |br|
   The drive on which the application is installed. |br|
   Example:
@@ -250,6 +267,12 @@ To use them, use the following syntax in your configuration file: |br|
 * For convenience, some Windows'
   `Known Folders <https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457(v=vs.85).aspx>`_
   are also predefined. They may come handy to configure some packages.
+
+  .. code-block:: ini
+
+      # Example of using a "Known Folder" value
+      [external]
+      editor = "%{var:KNOWNFOLDER_LOCALAPPDATA}\MyEditor\MyEditor.exe"
 
   +----------------------------------------+---------------------------------------------------------------------+
   | Name                                   | Expands to (example; may differ on your system)                     |
@@ -457,6 +480,11 @@ the configuration file is read.
 
 The ``env`` section is defined (overwritten) in **every** loaded configuration
 file.
+
+.. tip::
+    When possible, it is good practice and recommended to use a ``KNOWNFOLDER``
+    predefined variable instead of environment values. This is especially true
+    if you run |project| on a USB key across multiple machines.
 
 
 Machine and User Specific Settings

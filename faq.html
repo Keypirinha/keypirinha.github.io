@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                2.19
+                2.20
               </div>
             
           
@@ -270,10 +270,9 @@ tempted to think it is just about being a replacement to the Start Menu, or the
 <p>It would be a mistake to think of Keypirinha as an application launcher only.
 Keypirinha itself is very <strong>generic</strong>. It is just a database of <em>items</em> sweetened
 with a small search engine. In other words, it can launch any kind of task
-provided by its plugins. May it be a document, a URL, creating an alarm at a
-given time, launching a web search, directly launching a PuTTY or a FileZilla
-session, switching to a running application using its name, evaluate a
-mathematical expression inline, …</p>
+provided by its plugins. May it be a document, a URL, launching a web search,
+directly launching a PuTTY or a FileZilla session, switching to a running
+application using its name, evaluate a mathematical expression inline, …</p>
 <p>Its whole architecture is about being generic, configurable and scriptable
 (<a class="reference external" href="https://python.org">Python3</a>). Its search algorithm tries to be smarter by giving a better score to
 tasks that you most likely want to launch given the current search terms and
@@ -284,12 +283,14 @@ even find yourself
 </div>
 <div class="section" id="is-it-open-source">
 <h2><a class="toc-backref" href="#id5">16.4. Is it open source?</a><a class="headerlink" href="#is-it-open-source" title="Permalink to this headline">¶</a></h2>
-<p>In short, the application itself is not, its official plugins are.</p>
+<p>In short, the application itself is not, its official plugins and its exposed
+Python API are.</p>
 <p>The application itself is distributed as a <a class="reference external" href="https://en.wikipedia.org/wiki/Freeware">freeware</a> (see the <a class="reference internal" href="license.html"><span class="doc">License</span></a>).
 In other words, Keypirinha is distributed for free and there is no time limit, no
 nag screen, no ad.</p>
-<p>Its official plugins that are shipped with it are <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_license">open source</a> and published under the
-terms of the <a class="reference external" href="https://github.com/Keypirinha/Packages/blob/master/LICENSE">zLib license</a>, a permissive
+<p>Its official plugins that are shipped with it, as well its exposed Python API
+are <a class="reference external" href="https://en.wikipedia.org/wiki/Open-source_license">open source</a> and
+published under the terms of the <a class="reference external" href="https://github.com/Keypirinha/Packages/blob/master/LICENSE">zLib license</a>, a permissive
 license.</p>
 </div>
 <div class="section" id="is-it-beta-software">
@@ -304,10 +305,10 @@ reported.</p>
 <span id="faq-support"></span><h2><a class="toc-backref" href="#id7">16.6. How to support the project?</a><a class="headerlink" href="#how-to-support-the-project" title="Permalink to this headline">¶</a></h2>
 <p>Keypirinha is distributed for free and you are absolutely not required to
 participate in any way, so please do not feel that you <em>have to</em>.</p>
-<p>However, the application itself and the official packages are the result of
-several hundreds of hours of development spent by a single person so if you do
-wish to show your support, please know that it is greatly appreciated and taken
-as an encouragement for future developments.</p>
+<p>The application itself and the official packages are the result of several
+hundreds of hours of development spent by a single person so if you do wish to
+show your support, be aware that it is greatly appreciated and taken as an
+encouragement for future developments.</p>
 <p>There are several ways to support Keypirinha:</p>
 <ul class="simple">
 <li>Make a donation <br />
@@ -328,8 +329,8 @@ special enquiries. <br />
 <span id="a2itemwidget"></span><script src="https://api.alternativeto.net/software/keypirinha/widgetjs/blue" type="text/javascript"></script> <br /></li>
 <li><a class="reference internal" href="contribute.html#contribute-doc"><span class="std std-ref">Help with the Documentation</span></a> <br />
 <br /></li>
-<li>Help to develop the official packages <br />
-<a class="reference internal" href="contribute.html#contribute-packages"><span class="std std-ref">Get involved in the development of the Packages</span></a> <br />
+<li>Help to develop the official packages and/or the Python API <br />
+<a class="reference internal" href="contribute.html#contribute-packages"><span class="std std-ref">Get involved in the development of the Packages and/or the API</span></a> <br />
 <br /></li>
 <li>There are plans to develop an automated packages redistribution platform <br />
 <a class="reference internal" href="contribute.html#contribute-platform"><span class="std std-ref">Get involved in the development of the Platform</span></a></li>
@@ -369,7 +370,7 @@ yet!</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2017, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
 
     </p>
   </div> 
@@ -390,7 +391,7 @@ yet!</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.19',
+            VERSION:'2.20',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
