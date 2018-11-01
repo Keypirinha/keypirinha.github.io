@@ -11,8 +11,9 @@ Here are some of the items that the ``Internal.About`` plugin populates:
 
 * ``Keypirinha: Configure Application`` to edit application's configuration
   file(s)
-* ``Keypirinha: Refresh Catalog`` to ask all packages to force refresh their
-  catalog
+* ``Keypirinha: Refresh Catalog`` to ask all packages to refresh their catalog
+* ``Keypirinha: Refresh Catalog: <Package Name>`` to ask a single package
+  to refresh its catalog
 * ``Keypirinha: Console`` to show the :term:`Console` window
 * ``Keypirinha: About`` to see application's ``About`` dialog box
 * ``Keypirinha: Exit`` to quit |project|
