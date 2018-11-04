@@ -7,7 +7,7 @@ Available since version 2.16
 A package to catalog the content of your filesystem in a fine-grained fashion.
 
 It allows to quickly access specific files and/or applications **you frequently
-use** without needing a third-party software like the :doc:`everything` does.
+use** without needing a third-party software unlike the :doc:`everything`.
 
 .. note::
     * This package is addressed to advanced users (more info below)
@@ -57,3 +57,106 @@ Each profile has essentially the following properties:
   It is convenient if you do not want to replicate in the current profile the
   values you already defined in the base profile.
 * And other...
+
+
+Examples
+========
+
+.. tip::
+    For more details about each settings, read the inline documentation provided
+    in the default configuration file of *FilesCatalog*, which can be opened by
+    executing the item ``Keypirinha: Configure Package: FilesCatalog`` in
+    |project|.
+
+
+Example 1
+---------
+
+.. code-block:: ini
+
+    [profile/Docs]
+    activate = yes
+    paths = C:\MyDocumentsFiles
+
+* This is the simplest possible example. A profile named ``Docs`` is defined to
+  instruct *FilesCatalog* to scan the **immediate** content of
+  ``C:\MyDocumentsFiles`` for any kind of non-hidden files. Executable or not.
+  The scan is **not** recursive.
+* Found files will be cataloged and searchable in |project| by using their name.
+  E.g. ``MyFile.txt``. This default behavior can be modified by using option
+  ``file_item_label`` (see Example 3).
+* The line ``activate = yes`` must always be specified for your ``profile`` to
+  be taken into account by *FilesCatalog* at runtime. A profile is not active by
+  default.
+
+
+Example 2
+---------
+
+You want to have access to executable tools you frequently use:
+
+.. code-block:: ini
+
+    [profile/Tools]
+    activate = yes
+    paths =
+        C:\Git
+        C:\MyScripts\**
+    inherit = ExeOnly
+    max_depth = 3
+
+* ``paths`` can have one or multiple path patterns to be scanned.
+* The content of ``C:\MyScripts\`` will be scanned recursively because the magic
+  sequence ``**`` is specified.
+* However it is good to limit recursive scanning as much as possible since it
+  can be very resource demanding for your system.
+* For that reason, you can use the ``max_depth`` option, which indicates here
+  that a maximum of 3 hierarchy levels will be scanned. |br|
+  That is, for instance, the content of ``C:\MyScripts\``,
+  ``C:\MyScripts\SubDir1\`` and ``C:\MyScripts\SubDir2\`` will be scanned.
+  But not ``C:\MyScripts\SubDir1\SubDir2\SubDir3\``.
+* This profile inherits settings from the profile named ``ExeOnly``, predefined
+  in *FilesCatalog*'s default configuration file.
+* ``inherit`` is convenient in case you wish to define several profiles that
+  have common properties. It is an elegant way to structure your configuration
+  file. Inherited settings can be overridden by simply re-defining it in the
+  current profile. For example, would ``ExeOnly`` define ``max_depth = 1``,
+  the ``max_depth`` value for the ``Tools`` profile would still be ``3``.
+
+
+Example 3
+---------
+
+.. code-block:: ini
+
+    [profile/Things]
+    activate = yes
+    paths =
+        C:\MyDocs
+        C:\MyTools
+        ${var:KNOWNFOLDER_DOWNLOADS}\**
+        ${env:SYSTEMROOT}\system32\**
+    filters = + ext: .txt .xls .cmd .cpl
+    file_item_label = {profile}: {dir1}\{clean_name}
+
+* Path ``${var:KNOWNFOLDER_DOWNLOADS}`` will be translated at runtime by
+  |project| to point to your ``Downloads`` folder, a standard Windows folder
+  usually located at ``C:\Users\YourUserName\Downloads``. |br|
+  See :doc:`../configuration` for an exhaustive list of the supported
+  ``KNOWNFOLDER``.
+* Likewise, ``${env:SYSTEMROOT}`` will be translated to the content of your
+  environment variable named ``SYSTEMROOT``. Note that for both safety and
+  security reasons, it highly recommended to prefer the ``KNOWNFOLDER``
+  variables over environment variables.
+* ``file_item_label`` allows to define how you can search the items cataloged by
+  *FilesCatalog*. For example, if you have two files ``MyTools\File.txt`` and
+  ``MyDocs\File.txt``, both files would be searchable as ``File.txt``, forcing
+  to visually check at search time which item to choose out of the two. |br|
+  As it is defined here, the label of the cataloged these two items will be
+  ``Things: MyTools\File.txt`` and ``Things: MyDocs\File.txt``, allowing you to
+  search your files also using their immediate parent name.
+* The ``filters`` option is a very powerful tool to filter-out or filter-in the
+  currently scanned files and folders, by checking its extension, its filesystem
+  attributes, and so on... Regular expressions can also be used. For more info,
+  read its dedicated inline documentation in *FilesCatalog* default
+  configuration file.

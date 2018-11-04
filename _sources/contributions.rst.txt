@@ -28,6 +28,14 @@ Currency
 :ghu:`AvatarHurden`'s package to convert currencies. |br|
 Source: `<https://github.com/AvatarHurden/keypirinha-currency>`_
 
+Cvt
+---
+
+:ghu:`DrorHarari`'s package for conversion of units of measure for area, data
+size, distance, energy, force, fuel consuption, mass, power, pressure, speed,
+temperature and time. |br|
+Source: `<https://github.com/DrorHarari/keypirinha-cvt>`_
+
 Ditto
 -----
 

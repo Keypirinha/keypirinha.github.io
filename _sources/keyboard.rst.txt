@@ -8,7 +8,7 @@ LaunchBox
 +------------------------------------+-----------------------------------------+
 | Shortcut(s)                        | Action(s)                               |
 +====================================+=========================================+
-| :kbd:`Ctrl+Win+K` (default)        | Show/Hide the LaunchBox                 |
+| :kbd:`Ctrl+Win+K` (default)        | Show/Hide the :term:`LaunchBox`         |
 +------------------------------------+-----------------------------------------+
 | * :kbd:`Tab`                       | Next step (add args, choose action)     |
 | * :kbd:`Alt+Right`                 |                                         |
@@ -23,10 +23,16 @@ LaunchBox
 | * :kbd:`Ctrl+Space`                | Force insert a space character while at |
 | * :kbd:`Shift+Space`               | first step                              |
 +------------------------------------+-----------------------------------------+
-| :kbd:`Ctrl+Enter`                  | Directly select an action               |
+| * :kbd:`Ctrl+1` to :kbd:`Ctrl+0`   | Directly execute the item located a     |
+| * :kbd:`Ctrl+Numpad1`...           | specific position in |br| the results   |
+|                                    | list                                    |
++------------------------------------+-----------------------------------------+
+| :kbd:`Ctrl+Enter`                  | Directly go to the list of Actions      |
+|                                    | associated to the selected item         |
 +------------------------------------+-----------------------------------------+
 | :kbd:`Shift+Enter`                 | Execute the item without closing the    |
-|                                    | LaunchBox, and reset                    |
+|                                    | LaunchBox, and reset |br|               |
+|                                    | search state                            |
 +------------------------------------+-----------------------------------------+
 | :kbd:`Ctrl+Shift+Enter`            | Execute the item without closing the    |
 |                                    | LaunchBox, and go back to |br| the      |
