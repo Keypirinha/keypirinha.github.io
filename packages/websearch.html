@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.18. WebSuggest Package" href="websuggest.html"/>
-        <link rel="prev" title="5.16. URL Package" href="url.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.18. WebSuggest Package" href="websuggest.html" />
+    <link rel="prev" title="5.16. URL Package" href="url.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -158,7 +151,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -166,9 +159,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -223,7 +217,7 @@
 <h2>5.17.1. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
 <p>This package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
 <ul class="simple">
-<li>Items prefixed with <code class="docutils literal notranslate"><span class="pre">WebSearch</span></code> (one per configured site)</li>
+<li><p>Items prefixed with <code class="docutils literal notranslate"><span class="pre">WebSearch</span></code> (one per configured site)</p></li>
 </ul>
 </div>
 <div class="section" id="configuring-search-sites">
@@ -259,16 +253,16 @@ this website should be kept in Keypirinha’s History. It accepts the following
 values:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">all</span></code> indicates that the targeted web site as well as the terms entered
-by the user for this particular search will be kept in history.</li>
-<li><code class="docutils literal notranslate"><span class="pre">site</span></code> indicates that only the targeted site will be kept in history,
-without the actual user’s search terms.</li>
-<li><code class="docutils literal notranslate"><span class="pre">none</span></code> indicates that the search must not be kept in history at all.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> indicates that the targeted web site as well as the terms entered
+by the user for this particular search will be kept in history.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">site</span></code> indicates that only the targeted site will be kept in history,
+without the actual user’s search terms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">none</span></code> indicates that the search must not be kept in history at all.</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Note that the <code class="docutils literal notranslate"><span class="pre">new_window</span></code> and <code class="docutils literal notranslate"><span class="pre">incognito</span></code> values are only hints. When
+<p class="admonition-title">Note</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">new_window</span></code> and <code class="docutils literal notranslate"><span class="pre">incognito</span></code> values are only hints. When
 you launch a search, Keypirinha tries to detect system’s default browser and
 insert the appropriate command line options according to the type of web
 browser (<em>Chrome</em>, <em>Firefox</em>, <em>Internet Explorer</em> and <em>Opera</em> are currently
@@ -283,11 +277,11 @@ location. But some websites do not always follow the standard rules of encoding
 and might behave unexpectedly. This setting accepts the following values:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">auto</span></code> (<strong>default</strong>) Choose the appropriate quoting scheme according to
-the position of the <code class="docutils literal notranslate"><span class="pre">%s</span></code> placeholder in the URL.</li>
-<li><code class="docutils literal notranslate"><span class="pre">quote</span></code> Replace special characters using the ‘%xx’ escape. Letters,
-digits, and the characters <code class="docutils literal notranslate"><span class="pre">_.-</span></code> are never quoted.</li>
-<li><code class="docutils literal notranslate"><span class="pre">quote_plus</span></code> Like <code class="docutils literal notranslate"><span class="pre">quote</span></code>, but also replace spaces by plus signs.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code> (<strong>default</strong>) Choose the appropriate quoting scheme according to
+the position of the <code class="docutils literal notranslate"><span class="pre">%s</span></code> placeholder in the URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote</span></code> Replace special characters using the ‘%xx’ escape. Letters,
+digits, and the characters <code class="docutils literal notranslate"><span class="pre">_.-</span></code> are never quoted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quote_plus</span></code> Like <code class="docutils literal notranslate"><span class="pre">quote</span></code>, but also replace spaces by plus signs.</p></li>
 </ul>
 </div></blockquote>
 <div class="section" id="multi-url-search-site">
@@ -300,8 +294,8 @@ digits, and the characters <code class="docutils literal notranslate"><span clas
 </pre></div>
 </div>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Notice the indentation of the URLs!</p>
+<p class="admonition-title">Caution</p>
+<p>Notice the indentation of the URLs!</p>
 </div>
 </div>
 </div>
@@ -309,9 +303,7 @@ digits, and the characters <code class="docutils literal notranslate"><span clas
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -320,7 +312,7 @@ digits, and the characters <code class="docutils literal notranslate"><span clas
         <a href="websuggest.html" class="btn btn-neutral float-right" title="5.18. WebSuggest Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="url.html" class="btn btn-neutral" title="5.16. URL Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="url.html" class="btn btn-neutral float-left" title="5.16. URL Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -329,7 +321,7 @@ digits, and the characters <code class="docutils literal notranslate"><span clas
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -345,36 +337,15 @@ digits, and the characters <code class="docutils literal notranslate"><span clas
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

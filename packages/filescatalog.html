@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.10. FileZilla Package" href="filezilla.html"/>
-        <link rel="prev" title="5.8. FileBrowser Package" href="filebrowser.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.10. FileZilla Package" href="filezilla.html" />
+    <link rel="prev" title="5.8. FileBrowser Package" href="filebrowser.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -161,7 +154,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -169,9 +162,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -220,14 +214,14 @@
 <p>It allows to quickly access specific files and/or applications <strong>you frequently
 use</strong> without needing a third-party software unlike the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>This package is addressed to advanced users (more info below)</li>
-<li>If you are looking for a way to browse the file system as you type a path,
-check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></li>
-<li>If you are looking for a way to search for files regardless of their
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>This package is addressed to advanced users (more info below)</p></li>
+<li><p>If you are looking for a way to browse the file system as you type a path,
+check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></p></li>
+<li><p>If you are looking for a way to search for files regardless of their
 location, check out the <a class="reference internal" href="everything.html"><span class="doc">Everything Package</span></a> (requires a third-party
-software)</li>
+software)</p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -249,26 +243,26 @@ one scanning-then-filtering process of your files, before registering them into
 Keypirinha’s <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
 <p>Each profile has essentially the following properties:</p>
 <ul class="simple">
-<li>Its own configuration section in <code class="file docutils literal notranslate"><span class="pre">filescatalog.ini</span></code></li>
-<li>A unique name among all the profiles. <br />
+<li><p>Its own configuration section in <code class="file docutils literal notranslate"><span class="pre">filescatalog.ini</span></code></p></li>
+<li><p>A unique name among all the profiles. <br />
 Recommended form is to keep it without space character, in lower case except
 for the first letter of each word like in: <code class="docutils literal notranslate"><span class="pre">MyProfile</span></code>, <code class="docutils literal notranslate"><span class="pre">Applications</span></code>,
-<code class="docutils literal notranslate"><span class="pre">PortableSoftwares</span></code>.</li>
-<li>A set of <em>paths</em> to scan</li>
-<li>Optionally a set of <em>filters</em> to include/exclude the scanned items according
+<code class="docutils literal notranslate"><span class="pre">PortableSoftwares</span></code>.</p></li>
+<li><p>A set of <em>paths</em> to scan</p></li>
+<li><p>Optionally a set of <em>filters</em> to include/exclude the scanned items according
 to their name, extension and filesystem attributes (hidden, read-only, …),
-…</li>
-<li>Optionally a base profile to inherit from. <br />
+…</p></li>
+<li><p>Optionally a base profile to inherit from. <br />
 It is convenient if you do not want to replicate in the current profile the
-values you already defined in the base profile.</li>
-<li>And other…</li>
+values you already defined in the base profile.</p></li>
+<li><p>And other…</p></li>
 </ul>
 </div>
 <div class="section" id="examples">
 <h2>5.9.3. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">For more details about each settings, read the inline documentation provided
+<p class="admonition-title">Tip</p>
+<p>For more details about each settings, read the inline documentation provided
 in the default configuration file of <em>FilesCatalog</em>, which can be opened by
 executing the item <code class="docutils literal notranslate"><span class="pre">Keypirinha:</span> <span class="pre">Configure</span> <span class="pre">Package:</span> <span class="pre">FilesCatalog</span></code> in
 Keypirinha.</p>
@@ -281,16 +275,16 @@ Keypirinha.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li>This is the simplest possible example. A profile named <code class="docutils literal notranslate"><span class="pre">Docs</span></code> is defined to
+<li><p>This is the simplest possible example. A profile named <code class="docutils literal notranslate"><span class="pre">Docs</span></code> is defined to
 instruct <em>FilesCatalog</em> to scan the <strong>immediate</strong> content of
 <code class="docutils literal notranslate"><span class="pre">C:\MyDocumentsFiles</span></code> for any kind of non-hidden files. Executable or not.
-The scan is <strong>not</strong> recursive.</li>
-<li>Found files will be cataloged and searchable in Keypirinha by using their name.
+The scan is <strong>not</strong> recursive.</p></li>
+<li><p>Found files will be cataloged and searchable in Keypirinha by using their name.
 E.g. <code class="docutils literal notranslate"><span class="pre">MyFile.txt</span></code>. This default behavior can be modified by using option
-<code class="docutils literal notranslate"><span class="pre">file_item_label</span></code> (see Example 3).</li>
-<li>The line <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">=</span> <span class="pre">yes</span></code> must always be specified for your <code class="docutils literal notranslate"><span class="pre">profile</span></code> to
+<code class="docutils literal notranslate"><span class="pre">file_item_label</span></code> (see Example 3).</p></li>
+<li><p>The line <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">=</span> <span class="pre">yes</span></code> must always be specified for your <code class="docutils literal notranslate"><span class="pre">profile</span></code> to
 be taken into account by <em>FilesCatalog</em> at runtime. A profile is not active by
-default.</li>
+default.</p></li>
 </ul>
 </div>
 <div class="section" id="example-2">
@@ -306,23 +300,23 @@ default.</li>
 </pre></div>
 </div>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">paths</span></code> can have one or multiple path patterns to be scanned.</li>
-<li>The content of <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\</span></code> will be scanned recursively because the magic
-sequence <code class="docutils literal notranslate"><span class="pre">**</span></code> is specified.</li>
-<li>However it is good to limit recursive scanning as much as possible since it
-can be very resource demanding for your system.</li>
-<li>For that reason, you can use the <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> option, which indicates here
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> can have one or multiple path patterns to be scanned.</p></li>
+<li><p>The content of <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\</span></code> will be scanned recursively because the magic
+sequence <code class="docutils literal notranslate"><span class="pre">**</span></code> is specified.</p></li>
+<li><p>However it is good to limit recursive scanning as much as possible since it
+can be very resource demanding for your system.</p></li>
+<li><p>For that reason, you can use the <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> option, which indicates here
 that a maximum of 3 hierarchy levels will be scanned. <br />
 That is, for instance, the content of <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\</span></code>,
 <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\SubDir1\</span></code> and <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\SubDir2\</span></code> will be scanned.
-But not <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\SubDir1\SubDir2\SubDir3\</span></code>.</li>
-<li>This profile inherits settings from the profile named <code class="docutils literal notranslate"><span class="pre">ExeOnly</span></code>, predefined
-in <em>FilesCatalog</em>’s default configuration file.</li>
-<li><code class="docutils literal notranslate"><span class="pre">inherit</span></code> is convenient in case you wish to define several profiles that
+But not <code class="docutils literal notranslate"><span class="pre">C:\MyScripts\SubDir1\SubDir2\SubDir3\</span></code>.</p></li>
+<li><p>This profile inherits settings from the profile named <code class="docutils literal notranslate"><span class="pre">ExeOnly</span></code>, predefined
+in <em>FilesCatalog</em>’s default configuration file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inherit</span></code> is convenient in case you wish to define several profiles that
 have common properties. It is an elegant way to structure your configuration
 file. Inherited settings can be overridden by simply re-defining it in the
 current profile. For example, would <code class="docutils literal notranslate"><span class="pre">ExeOnly</span></code> define <code class="docutils literal notranslate"><span class="pre">max_depth</span> <span class="pre">=</span> <span class="pre">1</span></code>,
-the <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> value for the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> profile would still be <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
+the <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> value for the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> profile would still be <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 </div>
 <div class="section" id="example-3">
@@ -339,27 +333,27 @@ the <code class="docutils literal notranslate"><span class="pre">max_depth</span
 </pre></div>
 </div>
 <ul class="simple">
-<li>Path <code class="docutils literal notranslate"><span class="pre">${var:KNOWNFOLDER_DOWNLOADS}</span></code> will be translated at runtime by
+<li><p>Path <code class="docutils literal notranslate"><span class="pre">${var:KNOWNFOLDER_DOWNLOADS}</span></code> will be translated at runtime by
 Keypirinha to point to your <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder, a standard Windows folder
 usually located at <code class="docutils literal notranslate"><span class="pre">C:\Users\YourUserName\Downloads</span></code>. <br />
 See <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> for an exhaustive list of the supported
-<code class="docutils literal notranslate"><span class="pre">KNOWNFOLDER</span></code>.</li>
-<li>Likewise, <code class="docutils literal notranslate"><span class="pre">${env:SYSTEMROOT}</span></code> will be translated to the content of your
+<code class="docutils literal notranslate"><span class="pre">KNOWNFOLDER</span></code>.</p></li>
+<li><p>Likewise, <code class="docutils literal notranslate"><span class="pre">${env:SYSTEMROOT}</span></code> will be translated to the content of your
 environment variable named <code class="docutils literal notranslate"><span class="pre">SYSTEMROOT</span></code>. Note that for both safety and
 security reasons, it highly recommended to prefer the <code class="docutils literal notranslate"><span class="pre">KNOWNFOLDER</span></code>
-variables over environment variables.</li>
-<li><code class="docutils literal notranslate"><span class="pre">file_item_label</span></code> allows to define how you can search the items cataloged by
+variables over environment variables.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_item_label</span></code> allows to define how you can search the items cataloged by
 <em>FilesCatalog</em>. For example, if you have two files <code class="docutils literal notranslate"><span class="pre">MyTools\File.txt</span></code> and
 <code class="docutils literal notranslate"><span class="pre">MyDocs\File.txt</span></code>, both files would be searchable as <code class="docutils literal notranslate"><span class="pre">File.txt</span></code>, forcing
 to visually check at search time which item to choose out of the two. <br />
 As it is defined here, the label of the cataloged these two items will be
 <code class="docutils literal notranslate"><span class="pre">Things:</span> <span class="pre">MyTools\File.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">Things:</span> <span class="pre">MyDocs\File.txt</span></code>, allowing you to
-search your files also using their immediate parent name.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">filters</span></code> option is a very powerful tool to filter-out or filter-in the
+search your files also using their immediate parent name.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">filters</span></code> option is a very powerful tool to filter-out or filter-in the
 currently scanned files and folders, by checking its extension, its filesystem
 attributes, and so on… Regular expressions can also be used. For more info,
 read its dedicated inline documentation in <em>FilesCatalog</em> default
-configuration file.</li>
+configuration file.</p></li>
 </ul>
 </div>
 </div>
@@ -367,9 +361,7 @@ configuration file.</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -378,7 +370,7 @@ configuration file.</li>
         <a href="filezilla.html" class="btn btn-neutral float-right" title="5.10. FileZilla Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="filebrowser.html" class="btn btn-neutral" title="5.8. FileBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="filebrowser.html" class="btn btn-neutral float-left" title="5.8. FileBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -387,7 +379,7 @@ configuration file.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -403,36 +395,15 @@ configuration file.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

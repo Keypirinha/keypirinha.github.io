@@ -42,7 +42,7 @@ Plugin class
               start-time.
             * Since this method may be called several times during instance's
               lifetime, one-time initialization, if any, must always be done in
-              :py:meth:`on_init`.
+              :py:meth:`on_start`.
 
         .. seealso::
             See the :ref:`api-overview-loading` section for more information

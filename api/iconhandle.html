@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13.2. API Reference" href="reference.html"/>
-        <link rel="next" title="13.2.7. Plugin class" href="plugin.html"/>
-        <link rel="prev" title="13.2.5. CatalogItem class" href="catalogitem.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.2.7. Plugin class" href="plugin.html" />
+    <link rel="prev" title="13.2.5. CatalogItem class" href="catalogitem.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -144,7 +137,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -152,9 +145,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,57 +196,55 @@
 <h1>13.2.6. IconHandle class<a class="headerlink" href="#iconhandle-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="keypirinha.IconHandle">
-<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">IconHandle</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">IconHandle</code><span class="sig-paren">(</span><em class="sig-param">icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
 <dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_icon()</span></code></a> and
 by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_icon()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha.IconHandle.__bool__">
-<code class="descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__bool__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__bool__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicate whether this handle has been <a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal notranslate"><span class="pre">free()</span></code></a> or not.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.IconHandle.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha.IconHandle.__weakref__">
-<code class="descname">__weakref__</code><a class="headerlink" href="#keypirinha.IconHandle.__weakref__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#keypirinha.IconHandle.__weakref__" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of weak references to the object (if defined)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.IconHandle.free">
-<code class="descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.free" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.free" title="Permalink to this definition">¶</a></dt>
 <dd><p>Frees the icon associated with this handle.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A boolean value to indicate whether resources have actually
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A boolean value to indicate whether resources have actually
 been freed or not. This method may return <code class="docutils literal notranslate"><span class="pre">False</span></code> if it has been
 called already for this handle, or by an other
 <a class="reference internal" href="#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">IconHandle</span></code></a> object pointing to the same icon resource.
-You usually do not need to check the return value.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></td>
-</tr>
-</tbody>
-</table>
+You usually do not need to check the return value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></p>
+</dd>
+</dl>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This method must be called <strong>explicitly</strong>. It will <strong>not</strong> be called
+<p class="admonition-title">Warning</p>
+<p>This method must be called <strong>explicitly</strong>. It will <strong>not</strong> be called
 by the destructor of this object.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.IconHandle.is_init">
-<code class="descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified">Deprecated since version 2.9.6: </span>Use standard <a class="reference internal" href="#keypirinha.IconHandle.__bool__" title="keypirinha.IconHandle.__bool__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__bool__()</span></code></a> operator instead</p>
+<p><span class="versionmodified deprecated">Deprecated since version 2.9.6: </span>Use standard <a class="reference internal" href="#keypirinha.IconHandle.__bool__" title="keypirinha.IconHandle.__bool__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__bool__()</span></code></a> operator instead</p>
 </div>
 </dd></dl>
 
@@ -262,9 +254,7 @@ by the destructor of this object.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -273,7 +263,7 @@ by the destructor of this object.</p>
         <a href="plugin.html" class="btn btn-neutral float-right" title="13.2.7. Plugin class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="catalogitem.html" class="btn btn-neutral" title="13.2.5. CatalogItem class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="catalogitem.html" class="btn btn-neutral float-left" title="13.2.5. CatalogItem class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -282,7 +272,7 @@ by the destructor of this object.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -298,36 +288,15 @@ by the destructor of this object.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

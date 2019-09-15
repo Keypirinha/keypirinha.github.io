@@ -4,10 +4,19 @@ Bookmarks Package
 
 Available since version 2.1
 
-Launch Chrome, Firefox and Internet Explorer bookmarks.
+This plugin allows to search for and open bookmarks kept by the following web
+browsers and bookmarks managers:
 
-This plugin allows to search for and open bookmarks kept by the Chrome, Chrome
-Canary, Chromium, Firefox, Internet Explorer, Vivaldi and Iridium web browsers.
+* *Buku*
+* *Chrome*
+* *Chrome Canary*
+* *Chromium*
+* *Falkon* (formerly *QupZilla*)
+* *Firefox*
+* *Internet Explorer*
+* *Iridium*
+* *Vivaldi*
+
 
 .. image:: ../images/pack-bookmarks.png
     :align: center
@@ -19,7 +28,7 @@ Catalog Items
 This package populates the :term:`Catalog` with the following items:
 
 * Items prefixed with ``Bookmark:``. |br|
-  Note that this default prefix might be modified by your package's
+  Note that this default prefix might be modified via your package's
   configuration.
 
 

@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13.2. API Reference" href="reference.html"/>
-        <link rel="next" title="13.2.5. CatalogItem class" href="catalogitem.html"/>
-        <link rel="prev" title="13.2.3. keypirinha_net module" href="module-net.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.2.5. CatalogItem class" href="catalogitem.html" />
+    <link rel="prev" title="13.2.3. keypirinha_net module" href="module-net.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -144,7 +137,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -152,9 +145,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,55 +196,55 @@
 <h1>13.2.4. CatalogAction class<a class="headerlink" href="#catalogaction-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="keypirinha.CatalogAction">
-<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">CatalogAction</code><a class="headerlink" href="#keypirinha.CatalogAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">CatalogAction</code><a class="headerlink" href="#keypirinha.CatalogAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">CatalogAction</span></code> object <strong>must</strong> always be created with
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.create_action()</span></code>.</p>
 <dl class="method">
 <dt id="keypirinha.CatalogAction.valid">
-<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.valid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a boolean that indicates if the properties of this object are
 considered to be <em>valid</em> by the application.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.plugin_id">
-<code class="descname">plugin_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.plugin_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plugin_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.plugin_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>id</em> (int) of the parent plugin of this object.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha.CatalogAction.app_owned" title="keypirinha.CatalogAction.app_owned"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app_owned()</span></code></a> to check if the object belongs to the
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha.CatalogAction.app_owned" title="keypirinha.CatalogAction.app_owned"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app_owned()</span></code></a> to check if the object belongs to the
 application instead of a plugin.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.app_owned">
-<code class="descname">app_owned</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.app_owned" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app_owned</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.app_owned" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a boolean that indicates if this object has been created by the
 application itself instead of a plugin.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.name">
-<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>name</em> of this action.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.label">
-<code class="descname">label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.label" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>display name</em> of this action.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.short_desc">
-<code class="descname">short_desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.short_desc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">short_desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.short_desc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>short description</em> of this action.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.CatalogAction.data_bag">
-<code class="descname">data_bag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.data_bag" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">data_bag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.CatalogAction.data_bag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>data bag</em> (string) of this action.</p>
 </dd></dl>
 
@@ -260,9 +254,7 @@ application itself instead of a plugin.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -271,7 +263,7 @@ application itself instead of a plugin.</p>
         <a href="catalogitem.html" class="btn btn-neutral float-right" title="13.2.5. CatalogItem class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="module-net.html" class="btn btn-neutral" title="13.2.3. keypirinha_net module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="module-net.html" class="btn btn-neutral float-left" title="13.2.3. keypirinha_net module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -280,7 +272,7 @@ application itself instead of a plugin.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -296,36 +288,15 @@ application itself instead of a plugin.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

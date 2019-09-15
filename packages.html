@@ -19,42 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="13. Extending Keypirinha (API)" href="api.html"/>
-        <link rel="prev" title="11. Architecture" href="architecture.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. Extending Keypirinha (API)" href="api.html" />
+    <link rel="prev" title="11. Architecture" href="architecture.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +57,7 @@
 
           
             
-            <img src="_static/app-128.png" class="logo" />
+            <img src="_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -71,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -138,7 +132,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Keypirinha</a>
@@ -146,9 +140,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,22 +197,22 @@ archive with the <code class="file docutils literal notranslate"><span class="pr
 <p>There are four <a class="reference internal" href="glossary.html#term-repositories"><span class="xref std std-term">repositories</span></a> of packages. <strong>In order of descending
 priority:</strong></p>
 <ul class="simple">
-<li><a class="reference internal" href="#pack-live"><span class="std std-ref">Live Packages</span></a>: individual directories with loose files</li>
-<li><a class="reference internal" href="#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
-extension, downloaded and/or installed manually by the user.</li>
-<li><a class="reference internal" href="#pack-official"><span class="std std-ref">Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
-extension. Packages officially supported and shipped with the application.</li>
-<li><a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a>
-Hard-coded in the application.</li>
+<li><p><a class="reference internal" href="#pack-live"><span class="std std-ref">Live Packages</span></a>: individual directories with loose files</p></li>
+<li><p><a class="reference internal" href="#pack-installed"><span class="std std-ref">Installed Packages (Downloaded)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
+extension, downloaded and/or installed manually by the user.</p></li>
+<li><p><a class="reference internal" href="#pack-official"><span class="std std-ref">Official Packages (Shipped)</span></a>: Zip archives with the <code class="file docutils literal notranslate"><span class="pre">.keypirinha-package</span></code>
+extension. Packages officially supported and shipped with the application.</p></li>
+<li><p><a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a>
+Hard-coded in the application.</p></li>
 </ul>
 <p>Except for the <a class="reference internal" href="#pack-internal"><span class="std std-ref">Internal Package</span></a> type, the only difference between those
 Repositories is the way they are stored and their location.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p class="admonition-title">Important</p>
 <p>A Package content can span over multiple Repositories. This is convenient if
 you wish to modify an Installed or Official package like its source code for
 example, without having to alter the original files.</p>
-<p class="last">For that reason, there is an order of precedence when loading a Package and
+<p>For that reason, there is an order of precedence when loading a Package and
 if two files with the same name belong to the same Package, the file located
 in the Repository with the highest priority will override the others.</p>
 </div>
@@ -228,8 +223,8 @@ files. They are located under the <code class="file docutils literal notranslate
 <p>This is the place to start if you wish to create your own package or to modify
 an existing one.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Package naming is pretty strict and Keypirinha will <strong>silently</strong> ignore a
+<p class="admonition-title">Note</p>
+<p>Package naming is pretty strict and Keypirinha will <strong>silently</strong> ignore a
 Package if its name does not comply to the rules described in the
 <a class="reference internal" href="#pack-naming"><span class="std std-ref">Package Naming</span></a> section below.</p>
 </div>
@@ -269,62 +264,57 @@ behavior is unalterable. Any other type of <a class="reference internal" href="g
 <span id="pack-naming"></span><h2>12.2. Package Naming<a class="headerlink" href="#package-naming" title="Permalink to this headline">¶</a></h2>
 <p>Rules for package naming:</p>
 <ul>
-<li><p class="first">Name can contain alphanumeric characters (case insensitive) and the following
+<li><p>Name can contain alphanumeric characters (case insensitive) and the following
 characters: <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span></code>, <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">)</span></code>, <code class="docutils literal notranslate"><span class="pre">[</span></code>,
-<code class="docutils literal notranslate"><span class="pre">]</span></code>, <code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code></p>
-</li>
-<li><p class="first">Name must be at least 3 characters, up to 50</p>
-</li>
-<li><p class="first">Name must begin and end by an alphanumeric character</p>
-</li>
-<li><p class="first">Consecutives non-alphanumeric characters are not allowed.</p>
-</li>
-<li><p class="first">Name must not contain “Keypirinha”</p>
-</li>
-<li><p class="first">The following names are reserved:</p>
+<code class="docutils literal notranslate"><span class="pre">]</span></code>, <code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code></p></li>
+<li><p>Name must be at least 3 characters, up to 50</p></li>
+<li><p>Name must begin and end by an alphanumeric character</p></li>
+<li><p>Consecutives non-alphanumeric characters are not allowed.</p></li>
+<li><p>Name must not contain “Keypirinha”</p></li>
+<li><p>The following names are reserved:</p>
 <table class="hlist"><tr><td><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">all</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">app</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">application</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">builtin</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">builtins</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">cache</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">data</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">default</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">env</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">extern</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">external</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">hook</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">icon</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">application</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">builtin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">builtins</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cache</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extern</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">external</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hook</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icon</span></code></p></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">image</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">intern</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">internal</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">kpsdk</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">local</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">locale</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">main</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">name</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">nil</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">none</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">null</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">official</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">package</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intern</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">internal</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kpsdk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">local</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nil</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">none</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">official</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">package</span></code></p></li>
 </ul>
 </td><td><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">plugin</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">python</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">res</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">resource</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">sdk</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">temp</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">theme</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">tmp</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">type</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">script</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">user</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">var</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plugin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">res</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">script</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var</span></code></p></li>
 </ul>
 </td></tr></table>
 </li>
@@ -337,9 +327,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -348,7 +336,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
         <a href="api.html" class="btn btn-neutral float-right" title="13. Extending Keypirinha (API)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="architecture.html" class="btn btn-neutral" title="11. Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="architecture.html" class="btn btn-neutral float-left" title="11. Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -357,7 +345,7 @@ accordingly. Renaming can be done at runtime in this case.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -373,36 +361,15 @@ accordingly. Renaming can be done at runtime in this case.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

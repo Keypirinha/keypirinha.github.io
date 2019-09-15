@@ -43,6 +43,13 @@ Ditto
 `Ditto Clipboard Manager <http://ditto-cp.sourceforge.net>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Ditto>`_
 
+Epoch
+-----
+
+:ghu:`prayzzz`'s package to convert a ``epoch`` timestamp to various human
+readable formats |br|
+Source: `<https://github.com/prayzzz/keypirinha-epoch>`_
+
 FakerData
 ---------
 
@@ -110,6 +117,12 @@ Pinboard
 `Pinboard <http://pinboard.in>`_ |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-Pinboard>`_
 
+Ppl
+---
+
+:ghu:`DrorHarari`'s package to call and email people easily |br|
+Source: `<https://github.com/DrorHarari/keypirinha-ppl>`_
+
 RocketChat
 ----------
 :ghu:`malys`'s package for `RocketChat <https://rocket.chat>`_ |br|
@@ -147,6 +160,12 @@ SystemCommands
 like ``shutdown``, ``hibernate``, ``sleep``, ``restart``, ``lock``, ``logout``,
 ``trash``, ``emptytrash``, ... |br|
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
+
+Time
+----
+
+:ghu:`ueffel`'s package to convert and format datetime strings |br|
+Source: `<https://github.com/ueffel/Keypirinha-Time>`_
 
 Units
 -----

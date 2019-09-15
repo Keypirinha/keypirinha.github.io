@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13.2. API Reference" href="reference.html"/>
-        <link rel="next" title="13.2.3. keypirinha_net module" href="module-net.html"/>
-        <link rel="prev" title="13.2.1. keypirinha module" href="module.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.2.3. keypirinha_net module" href="module-net.html" />
+    <link rel="prev" title="13.2.1. keypirinha module" href="module.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -147,7 +140,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -155,9 +148,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -209,87 +203,87 @@ by the plugin developer.</p>
 <span id="reference"></span><h2>13.2.2.1. Reference<a class="headerlink" href="#module-keypirinha_util" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="keypirinha_util.FileAttr">
-<em class="property">class </em><code class="descclassname">keypirinha_util.</code><code class="descname">FileAttr</code><a class="headerlink" href="#keypirinha_util.FileAttr" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">FileAttr</code><a class="headerlink" href="#keypirinha_util.FileAttr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>File attribute flags returned by <a class="reference internal" href="#keypirinha_util.file_attributes" title="keypirinha_util.file_attributes"><code class="xref py py-func docutils literal notranslate"><span class="pre">file_attributes()</span></code></a>.</p>
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.COMPRESSED">
-<code class="descname">COMPRESSED</code><em class="property"> = 524288</em><a class="headerlink" href="#keypirinha_util.FileAttr.COMPRESSED" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">COMPRESSED</code><em class="property"> = 524288</em><a class="headerlink" href="#keypirinha_util.FileAttr.COMPRESSED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is compressed.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.DIR">
-<code class="descname">DIR</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.FileAttr.DIR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DIR</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.FileAttr.DIR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a directory.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.ENCRYPTED">
-<code class="descname">ENCRYPTED</code><em class="property"> = 1048576</em><a class="headerlink" href="#keypirinha_util.FileAttr.ENCRYPTED" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ENCRYPTED</code><em class="property"> = 1048576</em><a class="headerlink" href="#keypirinha_util.FileAttr.ENCRYPTED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is encrypted.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.EXE">
-<code class="descname">EXE</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">EXE</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.EXE_CONSOLE">
-<code class="descname">EXE_CONSOLE</code><em class="property"> = 32</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_CONSOLE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">EXE_CONSOLE</code><em class="property"> = 32</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_CONSOLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a> and <a class="reference internal" href="#keypirinha_util.FileAttr.EXE" title="keypirinha_util.FileAttr.EXE"><code class="xref py py-const docutils literal notranslate"><span class="pre">EXE</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.EXE_GUI">
-<code class="descname">EXE_GUI</code><em class="property"> = 64</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_GUI" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">EXE_GUI</code><em class="property"> = 64</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_GUI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a> and <a class="reference internal" href="#keypirinha_util.FileAttr.EXE" title="keypirinha_util.FileAttr.EXE"><code class="xref py py-const docutils literal notranslate"><span class="pre">EXE</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.FILE">
-<code class="descname">FILE</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.FileAttr.FILE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">FILE</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.FileAttr.FILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a regular file.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.HIDDEN">
-<code class="descname">HIDDEN</code><em class="property"> = 262144</em><a class="headerlink" href="#keypirinha_util.FileAttr.HIDDEN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">HIDDEN</code><em class="property"> = 262144</em><a class="headerlink" href="#keypirinha_util.FileAttr.HIDDEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is hidden.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.LINK">
-<code class="descname">LINK</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.FileAttr.LINK" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LINK</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.FileAttr.LINK" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a link file (<code class="docutils literal notranslate"><span class="pre">.lnk</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.READONLY">
-<code class="descname">READONLY</code><em class="property"> = 131072</em><a class="headerlink" href="#keypirinha_util.FileAttr.READONLY" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">READONLY</code><em class="property"> = 131072</em><a class="headerlink" href="#keypirinha_util.FileAttr.READONLY" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is read-only.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.REMOVABLE">
-<code class="descname">REMOVABLE</code><em class="property"> = 4194304</em><a class="headerlink" href="#keypirinha_util.FileAttr.REMOVABLE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">REMOVABLE</code><em class="property"> = 4194304</em><a class="headerlink" href="#keypirinha_util.FileAttr.REMOVABLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is a removable media <strong>or</strong> is stored on a removable media.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.SHARED">
-<code class="descname">SHARED</code><em class="property"> = 2097152</em><a class="headerlink" href="#keypirinha_util.FileAttr.SHARED" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">SHARED</code><em class="property"> = 2097152</em><a class="headerlink" href="#keypirinha_util.FileAttr.SHARED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is shared.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.FileAttr.UNKNOWN_TYPE">
-<code class="descname">UNKNOWN_TYPE</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.FileAttr.UNKNOWN_TYPE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">UNKNOWN_TYPE</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.FileAttr.UNKNOWN_TYPE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an existing item of an unknown type.
 This flag might be combined with other flags except <a class="reference internal" href="#keypirinha_util.FileAttr.DIR" title="keypirinha_util.FileAttr.DIR"><code class="xref py py-const docutils literal notranslate"><span class="pre">DIR</span></code></a>,
 <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a>, <a class="reference internal" href="#keypirinha_util.FileAttr.LINK" title="keypirinha_util.FileAttr.LINK"><code class="xref py py-const docutils literal notranslate"><span class="pre">LINK</span></code></a>, <a class="reference internal" href="#keypirinha_util.FileAttr.EXE" title="keypirinha_util.FileAttr.EXE"><code class="xref py py-const docutils literal notranslate"><span class="pre">EXE</span></code></a>,
@@ -300,42 +294,47 @@ This flag might be combined with other flags except <a class="reference internal
 
 <dl class="class">
 <dt id="keypirinha_util.ScanFlags">
-<em class="property">class </em><code class="descclassname">keypirinha_util.</code><code class="descname">ScanFlags</code><a class="headerlink" href="#keypirinha_util.ScanFlags" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">ScanFlags</code><a class="headerlink" href="#keypirinha_util.ScanFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <em>flags</em> to pass to <a class="reference internal" href="#keypirinha_util.scan_directory" title="keypirinha_util.scan_directory"><code class="xref py py-func docutils literal notranslate"><span class="pre">scan_directory()</span></code></a>.</p>
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.ABORT_ON_ERROR">
-<code class="descname">ABORT_ON_ERROR</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.ScanFlags.ABORT_ON_ERROR" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ABORT_ON_ERROR</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.ScanFlags.ABORT_ON_ERROR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abort if any error occurs while scanning a sub-folder</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.CASE_SENSITIVE">
-<code class="descname">CASE_SENSITIVE</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.ScanFlags.CASE_SENSITIVE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CASE_SENSITIVE</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.ScanFlags.CASE_SENSITIVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Case-sensitive scan (default is case-unsensitive)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.DEFAULT">
-<code class="descname">DEFAULT</code><em class="property"> = 3</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEFAULT</code><em class="property"> = 3</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combination of <code class="xref py py-const docutils literal notranslate"><span class="pre">SCAN_FILES</span></code> | <code class="xref py py-const docutils literal notranslate"><span class="pre">SCAN_DIRS</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.DIRS">
-<code class="descname">DIRS</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DIRS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DIRS</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DIRS" title="Permalink to this definition">¶</a></dt>
 <dd><p>List directories</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.FILES">
-<code class="descname">FILES</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.ScanFlags.FILES" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>List files (i.e.</em> – everything that is not a directory)</p>
+<code class="sig-name descname">FILES</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.ScanFlags.FILES" title="Permalink to this definition">¶</a></dt>
+<dd><p>everything that is not a directory)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List files (i.e.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="keypirinha_util.ScanFlags.HIDDEN">
-<code class="descname">HIDDEN</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.ScanFlags.HIDDEN" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">HIDDEN</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.ScanFlags.HIDDEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>List hidden files</p>
 </dd></dl>
 
@@ -343,142 +342,133 @@ This flag might be combined with other flags except <a class="reference internal
 
 <dl class="function">
 <dt id="keypirinha_util.browse_directory">
-<code class="descclassname">keypirinha_util.</code><code class="descname">browse_directory</code><span class="sig-paren">(</span><em>plugin</em>, <em>base_dir</em>, <em>check_base_dir=True</em>, <em>search_terms=''</em>, <em>store_score=False</em>, <em>show_dirs_first=True</em>, <em>show_hidden_files=False</em>, <em>show_system_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">browse_directory</code><span class="sig-paren">(</span><em class="sig-param">plugin</em>, <em class="sig-param">base_dir</em>, <em class="sig-param">check_base_dir=True</em>, <em class="sig-param">search_terms=''</em>, <em class="sig-param">store_score=False</em>, <em class="sig-param">show_dirs_first=True</em>, <em class="sig-param">show_hidden_files=False</em>, <em class="sig-param">show_system_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan the first level of a directory according to a search term (optional)
 and some filtering rules in order to get <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a>
 objects to feed <a class="reference internal" href="plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>plugin</strong> (<a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><em>keypirinha.Plugin</em></a>) – The parent plugin of the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plugin</strong> (<a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><em>keypirinha.Plugin</em></a>) – The parent plugin of the
 <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> objects to be created. It may be
-used to print error/warning messages as well.</li>
-<li><strong>base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path of the directory to browse.</li>
-<li><strong>check_base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Print an error message if the directory does not
+used to print error/warning messages as well.</p></li>
+<li><p><strong>base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path of the directory to browse.</p></li>
+<li><p><strong>check_base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Print an error message if the directory does not
 exist and returns an <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">keypirinha.ItemCategory.ERROR</span></code></a>
 <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> object in the result (the format
-of the returned <code class="docutils literal notranslate"><span class="pre">tuple</span></code> is unchanged).</li>
-<li><strong>search_terms</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – If not empty, it will be <em>fuzzy matched</em> against the
+of the returned <code class="docutils literal notranslate"><span class="pre">tuple</span></code> is unchanged).</p></li>
+<li><p><strong>search_terms</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – If not empty, it will be <em>fuzzy matched</em> against the
 name of each found item (see <a class="reference internal" href="#keypirinha_util.fuzzy_score" title="keypirinha_util.fuzzy_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">fuzzy_score()</span></code></a>). If the
 returned score is zero, the item is not included in the returned
 list. If the string is empty, items will be sorted by name using the
-<code class="docutils literal notranslate"><span class="pre">natsort</span></code> module.</li>
-<li><strong>store_score</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – If <em>search_terms</em> is not empty, the resulting score
+<code class="docutils literal notranslate"><span class="pre">natsort</span></code> module.</p></li>
+<li><p><strong>store_score</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – If <em>search_terms</em> is not empty, the resulting score
 of the call to <a class="reference internal" href="#keypirinha_util.fuzzy_score" title="keypirinha_util.fuzzy_score"><code class="xref py py-func docutils literal notranslate"><span class="pre">fuzzy_score()</span></code></a> will be stored in the
-<code class="docutils literal notranslate"><span class="pre">data_bag</span></code> property of every inserted result item.</li>
-<li><strong>show_dirs_first</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if directories should be pushed at
-the top of the resulting list.</li>
-<li><strong>show_hidden_files</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if hidden items should included.
-Note that a hidden item can also be system.</li>
-<li><strong>show_system_files</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if system items should included.
-Note that a system item can also be hidden.</li>
+<code class="docutils literal notranslate"><span class="pre">data_bag</span></code> property of every inserted result item.</p></li>
+<li><p><strong>show_dirs_first</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if directories should be pushed at
+the top of the resulting list.</p></li>
+<li><p><strong>show_hidden_files</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if hidden items should included.
+Note that a hidden item can also be system.</p></li>
+<li><p><strong>show_system_files</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Indicates if system items should included.
+Note that a system item can also be hidden.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A tuple of 3 elements <code class="docutils literal notranslate"><span class="pre">(items,</span> <span class="pre">match_method,</span> <span class="pre">sort_method)</span></code>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple of 3 elements <code class="docutils literal notranslate"><span class="pre">(items,</span> <span class="pre">match_method,</span> <span class="pre">sort_method)</span></code>
 where <em>items</em> is a list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> objects,
 <em>match_method</em> is a <a class="reference internal" href="module.html#keypirinha.Match" title="keypirinha.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Match</span></code></a> value and <em>sort_method</em>
 is a <a class="reference internal" href="module.html#keypirinha.Sort" title="keypirinha.Sort"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Sort</span></code></a> value.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#tuple" title="(in Python v3.6)">tuple</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#tuple" title="(in Python v3.6)">tuple</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.chardet_open">
-<code class="descclassname">keypirinha_util.</code><code class="descname">chardet_open</code><span class="sig-paren">(</span><em>file</em>, <em>mode='r'</em>, <em>buffering=-1</em>, <em>encoding=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_open" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_open</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">mode='r'</em>, <em class="sig-param">buffering=-1</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_open" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#open" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function that <strong>tries</strong> to detect text file’s encoding.</p>
 <p>This function has the same return value, behavior and parameters than the
 standard <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#open" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function except that <code class="docutils literal notranslate"><span class="pre">encoding</span></code> argument is
 ignored. It may raise the same exceptions as well.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>Automatic encoding detection is skipped if the <code class="docutils literal notranslate"><span class="pre">b</span></code> flag is specified
-in the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">chardet</span></code> module is used for the auto-detection.</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Automatic encoding detection is skipped if the <code class="docutils literal notranslate"><span class="pre">b</span></code> flag is specified
+in the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">chardet</span></code> module is used for the auto-detection.</p></li>
 </ul>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.chardet_slurp">
-<code class="descclassname">keypirinha_util.</code><code class="descname">chardet_slurp</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_slurp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_slurp</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_slurp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fully extract a text file into memory after having automatically detected
 its encoding.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.cmdline_quote">
-<code class="descclassname">keypirinha_util.</code><code class="descname">cmdline_quote</code><span class="sig-paren">(</span><em>arg_or_list</em>, <em>force_quote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_quote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_quote</code><span class="sig-paren">(</span><em class="sig-param">arg_or_list</em>, <em class="sig-param">force_quote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_quote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Joins and quotes arguments the Windows way.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>arg_or_list</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – The list of arguments (strings) to join and quote.
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg_or_list</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – The list of arguments (strings) to join and quote.
 This arguments can also be a string, in which case it is handled as
-if it was a list with a single element.</li>
-<li><strong>force_quote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Force every arguments, even those that normally
+if it was a list with a single element.</p></li>
+<li><p><strong>force_quote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Force every arguments, even those that normally
 would not require to be quoted (i.e.: the ones with no white space
-included).</li>
+included).</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The resulting string (command line) containing the quoted
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting string (command line) containing the quoted
 arguments.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – At least one of the passed arguments has an unsupported type.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><strong>TypeError</strong></a> – At least one of the passed arguments has an unsupported type.</p>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.cmdline_split" title="keypirinha_util.cmdline_split"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_split()</span></code></a> if you want to do the opposite (i.e.: to split
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.cmdline_split" title="keypirinha_util.cmdline_split"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_split()</span></code></a> if you want to do the opposite (i.e.: to split
 a command line).</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.cmdline_split">
-<code class="descclassname">keypirinha_util.</code><code class="descname">cmdline_split</code><span class="sig-paren">(</span><em>cmdline</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_split" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_split</code><span class="sig-paren">(</span><em class="sig-param">cmdline</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_split" title="Permalink to this definition">¶</a></dt>
 <dd><p>Splits and unquotes (the Windows way) the given command line (string).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The split command line, a list of strings containing every
-argument.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> – The underlying call to Win32’s <code class="docutils literal notranslate"><span class="pre">CommandLineToArgvW</span></code> function
-failed.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The split command line, a list of strings containing every
+argument.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><strong>OSError</strong></a> – The underlying call to Win32’s <code class="docutils literal notranslate"><span class="pre">CommandLineToArgvW</span></code> function
+    failed.</p>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> if you want to do the opposite (i.e.: to join
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> if you want to do the opposite (i.e.: to join
 and quote a list of arguments).</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.execute_default_action">
-<code class="descclassname">keypirinha_util.</code><code class="descname">execute_default_action</code><span class="sig-paren">(</span><em>plugin</em>, <em>catalog_item</em>, <em>catalog_action</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.execute_default_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">execute_default_action</code><span class="sig-paren">(</span><em class="sig-param">plugin</em>, <em class="sig-param">catalog_item</em>, <em class="sig-param">catalog_action</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.execute_default_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a default <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogAction</span></code></a> using a given
 <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> object. <em>plugin</em> is the calling
 <a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Plugin</span></code></a> object.</p>
@@ -486,7 +476,7 @@ and quote a list of arguments).</p>
 
 <dl class="function">
 <dt id="keypirinha_util.explore_file">
-<code class="descclassname">keypirinha_util.</code><code class="descname">explore_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.explore_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">explore_file</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.explore_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open file explorer at a given location (<em>file</em>, which may also be a folder).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">file_explorer</span></code> global setting is used if possible, otherwise Windows
 Explorer is invoked.</p>
@@ -496,105 +486,98 @@ with no particular location specified.</p>
 
 <dl class="function">
 <dt id="keypirinha_util.file_attributes">
-<code class="descclassname">keypirinha_util.</code><code class="descname">file_attributes</code><span class="sig-paren">(</span><em>file</em>, <em>follow_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.file_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">file_attributes</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">follow_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.file_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches and returns the attributes of a given <em>file</em>.</p>
 <p>If the <em>follow_link</em> argument is True and <em>file</em> is a link, the
 function will return the attributes of its target; even if the target is
 also a link file (i.e.: only one level of recursion).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Combination of attributes.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#keypirinha_util.FileAttr" title="keypirinha_util.FileAttr">FileAttr</a></td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a> – <em>file</em> is not found or not accessible. Or if the link
-could not be resolved (in case <em>follow_link</em> is True).</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Combination of attributes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#keypirinha_util.FileAttr" title="keypirinha_util.FileAttr">FileAttr</a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><strong>FileNotFoundError</strong></a> – <em>file</em> is not found or not accessible. Or if the link
+    could not be resolved (in case <em>follow_link</em> is True).</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.fuzzy_score">
-<code class="descclassname">keypirinha_util.</code><code class="descname">fuzzy_score</code><span class="sig-paren">(</span><em>search</em>, <em>against</em>, <em>apply_same_case_bonus=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.fuzzy_score" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">fuzzy_score</code><span class="sig-paren">(</span><em class="sig-param">search</em>, <em class="sig-param">against</em>, <em class="sig-param">apply_same_case_bonus=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.fuzzy_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the matching score of a <em>search</em> string <em>against</em> another one.</p>
 <p>If case matters, the <em>apply_same_case_bonus</em> argument can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>
 to apply a bonus on a matching characters that have the same case. You
 usually do not want this though since it might feel quite unnatural to the
 end-user.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The score is an unsigned integer. <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero) means no match, a
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The score is an unsigned integer. <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero) means no match, a
 value greater than zero means a match. The higher the score, the better
-the match is.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></td>
-</tr>
-</tbody>
-</table>
+the match is.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.get_clipboard">
-<code class="descclassname">keypirinha_util.</code><code class="descname">get_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.get_clipboard" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">get_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.get_clipboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a string containing system’s clipboard only if it contains text.</p>
 <p>An empty string is returned otherwise.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.set_clipboard" title="keypirinha_util.set_clipboard"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_clipboard()</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.set_clipboard" title="keypirinha_util.set_clipboard"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_clipboard()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.kwargs_decode">
-<code class="descclassname">keypirinha_util.</code><code class="descname">kwargs_decode</code><span class="sig-paren">(</span><em>encoded_string</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_decode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_decode</code><span class="sig-paren">(</span><em class="sig-param">encoded_string</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_decode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decodes a string encoded by <a class="reference internal" href="#keypirinha_util.kwargs_encode" title="keypirinha_util.kwargs_encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_encode()</span></code></a> and returns a
 dictionary.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.kwargs_encode" title="keypirinha_util.kwargs_encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_encode()</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.kwargs_encode" title="keypirinha_util.kwargs_encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_encode()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.kwargs_encode">
-<code class="descclassname">keypirinha_util.</code><code class="descname">kwargs_encode</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_encode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_encode</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_encode" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL encodes passed keyword arguments into an escaped string that can be used
 as a <em>target</em> property for a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> object.</p>
 <p>Only basic types are allowed: <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">str</span></code>.
 <strong>Hint:</strong> use the unpack operator to pass a dictionary like in:
 <code class="docutils literal notranslate"><span class="pre">kwargs_encode(**mydict)</span></code></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The encoded string that can be decoded by <a class="reference internal" href="#keypirinha_util.kwargs_decode" title="keypirinha_util.kwargs_decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_decode()</span></code></a>.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – The type of a passed value is invalid.</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#UnicodeEncodeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnicodeEncodeError</span></code></a> – <a class="reference external" href="https://docs.python.org/3.6/library/urllib.parse.html#urllib.parse.quote_plus" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.parse.quote_plus()</span></code></a> failed.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded string that can be decoded by <a class="reference internal" href="#keypirinha_util.kwargs_decode" title="keypirinha_util.kwargs_decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_decode()</span></code></a>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><strong>TypeError</strong></a> – The type of a passed value is invalid.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#UnicodeEncodeError" title="(in Python v3.6)"><strong>UnicodeEncodeError</strong></a> – <a class="reference external" href="https://docs.python.org/3.6/library/urllib.parse.html#urllib.parse.quote_plus" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.parse.quote_plus()</span></code></a> failed.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.kwargs_decode" title="keypirinha_util.kwargs_decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_decode()</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.kwargs_decode" title="keypirinha_util.kwargs_decode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_decode()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.raise_winerror">
-<code class="descclassname">keypirinha_util.</code><code class="descname">raise_winerror</code><span class="sig-paren">(</span><em>winerr=None</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">raise_winerror</code><span class="sig-paren">(</span><em class="sig-param">winerr=None</em>, <em class="sig-param">msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raises <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> (formerly <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#WindowsError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">WindowsError</span></code></a>) using the given
 Windows Error number. If the error number is not given,
 <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a> is called.</p>
@@ -604,15 +587,15 @@ Windows Error number. If the error number is not given,
 
 <dl class="function">
 <dt id="keypirinha_util.read_link">
-<code class="descclassname">keypirinha_util.</code><code class="descname">read_link</code><span class="sig-paren">(</span><em>link_file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.read_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">read_link</code><span class="sig-paren">(</span><em class="sig-param">link_file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.read_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the properties of a Shell Link File (<code class="docutils literal notranslate"><span class="pre">.lnk</span></code>).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>link_file</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path of the <code class="docutils literal notranslate"><span class="pre">.lnk</span></code> file.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dict containing the properties:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="s2">&quot;The resolved target file; path is already expanded&quot;</span><span class="p">,</span>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>link_file</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path of the <code class="docutils literal notranslate"><span class="pre">.lnk</span></code> file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A dict containing the properties:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="s2">&quot;The resolved target file; path is already expanded&quot;</span><span class="p">,</span>
     <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="s2">&quot;Target&#39;s parameters (may be None)&quot;</span><span class="p">,</span>
     <span class="s1">&#39;expanded_params_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;split&quot;</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="s2">&quot;expanded &#39;params&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;or empty list&quot;</span><span class="p">],</span>
     <span class="s1">&#39;working_dir&#39;</span><span class="p">:</span> <span class="s2">&quot;Working directory (may be None)&quot;</span><span class="p">,</span>
@@ -624,56 +607,55 @@ Windows Error number. If the error number is not given,
     <span class="s1">&#39;is_msi&#39;</span><span class="p">:</span> <span class="s2">&quot;A boolean flag equivalent to the (flags &amp; SLDF_HAS_DARWINID) test&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)">dict</a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#IOError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IOError</span></code></a> – The file could not be read or is not a link.</td>
-</tr>
-</tbody>
-</table>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)">dict</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#IOError" title="(in Python v3.6)"><strong>IOError</strong></a> – The file could not be read or is not a link.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.scan_directory">
-<code class="descclassname">keypirinha_util.</code><code class="descname">scan_directory</code><span class="sig-paren">(</span><em>base_dir</em>, <em>name_patterns='*'</em>, <em>flags=&lt;ScanFlags.DEFAULT: 3&gt;</em>, <em>max_level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.scan_directory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">scan_directory</code><span class="sig-paren">(</span><em class="sig-param">base_dir</em>, <em class="sig-param">name_patterns='*'</em>, <em class="sig-param">flags=&lt;ScanFlags.DEFAULT: 3&gt;</em>, <em class="sig-param">max_level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.scan_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Walks a directory and builds a list of relative paths.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<ul class="last simple">
-<li>This function is only kept to maintain backward compatibility. It is
-recommended to use <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> instead.</li>
-<li>This function has been developed as a fast alternative to
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>This function is only kept to maintain backward compatibility. It is
+recommended to use <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> instead.</p></li>
+<li><p>This function has been developed as a fast alternative to
 <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.walk" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.walk()</span></code></a>. However since then, <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a> has been
-implemented and offers a more Pythonic way to scan a directory.</li>
+implemented and offers a more Pythonic way to scan a directory.</p></li>
 </ul>
 </div>
 <p>This function offers an alternative to <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.walk" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.walk()</span></code></a> or the more recent
 <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a>, that has the ability to filter the elements to find
 by name and/or by type, and to define how deep the scan has to be done.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path to the directory to scan.</li>
-<li><strong>name_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – Allows to apply one (a string can be passed) or
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The path to the directory to scan.</p></li>
+<li><p><strong>name_patterns</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – Allows to apply one (a string can be passed) or
 several filters to the <strong>name</strong> of the found elements. Allowed
 wildcards are <code class="docutils literal notranslate"><span class="pre">*</span></code> (zero or several unknown characters) and <code class="docutils literal notranslate"><span class="pre">?</span></code>
 (any character). If you only want to apply one filter, you may pass
-a string. Typical example: <code class="docutils literal notranslate"><span class="pre">*.txt</span></code> to list all the <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files.</li>
-<li><strong>flags</strong> (<a class="reference internal" href="#keypirinha_util.ScanFlags" title="keypirinha_util.ScanFlags"><em>ScanFlags</em></a>) – One or a combination of flags to control scan’s
-behavior.</li>
-<li><strong>max_level</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – Specifies how deep the scan should be. <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero)
+a string. Typical example: <code class="docutils literal notranslate"><span class="pre">*.txt</span></code> to list all the <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files.</p></li>
+<li><p><strong>flags</strong> (<a class="reference internal" href="#keypirinha_util.ScanFlags" title="keypirinha_util.ScanFlags"><em>ScanFlags</em></a>) – One or a combination of flags to control scan’s
+behavior.</p></li>
+<li><p><strong>max_level</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – Specifies how deep the scan should be. <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero)
 means only the immediate content of the specified <em>base_dir</em> will be
 returned. A <em>max_level</em> of <code class="docutils literal notranslate"><span class="pre">1</span></code> will also include the immediate
 content of its sub-directories, and so on… Specify a value of
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> to walk the tree completely. The maximum theorical value is
-<code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code>. A negative value equals <code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code>.</li>
+<code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code>. A negative value equals <code class="docutils literal notranslate"><span class="pre">0xffffffff</span></code>.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>The paths (strings) of found files and/or directories. Paths are
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>The paths (strings) of found files and/or directories. Paths are
 relative to <em>base_dir</em>. The full path of an element can be build that
 way:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root_dir</span> <span class="o">=</span> <span class="s2">&quot;c:/dir&quot;</span>
@@ -683,155 +665,145 @@ way:</p>
 </pre></div>
 </div>
 </p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> – something went wrong while trying to open the specified
-<em>base_dir</em> or during the scan.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><strong>OSError</strong></a> – something went wrong while trying to open the specified
+    <em>base_dir</em> or during the scan.</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Win32’s <code class="docutils literal notranslate"><span class="pre">FindFirstFile</span></code> is used internally.</p>
+<p class="admonition-title">Note</p>
+<p>Win32’s <code class="docutils literal notranslate"><span class="pre">FindFirstFile</span></code> is used internally.</p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified">Deprecated since version This: </span>function is deprecated in favor of <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a>. It is
+<p><span class="versionmodified deprecated">Deprecated since version This: </span>function is deprecated in favor of <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.scandir" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.scandir()</span></code></a>. It is
 kept here only to maintain backward compatibility.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.set_clipboard">
-<code class="descclassname">keypirinha_util.</code><code class="descname">set_clipboard</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.set_clipboard" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">set_clipboard</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.set_clipboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the content of system’s clipboard.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.get_clipboard" title="keypirinha_util.get_clipboard"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_clipboard()</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.get_clipboard" title="keypirinha_util.get_clipboard"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_clipboard()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.shell_execute">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_execute</code><span class="sig-paren">(</span><em>thing</em>, <em>args=''</em>, <em>working_dir=''</em>, <em>verb=''</em>, <em>try_runas=True</em>, <em>detect_nongui=True</em>, <em>api_flags=None</em>, <em>terminal_cmd=None</em>, <em>show=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_execute</code><span class="sig-paren">(</span><em class="sig-param">thing</em>, <em class="sig-param">args=''</em>, <em class="sig-param">working_dir=''</em>, <em class="sig-param">verb=''</em>, <em class="sig-param">try_runas=True</em>, <em class="sig-param">detect_nongui=True</em>, <em class="sig-param">api_flags=None</em>, <em class="sig-param">terminal_cmd=None</em>, <em class="sig-param">show=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes, opens, edits (or whatever) an application, a file, a directory, by
 calling Win32’s <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> function.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>thing</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The <em>thing</em> to execute/launch/edit/whatever. It can be a
-file, a directory, or anything recognized by <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code>.</li>
-<li><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The <strong>quoted</strong> arguments (optional). Note that a
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thing</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The <em>thing</em> to execute/launch/edit/whatever. It can be a
+file, a directory, or anything recognized by <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code>.</p></li>
+<li><p><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The <strong>quoted</strong> arguments (optional). Note that a
 <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> of arguments (strings) can be given in which case
-<a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</li>
-<li><strong>working_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The directory to execute from. This value can be
-empty, in which case this function tries to automatically detect it.</li>
-<li><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – Specifies the action to be performed and is passed as-is to
+<a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</p></li>
+<li><p><strong>working_dir</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The directory to execute from. This value can be
+empty, in which case this function tries to automatically detect it.</p></li>
+<li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – Specifies the action to be performed and is passed as-is to
 <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code>. This value can be empty to request default
 action associated with the given <em>thing</em>. Here is the list of the
 common verbs from the Microsoft’s documentation: <code class="docutils literal notranslate"><span class="pre">open</span></code>, <code class="docutils literal notranslate"><span class="pre">edit</span></code>,
 <code class="docutils literal notranslate"><span class="pre">explore</span></code>, <code class="docutils literal notranslate"><span class="pre">find</span></code>, <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">properties</span></code>.
-Note that all <em>verb</em> are not available with all kind of <em>thing</em>.</li>
-<li><strong>try_runas</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Automatically try to run with elevated permissions if
+Note that all <em>verb</em> are not available with all kind of <em>thing</em>.</p></li>
+<li><p><strong>try_runas</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Automatically try to run with elevated permissions if
 the first call to <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> failed with <code class="docutils literal notranslate"><span class="pre">ACCESS_DENIED</span></code>
-error.</li>
-<li><strong>detect_nongui</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Automatically detect if <em>thing</em> is a console
+error.</p></li>
+<li><p><strong>detect_nongui</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Automatically detect if <em>thing</em> is a console
 application (or a link pointing to a console application). In that
 case, the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> setting of the <code class="docutils literal notranslate"><span class="pre">external</span></code> section defined
 in the application’s configuration file will be used to launch
-<em>thing</em>.</li>
-<li><strong>api_flags</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – If specified, those flags will be forwarded to
+<em>thing</em>.</p></li>
+<li><p><strong>api_flags</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – If specified, those flags will be forwarded to
 <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code>. The <code class="docutils literal notranslate"><span class="pre">SEE_MASK_NOASYNC</span></code> (<code class="docutils literal notranslate"><span class="pre">0x100</span></code>),
 <code class="docutils literal notranslate"><span class="pre">SEE_MASK_FLAG_NO_UI</span></code> (<code class="docutils literal notranslate"><span class="pre">0x400</span></code>) and <code class="docutils literal notranslate"><span class="pre">SEE_MASK_INVOKEIDLIST</span></code>
 (<code class="docutils literal notranslate"><span class="pre">0xC</span></code>) flags are passed if this argument is <code class="docutils literal notranslate"><span class="pre">None</span></code>.
-See <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> documentation from Microsoft for more info.</li>
-<li><strong>terminal_cmd</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – If <em>detect_nongui</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this value allows to
+See <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> documentation from Microsoft for more info.</p></li>
+<li><p><strong>terminal_cmd</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – If <em>detect_nongui</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this value allows to
 force the console emulator to use, instead of reading the
 <code class="docutils literal notranslate"><span class="pre">terminal</span></code> setting of the <code class="docutils literal notranslate"><span class="pre">external</span></code> section defined in the
 application’s configuration file. Note that, like for the <em>args</em>
 parameter, a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> of arguments (strings) can be given in
-which case <a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</li>
-<li><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – Value directly forwarded to the <code class="docutils literal notranslate"><span class="pre">nShow</span></code> parameter of
+which case <a class="reference internal" href="#keypirinha_util.cmdline_quote" title="keypirinha_util.cmdline_quote"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_quote()</span></code></a> is implicitely called.</p></li>
+<li><p><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><em>int</em></a>) – Value directly forwarded to the <code class="docutils literal notranslate"><span class="pre">nShow</span></code> parameter of
 <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code>. It must be one of the <code class="docutils literal notranslate"><span class="pre">SW_</span></code> constants. If this
 value is less than zero, default will be applied (currently
-<code class="docutils literal notranslate"><span class="pre">SW_SHOWNORMAL</span></code>).</li>
+<code class="docutils literal notranslate"><span class="pre">SW_SHOWNORMAL</span></code>).</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a> – The <em>thing</em> was not found.</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> – Specified <em>thing</em> is a link that could not be read. Or
-<code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> failed with the given thing and arguments. Or an
-unexpected/unknown error occurred internally.</li>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#FileNotFoundError" title="(in Python v3.6)"><strong>FileNotFoundError</strong></a> – The <em>thing</em> was not found.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><strong>OSError</strong></a> – Specified <em>thing</em> is a link that could not be read. Or
+    <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> failed with the given thing and arguments. Or an
+    unexpected/unknown error occurred internally.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">It is highly recommended to use this function instead of the standard
+<p class="admonition-title">Warning</p>
+<p>It is highly recommended to use this function instead of the standard
 <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.startfile" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.startfile()</span></code></a> because the later internally calls the
 <code class="docutils literal notranslate"><span class="pre">ShellExecute</span></code> system function, which is obsolete, known to be bugged
 and behaves incorrectly in some cases.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>A successful call does not necessarily mean the item has effectively
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>A successful call does not necessarily mean the item has effectively
 been launched/executed as expected, or that the launched process ended
-successfully.</li>
-<li>This function tries to resolve shell links for the <em>thing</em> and the
+successfully.</p></li>
+<li><p>This function tries to resolve shell links for the <em>thing</em> and the
 <em>terminal_cmd</em> arguments. Which also mean shortucts’ arguments will be
-prepended, if any, to the final list of arguments.</li>
+prepended, if any, to the final list of arguments.</p></li>
 </ul>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.web_browser_command" title="keypirinha_util.web_browser_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">web_browser_command()</span></code></a>, which is the preferred function to open
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.web_browser_command" title="keypirinha_util.web_browser_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">web_browser_command()</span></code></a>, which is the preferred function to open
 a URL since it takes care of applying user’s preferences.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.shell_known_folder_path">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_known_folder_path</code><span class="sig-paren">(</span><em>guid</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_known_folder_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_known_folder_path</code><span class="sig-paren">(</span><em class="sig-param">guid</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_known_folder_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the path of a Shell Known Folder according to its GUID.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>guid</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The GUID of the desired Known Folder. Format must be:
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>guid</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The GUID of the desired Known Folder. Format must be:
 <code class="docutils literal notranslate"><span class="pre">{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}</span></code> (case-insensitive; the
 curly braces can be omited). The list of Known Folders is available
 on <a class="reference external" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457.aspx">MSDN</a>.
 Note that not all Known Folders are available on every platforms.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – The specified GUID is invalid (type, format or value). Or
-this Known Folder is not available on this platform. Or the
-specified Known Folder is virtual.</li>
-<li><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> – The Known Folder is virtual, or not available on this platform.</li>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><strong>ValueError</strong></a> – The specified GUID is invalid (type, format or value). Or
+    this Known Folder is not available on this platform. Or the
+    specified Known Folder is virtual.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><strong>OSError</strong></a> – The Known Folder is virtual, or not available on this platform.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Internally calls Win32’s <code class="docutils literal notranslate"><span class="pre">SHGetKnownFolderPath</span></code>.</p>
+<p class="admonition-title">Note</p>
+<p>Internally calls Win32’s <code class="docutils literal notranslate"><span class="pre">SHGetKnownFolderPath</span></code>.</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.shell_resolve_exe_path">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_resolve_exe_path</code><span class="sig-paren">(</span><em>path_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_resolve_exe_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_resolve_exe_path</code><span class="sig-paren">(</span><em class="sig-param">path_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_resolve_exe_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tries to resolve <em>path_or_name</em> using environment <code class="docutils literal notranslate"><span class="pre">PATH</span></code> and <code class="docutils literal notranslate"><span class="pre">PATHEXT</span></code>
 variables.</p>
 <p><em>path_or_name</em> can be a path or just the name of the executable to
@@ -842,135 +814,125 @@ directories listed in the <code class="docutils literal notranslate"><span class
 
 <dl class="function">
 <dt id="keypirinha_util.shell_string_resource">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_string_resource</code><span class="sig-paren">(</span><em>resource_location</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_string_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_string_resource</code><span class="sig-paren">(</span><em class="sig-param">resource_location</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_string_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the content of a string resource from an external module (DLL)
 according to its location. Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if an error occurred.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource_location</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The location of the desired string. The
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resource_location</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The location of the desired string. The
 expected format is normally “&#64;&lt;PE-path&gt;,-&lt;stringID&gt;” but the
 underlying function tries to be as flexible as possible since a lot
 of applications and shell extensions do not strictly comply to
-Microsoft’s rules.</td>
-</tr>
-</tbody>
-</table>
+Microsoft’s rules.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.shell_url_scheme_to_command">
-<code class="descclassname">keypirinha_util.</code><code class="descname">shell_url_scheme_to_command</code><span class="sig-paren">(</span><em>url_scheme</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_url_scheme_to_command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_url_scheme_to_command</code><span class="sig-paren">(</span><em class="sig-param">url_scheme</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_url_scheme_to_command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get system’s default command line associated with the given URL scheme(s);
 and the location of its default icon.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url_scheme</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The URL scheme name (e.g. “http”, “ftp”, “mailto”,
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url_scheme</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The URL scheme name (e.g. “http”, “ftp”, “mailto”,
 “skype”, …).
 This argument <strong>can also be an iterable</strong> of URL schemes, in which
 case this function iterates over the given schemes until it finds a
-valid associated command line.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The command line associated with the scheme and the shell
-location string of class’ default icon.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#tuple" title="(in Python v3.6)">tuple</a></td>
-</tr>
-</tbody>
-</table>
+valid associated command line.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The command line associated with the scheme and the shell
+location string of class’ default icon.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#tuple" title="(in Python v3.6)">tuple</a></p>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#keypirinha_util.cmdline_split" title="keypirinha_util.cmdline_split"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_split()</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#keypirinha_util.cmdline_split" title="keypirinha_util.cmdline_split"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmdline_split()</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.slurp_text_file">
-<code class="descclassname">keypirinha_util.</code><code class="descname">slurp_text_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.slurp_text_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">slurp_text_file</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.slurp_text_file" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
-<p><span class="versionmodified">Deprecated since version 2.5.3: </span>Use <a class="reference internal" href="#keypirinha_util.chardet_slurp" title="keypirinha_util.chardet_slurp"><code class="xref py py-func docutils literal notranslate"><span class="pre">chardet_slurp()</span></code></a> instead</p>
+<p><span class="versionmodified deprecated">Deprecated since version 2.5.3: </span>Use <a class="reference internal" href="#keypirinha_util.chardet_slurp" title="keypirinha_util.chardet_slurp"><code class="xref py py-func docutils literal notranslate"><span class="pre">chardet_slurp()</span></code></a> instead</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_util.web_browser_command">
-<code class="descclassname">keypirinha_util.</code><code class="descname">web_browser_command</code><span class="sig-paren">(</span><em>private_mode=None</em>, <em>new_window=None</em>, <em>url=None</em>, <em>execute=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.web_browser_command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">web_browser_command</code><span class="sig-paren">(</span><em class="sig-param">private_mode=None</em>, <em class="sig-param">new_window=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">execute=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.web_browser_command" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Swiss Knife function to deal with the web browser setup in Keypirinha’s
 global configuration (see the <code class="docutils literal notranslate"><span class="pre">web_browser</span></code> setting in the <code class="docutils literal notranslate"><span class="pre">[external]</span></code>
 section), or by default, with the system’s default web browser.</p>
 <p>This function allows to:</p>
 <ul class="simple">
-<li>Open the given URL</li>
-<li>Get the split command line to execute the web browser, including the given
-URL</li>
-<li>Get the split command line to execute the web browser, including a
-placeholder element to indicate where to insert the URL to open</li>
+<li><p>Open the given URL</p></li>
+<li><p>Get the split command line to execute the web browser, including the given
+URL</p></li>
+<li><p>Get the split command line to execute the web browser, including a
+placeholder element to indicate where to insert the URL to open</p></li>
 </ul>
 <p>All the above cases take the <em>private_mode</em> and <em>new_window</em> arguments into
 account. The execution flow of this function depends on the <em>url</em> and
 <em>execute</em> arguments only.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>private_mode</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Hint the browser you want to launch it in Private
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>private_mode</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Hint the browser you want to launch it in Private
 (or Incognito) mode. By default (i.e. <code class="docutils literal notranslate"><span class="pre">None</span></code>), this function will
 get user’s configuration, or will fall back to browser’s default
 behavior. Specifying a boolean value (other than <code class="docutils literal notranslate"><span class="pre">None</span></code>), will
-override user’s configuration.</li>
-<li><strong>new_window</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Hint the browser you want to launch a new window. By
+override user’s configuration.</p></li>
+<li><p><strong>new_window</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Hint the browser you want to launch a new window. By
 default (i.e. <code class="docutils literal notranslate"><span class="pre">None</span></code>), this function will get user’s
 configuration, or will fall back to browser’s default behavior.
 Specifying a boolean value (other than <code class="docutils literal notranslate"><span class="pre">None</span></code>), will override
-user’s configuration.</li>
-<li><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – <p>If specified, the given URL(s) will be inserted at the right
+user’s configuration.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – <p>If specified, the given URL(s) will be inserted at the right
 place in the command line so the caller does not have to do it
 manually. This is convenient since, while being uncommon, the URL(s)
 might have to be inserted in the command line instead of just being
 appended.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last"><em>url</em> can also be an iterable of strings in case several URLs
+<p class="admonition-title">Tip</p>
+<p><em>url</em> can also be an iterable of strings in case several URLs
 are to be launched, in which case, they will be opened together
 if possible (i.e. using the same command line).</p>
 </div>
-</li>
-<li><strong>execute</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Only taken into account if a <em>url</em> is specified. If this
+</p></li>
+<li><p><strong>execute</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Only taken into account if a <em>url</em> is specified. If this
 argument is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the given <em>url</em> will be opened using
 <a class="reference internal" href="#keypirinha_util.shell_execute" title="keypirinha_util.shell_execute"><code class="xref py py-func docutils literal notranslate"><span class="pre">shell_execute()</span></code></a> and taking the <em>private_mode</em> and
 <em>new_window</em> arguments into account if possible. The return value is
 then a boolean, indicating whether or not the URL has been launched
-successfully.</li>
+successfully.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
-<dt>list</dt>
-<dd><p class="first last">If <em>execute</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, returns a list of arguments that
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>list</dt><dd><p>If <em>execute</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, returns a list of arguments that
 represent the command line to execute in order to launch the web web
 browser. In that case, <em>url</em> can be specified so the returned
 command line arguments list is ready to use. Otherwise, the returned
 list will contain a placeholder (<code class="docutils literal notranslate"><span class="pre">%1</span></code>) to indicate where to insert
 the URL to open. Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if no browser could be found.</p>
 </dd>
-<dt>bool</dt>
-<dd><p class="first last">If <em>execute</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> and a <em>url</em> is specified, this function
+<dt>bool</dt><dd><p>If <em>execute</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> and a <em>url</em> is specified, this function
 will try to open the URL and returns a boolean to indicate whether
 or not the launch request is successful.</p>
 </dd>
 </dl>
 </p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> – The given <em>url</em> argument is invalid.</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#TypeError" title="(in Python v3.6)"><strong>TypeError</strong></a> – The given <em>url</em> argument is invalid.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -978,9 +940,7 @@ or not the launch request is successful.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -989,7 +949,7 @@ or not the launch request is successful.</p>
         <a href="module-net.html" class="btn btn-neutral float-right" title="13.2.3. keypirinha_net module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="module.html" class="btn btn-neutral" title="13.2.1. keypirinha module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="module.html" class="btn btn-neutral float-left" title="13.2.1. keypirinha module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -998,7 +958,7 @@ or not the launch request is successful.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -1014,36 +974,15 @@ or not the launch request is successful.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13. Extending Keypirinha (API)" href="../api.html"/>
-        <link rel="next" title="13.2. API Reference" href="reference.html"/>
-        <link rel="prev" title="13. Extending Keypirinha (API)" href="../api.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.2. API Reference" href="reference.html" />
+    <link rel="prev" title="13. Extending Keypirinha (API)" href="../api.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -145,7 +138,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -153,9 +146,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -249,8 +243,8 @@ to the Plugins a very cheap API call
 <a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a>, that allows Plugins to
 <strong>frequently</strong> check if they should stop any work and leave the current call.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">It is up to the plugin developer to call the
+<p class="admonition-title">Warning</p>
+<p>It is up to the plugin developer to call the
 <a class="reference internal" href="plugin.html#keypirinha.Plugin.should_terminate" title="keypirinha.Plugin.should_terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.should_terminate()</span></code></a> method <strong>as frequently as
 possible</strong> to check if the current call should be interrupted immediately.
 Especially at <strong>I/O boundaries</strong> like file operation, directories scanning,
@@ -271,8 +265,8 @@ essentially used to ensure plugins are not messing up the <a class="reference in
 as well as its plugins. When any change is detected in one or several of its
 files, the package is reloaded and its InstanceID is incremented.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">By extension, every <a class="reference internal" href="../glossary.html#term-plugin"><span class="xref std std-term">plugin</span></a> of a package receives the InstanceID of
+<p class="admonition-title">Note</p>
+<p>By extension, every <a class="reference internal" href="../glossary.html#term-plugin"><span class="xref std std-term">plugin</span></a> of a package receives the InstanceID of
 its parent package when it is loaded or reloaded.</p>
 </div>
 </div>
@@ -307,24 +301,22 @@ packages.</p>
 <code class="file docutils literal notranslate"><span class="pre">default\Packages\*.keypirinha-package</span></code>.</p>
 <p>In particular:</p>
 <ul class="simple">
-<li>the <code class="docutils literal notranslate"><span class="pre">Apps</span></code> package shows how to use Keypirinha’s API to scan directories and
-files.</li>
-<li>the <code class="docutils literal notranslate"><span class="pre">TaskSwitcher</span></code> and <code class="docutils literal notranslate"><span class="pre">Winamp</span></code> packages interact with the Win32 API via
-the <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#module-ctypes" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> Python standard module.</li>
-<li>the <code class="docutils literal notranslate"><span class="pre">ControlPanel</span></code> and <code class="docutils literal notranslate"><span class="pre">PuTTY</span></code> packages show how to dig into system’s
-Registry using the <a class="reference external" href="https://docs.python.org/3.6/library/winreg.html#module-winreg" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code></a> Python standard module.</li>
-<li>the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> package imports a third-party bundled Python module.</li>
-<li>the <code class="docutils literal notranslate"><span class="pre">GoogleTranslate</span></code> package does online HTTP requests to a web-service.</li>
-<li>the <code class="docutils literal notranslate"><span class="pre">URL</span></code> package extract an embedded resource file and parse it.</li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">Apps</span></code> package shows how to use Keypirinha’s API to scan directories and
+files.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">TaskSwitcher</span></code> and <code class="docutils literal notranslate"><span class="pre">Winamp</span></code> packages interact with the Win32 API via
+the <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#module-ctypes" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> Python standard module.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">ControlPanel</span></code> and <code class="docutils literal notranslate"><span class="pre">PuTTY</span></code> packages show how to dig into system’s
+Registry using the <a class="reference external" href="https://docs.python.org/3.6/library/winreg.html#module-winreg" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code></a> Python standard module.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> package imports a third-party bundled Python module.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">GoogleTranslate</span></code> package does online HTTP requests to a web-service.</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">URL</span></code> package extract an embedded resource file and parse it.</p></li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -333,7 +325,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
         <a href="reference.html" class="btn btn-neutral float-right" title="13.2. API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../api.html" class="btn btn-neutral" title="13. Extending Keypirinha (API)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../api.html" class="btn btn-neutral float-left" title="13. Extending Keypirinha (API)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -342,7 +334,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -358,36 +350,15 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

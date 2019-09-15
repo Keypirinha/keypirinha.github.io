@@ -136,3 +136,13 @@ ClearLight
 
 .. image:: https://cloud.githubusercontent.com/assets/1184237/25208031/55dddefe-2572-11e7-86f3-bddbf2dbb0e4.png
     :align: center
+
+
+DarkSpotlight
+-------------
+
+:ghu:`Z4uR5d` kindly shared their
+`DarkSpotlight theme <https://github.com/Keypirinha/Keypirinha/issues/345>`_.
+
+.. image:: https://user-images.githubusercontent.com/11020991/48978302-9ccc0600-f0ba-11e8-8b1e-8bef30020bc5.png
+    :align: center

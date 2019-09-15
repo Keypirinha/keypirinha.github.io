@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.8. FileBrowser Package" href="filebrowser.html"/>
-        <link rel="prev" title="5.6. Env Package" href="env.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.8. FileBrowser Package" href="filebrowser.html" />
+    <link rel="prev" title="5.6. Env Package" href="env.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -157,7 +150,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -165,9 +158,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -215,20 +209,20 @@
 <p>Query <a class="reference external" href="http://www.voidtools.com">Everything</a> (a <strong>separate</strong> tool) from Keypirinha to find and open any file
 or folder.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>If you are looking for a way to browse the file system as you type a path,
-check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></li>
-<li>If you are looking for a way to catalog files you frequently use, check
-out the <a class="reference internal" href="filescatalog.html"><span class="doc">FilesCatalog Package</span></a></li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If you are looking for a way to browse the file system as you type a path,
+check out the <a class="reference internal" href="filebrowser.html"><span class="doc">FileBrowser Package</span></a></p></li>
+<li><p>If you are looking for a way to catalog files you frequently use, check
+out the <a class="reference internal" href="filescatalog.html"><span class="doc">FilesCatalog Package</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="requirements">
 <h2>5.7.1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.voidtools.com">Everything</a> v1.3 or more recent must be running to do a search.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This package retries to find <em>Everything</em> instance each time you want to do
+<p class="admonition-title">Note</p>
+<p>This package retries to find <em>Everything</em> instance each time you want to do
 a search so you can freely (re)start <em>Everything</em> whenever you need to.</p>
 </div>
 </div>
@@ -236,12 +230,12 @@ a search so you can freely (re)start <em>Everything</em> whenever you need to.</
 <h2>5.7.2. Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
 <p>By default, this package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
 <ul class="simple">
-<li>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Search</span></code> item (default name) allows to query <em>Everything</em>
-using its normal search syntax</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Regex</span> <span class="pre">Search</span></code> item (default name) allows to query
-<em>Everything</em> using its regular expression syntax</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request <em>Everything</em> to rebuild its
-database (<strong>requires Everything v1.4</strong>).</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Search</span></code> item (default name) allows to query <em>Everything</em>
+using its normal search syntax</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Regex</span> <span class="pre">Search</span></code> item (default name) allows to query
+<em>Everything</em> using its regular expression syntax</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Rebuild</span> <span class="pre">DB</span></code> item request <em>Everything</em> to rebuild its
+database (<strong>requires Everything v1.4</strong>).</p></li>
 </ul>
 </div>
 <div class="section" id="usage">
@@ -252,13 +246,13 @@ searched-found-executed a file/folder using this package, it is kept in
 Keypirinha’s history so you do not have to query <em>Everything</em> a second time to
 open it.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">You can reduce the number of keystrokes even more to reach the same item by
+<p class="admonition-title">Tip</p>
+<p>You can reduce the number of keystrokes even more to reach the same item by
 using the <a class="reference internal" href="../first.html#first-associate-keyword"><span class="std std-ref">Associate a Keyword to an Item</span></a> feature.</p>
 </div>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Remember you can drag the resulting items the same way you would drag files
+<p class="admonition-title">Tip</p>
+<p>Remember you can drag the resulting items the same way you would drag files
 to/from the Windows Explorer, in order to copy files or create shell links
 for example. See the <a class="reference internal" href="../first.html#first-drag"><span class="std std-ref">Drag and Drop</span></a> section for more info.</p>
 </div>
@@ -273,9 +267,7 @@ error message has been emitted by the plugin (check Keypirinha’s
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -284,7 +276,7 @@ error message has been emitted by the plugin (check Keypirinha’s
         <a href="filebrowser.html" class="btn btn-neutral float-right" title="5.8. FileBrowser Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="env.html" class="btn btn-neutral" title="5.6. Env Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="env.html" class="btn btn-neutral float-left" title="5.6. Env Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -293,7 +285,7 @@ error message has been emitted by the plugin (check Keypirinha’s
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -309,36 +301,15 @@ error message has been emitted by the plugin (check Keypirinha’s
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

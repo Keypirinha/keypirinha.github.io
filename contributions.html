@@ -19,42 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="7. Configuration" href="configuration.html"/>
-        <link rel="prev" title="5.20. WinSCP Package" href="packages/winscp.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Configuration" href="configuration.html" />
+    <link rel="prev" title="5.20. WinSCP Package" href="packages/winscp.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +57,7 @@
 
           
             
-            <img src="_static/app-128.png" class="logo" />
+            <img src="_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -71,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -107,26 +101,29 @@
 <li class="toctree-l3"><a class="reference internal" href="#currency">6.1.2. Currency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cvt">6.1.3. Cvt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ditto">6.1.4. Ditto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fakerdata">6.1.5. FakerData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#foobar2000">6.1.6. Foobar2000</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gitmoji">6.1.7. Gitmoji</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#heidisql">6.1.8. HeidiSQL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#kill">6.1.9. Kill</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#kitty">6.1.10. KiTTY</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lipsum">6.1.11. Lipsum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#moviedb">6.1.12. MovieDB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#myip">6.1.13. MyIP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pinboard">6.1.14. Pinboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rocketchat">6.1.15. RocketChat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sapgui">6.1.16. SapGUI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sharex">6.1.17. ShareX</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#snippets">6.1.18. Snippets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#steam">6.1.19. Steam</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#systemcommands">6.1.20. SystemCommands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#units">6.1.21. Units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#urlshortener">6.1.22. URLShortener</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#windowsapps">6.1.23. WindowsApps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#winsys">6.1.24. WinSys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#epoch">6.1.5. Epoch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fakerdata">6.1.6. FakerData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foobar2000">6.1.7. Foobar2000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gitmoji">6.1.8. Gitmoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heidisql">6.1.9. HeidiSQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kill">6.1.10. Kill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kitty">6.1.11. KiTTY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lipsum">6.1.12. Lipsum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moviedb">6.1.13. MovieDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myip">6.1.14. MyIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pinboard">6.1.15. Pinboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ppl">6.1.16. Ppl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rocketchat">6.1.17. RocketChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sapgui">6.1.18. SapGUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharex">6.1.19. ShareX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snippets">6.1.20. Snippets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steam">6.1.21. Steam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#systemcommands">6.1.22. SystemCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time">6.1.23. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#units">6.1.24. Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urlshortener">6.1.25. URLShortener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windowsapps">6.1.26. WindowsApps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#winsys">6.1.27. WinSys</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-install">6.2. How to Install</a><ul>
@@ -162,7 +159,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Keypirinha</a>
@@ -170,9 +167,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -246,115 +244,131 @@ Source: <a class="reference external" href="https://github.com/DrorHarari/keypir
 <a class="reference external" href="http://ditto-cp.sourceforge.net">Ditto Clipboard Manager</a> <br />
 Source: <a class="reference external" href="https://github.com/tuteken/Keypirinha-Plugin-Ditto">https://github.com/tuteken/Keypirinha-Plugin-Ditto</a></p>
 </div>
+<div class="section" id="epoch">
+<h3>6.1.5. Epoch<a class="headerlink" href="#epoch" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/prayzzz">&#64;prayzzz</a>’s package to convert a <code class="docutils literal notranslate"><span class="pre">epoch</span></code> timestamp to various human
+readable formats <br />
+Source: <a class="reference external" href="https://github.com/prayzzz/keypirinha-epoch">https://github.com/prayzzz/keypirinha-epoch</a></p>
+</div>
 <div class="section" id="fakerdata">
-<h3>6.1.5. FakerData<a class="headerlink" href="#fakerdata" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.6. FakerData<a class="headerlink" href="#fakerdata" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to generate different types of fake data <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-faker-data">https://github.com/Fuhrmann/keypirinha-faker-data</a></p>
 </div>
 <div class="section" id="foobar2000">
-<h3>6.1.6. Foobar2000<a class="headerlink" href="#foobar2000" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.7. Foobar2000<a class="headerlink" href="#foobar2000" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/tuteken">&#64;tuteken</a>’s package to control foobar2000 from Keypirinha. <br />
 Source: <a class="reference external" href="https://github.com/tuteken/Keypirinha-Plugin-foobar2000">https://github.com/tuteken/Keypirinha-Plugin-foobar2000</a></p>
 </div>
 <div class="section" id="gitmoji">
-<h3>6.1.7. Gitmoji<a class="headerlink" href="#gitmoji" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.8. Gitmoji<a class="headerlink" href="#gitmoji" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to search and copy
 <a class="reference external" href="https://github.com/carloscuesta/gitmoji">gitmojis</a> to your clipboard <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-gitmoji">https://github.com/Fuhrmann/keypirinha-gitmoji</a></p>
 </div>
 <div class="section" id="heidisql">
-<h3>6.1.8. HeidiSQL<a class="headerlink" href="#heidisql" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.9. HeidiSQL<a class="headerlink" href="#heidisql" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>’s package to list and launch
 <a class="reference external" href="http://www.heidisql.com">HeidiSQL</a> sessions directly as well as HeidiSQL
 itself. <br />
 Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-heidisql">https://github.com/psistorm/keypirinha-heidisql</a></p>
 </div>
 <div class="section" id="kill">
-<h3>6.1.9. Kill<a class="headerlink" href="#kill" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.10. Kill<a class="headerlink" href="#kill" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/ueffel">&#64;ueffel</a>’s package to terminate a running process by its name or ID. <br />
 Source: <a class="reference external" href="https://github.com/ueffel/Keypirinha-Plugin-Kill">https://github.com/ueffel/Keypirinha-Plugin-Kill</a></p>
 </div>
 <div class="section" id="kitty">
-<h3>6.1.10. KiTTY<a class="headerlink" href="#kitty" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.11. KiTTY<a class="headerlink" href="#kitty" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>’s package to launch <a class="reference external" href="http://www.9bis.net/kitty/">KiTTY</a>
 (either installed or portable) and KiTTY sessions directly. <br />
 Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-kitty">https://github.com/psistorm/keypirinha-kitty</a></p>
 </div>
 <div class="section" id="lipsum">
-<h3>6.1.11. Lipsum<a class="headerlink" href="#lipsum" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.12. Lipsum<a class="headerlink" href="#lipsum" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to generate Lorem Ipsum text. <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-lipsum">https://github.com/Fuhrmann/keypirinha-lipsum</a></p>
 </div>
 <div class="section" id="moviedb">
-<h3>6.1.12. MovieDB<a class="headerlink" href="#moviedb" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.13. MovieDB<a class="headerlink" href="#moviedb" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to get suggestions from <cite>TMDB &lt;http://themoviedb.org&gt;</cite>
 directly in Keypirinha <br />
 Source:<a class="reference external" href="https://github.com/Fuhrmann/keypirinha-moviedb">https://github.com/Fuhrmann/keypirinha-moviedb</a></p>
 </div>
 <div class="section" id="myip">
-<h3>6.1.13. MyIP<a class="headerlink" href="#myip" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.14. MyIP<a class="headerlink" href="#myip" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to get your public and local IP directly from
 Keypirinha <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-myip">https://github.com/Fuhrmann/keypirinha-myip</a></p>
 </div>
 <div class="section" id="pinboard">
-<h3>6.1.14. Pinboard<a class="headerlink" href="#pinboard" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.15. Pinboard<a class="headerlink" href="#pinboard" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/tuteken">&#64;tuteken</a>’s package to access to your bookmarks on
 <a class="reference external" href="http://pinboard.in">Pinboard</a> <br />
 Source: <a class="reference external" href="https://github.com/tuteken/Keypirinha-Plugin-Pinboard">https://github.com/tuteken/Keypirinha-Plugin-Pinboard</a></p>
 </div>
+<div class="section" id="ppl">
+<h3>6.1.16. Ppl<a class="headerlink" href="#ppl" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/DrorHarari">&#64;DrorHarari</a>’s package to call and email people easily <br />
+Source: <a class="reference external" href="https://github.com/DrorHarari/keypirinha-ppl">https://github.com/DrorHarari/keypirinha-ppl</a></p>
+</div>
 <div class="section" id="rocketchat">
-<h3>6.1.15. RocketChat<a class="headerlink" href="#rocketchat" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.17. RocketChat<a class="headerlink" href="#rocketchat" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/malys">&#64;malys</a>’s package for <a class="reference external" href="https://rocket.chat">RocketChat</a> <br />
 Source: <a class="reference external" href="https://github.com/malys/keypirinha-rocketchat">https://github.com/malys/keypirinha-rocketchat</a></p>
 </div>
 <div class="section" id="sapgui">
-<h3>6.1.16. SapGUI<a class="headerlink" href="#sapgui" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.18. SapGUI<a class="headerlink" href="#sapgui" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/ibnbr">&#64;ibnbr</a>’s package to have direct access to your SAP GUI entries from
 Keypirinha <br />
 Source: <a class="reference external" href="https://github.com/ibnbr/Keypirinha-SapGUI">https://github.com/ibnbr/Keypirinha-SapGUI</a></p>
 </div>
 <div class="section" id="sharex">
-<h3>6.1.17. ShareX<a class="headerlink" href="#sharex" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.19. ShareX<a class="headerlink" href="#sharex" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to execute ShareX actions and custom workflows <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-sharex">https://github.com/Fuhrmann/keypirinha-sharex</a></p>
 </div>
 <div class="section" id="snippets">
-<h3>6.1.18. Snippets<a class="headerlink" href="#snippets" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.20. Snippets<a class="headerlink" href="#snippets" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/dozius">&#64;dozius</a>’ package to quickly copy user defined snippets to the clipboard <br />
 Source: <a class="reference external" href="https://github.com/dozius/keypirinha-snippets">https://github.com/dozius/keypirinha-snippets</a></p>
 </div>
 <div class="section" id="steam">
-<h3>6.1.19. Steam<a class="headerlink" href="#steam" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.21. Steam<a class="headerlink" href="#steam" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/EhsanKia">&#64;EhsanKia</a>’s package to add Steam games to your Catalog <br />
 Source: <a class="reference external" href="https://github.com/EhsanKia/keypirinha-plugins/tree/master/keypirinha-steam">https://github.com/EhsanKia/keypirinha-plugins/tree/master/keypirinha-steam</a></p>
 </div>
 <div class="section" id="systemcommands">
-<h3>6.1.20. SystemCommands<a class="headerlink" href="#systemcommands" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.22. SystemCommands<a class="headerlink" href="#systemcommands" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/psistorm">&#64;psistorm</a>’s package to provide some system commands to Keypirinha’s catalog
 like <code class="docutils literal notranslate"><span class="pre">shutdown</span></code>, <code class="docutils literal notranslate"><span class="pre">hibernate</span></code>, <code class="docutils literal notranslate"><span class="pre">sleep</span></code>, <code class="docutils literal notranslate"><span class="pre">restart</span></code>, <code class="docutils literal notranslate"><span class="pre">lock</span></code>, <code class="docutils literal notranslate"><span class="pre">logout</span></code>,
 <code class="docutils literal notranslate"><span class="pre">trash</span></code>, <code class="docutils literal notranslate"><span class="pre">emptytrash</span></code>, … <br />
 Source: <a class="reference external" href="https://github.com/psistorm/keypirinha-systemcommands">https://github.com/psistorm/keypirinha-systemcommands</a></p>
 </div>
+<div class="section" id="time">
+<h3>6.1.23. Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/ueffel">&#64;ueffel</a>’s package to convert and format datetime strings <br />
+Source: <a class="reference external" href="https://github.com/ueffel/Keypirinha-Time">https://github.com/ueffel/Keypirinha-Time</a></p>
+</div>
 <div class="section" id="units">
-<h3>6.1.21. Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.24. Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/ArmaniKorsich">&#64;ArmaniKorsich</a>’s package for units conversion <br />
 Source: <a class="reference external" href="https://github.com/ArmaniKorsich/Keypirinha-Units">https://github.com/ArmaniKorsich/Keypirinha-Units</a></p>
 </div>
 <div class="section" id="urlshortener">
-<h3>6.1.22. URLShortener<a class="headerlink" href="#urlshortener" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.25. URLShortener<a class="headerlink" href="#urlshortener" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/Fuhrmann">&#64;Fuhrmann</a>’s package to use a URL shortener online service like Bitly,
 Google or TinyURL from Keypirinha <br />
 Source: <a class="reference external" href="https://github.com/Fuhrmann/keypirinha-url-shortener">https://github.com/Fuhrmann/keypirinha-url-shortener</a></p>
 </div>
 <div class="section" id="windowsapps">
-<h3>6.1.23. WindowsApps<a class="headerlink" href="#windowsapps" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.26. WindowsApps<a class="headerlink" href="#windowsapps" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/ueffel">&#64;ueffel</a>’s package to list and launch Windows Apps (formerly Metro Apps)
 from Keypirinha <br />
 Source: <a class="reference external" href="https://github.com/ueffel/Keypirinha-WindowsApps">https://github.com/ueffel/Keypirinha-WindowsApps</a></p>
 </div>
 <div class="section" id="winsys">
-<h3>6.1.24. WinSys<a class="headerlink" href="#winsys" title="Permalink to this headline">¶</a></h3>
+<h3>6.1.27. WinSys<a class="headerlink" href="#winsys" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/kvnxiao">&#64;kvnxiao</a>’s package to invoke common system and shell commands for Windows
 10 <br />
 Source: <a class="reference external" href="https://github.com/kvnxiao/keypirinha-winsys">https://github.com/kvnxiao/keypirinha-winsys</a></p>
@@ -390,9 +404,7 @@ in Installed mode.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -401,7 +413,7 @@ in Installed mode.</p>
         <a href="configuration.html" class="btn btn-neutral float-right" title="7. Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="packages/winscp.html" class="btn btn-neutral" title="5.20. WinSCP Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="packages/winscp.html" class="btn btn-neutral float-left" title="5.20. WinSCP Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -410,7 +422,7 @@ in Installed mode.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -426,36 +438,15 @@ in Installed mode.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

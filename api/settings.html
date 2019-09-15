@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13.2. API Reference" href="reference.html"/>
-        <link rel="next" title="13.3. Embedded Python Interpreter" href="python.html"/>
-        <link rel="prev" title="13.2.7. Plugin class" href="plugin.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.3. Embedded Python Interpreter" href="python.html" />
+    <link rel="prev" title="13.2.7. Plugin class" href="plugin.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -144,7 +137,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -152,9 +145,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,44 +196,40 @@
 <h1>13.2.8. Settings class<a class="headerlink" href="#settings-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="keypirinha.Settings">
-<em class="property">class </em><code class="descclassname">keypirinha.</code><code class="descname">Settings</code><span class="sig-paren">(</span><em>settings_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">Settings</code><span class="sig-paren">(</span><em class="sig-param">settings_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class to access the Settings of a Package/Plugin.</p>
 <p>It is not meant to be instantiated manually: <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_settings" title="keypirinha.Plugin.load_settings"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_settings()</span></code></a>
 should be called instead, or <a class="reference internal" href="module.html#keypirinha.settings" title="keypirinha.settings"><code class="xref py py-func docutils literal notranslate"><span class="pre">settings()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha.Settings.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>unquote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">unquote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the string value of the specified <em>key</em> in <em>section</em>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The name of the setting to find</li>
-<li><strong>section</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – You can optionally specify a section name.
-Otherwise the key will be searched in the default section.</li>
-<li><strong>fallback</strong> (<em>any</em>) – A fallback value in case <em>key</em> does not exist in the
-specified <em>section</em>.</li>
-<li><strong>unquote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Unquote the resulting value if it is encapsulated by
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – The name of the setting to find</p></li>
+<li><p><strong>section</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – You can optionally specify a section name.
+Otherwise the key will be searched in the default section.</p></li>
+<li><p><strong>fallback</strong> (<em>any</em>) – A fallback value in case <em>key</em> does not exist in the
+specified <em>section</em>.</p></li>
+<li><p><strong>unquote</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – Unquote the resulting value if it is encapsulated by
 a pair of single-quotes <code class="docutils literal notranslate"><span class="pre">'</span></code> or by a pair of double-quotes
-<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</li>
+<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The found value, or <em>fallback</em> in case <em>key</em> was not found in
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The found value, or <em>fallback</em> in case <em>key</em> was not found in
 <em>section</em>.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_bool">
-<code class="descname">get_bool</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_bool" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_bool</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_bool" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read boolean values.</p>
 <p>Values <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">yes</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">on</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code> and
 <code class="docutils literal notranslate"><span class="pre">enabled</span></code> are evaluated to <code class="docutils literal notranslate"><span class="pre">True</span></code>.
@@ -247,63 +237,63 @@ Values <code class="docutils literal notranslate"><span class="pre">0</span></co
 <code class="docutils literal notranslate"><span class="pre">disabled</span></code> are evaluated to <code class="docutils literal notranslate"><span class="pre">False</span></code>.
 The <em>fallback</em> argument is returned otherwise.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The read value, if any, is unquoted then stripped first.</p>
+<p class="admonition-title">Note</p>
+<p>The read value, if any, is unquoted then stripped first.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_enum">
-<code class="descname">get_enum</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>enum=[]</em>, <em>case_sensitive=False</em>, <em>unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_enum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_enum</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">enum=[]</em>, <em class="sig-param">case_sensitive=False</em>, <em class="sig-param">unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_enum" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read enum values.</p>
 <p>The <em>enum</em> argument is the list of accepted string values.
 Comparison depends on the <em>case_sensitive</em> argument.</p>
 <p>The <em>fallback</em> argument is returned in case none of the enumerated
 values matches to the read value, or if the setting was not found.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The read value, if any, is unquoted (depending on the <em>unquote</em>
+<p class="admonition-title">Note</p>
+<p>The read value, if any, is unquoted (depending on the <em>unquote</em>
 argument) then stripped before being compared.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_float">
-<code class="descname">get_float</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>min=None</em>, <em>max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_float" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_float</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">min=None</em>, <em class="sig-param">max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_float" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read float values.</p>
 <p>If the read value is successfully casted/converted to a float, it is
 <strong>capped</strong> against <em>min</em> and <em>max</em> optional boundaries.</p>
 <p>The <em>fallback</em> argument is returned in case the setting was not found or
 the format of the read value is incorrect.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The read value, if any, is unquoted then stripped first.</p>
+<p class="admonition-title">Note</p>
+<p>The read value, if any, is unquoted then stripped first.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_int">
-<code class="descname">get_int</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>min=None</em>, <em>max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_int" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_int</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">min=None</em>, <em class="sig-param">max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read integer values.</p>
 <p>If the read value is successfully converted to an integer, it is
 <strong>capped</strong> against optional boundaries <em>min</em> and/or <em>max</em>.</p>
 <p>The <em>fallback</em> argument is returned in case the setting was not found or
 the format of the read value is incorrect.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>The <code class="docutils literal notranslate"><span class="pre">int(value,</span> <span class="pre">base=0)</span></code> expression is used to convert the read
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">int(value,</span> <span class="pre">base=0)</span></code> expression is used to convert the read
 string value. So decimal representations are accepted as well as
 the hexadecimal (e.g. <code class="docutils literal notranslate"><span class="pre">0xA3</span></code>), the octal (e.g. <code class="docutils literal notranslate"><span class="pre">0o17</span></code>) and the
-binary (e.g. <code class="docutils literal notranslate"><span class="pre">0b110</span></code>) ones.</li>
-<li>The read value, if any, is unquoted then stripped first.</li>
+binary (e.g. <code class="docutils literal notranslate"><span class="pre">0b110</span></code>) ones.</p></li>
+<li><p>The read value, if any, is unquoted then stripped first.</p></li>
 </ul>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_mapped">
-<code class="descname">get_mapped</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>map={}</em>, <em>case_sensitive=False</em>, <em>unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_mapped" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_mapped</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">map={}</em>, <em class="sig-param">case_sensitive=False</em>, <em class="sig-param">unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_mapped" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read mapped values.</p>
 <p>The <em>map</em> argument is a dictionary where keys are strings that are
 expected to be read from the configuration data (similar behavior to
@@ -314,15 +304,15 @@ argument.</p>
 <p>The <em>fallback</em> argument is returned in case none of the keys matches to
 the read value, or if the setting was not found.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The read value, if any, is unquoted (depending on the <em>unquote</em>
+<p class="admonition-title">Note</p>
+<p>The read value, if any, is unquoted (depending on the <em>unquote</em>
 argument) then stripped before being compared.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_multiline">
-<code class="descname">get_multiline</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=[]</em>, <em>keep_empty_lines=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_multiline" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_multiline</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=[]</em>, <em class="sig-param">keep_empty_lines=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_multiline" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specialized <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> to read multiline values.
 It returns a list of lines (strings).</p>
 <p>A copy of the <em>fallback</em> argument is returned if the setting was not
@@ -332,12 +322,12 @@ found or if the read value is empty (i.e. no line remains after the
 
 <dl class="method">
 <dt id="keypirinha.Settings.get_stripped">
-<code class="descname">get_stripped</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em>, <em>fallback=None</em>, <em>unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_stripped" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_stripped</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em>, <em class="sig-param">fallback=None</em>, <em class="sig-param">unquote=True</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.get_stripped" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as <a class="reference internal" href="#keypirinha.Settings.get" title="keypirinha.Settings.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get()</span></code></a> but <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str.strip" title="(in Python v3.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.strip()</span></code></a> the value and returns
 <em>fallback</em> if the value is <strong>empty</strong> or not found.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The read value is unquoted <strong>before</strong> being stripped if the
+<p class="admonition-title">Warning</p>
+<p>The read value is unquoted <strong>before</strong> being stripped if the
 <em>unquote</em> argument is true, which means that if configuration value
 is <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">X</span> <span class="pre">&quot;</span></code> for example, <code class="docutils literal notranslate"><span class="pre">X</span></code> will be returned (i.e. no quotes, no
 spaces).</p>
@@ -346,25 +336,25 @@ spaces).</p>
 
 <dl class="method">
 <dt id="keypirinha.Settings.has">
-<code class="descname">has</code><span class="sig-paren">(</span><em>key</em>, <em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">has</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the existence of a <em>key</em> in a <em>section</em> and return a boolean.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.has_section">
-<code class="descname">has_section</code><span class="sig-paren">(</span><em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has_section" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">has_section</code><span class="sig-paren">(</span><em class="sig-param">section</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.has_section" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the existence of <em>section</em> and return a boolean.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.keys">
-<code class="descname">keys</code><span class="sig-paren">(</span><em>section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">keys</code><span class="sig-paren">(</span><em class="sig-param">section=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of the keys found in <em>section</em>, or an empty list.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="keypirinha.Settings.sections">
-<code class="descname">sections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.sections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Settings.sections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of the loaded sections, or an empty list.</p>
 </dd></dl>
 
@@ -374,9 +364,7 @@ spaces).</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -385,7 +373,7 @@ spaces).</p>
         <a href="python.html" class="btn btn-neutral float-right" title="13.3. Embedded Python Interpreter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="plugin.html" class="btn btn-neutral" title="13.2.7. Plugin class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plugin.html" class="btn btn-neutral float-left" title="13.2.7. Plugin class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -394,7 +382,7 @@ spaces).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -410,36 +398,15 @@ spaces).</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

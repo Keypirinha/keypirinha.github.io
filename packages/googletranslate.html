@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.12. PuTTY Package" href="putty.html"/>
-        <link rel="prev" title="5.10. FileZilla Package" href="filezilla.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.12. PuTTY Package" href="putty.html" />
+    <link rel="prev" title="5.10. FileZilla Package" href="filezilla.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -157,7 +150,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -165,9 +158,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -232,8 +226,8 @@ language parameters, it is possible to define extra items in the configuration
 file by declaring <code class="docutils literal notranslate"><span class="pre">custom_item</span></code> sections.</p>
 <p>Refer to the default configuration file of the package for more information.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">The <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter</p>
+<p class="admonition-title">See also</p>
+<p>The <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter</p>
 </div>
 </div>
 <div class="section" id="search-grammar">
@@ -267,455 +261,455 @@ English.</p>
 <p>Example <code class="docutils literal notranslate"><span class="pre">5</span></code> requests the translation of <code class="docutils literal notranslate"><span class="pre">Que</span> <span class="pre">tal?</span></code> from the <code class="docutils literal notranslate"><span class="pre">auto</span></code>
 language (Google will interpret this sentence as being Spanish) to English.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<ul class="last simple">
-<li>The placement of the <code class="docutils literal notranslate"><span class="pre">:</span></code> character matters. It makes the difference
-between the <em>source</em> and the <em>target</em> language.</li>
-<li>For convenience, <code class="docutils literal notranslate"><span class="pre">-</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">auto</span></code> as the source
-language.</li>
-<li>If both grammars <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">C</span></code> are used in the same argument, <code class="docutils literal notranslate"><span class="pre">C</span></code>
-prevails.</li>
-<li>If a source/target language code specified via this grammar is unknown, no
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>The placement of the <code class="docutils literal notranslate"><span class="pre">:</span></code> character matters. It makes the difference
+between the <em>source</em> and the <em>target</em> language.</p></li>
+<li><p>For convenience, <code class="docutils literal notranslate"><span class="pre">-</span></code> can be used instead of <code class="docutils literal notranslate"><span class="pre">auto</span></code> as the source
+language.</p></li>
+<li><p>If both grammars <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">C</span></code> are used in the same argument, <code class="docutils literal notranslate"><span class="pre">C</span></code>
+prevails.</p></li>
+<li><p>If a source/target language code specified via this grammar is unknown, no
 warning message is issued and item’s code will silently be used. However it
 is possible to check what language code have been used in a particular query
-by having a look at item’s description line.</li>
+by having a look at item’s description line.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="google-translate-supported-languages">
 <h2>5.11.4. Google Translate Supported Languages<a class="headerlink" href="#google-translate-supported-languages" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="53%" />
-<col width="35%" />
+<col style="width: 13%" />
+<col style="width: 53%" />
+<col style="width: 35%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Code</th>
-<th class="head">Name</th>
-<th class="head">Input/Output</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Input/Output</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>auto</td>
-<td>Auto</td>
-<td>input only</td>
-</tr>
-<tr class="row-odd"><td>af</td>
-<td>Afrikaans</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>am</td>
-<td>Amharic</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>ar</td>
-<td>Arabic</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>az</td>
-<td>Azerbaijani</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>be</td>
-<td>Belarusian</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>bg</td>
-<td>Bulgarian</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>bn</td>
-<td>Bengali</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>bs</td>
-<td>Bosnian</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>ca</td>
-<td>Catalan</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>ceb</td>
-<td>Cebuano</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>co</td>
-<td>Corsican</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>cs</td>
-<td>Czech</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>cy</td>
-<td>Welsh</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>da</td>
-<td>Danish</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>de</td>
-<td>German</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>el</td>
-<td>Greek</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>en</td>
-<td>English</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>eo</td>
-<td>Esperanto</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>es</td>
-<td>Spanish</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>et</td>
-<td>Estonian</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>eu</td>
-<td>Basque</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>fa</td>
-<td>Persian</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>fi</td>
-<td>Finnish</td>
-<td>both supported</td>
-</tr>
-<tr class="row-even"><td>fr</td>
-<td>French</td>
-<td>both supported</td>
-</tr>
-<tr class="row-odd"><td>fy</td>
-<td>Frisian</td>
-<td>both supported</td>
+<tbody>
+<tr class="row-even"><td><p>auto</p></td>
+<td><p>Auto</p></td>
+<td><p>input only</p></td>
+</tr>
+<tr class="row-odd"><td><p>af</p></td>
+<td><p>Afrikaans</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>am</p></td>
+<td><p>Amharic</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>ar</p></td>
+<td><p>Arabic</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>az</p></td>
+<td><p>Azerbaijani</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>be</p></td>
+<td><p>Belarusian</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>bg</p></td>
+<td><p>Bulgarian</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>bn</p></td>
+<td><p>Bengali</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>bs</p></td>
+<td><p>Bosnian</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>ca</p></td>
+<td><p>Catalan</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>ceb</p></td>
+<td><p>Cebuano</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>co</p></td>
+<td><p>Corsican</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>cs</p></td>
+<td><p>Czech</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>cy</p></td>
+<td><p>Welsh</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>da</p></td>
+<td><p>Danish</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>de</p></td>
+<td><p>German</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>el</p></td>
+<td><p>Greek</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>en</p></td>
+<td><p>English</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>eo</p></td>
+<td><p>Esperanto</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>es</p></td>
+<td><p>Spanish</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>et</p></td>
+<td><p>Estonian</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>eu</p></td>
+<td><p>Basque</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>fa</p></td>
+<td><p>Persian</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>fi</p></td>
+<td><p>Finnish</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-even"><td><p>fr</p></td>
+<td><p>French</p></td>
+<td><p>both supported</p></td>
+</tr>
+<tr class="row-odd"><td><p>fy</p></td>
+<td><p>Frisian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ga</td>
-<td>Irish</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ga</p></td>
+<td><p>Irish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>gd</td>
-<td>Scots Gaelic</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>gd</p></td>
+<td><p>Scots Gaelic</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>gl</td>
-<td>Galician</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>gl</p></td>
+<td><p>Galician</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>gu</td>
-<td>Gujarati</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>gu</p></td>
+<td><p>Gujarati</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ha</td>
-<td>Hausa</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ha</p></td>
+<td><p>Hausa</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>haw</td>
-<td>Hawaiian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>haw</p></td>
+<td><p>Hawaiian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>hi</td>
-<td>Hindi</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>hi</p></td>
+<td><p>Hindi</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>hmn</td>
-<td>Hmong</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>hmn</p></td>
+<td><p>Hmong</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>hr</td>
-<td>Croatian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>hr</p></td>
+<td><p>Croatian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ht</td>
-<td>Haitian Creole</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ht</p></td>
+<td><p>Haitian Creole</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>hu</td>
-<td>Hungarian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>hu</p></td>
+<td><p>Hungarian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>hy</td>
-<td>Armenian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>hy</p></td>
+<td><p>Armenian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>id</td>
-<td>Indonesian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>Indonesian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ig</td>
-<td>Igbo</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ig</p></td>
+<td><p>Igbo</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>is</td>
-<td>Icelandic</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>is</p></td>
+<td><p>Icelandic</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>it</td>
-<td>Italian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>it</p></td>
+<td><p>Italian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>iw</td>
-<td>Hebrew</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>iw</p></td>
+<td><p>Hebrew</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ja</td>
-<td>Japanese</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ja</p></td>
+<td><p>Japanese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>jw</td>
-<td>Javanese</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>jw</p></td>
+<td><p>Javanese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ka</td>
-<td>Georgian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ka</p></td>
+<td><p>Georgian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>kk</td>
-<td>Kazakh</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>kk</p></td>
+<td><p>Kazakh</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>km</td>
-<td>Khmer</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>km</p></td>
+<td><p>Khmer</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>kn</td>
-<td>Kannada</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>kn</p></td>
+<td><p>Kannada</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ko</td>
-<td>Korean</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ko</p></td>
+<td><p>Korean</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ku</td>
-<td>Kurdish (Kurmanji)</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ku</p></td>
+<td><p>Kurdish (Kurmanji)</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ky</td>
-<td>Kyrgyz</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ky</p></td>
+<td><p>Kyrgyz</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>la</td>
-<td>Latin</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>la</p></td>
+<td><p>Latin</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>lb</td>
-<td>Luxembourgish</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>lb</p></td>
+<td><p>Luxembourgish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>lo</td>
-<td>Lao</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>lo</p></td>
+<td><p>Lao</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>lt</td>
-<td>Lithuanian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>lt</p></td>
+<td><p>Lithuanian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>lv</td>
-<td>Latvian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>lv</p></td>
+<td><p>Latvian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>mg</td>
-<td>Malagasy</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>mg</p></td>
+<td><p>Malagasy</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>mi</td>
-<td>Maori</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>mi</p></td>
+<td><p>Maori</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>mk</td>
-<td>Macedonian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>mk</p></td>
+<td><p>Macedonian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ml</td>
-<td>Malayalam</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ml</p></td>
+<td><p>Malayalam</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>mn</td>
-<td>Mongolian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>mn</p></td>
+<td><p>Mongolian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>mr</td>
-<td>Marathi</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>mr</p></td>
+<td><p>Marathi</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ms</td>
-<td>Malay</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ms</p></td>
+<td><p>Malay</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>mt</td>
-<td>Maltese</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>mt</p></td>
+<td><p>Maltese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>my</td>
-<td>Myanmar (Burmese)</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>my</p></td>
+<td><p>Myanmar (Burmese)</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ne</td>
-<td>Nepali</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ne</p></td>
+<td><p>Nepali</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>nl</td>
-<td>Dutch</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>nl</p></td>
+<td><p>Dutch</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>no</td>
-<td>Norwegian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>no</p></td>
+<td><p>Norwegian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ny</td>
-<td>Chichewa</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ny</p></td>
+<td><p>Chichewa</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>pa</td>
-<td>Punjabi</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>pa</p></td>
+<td><p>Punjabi</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>pl</td>
-<td>Polish</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>pl</p></td>
+<td><p>Polish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ps</td>
-<td>Pashto</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ps</p></td>
+<td><p>Pashto</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>pt</td>
-<td>Portuguese</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>pt</p></td>
+<td><p>Portuguese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ro</td>
-<td>Romanian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ro</p></td>
+<td><p>Romanian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ru</td>
-<td>Russian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ru</p></td>
+<td><p>Russian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>sd</td>
-<td>Sindhi</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>sd</p></td>
+<td><p>Sindhi</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>si</td>
-<td>Sinhala</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>si</p></td>
+<td><p>Sinhala</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>sk</td>
-<td>Slovak</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>sk</p></td>
+<td><p>Slovak</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>sl</td>
-<td>Slovenian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>sl</p></td>
+<td><p>Slovenian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>sm</td>
-<td>Samoan</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>sm</p></td>
+<td><p>Samoan</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>sn</td>
-<td>Shona</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>sn</p></td>
+<td><p>Shona</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>so</td>
-<td>Somali</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>so</p></td>
+<td><p>Somali</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>sq</td>
-<td>Albanian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>sq</p></td>
+<td><p>Albanian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>sr</td>
-<td>Serbian</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>sr</p></td>
+<td><p>Serbian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>st</td>
-<td>Sesotho</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>st</p></td>
+<td><p>Sesotho</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>su</td>
-<td>Sundanese</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>su</p></td>
+<td><p>Sundanese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>sv</td>
-<td>Swedish</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>sv</p></td>
+<td><p>Swedish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>sw</td>
-<td>Swahili</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>sw</p></td>
+<td><p>Swahili</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>ta</td>
-<td>Tamil</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>ta</p></td>
+<td><p>Tamil</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>te</td>
-<td>Telugu</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>te</p></td>
+<td><p>Telugu</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>tg</td>
-<td>Tajik</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>tg</p></td>
+<td><p>Tajik</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>th</td>
-<td>Thai</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>th</p></td>
+<td><p>Thai</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>tl</td>
-<td>Filipino</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>tl</p></td>
+<td><p>Filipino</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>tr</td>
-<td>Turkish</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>tr</p></td>
+<td><p>Turkish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>uk</td>
-<td>Ukrainian</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>uk</p></td>
+<td><p>Ukrainian</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>ur</td>
-<td>Urdu</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>ur</p></td>
+<td><p>Urdu</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>uz</td>
-<td>Uzbek</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>uz</p></td>
+<td><p>Uzbek</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>vi</td>
-<td>Vietnamese</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>vi</p></td>
+<td><p>Vietnamese</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>xh</td>
-<td>Xhosa</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>xh</p></td>
+<td><p>Xhosa</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>yi</td>
-<td>Yiddish</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>yi</p></td>
+<td><p>Yiddish</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>yo</td>
-<td>Yoruba</td>
-<td>both supported</td>
+<tr class="row-odd"><td><p>yo</p></td>
+<td><p>Yoruba</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-even"><td>zh-CN</td>
-<td>Chinese (Simplified)</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>zh-CN</p></td>
+<td><p>Chinese (Simplified)</p></td>
+<td><p>both supported</p></td>
 </tr>
-<tr class="row-odd"><td>zh-TW</td>
-<td>Chinese (Traditional)</td>
-<td>output only</td>
+<tr class="row-odd"><td><p>zh-TW</p></td>
+<td><p>Chinese (Traditional)</p></td>
+<td><p>output only</p></td>
 </tr>
-<tr class="row-even"><td>zu</td>
-<td>Zulu</td>
-<td>both supported</td>
+<tr class="row-even"><td><p>zu</p></td>
+<td><p>Zulu</p></td>
+<td><p>both supported</p></td>
 </tr>
 </tbody>
 </table>
@@ -724,9 +718,7 @@ by having a look at item’s description line.</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -735,7 +727,7 @@ by having a look at item’s description line.</li>
         <a href="putty.html" class="btn btn-neutral float-right" title="5.12. PuTTY Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="filezilla.html" class="btn btn-neutral" title="5.10. FileZilla Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="filezilla.html" class="btn btn-neutral float-left" title="5.10. FileZilla Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -744,7 +736,7 @@ by having a look at item’s description line.</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -760,36 +752,15 @@ by having a look at item’s description line.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

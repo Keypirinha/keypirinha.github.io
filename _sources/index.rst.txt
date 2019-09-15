@@ -17,7 +17,8 @@ Need Help?
     * :ref:`contribute-issue`
 
 You like |project|?
-    |donate_button| |br|
+    |donate_button_usd|
+    |donate_button_eur| |br|
     |social_buttons| |br|
     Or see :ref:`faq-support`
 

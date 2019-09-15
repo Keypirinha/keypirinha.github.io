@@ -106,7 +106,8 @@ encouragement for future developments.
 There are several ways to support |project|:
 
 * Make a donation |br|
-  |donate_button|
+  |donate_button_usd|
+  |donate_button_eur|
   PM `@polyvertex <https://gitter.im/polyvertex>`_ if you have questions or
   special enquiries. |br|
   |br|

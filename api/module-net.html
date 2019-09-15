@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="13.2. API Reference" href="reference.html"/>
-        <link rel="next" title="13.2.4. CatalogAction class" href="catalogaction.html"/>
-        <link rel="prev" title="13.2.2. keypirinha_util module" href="module-util.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13.2.4. CatalogAction class" href="catalogaction.html" />
+    <link rel="prev" title="13.2.2. keypirinha_util module" href="module-util.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -147,7 +140,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -155,9 +148,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -209,7 +203,7 @@ required by the plugin developer.</p>
 <span id="reference"></span><h2>13.2.3.1. Reference<a class="headerlink" href="#module-keypirinha_net" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="keypirinha_net.UrllibOpener">
-<em class="property">class </em><code class="descclassname">keypirinha_net.</code><code class="descname">UrllibOpener</code><span class="sig-paren">(</span><em>opener</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha_net.</code><code class="sig-name descname">UrllibOpener</code><span class="sig-paren">(</span><em class="sig-param">opener</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A replacement to <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.OpenerDirector" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">urllib.request.OpenerDirector</span></code></a> to apply user’s
 global settings if needed and to ensure reasonable default <code class="docutils literal notranslate"><span class="pre">timeout</span></code> value
@@ -218,7 +212,7 @@ global settings if needed and to ensure reasonable default <code class="docutils
 <a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal notranslate"><span class="pre">build_urllib_opener()</span></code></a>.</p>
 <dl class="method">
 <dt id="keypirinha_net.UrllibOpener.open">
-<code class="descname">open</code><span class="sig-paren">(</span><em>fullurl</em>, <em>*args</em>, <em>data=None</em>, <em>timeout=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener.open" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param">fullurl</em>, <em class="sig-param">*args</em>, <em class="sig-param">data=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener.open" title="Permalink to this definition">¶</a></dt>
 <dd><p>This overrides <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.OpenerDirector.open" title="(in Python v3.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">urllib.request.OpenerDirector.open()</span></code></a> in order to
 apply the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> value automatically from Keypirinha’s settings.
 Forcing a <em>timeout</em> value here is still allowed but discouraged.</p>
@@ -228,7 +222,7 @@ Forcing a <em>timeout</em> value here is still allowed but discouraged.</p>
 
 <dl class="function">
 <dt id="keypirinha_net.build_urllib_opener">
-<code class="descclassname">keypirinha_net.</code><code class="descname">build_urllib_opener</code><span class="sig-paren">(</span><em>proxies=None</em>, <em>ssl_check_hostname=None</em>, <em>extra_handlers=[]</em>, <em>extra_pre_handlers=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.build_urllib_opener" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_net.</code><code class="sig-name descname">build_urllib_opener</code><span class="sig-paren">(</span><em class="sig-param">proxies=None</em>, <em class="sig-param">ssl_check_hostname=None</em>, <em class="sig-param">extra_handlers=[]</em>, <em class="sig-param">extra_pre_handlers=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.build_urllib_opener" title="Permalink to this definition">¶</a></dt>
 <dd><p>A replacement to <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.request.build_opener()</span></code></a> that takes care of
 using current user’s global settings (Keypirinha and/or system’s) regarding
 network connections, by inserting and configuring one or several connection
@@ -246,36 +240,34 @@ handlers (derived from <a class="reference external" href="https://docs.python.o
     <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>proxies</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) – <p>A dictionary of proxies to pass to the constructor of
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proxies</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)"><em>dict</em></a>) – <p>A dictionary of proxies to pass to the constructor of
 <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.ProxyHandler" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">urllib.request.ProxyHandler</span></code></a>, if any. Notes:</p>
 <ul>
-<li><code class="docutils literal notranslate"><span class="pre">None</span></code> (default; <strong>recommended</strong>) means proxies configured by
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code> (default; <strong>recommended</strong>) means proxies configured by
 the user at Keypirinha’s level, or by default at system level will
-be used.</li>
-<li>An empty dictionary (i.e. <code class="docutils literal notranslate"><span class="pre">{}</span></code>) means <strong>no</strong> proxy will be
+be used.</p></li>
+<li><p>An empty dictionary (i.e. <code class="docutils literal notranslate"><span class="pre">{}</span></code>) means <strong>no</strong> proxy will be
 configured regardless of user or machine settings. Note that going
-against user’s will is against Keypirinha’s design policy!</li>
-<li>See the notes below about <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxies.</li>
-<li>See <code class="xref py py-func docutils literal notranslate"><span class="pre">proxies_list_to_dict()</span></code> if you need to convert a list
-of proxies URLs into a dictionary.</li>
+against user’s will is against Keypirinha’s design policy!</p></li>
+<li><p>See the notes below about <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxies.</p></li>
+<li><p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">proxies_list_to_dict()</span></code> if you need to convert a list
+of proxies URLs into a dictionary.</p></li>
 </ul>
-</li>
-<li><strong>extra_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – A list/tuple of extra handlers to <strong>append</strong> to
+</p></li>
+<li><p><strong>extra_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – A list/tuple of extra handlers to <strong>append</strong> to
 the final handlers chain before passing it to
-<a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.request.build_opener()</span></code></a>.</li>
-<li><strong>extra_pre_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – <p>A list/tuple of extra handlers to <strong>prepend</strong>
+<a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.request.build_opener()</span></code></a>.</p></li>
+<li><p><strong>extra_pre_handlers</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)"><em>list</em></a>) – <p>A list/tuple of extra handlers to <strong>prepend</strong>
 to the final handlers chain before passing it to
 <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.build_opener" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.request.build_opener()</span></code></a>.</p>
 <p><strong>CAUTION:</strong> This parameter is here for convenience and you should
 use it only if you know what you are doing as it may interfere with
 the handlers added by this function.</p>
-</li>
-<li><strong>ssl_check_hostname</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – <p>Should the hostname be checked against
+</p></li>
+<li><p><strong>ssl_check_hostname</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><em>bool</em></a>) – <p>Should the hostname be checked against
 received security certificate? This argument is equivalent to
 tweaking with <a class="reference external" href="https://docs.python.org/3.6/library/ssl.html#ssl.SSLContext.check_hostname" title="(in Python v3.6)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ssl.SSLContext.check_hostname</span></code></a> and
 <a class="reference external" href="https://docs.python.org/3.6/library/ssl.html#ssl.SSLContext.verify_mode" title="(in Python v3.6)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ssl.SSLContext.verify_mode</span></code></a>.</p>
@@ -287,41 +279,39 @@ arguments to the chain, or, if caller already added a
 <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.HTTPSHandler" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">urllib.request.HTTPSHandler</span></code></a> handler (either in the
 <em>extra_handlers</em> or <em>extra_pre_handlers</em> list), it will be modified
 accordingly.</p>
-</li>
+</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A
 <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#urllib.request.OpenerDirector" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">urllib.request.OpenerDirector</span></code></a>-compatible opener object.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#keypirinha_net.UrllibOpener" title="keypirinha_net.UrllibOpener">UrllibOpener</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#keypirinha_net.UrllibOpener" title="keypirinha_net.UrllibOpener">UrllibOpener</a></p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>Notes about <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy support:</p>
-<ul class="last simple">
-<li>Support for <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy (v4 and v5) is <strong>experimental</strong> and uses
+<ul class="simple">
+<li><p>Support for <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy (v4 and v5) is <strong>experimental</strong> and uses
 the <a class="reference external" href="https://github.com/Anorov/PySocks">PySocks</a> third-party module
-under the hood.</li>
-<li>DNS requests do not go through the proxy server.</li>
-<li>IPv6 connections through the proxy server are not supported.</li>
-<li>Tests have shown that if proxies for several schemes have been
+under the hood.</p></li>
+<li><p>DNS requests do not go through the proxy server.</p></li>
+<li><p>IPv6 connections through the proxy server are not supported.</p></li>
+<li><p>Tests have shown that if proxies for several schemes have been
 specified, <code class="docutils literal notranslate"><span class="pre">UNKNOWN_PROTOCOL</span></code> SSL error may occurs under some
 circumstances. For that reason, if a <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy is specified, it
 takes precedence over the other proxy servers that might be in the
 dictionary as well so they will be purely ignored by this function in
-favor of the <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy.</li>
+favor of the <code class="docutils literal notranslate"><span class="pre">SOCKS</span></code> proxy.</p></li>
 </ul>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="keypirinha_net.proxies_to_dict">
-<code class="descclassname">keypirinha_net.</code><code class="descname">proxies_to_dict</code><span class="sig-paren">(</span><em>proxies</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.proxies_to_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_net.</code><code class="sig-name descname">proxies_to_dict</code><span class="sig-paren">(</span><em class="sig-param">proxies</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.proxies_to_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform a list of proxy specification lines into a dictionary that is
 suitable to use with <a class="reference internal" href="#keypirinha_net.build_urllib_opener" title="keypirinha_net.build_urllib_opener"><code class="xref py py-func docutils literal notranslate"><span class="pre">build_urllib_opener()</span></code></a> and
 <a class="reference external" href="https://docs.python.org/3.6/library/urllib.request.html#module-urllib.request" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">urllib.request</span></code></a>.</p>
@@ -339,17 +329,14 @@ grammar:</p>
 </pre></div>
 </div>
 <p>If the <code class="docutils literal notranslate"><span class="pre">conn_scheme</span></code> part is not specified, <code class="docutils literal notranslate"><span class="pre">url_scheme</span></code> is assumed.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> – <em>proxies</em> cannot be parsed</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#ValueError" title="(in Python v3.6)"><strong>ValueError</strong></a> – <em>proxies</em> cannot be parsed</p>
+</dd>
+</dl>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If two proxies have the same scheme, the last one prevails.</p>
+<p class="admonition-title">Note</p>
+<p>If two proxies have the same scheme, the last one prevails.</p>
 </div>
 </dd></dl>
 
@@ -358,9 +345,7 @@ grammar:</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -369,7 +354,7 @@ grammar:</p>
         <a href="catalogaction.html" class="btn btn-neutral float-right" title="13.2.4. CatalogAction class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="module-util.html" class="btn btn-neutral" title="13.2.2. keypirinha_util module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="module-util.html" class="btn btn-neutral float-left" title="13.2.2. keypirinha_util module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -378,7 +363,7 @@ grammar:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -394,36 +379,15 @@ grammar:</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

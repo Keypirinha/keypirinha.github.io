@@ -19,42 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="4. First steps" href="first.html"/>
-        <link rel="prev" title="2. Installation" href="install.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. First steps" href="first.html" />
+    <link rel="prev" title="2. Installation" href="install.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +57,7 @@
 
           
             
-            <img src="_static/app-128.png" class="logo" />
+            <img src="_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -71,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -133,7 +127,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Keypirinha</a>
@@ -141,9 +135,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -190,65 +185,65 @@
 <p>Keypirinha does not come with an installer yet so the update procedure must be
 done manually.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
+<p class="admonition-title">Warning</p>
 <p>Keypirinha must not be running during the update procedure:</p>
-<ul class="last simple">
-<li>Invoke the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> and search-then-execute the
-<code class="docutils literal notranslate"><span class="pre">Keypirinha:</span> <span class="pre">Exit</span></code> item.</li>
-<li><strong>OR</strong> click <code class="docutils literal notranslate"><span class="pre">Exit</span></code> from Keypirinha’s menu (right-click on Keypirinha’s
-system tray <code class="docutils literal notranslate"><span class="pre">k</span></code> icon).</li>
+<ul class="simple">
+<li><p>Invoke the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> and search-then-execute the
+<code class="docutils literal notranslate"><span class="pre">Keypirinha:</span> <span class="pre">Exit</span></code> item.</p></li>
+<li><p><strong>OR</strong> click <code class="docutils literal notranslate"><span class="pre">Exit</span></code> from Keypirinha’s menu (right-click on Keypirinha’s
+system tray <code class="docutils literal notranslate"><span class="pre">k</span></code> icon).</p></li>
 </ul>
 </div>
 <p>Once you have ensured Keypirinha is not running, the procedure depends on whether
 you chose the <a class="reference internal" href="install.html#install-installed"><span class="std std-ref">Installed Mode</span></a> or the <a class="reference internal" href="install.html#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">To check which mode Keypirinha is running in, open its install directory and
+<p class="admonition-title">Tip</p>
+<p>To check which mode Keypirinha is running in, open its install directory and
 check if the <code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory or the <code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file
 exists. If it does, you are in <a class="reference internal" href="install.html#install-portable"><span class="std std-ref">Portable Mode</span></a>.</p>
 </div>
 <div class="section" id="update-in-installed-mode">
 <h2>3.1. Update in Installed Mode<a class="headerlink" href="#update-in-installed-mode" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Open Keypirinha’s install directory <br />
+<li><p>Open Keypirinha’s install directory <br />
 <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> for example <br />
-Ensure there is <strong>no</strong> <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory</li>
-<li>Delete it <br />
+Ensure there is <strong>no</strong> <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory</p></li>
+<li><p>Delete it <br />
 It is safe to do so. In this mode, your configuration files are stored in your
-Home folder (i.e. under <code class="file docutils literal notranslate"><span class="pre">%APPDATA%\Keypirinha</span></code>)</li>
-<li>Open Keypirinha’s distribution archive <br />
-Its name should be something like <code class="file docutils literal notranslate"><span class="pre">keypirinha-x64-portable.7z</span></code></li>
-<li>Extract its content to <code class="file docutils literal notranslate"><span class="pre">U:\</span></code> <br />
-You should now have a <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> directory</li>
-<li>Delete the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory <br />
-So Keypirinha knows it must run in Installed Mode</li>
-<li>You’re done <br />
-You may now execute the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</li>
+Home folder (i.e. under <code class="file docutils literal notranslate"><span class="pre">%APPDATA%\Keypirinha</span></code>)</p></li>
+<li><p>Open Keypirinha’s distribution archive <br />
+Its name should be something like <code class="file docutils literal notranslate"><span class="pre">keypirinha-x64-portable.7z</span></code></p></li>
+<li><p>Extract its content to <code class="file docutils literal notranslate"><span class="pre">U:\</span></code> <br />
+You should now have a <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> directory</p></li>
+<li><p>Delete the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory <br />
+So Keypirinha knows it must run in Installed Mode</p></li>
+<li><p>You’re done <br />
+You may now execute the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</p></li>
 </ul>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span class="std std-ref">Overridden Shipped Packages</span></a>.</p>
+<p class="admonition-title">Warning</p>
+<p>Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span class="std std-ref">Overridden Shipped Packages</span></a>.</p>
 </div>
 </div>
 <div class="section" id="update-in-portable-mode">
 <h2>3.2. Update in Portable Mode<a class="headerlink" href="#update-in-portable-mode" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Open Keypirinha’s install directory <br />
+<li><p>Open Keypirinha’s install directory <br />
 <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> for example <br />
-Ensure there <strong>is</strong> a <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory</li>
-<li>Delete everything in <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> <strong>except</strong>
+Ensure there <strong>is</strong> a <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> directory</p></li>
+<li><p>Delete everything in <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha</span></code> <strong>except</strong>
 <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\portable</span></code> (this is where your configuration files are
-located)</li>
-<li>Open Keypirinha’s distribution archive <br />
-Its name should be something like <code class="file docutils literal notranslate"><span class="pre">keypirinha-x64-portable.7z</span></code></li>
-<li>Extract its content to <code class="file docutils literal notranslate"><span class="pre">U:\</span></code> <br />
-It is OK to overwrite the dummy file <code class="file docutils literal notranslate"><span class="pre">portable\KEEPME</span></code></li>
-<li>You’re done <br />
-You may now execute the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</li>
+located)</p></li>
+<li><p>Open Keypirinha’s distribution archive <br />
+Its name should be something like <code class="file docutils literal notranslate"><span class="pre">keypirinha-x64-portable.7z</span></code></p></li>
+<li><p>Extract its content to <code class="file docutils literal notranslate"><span class="pre">U:\</span></code> <br />
+It is OK to overwrite the dummy file <code class="file docutils literal notranslate"><span class="pre">portable\KEEPME</span></code></p></li>
+<li><p>You’re done <br />
+You may now execute the <code class="file docutils literal notranslate"><span class="pre">U:\Keypirinha\keypirinha.exe</span></code> file</p></li>
 </ul>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span class="std std-ref">Overridden Shipped Packages</span></a>.</p>
+<p class="admonition-title">Warning</p>
+<p>Be sure to read the section below about <a class="reference internal" href="#update-overpacks"><span class="std std-ref">Overridden Shipped Packages</span></a>.</p>
 </div>
 </div>
 <div class="section" id="overridden-shipped-packages">
@@ -263,9 +258,7 @@ loose folder to check if your issue is reproducible.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -274,7 +267,7 @@ loose folder to check if your issue is reproducible.</p>
         <a href="first.html" class="btn btn-neutral float-right" title="4. First steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="2. Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="2. Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,7 +276,7 @@ loose folder to check if your issue is reproducible.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -299,36 +292,15 @@ loose folder to check if your issue is reproducible.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

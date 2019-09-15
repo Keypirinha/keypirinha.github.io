@@ -194,7 +194,7 @@ To use them, use the following syntax in your configuration file: |br|
 
     # Example of using a variable predefined by Keypirinha
     [external]
-    editor = "%{var:APP_DIR}\..\MyEditor\MyEditor.exe"
+    editor = "${var:APP_DIR}\..\MyEditor\MyEditor.exe"
 
 
 * ``APP_DRIVE`` |br|
@@ -272,7 +272,7 @@ To use them, use the following syntax in your configuration file: |br|
 
       # Example of using a "Known Folder" value
       [external]
-      editor = "%{var:KNOWNFOLDER_LOCALAPPDATA}\MyEditor\MyEditor.exe"
+      editor = "${var:KNOWNFOLDER_LOCALAPPDATA}\MyEditor\MyEditor.exe"
 
   +----------------------------------------+---------------------------------------------------------------------+
   | Name                                   | Expands to (example; may differ on your system)                     |

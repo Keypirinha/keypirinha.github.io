@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.14. String Package" href="string.html"/>
-        <link rel="prev" title="5.12. PuTTY Package" href="putty.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.14. String Package" href="string.html" />
+    <link rel="prev" title="5.12. PuTTY Package" href="putty.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -151,7 +144,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -159,9 +152,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -210,12 +204,12 @@
 <p>Examples or recognized entries:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">HKEY_CURRENT_USER\Software</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">CURRENT_USER\Software</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">HKCU\Software</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">hkey_local_machine\system\CURRENTCONTROLSET</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">hklm\SYSTEM/currentcontrolset/</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">HKLM</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HKEY_CURRENT_USER\Software</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CURRENT_USER\Software</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HKCU\Software</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hkey_local_machine\system\CURRENTCONTROLSET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hklm\SYSTEM/currentcontrolset/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HKLM</span></code></p></li>
 </ul>
 </div></blockquote>
 <p>A Registry key is recognized as such by the plugin if and only if the specified
@@ -223,19 +217,17 @@ path is absolute (i.e. starting with one of the <code class="docutils literal no
 specified key exists <strong>and is readable</strong> (i.e. right access privileges), at the
 moment you are typing it.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li><code class="docutils literal notranslate"><span class="pre">/</span></code> character is also supported as separator in addition to <code class="docutils literal notranslate"><span class="pre">\</span></code></li>
-<li>Paths are case-insensitive</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> character is also supported as separator in addition to <code class="docutils literal notranslate"><span class="pre">\</span></code></p></li>
+<li><p>Paths are case-insensitive</p></li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -244,7 +236,7 @@ moment you are typing it.</p>
         <a href="string.html" class="btn btn-neutral float-right" title="5.14. String Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="putty.html" class="btn btn-neutral" title="5.12. PuTTY Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="putty.html" class="btn btn-neutral float-left" title="5.12. PuTTY Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -253,7 +245,7 @@ moment you are typing it.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -269,36 +261,15 @@ moment you are typing it.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

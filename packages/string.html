@@ -19,43 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Keypirinha" href="../index.html"/>
-        <link rel="up" title="5. Shipped Packages" href="../shipped-packages.html"/>
-        <link rel="next" title="5.15. TaskSwitcher Package" href="taskswitcher.html"/>
-        <link rel="prev" title="5.13. RegBrowser Package" href="regbrowser.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.15. TaskSwitcher Package" href="taskswitcher.html" />
+    <link rel="prev" title="5.13. RegBrowser Package" href="regbrowser.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -64,7 +57,7 @@
 
           
             
-            <img src="../_static/app-128.png" class="logo" />
+            <img src="../_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -72,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -155,7 +148,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Keypirinha</a>
@@ -163,9 +156,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -214,17 +208,17 @@
 <div class="section" id="features">
 <h2>5.14.1. Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Case conversion</li>
-<li>Hash a string using standard algorithms like CRC32, MD5, SHA*, etc…</li>
-<li>Generate a random UUID, also called GUID</li>
-<li>Generate a random password</li>
-<li>Generate random bytes</li>
-<li>URL-quote a string</li>
-<li>URL-unquote a string</li>
-<li>Split a URL</li>
-<li>Convert URL arguments to JSON</li>
-<li>Quote a command line argument (Windows &amp; Unix style)</li>
-<li>Split a command line (Windows &amp; Unix style)</li>
+<li><p>Case conversion</p></li>
+<li><p>Hash a string using standard algorithms like CRC32, MD5, SHA*, etc…</p></li>
+<li><p>Generate a random UUID, also called GUID</p></li>
+<li><p>Generate a random password</p></li>
+<li><p>Generate random bytes</p></li>
+<li><p>URL-quote a string</p></li>
+<li><p>URL-unquote a string</p></li>
+<li><p>Split a URL</p></li>
+<li><p>Convert URL arguments to JSON</p></li>
+<li><p>Quote a command line argument (Windows &amp; Unix style)</p></li>
+<li><p>Split a command line (Windows &amp; Unix style)</p></li>
 </ul>
 <p>Example of splitting a URL and convert its arguments to JSON from URL:
 <code class="docutils literal notranslate"><span class="pre">https://l0gin:p%4055w0rd&#64;www.example.com:443/%7Ebob/index.html?arg=%20val;a2=test#specific-section</span></code></p>
@@ -237,23 +231,21 @@ the <a class="reference internal" href="../glossary.html#term-launchbox"><span c
 <p>Most of these items are self-explanatory, however some of them accept a bit of
 tweaking at runtime via their argument:</p>
 <ul class="simple">
-<li>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Bytes</span></code> accepts an integer to specify the number of
+<li><p>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Bytes</span></code> accepts an integer to specify the number of
 bytes to be generated. Also, the <kbd class="kbd docutils literal notranslate">Space</kbd> key can be hit at will to
-generate a new sequence.</li>
-<li>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Password</span></code> accepts an integer to specify the number of
+generate a new sequence.</p></li>
+<li><p>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">Password</span></code> accepts an integer to specify the number of
 characters to be generated. Also, the <kbd class="kbd docutils literal notranslate">Space</kbd> key can be hit at will to
-generate a new password.</li>
-<li>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">UUID/GUID</span></code> generates a new UUID each time its argument
-changes</li>
+generate a new password.</p></li>
+<li><p>Item <code class="docutils literal notranslate"><span class="pre">String:</span> <span class="pre">Random</span> <span class="pre">UUID/GUID</span></code> generates a new UUID each time its argument
+changes</p></li>
 </ul>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -262,7 +254,7 @@ changes</li>
         <a href="taskswitcher.html" class="btn btn-neutral float-right" title="5.15. TaskSwitcher Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="regbrowser.html" class="btn btn-neutral" title="5.13. RegBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="regbrowser.html" class="btn btn-neutral float-left" title="5.13. RegBrowser Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -271,7 +263,7 @@ changes</li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -287,36 +279,15 @@ changes</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>

@@ -19,42 +19,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Keypirinha" href="index.html"/>
-        <link rel="next" title="3. Update Procedure" href="update.html"/>
-        <link rel="prev" title="1. Download" href="download.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Update Procedure" href="update.html" />
+    <link rel="prev" title="1. Download" href="download.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -63,7 +57,7 @@
 
           
             
-            <img src="_static/app-128.png" class="logo" />
+            <img src="_static/app-128.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -71,7 +65,7 @@
             
             
               <div class="version">
-                2.23
+                2.24
               </div>
             
           
@@ -137,7 +131,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Keypirinha</a>
@@ -145,9 +139,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -190,8 +185,8 @@
   <div class="section" id="installation">
 <h1>2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Go to the <a class="reference internal" href="update.html"><span class="doc">Update Procedure</span></a> chapter if Keypirinha is already installed and you
+<p class="admonition-title">Warning</p>
+<p>Go to the <a class="reference internal" href="update.html"><span class="doc">Update Procedure</span></a> chapter if Keypirinha is already installed and you
 just want to update.</p>
 </div>
 <div class="section" id="requirements">
@@ -206,8 +201,8 @@ anywhere you want. There is no installer.</p>
 <p>Out of the box, it is configured to run in <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>. All the
 configuration and runtime files are contained under Keypirinha’s directory.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is recommended to avoid installing Keypirinha under your Desktop or Start
+<p class="admonition-title">Note</p>
+<p>It is recommended to avoid installing Keypirinha under your Desktop or Start
 Menu folder as you will loose the benefits of having your catalog
 automatically refreshed when an application gets (un)installed.</p>
 </div>
@@ -221,8 +216,8 @@ or the <code class="file docutils literal notranslate"><span class="pre">portabl
 the application will run in <a class="reference internal" href="#install-portable"><span class="std std-ref">Portable Mode</span></a>, otherwise the
 <a class="reference internal" href="#install-installed"><span class="std std-ref">Installed Mode</span></a> is selected.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is currently no automated way to ease switching between the two modes
+<p class="admonition-title">Note</p>
+<p>There is currently no automated way to ease switching between the two modes
 so you will have to copy the directories manually if you wish to switch to
 the <a class="reference internal" href="#install-installed"><span class="std std-ref">Installed Mode</span></a>. <strong>Please ensure first that the application is
 not running.</strong></p>
@@ -235,10 +230,10 @@ making it easy to be moved around on a USB stick for example.</p>
 under the <code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory, directly located in Keypirinha’s
 directory:</p>
 <ul class="simple">
-<li>Configuration files and downloaded extra packages will be stored in
-<code class="file docutils literal notranslate"><span class="pre">portable\Profile</span></code></li>
-<li>Cache files and any other kind of temporary files will be stored in
-<code class="file docutils literal notranslate"><span class="pre">portable\Local</span></code></li>
+<li><p>Configuration files and downloaded extra packages will be stored in
+<code class="file docutils literal notranslate"><span class="pre">portable\Profile</span></code></p></li>
+<li><p>Cache files and any other kind of temporary files will be stored in
+<code class="file docutils literal notranslate"><span class="pre">portable\Local</span></code></p></li>
 </ul>
 <p>Optionally, it is also possible to specify the location of the content of
 the <code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory by creating a <code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file in
@@ -262,14 +257,14 @@ needed):</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>The <code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file takes precedence over the presence of the
-<code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory</li>
-<li>The <code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory may be removed if you are using a
-<code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file</li>
-<li>To avoid any trouble with your data, Keypirinha will exit immediately if
-any error occurs related to this setting.</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The <code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file takes precedence over the presence of the
+<code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory</p></li>
+<li><p>The <code class="file docutils literal notranslate"><span class="pre">portable</span></code> directory may be removed if you are using a
+<code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> file</p></li>
+<li><p>To avoid any trouble with your data, Keypirinha will exit immediately if
+any error occurs related to this setting.</p></li>
 </ul>
 </div>
 </div>
@@ -278,16 +273,16 @@ any error occurs related to this setting.</li>
 <p>The Installed Mode complies to the Windows’ standard way of storing data under
 user’s dedicated folder (e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\%USERNAME%</span></code>).</p>
 <ul class="simple">
-<li>Configuration files and downloaded extra packages will be stored in
+<li><p>Configuration files and downloaded extra packages will be stored in
 <code class="file docutils literal notranslate"><span class="pre">%APPDATA%\Keypirinha</span></code> folder. <br />
-e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\%USERNAME%\AppData\Roaming\Keypirinha</span></code></li>
-<li>Cache files and any other kind of temporary files will be stored in
+e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\%USERNAME%\AppData\Roaming\Keypirinha</span></code></p></li>
+<li><p>Cache files and any other kind of temporary files will be stored in
 <code class="file docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\Keypirinha</span></code> <br />
-e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\%USERNAME%\AppData\Local\Keypirinha</span></code></li>
+e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\%USERNAME%\AppData\Local\Keypirinha</span></code></p></li>
 </ul>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">In order to be able to run under this mode, both <code class="file docutils literal notranslate"><span class="pre">portable</span></code> and
+<p class="admonition-title">Warning</p>
+<p>In order to be able to run under this mode, both <code class="file docutils literal notranslate"><span class="pre">portable</span></code> and
 <code class="file docutils literal notranslate"><span class="pre">portable.ini</span></code> must <strong>not</strong> exist in Keypirinha’s directory.</p>
 </div>
 </div>
@@ -296,9 +291,7 @@ e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -307,7 +300,7 @@ e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\
         <a href="update.html" class="btn btn-neutral float-right" title="3. Update Procedure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="download.html" class="btn btn-neutral" title="1. Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="download.html" class="btn btn-neutral float-left" title="1. Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -316,7 +309,7 @@ e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2013-2018, Jean-Charles Lefebvre.
+        &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
   </div> 
@@ -332,36 +325,15 @@ e.g. <code class="file docutils literal notranslate"><span class="pre">C:\Users\
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.23',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
    
   <script>
