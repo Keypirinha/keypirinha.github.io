@@ -62,6 +62,13 @@ Foobar2000
 :ghu:`tuteken`'s package to control foobar2000 from |project|. |br|
 Source: `<https://github.com/tuteken/Keypirinha-Plugin-foobar2000>`_
 
+Fork
+----
+
+:ghu:`fran-f`'s package to list and open Git repositories in
+`Fork <https://fork.dev/>`. |br|
+Source: `<https://github.com/fran-f/keypirinha-git-fork>`_
+
 Gitmoji
 -------
 
