@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.24
+                2.25
               </div>
             
           
@@ -188,9 +188,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
+          <li><a href="../shipped-packages.html"><span class="section-number">5. </span>Shipped Packages</a> &raquo;</li>
         
-      <li>5.9. FilesCatalog Package</li>
+      <li><span class="section-number">5.9. </span>FilesCatalog Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,7 +208,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="filescatalog-package">
-<h1>5.9. FilesCatalog Package<a class="headerlink" href="#filescatalog-package" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5.9. </span>FilesCatalog Package<a class="headerlink" href="#filescatalog-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.16</p>
 <p>A package to catalog the content of your filesystem in a fine-grained fashion.</p>
 <p>It allows to quickly access specific files and/or applications <strong>you frequently
@@ -225,7 +225,7 @@ software)</p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2>5.9.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This package does not catalog any item by default and must be configured.</p>
 <p>It is mainly addressed to advanced users who wish to have full control on the
 content of their <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. As a result, configuring it may feel like
@@ -237,7 +237,7 @@ default configuration file of the package.</p>
 <p>Do not hesitate to head over to the <a class="reference external" href="https://gitter.im/Keypirinha/Keypirinha">Support Chat Room</a> if you have questions.</p>
 </div>
 <div class="section" id="profiles">
-<h2>5.9.2. Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9.2. </span>Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h2>
 <p>The configuration of this package is profile-based. Each profile corresponds to
 one scanning-then-filtering process of your files, before registering them into
 Keypirinha’s <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
@@ -259,7 +259,7 @@ values you already defined in the base profile.</p></li>
 </ul>
 </div>
 <div class="section" id="examples">
-<h2>5.9.3. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.9.3. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>For more details about each settings, read the inline documentation provided
@@ -268,7 +268,7 @@ executing the item <code class="docutils literal notranslate"><span class="pre">
 Keypirinha.</p>
 </div>
 <div class="section" id="example-1">
-<h3>5.9.3.1. Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.9.3.1. </span>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[profile/Docs]</span>
 <span class="na">activate</span> <span class="o">=</span> <span class="s">yes</span>
 <span class="na">paths</span> <span class="o">=</span> <span class="s">C:\MyDocumentsFiles</span>
@@ -288,7 +288,7 @@ default.</p></li>
 </ul>
 </div>
 <div class="section" id="example-2">
-<h3>5.9.3.2. Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.9.3.2. </span>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>You want to have access to executable tools you frequently use:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[profile/Tools]</span>
 <span class="na">activate</span> <span class="o">=</span> <span class="s">yes</span>
@@ -320,7 +320,7 @@ the <code class="docutils literal notranslate"><span class="pre">max_depth</span
 </ul>
 </div>
 <div class="section" id="example-3">
-<h3>5.9.3.3. Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.9.3.3. </span>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[profile/Things]</span>
 <span class="na">activate</span> <span class="o">=</span> <span class="s">yes</span>
 <span class="na">paths</span> <span class="o">=</span><span class="s"></span>

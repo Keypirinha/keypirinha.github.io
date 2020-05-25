@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.24
+                2.25
               </div>
             
           
@@ -170,9 +170,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../api.html">13. Extending Keypirinha (API)</a> &raquo;</li>
+          <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
-      <li>13.3. Embedded Python Interpreter</li>
+      <li><span class="section-number">13.3. </span>Embedded Python Interpreter</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,9 +190,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="embedded-python-interpreter">
-<h1>13.3. Embedded Python Interpreter<a class="headerlink" href="#embedded-python-interpreter" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13.3. </span>Embedded Python Interpreter<a class="headerlink" href="#embedded-python-interpreter" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="version">
-<h2>13.3.1. Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.1. </span>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
 <p>The embedded <a class="reference external" href="https://python.org">Python3</a> interpreter is a vanilla version of <em>CPython</em> (the
 official Python distribution). The Python environment you get in Keypirinha is
 pretty similar to the original one except that some modules have been removed
@@ -208,7 +208,7 @@ commands in the Console window:</p>
 </div>
 </div>
 <div class="section" id="non-debug">
-<h2>13.3.2. Non-Debug<a class="headerlink" href="#non-debug" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.2. </span>Non-Debug<a class="headerlink" href="#non-debug" title="Permalink to this headline">¶</a></h2>
 <p>When started, Keypirinha initializes the embedded Python interpreter and enables
 its <em>optimize</em> flag. This is equivalent to running the standard Python command
 with the <code class="docutils literal notranslate"><span class="pre">-O</span></code> option.</p>
@@ -216,11 +216,11 @@ with the <code class="docutils literal notranslate"><span class="pre">-O</span><
 not executed.</p>
 </div>
 <div class="section" id="modifications">
-<h2>13.3.3. Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.3. </span>Modifications<a class="headerlink" href="#modifications" title="Permalink to this headline">¶</a></h2>
 <p>There are some modifications made by Keypirinha that impact the default behavior
 of Python. All of these modifications are documented in this section.</p>
 <div class="section" id="exit-and-quit">
-<h3>13.3.3.1. exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">13.3.3.1. </span>exit() and quit()<a class="headerlink" href="#exit-and-quit" title="Permalink to this headline">¶</a></h3>
 <p>In its <em>vanilla</em> version, Python offers numerous ways to exit a program.
 Keypirinha on the other hand is not meant to be shutdown by its plugins and would
 crash in that case so traps have been installed to avoid that.</p>
@@ -233,7 +233,7 @@ application anyway, Python and Keypirinha both offer numerous ways to do that
 too.</p>
 </div>
 <div class="section" id="os-environ">
-<h3>13.3.3.2. os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">13.3.3.2. </span>os.environ<a class="headerlink" href="#os-environ" title="Permalink to this headline">¶</a></h3>
 <p>In the Python implementation that Keypirinha embeds, the <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.environ" title="(in Python v3.6)"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.environ</span></code></a>
 map is created at import time and never updated. The <a class="reference external" href="https://docs.python.org/3.6/library/os.html#os.getenv" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getenv()</span></code></a>
 function does not help here because it is just a wrapper around

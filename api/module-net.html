@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.24
+                2.25
               </div>
             
           
@@ -174,11 +174,11 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../api.html">13. Extending Keypirinha (API)</a> &raquo;</li>
+          <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
-          <li><a href="reference.html">13.2. API Reference</a> &raquo;</li>
+          <li><a href="reference.html"><span class="section-number">13.2. </span>API Reference</a> &raquo;</li>
         
-      <li>13.2.3. keypirinha_net module</li>
+      <li><span class="section-number">13.2.3. </span>keypirinha_net module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,11 +196,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="keypirinha-net-module">
-<h1>13.2.3. keypirinha_net module<a class="headerlink" href="#keypirinha-net-module" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13.2.3. </span>keypirinha_net module<a class="headerlink" href="#keypirinha-net-module" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">keypirinha_net</span></code> module offers some network utility features frequently
 required by the plugin developer.</p>
 <div class="section" id="module-keypirinha_net">
-<span id="reference"></span><h2>13.2.3.1. Reference<a class="headerlink" href="#module-keypirinha_net" title="Permalink to this headline">¶</a></h2>
+<span id="reference"></span><h2><span class="section-number">13.2.3.1. </span>Reference<a class="headerlink" href="#module-keypirinha_net" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="keypirinha_net.UrllibOpener">
 <em class="property">class </em><code class="sig-prename descclassname">keypirinha_net.</code><code class="sig-name descname">UrllibOpener</code><span class="sig-paren">(</span><em class="sig-param">opener</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_net.UrllibOpener" title="Permalink to this definition">¶</a></dt>
@@ -322,10 +322,10 @@ using <code class="docutils literal notranslate"><span class="pre">\n</span></co
 <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str.strip" title="(in Python v3.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.strip()</span></code></a>.</p>
 <p>Each entry of <em>proxies</em> must be a string that complies to the following
 grammar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prox_entry</span>  <span class="p">::</span><span class="o">=</span> <span class="p">[</span> <span class="n">conn_scheme</span> <span class="s2">&quot;=&quot;</span> <span class="p">]</span> <span class="n">proxy_url</span>
-<span class="n">conn_scheme</span> <span class="p">::</span><span class="o">=</span> <span class="p">(</span> <span class="s2">&quot;http&quot;</span> <span class="o">|</span> <span class="s2">&quot;https&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks4&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks5&quot;</span><span class="p">)</span>
-<span class="n">proxy_url</span>   <span class="p">::</span><span class="o">=</span> <span class="n">url_scheme</span> <span class="s2">&quot;://&quot;</span> <span class="p">[</span> <span class="n">proxy_user</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_pass</span> <span class="s2">&quot;@&quot;</span> <span class="p">]</span> <span class="n">netloc</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_port</span>
-<span class="n">proxy_port</span>  <span class="p">::</span><span class="o">=</span> <span class="n">unsigned</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prox_entry</span>  <span class="p">:</span><span class="o">:=</span> <span class="p">[</span> <span class="n">conn_scheme</span> <span class="s2">&quot;=&quot;</span> <span class="p">]</span> <span class="n">proxy_url</span>
+<span class="n">conn_scheme</span> <span class="p">:</span><span class="o">:=</span> <span class="p">(</span> <span class="s2">&quot;http&quot;</span> <span class="o">|</span> <span class="s2">&quot;https&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks4&quot;</span> <span class="o">|</span> <span class="s2">&quot;socks5&quot;</span><span class="p">)</span>
+<span class="n">proxy_url</span>   <span class="p">:</span><span class="o">:=</span> <span class="n">url_scheme</span> <span class="s2">&quot;://&quot;</span> <span class="p">[</span> <span class="n">proxy_user</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_pass</span> <span class="s2">&quot;@&quot;</span> <span class="p">]</span> <span class="n">netloc</span> <span class="s2">&quot;:&quot;</span> <span class="n">proxy_port</span>
+<span class="n">proxy_port</span>  <span class="p">:</span><span class="o">:=</span> <span class="n">unsigned</span>
 </pre></div>
 </div>
 <p>If the <code class="docutils literal notranslate"><span class="pre">conn_scheme</span></code> part is not specified, <code class="docutils literal notranslate"><span class="pre">url_scheme</span></code> is assumed.</p>

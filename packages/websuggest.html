@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.24
+                2.25
               </div>
             
           
@@ -187,9 +187,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../shipped-packages.html">5. Shipped Packages</a> &raquo;</li>
+          <li><a href="../shipped-packages.html"><span class="section-number">5. </span>Shipped Packages</a> &raquo;</li>
         
-      <li>5.18. WebSuggest Package</li>
+      <li><span class="section-number">5.18. </span>WebSuggest Package</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -207,12 +207,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="websuggest-package">
-<h1>5.18. WebSuggest Package<a class="headerlink" href="#websuggest-package" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5.18. </span>WebSuggest Package<a class="headerlink" href="#websuggest-package" title="Permalink to this headline">¶</a></h1>
 <p>Available since version 2.10</p>
 <p>Get suggestions from online providers like Bing, DuckDuckGo, Google, Wikipedia,
 Yahoo, …</p>
 <div class="section" id="usage">
-<h2>5.18.1. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.18.1. </span>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>By default, several items are inserted into the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>. One for each
 predefined suggestions provider: <code class="docutils literal notranslate"><span class="pre">Amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing</span></code>, <code class="docutils literal notranslate"><span class="pre">DuckDuckGo</span></code>,
 <code class="docutils literal notranslate"><span class="pre">Google</span></code>, <code class="docutils literal notranslate"><span class="pre">Qwant</span></code>, <code class="docutils literal notranslate"><span class="pre">Wikipedia</span></code>, <code class="docutils literal notranslate"><span class="pre">Yahoo</span></code> and <code class="docutils literal notranslate"><span class="pre">YouTube</span></code> (see package’s
@@ -234,7 +234,7 @@ corrected upstream to the benefit of the other Keypirinha users.</p>
 </div>
 </div>
 <div class="section" id="custom-items">
-<h2>5.18.2. Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.18.2. </span>Custom Items<a class="headerlink" href="#custom-items" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to change the list of the items to Catalog or their properties.
 There are two complementary ways to do so:</p>
 <ul class="simple">
@@ -247,7 +247,7 @@ There are two complementary ways to do so:</p>
 <a class="reference internal" href="../configuration.html"><span class="doc">Configuration</span></a> chapter before going further.</p>
 </div>
 <div class="section" id="declare-extra-items">
-<h3>5.18.2.1. Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.18.2.1. </span>Declare extra items<a class="headerlink" href="#declare-extra-items" title="Permalink to this headline">¶</a></h3>
 <p>Each <em>item</em> depends on a suggestions <em>provider</em>; several items may rely on the
 same <em>provider</em>. Here is a documented example:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[item/DuckDuckGo Autocomplete]</span>
@@ -295,7 +295,7 @@ example is not possible.</p></li>
 </div>
 </div>
 <div class="section" id="override-default-items">
-<h3>5.18.2.2. Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.18.2.2. </span>Override default items<a class="headerlink" href="#override-default-items" title="Permalink to this headline">¶</a></h3>
 <p>Predefined items are registered using the <code class="docutils literal notranslate"><span class="pre">predefined_item/</span></code> prefix in the
 name of the configuration section.</p>
 <p>For instance, if you wish to override the item <code class="docutils literal notranslate"><span class="pre">DuckDuckGo</span></code> predefined by
@@ -305,7 +305,7 @@ your configuration file.</p>
 </div>
 </div>
 <div class="section" id="custom-providers">
-<h2>5.18.3. Custom Providers<a class="headerlink" href="#custom-providers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.18.3. </span>Custom Providers<a class="headerlink" href="#custom-providers" title="Permalink to this headline">¶</a></h2>
 <p>With some technical knowledge it is possible to extend the list of the supported
 suggestions providers by registering them via the package’s configuration file.</p>
 <p>Documented example:</p>

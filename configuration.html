@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2.24
+                2.25
               </div>
             
           
@@ -171,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>7. Configuration</li>
+      <li><span class="section-number">7. </span>Configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,9 +189,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="configuration">
-<h1>7. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>7.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Keypirinha is file-driven. Its configuration data resides in files, which are
 human readable and modifiable.</p>
 <p>By design, Keypirinha does not offer any graphical interface to modify its
@@ -218,7 +218,7 @@ runtime and new/modified settings will immediately be applied.</p>
 </div>
 </div>
 <div class="section" id="first-modification">
-<h2>7.2. First Modification<a class="headerlink" href="#first-modification" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>First Modification<a class="headerlink" href="#first-modification" title="Permalink to this headline">¶</a></h2>
 <p>If you have selected the <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Application</span></code> item for the first time, you
 should now see two text files opened side by side on your screen.</p>
 <p>The one on the <strong>left</strong> is the original configuration file, bundled with the
@@ -258,19 +258,19 @@ grouped under it. For example:</p>
 </div>
 </div>
 <div class="section" id="modification-at-runtime">
-<h2>7.3. Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Modification at Runtime<a class="headerlink" href="#modification-at-runtime" title="Permalink to this headline">¶</a></h2>
 <p>When you save a new version of one or several of your configuration files,
 Keypirinha automatically detects the modifications you have made, if any, and
 apply them at runtime. The same apply to packages’ configuration.</p>
 </div>
 <div class="section" id="the-ini-format">
-<h2>7.4. The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>The INI Format<a class="headerlink" href="#the-ini-format" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">INI</span></code> file format is not precisely defined and there are plenty of
 variants out there. The format used by Keypirinha is readable by
 <a class="reference external" href="https://docs.python.org/3.6/library/configparser.html#module-configparser" title="(in Python v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">configparser</span></code></a> (<code class="docutils literal notranslate"><span class="pre">ExtendedInterpolation</span></code> is used), a <a class="reference external" href="https://python.org">Python</a> standard
 module for those who are familiar with it.</p>
 <div class="section" id="example">
-<span id="ini-example"></span><h3>7.4.1. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<span id="ini-example"></span><h3><span class="section-number">7.4.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment line so I can write whatever I want</span>
 
 <span class="k">[config]</span>
@@ -292,14 +292,14 @@ module for those who are familiar with it.</p>
 </div>
 </div>
 <div class="section" id="comments">
-<h3>7.4.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.2. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
 <p>It is possible to add comments to an <code class="docutils literal notranslate"><span class="pre">INI</span></code> file. Comments are not interpreted
 by the application and they are skipped at parsing-time.</p>
 <p>To add a comment to your configuration file, start a line with a <code class="docutils literal notranslate"><span class="pre">#</span></code>
 character.</p>
 </div>
 <div class="section" id="multiple-line-values">
-<h3>7.4.3. Multiple Line Values<a class="headerlink" href="#multiple-line-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.3. </span>Multiple Line Values<a class="headerlink" href="#multiple-line-values" title="Permalink to this headline">¶</a></h3>
 <p>Keypirinha or its packages may accept multiple line values for some of their
 settings (it is always specified). When you write mutiple line values, you must
 take care of <strong>indenting</strong> each line correctly to ensure the configuration file
@@ -307,7 +307,7 @@ will be interpreted properly by the application.</p>
 <p>See the <a class="reference internal" href="#ini-example"><span class="std std-ref">Example</span></a> section above for an exampe.</p>
 </div>
 <div class="section" id="reusable-values">
-<h3>7.4.4. Reusable Values<a class="headerlink" href="#reusable-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.4. </span>Reusable Values<a class="headerlink" href="#reusable-values" title="Permalink to this headline">¶</a></h3>
 <p>Keypirinha allows you to declare values that can be used elsewhere in <strong>any</strong>
 configuration file (application and plugins).</p>
 <p>If you wish your reusable value to be usable in any configuration file, you must
@@ -329,7 +329,7 @@ file.</p>
 <p>See the <a class="reference internal" href="#ini-example"><span class="std std-ref">Example</span></a> section above for an exampe.</p>
 </div>
 <div class="section" id="predefined-variables">
-<h3>7.4.5. Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.5. </span>Predefined variables<a class="headerlink" href="#predefined-variables" title="Permalink to this headline">¶</a></h3>
 <p>Keypirinha also automatically populates the <code class="docutils literal notranslate"><span class="pre">var</span></code> section with some predefined
 values that may come handy.</p>
 <p>To use them, use the following syntax in your configuration file: <br />
@@ -735,7 +735,7 @@ are also predefined. They may come handy to configure some packages.</p>
 </ul>
 </div>
 <div class="section" id="environment-values">
-<h3>7.4.6. Environment Values<a class="headerlink" href="#environment-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.4.6. </span>Environment Values<a class="headerlink" href="#environment-values" title="Permalink to this headline">¶</a></h3>
 <p>For convenience, Keypirinha automatically defines a section named <code class="docutils literal notranslate"><span class="pre">env</span></code>,
 populated with all the environment variables that could be found at the moment
 the configuration file is read.</p>
@@ -750,7 +750,7 @@ if you run Keypirinha on a USB key across multiple machines.</p>
 </div>
 </div>
 <div class="section" id="machine-and-user-specific-settings">
-<h2>7.5. Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.5. </span>Machine and User Specific Settings<a class="headerlink" href="#machine-and-user-specific-settings" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to have settings that will be applied only when Keypirinha runs on
 a specific <strong>machine</strong> and/or under a specific <strong>user</strong> session.</p>
 <p>To do that, the configuration file must be named according to a predefined
