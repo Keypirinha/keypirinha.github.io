@@ -161,6 +161,13 @@ like ``shutdown``, ``hibernate``, ``sleep``, ``restart``, ``lock``, ``logout``,
 ``trash``, ``emptytrash``, ... |br|
 Source: `<https://github.com/psistorm/keypirinha-systemcommands>`_
 
+Terminal-Profiles
+-----------------
+
+:ghu:`fran-f`'s package to list and open
+`Windows Terminal <https://github.com/microsoft/terminal/>` profiles. |br|
+Source: `<https://github.com/fran-f/keypirinha-terminal-profiles>`_
+
 Time
 ----
 
