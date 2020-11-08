@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="13.2.3. keypirinha_net module" href="module-net.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Keypirinha
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -134,6 +136,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -172,7 +175,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
@@ -201,87 +204,87 @@
 by the plugin developer.</p>
 <div class="section" id="module-keypirinha_util">
 <span id="reference"></span><h2><span class="section-number">13.2.2.1. </span>Reference<a class="headerlink" href="#module-keypirinha_util" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="keypirinha_util.FileAttr">
-<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">FileAttr</code><a class="headerlink" href="#keypirinha_util.FileAttr" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">FileAttr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.FileAttr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>File attribute flags returned by <a class="reference internal" href="#keypirinha_util.file_attributes" title="keypirinha_util.file_attributes"><code class="xref py py-func docutils literal notranslate"><span class="pre">file_attributes()</span></code></a>.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.COMPRESSED">
 <code class="sig-name descname">COMPRESSED</code><em class="property"> = 524288</em><a class="headerlink" href="#keypirinha_util.FileAttr.COMPRESSED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is compressed.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.DIR">
 <code class="sig-name descname">DIR</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.FileAttr.DIR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a directory.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.ENCRYPTED">
 <code class="sig-name descname">ENCRYPTED</code><em class="property"> = 1048576</em><a class="headerlink" href="#keypirinha_util.FileAttr.ENCRYPTED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is encrypted.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.EXE">
 <code class="sig-name descname">EXE</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.EXE_CONSOLE">
 <code class="sig-name descname">EXE_CONSOLE</code><em class="property"> = 32</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_CONSOLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a> and <a class="reference internal" href="#keypirinha_util.FileAttr.EXE" title="keypirinha_util.FileAttr.EXE"><code class="xref py py-const docutils literal notranslate"><span class="pre">EXE</span></code></a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.EXE_GUI">
 <code class="sig-name descname">EXE_GUI</code><em class="property"> = 64</em><a class="headerlink" href="#keypirinha_util.FileAttr.EXE_GUI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an executable.
 Combined with <a class="reference internal" href="#keypirinha_util.FileAttr.FILE" title="keypirinha_util.FileAttr.FILE"><code class="xref py py-const docutils literal notranslate"><span class="pre">FILE</span></code></a> and <a class="reference internal" href="#keypirinha_util.FileAttr.EXE" title="keypirinha_util.FileAttr.EXE"><code class="xref py py-const docutils literal notranslate"><span class="pre">EXE</span></code></a>.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.FILE">
 <code class="sig-name descname">FILE</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.FileAttr.FILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a regular file.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.HIDDEN">
 <code class="sig-name descname">HIDDEN</code><em class="property"> = 262144</em><a class="headerlink" href="#keypirinha_util.FileAttr.HIDDEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is hidden.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.LINK">
 <code class="sig-name descname">LINK</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.FileAttr.LINK" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to a link file (<code class="docutils literal notranslate"><span class="pre">.lnk</span></code>).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.READONLY">
 <code class="sig-name descname">READONLY</code><em class="property"> = 131072</em><a class="headerlink" href="#keypirinha_util.FileAttr.READONLY" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is read-only.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.REMOVABLE">
 <code class="sig-name descname">REMOVABLE</code><em class="property"> = 4194304</em><a class="headerlink" href="#keypirinha_util.FileAttr.REMOVABLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is a removable media <strong>or</strong> is stored on a removable media.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.SHARED">
 <code class="sig-name descname">SHARED</code><em class="property"> = 2097152</em><a class="headerlink" href="#keypirinha_util.FileAttr.SHARED" title="Permalink to this definition">¶</a></dt>
 <dd><p>File is shared.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.FileAttr.UNKNOWN_TYPE">
 <code class="sig-name descname">UNKNOWN_TYPE</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.FileAttr.UNKNOWN_TYPE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path points to an existing item of an unknown type.
@@ -292,36 +295,36 @@ This flag might be combined with other flags except <a class="reference internal
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="keypirinha_util.ScanFlags">
-<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">ScanFlags</code><a class="headerlink" href="#keypirinha_util.ScanFlags" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">ScanFlags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.ScanFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.IntEnum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
 <p>The <em>flags</em> to pass to <a class="reference internal" href="#keypirinha_util.scan_directory" title="keypirinha_util.scan_directory"><code class="xref py py-func docutils literal notranslate"><span class="pre">scan_directory()</span></code></a>.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.ABORT_ON_ERROR">
 <code class="sig-name descname">ABORT_ON_ERROR</code><em class="property"> = 16</em><a class="headerlink" href="#keypirinha_util.ScanFlags.ABORT_ON_ERROR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abort if any error occurs while scanning a sub-folder</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.CASE_SENSITIVE">
 <code class="sig-name descname">CASE_SENSITIVE</code><em class="property"> = 8</em><a class="headerlink" href="#keypirinha_util.ScanFlags.CASE_SENSITIVE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Case-sensitive scan (default is case-unsensitive)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.DEFAULT">
 <code class="sig-name descname">DEFAULT</code><em class="property"> = 3</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DEFAULT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combination of <code class="xref py py-const docutils literal notranslate"><span class="pre">SCAN_FILES</span></code> | <code class="xref py py-const docutils literal notranslate"><span class="pre">SCAN_DIRS</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.DIRS">
 <code class="sig-name descname">DIRS</code><em class="property"> = 2</em><a class="headerlink" href="#keypirinha_util.ScanFlags.DIRS" title="Permalink to this definition">¶</a></dt>
 <dd><p>List directories</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.FILES">
 <code class="sig-name descname">FILES</code><em class="property"> = 1</em><a class="headerlink" href="#keypirinha_util.ScanFlags.FILES" title="Permalink to this definition">¶</a></dt>
 <dd><p>everything that is not a directory)</p>
@@ -332,7 +335,7 @@ This flag might be combined with other flags except <a class="reference internal
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha_util.ScanFlags.HIDDEN">
 <code class="sig-name descname">HIDDEN</code><em class="property"> = 4</em><a class="headerlink" href="#keypirinha_util.ScanFlags.HIDDEN" title="Permalink to this definition">¶</a></dt>
 <dd><p>List hidden files</p>
@@ -340,9 +343,9 @@ This flag might be combined with other flags except <a class="reference internal
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.browse_directory">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">browse_directory</code><span class="sig-paren">(</span><em class="sig-param">plugin</em>, <em class="sig-param">base_dir</em>, <em class="sig-param">check_base_dir=True</em>, <em class="sig-param">search_terms=''</em>, <em class="sig-param">store_score=False</em>, <em class="sig-param">show_dirs_first=True</em>, <em class="sig-param">show_hidden_files=False</em>, <em class="sig-param">show_system_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">browse_directory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plugin</span></em>, <em class="sig-param"><span class="n">base_dir</span></em>, <em class="sig-param"><span class="n">check_base_dir</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">search_terms</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">store_score</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">show_dirs_first</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">show_hidden_files</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">show_system_files</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.browse_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan the first level of a directory according to a search term (optional)
 and some filtering rules in order to get <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a>
 objects to feed <a class="reference internal" href="plugin.html#keypirinha.Plugin.set_suggestions" title="keypirinha.Plugin.set_suggestions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypirinha.Plugin.set_suggestions()</span></code></a>.</p>
@@ -385,9 +388,9 @@ is a <a class="reference internal" href="module.html#keypirinha.Sort" title="key
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.chardet_open">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_open</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">mode='r'</em>, <em class="sig-param">buffering=-1</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_open" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'r'</span></em>, <em class="sig-param"><span class="n">buffering</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">encoding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_open" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#open" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function that <strong>tries</strong> to detect text file’s encoding.</p>
 <p>This function has the same return value, behavior and parameters than the
 standard <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#open" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> function except that <code class="docutils literal notranslate"><span class="pre">encoding</span></code> argument is
@@ -402,16 +405,16 @@ in the <code class="docutils literal notranslate"><span class="pre">mode</span><
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.chardet_slurp">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_slurp</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_slurp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">chardet_slurp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.chardet_slurp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fully extract a text file into memory after having automatically detected
 its encoding.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.cmdline_quote">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_quote</code><span class="sig-paren">(</span><em class="sig-param">arg_or_list</em>, <em class="sig-param">force_quote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_quote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_quote</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg_or_list</span></em>, <em class="sig-param"><span class="n">force_quote</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_quote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Joins and quotes arguments the Windows way.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -442,9 +445,9 @@ a command line).</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.cmdline_split">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_split</code><span class="sig-paren">(</span><em class="sig-param">cmdline</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_split" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">cmdline_split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdline</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.cmdline_split" title="Permalink to this definition">¶</a></dt>
 <dd><p>Splits and unquotes (the Windows way) the given command line (string).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -466,17 +469,17 @@ and quote a list of arguments).</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.execute_default_action">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">execute_default_action</code><span class="sig-paren">(</span><em class="sig-param">plugin</em>, <em class="sig-param">catalog_item</em>, <em class="sig-param">catalog_action</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.execute_default_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">execute_default_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plugin</span></em>, <em class="sig-param"><span class="n">catalog_item</span></em>, <em class="sig-param"><span class="n">catalog_action</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.execute_default_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a default <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogAction</span></code></a> using a given
 <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> object. <em>plugin</em> is the calling
 <a class="reference internal" href="plugin.html#keypirinha.Plugin" title="keypirinha.Plugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Plugin</span></code></a> object.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.explore_file">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">explore_file</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.explore_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">explore_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.explore_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open file explorer at a given location (<em>file</em>, which may also be a folder).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">file_explorer</span></code> global setting is used if possible, otherwise Windows
 Explorer is invoked.</p>
@@ -484,9 +487,9 @@ Explorer is invoked.</p>
 with no particular location specified.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.file_attributes">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">file_attributes</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">follow_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.file_attributes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">file_attributes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">follow_link</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.file_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches and returns the attributes of a given <em>file</em>.</p>
 <p>If the <em>follow_link</em> argument is True and <em>file</em> is a link, the
 function will return the attributes of its target; even if the target is
@@ -505,9 +508,9 @@ also a link file (i.e.: only one level of recursion).</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.fuzzy_score">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">fuzzy_score</code><span class="sig-paren">(</span><em class="sig-param">search</em>, <em class="sig-param">against</em>, <em class="sig-param">apply_same_case_bonus=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.fuzzy_score" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">fuzzy_score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">search</span></em>, <em class="sig-param"><span class="n">against</span></em>, <em class="sig-param"><span class="n">apply_same_case_bonus</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.fuzzy_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the matching score of a <em>search</em> string <em>against</em> another one.</p>
 <p>If case matters, the <em>apply_same_case_bonus</em> argument can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>
 to apply a bonus on a matching characters that have the same case. You
@@ -525,7 +528,7 @@ the match is.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.get_clipboard">
 <code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">get_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.get_clipboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a string containing system’s clipboard only if it contains text.</p>
@@ -536,9 +539,9 @@ the match is.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.kwargs_decode">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_decode</code><span class="sig-paren">(</span><em class="sig-param">encoded_string</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_decode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_decode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoded_string</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_decode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decodes a string encoded by <a class="reference internal" href="#keypirinha_util.kwargs_encode" title="keypirinha_util.kwargs_encode"><code class="xref py py-func docutils literal notranslate"><span class="pre">kwargs_encode()</span></code></a> and returns a
 dictionary.</p>
 <div class="admonition seealso">
@@ -547,9 +550,9 @@ dictionary.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.kwargs_encode">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_encode</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_encode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">kwargs_encode</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.kwargs_encode" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL encodes passed keyword arguments into an escaped string that can be used
 as a <em>target</em> property for a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.CatalogItem</span></code></a> object.</p>
 <p>Only basic types are allowed: <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">str</span></code>.
@@ -575,9 +578,9 @@ as a <em>target</em> property for a <a class="reference internal" href="catalogi
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.raise_winerror">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">raise_winerror</code><span class="sig-paren">(</span><em class="sig-param">winerr=None</em>, <em class="sig-param">msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">raise_winerror</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">winerr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.raise_winerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raises <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#OSError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> (formerly <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#WindowsError" title="(in Python v3.6)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">WindowsError</span></code></a>) using the given
 Windows Error number. If the error number is not given,
 <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a> is called.</p>
@@ -585,9 +588,9 @@ Windows Error number. If the error number is not given,
 <a class="reference external" href="https://docs.python.org/3.6/library/ctypes.html#ctypes.GetLastError" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ctypes.GetLastError()</span></code></a>, is <code class="docutils literal notranslate"><span class="pre">0</span></code> (zero).</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.read_link">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">read_link</code><span class="sig-paren">(</span><em class="sig-param">link_file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.read_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">read_link</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">link_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.read_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the properties of a Shell Link File (<code class="docutils literal notranslate"><span class="pre">.lnk</span></code>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -618,7 +621,7 @@ Windows Error number. If the error number is not given,
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.scan_directory">
 <code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">scan_directory</code><span class="sig-paren">(</span><em class="sig-param">base_dir</em>, <em class="sig-param">name_patterns='*'</em>, <em class="sig-param">flags=&lt;ScanFlags.DEFAULT: 3&gt;</em>, <em class="sig-param">max_level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.scan_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Walks a directory and builds a list of relative paths.</p>
@@ -684,9 +687,9 @@ kept here only to maintain backward compatibility.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.set_clipboard">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">set_clipboard</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.set_clipboard" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">set_clipboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.set_clipboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the content of system’s clipboard.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -694,9 +697,9 @@ kept here only to maintain backward compatibility.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.shell_execute">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_execute</code><span class="sig-paren">(</span><em class="sig-param">thing</em>, <em class="sig-param">args=''</em>, <em class="sig-param">working_dir=''</em>, <em class="sig-param">verb=''</em>, <em class="sig-param">try_runas=True</em>, <em class="sig-param">detect_nongui=True</em>, <em class="sig-param">api_flags=None</em>, <em class="sig-param">terminal_cmd=None</em>, <em class="sig-param">show=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thing</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">working_dir</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">verb</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">try_runas</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">detect_nongui</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">api_flags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminal_cmd</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes, opens, edits (or whatever) an application, a file, a directory, by
 calling Win32’s <code class="docutils literal notranslate"><span class="pre">ShellExecuteEx</span></code> function.</p>
 <dl class="field-list simple">
@@ -774,9 +777,9 @@ a URL since it takes care of applying user’s preferences.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.shell_known_folder_path">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_known_folder_path</code><span class="sig-paren">(</span><em class="sig-param">guid</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_known_folder_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_known_folder_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">guid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_known_folder_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the path of a Shell Known Folder according to its GUID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -801,9 +804,9 @@ Note that not all Known Folders are available on every platforms.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.shell_resolve_exe_path">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_resolve_exe_path</code><span class="sig-paren">(</span><em class="sig-param">path_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_resolve_exe_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_resolve_exe_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path_or_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_resolve_exe_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tries to resolve <em>path_or_name</em> using environment <code class="docutils literal notranslate"><span class="pre">PATH</span></code> and <code class="docutils literal notranslate"><span class="pre">PATHEXT</span></code>
 variables.</p>
 <p><em>path_or_name</em> can be a path or just the name of the executable to
@@ -812,9 +815,9 @@ directories listed in the <code class="docutils literal notranslate"><span class
 <p>Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if executable could not be found or if an error occurred.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.shell_string_resource">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_string_resource</code><span class="sig-paren">(</span><em class="sig-param">resource_location</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_string_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_string_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_location</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_string_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the content of a string resource from an external module (DLL)
 according to its location. Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if an error occurred.</p>
 <dl class="field-list simple">
@@ -828,9 +831,9 @@ Microsoft’s rules.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.shell_url_scheme_to_command">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_url_scheme_to_command</code><span class="sig-paren">(</span><em class="sig-param">url_scheme</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_url_scheme_to_command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">shell_url_scheme_to_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url_scheme</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.shell_url_scheme_to_command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get system’s default command line associated with the given URL scheme(s);
 and the location of its default icon.</p>
 <dl class="field-list simple">
@@ -855,17 +858,17 @@ location string of class’ default icon.</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.slurp_text_file">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">slurp_text_file</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.slurp_text_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">slurp_text_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.slurp_text_file" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 2.5.3: </span>Use <a class="reference internal" href="#keypirinha_util.chardet_slurp" title="keypirinha_util.chardet_slurp"><code class="xref py py-func docutils literal notranslate"><span class="pre">chardet_slurp()</span></code></a> instead</p>
 </div>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="keypirinha_util.web_browser_command">
-<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">web_browser_command</code><span class="sig-paren">(</span><em class="sig-param">private_mode=None</em>, <em class="sig-param">new_window=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">execute=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.web_browser_command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">keypirinha_util.</code><code class="sig-name descname">web_browser_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">private_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">execute</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha_util.web_browser_command" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Swiss Knife function to deal with the web browser setup in Keypirinha’s
 global configuration (see the <code class="docutils literal notranslate"><span class="pre">web_browser</span></code> setting in the <code class="docutils literal notranslate"><span class="pre">[external]</span></code>
 section), or by default, with the system’s default web browser.</p>
@@ -958,6 +961,7 @@ or not the launch request is successful.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -972,7 +976,6 @@ or not the launch request is successful.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

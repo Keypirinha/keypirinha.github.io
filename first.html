@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5. Shipped Packages" href="shipped-packages.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -134,6 +136,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -172,7 +175,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li><span class="section-number">4. </span>First steps</li>
     
@@ -212,12 +215,12 @@ restored to normal as soon as plugins have finished their jobs.</p>
 </div>
 <div class="section" id="open-the-launchbox">
 <h2><span class="section-number">4.2. </span>Open the LaunchBox<a class="headerlink" href="#open-the-launchbox" title="Permalink to this headline">¶</a></h2>
-<p>Once Keypirinha is running, press <kbd class="kbd docutils literal notranslate">Ctrl+Win+K</kbd> (by default) to show the
-<a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>…</p>
+<p>Once Keypirinha is running, press <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">K</kbd></kbd> (by default) to show the
+<a class="reference internal" href="glossary.html#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a>…</p>
 <img alt="|project|'s main dialog" class="align-center" src="_images/wndrun.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Many former <em>Launchy</em> users change the default hotkey to <kbd class="kbd docutils literal notranslate">Alt+Space</kbd></p>
+<p>Many former <em>Launchy</em> users change the default hotkey to <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Space</kbd></kbd></p>
 </div>
 </div>
 <div class="section" id="first-search">
@@ -288,7 +291,7 @@ line option so let’s try typing this one and execute our item.</p>
 <p>Search and select the <em>Firefox</em> item again.</p>
 <img alt="_images/wndrun-search2.png" class="align-center" src="_images/wndrun-search2.png" />
 <p>By default, the number of actions available for the selected item are displayed
-at the right side: here <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">actions</span></code>. Hit the <kbd class="kbd docutils literal notranslate">Ctrl+Enter</kbd> to visualize
+at the right side: here <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">actions</span></code>. Hit the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd> to visualize
 these actions (or the <kbd class="kbd docutils literal notranslate">Tab</kbd> key until you reach the actions list).</p>
 <p>Because this particular <em>Firefox</em> item is a file, a <code class="file docutils literal notranslate"><span class="pre">*.lnk</span></code> file in this
 example, the following actions are made available:</p>
@@ -297,15 +300,15 @@ example, the following actions are made available:</p>
 </div>
 <div class="section" id="maximize-the-launchbox">
 <span id="first-maximize"></span><h2><span class="section-number">4.8. </span>Maximize the LaunchBox<a class="headerlink" href="#maximize-the-launchbox" title="Permalink to this headline">¶</a></h2>
-<p><kbd class="kbd docutils literal notranslate">Alt+X</kbd> (or <kbd class="kbd docutils literal notranslate">Win+Up</kbd>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
+<p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">X</kbd></kbd> (or <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">Up</kbd></kbd>) <strong>toggles</strong> between <em>normal</em> and <em>maximized</em>
 state.</p>
 <p>You may need to <strong>temporarily extend the size</strong> of the LaunchBox sometimes in
 order to see the full content of some items in the results list. You can do that
-by either pressing <kbd class="kbd docutils literal notranslate">Alt+X</kbd> or <kbd class="kbd docutils literal notranslate">Win+Up</kbd> (toggle).</p>
+by either pressing <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">X</kbd></kbd> or <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">Up</kbd></kbd> (toggle).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This feature does not impact the geometry you manually setup in case your
-<code class="docutils literal notranslate"><span class="pre">geometry</span></code> setting is <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. Hit <kbd class="kbd docutils literal notranslate">Alt+X</kbd> again and your
+<code class="docutils literal notranslate"><span class="pre">geometry</span></code> setting is <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. Hit <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">X</kbd></kbd> again and your
 previous position and size will be restored. <strong>CAUTION:</strong> If you are in
 <code class="docutils literal notranslate"><span class="pre">persistent</span></code> geometry, do not reposition/resize the window <strong>while being
 in maximized mode</strong> or you will loose your previous geometry.</p>
@@ -313,11 +316,11 @@ in maximized mode</strong> or you will loose your previous geometry.</p>
 </div>
 <div class="section" id="leave-a-search">
 <h2><span class="section-number">4.9. </span>Leave a Search<a class="headerlink" href="#leave-a-search" title="Permalink to this headline">¶</a></h2>
-<p>May you wish to abort what you were doing on the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a>, press the
+<p>May you wish to abort what you were doing on the <a class="reference internal" href="glossary.html#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a>, press the
 <kbd class="kbd docutils literal notranslate">Esc</kbd> key. Press it <strong>once</strong>, to clear your search, <strong>twice</strong> to close the
 dialog. Note that one time is enough if you didn’t type anything.</p>
-<p>If you wish to close the window directly, press <kbd class="kbd docutils literal notranslate">Shift+Esc</kbd> or
-<kbd class="kbd docutils literal notranslate">Alt+F4</kbd>.</p>
+<p>If you wish to close the window directly, press <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Esc</kbd></kbd> or
+<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">F4</kbd></kbd>.</p>
 </div>
 <div class="section" id="drag-and-drop">
 <span id="first-drag"></span><h2><span class="section-number">4.10. </span>Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this headline">¶</a></h2>
@@ -353,7 +356,7 @@ desired drop effect.</p>
 <code class="docutils literal notranslate"><span class="pre">Clear</span> <span class="pre">History</span></code> item that can always be found in the Catalog. It can be done
 from application’s main contextual menu as well (right click on the LaunchBox).</p>
 <p>If you just want to erase a <strong>single</strong> item from the history, just search for
-it, select it and press <kbd class="kbd docutils literal notranslate">Ctrl+Del</kbd>. A message dialog will ask you to
+it, select it and press <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Del</kbd></kbd>. A message dialog will ask you to
 confirm the operation.</p>
 <p>It is also possible to delete every reference to a specific package from the
 history by selecting a result item from this package, then clicking the
@@ -377,7 +380,7 @@ items, that is described in the <a class="reference internal" href="#first-assoc
 </div>
 <div class="section" id="plugins">
 <h2><span class="section-number">4.14. </span>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
-<p>Some plugins, called <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">packages</span></a> in Keypirinha, are shipped with Keypirinha
+<p>Some plugins, called <a class="reference internal" href="glossary.html#term-Packages"><span class="xref std std-term">packages</span></a> in Keypirinha, are shipped with Keypirinha
 and are available out of the box. See <a class="reference internal" href="shipped-packages.html"><span class="doc">Shipped Packages</span></a>.</p>
 <p>Also, some Keypirinha users kindly shared the packages they developed to the
 community. You may find them useful. See <a class="reference internal" href="contributions.html"><span class="doc">Third-Party Packages</span></a>.</p>
@@ -418,6 +421,7 @@ needs.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -432,7 +436,6 @@ needs.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

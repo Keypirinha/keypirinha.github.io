@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="13.2. API Reference" href="reference.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Keypirinha
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -132,6 +134,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -170,7 +173,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
@@ -205,7 +208,7 @@ code is running.</p>
 <div class="section" id="loading">
 <span id="api-overview-loading"></span><h3><span class="section-number">13.1.2.1. </span>Loading<a class="headerlink" href="#loading" title="Permalink to this headline">¶</a></h3>
 <p>When the application starts, it loads the embedded <a class="reference external" href="https://python.org">Python</a> interpreter and
-builds a list of the available <a class="reference internal" href="../glossary.html#term-packages"><span class="xref std std-term">packages</span></a>, omitting the ones that are
+builds a list of the available <a class="reference internal" href="../glossary.html#term-Packages"><span class="xref std std-term">packages</span></a>, omitting the ones that are
 flagged as <em>disabled</em> in the configuration file.</p>
 <p>Once the list of valid packages is built, Keypirinha scans their files and look
 for <code class="file docutils literal notranslate"><span class="pre">*.py</span></code> scripts. Each one of those scripts is loaded through the Python
@@ -260,13 +263,13 @@ number to every loaded instance of a Package and its plugins.</p>
 <h3><span class="section-number">13.1.2.3. </span>InstanceID<a class="headerlink" href="#instanceid" title="Permalink to this headline">¶</a></h3>
 <p>The InstanceID is an unsigned integer internally created and managed by the
 application, assigned at runtime to every loaded package and plugin. It is
-essentially used to ensure plugins are not messing up the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">catalog</span></a>.</p>
+essentially used to ensure plugins are not messing up the <a class="reference internal" href="../glossary.html#term-Catalog"><span class="xref std std-term">catalog</span></a>.</p>
 <p>When a package is loaded for the first time, it receives the InstanceID <code class="docutils literal notranslate"><span class="pre">1</span></code>,
 as well as its plugins. When any change is detected in one or several of its
 files, the package is reloaded and its InstanceID is incremented.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>By extension, every <a class="reference internal" href="../glossary.html#term-plugin"><span class="xref std std-term">plugin</span></a> of a package receives the InstanceID of
+<p>By extension, every <a class="reference internal" href="../glossary.html#term-Plugin"><span class="xref std std-term">plugin</span></a> of a package receives the InstanceID of
 its parent package when it is loaded or reloaded.</p>
 </div>
 </div>
@@ -334,6 +337,7 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -348,7 +352,6 @@ Registry using the <a class="reference external" href="https://docs.python.org/3
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

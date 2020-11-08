@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="13.2.7. Plugin class" href="plugin.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Keypirinha
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -131,6 +133,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -169,7 +172,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
@@ -194,30 +197,30 @@
             
   <div class="section" id="iconhandle-class">
 <h1><span class="section-number">13.2.6. </span>IconHandle class<a class="headerlink" href="#iconhandle-class" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="keypirinha.IconHandle">
-<em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">IconHandle</code><span class="sig-paren">(</span><em class="sig-param">icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">IconHandle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">icon_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle" title="Permalink to this definition">¶</a></dt>
 <dd><p>An opaque handle object created by <a class="reference internal" href="plugin.html#keypirinha.Plugin.load_icon" title="keypirinha.Plugin.load_icon"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Plugin.load_icon()</span></code></a> and
 by <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_icon()</span></code></a>.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.IconHandle.__bool__">
 <code class="sig-name descname">__bool__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__bool__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicate whether this handle has been <a class="reference internal" href="#keypirinha.IconHandle.free" title="keypirinha.IconHandle.free"><code class="xref py py-meth docutils literal notranslate"><span class="pre">free()</span></code></a> or not.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.IconHandle.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">icon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">icon_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha.IconHandle.__weakref__">
 <code class="sig-name descname">__weakref__</code><a class="headerlink" href="#keypirinha.IconHandle.__weakref__" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of weak references to the object (if defined)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.IconHandle.free">
 <code class="sig-name descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.free" title="Permalink to this definition">¶</a></dt>
 <dd><p>Frees the icon associated with this handle.</p>
@@ -240,7 +243,7 @@ by the destructor of this object.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.IconHandle.is_init">
 <code class="sig-name descname">is_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.IconHandle.is_init" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
@@ -272,6 +275,7 @@ by the destructor of this object.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -286,7 +290,6 @@ by the destructor of this object.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

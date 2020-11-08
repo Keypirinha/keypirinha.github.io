@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="16. Frequently Asked Questions (FAQ)" href="faq.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -116,6 +118,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -154,7 +157,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li><span class="section-number">15. </span>Glossary</li>
     
@@ -176,12 +179,12 @@
   <div class="section" id="glossary">
 <h1><span class="section-number">15. </span>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <dl class="glossary">
-<dt id="term-catalog">Catalog</dt><dd><p>The Catalog is the name of the internal database of Keypirinha where all
-the <a class="reference internal" href="#term-items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</p>
+<dt id="term-Catalog">Catalog</dt><dd><p>The Catalog is the name of the internal database of Keypirinha where all
+the <a class="reference internal" href="#term-Items"><span class="xref std std-term">items</span></a> are indexed to allow a quick search.</p>
 </dd>
-<dt id="term-catalogitem">CatalogItem</dt><dd><p>The class name of an <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a> (API).</p>
+<dt id="term-CatalogItem">CatalogItem</dt><dd><p>The class name of an <a class="reference internal" href="#term-Item"><span class="xref std std-term">item</span></a> (API).</p>
 </dd>
-<dt id="term-console">Console</dt><dd><p>The <em>Console</em> window gives access to the output of application’s log. It
+<dt id="term-Console">Console</dt><dd><p>The <em>Console</em> window gives access to the output of application’s log. It
 should be your first destination in case of error or unexpected
 behavior in order to check if a plugin emitted some warning or error
 message.</p>
@@ -189,46 +192,46 @@ message.</p>
 interpreter and Keypirinha’s API.</p>
 <p>The <em>Console</em> can be opened:</p>
 <ul class="simple">
-<li><p>by pressing <kbd class="kbd docutils literal notranslate">F2</kbd> from the <a class="reference internal" href="#term-launchbox"><span class="xref std std-term">LaunchBox</span></a></p></li>
+<li><p>by pressing <kbd class="kbd docutils literal notranslate">F2</kbd> from the <a class="reference internal" href="#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a></p></li>
 <li><p>by executing the <code class="docutils literal notranslate"><span class="pre">Keypirinha:</span> <span class="pre">Console</span></code> item (the <code class="docutils literal notranslate"><span class="pre">Internal</span></code>
 package must be enabled)</p></li>
 <li><p>via Keypirinha’s main menu</p></li>
 </ul>
 <img alt="|project|'s Console" class="align-center" src="_images/console.png" />
 </dd>
-<dt id="term-diagnostic-window">Diagnostic Window</dt><dd><p>The <em>Diagnostic Window</em> is useful in case you want to report an issue.
+<dt id="term-Diagnostic-Window">Diagnostic Window</dt><dd><p>The <em>Diagnostic Window</em> is useful in case you want to report an issue.
 See <a class="reference internal" href="contribute.html#contribute-issue"><span class="std std-ref">How to Report an Issue</span></a>.</p>
 <p>The <em>Diagnostic Window</em> can be opened:</p>
 <ul class="simple">
-<li><p>by pressing <kbd class="kbd docutils literal notranslate">F3</kbd> from the <a class="reference internal" href="#term-launchbox"><span class="xref std std-term">LaunchBox</span></a></p></li>
+<li><p>by pressing <kbd class="kbd docutils literal notranslate">F3</kbd> from the <a class="reference internal" href="#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a></p></li>
 <li><p>by executing the <code class="docutils literal notranslate"><span class="pre">Keypirinha:</span> <span class="pre">Diagnostic</span> <span class="pre">Window</span></code> item (the
 <code class="docutils literal notranslate"><span class="pre">Internal</span></code> package must be enabled)</p></li>
 <li><p>via Keypirinha’s main menu</p></li>
 </ul>
 </dd>
-<dt id="term-instanceid">InstanceID</dt><dd><p>Keypirinha allows the code source of its packages to be modified at
+<dt id="term-InstanceID">InstanceID</dt><dd><p>Keypirinha allows the code source of its packages to be modified at
 runtime by automatically reloading them every time a modification is
 done.</p>
 <p>The InstanceID number is an unsigned integer internally managed by the
-application and assigned at runtime to each <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>, each time
+application and assigned at runtime to each <a class="reference internal" href="#term-Package"><span class="xref std std-term">package</span></a>, each time
 they are (re)loaded.</p>
 <p>It is also used to ensure only the latest instance of a given package
-has write access to its section of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
+has write access to its section of the <a class="reference internal" href="#term-Catalog"><span class="xref std std-term">Catalog</span></a>.</p>
 <p>Read <a class="reference internal" href="api/overview.html"><span class="doc">Overview</span></a> for more information.</p>
 </dd>
-<dt id="term-item">Item</dt><dt id="term-items">Items</dt><dd><p>An item is the data unit of the <a class="reference internal" href="#term-catalog"><span class="xref std std-term">Catalog</span></a> (Keypirinha’s internal
+<dt id="term-Item">Item</dt><dt id="term-Items">Items</dt><dd><p>An item is the data unit of the <a class="reference internal" href="#term-Catalog"><span class="xref std std-term">Catalog</span></a> (Keypirinha’s internal
 database). It is a simple data structure, created by the
-<a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a>, that has some properties like a display name (label),
+<a class="reference internal" href="#term-Plugins"><span class="xref std std-term">plugins</span></a>, that has some properties like a display name (label),
 a category (File, URL, Command Line, …), a reference to the parent
-<a class="reference internal" href="#term-plugin"><span class="xref std std-term">plugin</span></a>, etc…</p>
+<a class="reference internal" href="#term-Plugin"><span class="xref std std-term">plugin</span></a>, etc…</p>
 </dd>
-<dt id="term-launchbox">LaunchBox</dt><dd><p>The L(a)unchBox is the main window of Keypirinha, from which you can make
-a search and launch the selected <a class="reference internal" href="#term-item"><span class="xref std std-term">item</span></a>. It can be opened by
-pressing the <kbd class="kbd docutils literal notranslate">Ctrl+Win+K</kbd> combination (default).</p>
+<dt id="term-LaunchBox">LaunchBox</dt><dd><p>The L(a)unchBox is the main window of Keypirinha, from which you can make
+a search and launch the selected <a class="reference internal" href="#term-Item"><span class="xref std std-term">item</span></a>. It can be opened by
+pressing the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">K</kbd></kbd> combination (default).</p>
 <p>More info in the <a class="reference internal" href="first.html"><span class="doc">First steps</span></a> chapter.</p>
 <img alt="|project|'s LaunchBox" class="align-center" src="_images/wndrun.png" />
 </dd>
-<dt id="term-package">Package</dt><dt id="term-packages">Packages</dt><dd><p>A Package is a container of one or several <a class="reference internal" href="#term-plugins"><span class="xref std std-term">plugins</span></a> that
+<dt id="term-Package">Package</dt><dt id="term-Packages">Packages</dt><dd><p>A Package is a container of one or several <a class="reference internal" href="#term-Plugins"><span class="xref std std-term">plugins</span></a> that
 represent a single feature, or a set of related features.</p>
 <p>It contains the source code of its plugins, their dependencies, a
 default configuration file, if any, and optionally some documentation.</p>
@@ -237,12 +240,12 @@ packed in an archive to ease its redistribution (i.e. a
 <code class="file docutils literal notranslate"><span class="pre">*.keypirinha-package</span></code> file, which is a regular zip archive).</p>
 <p>Read <a class="reference internal" href="packages.html"><span class="doc">Packages Structure</span></a> for more information.</p>
 </dd>
-<dt id="term-plugin">Plugin</dt><dt id="term-plugins">Plugins</dt><dd><p>In the context of Keypirinha, a Plugin is a software component written in
+<dt id="term-Plugin">Plugin</dt><dt id="term-Plugins">Plugins</dt><dd><p>In the context of Keypirinha, a Plugin is a software component written in
 <a class="reference external" href="https://python.org">Python3</a> that extends the base features of the application. <strong>It is
-always encapsulated in a</strong> <a class="reference internal" href="#term-package"><span class="xref std std-term">package</span></a>.</p>
+always encapsulated in a</strong> <a class="reference internal" href="#term-Package"><span class="xref std std-term">package</span></a>.</p>
 </dd>
-<dt id="term-repository">Repository</dt><dt id="term-repositories">Repositories</dt><dd><p>A Repository is a directory dedicated to the storage of
-<a class="reference internal" href="#term-packages"><span class="xref std std-term">packages</span></a>. It also defines the way Packages are stored (i.e.:
+<dt id="term-Repository">Repository</dt><dt id="term-Repositories">Repositories</dt><dd><p>A Repository is a directory dedicated to the storage of
+<a class="reference internal" href="#term-Packages"><span class="xref std std-term">packages</span></a>. It also defines the way Packages are stored (i.e.:
 loose files or packed in a single archive).</p>
 </dd>
 </dl>
@@ -268,6 +271,7 @@ loose files or packed in a single archive).</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -282,7 +286,6 @@ loose files or packed in a single archive).</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

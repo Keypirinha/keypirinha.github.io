@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5.8. FileBrowser Package" href="filebrowser.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Keypirinha
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -144,6 +146,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -182,7 +185,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../shipped-packages.html"><span class="section-number">5. </span>Shipped Packages</a> &raquo;</li>
         
@@ -228,7 +231,7 @@ a search so you can freely (re)start <em>Everything</em> whenever you need to.</
 </div>
 <div class="section" id="catalog-items">
 <h2><span class="section-number">5.7.2. </span>Catalog Items<a class="headerlink" href="#catalog-items" title="Permalink to this headline">¶</a></h2>
-<p>By default, this package populates the <a class="reference internal" href="../glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
+<p>By default, this package populates the <a class="reference internal" href="../glossary.html#term-Catalog"><span class="xref std std-term">Catalog</span></a> with the following items:</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Everything:</span> <span class="pre">Search</span></code> item (default name) allows to query <em>Everything</em>
 using its normal search syntax</p></li>
@@ -261,7 +264,7 @@ for example. See the <a class="reference internal" href="../first.html#first-dra
 <h2><span class="section-number">5.7.4. </span>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>If no item appear after a search query, ensure <em>Everything</em> is running and no
 error message has been emitted by the plugin (check Keypirinha’s
-<a class="reference internal" href="../glossary.html#term-console"><span class="xref std std-term">Console</span></a>).</p>
+<a class="reference internal" href="../glossary.html#term-Console"><span class="xref std std-term">Console</span></a>).</p>
 </div>
 </div>
 
@@ -285,6 +288,7 @@ error message has been emitted by the plugin (check Keypirinha’s
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -299,7 +303,6 @@ error message has been emitted by the plugin (check Keypirinha’s
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

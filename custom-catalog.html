@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="11. Architecture" href="architecture.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -122,6 +124,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -160,7 +163,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li><span class="section-number">10. </span>Customize your Catalog</li>
     
@@ -184,9 +187,9 @@
 <p>By default, almost all Keypirinha’s features are enabled.</p>
 <p>While the majority of users will find convenient not to have to configure
 Keypirinha straight out of the box, some might prefer to have full control on
-what is actually available in the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>.</p>
+what is actually available in the <a class="reference internal" href="glossary.html#term-Catalog"><span class="xref std std-term">Catalog</span></a>.</p>
 <p>At the cost of extra time spent on configuring Keypirinha, reducing the number of
-items in the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a> may have a significant impact on both memory
+items in the <a class="reference internal" href="glossary.html#term-Catalog"><span class="xref std std-term">Catalog</span></a> may have a significant impact on both memory
 footprint and search speed.</p>
 <p>This small guide shows how to clear the Catalog entirely so you can then
 expand it with only the desired features/items.</p>
@@ -201,7 +204,7 @@ while reading the following sections.</p>
 </div>
 <div class="section" id="shrinking-your-catalog">
 <h2><span class="section-number">10.2. </span>Shrinking your Catalog<a class="headerlink" href="#shrinking-your-catalog" title="Permalink to this headline">¶</a></h2>
-<p>To start with a clean slate, we will disable every shipped <a class="reference internal" href="glossary.html#term-package"><span class="xref std std-term">package</span></a>
+<p>To start with a clean slate, we will disable every shipped <a class="reference internal" href="glossary.html#term-Package"><span class="xref std std-term">package</span></a>
 except the <code class="docutils literal notranslate"><span class="pre">Internal</span></code> one.</p>
 <p>Open Keypirinha’s configuration file and create/modify the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code>
 setting as follows:</p>
@@ -243,7 +246,7 @@ at the <code class="docutils literal notranslate"><span class="pre">scan_start_m
 <p>If you happen to notice that some unwanted features are still enabled, it is
 worth mentioning that it is possible to know what plugin (and by extension, what
 package) created a specific catalog item in the list of results.</p>
-<p>To do that, select an item and press <kbd class="kbd docutils literal notranslate">Alt+Enter</kbd>. The <a class="reference internal" href="glossary.html#term-console"><span class="xref std std-term">Console</span></a>
+<p>To do that, select an item and press <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd>. The <a class="reference internal" href="glossary.html#term-Console"><span class="xref std std-term">Console</span></a>
 window will show up and the last log lines list the properties of the selected
 item. Among them the name of the parent plugin.</p>
 </div>
@@ -269,6 +272,7 @@ item. Among them the name of the parent plugin.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -283,7 +287,6 @@ item. Among them the name of the parent plugin.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

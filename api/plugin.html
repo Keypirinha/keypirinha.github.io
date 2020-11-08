@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="13.2.8. Settings class" href="settings.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Keypirinha
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -131,6 +133,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -169,7 +172,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../api.html"><span class="section-number">13. </span>Extending Keypirinha (API)</a> &raquo;</li>
         
@@ -194,7 +197,7 @@
             
   <div class="section" id="plugin-class">
 <h1><span class="section-number">13.2.7. </span>Plugin class<a class="headerlink" href="#plugin-class" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="keypirinha.Plugin">
 <em class="property">class </em><code class="sig-prename descclassname">keypirinha.</code><code class="sig-name descname">Plugin</code><a class="headerlink" href="#keypirinha.Plugin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for third-party plugins.</p>
@@ -203,7 +206,7 @@
 <p>Methods prefixed with <code class="docutils literal notranslate"><span class="pre">on_</span></code> are the only ones called by the
 application.</p>
 </div>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="keypirinha.Plugin._debug">
 <code class="sig-name descname">_debug</code><em class="property"> = False</em><a class="headerlink" href="#keypirinha.Plugin._debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag to enable/disable output of <a class="reference internal" href="#keypirinha.Plugin.dbg" title="keypirinha.Plugin.dbg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dbg()</span></code></a>.</p>
@@ -213,7 +216,7 @@ application.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin’s default constructor. When implementing a new plugin, it is good
@@ -224,7 +227,7 @@ practice to call it:</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_start">
 <code class="sig-name descname">on_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the first method called by the application after a plugin has
@@ -244,7 +247,7 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_catalog">
 <code class="sig-name descname">on_catalog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plugin is requested to setup its catalog by calling either
@@ -266,9 +269,9 @@ about the <em>plugin loading</em> process. And <a class="reference internal" hre
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_suggest">
-<code class="sig-name descname">on_suggest</code><span class="sig-paren">(</span><em class="sig-param">user_input</em>, <em class="sig-param">items_chain=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">on_suggest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">user_input</span></em>, <em class="sig-param"><span class="n">items_chain</span><span class="o">=</span><span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_suggest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when the user is typing their search terms <em>or</em> item’s arguments.</p>
 <p>When no item has been selected yet by the user, the <em>items_chain</em> list
 is empty and <em>user_input</em> is a string containing the initial search
@@ -293,9 +296,9 @@ suggestions may be empty.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_execute">
-<code class="sig-name descname">on_execute</code><span class="sig-paren">(</span><em class="sig-param">catalog_item</em>, <em class="sig-param">catalog_action=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_execute" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">on_execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">catalog_item</span></em>, <em class="sig-param"><span class="n">catalog_action</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called once the user has selected an item and wants to launch it,
 optionally using the passed action.</p>
 <p><em>catalog_item</em> is the selected <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object to
@@ -310,10 +313,10 @@ interest.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_activated">
 <code class="sig-name descname">on_activated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_activated" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> has been invoked by the user, either
+<dd><p>Called when the <a class="reference internal" href="../glossary.html#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a> has been invoked by the user, either
 by typing the dedicated global hotkey, or by using the contextual menu
 of the application icon located in the system tray.</p>
 <div class="admonition note">
@@ -333,10 +336,10 @@ new <code class="docutils literal notranslate"><span class="pre">ACTIVATED</span
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_deactivated">
 <code class="sig-name descname">on_deactivated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_deactivated" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the <a class="reference internal" href="../glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a> has been hidden. Either because an
+<dd><p>Called when the <a class="reference internal" href="../glossary.html#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a> has been hidden. Either because an
 item has been executed for example, or because the user canceled her
 search.</p>
 <div class="admonition note">
@@ -351,9 +354,9 @@ more information.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.on_events">
-<code class="sig-name descname">on_events</code><span class="sig-paren">(</span><em class="sig-param">flags</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_events" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">on_events</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flags</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.on_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when some event(s) occurred.</p>
 <p><em>flags</em> can be one or several flags defined in <a class="reference internal" href="module.html#keypirinha.Events" title="keypirinha.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">Events</span></code></a>.</p>
 <div class="admonition note">
@@ -367,7 +370,7 @@ to be always grouped.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.id">
 <code class="sig-name descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the <em>id</em> number (int) of this plugin.</p>
@@ -375,7 +378,7 @@ to be always grouped.</p>
 only</strong>.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.full_name">
 <code class="sig-name descname">full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.full_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the fully qualified name of this plugin.</p>
@@ -385,7 +388,7 @@ only</strong>.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.name">
 <code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
@@ -393,7 +396,7 @@ only</strong>.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.package_full_name">
 <code class="sig-name descname">package_full_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.package_full_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the fully qualified name of this plugin’s parent package.</p>
@@ -403,7 +406,7 @@ only</strong>.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.package_name">
 <code class="sig-name descname">package_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.package_name" title="Permalink to this definition">¶</a></dt>
 <dd><div class="deprecated">
@@ -411,9 +414,9 @@ only</strong>.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.set_catalog">
-<code class="sig-name descname">set_catalog</code><span class="sig-paren">(</span><em class="sig-param">catalog_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_catalog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_catalog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">catalog_items</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace current plugin’s catalog by <em>catalog_items</em>, which must be a
 list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects, created by <em>this</em> plugin. Note
 that the list may be empty if you wish to clear plugin’s catalog.</p>
@@ -424,9 +427,9 @@ that the list may be empty if you wish to clear plugin’s catalog.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.merge_catalog">
-<code class="sig-name descname">merge_catalog</code><span class="sig-paren">(</span><em class="sig-param">catalog_items</em>, <em class="sig-param">erase_untouched_items</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.merge_catalog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">merge_catalog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">catalog_items</span></em>, <em class="sig-param"><span class="n">erase_untouched_items</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.merge_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Merge current plugin’s catalog with <em>catalog_items</em>, which must be a
 list of <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> objects that have been created by <em>this</em>
 plugin.</p>
@@ -440,9 +443,9 @@ catalog after other items have been merged.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.clear_actions">
-<code class="sig-name descname">clear_actions</code><span class="sig-paren">(</span><em class="sig-param">category=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.clear_actions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_actions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.clear_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the list of actions associated to a given
 <a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemCategory</span></code></a>, or clear <em>all</em> actions associated to this
 plugin if <em>category</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -452,9 +455,9 @@ plugin if <em>category</em> is <code class="docutils literal notranslate"><span 
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.create_action">
-<code class="sig-name descname">create_action</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">label</em>, <em class="sig-param">short_desc=''</em>, <em class="sig-param">data_bag=''</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_action" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">label</span></em>, <em class="sig-param"><span class="n">short_desc</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">data_bag</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -492,9 +495,9 @@ method.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.create_error_item">
-<code class="sig-name descname">create_error_item</code><span class="sig-paren">(</span><em class="sig-param">label</em>, <em class="sig-param">short_desc</em>, <em class="sig-param">target='error'</em>, <em class="sig-param">icon_handle=None</em>, <em class="sig-param">data_bag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_error_item" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_error_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span></em>, <em class="sig-param"><span class="n">short_desc</span></em>, <em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">'error'</span></em>, <em class="sig-param"><span class="n">icon_handle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_bag</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_error_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object of the
 <a class="reference internal" href="module.html#keypirinha.ItemCategory.ERROR" title="keypirinha.ItemCategory.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ItemCategory.ERROR</span></code></a> category.</p>
 <div class="admonition note">
@@ -517,9 +520,9 @@ displayed).</p></li>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.create_item">
-<code class="sig-name descname">create_item</code><span class="sig-paren">(</span><em class="sig-param">category</em>, <em class="sig-param">label</em>, <em class="sig-param">short_desc</em>, <em class="sig-param">target</em>, <em class="sig-param">args_hint</em>, <em class="sig-param">hit_hint</em>, <em class="sig-param">loop_on_suggest=False</em>, <em class="sig-param">icon_handle=None</em>, <em class="sig-param">data_bag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_item" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">label</span></em>, <em class="sig-param"><span class="n">short_desc</span></em>, <em class="sig-param"><span class="n">target</span></em>, <em class="sig-param"><span class="n">args_hint</span></em>, <em class="sig-param"><span class="n">hit_hint</span></em>, <em class="sig-param"><span class="n">loop_on_suggest</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">icon_handle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_bag</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.create_item" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and return a <a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> object.</p>
 <p><a class="reference internal" href="catalogitem.html#keypirinha.CatalogItem" title="keypirinha.CatalogItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogItem</span></code></a> is the angular stone of Keypirinha. It is the
 only data unit a plugin can use to be referenced in the central Catalog.</p>
@@ -602,9 +605,9 @@ computed at construction time or when its arguments are updated.</p></li>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.dbg">
-<code class="sig-name descname">dbg</code><span class="sig-paren">(</span><em class="sig-param">*objects</em>, <em class="sig-param">sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dbg</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">objects</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">' '</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.dbg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log a debug message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
@@ -626,9 +629,9 @@ present in plugin’s source code.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.err">
-<code class="sig-name descname">err</code><span class="sig-paren">(</span><em class="sig-param">*objects</em>, <em class="sig-param">sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">err</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">objects</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">' '</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.err" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an error message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
@@ -638,9 +641,9 @@ present in plugin’s source code.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.find_resources">
-<code class="sig-name descname">find_resources</code><span class="sig-paren">(</span><em class="sig-param">name_pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.find_resources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">find_resources</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name_pattern</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.find_resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of resources in this package that match a given pattern.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -658,7 +661,7 @@ be empty.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.friendly_name">
 <code class="sig-name descname">friendly_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.friendly_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return plugin’s friendly (short) name. I.e. its class name.</p>
@@ -668,9 +671,9 @@ be empty.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.get_package_cache_path">
-<code class="sig-name descname">get_package_cache_path</code><span class="sig-paren">(</span><em class="sig-param">create=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.get_package_cache_path" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_package_cache_path</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.get_package_cache_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the absolute path to package’s cache directory.</p>
 <p>It is the responsibility of the caller to create it if it doesn’t exist
 (either manually or by setting the ‘create’ argument to True). However,
@@ -696,9 +699,9 @@ deleted by the end-user between two runtime sessions.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.has_resource">
-<code class="sig-name descname">has_resource</code><span class="sig-paren">(</span><em class="sig-param">relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.has_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">has_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">relative_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.has_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if plugin’s parent package embeds a specific resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -709,9 +712,9 @@ located in the package. Examples: <code class="docutils literal notranslate"><sp
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.info">
-<code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">*objects</em>, <em class="sig-param">sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">objects</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">' '</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log an informational message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
@@ -721,9 +724,9 @@ located in the package. Examples: <code class="docutils literal notranslate"><sp
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.load_binary_resource">
-<code class="sig-name descname">load_binary_resource</code><span class="sig-paren">(</span><em class="sig-param">relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_binary_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_binary_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">relative_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_binary_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#bytes" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object holding the unmodified content of the
 specified resource.</p>
 <dl class="field-list simple">
@@ -746,14 +749,14 @@ specified file size is bigger than 16MB (16777216 bytes).</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.load_icon">
-<code class="sig-name descname">load_icon</code><span class="sig-paren">(</span><em class="sig-param">sources</em>, <em class="sig-param">force_reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_icon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_icon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sources</span></em>, <em class="sig-param"><span class="n">force_reload</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_icon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load or get an <a class="reference internal" href="iconhandle.html#keypirinha.IconHandle" title="keypirinha.IconHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">IconHandle</span></code></a>.
 See <a class="reference internal" href="module.html#keypirinha.load_icon" title="keypirinha.load_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_icon()</span></code></a> for more details.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.load_settings">
 <code class="sig-name descname">load_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the <a class="reference internal" href="settings.html#keypirinha.Settings" title="keypirinha.Settings"><code class="xref py py-class docutils literal notranslate"><span class="pre">keypirinha.Settings</span></code></a> object associated with the
@@ -781,9 +784,9 @@ The application update user’s configuration data upon file change.</p></li>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.load_text_resource">
-<code class="sig-name descname">load_text_resource</code><span class="sig-paren">(</span><em class="sig-param">relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_text_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_text_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">relative_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.load_text_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> object holding the content of the specified
 resource.</p>
 <p>May raise the same exceptions than <a class="reference internal" href="#keypirinha.Plugin.load_binary_resource" title="keypirinha.Plugin.load_binary_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_binary_resource()</span></code></a>, plus
@@ -795,9 +798,9 @@ decoded (Unicode error).</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.log">
-<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param">*objects</em>, <em class="sig-param">sep=' '</em>, <em class="sig-param">level=1</em>, <em class="sig-param">lineno=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">objects</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">' '</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">lineno</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log a message.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -807,9 +810,9 @@ methods instead.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.set_actions">
-<code class="sig-name descname">set_actions</code><span class="sig-paren">(</span><em class="sig-param">category</em>, <em class="sig-param">actions_list</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_actions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_actions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">actions_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associate a given list of <a class="reference internal" href="catalogaction.html#keypirinha.CatalogAction" title="keypirinha.CatalogAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">CatalogAction</span></code></a> to an
 <a class="reference internal" href="module.html#keypirinha.ItemCategory" title="keypirinha.ItemCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">ItemCategory</span></code></a>.</p>
 <dl class="field-list simple">
@@ -837,9 +840,9 @@ if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogActi
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.set_default_icon">
-<code class="sig-name descname">set_default_icon</code><span class="sig-paren">(</span><em class="sig-param">icon_handle</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_default_icon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_default_icon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">icon_handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_default_icon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the default icon of the catalog items created by this plugin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -848,7 +851,7 @@ if <a class="reference internal" href="catalogaction.html#keypirinha.CatalogActi
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.set_suggestions">
 <code class="sig-name descname">set_suggestions</code><span class="sig-paren">(</span><em class="sig-param">suggestions</em>, <em class="sig-param">match_method=&lt;Match.FUZZY: 1000&gt;</em>, <em class="sig-param">sort_method=&lt;Sort.SCORE_DESC: 1000&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.set_suggestions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Offer some suggestions to the user according to the current search
@@ -865,9 +868,9 @@ already (i.e. not at first step of the search). That is, when the
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.should_terminate">
-<code class="sig-name descname">should_terminate</code><span class="sig-paren">(</span><em class="sig-param">wait_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.should_terminate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">should_terminate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wait_seconds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.should_terminate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a boolean to indicate whether the current task should return as
 soon as possible, without completing its job.</p>
 <p>Plugins should call this method <strong>frequently</strong>. Especially at I/O
@@ -891,9 +894,9 @@ to know more about the meaning of the returned value.</p></li>
 </div>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="keypirinha.Plugin.warn">
-<code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param">*objects</em>, <em class="sig-param">sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">objects</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">' '</span></em><span class="sig-paren">)</span><a class="headerlink" href="#keypirinha.Plugin.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log a warning message.</p>
 <p><em>objects</em> and <em>sep</em> arguments are handled the same way than
 <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#print" title="(in Python v3.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>.</p>
@@ -927,6 +930,7 @@ to know more about the meaning of the returned value.</p></li>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -941,7 +945,6 @@ to know more about the meaning of the returned value.</p></li>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

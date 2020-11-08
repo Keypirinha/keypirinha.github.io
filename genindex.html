@@ -1,9 +1,7 @@
 
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -13,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -20,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -32,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -51,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -81,6 +81,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -115,6 +116,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -153,7 +155,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Index</li>
     
@@ -261,9 +263,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/module-util.html#keypirinha_util.ScanFlags.CASE_SENSITIVE">CASE_SENSITIVE (keypirinha_util.ScanFlags attribute)</a>
 </li>
-      <li><a href="glossary.html#term-catalog"><strong>Catalog</strong></a>
+      <li><a href="glossary.html#term-Catalog"><strong>Catalog</strong></a>
 </li>
-      <li><a href="glossary.html#term-catalogitem"><strong>CatalogItem</strong></a>
+      <li><a href="glossary.html#term-CatalogItem"><strong>CatalogItem</strong></a>
 </li>
       <li><a href="api/catalogitem.html#keypirinha.CatalogItem.category">category() (keypirinha.CatalogItem method)</a>
 </li>
@@ -287,7 +289,7 @@
 </li>
       <li><a href="api/module.html#keypirinha.computer_name">computer_name() (in module keypirinha)</a>
 </li>
-      <li><a href="glossary.html#term-console"><strong>Console</strong></a>
+      <li><a href="glossary.html#term-Console"><strong>Console</strong></a>
 </li>
       <li><a href="api/plugin.html#keypirinha.Plugin.create_action">create_action() (keypirinha.Plugin method)</a>
 </li>
@@ -323,7 +325,7 @@
 </li>
       <li><a href="api/module.html#keypirinha.Events.DESKTOP">DESKTOP (keypirinha.Events attribute)</a>
 </li>
-      <li><a href="glossary.html#term-diagnostic-window"><strong>Diagnostic Window</strong></a>
+      <li><a href="glossary.html#term-Diagnostic-Window"><strong>Diagnostic Window</strong></a>
 </li>
       <li><a href="api/module-util.html#keypirinha_util.FileAttr.DIR">DIR (keypirinha_util.FileAttr attribute)</a>
 </li>
@@ -469,11 +471,11 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-instanceid"><strong>InstanceID</strong></a>
+      <li><a href="glossary.html#term-InstanceID"><strong>InstanceID</strong></a>
 </li>
       <li><a href="api/iconhandle.html#keypirinha.IconHandle.is_init">is_init() (keypirinha.IconHandle method)</a>
 </li>
-      <li><a href="glossary.html#term-item"><strong>Item</strong></a>
+      <li><a href="glossary.html#term-Item"><strong>Item</strong></a>
 </li>
       <li><a href="api/module.html#keypirinha.ItemArgsHint">ItemArgsHint (class in keypirinha)</a>
 </li>
@@ -481,7 +483,7 @@
 </li>
       <li><a href="api/module.html#keypirinha.ItemHitHint">ItemHitHint (class in keypirinha)</a>
 </li>
-      <li><a href="glossary.html#term-items"><strong>Items</strong></a>
+      <li><a href="glossary.html#term-Items"><strong>Items</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -491,18 +493,33 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/module.html#keypirinha.ItemHitHint.KEEPALL">KEEPALL (keypirinha.ItemHitHint attribute)</a>
 </li>
-      <li><a href="api/module.html#module-keypirinha">keypirinha (module)</a>
+      <li>
+    keypirinha
+
+      <ul>
+        <li><a href="api/module.html#module-keypirinha">module</a>
 </li>
+      </ul></li>
       <li><a href="api/catalogaction.html#keypirinha.CatalogAction">keypirinha.CatalogAction (built-in class)</a>
 </li>
       <li><a href="api/catalogitem.html#keypirinha.CatalogItem">keypirinha.CatalogItem (built-in class)</a>
 </li>
-      <li><a href="api/module-net.html#module-keypirinha_net">keypirinha_net (module)</a>
+      <li>
+    keypirinha_net
+
+      <ul>
+        <li><a href="api/module-net.html#module-keypirinha_net">module</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/module-util.html#module-keypirinha_util">keypirinha_util (module)</a>
+      <li>
+    keypirinha_util
+
+      <ul>
+        <li><a href="api/module-util.html#module-keypirinha_util">module</a>
 </li>
+      </ul></li>
       <li><a href="api/settings.html#keypirinha.Settings.keys">keys() (keypirinha.Settings method)</a>
 </li>
       <li><a href="api/module.html#keypirinha.ItemCategory.KEYWORD">KEYWORD (keypirinha.ItemCategory attribute)</a>
@@ -527,7 +544,7 @@
       </ul></li>
       <li><a href="api/module.html#keypirinha.Sort.LABEL_ASC">LABEL_ASC (keypirinha.Sort attribute)</a>
 </li>
-      <li><a href="glossary.html#term-launchbox"><strong>LaunchBox</strong></a>
+      <li><a href="glossary.html#term-LaunchBox"><strong>LaunchBox</strong></a>
 </li>
       <li><a href="api/module-util.html#keypirinha_util.FileAttr.LINK">LINK (keypirinha_util.FileAttr attribute)</a>
 </li>
@@ -563,10 +580,19 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/module.html#keypirinha.Match">Match (class in keypirinha)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/plugin.html#keypirinha.Plugin.merge_catalog">merge_catalog() (keypirinha.Plugin method)</a>
 </li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/module.html#module-keypirinha">keypirinha</a>
+</li>
+        <li><a href="api/module-net.html#module-keypirinha_net">keypirinha_net</a>
+</li>
+        <li><a href="api/module-util.html#module-keypirinha_util">keypirinha_util</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -619,7 +645,7 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-package"><strong>Package</strong></a>
+      <li><a href="glossary.html#term-Package"><strong>Package</strong></a>
 </li>
       <li><a href="api/module.html#keypirinha.package_cache_dir">package_cache_dir() (in module keypirinha)</a>
 </li>
@@ -629,7 +655,7 @@
 </li>
       <li><a href="api/module.html#keypirinha.package_path">package_path() (in module keypirinha)</a>
 </li>
-      <li><a href="glossary.html#term-packages"><strong>Packages</strong></a>
+      <li><a href="glossary.html#term-Packages"><strong>Packages</strong></a>
 </li>
       <li><a href="api/module.html#keypirinha.packages_list">packages_list() (in module keypirinha)</a>
 </li>
@@ -641,7 +667,7 @@
 </li>
       <li><a href="api/module.html#keypirinha.pid">pid() (in module keypirinha)</a>
 </li>
-      <li><a href="glossary.html#term-plugin"><strong>Plugin</strong></a>
+      <li><a href="glossary.html#term-Plugin"><strong>Plugin</strong></a>
 
       <ul>
         <li><a href="api/plugin.html#keypirinha.Plugin">(class in keypirinha)</a>
@@ -649,7 +675,7 @@
       </ul></li>
       <li><a href="api/catalogaction.html#keypirinha.CatalogAction.plugin_id">plugin_id() (keypirinha.CatalogAction method)</a>
 </li>
-      <li><a href="glossary.html#term-plugins"><strong>Plugins</strong></a>
+      <li><a href="glossary.html#term-Plugins"><strong>Plugins</strong></a>
 </li>
       <li><a href="api/module-net.html#keypirinha_net.proxies_to_dict">proxies_to_dict() (in module keypirinha_net)</a>
 </li>
@@ -673,9 +699,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/module-util.html#keypirinha_util.FileAttr.REMOVABLE">REMOVABLE (keypirinha_util.FileAttr attribute)</a>
 </li>
-      <li><a href="glossary.html#term-repositories"><strong>Repositories</strong></a>
+      <li><a href="glossary.html#term-Repositories"><strong>Repositories</strong></a>
 </li>
-      <li><a href="glossary.html#term-repository"><strong>Repository</strong></a>
+      <li><a href="glossary.html#term-Repository"><strong>Repository</strong></a>
 </li>
       <li><a href="api/module.html#keypirinha.ItemArgsHint.REQUIRED">REQUIRED (keypirinha.ItemArgsHint attribute)</a>
 </li>
@@ -832,6 +858,7 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -846,7 +873,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

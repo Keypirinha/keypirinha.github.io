@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="12. Packages Structure" href="packages.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -121,6 +123,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -159,7 +162,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li><span class="section-number">11. </span>Architecture</li>
     
@@ -183,22 +186,22 @@
 <p>This section provides some insights about Keypirinha’s design and philosophy.</p>
 <div class="section" id="overview">
 <span id="architecture-overview"></span><h2><span class="section-number">11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>Keypirinha by itself is just a database (the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>) sweetened with a
+<p>Keypirinha by itself is just a database (the <a class="reference internal" href="glossary.html#term-Catalog"><span class="xref std std-term">Catalog</span></a>) sweetened with a
 small adaptive search engine and a straightforward graphical interface. Thus,
-<strong>the task of feeding the Catalog is entirely left to its</strong> <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">Plugins</span></a>.</p>
+<strong>the task of feeding the Catalog is entirely left to its</strong> <a class="reference internal" href="glossary.html#term-Plugins"><span class="xref std std-term">Plugins</span></a>.</p>
 <p>From that point of view, we can say that the whole architecture of Keypirinha
-depends on its <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">plugins</span></a>. They are responsible of finding <a class="reference internal" href="glossary.html#term-items"><span class="xref std std-term">items</span></a> on
+depends on its <a class="reference internal" href="glossary.html#term-Plugins"><span class="xref std std-term">plugins</span></a>. They are responsible of finding <a class="reference internal" href="glossary.html#term-Items"><span class="xref std std-term">items</span></a> on
 your computer, like applications, documents and bookmarks for example, as well
 as offering to evaluate mathematical expressions, monetary conversions and so
 on…</p>
-<p>These <a class="reference internal" href="glossary.html#term-items"><span class="xref std std-term">items</span></a> are created by the <em>plugins</em> and are then sorted and stored
-in an internal database called the <a class="reference internal" href="glossary.html#term-catalog"><span class="xref std std-term">Catalog</span></a>, to make making them quickly
+<p>These <a class="reference internal" href="glossary.html#term-Items"><span class="xref std std-term">items</span></a> are created by the <em>plugins</em> and are then sorted and stored
+in an internal database called the <a class="reference internal" href="glossary.html#term-Catalog"><span class="xref std std-term">Catalog</span></a>, to make making them quickly
 searchable and easily executable.</p>
 </div>
 <div class="section" id="packages-and-plugins">
 <h2><span class="section-number">11.2. </span>Packages and Plugins<a class="headerlink" href="#packages-and-plugins" title="Permalink to this headline">¶</a></h2>
-<p>To make <a class="reference internal" href="glossary.html#term-plugins"><span class="xref std std-term">Plugins</span></a> easier to distribute, Keypirinha has been introduced the
-concept of <a class="reference internal" href="glossary.html#term-packages"><span class="xref std std-term">Packages</span></a>.</p>
+<p>To make <a class="reference internal" href="glossary.html#term-Plugins"><span class="xref std std-term">Plugins</span></a> easier to distribute, Keypirinha has been introduced the
+concept of <a class="reference internal" href="glossary.html#term-Packages"><span class="xref std std-term">Packages</span></a>.</p>
 <p>In Keypirinha, a package is a container that groups one or several plugins
 designed to work together, as well as optional configuration files and
 dependencies.</p>
@@ -236,6 +239,7 @@ configuration.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -250,7 +254,6 @@ configuration.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

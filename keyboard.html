@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,10 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
@@ -19,7 +22,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -31,10 +36,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="10. Customize your Catalog" href="custom-catalog.html" />
@@ -52,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Keypirinha
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Keypirinha
           
 
           
@@ -65,7 +66,7 @@
             
             
               <div class="version">
-                2.25
+                2.26
               </div>
             
           
@@ -82,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -121,6 +123,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -159,7 +162,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li><span class="section-number">9. </span>Keyboard Shortcuts</li>
     
@@ -193,12 +196,12 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Win+K</kbd> (default)</p></td>
-<td><p>Show/Hide the <a class="reference internal" href="glossary.html#term-launchbox"><span class="xref std std-term">LaunchBox</span></a></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">K</kbd></kbd> (default)</p></td>
+<td><p>Show/Hide the <a class="reference internal" href="glossary.html#term-LaunchBox"><span class="xref std std-term">LaunchBox</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Tab</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt+Right</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Right</kbd></kbd></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Space</kbd> (while being at
 first <br /> step and if the
 <code class="docutils literal notranslate"><span class="pre">space_as_tab</span></code> <br /> option is
@@ -207,51 +210,51 @@ enabled)</p></li>
 </td>
 <td><p>Next step (add args, choose action)</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Alt+Left</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Left</kbd></kbd></p></td>
 <td><p>Forcefully go back to previous search
 step</p></td>
 </tr>
 <tr class="row-odd"><td><ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl+Space</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Shift+Space</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Space</kbd></kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Space</kbd></kbd></p></li>
 </ul>
 </td>
 <td><p>Force insert a space character while at
 first step</p></td>
 </tr>
 <tr class="row-even"><td><ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl+1</kbd> to <kbd class="kbd docutils literal notranslate">Ctrl+0</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl+Numpad1</kbd>…</p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">1</kbd></kbd> to <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">0</kbd></kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Numpad1</kbd></kbd>…</p></li>
 </ul>
 </td>
 <td><p>Directly execute the item located a
 specific position in <br /> the results
 list</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Enter</kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd></p></td>
 <td><p>Directly go to the list of Actions
 associated to the selected item</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Shift+Enter</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd></p></td>
 <td><p>Execute the item without closing the
 LaunchBox, and reset <br />
 search state</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Shift+Enter</kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd></p></td>
 <td><p>Execute the item without closing the
 LaunchBox, and go back to <br /> the
 initial step of the current search</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Alt+Enter</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd></p></td>
 <td><p>Show selected item’s properties</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Shift+Alt+Enter</kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">Enter</kbd></kbd></p></td>
 <td><p>Show Shell’s “Properties” dialog for
 the selected <strong>FILE</strong> item</p></td>
 </tr>
 <tr class="row-even"><td><ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Alt+X</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Win+Up</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">X</kbd></kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Win</kbd>+<kbd class="kbd docutils literal notranslate">Up</kbd></kbd></p></li>
 </ul>
 </td>
 <td><p>Maximize the LaunchBox (toggle)</p></td>
@@ -266,30 +269,30 @@ setting.</p>
 </td>
 </tr>
 <tr class="row-even"><td><ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Shift+Esc</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt+F4</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Esc</kbd></kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">F4</kbd></kbd></p></li>
 </ul>
 </td>
 <td><p>Hide the LaunchBox</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Del</kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Del</kbd></kbd></p></td>
 <td><p>Erase a single item from history</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+BackSpace</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">BackSpace</kbd></kbd></p></td>
 <td><p>Erase previous word</p></td>
 </tr>
 <tr class="row-odd"><td><ul class="simple">
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl+Down</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Down</kbd></kbd></p></li>
 <li><p><kbd class="kbd docutils literal notranslate">Down</kbd>
 (if search state is clean)</p></li>
 </ul>
 </td>
 <td><p>Show history items</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Home</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Home</kbd></kbd></p></td>
 <td><p>Scroll up to the first result</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+End</kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">End</kbd></kbd></p></td>
 <td><p>Scroll down to the last result</p></td>
 </tr>
 <tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">F2</kbd></p></td>
@@ -320,18 +323,18 @@ or launching the <br />
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Tab</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd></p></td>
 <td><p>Switch focus between command and log controls</p></td>
 </tr>
 <tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Enter</kbd></p></td>
 <td><p>Validate command</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+BackSpace</kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">BackSpace</kbd></kbd></p></td>
 <td><p>Erase previous word</p></td>
 </tr>
 <tr class="row-odd"><td><ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Esc</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt+F4</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">F4</kbd></kbd></p></li>
 </ul>
 </td>
 <td><p>Close the Console</p></td>
@@ -362,7 +365,7 @@ an issue for example.</p></td>
 </tr>
 <tr class="row-even"><td><ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Esc</kbd></p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt+F4</kbd></p></li>
+<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">F4</kbd></kbd></p></li>
 </ul>
 </td>
 <td><p>Close the window</p></td>
@@ -392,6 +395,7 @@ an issue for example.</p></td>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2013-2018, Jean-Charles Lefebvre
 
     </p>
@@ -406,7 +410,6 @@ an issue for example.</p></td>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
