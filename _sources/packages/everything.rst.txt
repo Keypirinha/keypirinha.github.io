@@ -42,11 +42,25 @@ By default, this package populates the :term:`Catalog` with the following items:
 Usage
 =====
 
-To query *Everything* from |project| allows you to take advantage of both
-*Everything*'s speed and |project|'s matching algorithm. Once you have
-searched-found-executed a file/folder using this package, it is kept in
-|project|'s history so you do not have to query *Everything* a second time to
-open it.
+How to use the Everything Package to conduct a search from Keypirinha?
+
+In the launch box, search for the ``Everything: Search`` item, then hit ``Tab``
+key, then type the search/query string to query *Everything* using its normal
+search syntax.
+
+**OR**
+
+In the launch box, search for the ``Everything: Regex Search`` item, then hit
+``Tab`` key, then type the search/query string to query *Everything* using its
+regular expression syntax.
+
+
+.. note::
+    To query *Everything* from |project| allows you to take advantage of both
+    *Everything*'s speed and |project|'s matching algorithm. Once you have
+    searched-found-executed a file/folder using this package, it is kept in
+    |project|'s history so you do not have to query *Everything* a second time
+    to open it.
 
 .. tip::
     You can reduce the number of keystrokes even more to reach the same item by
